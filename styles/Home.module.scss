@@ -1,6 +1,30 @@
-.container {
-  padding: 0 2rem;
+.homeText {
+  max-width: 660px;
 }
+
+.containerBackground {
+  background-color: #DBEAFE;
+}
+
+.primaryText {
+  color: #1D4ED8
+}
+
+.headerText {
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.secondaryText {
+  color: #2563EB;
+  font-weight: 400;
+}
+
+// @include media-breakpoint-up(md) {
+//   .containerBackground {
+//     background-color: #DBEAFE;
+//   }
+// }
 
 .main {
   min-height: 100vh;
@@ -116,13 +140,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
