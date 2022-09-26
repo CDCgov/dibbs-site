@@ -7,8 +7,8 @@ export default function Home() {
 
     <div className="home-container">
       <Navbar />
-      <div className={styles.containerBackground}>
-        <div className="container">
+      <div className={`border border-primary ${styles.containerBackgroundMedium}`}>
+        <div className={`container py-5`}>
           <div className='row'>
             <div className={`col ${styles.homeText}`}>
               <h1 className={`text-3xl font-bold ${styles.primaryText} ${styles.headerText}`}>
@@ -26,27 +26,56 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className='row'>
-          <div className="col d-none d-lg-block">
-            <div>hello</div>
-          </div>
-          <div className={`col ${styles.homeText}`}>
-            <h1 className="text-3xl font-bold ">
-              Introduction to Building Blocks and data modernization
-            </h1>
-            <div className="mt-10">
-              PHDI’s current body of work also falls within the scope of CDC's Data Modernization Initiative’s (DMI) efforts to modernize core public health data and surveillance infrastructure across the federal and state public health landscape. Our goal is to lower the burden and complexity of data management, linking, analysis, and sharing for public health authorities.
-
-              PHDI’s work focuses on building and providing access to open-source, modular software and tooling, known as “Building Blocks,” that public health agencies can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. The intent for these tools is to help STLTs automate manual processes and enhance the use of data for action and decision-making.
-
-              Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses. Importantly, Building Blocks have been carefully designed with common inputs and outputs making them easily composable across STLTs.
-
-              Find out more about Building Blocks </div>
+      <div className={`border border-primary border-top-0 ${styles.containerBackgroundLight}`}>
+        <div className={`container py-5`}>
+          <div className='row'>
+            <div className="col d-none d-lg-block">
+              <div className={`${styles.placeholderMiddle}`}>hello</div>
+            </div>
+            <div className={`col ${styles.homeText} ${styles.containerBackgroundDark} py-5 px-4`}>
+              <h2 className={`text-3xl font-bold ${styles.primaryText} ${styles.headerText}`}>
+                Introduction to Building Blocks and data modernization
+              </h2>
+              <div className={styles.secondaryText}>
+                PHDI’s current body of work also falls within the scope of CDC's Data Modernization Initiative’s (DMI) efforts to modernize core public health data and surveillance infrastructure across the federal and state public health landscape. Our goal is to lower the burden and complexity of data management, linking, analysis, and sharing for public health authorities.
+                <br /><br />
+                PHDI’s work focuses on building and providing access to open-source, modular software and tooling, known as “Building Blocks,” that public health agencies can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. The intent for these tools is to help STLTs automate manual processes and enhance the use of data for action and decision-making.
+                <br /><br />
+                Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses. Importantly, Building Blocks have been carefully designed with common inputs and outputs making them easily composable across STLTs.
+                <br /><br />
+                Find out more about Building Blocks </div>
+            </div>
           </div>
         </div>
       </div>
-
-    </div>
+      <div className={styles.containerBackgroundLight}>
+        <div className={`container py-5`}>
+          <div className='row'>
+            <h1 className='row justify-content-center'>Our pilot partners</h1>
+            <div className='row justify-content-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur commodo habitasse ultrices.</div>
+          </div>
+          <div className='row justify-content-center'>
+            <div className="col">
+              <div class>Heading</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              <div>Lorem ipsum</div>
+            </div>
+            <div className="col">
+              <div>Heading</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              <div>Lorem ipsum</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={`border border-primary ${styles.containerBackgroundMedium}`}>
+        <div className={`container py-5`}>
+          <div className='row'>
+            <h2 className='row justify-content-center'>An invitation to participate</h2>
+            <div className='row justify-content-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </div>
+          </div>
+        </div>
+      </div>
+    </div >
   )
 }

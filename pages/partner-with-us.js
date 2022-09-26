@@ -1,3 +1,5 @@
+import { Container } from "react-bootstrap";
+
 export default function GetInvolved() {
-    return (<div><h1>Partner with us</h1></div>);
+    return (<Container><h1>Partner with us</h1></Container>);
 }
