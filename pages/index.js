@@ -1,12 +1,15 @@
+import { Col, Container, Row } from 'react-bootstrap'
 import Navbar from '../components/Navbar/Navbar'
 import styles from '../styles/Home.module.scss'
 
 
 export default function Home() {
   return (
-
     <div className="home-container">
-      <Navbar />
+      <div className={styles.dashBorder}>
+        <Navbar />
+      </div>
+
       <div className={`border border-primary ${styles.containerBackgroundMedium}`}>
         <div className={`container py-5`}>
           <div className='row'>
@@ -27,12 +30,12 @@ export default function Home() {
         </div>
       </div>
       <div className={`border border-primary border-top-0 ${styles.containerBackgroundLight}`}>
-        <div className={`container py-5`}>
-          <div className='row'>
-            <div className="col d-none d-lg-block">
+        <Container className='py-5'>
+          <Row>
+            <Col className="d-none d-lg-block">
               <div className={`${styles.placeholderMiddle}`}>hello</div>
-            </div>
-            <div className={`col ${styles.homeText} ${styles.containerBackgroundDark} py-5 px-4`}>
+            </Col>
+            <Col className={`${styles.homeText} ${styles.containerBackgroundDark} py-5 px-4`}>
               <h2 className={`text-3xl font-bold ${styles.primaryText} ${styles.headerText}`}>
                 Introduction to Building Blocks and data modernization
               </h2>
@@ -44,37 +47,37 @@ export default function Home() {
                 Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses. Importantly, Building Blocks have been carefully designed with common inputs and outputs making them easily composable across STLTs.
                 <br /><br />
                 Find out more about Building Blocks </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
       <div className={styles.containerBackgroundLight}>
         <div className={`container py-5`}>
-          <div className='row'>
+          <Row>
             <h1 className='row justify-content-center'>Our pilot partners</h1>
             <div className='row justify-content-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur commodo habitasse ultrices.</div>
-          </div>
-          <div className='row justify-content-center'>
-            <div className="col">
+          </Row>
+          <Row className='justify-content-center'>
+            <Col>
               <div class>Heading</div>
               <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               <div>Lorem ipsum</div>
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
               <div>Heading</div>
               <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               <div>Lorem ipsum</div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
       </div>
       <div className={`border border-primary ${styles.containerBackgroundMedium}`}>
-        <div className={`container py-5`}>
-          <div className='row'>
+        <Container className='py-5'>
+          <Row>
             <h2 className='row justify-content-center'>An invitation to participate</h2>
             <div className='row justify-content-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </div>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
     </div >
   )

@@ -14,6 +14,19 @@
   background-color: #DBEAFE;
 }
 
+.communityContainer {
+  max-width: 840px;
+}
+
+.dashRoundedBorder {
+
+  border-radius: 6px;
+}
+
+.dashBorder {
+  border: 1px dashed #1D4ED8;
+}
+
 .containerBackgroundLight {
   background-color: #EFF6FF;
 }
@@ -24,7 +37,6 @@
 
 .headerText {
   font-weight: 800;
-  margin-bottom: 40px;
 }
 
 .secondaryText {
@@ -35,6 +47,14 @@
 .placeholderMiddle {
   height: 724px;
   border-radius: 10px;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.partnerDescription {
+  max-width: 720px
 }
 
 // @include media-breakpoint-up(md) {
