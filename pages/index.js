@@ -1,5 +1,6 @@
-import { Col, Container, Row } from 'react-bootstrap'
-import Navbar from '../components/Navbar/Navbar'
+import { Button, Col, Container, Row } from 'react-bootstrap'
+import Footer from '../components/Footer/Footer'
+import NavbarHeader from '../components/Navbar/Navbar'
 import styles from '../styles/Home.module.scss'
 
 
@@ -7,10 +8,10 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className={styles.dashBorder}>
-        <Navbar />
+        <NavbarHeader />
       </div>
 
-      <div className={`border border-primary ${styles.containerBackgroundMedium}`}>
+      <div className={`${styles.containerBackgroundMedium} ${styles.dashBorder} border-top-0`}>
         <div className={`container py-5`}>
           <div className='row'>
             <div className={`col ${styles.homeText}`}>
@@ -29,7 +30,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={`border border-primary border-top-0 ${styles.containerBackgroundLight}`}>
+      <div className={` border-top-0 ${styles.containerBackgroundLight} ${styles.dashBorder} border-top-0`}>
         <Container className='py-5'>
           <Row>
             <Col className="d-none d-lg-block">
@@ -51,34 +52,40 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-      <div className={styles.containerBackgroundLight}>
-        <div className={`container py-5`}>
+      <div className={`${styles.containerBackgroundLight} ${styles.dashBorder} border-top-0}`}>
+        <Container className={`py-5 text-primary`}>
           <Row>
-            <h1 className='row justify-content-center'>Our pilot partners</h1>
+            <h1 className='row justify-content-center mb-3'>Our pilot partners</h1>
             <div className='row justify-content-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur commodo habitasse ultrices.</div>
           </Row>
-          <Row className='justify-content-center'>
-            <Col>
-              <div>Heading</div>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              <div>Lorem ipsum</div>
+          <Row className='justify-content-center my-4'>
+            <Col className={`me-4 ${styles.containerBackgroundDark}`}>
+              <div className='py-4 text-center'>
+                <div><b>Heading</b></div>
+                <div className='my-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div>Lorem ipsum</div>
+              </div>
             </Col>
-            <Col>
-              <div>Heading</div>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              <div>Lorem ipsum</div>
+            <Col className={styles.containerBackgroundDark}>
+              <div className='py-4 text-center'>
+                <div><b>Heading</b></div>
+                <div className='my-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div>Lorem ipsum</div>
+              </div>
             </Col>
-          </Row>
-        </div>
-      </div>
-      <div className={`border border-primary ${styles.containerBackgroundMedium}`}>
-        <Container className='py-5'>
-          <Row>
-            <h2 className='row justify-content-center'>An invitation to participate</h2>
-            <div className='row justify-content-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </div>
           </Row>
         </Container>
       </div>
+      <div className={`${styles.containerBackgroundMedium} ${styles.dashBorder} border-top-0}`}>
+        <Container className={`py-5 text-primary ${styles.mw55}`}>
+          <Row>
+            <h2 className='row justify-content-center'>An invitation to participate</h2>
+            <div className='row justify-content-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </div>
+            <Button className='mt-3'>Get Involved</Button>
+          </Row>
+        </Container>
+      </div>
+      <Footer />
     </div >
   )
 }
