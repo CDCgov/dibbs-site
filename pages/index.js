@@ -59,7 +59,7 @@ export default function Home() {
           </Row>
           <Row className='justify-content-center'>
             <Col>
-              <div class>Heading</div>
+              <div>Heading</div>
               <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               <div>Lorem ipsum</div>
             </Col>
