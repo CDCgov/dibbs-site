@@ -36,6 +36,17 @@ export default function BuildingBlockInfo() {
             <div>
                 <Container>
                     <h4>List of current (& future) Building Blocks</h4>
+                    <Row>
+                        <Col>
+                            <div>
+                                <div>icon</div>
+                                <h5>Location Services</h5>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+
+                    </Row>
                 </Container>
 
             </div>
