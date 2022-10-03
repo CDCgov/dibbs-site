@@ -7,10 +7,6 @@ import styles from '../styles/Home.module.scss'
 export default function Home() {
   return (
     <div className="home-container">
-      <div className={styles.dashBorder}>
-        <NavbarHeader />
-      </div>
-
       <div className={`${styles.containerBackgroundMedium} ${styles.dashBorder} border-top-0`}>
         <div className={`container py-5`}>
           <div className='row'>
