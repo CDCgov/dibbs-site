@@ -2,7 +2,7 @@
 
 export default function FooterT() {
     return (
-        <div className='container py-5'>
+        <div className='container py-5 mx-20'>
             <div className="flex justify-between font-semibold text-blue-700 text-xl">
                 <div justify-start>
                     Home
