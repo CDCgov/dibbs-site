@@ -1,31 +1,30 @@
-import { Col, Row } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
 
-function Footer() {
+
+export default function Footer() {
     return (
-        <Container className='py-5'>
-            <Row>
-                <Col>
+        <div className='container py-5 mx-20'>
+            <div className="flex justify-between font-semibold text-blue-700 text-xl">
+                <div justify-start>
                     Home
-                </Col>
-                <Col>
-                    What is a building block?
-                </Col>
-                <Col>
-                    Our product offerings
-                </Col>
-                <Col>
-                    Partner with us
-                </Col>
-            </Row>
-            <Row className='mt-4'>
-                <div className='border border-primary w-25'></div>
-            </Row>
-            <Row className='mt-3'>
-                <p>© 2022 Copyright Name. All rights reserved.</p>
-            </Row>
-        </Container>
+                </div>
+                <div className='flex flex-row justify-items-end'>
+                    <div>
+                        What is a building block?
+                    </div>
+                    <div className='mx-24'>
+                        Our product offerings
+                    </div>
+                    <div>
+                        Partner with us
+                    </div>
+                </div>
+            </div>
+            <div className='mt-10'>
+                <div className='border border-primary w-1/12'></div>
+            </div>
+            <div className='mt-6'>
+                <p className='text-sm font-normal text-blue-700'>© 2022 Copyright Name. All rights reserved.</p>
+            </div>
+        </div>
     );
 }
-
-export default Footer;

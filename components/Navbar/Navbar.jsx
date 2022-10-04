@@ -1,30 +1,62 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import styles from './Navbar.module.scss'
+import React from "react";
 
-function NavbarHeader() {
+export default function Navbar({ fixed }) {
+    const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
-        <Navbar bg="light" expand="lg" className="px-lg-4">
-            <Container className='d-none d-lg-block w-auto'>
-                <Navbar.Brand className={styles.linkText} href="/">PHDI Logo</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            </Container>
-            <Container fluid className='d-xl-none d-lg-none w-100'>
-                <Navbar.Brand className={styles.linkText} href="/">PHDI</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            </Container>
-            <Container fluid>
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                    <Nav>
-                        <Nav.Link className={styles.linkText} href="/building-block-info">What is a Building Block?</Nav.Link>
-                        <Nav.Link className={styles.linkText} href="/product-offerings">Our product offerings</Nav.Link>
-                        <Nav.Link className={styles.linkText} href="/partner-with-us">Partner with us</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <>
+            <nav className="border border-dashed border-blue-700 relative flex flex-wrap items-center justify-between px-16 py-3 bg-blue-100 text-blue-700">
+                <div className="container flex flex-wrap items-center justify-between">
+                    <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                        <a
+                            className="no-underline text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap"
+                            href="#pablo"
+                        >
+                            PHDI Logo
+                        </a>
+                        <button
+                            className=" cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                            type="button"
+                            onClick={() => setNavbarOpen(!navbarOpen)}
+                        >
+                            <i className="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <div
+                        className={
+                            "lg:flex flex-grow items-center" +
+                            (navbarOpen ? " flex" : " hidden")
+                        }
+                        id="example-navbar-danger"
+                    >
+                        <ul className="my-0 flex flex-col lg:flex-row list-none lg:ml-auto">
+                            <li className="nav-item">
+                                <a
+                                    className="no-underline py-2 flex items-center text-xs font-bold leading-snug hover:opacity-75"
+                                    href="#pablo"
+                                >
+                                    <i className="text-lg leading-lg opacity-75"></i><span className="ml-2">What is a Building Block</span>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a
+                                    className="no-underline px-9 py-2 flex items-center text-xs font-bold leading-snug hover:opacity-75"
+                                    href="#pablo"
+                                >
+                                    <i className="text-lg leading-lg opacity-75"></i><span className="ml-2">Our product offerings</span>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a
+                                    className="no-underline py-2 flex items-center text-xs font-bold leading-snug hover:opacity-75"
+                                    href="#pablo"
+                                >
+                                    <i className="text-lg leading-lg opacity-75"></i><span className="ml-2">Partner with us</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
     );
 }
-
-export default NavbarHeader;
