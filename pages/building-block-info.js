@@ -1,4 +1,3 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from '../styles/Home.module.scss'
 
 
@@ -87,9 +86,9 @@ export default function BuildingBlockInfo() {
                         <div className='m-8 text-center'>
                             <h5 className='font-semibold text-2xl text-center mb-4'>Ready to get started?</h5>
                             <p className='mb-3'>You can now test out Building Blocks in your jurisdiction's data environment</p>
-                            <Button>
+                            <div>
                                 View our product offerings
-                            </Button>
+                            </div>
                         </div>
                     </div>
                     <div className='basis-1/3'>

@@ -1,6 +1,3 @@
-import { Button, Col, Container, Row } from 'react-bootstrap'
-import Footer from '../components/Footer/Footer'
-import NavbarHeader from '../components/Navbar/Navbar'
 import styles from '../styles/Home.module.scss'
 
 
@@ -28,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <div className={`border-top-0 bg-blue-50 ${styles.dashBorder} border-top-0`}>
-        <div className='container py-5 mx-20'>
+        <div className='container py-12 mx-20'>
           <div className='flex flex-row'>
             <div className="basis-1/2">
               <div>hello</div>
@@ -83,7 +80,7 @@ export default function Home() {
             <div className='max-w-3xl'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </div>
           </div>
 
-          <Button className='mt-3'>Get Involved</Button>
+          <div className='mt-3'>Get Involved</div>
         </div>
       </div>
     </div >

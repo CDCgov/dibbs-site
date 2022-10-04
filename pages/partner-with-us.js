@@ -1,4 +1,3 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from '../styles/Home.module.scss'
 
 export default function GetInvolved() {
@@ -25,7 +24,7 @@ export default function GetInvolved() {
                                 We invite you to visit our SDK toolkit where you can explore the full range of modular Building Blocks. If interested in getting involved in our beta program, please reach out to our team.
                             </div>
                             <div className="text-center mt-4">
-                                <Button>Learn More</Button>
+                                <div>Learn More</div>
                             </div>
                         </div>
                         <div className={`py-8 px-20 bg-blue-100 ${styles.dashRoundedBorder} max-w-lg`}>
@@ -36,7 +35,7 @@ export default function GetInvolved() {
                                 <br /> <br />
                                 The purpose of these focus groups is to gather STLT input on how we prioritize and design potential Building Blocks. Each focus group will last for approximately 60 minutes.</div>
                             <div className="text-center mt-4">
-                                <Button>Learn More</Button>
+                                <div>Learn More</div>
                             </div>
                         </div>
                     </div>
@@ -50,9 +49,9 @@ export default function GetInvolved() {
                             A CoP partner is a STLT who, in the immediate future, is interested in offering feedback about the design principles and application interface(s) for Building Blocks and, in the near future, is interested in participating to the Building Block ecosystem by contributing code, helping govern the open source community, or offering other services as needed.
                         </div>
                         <div className="text-center width-fit">
-                            <Button>
+                            <div>
                                 Contact us at dmibuildingblocks@cdc.gov
-                            </Button>
+                            </div>
                         </div>
 
                     </div>

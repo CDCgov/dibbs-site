@@ -1,4 +1,3 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from '../styles/Home.module.scss'
 
 export default function ProductOffering() {
