@@ -9,7 +9,7 @@ export default function Navbar({ fixed }) {
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <a
                             className="no-underline text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap"
-                            href="#pablo"
+                            href="/"
                         >
                             PHDI Logo
                         </a>
@@ -32,7 +32,7 @@ export default function Navbar({ fixed }) {
                             <li className="nav-item">
                                 <a
                                     className="no-underline py-2 flex items-center text-xs font-bold leading-snug hover:opacity-75"
-                                    href="#pablo"
+                                    href="/building-block-info"
                                 >
                                     <i className="text-lg leading-lg opacity-75"></i><span className="ml-2">What is a Building Block</span>
                                 </a>
@@ -40,7 +40,7 @@ export default function Navbar({ fixed }) {
                             <li className="nav-item">
                                 <a
                                     className="no-underline px-9 py-2 flex items-center text-xs font-bold leading-snug hover:opacity-75"
-                                    href="#pablo"
+                                    href="/product-offerings"
                                 >
                                     <i className="text-lg leading-lg opacity-75"></i><span className="ml-2">Our product offerings</span>
                                 </a>
@@ -48,7 +48,7 @@ export default function Navbar({ fixed }) {
                             <li className="nav-item">
                                 <a
                                     className="no-underline py-2 flex items-center text-xs font-bold leading-snug hover:opacity-75"
-                                    href="#pablo"
+                                    href="/partner-with-us"
                                 >
                                     <i className="text-lg leading-lg opacity-75"></i><span className="ml-2">Partner with us</span>
                                 </a>
