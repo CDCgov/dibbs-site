@@ -23,11 +23,11 @@ a {
 }
 
 .usa-nav-container {
-  max-width: 90rem !important;
+  max-width: 75rem !important;
 }
 
 .usa-footer__primary-container {
-  max-width: 90rem !important;
+  max-width: 75rem !important;
 }
 
 /* .grid-container {
@@ -40,6 +40,10 @@ a {
 
 .usa-footer__secondary-section {
   background: #162E51 !important;
+}
+
+.usa-logo a {
+  color: white !important;
 }
 
 @media (prefers-color-scheme: dark) {

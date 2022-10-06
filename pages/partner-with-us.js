@@ -5,7 +5,7 @@ export default function GetInvolved() {
     return (
         <div className='padding-y-9'>
             <div className='margin-bottom-9'>
-                <div className="grid-container maxw-lg">
+                <div className="grid-container maxw-desktop-lg">
                     <div className='mb-10'>
                         <h1 className='text-center text-accent-cool-darker font-extrabold font-ui-2xl mb-4'>Partner with us</h1>
                         <div fluid className='mx-auto w-6/12 text-center text-base-darkest font-ui-xs'>
@@ -46,7 +46,7 @@ export default function GetInvolved() {
                     </div>
                 </div>
             </div>
-            <div className='grid-container maxw-lg'>
+            <div className='grid-container maxw-desktop-lg'>
                 <div className="grid-row">
                     <div className='desktop:grid-col-6'>
                         <div>hello</div>
