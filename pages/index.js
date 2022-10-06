@@ -57,7 +57,7 @@ export default function Home() {
           <h1 className='mb-3 text-3xl font-extrabold text-center'>Our pilot partners</h1>
           <div className='text-center mb-12'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur commodo habitasse ultrices.</div>
           <div className='flex flex-row justify-center'>
-            <div className={`mr-8 ${styles.containerBackgroundDark}`}>
+            <div className={`margin-right-4 ${styles.containerBackgroundDark}`}>
               <div className='p-6 text-center'>
                 <div><b>Heading</b></div>
                 <div className='my-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>

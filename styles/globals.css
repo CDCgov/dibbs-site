@@ -22,6 +22,26 @@ a {
   box-sizing: border-box;
 }
 
+.usa-nav-container {
+  max-width: 90rem !important;
+}
+
+.usa-footer__primary-container {
+  max-width: 90rem !important;
+}
+
+/* .grid-container {
+  max-width: 90rem !important;
+} */
+
+.usa-footer__primary-section {
+  background: #162E51 !important;
+}
+
+.usa-footer__secondary-section {
+  background: #162E51 !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
