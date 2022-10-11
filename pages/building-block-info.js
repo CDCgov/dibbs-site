@@ -96,7 +96,7 @@ export default function BuildingBlockInfo() {
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-accent-cool-dark padding-6 text-center'>
                                 <h5 className='text-white font-semibold text-2xl text-center mb-4'>Ready to get started?</h5>
-                                <p className='text-white mb-3'>You can now test out Building Blocks in your jurisdiction's data environment</p>
+                                <p className='text-white mb-3'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
                                 <Button accentStyle='warm'>
                                     View our product offerings
                                 </Button>

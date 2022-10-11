@@ -1,4 +1,5 @@
 import { Address, FooterNav, Logo, Footer } from "@trussworks/react-uswds";
+import Image from "next/image";
 
 
 
@@ -9,16 +10,16 @@ export default function FooterUSWDS() {
 
     const createLinks = () => {
         return ([
-            <a className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='home' className="usa-footer__primary-link text-base-lightest" href="#">
                 Home
             </a>,
-            <a className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='building-block' className="usa-footer__primary-link text-base-lightest" href="#">
                 What is a building block?
             </a>,
-            <a className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='product-offerings' className="usa-footer__primary-link text-base-lightest" href="#">
                 Our product offerings
             </a>,
-            <a className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='partner' className="usa-footer__primary-link text-base-lightest" href="#">
                 Partner with us
             </a>,
 
@@ -45,7 +46,7 @@ export default function FooterUSWDS() {
                 <Logo
                     size="slim"
                     image={
-                        <img
+                        <Image
                             className="usa-footer__logo-img text-base-lightest"
                             alt="img alt text"
                         />

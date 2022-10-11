@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.scss'
 import '@trussworks/react-uswds/lib/uswds.css'
 import '@trussworks/react-uswds/lib/index.css'
 import { Button } from '@trussworks/react-uswds'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -37,17 +38,17 @@ export default function Home() {
               </h1>
               <div className='text-base-darkest line-height-sans-6'>
                 PHDI’s current body of work also falls within the scope of
-                <a className='underline text-primary' href="/">
+                <Link className='underline text-primary' href="/">
                   Data Modernization Initiative’s (DMI)
-                </a>
+                </Link>
                 ,&nbsp;which is an effort to modernize core public health data and surveillance infrastructure across the federal and state public health landscape.
                 <br /><br />
                 PHDI’s work focuses on building and providing access to open source, modular software and tooling, known as “Building Blocks,” that states, territories, localities, tribes (STLTs), and other public health actors can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses.
                 <br /><br />
                 <div className='font-semibold'>
                   Find out more about &nbsp;
-                  <a className='underline text-primary' href="/">Building Blocks ›
-                  </a>
+                  <Link className='underline text-primary' href="/">Building Blocks ›
+                  </Link>
                 </div>
               </div>
             </div>
