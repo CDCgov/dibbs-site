@@ -1,5 +1,10 @@
 import { Button } from '@trussworks/react-uswds';
 import styles from '../styles/Home.module.scss'
+import getInvolved1 from '../public/get-involved-1.svg'
+import getInvolved2 from '../public/get-involved-2.svg'
+import getInvolved3 from '../public/get-involved-3.svg'
+import Image from 'next/image';
+
 
 export default function GetInvolved() {
     return (
@@ -18,7 +23,7 @@ export default function GetInvolved() {
                     <div className='grid-row'>
                         <div className="desktop:grid-col-6">
                             <div className='margin-right-4 padding-x-4 padding-y-5 bg-primary-lighter radius-md'>
-                                <div className="text-center mb-3">Picture placeholder</div>
+                                <div className="text-center mb-3"><Image src={getInvolved1} layout='fixed'></Image></div>
                                 <h4 className="text-center text-accent-cool-darker mb-3 font-ui-xl font-bold">Beta program</h4>
                                 <div className="text-base-darkest font-ui-xs">
                                     Our beta program is an opportunity for STLTs to define and iterate on existing Building Blocks. By participating in this program, STLTs will gain a greater awareness about their data architecture strengths and weaknesses and help improve a part of their data process.
@@ -32,7 +37,7 @@ export default function GetInvolved() {
                         </div>
                         <div className="desktop:grid-col-6">
                             <div className='padding-x-4 padding-y-5 bg-primary-lighter radius-md'>
-                                <div className="text-center mb-3">Picture placeholder</div>
+                                <div className="text-center mb-3"><Image src={getInvolved2} layout='fixed'></Image></div>
                                 <h4 className="text-center text-accent-cool-darker mb-3 font-ui-xl font-bold">Focus groups</h4>
                                 <div className="text-base-darkest font-ui-xs">
                                     We are conducting a series of focus groups to hear back from public health agency staff who interact with data related to childhood lead poisoning, Legionnaires’ disease, listeria, and HIV surveillance at any point along the data lifecycle (e.g., collection, ingestion, management, analysis, visualization).
@@ -49,7 +54,7 @@ export default function GetInvolved() {
             <div className='grid-container maxw-desktop-lg'>
                 <div className="grid-row">
                     <div className='desktop:grid-col-6'>
-                        <div>hello</div>
+                        <Image src={getInvolved3} layout='fixed'></Image>
                     </div>
                     <div className='desktop:grid-col-6'>
                         <h4 className="text-accent-cool-darker mb-3 font-bold font-ui-xl ">You can also help support the Community of Practice</h4>

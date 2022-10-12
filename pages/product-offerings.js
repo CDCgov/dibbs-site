@@ -1,4 +1,10 @@
 import styles from '../styles/Home.module.scss'
+import productOfferingsImage from '../public/products.svg'
+import awsImage from '../public/icons/aws.png'
+import azureImage from '../public/icons/azure.png'
+import gcpImage from '../public/icons/gcp.png'
+
+import Image from 'next/image';
 
 export default function ProductOffering() {
     return (
@@ -6,7 +12,7 @@ export default function ProductOffering() {
             <div className='grid-container margin-top-9'>
                 <div className='grid-row' >
                     <div className='desktop:grid-col-6 height-mobile'>
-                        hello
+                        <Image src={productOfferingsImage} layout='fill'></Image>
                     </div>
                     <div className='desktop:grid-col-6'>
                         <h2 className='text-accent-cool-darker font-extrabold text-4xl mb-4'>Our Product Offerings</h2>
@@ -32,14 +38,17 @@ export default function ProductOffering() {
                         deduplicating and linking the data, and then geocoding the cleaned results.
                     </div>
                     <div className='grid-row  margin-top-4'>
-                        <div className='desktop:grid-col-3'>
-                            Access Azure repository
+                        <div className='desktop:grid-col-4 text-center'>
+                            <Image src={azureImage} layout='fixed' height='100' width='100'></Image>
+                            <div>Access Azure repository</div>
                         </div>
-                        <div className='desktop:grid-col-3'>
-                            Access GCP repository
+                        <div className='desktop:grid-col-4 text-center'>
+                            <Image src={gcpImage} layout='fixed'></Image>
+                            <div>Access GCP repository</div>
                         </div>
-                        <div className='desktop:grid-col-3'>
-                            Access AWS repository
+                        <div className='desktop:grid-col-4 text-center'>
+                            <Image src={awsImage} layout='fixed'></Image>
+                            <div>Access AWS repository</div>
                         </div>
                     </div>
                 </div>
