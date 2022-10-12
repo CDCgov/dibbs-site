@@ -1,72 +1,14 @@
-.homeText {
-  max-width: 660px;
+.desktopHeroImage2 {
+  margin-bottom: -88px;
 }
 
-.contentContainer {
-  padding-top: 48px;
+.buildingBlockImage {
+  margin-bottom: -88px;
 }
 
-.containerBackgroundDark {
-  background-color: #BFDBFE;
+.desktopHeroImage3Background {
+  background-image: url('../public/desktop-hero-3.svg');
 }
-
-.containerBackgroundMedium {
-  background-color: #DBEAFE;
-}
-
-.mw55 {
-  max-width: 55%;
-}
-
-.containerBackgroundLight {
-  background-color: #EFF6FF;
-}
-
-.communityContainer {
-  max-width: 840px;
-}
-
-.dashRoundedBorder {
-  border: 1px dashed #1D4ED8;
-  border-radius: 6px;
-}
-
-.dashBorder {
-  border: 1px dashed #1D4ED8;
-}
-
-
-.primaryText {
-  color: #1D4ED8
-}
-
-.headerText {
-  font-weight: 800;
-}
-
-.secondaryText {
-  color: #2563EB;
-  font-weight: 400;
-}
-
-.placeholderMiddle {
-  height: 724px;
-  border-radius: 10px;
-}
-
-.centerText {
-  text-align: center;
-}
-
-.partnerDescription {
-  max-width: 720px
-}
-
-// @include media-breakpoint-up(md) {
-//   .containerBackground {
-//     background-color: #DBEAFE;
-//   }
-// }
 
 .main {
   min-height: 100vh;

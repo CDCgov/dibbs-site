@@ -3,13 +3,20 @@ import '@trussworks/react-uswds/lib/uswds.css'
 import '@trussworks/react-uswds/lib/index.css'
 import { Button } from '@trussworks/react-uswds'
 import Link from 'next/link'
+import Image from 'next/image'
+import desktopHero1 from '../public/desktop-hero-1.svg'
+import desktopHero2 from '../public/desktop-hero-2.svg'
+import desktopHero3 from '../public/desktop-hero-3.svg'
+import vdhImage from '../public/vdh.png'
+import lacountyImage from '../public/lacounty.png'
+
 
 export default function Home() {
   return (
     <div>
       <div className='grid-container maxw-desktop-lg'>
-        <div className='grid-row margin-y-8'>
-          <div className='desktop:grid-col-5'>
+        <div className='grid-row margin-top-8'>
+          <div className='desktop:grid-col-5 margin-bottom-8'>
             <h1 className='text-accent-cool-darker font-bold'>
               Reponse-ready public health data systems
             </h1>
@@ -22,15 +29,15 @@ export default function Home() {
             </p>
           </div>
           <div className="desktop:grid-col-7">
-            <div>hello</div>
+            <Image src={desktopHero1} layout='fill'></Image>
           </div>
         </div>
       </div>
       <div className='bg-primary-lighter'>
         <div className='grid-container maxw-desktop-lg'>
           <div className='grid-row'>
-            <div className='desktop:grid-col-6'>
-              <div>hello</div>
+            <div className={`desktop:grid-col-6 ${styles.desktopHeroImage2}`}>
+              <Image src={desktopHero2} layout='fill'></Image>
             </div>
             <div className='desktop:grid-col-6 margin-y-7'>
               <h1 className='text-accent-cool-darker font-bold'>
@@ -61,25 +68,31 @@ export default function Home() {
         <div className='grid-row margin-top-8'>
           <div className='desktop:grid-col-6'>
             <div className='padding-3 text-center'>
-              <div><b>Heading</b></div>
+              <Image src={vdhImage} layout='fixed'></Image>
               <p className='text-base-darkest line-height-sans-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
           <div className='desktop:grid-col-6'>
             <div className='padding-3 text-center'>
-              <div><b>Heading</b></div>
+              <Image src={lacountyImage} layout='fixed'></Image>
               <p className='text-base-darkest line-height-sans-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
         </div>
       </div>
-      <div className='bg-accent-cool-dark padding-y-8'>
-        <div className='grid-container maxw-tablet'>
-          <h1 className='text-center font-extrabold text-white'>An invitation to participate</h1>
-          <p className='line-height-sans-6 text-white text-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
-          <div className='text-center margin-top-3'>
-            <Button accentStyle='warm'>Click Me</Button>
+      <div className={``}>
+        <div className='grid-container maxw-desktop-lg'>
+          <div>
+            <h1 className='text-center font-extrabold text-white'>An invitation to participate</h1>
+            <p className='line-height-sans-6 text-white text-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
+            <div className='text-center margin-top-3'>
+              <Button accentStyle='warm'>Click Me</Button>
+            </div>
           </div>
+          <div>
+            <Image src={desktopHero3} layout='responsive'></Image>
+          </div>
+
         </div>
       </div>
     </div >

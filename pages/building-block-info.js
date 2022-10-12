@@ -1,5 +1,7 @@
 import { Button } from '@trussworks/react-uswds';
+import Image from 'next/image';
 import styles from '../styles/Home.module.scss'
+import buildingBlockImage from '../public/building-block-1.svg'
 
 
 export default function BuildingBlockInfo() {
@@ -7,29 +9,31 @@ export default function BuildingBlockInfo() {
         <div>
             <div className='grid-container maxw-desktop-lg'>
                 <div className="grid-row">
-                    <div className='desktop:grid-col-5'>
-                        hello
+                    <div className={`desktop:grid-col-5 ${styles.buildingBlockImage}`}>
+                        <Image src={buildingBlockImage}></Image>
                     </div>
-                    <div className='desktop:grid-col-7 margin-y-9'>
-                        <h1 className='font-ui-xl text-accent-cool-darker font-bold margin-bottom-2'>Building Blocks</h1>
-                        <div className='text-base-darkest line-height-sans-6'>
-                            <p>
-                                Piloting and productizing Building Blocks are a key part of the CDC DMI’s goal of reducing the burden on STLT partners for collecting and reporting public health data.
-                            </p>
-                            <br />
-                            <p>
-                                To qualify as a Building Block, a software service must meet one or more of the following criteria:
-                            </p>
-                            <br />
-                            <p>
-                                Can fill a gap where no solution currently exists
-                                <br /> Can provide significantly more value than current solution(s) where a burden presents
-                                <br /> Reusable across multiple data streams and steps in the public health data journey
-                                <br /> Enables significant reduction or elimination of manual effort to accomplish a critical task in one or more public health workflows
-                                <br /> Able to be developed to minimum viable product and provide value within 6 months
-                                <br /> Can be piloted while existing workflows remain unchanged, and incrementally adopted once pilot results demonstrate enough value that migration from legacy workflows is desired
-                                <br /> Increases speed of data to public health and/or drives faster public health action (e.g., makes data easier to use for surveillance or outbreak response)
-                            </p>
+                    <div className='desktop:grid-col-7'>
+                        <div className='margin-left-7'>
+                            <h1 className='font-ui-xl text-accent-cool-darker font-bold margin-bottom-2'>Building Blocks</h1>
+                            <div className='text-base-darkest line-height-sans-6'>
+                                <p>
+                                    Piloting and productizing Building Blocks are a key part of the CDC DMI’s goal of reducing the burden on STLT partners for collecting and reporting public health data.
+                                </p>
+                                <br />
+                                <p>
+                                    To qualify as a Building Block, a software service must meet one or more of the following criteria:
+                                </p>
+                                <br />
+                                <p>
+                                    Can fill a gap where no solution currently exists
+                                    <br /> Can provide significantly more value than current solution(s) where a burden presents
+                                    <br /> Reusable across multiple data streams and steps in the public health data journey
+                                    <br /> Enables significant reduction or elimination of manual effort to accomplish a critical task in one or more public health workflows
+                                    <br /> Able to be developed to minimum viable product and provide value within 6 months
+                                    <br /> Can be piloted while existing workflows remain unchanged, and incrementally adopted once pilot results demonstrate enough value that migration from legacy workflows is desired
+                                    <br /> Increases speed of data to public health and/or drives faster public health action (e.g., makes data easier to use for surveillance or outbreak response)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
