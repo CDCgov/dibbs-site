@@ -10,15 +10,15 @@ export default function Navbar({ }) {
     const [isOpen, setIsOpen] = React.useState([false, false])
 
     const testItemsMenu = [
-        <Link href="/building-block-info" key="one" className="usa-nav__link">
+        <a href="/building-block-info" key="one" className="usa-nav__link">
             <span className='text-base-lightest'>What is a Building Block?</span>
-        </Link>,
-        <Link href="/product-offerings" key="two" className="usa-nav__link">
+        </a>,
+        <a href="/product-offerings" key="two" className="usa-nav__link">
             <span className='text-base-lightest'>Our product offerings</span>
-        </Link>,
-        <Link href="/partner-with-us" key="three" className="usa-nav__link">
+        </a>,
+        <a href="/partner-with-us" key="three" className="usa-nav__link">
             <span className='text-base-lightest'>Partner with us</span>
-        </Link>,
+        </a>,
     ]
     return (
         <>
