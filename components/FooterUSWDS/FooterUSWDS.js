@@ -49,6 +49,7 @@ export default function FooterUSWDS() {
                     image={
                         <Image
                             className="usa-footer__logo-img text-base-lightest"
+                            alt='CDC Logo'
                             src={cdcLogo}
                         />
                     }

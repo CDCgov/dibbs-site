@@ -15,7 +15,7 @@ export default function BuildingBlockInfo() {
             <div className='grid-container maxw-desktop-lg'>
                 <div className="grid-row">
                     <div className={`desktop:grid-col-5 ${styles.buildingBlockImage}`}>
-                        <Image src={buildingBlockImage}></Image>
+                        <Image alt='' src={buildingBlockImage}></Image>
                     </div>
                     <div className='desktop:grid-col-7'>
                         <div className='margin-left-7'>
@@ -50,7 +50,7 @@ export default function BuildingBlockInfo() {
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
                                 <div className='mb-6'>
-                                    <Image src={locationIcon} layout='fixed'></Image>
+                                    <Image alt='' src={locationIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Location Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
@@ -65,7 +65,7 @@ export default function BuildingBlockInfo() {
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
                                 <div className='mb-6'>
-                                    <Image src={codeIcon} layout='fixed'></Image>
+                                    <Image alt='' src={codeIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Data Exchange Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
@@ -80,7 +80,7 @@ export default function BuildingBlockInfo() {
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
                                 <div className='mb-6'>
-                                    <Image src={organizationIcon} layout='fixed'></Image>
+                                    <Image alt='' src={organizationIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Data Harmonization Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
@@ -97,7 +97,7 @@ export default function BuildingBlockInfo() {
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
                                 <div className='mb-6'>
-                                    <Image src={linkIcon} layout='fixed'></Image>
+                                    <Image alt='' src={linkIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Data Linkage Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>

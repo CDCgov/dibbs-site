@@ -29,7 +29,7 @@ export default function Home() {
             </p>
           </div>
           <div className="desktop:grid-col-7">
-            <Image src={desktopHero1} layout='fill'></Image>
+            <Image alt='' src={desktopHero1} layout='fill'></Image>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function Home() {
         <div className='grid-container maxw-desktop-lg'>
           <div className='grid-row'>
             <div className={`desktop:grid-col-6 ${styles.desktopHeroImage2}`}>
-              <Image src={desktopHero2} layout='fill'></Image>
+              <Image alt='' src={desktopHero2} layout='fill'></Image>
             </div>
             <div className='desktop:grid-col-6 margin-y-7'>
               <h1 className='text-accent-cool-darker font-bold'>
@@ -68,13 +68,13 @@ export default function Home() {
         <div className='grid-row margin-top-8'>
           <div className='desktop:grid-col-6'>
             <div className='padding-3 text-center'>
-              <Image src={vdhImage} layout='fixed'></Image>
+              <Image alt='' src={vdhImage} layout='fixed'></Image>
               <p className='text-base-darkest line-height-sans-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
           <div className='desktop:grid-col-6'>
             <div className='padding-3 text-center'>
-              <Image src={lacountyImage} layout='fixed'></Image>
+              <Image alt='' src={lacountyImage} layout='fixed'></Image>
               <p className='text-base-darkest line-height-sans-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <Image src={desktopHero3} layout='responsive'></Image>
+            <Image alt='' src={desktopHero3} layout='responsive'></Image>
           </div>
 
         </div>

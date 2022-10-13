@@ -16,7 +16,7 @@ export default function ProductOffering() {
             <div className='grid-container margin-top-9'>
                 <div className='grid-row' >
                     <div className='desktop:grid-col-6 height-mobile'>
-                        <Image src={productOfferingsImage} layout='fill'></Image>
+                        <Image alt='' src={productOfferingsImage} layout='fill'></Image>
                     </div>
                     <div className='desktop:grid-col-6'>
                         <h2 className='text-accent-cool-darker font-extrabold text-4xl mb-4'>Our Product Offerings</h2>
@@ -43,15 +43,15 @@ export default function ProductOffering() {
                     </div>
                     <div className='grid-row  margin-top-4'>
                         <div className='desktop:grid-col-4 text-center'>
-                            <Image src={azureImage} layout='fixed' height='100' width='100'></Image>
+                            <Image alt='' src={azureImage} layout='fixed' height='100' width='100'></Image>
                             <div>Access Azure repository</div>
                         </div>
                         <div className='desktop:grid-col-4 text-center'>
-                            <Image src={gcpImage} layout='fixed'></Image>
+                            <Image alt='' src={gcpImage} layout='fixed'></Image>
                             <div>Access GCP repository</div>
                         </div>
                         <div className='desktop:grid-col-4 text-center'>
-                            <Image src={awsImage} layout='fixed'></Image>
+                            <Image alt='' src={awsImage} layout='fixed'></Image>
                             <div>Access AWS repository</div>
                         </div>
                     </div>
@@ -66,21 +66,21 @@ export default function ProductOffering() {
                     <div>
                         <div className="grid-row margin-y-6">
                             <div className='desktop:grid-col-4'>
-                                <Image src={locationIcon} layout='fixed' />
+                                <Image alt='' src={locationIcon} layout='fixed' />
                                 <div>Location Services</div>
                             </div>
                             <div className='desktop:grid-col-4'>
-                                <Image src={organizationIcon} layout='fixed' />
+                                <Image alt='' src={organizationIcon} layout='fixed' />
                                 Data Harmonization Services
                             </div>
                         </div>
                         <div className="grid-row">
                             <div className='desktop:grid-col-4'>
-                                <Image src={transportIcon} layout='fixed' />
+                                <Image alt='' src={transportIcon} layout='fixed' />
                                 Transport Services
                             </div>
                             <div className='desktop:grid-col-4'>
-                                <Image src={linkIcon} layout='fixed' />
+                                <Image alt='' src={linkIcon} layout='fixed' />
                                 Data Linkage Services
                             </div>
                         </div>
