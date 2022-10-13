@@ -13,10 +13,10 @@ export default function Navbar({ }) {
         <a href="building-block-info" key="one" className="usa-nav__link">
             <span className='text-base-lightest'>What is a Building Block?</span>
         </a>,
-        <a href="/product-offerings" key="two" className="usa-nav__link">
+        <a href="product-offerings" key="two" className="usa-nav__link">
             <span className='text-base-lightest'>Our product offerings</span>
         </a>,
-        <a href="/partner-with-us" key="three" className="usa-nav__link">
+        <a href="partner-with-us" key="three" className="usa-nav__link">
             <span className='text-base-lightest'>Partner with us</span>
         </a>,
     ]
