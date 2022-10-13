@@ -10,7 +10,7 @@ export default function Navbar({ }) {
     const [isOpen, setIsOpen] = React.useState([false, false])
 
     const testItemsMenu = [
-        <a href="/building-block-info" key="one" className="usa-nav__link">
+        <a href="building-block-info" key="one" className="usa-nav__link">
             <span className='text-base-lightest'>What is a Building Block?</span>
         </a>,
         <a href="/product-offerings" key="two" className="usa-nav__link">
