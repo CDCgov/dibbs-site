@@ -3,6 +3,10 @@ import productOfferingsImage from '../public/products.svg'
 import awsImage from '../public/icons/aws.png'
 import azureImage from '../public/icons/azure.png'
 import gcpImage from '../public/icons/gcp.png'
+import locationIcon from '../public/icons/location.png';
+import linkIcon from '../public/icons/link.png'
+import transportIcon from '../public/icons/transport.png'
+import organizationIcon from '../public/icons/organization.png'
 
 import Image from 'next/image';
 
@@ -61,12 +65,24 @@ export default function ProductOffering() {
                     </div>
                     <div>
                         <div className="grid-row margin-y-6">
-                            <div className='desktop:grid-col-3'>Location Services</div>
-                            <div className='desktop:grid-col-3'>Data Linkage Services</div>
+                            <div className='desktop:grid-col-4'>
+                                <Image src={locationIcon} layout='fixed' />
+                                <div>Location Services</div>
+                            </div>
+                            <div className='desktop:grid-col-4'>
+                                <Image src={organizationIcon} layout='fixed' />
+                                Data Harmonization Services
+                            </div>
                         </div>
                         <div className="grid-row">
-                            <div className='desktop:grid-col-3'>Data Harmonization Services</div>
-                            <div className='desktop:grid-col-3'>Transport Services</div>
+                            <div className='desktop:grid-col-4'>
+                                <Image src={transportIcon} layout='fixed' />
+                                Transport Services
+                            </div>
+                            <div className='desktop:grid-col-4'>
+                                <Image src={linkIcon} layout='fixed' />
+                                Data Linkage Services
+                            </div>
                         </div>
                     </div>
                 </div>

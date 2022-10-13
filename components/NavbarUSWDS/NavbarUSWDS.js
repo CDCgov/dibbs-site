@@ -24,9 +24,9 @@ export default function Navbar({ }) {
         <>
             <div className={`usa-overlay ${expanded ? 'is-visible' : ''}`}></div>
             <Header basic={true} className='bg-primary-darker'>
-                <div className="usa-nav-container max-w-full px-20">
+                <div className="usa-nav-container max-w-full">
                     <div className="w-full usa-navbar">
-                        <Title className='text-xl text-base-lightest font-normal'>
+                        <Title className='text-base-lightest font-normal'>
                             <Link href='/'>Public Health Data Infrastructure</Link>
                         </Title>
                         <NavMenuButton onClick={onClick} label="Menu" />

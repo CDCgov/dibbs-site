@@ -1,5 +1,6 @@
 import { Address, FooterNav, Logo, Footer } from "@trussworks/react-uswds";
 import Image from "next/image";
+import cdcLogo from '../../public/icons/cdc.png'
 
 
 
@@ -48,7 +49,7 @@ export default function FooterUSWDS() {
                     image={
                         <Image
                             className="usa-footer__logo-img text-base-lightest"
-                            alt="img alt text"
+                            src={cdcLogo}
                         />
                     }
                     heading={<p className="text-base-lightest usa-footer__logo-heading">Center for Disease Control</p>}

@@ -1,7 +1,12 @@
 import { Button } from '@trussworks/react-uswds';
 import Image from 'next/image';
-import styles from '../styles/Home.module.scss'
-import buildingBlockImage from '../public/building-block-1.svg'
+import styles from '../styles/Home.module.scss';
+import buildingBlockImage from '../public/building-block-1.svg';
+import locationIcon from '../public/icons/location.png';
+import linkIcon from '../public/icons/link.png'
+import codeIcon from '../public/icons/code.png'
+import organizationIcon from '../public/icons/organization.png'
+
 
 
 export default function BuildingBlockInfo() {
@@ -44,7 +49,9 @@ export default function BuildingBlockInfo() {
                     <div className="grid-row grid-gap-2">
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>icon</div>
+                                <div className='mb-6'>
+                                    <Image src={locationIcon} layout='fixed'></Image>
+                                </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Location Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
                                     <p>(address validation, standardization, and data enrichment)</p>
@@ -57,7 +64,9 @@ export default function BuildingBlockInfo() {
                         </div>
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>icon</div>
+                                <div className='mb-6'>
+                                    <Image src={codeIcon} layout='fixed'></Image>
+                                </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Data Exchange Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
                                     <p>(for reporting to CDC)</p>
@@ -70,7 +79,9 @@ export default function BuildingBlockInfo() {
                         </div>
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>icon</div>
+                                <div className='mb-6'>
+                                    <Image src={organizationIcon} layout='fixed'></Image>
+                                </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Data Harmonization Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
                                     <p>(for data structures and semantics)</p>
@@ -85,7 +96,9 @@ export default function BuildingBlockInfo() {
                     <div className='grid-row grid-gap-2 margin-top-205'>
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>icon</div>
+                                <div className='mb-6'>
+                                    <Image src={linkIcon} layout='fixed'></Image>
+                                </div>
                                 <h5 className='text-2xl mb-2 font-semibold'>Data Linkage Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
                                     <p>(for deduplicating data)</p>
