@@ -2,6 +2,7 @@ import { Button } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import buildingBlockImage from '../public/building-block-1.svg';
+import mobileBuildingBlockImage from '../public/mobile/mobile-building-block.svg';
 import locationIcon from '../public/icons/location.png';
 import linkIcon from '../public/icons/link.png'
 import codeIcon from '../public/icons/code.png'
@@ -12,13 +13,16 @@ import organizationIcon from '../public/icons/organization.png'
 export default function BuildingBlockInfo() {
     return (
         <div>
-            <div className='grid-container maxw-desktop-lg'>
+            <div className='grid-container desktop:maxw-desktop-lg margin-y-7 desktop:margin-y-0'>
                 <div className="grid-row">
-                    <div className={`desktop:grid-col-5 ${styles.buildingBlockImage}`}>
+                    <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom`}>
                         <Image alt='' src={buildingBlockImage}></Image>
                     </div>
+                    <div className='desktop:display-none text-center grid-col-12'>
+                        <Image alt='' src={mobileBuildingBlockImage}></Image>
+                    </div>
                     <div className='desktop:grid-col-7'>
-                        <div className='margin-left-7'>
+                        <div className='desktop:margin-left-7'>
                             <h1 className='font-ui-xl text-accent-cool-darker font-bold margin-bottom-2'>Building Blocks</h1>
                             <div className='text-base-darkest line-height-sans-6'>
                                 <p>
@@ -44,17 +48,17 @@ export default function BuildingBlockInfo() {
                 </div>
 
             </div>
-            <div className='bg-primary-lighter padding-y-7'>
-                <div className='grid-container maxw-desktop-lg'>
+            <div className='bg-primary-lighter padding-top-4 desktop:padding-y-7'>
+                <div className='grid-container desktop:maxw-desktop-lg padding-x-0'>
                     <div className="grid-row grid-gap-2">
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>
+                                <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={locationIcon} layout='fixed'></Image>
                                 </div>
-                                <h5 className='text-2xl mb-2 font-semibold'>Location Services</h5>
+                                <h5 className='text-center lg:text-left text-2xl mb-2 font-semibold'>Location Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
-                                    <p>(address validation, standardization, and data enrichment)</p>
+                                    <p className='text-center lg:text-left'>(address validation, standardization, and data enrichment)</p>
                                     <br />
                                     <p>
                                         Tools for mapping data describing a standard geographic location to its canonical representation in a source dataset for purposes of standardization, validation, cleaning, and/or enrichment with other geography-related data.
@@ -62,14 +66,14 @@ export default function BuildingBlockInfo() {
                                 </div>
                             </div>
                         </div>
-                        <div className='desktop:grid-col-4 radius-md'>
+                        <div className='desktop:grid-col-4 radius-md margin-y-4 desktop:margin-y-0'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>
+                                <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={codeIcon} layout='fixed'></Image>
                                 </div>
-                                <h5 className='text-2xl mb-2 font-semibold'>Data Exchange Services</h5>
+                                <h5 className='text-2xl mb-2 font-semibold text-center lg:text-left'>Data Exchange Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
-                                    <p>(for reporting to CDC)</p>
+                                    <p className='text-center lg:text-left'>(for reporting to CDC)</p>
                                     <br />
                                     <p>
                                         An EDAV-integrated platform that provides API-based data exchange services supporting common standards (e.g., HL7, FHIR, CDA, CSV, JSON) and enabling observability to provenance and transparency on data transmissions.
@@ -79,12 +83,12 @@ export default function BuildingBlockInfo() {
                         </div>
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>
+                                <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={organizationIcon} layout='fixed'></Image>
                                 </div>
-                                <h5 className='text-2xl mb-2 font-semibold'>Data Harmonization Services</h5>
+                                <h5 className='text-2xl mb-2 font-semibold text-center lg:text-left'>Data Harmonization Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
-                                    <p>(for data structures and semantics)</p>
+                                    <p className='text-center lg:text-left'>(for data structures and semantics)</p>
                                     <br />
                                     <p>
                                         Services that align the structure and semantics of an incoming data stream to the input specifications of the receiving application without changing the meaning of the data (e.g., transformations, format conversions, validations)
@@ -93,15 +97,15 @@ export default function BuildingBlockInfo() {
                             </div>
                         </div>
                     </div>
-                    <div className='grid-row grid-gap-2 margin-top-205'>
-                        <div className='desktop:grid-col-4 radius-md'>
+                    <div className='grid-row grid-gap-2  desktop:margin-top-205'>
+                        <div className='desktop:grid-col-4 radius-md margin-y-4'>
                             <div className='bg-white padding-205'>
-                                <div className='mb-6'>
+                                <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={linkIcon} layout='fixed'></Image>
                                 </div>
-                                <h5 className='text-2xl mb-2 font-semibold'>Data Linkage Services</h5>
+                                <h5 className='text-2xl mb-2 font-semibold text-center lg:text-left'>Data Linkage Services</h5>
                                 <div className='font-ui-3xs line-height-sans-6'>
-                                    <p>(for deduplicating data)</p>
+                                    <p className='text-center lg:text-left'>(for deduplicating data)</p>
                                     <br />
                                     <p>
                                         A service that identifies and links data referring to the same entity (e.g., patient, event, case) across disparate streams
@@ -119,9 +123,7 @@ export default function BuildingBlockInfo() {
                                 </Button>
                             </div>
                         </div>
-                        <div className='desktop:grid-col-4'>
-                            <div className='m-8'></div>
-                        </div>
+
                     </div >
                 </div >
             </div>

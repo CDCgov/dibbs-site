@@ -1,5 +1,7 @@
 import styles from '../styles/Home.module.scss'
 import productOfferingsImage from '../public/products.svg'
+import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg'
+
 import awsImage from '../public/icons/aws.png'
 import azureImage from '../public/icons/azure.png'
 import gcpImage from '../public/icons/gcp.png'
@@ -13,13 +15,17 @@ import Image from 'next/image';
 export default function ProductOffering() {
     return (
         <div>
-            <div className='grid-container margin-top-9'>
+            <div className='grid-container desktop:margin-top-9'>
                 <div className='grid-row' >
-                    <div className='desktop:grid-col-6 height-mobile'>
+                    <div className='desktop:grid-col-12 text-center desktop:display-none'>
+                        <Image alt='' src={mobileProductOfferingsImage} layout='fixed'></Image>
+                    </div>
+                    <div className='display-none desktop:grid-col-6 height-mobile desktop:display-block'>
                         <Image alt='' src={productOfferingsImage} layout='fill'></Image>
                     </div>
                     <div className='desktop:grid-col-6'>
-                        <h2 className='text-accent-cool-darker font-extrabold text-4xl mb-4'>Our Product Offerings</h2>
+                        {/*Why is the alignment not going left*/}
+                        <h2 className='text-center text-accent-cool-darker font-extrabold text-4xl mb-4 desktop:text-left'>Our Product Offerings</h2>
                         <p className="text-base-darkest">Our products create a data architecture that is: <br />
                             <br />
                             &nbsp; &#8226; &nbsp;  Flexible and modular <br />
