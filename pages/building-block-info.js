@@ -13,7 +13,7 @@ import organizationIcon from '../public/icons/organization.png'
 export default function BuildingBlockInfo() {
     return (
         <div>
-            <div className='grid-container desktop:maxw-desktop-lg margin-y-7 desktop:margin-y-0'>
+            <div className='grid-container maxw-widescreen desktop:padding-x-9 margin-y-7 desktop:margin-y-0'>
                 <div className="grid-row">
                     <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom`}>
                         <Image alt='' src={buildingBlockImage}></Image>
@@ -49,7 +49,7 @@ export default function BuildingBlockInfo() {
 
             </div>
             <div className='bg-primary-lighter padding-top-4 desktop:padding-y-7'>
-                <div className='grid-container desktop:maxw-desktop-lg padding-x-0'>
+                <div className='grid-container maxw-widescreen padding-x-0 desktop:padding-x-9'>
                     <div className="grid-row grid-gap-2">
                         <div className='desktop:grid-col-4 radius-md'>
                             <div className='bg-white padding-205'>
