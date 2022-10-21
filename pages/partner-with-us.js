@@ -16,7 +16,7 @@ export default function GetInvolved() {
             <div className="grid-container maxw-desktop-lg padding-0">
                 <div className='padding-y-5 padding-x-2'>
                     <h1 className='text-center text-accent-cool-darker font-extrabold font-ui-2xl mb-4'>Partner with us</h1>
-                    <div className='mx-auto desktop:w-6/12 desktop:text-center text-base-darkest font-ui-xs'>
+                    <div className='mx-auto desktop:width-tablet lg:text-center text-base-darkest font-ui-xs'>
                         Public health agencies have a variety of opportunities to contribute to the development of Building Blocks. Below we&apos;ve outlined how jurisdictions can get involved at various levels of partnership, including our beta program, focus groups, and Community of Practice (CoP).
                         <br />
                         <br />
@@ -24,8 +24,8 @@ export default function GetInvolved() {
                     </div>
                 </div>
                 <div className='grid-row'>
-                    <div className="border-1px border-accent-cool desktop:grid-col-6">
-                        <div className='padding-x-2 padding-y-5 bg-primary-lighter border-accent-cool desktop:radius-md desktop:padding-x-4 desktop:margin-right-4'>
+                    <div className="border-1px border-accent-cool desktop:border-0 desktop:grid-col-6">
+                        <div className='padding-x-2 padding-y-5 bg-primary-lighter desktop:radius-md desktop:padding-x-4 desktop:margin-right-4'>
                             <div className="text-center mb-3 desktop:display-none">
                                 <Image alt='' src={mobileGetInvolved1} layout='fixed' />
                             </div>
@@ -43,7 +43,7 @@ export default function GetInvolved() {
                             </div>
                         </div>
                     </div>
-                    <div className="border-x-1px border-bottom-1px border-accent-cool desktop:grid-col-6">
+                    <div className="border-x-1px border-bottom-1px border-accent-cool desktop:border-0 desktop:grid-col-6">
                         <div className='padding-x-4 padding-y-5 bg-primary-lighter radius-md'>
 
                             <div className="text-center mb-3 display-none desktop:display-block">

@@ -11,6 +11,7 @@ import transportIcon from '../public/icons/transport.png'
 import organizationIcon from '../public/icons/organization.png'
 
 import Image from 'next/image';
+import { Link } from '@trussworks/react-uswds'
 
 export default function ProductOffering() {
     return (
@@ -48,17 +49,29 @@ export default function ProductOffering() {
                         deduplicating and linking the data, and then geocoding the cleaned results.
                     </div>
                     <div className='grid-row  margin-top-4'>
-                        <div className='desktop:grid-col-4 text-center'>
-                            <Image alt='' src={azureImage} layout='fixed' height='100' width='100'></Image>
-                            <div>Access Azure repository</div>
+                        <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='display-none desktop:display-inline-block'>
+                                <Image alt='' src={azureImage} layout='fixed' height='100' width='100' />
+                            </div>
+                            <div>
+                                <Link href='/s'>Access Azure repository</Link>
+                            </div>
                         </div>
-                        <div className='desktop:grid-col-4 text-center'>
-                            <Image alt='' src={gcpImage} layout='fixed'></Image>
-                            <div>Access GCP repository</div>
+                        <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='display-none desktop:display-inline-block'>
+                                <Image alt='' src={gcpImage} layout='fixed' />
+                            </div>
+                            <br />
+                            <div>
+                                <Link href='/s'>Access GCP repository</Link>
+                            </div>
+                            <br />
                         </div>
-                        <div className='desktop:grid-col-4 text-center'>
-                            <Image alt='' src={awsImage} layout='fixed'></Image>
-                            <div>Access AWS repository</div>
+                        <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='display-none desktop:display-inline-block'>
+                                <Image alt='' src={awsImage} layout='fixed' />
+                            </div>
+                            <div className='text-italic'>AWS repository coming soon!</div>
                         </div>
                     </div>
                 </div>
@@ -70,24 +83,41 @@ export default function ProductOffering() {
                         functionality of our SDK, check out our API documentation.
                     </div>
                     <div>
-                        <div className="grid-row margin-y-6">
+                        <div className="grid-row desktop:margin-y-6">
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={locationIcon} layout='fixed' />
-                                <div>Location Services</div>
+                                <div className='grid-row margin-y-2 desktop:margin-y-0'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={locationIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Location Services</Link>
+
+                                </div>
                             </div>
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={organizationIcon} layout='fixed' />
-                                Data Harmonization Services
+                                <div className='grid-row margin-bottom-2 desktop:margin-bottom-0'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={organizationIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Data Harmonization Services</Link>
+                                </div>
                             </div>
                         </div>
                         <div className="grid-row">
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={transportIcon} layout='fixed' />
-                                Transport Services
+                                <div className='grid-row margin-bottom-2 desktop:margin-bottom-0'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={transportIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Transport Services </Link>
+                                </div>
                             </div>
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={linkIcon} layout='fixed' />
-                                Data Linkage Services
+                                <div className='grid-row'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={linkIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Data Linkage Services </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
