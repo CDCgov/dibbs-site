@@ -1,5 +1,7 @@
 import styles from '../styles/Home.module.scss'
 import productOfferingsImage from '../public/products.svg'
+import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg'
+
 import awsImage from '../public/icons/aws.png'
 import azureImage from '../public/icons/azure.png'
 import gcpImage from '../public/icons/gcp.png'
@@ -9,17 +11,22 @@ import transportIcon from '../public/icons/transport.png'
 import organizationIcon from '../public/icons/organization.png'
 
 import Image from 'next/image';
+import { Link } from '@trussworks/react-uswds'
 
 export default function ProductOffering() {
     return (
         <div>
-            <div className='grid-container margin-top-9'>
+            <div className='grid-container desktop:margin-top-9'>
                 <div className='grid-row' >
-                    <div className='desktop:grid-col-6 height-mobile'>
+                    <div className='desktop:grid-col-12 text-center desktop:display-none'>
+                        <Image alt='' src={mobileProductOfferingsImage} layout='fixed'></Image>
+                    </div>
+                    <div className='display-none desktop:grid-col-6 height-mobile desktop:display-block'>
                         <Image alt='' src={productOfferingsImage} layout='fill'></Image>
                     </div>
                     <div className='desktop:grid-col-6'>
-                        <h2 className='text-accent-cool-darker font-extrabold text-4xl mb-4'>Our Product Offerings</h2>
+                        {/*Why is the alignment not going left*/}
+                        <h2 className='text-center text-accent-cool-darker font-extrabold text-4xl mb-4 desktop:text-left'>Our Product Offerings</h2>
                         <p className="text-base-darkest">Our products create a data architecture that is: <br />
                             <br />
                             &nbsp; &#8226; &nbsp;  Flexible and modular <br />
@@ -42,17 +49,29 @@ export default function ProductOffering() {
                         deduplicating and linking the data, and then geocoding the cleaned results.
                     </div>
                     <div className='grid-row  margin-top-4'>
-                        <div className='desktop:grid-col-4 text-center'>
-                            <Image alt='' src={azureImage} layout='fixed' height='100' width='100'></Image>
-                            <div>Access Azure repository</div>
+                        <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='display-none desktop:display-inline-block'>
+                                <Image alt='' src={azureImage} layout='fixed' height='100' width='100' />
+                            </div>
+                            <div>
+                                <Link href='/s'>Access Azure repository</Link>
+                            </div>
                         </div>
-                        <div className='desktop:grid-col-4 text-center'>
-                            <Image alt='' src={gcpImage} layout='fixed'></Image>
-                            <div>Access GCP repository</div>
+                        <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='display-none desktop:display-inline-block'>
+                                <Image alt='' src={gcpImage} layout='fixed' />
+                            </div>
+                            <br />
+                            <div>
+                                <Link href='/s'>Access GCP repository</Link>
+                            </div>
+                            <br />
                         </div>
-                        <div className='desktop:grid-col-4 text-center'>
-                            <Image alt='' src={awsImage} layout='fixed'></Image>
-                            <div>Access AWS repository</div>
+                        <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='display-none desktop:display-inline-block'>
+                                <Image alt='' src={awsImage} layout='fixed' />
+                            </div>
+                            <div className='text-italic'>AWS repository coming soon!</div>
                         </div>
                     </div>
                 </div>
@@ -64,24 +83,41 @@ export default function ProductOffering() {
                         functionality of our SDK, check out our API documentation.
                     </div>
                     <div>
-                        <div className="grid-row margin-y-6">
+                        <div className="grid-row desktop:margin-y-6">
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={locationIcon} layout='fixed' />
-                                <div>Location Services</div>
+                                <div className='grid-row margin-y-2 desktop:margin-y-0'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={locationIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Location Services</Link>
+
+                                </div>
                             </div>
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={organizationIcon} layout='fixed' />
-                                Data Harmonization Services
+                                <div className='grid-row margin-bottom-2 desktop:margin-bottom-0'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={organizationIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Data Harmonization Services</Link>
+                                </div>
                             </div>
                         </div>
                         <div className="grid-row">
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={transportIcon} layout='fixed' />
-                                Transport Services
+                                <div className='grid-row margin-bottom-2 desktop:margin-bottom-0'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={transportIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Transport Services </Link>
+                                </div>
                             </div>
                             <div className='desktop:grid-col-4'>
-                                <Image alt='' src={linkIcon} layout='fixed' />
-                                Data Linkage Services
+                                <div className='grid-row'>
+                                    <div className='display-none desktop:display-inline-block margin-right-2'>
+                                        <Image alt='' src={linkIcon} />
+                                    </div>
+                                    <Link className='usa-link--external' href='/'>Data Linkage Services </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,10 @@ import Image from 'next/image'
 import desktopHero1 from './../public/desktop-hero-1.svg'
 import desktopHero2 from '../public/desktop-hero-2.svg'
 import desktopHero3 from '../public/desktop-hero-3.svg'
+import mobileDesktopHero1 from '../public/mobile/mobile-desktop-hero-1.svg'
+import mobileDesktopHero2 from '../public/mobile/mobile-desktop-hero-2.svg'
+import mobileDesktopHero3 from '../public/mobile/mobile-hero-3.svg'
+
 import vdhImage from '../public/vdh.png'
 import lacountyImage from '../public/lacounty.png'
 
@@ -14,9 +18,14 @@ import lacountyImage from '../public/lacounty.png'
 export default function Home() {
   return (
     <div>
-      <div className='grid-container maxw-desktop-lg'>
-        <div className='grid-row margin-top-8'>
-          <div className='desktop:grid-col-5 margin-bottom-8'>
+      <div className='grid-container margin-y-5 desktop:maxw-desktop-lg'>
+        <div className='grid-row desktop:display-none'>
+          <div className='text-center grid-col-12'>
+            <Image src={mobileDesktopHero1} layout='fixed' />
+          </div>
+        </div>
+        <div className='grid-row desktop:margin-top-8 margin-top-3'>
+          <div className='desktop:grid-col-5 desktop:margin-bottom-8 grid-col-12'>
             <h1 className='text-accent-cool-darker font-bold'>
               Reponse-ready public health data systems
             </h1>
@@ -28,18 +37,23 @@ export default function Home() {
               The Public Health Data Infrastructure (PHDI) project is part of the Pandemic-Ready Interoperability Modernization Effort (PRIME), a multi-year collaboration between CDC and the U.S. Digital Service (USDS) to strengthen data quality and information technology systems in public health departments.
             </p>
           </div>
-          <div className="desktop:grid-col-7">
+          <div className="desktop:grid-col-7 display-none desktop:display-inline-block">
             <Image alt='' src={desktopHero1} layout='fill'></Image>
           </div>
         </div>
       </div>
       <div className='bg-primary-lighter'>
-        <div className='grid-container maxw-desktop-lg'>
+        <div className='grid-container padding-y-5 desktop:padding-y-0 desktop:maxw-desktop-lg'>
+          <div className='grid-row desktop:display-none'>
+            <div className='text-center grid-col-12'>
+              <Image alt='' src={mobileDesktopHero2} layout='fixed' />
+            </div>
+          </div>
           <div className='grid-row'>
-            <div className={`desktop:grid-col-6 ${styles.desktopHeroImage2}`}>
+            <div className={`desktop:grid-col-6 ${styles.desktopHeroImage2} display-none desktop:display-inline-block`}>
               <Image alt='' src={desktopHero2} layout='fill'></Image>
             </div>
-            <div className='desktop:grid-col-6 margin-y-7'>
+            <div className='desktop:grid-col-6 desktop:margin-y-7'>
               <h1 className='text-accent-cool-darker font-bold'>
                 Introduction to Building Blocks and data modernization
               </h1>
@@ -80,8 +94,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={``}>
-        <div className='grid-container maxw-desktop-lg'>
+      <div className='desktop:bg-white bg-accent-cool-dark'>
+        <div className='grid-container maxw-desktop-lg padding-y-5 '>
+          <div class='grid-row desktop:display-none'>
+            <div className='grid-col-12 text-center'>
+              <Image src={mobileDesktopHero3} />
+            </div>
+          </div>
           <div>
             <h1 className='text-center font-extrabold text-white'>An invitation to participate</h1>
             <p className='line-height-sans-6 text-white text-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
@@ -89,7 +108,7 @@ export default function Home() {
               <Button accentStyle='warm'>Click Me</Button>
             </div>
           </div>
-          <div>
+          <div className='display-none desktop:display-inline-block'>
             <Image alt='' src={desktopHero3} layout='responsive'></Image>
           </div>
 
