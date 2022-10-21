@@ -6,8 +6,10 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: 'akamai',
-    path: ''
+    path: '/'
   },
+  basePath: "/phdi-site",
+  assetPrefix: '/phdi-site',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
