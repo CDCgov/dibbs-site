@@ -18,7 +18,7 @@ import lacountyImage from '../public/lacounty.png'
 export default function Home() {
   return (
     <div>
-      <div className='grid-container margin-y-5 desktop:maxw-desktop-lg'>
+      <div className='grid-container margin-y-5 desktop:margin-y-0 desktop:maxw-desktop-lg'>
         <div className='grid-row desktop:display-none'>
           <div className='text-center grid-col-12'>
             <Image src={mobileDesktopHero1} layout='fixed' />
