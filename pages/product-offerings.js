@@ -8,7 +8,7 @@ import gcpImage from '../public/icons/gcp.png'
 import locationIcon from '../public/icons/location.png';
 import linkIcon from '../public/icons/link.png'
 import transportIcon from '../public/icons/transport.png'
-import organizationIcon from '../public/icons/organization.png'
+import organizationIcon from './../public/icons/organization.png'
 
 import Image from 'next/image';
 import { Link } from '@trussworks/react-uswds'

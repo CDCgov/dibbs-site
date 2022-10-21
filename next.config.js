@@ -8,6 +8,8 @@ const nextConfig = {
     loader: 'akamai',
     path: ''
   },
+  basePath: "",
+  assetPrefix: '/',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

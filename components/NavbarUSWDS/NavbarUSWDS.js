@@ -16,7 +16,7 @@ export default function Navbar({ }) {
         <a href="product-offerings" key="two" className="usa-nav__link">
             <span className='text-base-lightest'>Our product offerings</span>
         </a>,
-        <a href="partner-with-us" key="three" className="usa-nav__link">
+        <a href="/partner-with-us" key="three" className="usa-nav__link">
             <span className='text-base-lightest'>Partner with us</span>
         </a>,
     ]
