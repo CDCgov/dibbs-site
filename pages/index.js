@@ -24,7 +24,7 @@ export default function Home() {
       <div className='grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg'>
         <div className='grid-row desktop:display-none'>
           <div className='text-center grid-col-12'>
-            <Image src={mobileDesktopHero1} layout='fixed' />
+            <Image alt='' src={mobileDesktopHero1} layout='fixed' />
           </div>
         </div>
         <div className='grid-row desktop:margin-top-8 margin-top-3'>
@@ -41,7 +41,7 @@ export default function Home() {
             </p>
           </div>
           <div className="desktop:grid-col-7 display-none desktop:display-inline-block">
-            <Image alt='' src={desktopHero1} layout='fill'></Image>
+            <Image alt='' src={desktopHero1} layout='fill' />
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           <div className='grid-row'>
             <div className={`desktop:grid-col-6 ${styles.desktopHeroImage2} display-none desktop:display-inline-block`}>
-              <Image alt='' src={desktopHero2} layout='fill'></Image>
+              <Image alt='' src={desktopHero2} layout='fill' />
             </div>
             <div className='desktop:grid-col-6 desktop:margin-y-7'>
               <div className='margin-left-4'>
@@ -89,10 +89,10 @@ export default function Home() {
           <div className='desktop:grid-col-6'>
             <div className='padding-bottom-3 desktop:padding-3 text-center'>
               <div className='display-none desktop:display-block desktop:margin-top-4'>
-                <Image alt='' src={vdhImage} layout='fixed'></Image>
+                <Image alt='' src={vdhImage} layout='fixed' />
               </div>
               <div className='desktop:display-none'>
-                <Image alt='' src={mobileVirginia} layout='fixed'></Image>
+                <Image alt='' src={mobileVirginia} layout='fixed' />
               </div>
               <p className='text-base-darkest line-height-sans-6 desktop:margin-top-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
@@ -100,10 +100,10 @@ export default function Home() {
           <div className='desktop:grid-col-6'>
             <div className='margin-bottom-4 margin-top-3 desktop:padding-3 text-center'>
               <div className='display-none desktop:display-block'>
-                <Image alt='' src={lacountyImage} layout='fixed'></Image>
+                <Image alt='' src={lacountyImage} layout='fixed' />
               </div>
               <div className='desktop:display-none'>
-                <Image alt='' src={mobileLac} layout='fixed'></Image>
+                <Image alt='' src={mobileLac} layout='fixed' />
               </div>
               <p className='text-base-darkest line-height-sans-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
@@ -115,11 +115,11 @@ export default function Home() {
         <div className={`bg-accent-cool-dark ${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5`}>
           <div class='grid-row desktop:display-none'>
             <div className='grid-col-12 text-center'>
-              <Image src={mobileDesktopHero3} />
+              <Image alt='' src={mobileDesktopHero3} />
             </div>
           </div>
           <div className={`position-relative display-none desktop:display-block margin-bottom-4`}>
-            <Image className='position-relative' alt='' src={desktopHero3} layout=''></Image>
+            <Image className='position-relative' alt='' src={desktopHero3} layout='' />
           </div>
 
           <div className={`position-relative ${styles.desktopHeroImage3} maxw-mobile-lg margin-x-auto`}>
