@@ -18,7 +18,7 @@ import lacountyImage from '../public/lacounty.png'
 export default function Home() {
   return (
     <div>
-      <div className='grid-container margin-y-5 desktop:margin-y-0 desktop:maxw-desktop-lg'>
+      <div className='grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg'>
         <div className='grid-row desktop:display-none'>
           <div className='text-center grid-col-12'>
             <Image src={mobileDesktopHero1} layout='fixed' />
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-primary-lighter'>
-        <div className='grid-container padding-y-5 desktop:padding-y-0 desktop:maxw-desktop-lg'>
+        <div className='grid-container padding-y-5 desktop:padding-y-0 maxw-desktop-lg'>
           <div className='grid-row desktop:display-none'>
             <div className='text-center grid-col-12'>
               <Image alt='' src={mobileDesktopHero2} layout='fixed' />
@@ -58,17 +58,18 @@ export default function Home() {
                 Introduction to Building Blocks and data modernization
               </h1>
               <div className='text-base-darkest line-height-sans-6'>
-                PHDI’s current body of work also falls within the scope of
-                <Link className='underline text-primary' href="/">
-                  Data Modernization Initiative’s (DMI)
-                </Link>
+                PHDI’s current body of work also falls within the scope of&nbsp;
+                <span className='font-semibold text-underline text-primary'>
+                  <Link className='underline text-primary' href="/">
+                    Data Modernization Initiative’s (DMI)
+                  </Link>
+                </span>
                 ,&nbsp;which is an effort to modernize core public health data and surveillance infrastructure across the federal and state public health landscape.
                 <br /><br />
                 PHDI’s work focuses on building and providing access to open source, modular software and tooling, known as “Building Blocks,” that states, territories, localities, tribes (STLTs), and other public health actors can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses.
                 <br /><br />
-                <div className='font-semibold'>
-                  Find out more about &nbsp;
-                  <Link className='underline text-primary' href="/">Building Blocks ›
+                <div className='font-semibold text-underline text-primary'>
+                  <Link href="/">Find out more about Building Blocks ›
                   </Link>
                 </div>
               </div>
@@ -94,7 +95,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='desktop:bg-white bg-accent-cool-dark'>
+      <div className='desktop:bg-white bg-black'>
         <div className='grid-container maxw-desktop-lg padding-y-5 '>
           <div class='grid-row desktop:display-none'>
             <div className='grid-col-12 text-center'>
@@ -109,7 +110,7 @@ export default function Home() {
             </div>
           </div>
           <div className='display-none desktop:display-inline-block'>
-            <Image alt='' src={desktopHero3} layout='responsive'></Image>
+            <Image alt='' src={desktopHero3} layout=''></Image>
           </div>
 
         </div>

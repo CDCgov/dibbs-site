@@ -23,11 +23,19 @@ a {
 }
 
 .usa-nav-container {
-  max-width: 75rem !important;
+  max-width: 88rem !important;
+}
+
+.usa-logo__text {
+  font-weight: 400 !important;
 }
 
 .usa-footer__primary-container {
-  max-width: 75rem !important;
+  max-width: 88rem !important;
+}
+
+.usa-footer__secondary-section>.grid-container {
+  max-width: 88rem !important;
 }
 
 /* .grid-container {

@@ -26,7 +26,7 @@ export default function ProductOffering() {
                     </div>
                     <div className='desktop:grid-col-6'>
                         {/*Why is the alignment not going left*/}
-                        <h2 className='text-center text-accent-cool-darker font-extrabold text-4xl mb-4 desktop:text-left'>Our Product Offerings</h2>
+                        <h2 className='text-center text-accent-cool-darker font-extrabold text-4xl mb-4 lg:text-left'>Our Product Offerings</h2>
                         <p className="text-base-darkest">Our products create a data architecture that is: <br />
                             <br />
                             &nbsp; &#8226; &nbsp;  Flexible and modular <br />

@@ -26,7 +26,7 @@ export default function Navbar({ }) {
             <Header basic={true} className='bg-primary-darker'>
                 <div className="usa-nav-container max-w-full">
                     <div className="w-full usa-navbar">
-                        <Title className='text-base-lightest font-normal'>
+                        <Title className='text-base-lightest'>
                             <Link href='/'>Public Health Data Infrastructure</Link>
                         </Title>
                         <NavMenuButton onClick={onClick} label="Menu" />
