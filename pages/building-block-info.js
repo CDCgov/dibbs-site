@@ -15,15 +15,15 @@ export default function BuildingBlockInfo() {
         <div>
             <div className='grid-container maxw-widescreen desktop:padding-x-9 margin-y-7 desktop:margin-y-0'>
                 <div className="grid-row">
-                    <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom`}>
-                        <Image alt='' src={buildingBlockImage}></Image>
+                    <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom margin-bottom-neg-3 `}>
+                        <Image alt='' src={buildingBlockImage} layout='fill'></Image>
                     </div>
                     <div className='desktop:display-none text-center grid-col-12'>
                         <Image alt='' src={mobileBuildingBlockImage}></Image>
                     </div>
                     <div className='desktop:grid-col-7'>
-                        <div className='desktop:margin-left-7'>
-                            <h1 className='font-ui-xl text-accent-cool-darker font-bold margin-bottom-2'>Building Blocks</h1>
+                        <div className='desktop:margin-left-7 desktop:margin-top-9 desktop:margin-bottom-7'>
+                            <h1 className='font-ui-xl text-accent-cool-darker font-bold margin-bottom-2 text-center lg:text-left'>Building Blocks</h1>
                             <div className='text-base-darkest line-height-sans-6'>
                                 <p>
                                     Piloting and productizing Building Blocks are a key part of the CDC DMI’s goal of reducing the burden on STLT partners for collecting and reporting public health data.
@@ -32,16 +32,15 @@ export default function BuildingBlockInfo() {
                                 <p>
                                     To qualify as a Building Block, a software service must meet one or more of the following criteria:
                                 </p>
-                                <br />
-                                <p>
-                                    Can fill a gap where no solution currently exists
-                                    <br /> Can provide significantly more value than current solution(s) where a burden presents
-                                    <br /> Reusable across multiple data streams and steps in the public health data journey
-                                    <br /> Enables significant reduction or elimination of manual effort to accomplish a critical task in one or more public health workflows
-                                    <br /> Able to be developed to minimum viable product and provide value within 6 months
-                                    <br /> Can be piloted while existing workflows remain unchanged, and incrementally adopted once pilot results demonstrate enough value that migration from legacy workflows is desired
-                                    <br /> Increases speed of data to public health and/or drives faster public health action (e.g., makes data easier to use for surveillance or outbreak response)
-                                </p>
+                                <ul class="usa-list">
+                                    <li> Can fill a gap where no solution currently exists</li>
+                                    <li> Can provide significantly more value than current solution(s) where a burden presents</li>
+                                    <li> Reusable across multiple data streams and steps in the public health data journey</li>
+                                    <li> Enables significant reduction or elimination of manual effort to accomplish a critical task in one or more public health workflows </li>
+                                    <li> Able to be developed to minimum viable product and provide value within 6 months</li>
+                                    <li> Can be piloted while existing workflows remain unchanged, and incrementally adopted once pilot results demonstrate enough value that migration from legacy workflows is desired </li>
+                                    <li> Increases speed of data to public health and/or drives faster public health action (e.g., makes data easier to use for surveillance or outbreak response)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -49,10 +48,10 @@ export default function BuildingBlockInfo() {
 
             </div>
             <div className='bg-primary-lighter padding-top-4 desktop:padding-y-7'>
-                <div className='grid-container maxw-widescreen padding-x-0 desktop:padding-x-9'>
-                    <div className="grid-row grid-gap-2">
-                        <div className='desktop:grid-col-4 radius-md'>
-                            <div className='bg-white padding-205'>
+                <div className='grid-container maxw-widescreen padding-x-0 desktop:padding-x-7'>
+                    <div className="grid-row grid-gap-4">
+                        <div className='desktop:grid-col-4'>
+                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
                                 <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={locationIcon} layout='fixed'></Image>
                                 </div>
@@ -66,8 +65,8 @@ export default function BuildingBlockInfo() {
                                 </div>
                             </div>
                         </div>
-                        <div className='desktop:grid-col-4 radius-md margin-y-4 desktop:margin-y-0'>
-                            <div className='bg-white padding-205'>
+                        <div className='desktop:grid-col-4 margin-y-2 desktop:margin-y-0'>
+                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
                                 <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={codeIcon} layout='fixed'></Image>
                                 </div>
@@ -81,8 +80,8 @@ export default function BuildingBlockInfo() {
                                 </div>
                             </div>
                         </div>
-                        <div className='desktop:grid-col-4 radius-md'>
-                            <div className='bg-white padding-205'>
+                        <div className='desktop:grid-col-4'>
+                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
                                 <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={organizationIcon} layout='fixed'></Image>
                                 </div>
@@ -97,9 +96,9 @@ export default function BuildingBlockInfo() {
                             </div>
                         </div>
                     </div>
-                    <div className='grid-row grid-gap-2  desktop:margin-top-205'>
-                        <div className='desktop:grid-col-4 radius-md margin-y-4'>
-                            <div className='bg-white padding-205'>
+                    <div className='grid-row grid-gap-4  desktop:margin-top-205'>
+                        <div className='desktop:grid-col-4 margin-y-2 desktop:margin-y-0'>
+                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
                                 <div className='mb-6 text-center lg:text-left'>
                                     <Image alt='' src={linkIcon} layout='fixed'></Image>
                                 </div>
@@ -114,9 +113,9 @@ export default function BuildingBlockInfo() {
                             </div>
 
                         </div>
-                        <div className='desktop:grid-col-4 radius-md'>
-                            <div className='bg-accent-cool-dark padding-6 text-center'>
-                                <h5 className='text-white font-semibold text-2xl text-center mb-4'>Ready to get started?</h5>
+                        <div className='desktop:grid-col-4'>
+                            <div className='bg-accent-cool-dark desktop:radius-md shadow-1 padding-x-2 padding-y-6 text-center lg:h-80'>
+                                <h3 className='text-white font-semibold text-center mb-4 text-4xl'>Ready to get started?</h3>
                                 <p className='text-white mb-3'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
                                 <Button accentStyle='warm'>
                                     View our product offerings

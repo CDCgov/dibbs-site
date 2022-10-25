@@ -1,7 +1,7 @@
 import { Header, Menu, NavDropDownButton, NavMenuButton, PrimaryNav, Title } from "@trussworks/react-uswds";
 import Link from "next/link";
 import React from "react";
-
+import styles from '../../styles/Home.module.scss'
 
 export default function Navbar({ }) {
     const [expanded, setExpanded] = React.useState(false)
@@ -11,13 +11,13 @@ export default function Navbar({ }) {
 
     const testItemsMenu = [
         <a href="/phdi-site/building-block-info" key="one" className="usa-nav__link">
-            <span className='text-base-lightest'>What is a Building Block?</span>
+            <span className={styles.navbarItemText}>What is a Building Block?</span>
         </a>,
         <a href="/phdi-site/product-offerings" key="two" className="usa-nav__link">
-            <span className='text-base-lightest'>Our product offerings</span>
+            <span className={styles.navbarItemText}>Our product offerings</span>
         </a>,
         <a href="/phdi-site/partner-with-us" key="three" className="usa-nav__link">
-            <span className='text-base-lightest'>Partner with us</span>
+            <span className={styles.navbarItemText}>Partner with us</span>
         </a>,
     ]
     return (

@@ -10,6 +10,33 @@
   background-image: url('../public/desktop-hero-3.svg');
 }
 
+@media(min-width:1024px) {
+  .desktopHeroImage3 {
+    margin-top: -300px;
+  }
+
+  .backgroundInvitation {
+    background-color: white !important;
+  }
+
+  .navbarItemText {
+    color: #f0f0f0
+  }
+}
+
+
+@media(max-width:1024px) {
+  .desktopHeroImage3 {
+    margin-top: 0px;
+  }
+
+  .navbarItemText {
+    color: #565c65;
+  }
+}
+
+
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;

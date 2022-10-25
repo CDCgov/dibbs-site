@@ -11,16 +11,16 @@ export default function FooterUSWDS() {
 
     const createLinks = () => {
         return ([
-            <a key='home' className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='home' className="usa-footer__primary-link text-base-lightest" href="/">
                 Home
             </a>,
-            <a key='building-block' className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='building-block' className="usa-footer__primary-link text-base-lightest" href="/phdi-site/building-block-info">
                 What is a building block?
             </a>,
-            <a key='product-offerings' className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='product-offerings' className="usa-footer__primary-link text-base-lightest" href="/phdi-site/product-offerings">
                 Our product offerings
             </a>,
-            <a key='partner' className="usa-footer__primary-link text-base-lightest" href="#">
+            <a key='partner' className="usa-footer__primary-link text-base-lightest" href="/phdi-site/partner-with-us">
                 Partner with us
             </a>,
 

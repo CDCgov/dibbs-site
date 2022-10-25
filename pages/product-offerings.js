@@ -16,7 +16,7 @@ import { Link } from '@trussworks/react-uswds'
 export default function ProductOffering() {
     return (
         <div>
-            <div className='grid-container desktop:margin-top-9'>
+            <div className='grid-container margin-y-5 desktop:margin-bottom-0 desktop:margin-top-9'>
                 <div className='grid-row' >
                     <div className='desktop:grid-col-12 text-center desktop:display-none'>
                         <Image alt='' src={mobileProductOfferingsImage} layout='fixed'></Image>
@@ -89,7 +89,7 @@ export default function ProductOffering() {
                                     <div className='display-none desktop:display-inline-block margin-right-2'>
                                         <Image alt='' src={locationIcon} />
                                     </div>
-                                    <Link className='usa-link--external' href='/'>Location Services</Link>
+                                    <Link className='usa-link--external desktop:margin-top-1' href='/'>Location Services</Link>
 
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ export default function ProductOffering() {
                                     <div className='display-none desktop:display-inline-block margin-right-2'>
                                         <Image alt='' src={organizationIcon} />
                                     </div>
-                                    <Link className='usa-link--external' href='/'>Data Harmonization Services</Link>
+                                    <Link className='usa-link--external desktop:margin-top-1' href='/'>Data Harmonization Services</Link>
                                 </div>
                             </div>
                         </div>
@@ -108,6 +108,7 @@ export default function ProductOffering() {
                                     <div className='display-none desktop:display-inline-block margin-right-2'>
                                         <Image alt='' src={transportIcon} />
                                     </div>
+                                    {/* add margin */}
                                     <Link className='usa-link--external' href='/'>Transport Services </Link>
                                 </div>
                             </div>
