@@ -32,7 +32,7 @@ export default function BuildingBlockInfo() {
                                 <p>
                                     To qualify as a Building Block, a software service must meet one or more of the following criteria:
                                 </p>
-                                <ul class="usa-list">
+                                <ul class="usa-list list-disc">
                                     <li> Can fill a gap where no solution currently exists</li>
                                     <li> Can provide significantly more value than current solution(s) where a burden presents</li>
                                     <li> Reusable across multiple data streams and steps in the public health data journey</li>
@@ -49,10 +49,10 @@ export default function BuildingBlockInfo() {
             </div>
             <div className='bg-primary-lighter padding-top-4 desktop:padding-y-7'>
                 <div className='grid-container maxw-widescreen padding-x-0 desktop:padding-x-7'>
-                    <div className="grid-row grid-gap-4">
+                    <div className="grid-row grid-gap-3">
                         <div className='desktop:grid-col-4'>
                             <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
-                                <div className='mb-6 text-center lg:text-left'>
+                                <div className='mb-2 text-center lg:text-left'>
                                     <Image alt='' src={locationIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-center lg:text-left text-2xl mb-2 font-semibold'>Location Services</h5>
@@ -67,7 +67,7 @@ export default function BuildingBlockInfo() {
                         </div>
                         <div className='desktop:grid-col-4 margin-y-2 desktop:margin-y-0'>
                             <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
-                                <div className='mb-6 text-center lg:text-left'>
+                                <div className='mb-3 text-center lg:text-left'>
                                     <Image alt='' src={codeIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold text-center lg:text-left'>Data Exchange Services</h5>
@@ -82,7 +82,7 @@ export default function BuildingBlockInfo() {
                         </div>
                         <div className='desktop:grid-col-4'>
                             <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
-                                <div className='mb-6 text-center lg:text-left'>
+                                <div className='mb-2 text-center lg:text-left'>
                                     <Image alt='' src={organizationIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold text-center lg:text-left'>Data Harmonization Services</h5>
@@ -96,10 +96,10 @@ export default function BuildingBlockInfo() {
                             </div>
                         </div>
                     </div>
-                    <div className='grid-row grid-gap-4  desktop:margin-top-205'>
+                    <div className='grid-row grid-gap-3  desktop:margin-top-205'>
                         <div className='desktop:grid-col-4 margin-y-2 desktop:margin-y-0'>
                             <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
-                                <div className='mb-6 text-center lg:text-left'>
+                                <div className='mb-3 text-center lg:text-left'>
                                     <Image alt='' src={linkIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl mb-2 font-semibold text-center lg:text-left'>Data Linkage Services</h5>
@@ -114,12 +114,14 @@ export default function BuildingBlockInfo() {
 
                         </div>
                         <div className='desktop:grid-col-4'>
-                            <div className='bg-accent-cool-dark desktop:radius-md shadow-1 padding-x-2 padding-y-6 text-center lg:h-80'>
-                                <h3 className='text-white font-semibold text-center mb-4 text-4xl'>Ready to get started?</h3>
-                                <p className='text-white mb-3'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
-                                <Button accentStyle='warm'>
-                                    View our product offerings
-                                </Button>
+                            <div className='bg-accent-cool-dark desktop:radius-md shadow-1 padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row'>
+                                <span>
+                                    <h3 className='text-white font-semibold text-center mb-4 text-4xl'>Ready to get started?</h3>
+                                    <p className='text-white mb-3'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
+                                    <Button accentStyle='warm'>
+                                        View our product offerings
+                                    </Button>
+                                </span>
                             </div>
                         </div>
 

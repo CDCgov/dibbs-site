@@ -27,15 +27,16 @@ export default function ProductOffering() {
                     <div className='desktop:grid-col-6'>
                         {/*Why is the alignment not going left*/}
                         <h2 className='text-center text-accent-cool-darker font-extrabold text-4xl mb-4 lg:text-left'>Our Product Offerings</h2>
-                        <p className="text-base-darkest">Our products create a data architecture that is: <br />
-                            <br />
-                            &nbsp; &#8226; &nbsp;  Flexible and modular <br />
-                            &nbsp; &#8226; &nbsp;  Easy to update <br />
-                            &nbsp; &#8226; &nbsp;  Easier to understand <br />
-                            &nbsp; &#8226; &nbsp;  Easier to make open-source <br />
-                            &nbsp; &#8226; &nbsp;  Easier to integrate with STLTs’ existing systems <br />
-                            &nbsp; &#8226; &nbsp;  Performs similar operations consistently <br />
-                            &nbsp; &#8226; &nbsp;  Easier to share and reuse across STLTs</p>
+                        <p className="text-base-darkest">Our products create a data architecture that is: </p>
+                        <ul class="usa-list list-disc">
+                            <li> Flexible and modular</li>
+                            <li> Easy to update</li>
+                            <li> Easier to understand</li>
+                            <li> Easier to make open-source</li>
+                            <li> Easier to integrate with STLTs’ existing systems</li>
+                            <li> Performs similar operations consistently </li>
+                            <li> Easier to share and reuse across STLTs </li>
+                        </ul>
                     </div>
                 </div>
             </div>
