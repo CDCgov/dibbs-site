@@ -23,9 +23,9 @@ export default function GetInvolved() {
                         This is also an opportunity extended to any partner who would like their feedback incorporated into future Building Blocks work, but who may not be immediately available to participate in a pilot.
                     </div>
                 </div>
-                <div className='grid-row desktop:grid-gap-2'>
+                <div className='grid-row desktop:grid-gap-4'>
                     <div className="border-1px border-accent-cool desktop:border-0 desktop:grid-col-6">
-                        <div className='padding-x-2 padding-y-5 bg-primary-lighter desktop:radius-md desktop:padding-x-4 desktop:margin-right-4'>
+                        <div className='padding-x-2 padding-y-5 bg-primary-lighter desktop:radius-md desktop:padding-x-4'>
                             <div className="text-center mb-3 desktop:display-none">
                                 <Image alt='' src={mobileGetInvolved1} layout='fixed' />
                             </div>
@@ -38,7 +38,7 @@ export default function GetInvolved() {
                                 <br /> <br />
                                 We invite you to visit our SDK toolkit where you can explore the full range of modular Building Blocks. If interested in getting involved in our beta program, please reach out to our team.
                             </div>
-                            <div className="text-center mt-4">
+                            <div className="text-center margin-top-2 desktop:margin-top-4">
                                 <Button >Learn More</Button>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ export default function GetInvolved() {
                                 We are conducting a series of focus groups to hear back from public health agency staff who interact with data related to childhood lead poisoning, Legionnaires’ disease, listeria, and HIV surveillance at any point along the data lifecycle (e.g., collection, ingestion, management, analysis, visualization).
                                 <br /> <br />
                                 The purpose of these focus groups is to gather STLT input on how we prioritize and design potential Building Blocks. Each focus group will last for approximately 60 minutes.</div>
-                            <div className="text-center mt-10">
+                            <div className="text-center margin-top-2 desktop:margin-top-4">
                                 <Button >Learn More</Button>
                             </div>
                         </div>
