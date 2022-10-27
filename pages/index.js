@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <div className='grid-row desktop:margin-top-8 margin-top-3'>
           <div className='desktop:grid-col-5 desktop:margin-bottom-8 grid-col-12'>
-            <h1 className='text-center lg:text-left text-accent-cool-darker font-bold'>
+            <h1 className={`${styles.homeHeaderText} text-accent-cool-darker font-bold`}>
               Reponse-ready public health data systems
             </h1>
             <p className='font-ui-xs line-height-sans-6 lg:font-semibold'>
@@ -57,8 +57,8 @@ export default function Home() {
               <Image alt='' src={desktopHero2} layout='fill' />
             </div>
             <div className='desktop:grid-col-6 desktop:margin-y-7'>
-              <div className='margin-left-4'>
-                <h1 className='text-center lg:text-left text-accent-cool-darker font-bold'>
+              <div className='desktop:margin-left-4'>
+                <h1 className={`${styles.homeHeaderText} text-accent-cool-darker font-bold`}>
                   Introduction to Building Blocks and data modernization
                 </h1>
                 <div className='text-base-darkest line-height-sans-6'>
@@ -126,7 +126,7 @@ export default function Home() {
             <h1 className='text-center font-extrabold text-white'>An invitation to participate</h1>
             <p className='line-height-sans-6 text-white text-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
             <div className='text-center margin-top-3 width-card-lg margin-x-auto'>
-              <Button accentStyle='warm'>Click Me</Button>
+              <Button accentStyle='warm'>Get Involved</Button>
             </div>
           </div>
 
