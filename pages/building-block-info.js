@@ -15,7 +15,7 @@ export default function BuildingBlockInfo() {
         <div>
             <div className='grid-container maxw-widescreen desktop:padding-x-9 margin-y-7 desktop:margin-y-0'>
                 <div className="grid-row">
-                    <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom margin-bottom-neg-3 `}>
+                    <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom ${styles.buidlingBlockInfoImage} `}>
                         <Image alt='' src={buildingBlockImage} layout='fill'></Image>
                     </div>
                     <div className='desktop:display-none text-center grid-col-12'>
