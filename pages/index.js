@@ -21,7 +21,7 @@ import lacountyImage from '../public/lacounty.png'
 export default function Home() {
   return (
     <div>
-      <div className='grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg'>
+      <div className='grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg padding-x-205 desktop:padding-x-0'>
         <div className='grid-row desktop:display-none'>
           <div className='text-center grid-col-12'>
             <Image alt='' src={mobileDesktopHero1} layout='fixed' />
@@ -32,7 +32,7 @@ export default function Home() {
             <h1 className={`${styles.homeHeaderText} text-accent-cool-darker font-bold`}>
               Reponse-ready public health data systems
             </h1>
-            <p className='font-ui-xs line-height-sans-6 lg:font-semibold'>
+            <p className='font-ui-xs line-height-sans-6 font-semibold'>
               Public health data is often messy, heterogeneous, and siloed, and epidemiologists lack the tools and methods to efficiently turn it into meaningful intelligence that can drive timely public health action.
             </p>
             <br />
@@ -40,13 +40,13 @@ export default function Home() {
               The Public Health Data Infrastructure (PHDI) project is part of the Pandemic-Ready Interoperability Modernization Effort (PRIME), a multi-year collaboration between CDC and the U.S. Digital Service (USDS) to strengthen data quality and information technology systems in public health departments.
             </p>
           </div>
-          <div className="desktop:grid-col-7 display-none desktop:display-inline-block">
+          <div className={`desktop:grid-col-7 display-none desktop:display-inline-block ${styles.dekstopHeroImage1}`}>
             <Image alt='' src={desktopHero1} layout='fill' />
           </div>
         </div>
       </div>
       <div className='bg-primary-lighter'>
-        <div className='grid-container padding-y-5 desktop:padding-y-0 maxw-desktop-lg'>
+        <div className='grid-container padding-y-5 desktop:padding-y-0 maxw-desktop-lg padding-x-205 desktop:padding-x-0'>
           <div className='grid-row desktop:display-none'>
             <div className='text-center grid-col-12'>
               <Image alt='' src={mobileDesktopHero2} layout='fixed' />
@@ -62,18 +62,18 @@ export default function Home() {
                   Introduction to Building Blocks and data modernization
                 </h1>
                 <div className='text-base-darkest line-height-sans-6'>
-                  PHDI’s current body of work also falls within the scope of&nbsp;
+                  PHDI's current body of work also falls within the scope of CDC's&nbsp;
                   <span className='font-semibold text-underline text-primary'>
                     <Link className='underline text-primary' href="/">
-                      Data Modernization Initiative’s (DMI)
+                      Data Modernization Initiative (DMI)
                     </Link>
                   </span>
                   ,&nbsp;which is an effort to modernize core public health data and surveillance infrastructure across the federal and state public health landscape.
                   <br /><br />
-                  PHDI’s work focuses on building and providing access to open source, modular software and tooling, known as “Building Blocks,” that states, territories, localities, tribes (STLTs), and other public health actors can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses.
+                  PHDI's work focuses on building and providing access to open source, modular software and tooling, known as “Building Blocks,” that states, territories, localities, tribes (STLTs), and other public health actors can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses.
                   <br /><br />
                   <div className='font-semibold text-underline text-primary'>
-                    <Link href="/">Find out more about Building Blocks ›
+                    <Link href="/">More about Building Blocks ›
                     </Link>
                   </div>
                 </div>
@@ -82,37 +82,37 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='grid-container maxw-tablet-lg margin-top-9'>
-        <h1 className='font-extrabold text-center text-accent-cool-darker'>Our pilot partners</h1>
-        <p className='text-center text-base-darkest line-height-sans-6'>We work with a range of public health departments to develop and iterate on Building Blocks that solve public health data-related challenges within their organizations.</p>
-        <div className='grid-row margin-top-8'>
+      <div className='grid-container maxw-tablet-lg margin-top-9 padding-x-205'>
+        <h1 className='text-bold text-center text-accent-cool-darker'>Our pilot partners</h1>
+        <p className='text-center text-base-darkest line-height-sans-6 padding-x-05'>We work with a range of public health departments to develop and iterate on Building Blocks that solve public health data-related challenges within their organizations.</p>
+        <div className='grid-row margin-top-6'>
           <div className='desktop:grid-col-6'>
-            <div className='padding-bottom-3 desktop:padding-3 text-center'>
-              <div className='display-none desktop:display-block desktop:margin-top-4'>
+            <div className='padding-bottom-3 desktop:padding-x-3 text-center'>
+              <div className='display-none desktop:display-block desktop:margin-top-1'>
                 <Image alt='' src={vdhImage} layout='fixed' />
               </div>
               <div className='desktop:display-none'>
                 <Image alt='' src={mobileVirginia} layout='fixed' />
               </div>
-              <p className='text-base-darkest line-height-sans-6 desktop:margin-top-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className='text-base-darkest line-height-sans-6 margin-top-3 desktop:margin-top-5 padding-x-3'>Lorem ipsum dolor set imet lorem ipsum dolor set imet lorem ipsum dolor set.</p>
             </div>
           </div>
           <div className='desktop:grid-col-6'>
-            <div className='margin-bottom-4 margin-top-3 desktop:padding-3 text-center'>
+            <div className='margin-bottom-4 margin-top-3 desktop:margin-top-0 desktop:padding-x-3 text-center'>
               <div className='display-none desktop:display-block'>
                 <Image alt='' src={lacountyImage} layout='fixed' />
               </div>
               <div className='desktop:display-none'>
                 <Image alt='' src={mobileLac} layout='fixed' />
               </div>
-              <p className='text-base-darkest line-height-sans-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className='text-base-darkest line-height-sans-6 margin-top-205 desktop:margin-top-2 padding-x-3'>Lorem ipsum dolor set imet lorem ipsum dolor set imet lorem ipsum dolor set.</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className=''>
-        <div className={`bg-accent-cool-dark ${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5`}>
+        <div className={`bg-accent-cool-dark ${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5 desktop:padding-top-0 desktop:padding-bottom-5`}>
           <div class='grid-row desktop:display-none'>
             <div className='grid-col-12 text-center'>
               <Image alt='' src={mobileDesktopHero3} />
@@ -123,10 +123,10 @@ export default function Home() {
           </div>
 
           <div className={`position-relative ${styles.desktopHeroImage3} maxw-mobile-lg margin-x-auto`}>
-            <h1 className='text-center font-extrabold text-white'>An invitation to participate</h1>
-            <p className='line-height-sans-6 text-white text-center'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
+            <h1 className='text-center text-bold text-white'>An invitation to participate</h1>
+            <p className='line-height-sans-6 text-white text-center padding-x-3 desktop:padding-x-1'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
             <div className='text-center margin-top-3 width-card-lg margin-x-auto'>
-              <Button accentStyle='warm'>Get Involved</Button>
+              <Button outline className={styles.buttonAccent}>Get Involved</Button>
             </div>
           </div>
 

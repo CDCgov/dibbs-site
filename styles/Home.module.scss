@@ -2,12 +2,16 @@
   margin-bottom: -90px;
 }
 
+.dekstopHeroImage1 {
+  margin-bottom: -2px;
+}
+
 .buildingBlockImage {
-  margin-bottom: -88px;
+  margin-bottom: -68px;
 }
 
 .buidlingBlockInfoImage {
-  margin-bottom: -116px;
+  margin-bottom: -92px;
 }
 
 .desktopHeroImage3Background {
@@ -16,7 +20,8 @@
 
 @media(min-width:1024px) {
   .desktopHeroImage3 {
-    margin-top: -300px;
+    margin-top: -320px;
+    margin-bottom: 20px;
   }
 
   .backgroundInvitation {
@@ -29,6 +34,13 @@
 
   .homeHeaderText {
     text-align: left;
+  }
+
+  .partnerItemHeaders {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
@@ -44,6 +56,13 @@
 
   .homeHeaderText {
     text-align: center;
+  }
+
+  .partnerItemHeaders {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 38px;
   }
 }
 
@@ -176,4 +195,14 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.buttonAccent {
+  background-color: white !important;
+  box-shadow: none !important;
+}
+
+.buttonAccent:hover {
+  background-color: rgb(245, 245, 245) !important;
+  box-shadow: none !important;
 }

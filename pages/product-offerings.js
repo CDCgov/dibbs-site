@@ -24,10 +24,9 @@ export default function ProductOffering() {
                     <div className='display-none desktop:grid-col-6 height-mobile desktop:display-block'>
                         <Image alt='' src={productOfferingsImage} layout='fill'></Image>
                     </div>
-                    <div className='desktop:grid-col-6'>
-                        {/*Why is the alignment not going left*/}
-                        <h2 className='text-center text-accent-cool-darker font-extrabold text-4xl mb-4 lg:text-left'>Our Product Offerings</h2>
-                        <p className="text-base-darkest">Our products create a data architecture that is: </p>
+                    <div className='desktop:grid-col-6 margin-top-2 desktop:margin-top-0'>
+                        <h2 className='text-center text-accent-cool-darker font-extrabold text-3xl lg:text-4xl margin-bottom-2 lg:text-left'>Our Product Offerings</h2>
+                        <p className="text-base-darkest font-semibold">Our products create a data architecture that is: </p>
                         <ul class="usa-list list-disc">
                             <li> Flexible and modular</li>
                             <li> Easy to update</li>
@@ -40,85 +39,94 @@ export default function ProductOffering() {
                     </div>
                 </div>
             </div>
-            <div className='bg-primary-lighter padding-y-7'>
-                <div className='grid-container bg-white  padding-y-4 margin-bottom-5'>
-                    <h4 className='font-semibold text-2xl mb-3'>Pipeline as a Product</h4>
-                    <div>A cloud-based, off-the-shelf data ingestion and processing pipeline
-                        built from modular Building Blocks which public health departments
-                        can easily integrate into existing data systems. The pipeline produces
-                        analysis-ready data by converting all incoming data to a single standard,
-                        deduplicating and linking the data, and then geocoding the cleaned results.
-                    </div>
-                    <div className='grid-row  margin-top-4'>
-                        <div className='desktop:grid-col-4 lg:text-center'>
-                            <div className='display-none desktop:display-inline-block'>
-                                <Image alt='' src={azureImage} layout='fixed' height='100' width='100' />
-                            </div>
-                            <div>
-                                <Link href='/s'>Access Azure repository</Link>
-                            </div>
+            <div className='bg-primary-lighter padding-y-5 desktop:padding-y-7'>
+                <div className='grid-container padding-x-205 desktop:padding-x-5 bg-white padding-y-5 margin-bottom-3 desktop:margin-bottom-5 border-1px border-accent-cool desktop:border-0'>
+                    <h4 className={`lg:font-semibold text-2xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>Pipeline as a Product</h4>
+                    <div className='lg:text-base text-sm'>
+                        <div>A cloud-based, off-the-shelf data ingestion and processing pipeline
+                            built from modular Building Blocks which public health departments
+                            can easily integrate into existing data systems. The pipeline produces
+                            analysis-ready data by converting all incoming data to a single standard,
+                            deduplicating and linking the data, and then geocoding the cleaned results.
                         </div>
-                        <div className='desktop:grid-col-4 lg:text-center'>
-                            <div className='display-none desktop:display-inline-block'>
-                                <Image alt='' src={gcpImage} layout='fixed' />
+                        <div className='grid-row margin-top-4'>
+                            <div className='desktop:grid-col-4 lg:text-center'>
+                                <div className='display-none desktop:display-inline-block'>
+                                    <Image alt='' src={azureImage} layout='fixed' height='100' width='100' />
+                                </div>
+                                <div>
+                                    <Link className='font-semibold' href='/s'>Access Azure repository</Link>
+                                </div>
                             </div>
-                            <br />
-                            <div>
-                                <Link href='/s'>Access GCP repository</Link>
+                            <div className='desktop:grid-col-4 lg:text-center'>
+                                <div className='display-none desktop:display-inline-block'>
+                                    <Image alt='' src={gcpImage} layout='fixed' />
+                                </div>
+                                <br />
+                                <div>
+                                    <Link className='font-semibold' href='/s'>Access GCP repository</Link>
+                                </div>
+                                <br />
                             </div>
-                            <br />
-                        </div>
-                        <div className='desktop:grid-col-4 lg:text-center'>
-                            <div className='display-none desktop:display-inline-block'>
-                                <Image alt='' src={awsImage} layout='fixed' />
+                            <div className='desktop:grid-col-4 lg:text-center'>
+                                <div className='display-none desktop:display-inline-block'>
+                                    <Image alt='' src={awsImage} layout='fixed' />
+                                </div>
+                                <div className='text-italic'>AWS repository coming soon!</div>
                             </div>
-                            <div className='text-italic'>AWS repository coming soon!</div>
                         </div>
                     </div>
                 </div>
-                <div className='grid-container bg-white padding-y-4'>
-                    <h4 className='font-semibold text-2xl mb-3'>SDK</h4>
-                    <div>Access the range of modular Building Blocks with our SDK toolkit.
-                        Public health agencies can import, experiment, and integrate these
-                        features into their existing pipelines. To see the full suite of
-                        functionality of our SDK, check out our API documentation.
-                    </div>
-                    <div>
-                        <div className="grid-row desktop:margin-y-6">
-                            <div className='desktop:grid-col-4'>
-                                <div className='grid-row margin-y-2 desktop:margin-y-0'>
-                                    <div className='display-none desktop:display-inline-block margin-right-2'>
-                                        <Image alt='' src={locationIcon} />
-                                    </div>
-                                    <Link className='usa-link--external desktop:margin-top-1' href='/'>Location Services</Link>
-
-                                </div>
-                            </div>
-                            <div className='desktop:grid-col-4'>
-                                <div className='grid-row margin-bottom-2 desktop:margin-bottom-0'>
-                                    <div className='display-none desktop:display-inline-block margin-right-2'>
-                                        <Image alt='' src={organizationIcon} />
-                                    </div>
-                                    <Link className='usa-link--external desktop:margin-top-1' href='/'>Data Harmonization Services</Link>
-                                </div>
-                            </div>
+                <div className='grid-container bg-white padding-y-5 padding-x-205 desktop:padding-x-5 border-1px border-accent-cool desktop:border-0'>
+                    <h4 className={`lg:font-semibold text-2xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>SDK</h4>
+                    <div className='lg:text-base text-sm'>
+                        <div>Access the range of modular Building Blocks with our&nbsp;
+                            <span>
+                                <Link className='font-semibold' href='/'>SDK toolkit</Link>
+                            </span>
+                            .&nbsp;Public health agencies can import, experiment, and integrate these
+                            features into their existing pipelines. To see the full suite of
+                            functionality of our SDK, check out our <span>
+                                <Link className='font-semibold' href='/'>API documentation</Link>
+                            </span>.
                         </div>
-                        <div className="grid-row">
-                            <div className='desktop:grid-col-4'>
-                                <div className='grid-row margin-bottom-2 desktop:margin-bottom-0'>
-                                    <div className='display-none desktop:display-inline-block margin-right-2'>
-                                        <Image alt='' src={transportIcon} />
+                        <div>
+                            <div className="grid-row desktop:margin-y-6">
+                                <div className='desktop:grid-col-4'>
+                                    <div className='grid-row margin-y-3 desktop:margin-y-0'>
+                                        <div className='display-none desktop:display-inline-block margin-right-2'>
+                                            <Image alt='' src={locationIcon} />
+                                        </div>
+                                        <Link className='font-semibold desktop:margin-top-1' href='/'>Location Services</Link>
+
                                     </div>
-                                    {/* add margin */}
-                                    <Link className='usa-link--external' href='/'>Transport Services </Link>
+                                </div>
+                                <div className='desktop:grid-col-4'>
+                                    <div className='grid-row margin-bottom-3 desktop:margin-bottom-0'>
+                                        <div className='display-none desktop:display-inline-block margin-right-2'>
+                                            <Image alt='' src={organizationIcon} />
+                                        </div>
+                                        <Link className='font-semibold desktop:margin-top-1' href='/'>Data Harmonization Services</Link>
+                                    </div>
                                 </div>
                             </div>
-                            <div className='desktop:grid-col-4'>
-                                <div className='grid-row'>
-                                    <div className='display-none desktop:display-inline-block margin-right-2'>
-                                        <Image alt='' src={linkIcon} />
+                            <div className="grid-row">
+                                <div className='desktop:grid-col-4'>
+                                    <div className='grid-row margin-bottom-3 desktop:margin-bottom-0'>
+                                        <div className='display-none desktop:display-inline-block margin-right-2'>
+                                            <Image alt='' src={transportIcon} />
+                                        </div>
+                                        {/* add margin */}
+                                        <Link className='font-semibold' href='/'>Transport Services </Link>
                                     </div>
-                                    <Link className='usa-link--external' href='/'>Data Linkage Services </Link>
+                                </div>
+                                <div className='desktop:grid-col-4'>
+                                    <div className='grid-row'>
+                                        <div className='display-none desktop:display-inline-block margin-right-2'>
+                                            <Image alt='' src={linkIcon} />
+                                        </div>
+                                        <Link className='font-semibold' href='/'>Data Linkage Services </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

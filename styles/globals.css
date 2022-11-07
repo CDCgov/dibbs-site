@@ -26,8 +26,16 @@ a {
   max-width: 88rem !important;
 }
 
-.usa-logo__text {
-  font-weight: 400 !important;
+@media (max-width: 63.99em) {
+  .usa-logo__text {
+    font-weight: 400 !important;
+  }
+}
+
+@media (min-width: 64em) {
+  .usa-logo__text {
+    font-weight: 300 !important;
+  }
 }
 
 .usa-footer__primary-container {
@@ -69,4 +77,20 @@ a {
   .usa-header--basic .usa-navbar {
     width: 60% !important;
   }
+}
+
+@media (max-width: 63.99em) {
+  .usa-nav__primary a:not(.usa-button) {
+    padding: 1rem 1rem !important;
+  }
+}
+
+@media (min-width: 64em) {
+  .usa-nav__primary>.usa-nav__primary-item>a {
+    font-weight: 600 !important;
+  }
+}
+
+.usa-menu-btn {
+  background-color: transparent !important;
 }

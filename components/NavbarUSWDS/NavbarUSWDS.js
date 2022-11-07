@@ -24,7 +24,7 @@ export default function Navbar({ }) {
         <>
             <div className={`usa-overlay ${expanded ? 'is-visible' : ''}`}></div>
             <Header basic={true} className='bg-primary-darker'>
-                <div className="usa-nav-container max-w-full">
+                <div className="desktop:padding-bottom-2 usa-nav-container max-w-full">
                     <div className="w-full usa-navbar">
                         <Title className='text-base-lightest'>
                             <Link href='/'>Public Health Data Infrastructure</Link>
