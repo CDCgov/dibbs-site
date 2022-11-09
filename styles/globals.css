@@ -90,6 +90,10 @@ a {
   background: #162E51 !important;
 }
 
+.usa-list li {
+  max-width: initial !important;
+}
+
 .usa-logo a {
   color: white !important;
 }

@@ -13,7 +13,7 @@ import organizationIcon from '../public/icons/organization.png'
 export default function BuildingBlockInfo() {
     return (
         <div>
-            <div className='grid-container padding-x-205 margin-y-5 maxw-widescreen desktop:padding-x-9 desktop:margin-y-7 desktop:margin-y-0'>
+            <div className='grid-container padding-x-205 margin-y-5 desktop:padding-top-5 maxw-widescreen desktop:padding-x-9 desktop:margin-y-7 desktop:margin-y-0'>
                 <div className="grid-row">
                     <div className={`desktop:grid-col-5 display-none desktop:display-inline-block text-bottom ${styles.buidlingBlockInfoImage} `}>
                         <Image alt='' src={buildingBlockImage} layout='fill'></Image>
@@ -118,7 +118,7 @@ export default function BuildingBlockInfo() {
                                 <span>
                                     <h3 className='text-white font-semibold text-center margin-bottom-2 text-3xl'>Ready to get started?</h3>
                                     <p className='text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-0'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
-                                    <Button accentStyle='warm'>
+                                    <Button outline className={styles.buttonAccent}>
                                         View our product offerings
                                     </Button>
                                 </span>

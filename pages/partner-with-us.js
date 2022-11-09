@@ -16,7 +16,7 @@ export default function GetInvolved() {
             <div className="grid-container padding-0 maxw-desktop-lg">
                 <div className='padding-y-5 desktop:padding-y-7 padding-x-205'>
                     <h1 className='text-center text-accent-cool-darker font-bold text-3xl lg:text-4xl margin-bottom-2'>Partner with us</h1>
-                    <div className='mx-auto desktop:padding-x-8 desktop:width-tablet-lg lg:text-center lg:font-semibold lg:text-base font-public-sans-xs'>
+                    <div className='mx-auto desktop:padding-x-8 desktop:width-tablet-lg lg:text-center lg:font-semibold lg:text-base text-base-darkest font-public-sans-xs'>
                         Public health agencies have a variety of opportunities to contribute to the development of Building Blocks. Below we&apos;ve outlined how jurisdictions can get involved at various levels of partnership, including our beta program, focus groups, and Community of Practice (CoP).
                         <br />
                         <br />
