@@ -123,7 +123,7 @@ export default function Home() {
           </div>
 
           <div className={`position-relative ${styles.desktopHeroImage3} maxw-mobile-lg margin-x-auto`}>
-            <h1 className='text-center text-bold text-white'>An invitation to participate</h1>
+            <h1 className='text-center text-bold text-white header-line-height'>An invitation to participate</h1>
             <p className='line-height-sans-6 text-white text-center padding-x-3 desktop:padding-x-1'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
             <div className='text-center margin-top-3 width-card-lg margin-x-auto'>
               <Button outline className={styles.buttonAccent}>Get Involved</Button>
