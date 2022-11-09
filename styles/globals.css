@@ -94,17 +94,6 @@ a {
   color: white !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  body {
-    color: white;
-    background: black;
-  }
-}
-
 @media (min-width: 64em) {
   .usa-header--basic .usa-navbar {
     width: 60% !important;
