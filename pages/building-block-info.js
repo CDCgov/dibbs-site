@@ -26,7 +26,7 @@ export default function BuildingBlockInfo() {
                             <h1 className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 text-center lg:text-left ${styles.dynamicHeader}`}>Building Blocks</h1>
                             <div className='text-base-darkest'>
                                 <p className='font-semibold font-family-public-sans-1'>
-                                    Piloting and productizing Building Blocks are a key part of the CDC DMI's goal of reducing the burden on STLT partners for collecting and reporting public health data.
+                                    Piloting and productizing Building Blocks are a key part of the CDC DMI&apos;s goal of reducing the burden on STLT partners for collecting and reporting public health data.
                                 </p>
                                 <br />
                                 <p className='text-italic'>

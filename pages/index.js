@@ -62,7 +62,7 @@ export default function Home() {
                   Introduction to Building Blocks and data modernization
                 </h1>
                 <div className='text-base-darkest line-height-sans-6'>
-                  PHDI's current body of work also falls within the scope of CDC's&nbsp;
+                  PHDI&apos;s current body of work also falls within the scope of CDC&apos;s&nbsp;
                   <span className='font-semibold text-underline text-primary'>
                     <Link className='underline text-primary' href="/">
                       Data Modernization Initiative (DMI)
@@ -70,7 +70,7 @@ export default function Home() {
                   </span>
                   ,&nbsp;which is an effort to modernize core public health data and surveillance infrastructure across the federal and state public health landscape.
                   <br /><br />
-                  PHDI's work focuses on building and providing access to open source, modular software and tooling, known as “Building Blocks,” that states, territories, localities, tribes (STLTs), and other public health actors can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses.
+                  PHDI&apos;s work focuses on building and providing access to open source, modular software and tooling, known as “Building Blocks,” that states, territories, localities, tribes (STLTs), and other public health actors can integrate into their current workflows to reduce manual processes and solve challenges when working with public health data. Some Building Blocks offer relatively simple functionality, like standardizing patient names, while others perform more complex tasks, including geocoding and standardizing addresses.
                   <br /><br />
                   <div className='font-semibold text-underline text-primary'>
                     <Link href="/">More about Building Blocks ›
