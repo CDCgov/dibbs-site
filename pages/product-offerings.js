@@ -16,33 +16,35 @@ import { Link } from '@trussworks/react-uswds'
 export default function ProductOffering() {
     return (
         <div>
-            <div className='grid-container margin-y-5 desktop:margin-bottom-0 desktop:margin-top-9'>
+            <div className='grid-container padding-x-205 margin-y-5 desktop:margin-bottom-0 desktop:margin-top-9'>
                 <div className='grid-row' >
                     <div className='desktop:grid-col-12 text-center desktop:display-none'>
                         <Image alt='' src={mobileProductOfferingsImage} layout='fixed'></Image>
                     </div>
-                    <div className='display-none desktop:grid-col-6 height-mobile desktop:display-block'>
-                        <Image alt='' src={productOfferingsImage} layout='fill'></Image>
+                    <div className={`display-none desktop:grid-col-6 desktop:display-block ${styles.productOfferingsImage}`}>
+                        <Image alt='' src={productOfferingsImage} layout='fixed'></Image>
                     </div>
                     <div className='desktop:grid-col-6 margin-top-2 desktop:margin-top-0'>
-                        <h2 className='text-center text-accent-cool-darker font-extrabold text-3xl lg:text-4xl margin-bottom-2 lg:text-left'>Our Product Offerings</h2>
-                        <p className="text-base-darkest font-semibold">Our products create a data architecture that is: </p>
-                        <ul class="usa-list list-disc">
-                            <li> Flexible and modular</li>
-                            <li> Easy to update</li>
-                            <li> Easier to understand</li>
-                            <li> Easier to make open-source</li>
-                            <li> Easier to integrate with STLTs’ existing systems</li>
-                            <li> Performs similar operations consistently </li>
-                            <li> Easier to share and reuse across STLTs </li>
-                        </ul>
+                        <div className='desktop:margin-left-8 desktop:padding-top-8'>
+                            <h2 className='header-line-height text-center text-accent-cool-darker font-bold text-3xl lg:text-4xl margin-bottom-2 lg:text-left'>Our product offerings</h2>
+                            <p className="text-base-darkest font-semibold">Our products create a data architecture that is: </p>
+                            <ul class="usa-list list-disc">
+                                <li> Flexible and modular</li>
+                                <li> Easy to update</li>
+                                <li> Easier to understand</li>
+                                <li> Easier to make open-source</li>
+                                <li> Easier to integrate with STLTs’ existing systems</li>
+                                <li> Performs similar operations consistently </li>
+                                <li> Easier to share and reuse across STLTs </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className='bg-primary-lighter padding-y-5 desktop:padding-y-7'>
-                <div className='grid-container padding-x-205 desktop:padding-x-5 bg-white padding-y-5 margin-bottom-3 desktop:margin-bottom-5 border-1px border-accent-cool desktop:border-0'>
-                    <h4 className={`lg:font-semibold text-2xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>Pipeline as a Product</h4>
-                    <div className='lg:text-base text-sm'>
+                <div className='grid-container padding-x-205 desktop:padding-x-5 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-105 margin-bottom-3 desktop:margin-bottom-5 border-1px border-accent-cool desktop:border-0'>
+                    <h4 className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>Pipeline as a Product</h4>
+                    <div className='lg:text-base font-public-sans-xs'>
                         <div>A cloud-based, off-the-shelf data ingestion and processing pipeline
                             built from modular Building Blocks which public health departments
                             can easily integrate into existing data systems. The pipeline produces
@@ -77,9 +79,9 @@ export default function ProductOffering() {
                         </div>
                     </div>
                 </div>
-                <div className='grid-container bg-white padding-y-5 padding-x-205 desktop:padding-x-5 border-1px border-accent-cool desktop:border-0'>
-                    <h4 className={`lg:font-semibold text-2xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>SDK</h4>
-                    <div className='lg:text-base text-sm'>
+                <div className='grid-container bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 border-1px border-accent-cool desktop:border-0'>
+                    <h4 className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>SDK</h4>
+                    <div className='lg:text-base font-public-sans-xs'>
                         <div>Access the range of modular Building Blocks with our&nbsp;
                             <span>
                                 <Link className='font-semibold' href='/'>SDK toolkit</Link>

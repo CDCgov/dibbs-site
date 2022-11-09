@@ -27,7 +27,7 @@ export default function Navbar({ }) {
                 <div className="desktop:padding-bottom-2 usa-nav-container max-w-full">
                     <div className="w-full usa-navbar">
                         <Title className='text-base-lightest'>
-                            <Link href='/'>Public Health Data Infrastructure</Link>
+                            <Link className='font-public-sans-lg' href='/'>Public Health Data Infrastructure</Link>
                         </Title>
                         <NavMenuButton onClick={onClick} label="Menu" />
                     </div>

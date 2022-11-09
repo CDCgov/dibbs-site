@@ -1,5 +1,5 @@
 .desktopHeroImage2 {
-  margin-bottom: -90px;
+  margin-bottom: -75px;
 }
 
 .dekstopHeroImage1 {
@@ -11,7 +11,11 @@
 }
 
 .buidlingBlockInfoImage {
-  margin-bottom: -92px;
+  margin-bottom: -68px;
+}
+
+.productOfferingsImage {
+  margin-bottom: -8px;
 }
 
 .desktopHeroImage3Background {
@@ -20,7 +24,7 @@
 
 @media(min-width:1024px) {
   .desktopHeroImage3 {
-    margin-top: -320px;
+    margin-top: -313px;
     margin-bottom: 20px;
   }
 
@@ -41,6 +45,10 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .dynamicHeader {
+    font-size: 40px;
   }
 }
 
@@ -63,6 +71,10 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 38px;
+  }
+
+  .dynamicHeader {
+    font-size: 32px;
   }
 }
 

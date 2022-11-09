@@ -27,16 +27,16 @@ export default function Home() {
             <Image alt='' src={mobileDesktopHero1} layout='fixed' />
           </div>
         </div>
-        <div className='grid-row desktop:margin-top-8 margin-top-3'>
+        <div className='grid-row desktop:margin-top-8 desktop:margin-top-3'>
           <div className='desktop:grid-col-5 desktop:margin-bottom-8 grid-col-12'>
-            <h1 className={`${styles.homeHeaderText} text-accent-cool-darker font-bold`}>
+            <h1 className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold`}>
               Reponse-ready public health data systems
             </h1>
-            <p className='font-ui-xs line-height-sans-6 font-semibold'>
+            <p className='font-public-sans-xs line-height-sans-6 font-semibold'>
               Public health data is often messy, heterogeneous, and siloed, and epidemiologists lack the tools and methods to efficiently turn it into meaningful intelligence that can drive timely public health action.
             </p>
             <br />
-            <p className='font-ui-xs line-height-sans-6'>
+            <p className='font-public-sans-xs line-height-sans-6'>
               The Public Health Data Infrastructure (PHDI) project is part of the Pandemic-Ready Interoperability Modernization Effort (PRIME), a multi-year collaboration between CDC and the U.S. Digital Service (USDS) to strengthen data quality and information technology systems in public health departments.
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <div className='desktop:grid-col-6 desktop:margin-y-7'>
               <div className='desktop:margin-left-4'>
-                <h1 className={`${styles.homeHeaderText} text-accent-cool-darker font-bold`}>
+                <h1 className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold`}>
                   Introduction to Building Blocks and data modernization
                 </h1>
                 <div className='text-base-darkest line-height-sans-6'>
@@ -82,8 +82,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='grid-container maxw-tablet-lg margin-top-9 padding-x-205'>
-        <h1 className='text-bold text-center text-accent-cool-darker'>Our pilot partners</h1>
+      <div className='grid-container maxw-tablet-lg margin-top-9 desktop:padding-top-5 padding-x-205'>
+        <h1 className='text-bold text-center text-accent-cool-darker '>Our pilot partners</h1>
         <p className='text-center text-base-darkest line-height-sans-6 padding-x-05'>We work with a range of public health departments to develop and iterate on Building Blocks that solve public health data-related challenges within their organizations.</p>
         <div className='grid-row margin-top-6'>
           <div className='desktop:grid-col-6'>

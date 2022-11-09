@@ -9,8 +9,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Public Sans', sans-serif;
+  line-height: 26px;
 }
 
 a {
@@ -26,9 +26,36 @@ a {
   max-width: 88rem !important;
 }
 
+.usa-header {
+  font-family: 'Public Sans', sans-serif !important;
+}
+
+.usa-footer {
+  font-family: 'Public Sans', sans-serif !important;
+}
+
+.usa-footer__logo-heading {
+  font-family: 'Public Sans', sans-serif !important;
+}
+
+.usa-nav .usa-accordion {
+  font-family: 'Public Sans', sans-serif !important;
+  font-size: 0.94rem !important;
+}
+
+.usa-button {
+  font-family: 'Public Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
 @media (max-width: 63.99em) {
   .usa-logo__text {
     font-weight: 400 !important;
+  }
+
+  .header-line-height {
+    line-height: 37.6px;
   }
 }
 
@@ -36,6 +63,11 @@ a {
   .usa-logo__text {
     font-weight: 300 !important;
   }
+
+  .header-line-height {
+    line-height: 47px;
+  }
+
 }
 
 .usa-footer__primary-container {
@@ -93,4 +125,92 @@ a {
 
 .usa-menu-btn {
   background-color: transparent !important;
+}
+
+
+@font-face {
+  font-family: 'Public Sans';
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 400;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 500;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 600;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 700;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 800;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-ExtraBold.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 900;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Black.ttf) format('truetype');
+}
+
+.font-public-sans-3xs {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 12.4px;
+}
+
+.font-public-sans-2xs {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 13.3px;
+}
+
+.font-public-sans-xs {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14.3px;
+}
+
+.font-public-sans-sm {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15.2px;
+}
+
+.font-public-sans-md {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16.2px;
+}
+
+.font-public-sans-lg {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 21.0px;
+}
+
+.font-public-sans-xl {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 30.5px;
+}
+
+.font-public-sans-2xl {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 38.1px;
+}
+
+.font-public-sans-3xl {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 45.7px;
 }

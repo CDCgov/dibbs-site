@@ -23,9 +23,9 @@ export default function BuildingBlockInfo() {
                     </div>
                     <div className='desktop:grid-col-7'>
                         <div className='desktop:margin-left-7 desktop:margin-top-9 desktop:margin-bottom-7'>
-                            <h1 className='font-ui-xl text-accent-cool-darker font-bold margin-bottom-2 text-center lg:text-left'>Building Blocks</h1>
-                            <div className='text-base-darkest line-height-sans-6'>
-                                <p className='font-semibold'>
+                            <h1 className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 text-center lg:text-left ${styles.dynamicHeader}`}>Building Blocks</h1>
+                            <div className='text-base-darkest'>
+                                <p className='font-semibold font-family-public-sans-1'>
                                     Piloting and productizing Building Blocks are a key part of the CDC DMI's goal of reducing the burden on STLT partners for collecting and reporting public health data.
                                 </p>
                                 <br />
@@ -56,8 +56,8 @@ export default function BuildingBlockInfo() {
                                     <Image alt='' src={locationIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-center lg:text-left text-2xl margin-bottom-1 text-accent-cool-darker'>Location Services</h5>
-                                <div className='font-ui-3xs line-height-sans-6'>
-                                    <p className='text-center lg:text-left font-semibold'>(address validation, standardization, and data enrichment)</p>
+                                <div className='font-public-sans-xs line-height-sans-6'>
+                                    <p className='text-center lg:text-left font-semibold font-public-sans-3xs'>(address validation, standardization, and data enrichment)</p>
                                     <br />
                                     <p>
                                         Tools for mapping data describing a standard geographic location to its canonical representation in a source dataset for purposes of standardization, validation, cleaning, and/or enrichment with other geography-related data.
@@ -71,8 +71,8 @@ export default function BuildingBlockInfo() {
                                     <Image alt='' src={codeIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl margin-bottom-1 text-center lg:text-left text-accent-cool-darker'>Data Exchange Services</h5>
-                                <div className='font-ui-3xs line-height-sans-6'>
-                                    <p className='text-center lg:text-left font-semibold'>(for reporting to CDC)</p>
+                                <div className='font-public-sans-xs line-height-sans-6'>
+                                    <p className='text-center lg:text-left font-semibold font-public-sans-3xs'>(for reporting to CDC)</p>
                                     <br />
                                     <p>
                                         An EDAV-integrated platform that provides API-based data exchange services supporting common standards (e.g., HL7, FHIR, CDA, CSV, JSON) and enabling observability to provenance and transparency on data transmissions.
@@ -86,8 +86,8 @@ export default function BuildingBlockInfo() {
                                     <Image alt='' src={organizationIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl margin-bottom-1 text-center lg:text-left text-accent-cool-darker'>Data Harmonization Services</h5>
-                                <div className='font-ui-3xs line-height-sans-6'>
-                                    <p className='text-center lg:text-left font-semibold'>(for data structures and semantics)</p>
+                                <div className='font-public-sans-xs line-height-sans-6'>
+                                    <p className='text-center lg:text-left font-semibold font-public-sans-3xs'>(for data structures and semantics)</p>
                                     <br />
                                     <p>
                                         Services that align the structure and semantics of an incoming data stream to the input specifications of the receiving application without changing the meaning of the data (e.g., transformations, format conversions, validations)
@@ -103,8 +103,8 @@ export default function BuildingBlockInfo() {
                                     <Image alt='' src={linkIcon} layout='fixed'></Image>
                                 </div>
                                 <h5 className='text-2xl margin-bottom-1 text-center lg:text-left text-accent-cool-darker'>Data Linkage Services</h5>
-                                <div className='font-ui-3xs line-height-sans-6'>
-                                    <p className='text-center lg:text-left font-semibold'>(for deduplicating data)</p>
+                                <div className='font-public-sans-xs line-height-sans-6'>
+                                    <p className='text-center lg:text-left font-semibold font-public-sans-3xs'>(for deduplicating data)</p>
                                     <br />
                                     <p>
                                         A service that identifies and links data referring to the same entity (e.g., patient, event, case) across disparate streams
@@ -116,8 +116,8 @@ export default function BuildingBlockInfo() {
                         <div className='desktop:grid-col-4'>
                             <div className='bg-accent-cool-dark desktop:radius-md shadow-1 padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row'>
                                 <span>
-                                    <h3 className='text-white font-semibold text-center margin-bottom-2 text-4xl'>Ready to get started?</h3>
-                                    <p className='text-white margin-bottom-105 padding-x-205 desktop:padding-x-0'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
+                                    <h3 className='text-white font-semibold text-center margin-bottom-2 text-3xl'>Ready to get started?</h3>
+                                    <p className='text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-0'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
                                     <Button accentStyle='warm'>
                                         View our product offerings
                                     </Button>
