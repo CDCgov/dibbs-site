@@ -67,14 +67,13 @@ a {
   .header-line-height {
     line-height: 47px;
   }
-
 }
 
 .usa-footer__primary-container {
   max-width: 88rem !important;
 }
 
-.usa-footer__secondary-section>.grid-container {
+.usa-footer__secondary-section > .grid-container {
   max-width: 88rem !important;
 }
 
@@ -83,11 +82,11 @@ a {
 } */
 
 .usa-footer__primary-section {
-  background: #162E51 !important;
+  background: #162e51 !important;
 }
 
 .usa-footer__secondary-section {
-  background: #162E51 !important;
+  background: #162e51 !important;
 }
 
 .usa-list li {
@@ -111,7 +110,7 @@ a {
 }
 
 @media (min-width: 64em) {
-  .usa-nav__primary>.usa-nav__primary-item>a {
+  .usa-nav__primary > .usa-nav__primary-item > a {
     font-weight: 600 !important;
   }
 }
@@ -120,47 +119,52 @@ a {
   background-color: transparent !important;
 }
 
-
 @font-face {
   font-family: 'Public Sans';
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Public Sans';
   font-weight: 400;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Light.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-Light.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Public Sans';
   font-weight: 500;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Public Sans';
   font-weight: 600;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-SemiBold.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-SemiBold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Public Sans';
   font-weight: 700;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Bold.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-Bold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Public Sans';
   font-weight: 800;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-ExtraBold.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-ExtraBold.ttf) format('truetype');
 }
-
 
 @font-face {
   font-family: 'Public Sans';
   font-weight: 900;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Black.ttf) format('truetype');
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-Black.ttf) format('truetype');
 }
 
 .font-public-sans-3xs {
@@ -190,7 +194,7 @@ a {
 
 .font-public-sans-lg {
   font-family: 'Public Sans', sans-serif;
-  font-size: 21.0px;
+  font-size: 21px;
 }
 
 .font-public-sans-xl {
@@ -206,4 +210,8 @@ a {
 .font-public-sans-3xl {
   font-family: 'Public Sans', sans-serif;
   font-size: 45.7px;
+}
+
+.bg-accent-cool-dark {
+  background-color: #1d80a2 !important;
 }
