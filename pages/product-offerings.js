@@ -2,13 +2,13 @@ import styles from '../styles/Home.module.scss'
 import productOfferingsImage from '../public/products.svg'
 import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg'
 
-import awsImage from '../public/icons/aws.png'
-import azureImage from '../public/icons/azure.png'
-import gcpImage from '../public/icons/gcp.png'
-import locationIcon from '../public/icons/location.png';
-import linkIcon from '../public/icons/link.png'
-import transportIcon from '../public/icons/transport.png'
-import organizationIcon from './../public/icons/organization.png'
+import awsImage from '../public/icons/aws.svg'
+import azureImage from '../public/icons/azure.svg'
+import gcpImage from '../public/icons/gcp.svg'
+import locationIcon from '../public/icons/location.svg';
+import linkIcon from '../public/icons/link.svg'
+import transportIcon from '../public/icons/transport.svg'
+import organizationIcon from './../public/icons/organization.svg'
 
 import Image from 'next/image';
 import { Link } from '@trussworks/react-uswds'
@@ -42,7 +42,7 @@ export default function ProductOffering() {
                 </div>
             </div>
             <div className='bg-primary-lighter padding-y-5 desktop:padding-y-7'>
-                <div className='grid-container padding-x-205 desktop:padding-x-5 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-105 margin-bottom-3 desktop:margin-bottom-5 border-1px border-accent-cool desktop:border-0'>
+                <div className='grid-container desktop:radius-md shadow-1 padding-x-205 desktop:padding-x-5 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-105 margin-bottom-3 desktop:margin-bottom-5 border-1px border-accent-cool desktop:border-0'>
                     <h4 className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>Pipeline as a Product</h4>
                     <div className='lg:text-base font-public-sans-xs'>
                         <div>A cloud-based, off-the-shelf data ingestion and processing pipeline
@@ -51,8 +51,8 @@ export default function ProductOffering() {
                             analysis-ready data by converting all incoming data to a single standard,
                             deduplicating and linking the data, and then geocoding the cleaned results.
                         </div>
-                        <div className='grid-row margin-top-4'>
-                            <div className='desktop:grid-col-4 lg:text-center'>
+                        <div className='grid-row margin-top-3'>
+                            <div className='desktop:grid-col-3 lg:text-center'>
                                 <div className='display-none desktop:display-inline-block'>
                                     <Image alt='' src={azureImage} layout='fixed' height='100' width='100' />
                                 </div>
@@ -60,7 +60,7 @@ export default function ProductOffering() {
                                     <Link className='font-semibold' href='/s'>Access Azure repository</Link>
                                 </div>
                             </div>
-                            <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='desktop:grid-col-3 desktop:margin-left-2 lg:text-center'>
                                 <div className='display-none desktop:display-inline-block'>
                                     <Image alt='' src={gcpImage} layout='fixed' />
                                 </div>
@@ -70,7 +70,7 @@ export default function ProductOffering() {
                                 </div>
                                 <br />
                             </div>
-                            <div className='desktop:grid-col-4 lg:text-center'>
+                            <div className='desktop:grid-col-3 lg:text-center desktop:margin-left-2'>
                                 <div className='display-none desktop:display-inline-block'>
                                     <Image alt='' src={awsImage} layout='fixed' />
                                 </div>
@@ -79,10 +79,10 @@ export default function ProductOffering() {
                         </div>
                     </div>
                 </div>
-                <div className='grid-container bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 border-1px border-accent-cool desktop:border-0'>
+                <div className='grid-container desktop:radius-md shadow-1 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 border-1px border-accent-cool desktop:border-0'>
                     <h4 className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>SDK</h4>
                     <div className='lg:text-base font-public-sans-xs'>
-                        <div>Access the range of modular Building Blocks with our&nbsp;
+                        <div className={styles.sdkInfoMaxWidth}>Access the range of modular Building Blocks with our&nbsp;
                             <span>
                                 <Link className='font-semibold' href='/'>SDK toolkit</Link>
                             </span>

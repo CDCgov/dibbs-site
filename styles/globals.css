@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+li::marker {
+  font-size: 0.7em;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -49,6 +53,20 @@ a {
   font-size: 16px !important;
 }
 
+.usa-nav__link:hover::after {
+  background-color: white !important;
+  height: .12rem !important;
+  bottom: 0.3rem !important;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
 @media (max-width: 63.99em) {
   .usa-logo__text {
     font-weight: 400 !important;
@@ -66,6 +84,10 @@ a {
 
   .header-line-height {
     line-height: 47px;
+  }
+
+  .footer-margin {
+    margin-right: 120px;
   }
 
 }
@@ -175,7 +197,7 @@ a {
 
 .font-public-sans-xs {
   font-family: 'Public Sans', sans-serif;
-  font-size: 14.3px;
+  font-size: 14px;
 }
 
 .font-public-sans-sm {
@@ -185,7 +207,7 @@ a {
 
 .font-public-sans-md {
   font-family: 'Public Sans', sans-serif;
-  font-size: 16.2px;
+  font-size: 16px;
 }
 
 .font-public-sans-lg {

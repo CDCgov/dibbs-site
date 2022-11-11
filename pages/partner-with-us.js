@@ -69,11 +69,13 @@ export default function GetInvolved() {
                         <Image alt='' src={mobileGetInvolved3} layout='responsive' />
                     </div>
                     <div className='desktop:grid-col-5 display-none desktop:display-inline-block'>
-                        <Image alt='' src={getInvolved3} layout='fill' />
+                        <div className='desktop:padding-left-5'>
+                            <Image alt='' src={getInvolved3} layout='fixed' />
+                        </div>
                     </div>
                     <div className='desktop:grid-col-7 desktop:padding-left-7'>
                         <h4 className={`text-accent-cool-darker margin-bottom-105 ${styles.partnerItemHeaders} ${styles.homeHeaderText}`}>You can also help support the Community of Practice</h4>
-                        <div className="margin-bottom-2 text-base-darkest lg:text-base font-public-sans-xs">
+                        <div className="margin-bottom-2 text-base-darkest lg:text-base font-public-sans-xs desktop:padding-right-8">
                             A CoP partner is a STLT who, in the immediate future, is interested in offering feedback about the design principles and application interface(s) for Building Blocks and, in the near future, is interested in participating to the Building Block ecosystem by contributing code, helping govern the open source community, or offering other services as needed.
                         </div>
                         <Button className='desktop:padding-x-7'>Contact Us</Button>
