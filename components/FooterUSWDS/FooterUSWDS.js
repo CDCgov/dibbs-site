@@ -34,7 +34,7 @@ export default function FooterUSWDS() {
             <Footer
                 size="slim"
                 returnToTop={returnToTop}
-                className='padding-x-05'
+                className='padding-x-05 padding-top-3'
                 primary={
                     <div className=" usa-footer__primary-container grid-row">
                         <div className="mobile-lg:grid-col-12">
@@ -50,9 +50,9 @@ export default function FooterUSWDS() {
                     </div>
                 }
                 secondary={
-                    <div className='usa-footer__logo padding-left-3 desktop:padding-x-05' data-testid="footerLogo">
-                        <div className="desktop:display-none text-center padding-left-8 margin-bottom-205 margin-top-2">
-                            <div className={styles.footerBar}></div>
+                    <div className='usa-footer__logo padding-left-3 desktop:padding-left-2' data-testid="footerLogo">
+                        <div className="desktop:display-none text-center margin-bottom-205 margin-top-2 padding-right-4">
+                            <div className={`margin-x-auto ${styles.footerBar}`}></div>
                         </div>
                         <div className='grid-row'>
                             <div className="desktop:grid-col-6 grid-row grid-gap-2">

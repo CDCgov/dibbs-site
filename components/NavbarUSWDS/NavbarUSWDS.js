@@ -1,4 +1,4 @@
-import { Header, Menu, NavDropDownButton, NavMenuButton, PrimaryNav, Title } from "@trussworks/react-uswds";
+import { Header, NavMenuButton, PrimaryNav, Title } from "@trussworks/react-uswds";
 import Link from "next/link";
 import React from "react";
 import styles from '../../styles/Home.module.scss'
@@ -7,16 +7,17 @@ export default function Navbar({ }) {
     const [expanded, setExpanded] = React.useState(false)
     const onClick = () => setExpanded((prvExpanded) => !prvExpanded)
 
-    const [isOpen, setIsOpen] = React.useState([false, false])
-
     const testItemsMenu = [
-        <a href="/phdi-site/building-block-info" key="one" className="usa-nav__link">
+        <a href="/phdi-site/" key="one" className={`usa-nav__link ${styles.homeNavItem}`}>
+            <span className={styles.navbarItemText}>Home</span>
+        </a>,
+        <a href="/phdi-site/building-block-info" key="two" className="usa-nav__link">
             <span className={styles.navbarItemText}>What is a Building Block?</span>
         </a>,
-        <a href="/phdi-site/product-offerings" key="two" className="usa-nav__link">
+        <a href="/phdi-site/product-offerings" key="three" className="usa-nav__link">
             <span className={styles.navbarItemText}>Our product offerings</span>
         </a>,
-        <a href="/phdi-site/partner-with-us" key="three" className="usa-nav__link">
+        <a href="/phdi-site/partner-with-us" key="four" className="usa-nav__link">
             <span className={styles.navbarItemText}>Partner with us</span>
         </a>,
     ]

@@ -52,7 +52,7 @@ export default function BuildingBlockInfo() {
                 <div className='grid-container maxw-widescreen padding-x-0 desktop:padding-x-7'>
                     <div className="grid-row grid-gap-3">
                         <div className='desktop:grid-col-4'>
-                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
+                            <div className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}>
                                 <div className='margin-bottom-1 text-center lg:text-left'>
                                     <Image alt='' src={locationIcon} layout='fixed'></Image>
                                 </div>
@@ -71,7 +71,7 @@ export default function BuildingBlockInfo() {
                             </div>
                         </div>
                         <div className='desktop:grid-col-4 margin-y-2 desktop:margin-y-0'>
-                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
+                            <div className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}>
                                 <div className='margin-bottom-105 text-center lg:text-left'>
                                     <Image alt='' src={codeIcon} layout='fixed'></Image>
                                 </div>
@@ -88,7 +88,7 @@ export default function BuildingBlockInfo() {
                             </div>
                         </div>
                         <div className='desktop:grid-col-4'>
-                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
+                            <div className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}>
                                 <div className='margin-bottom-1 text-center lg:text-left'>
                                     <Image alt='' src={organizationIcon} layout='fixed'></Image>
                                 </div>
@@ -107,7 +107,7 @@ export default function BuildingBlockInfo() {
                     </div>
                     <div className='grid-row grid-gap-3  desktop:margin-top-205'>
                         <div className='desktop:grid-col-4 margin-y-2 desktop:margin-y-0'>
-                            <div className='bg-white padding-205 lg:h-80 desktop:radius-md shadow-1 border-1px border-accent-cool desktop:border-0'>
+                            <div className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}>
                                 <div className='margin-bottom-105 text-center lg:text-left'>
                                     <Image alt='' src={linkIcon} layout='fixed'></Image>
                                 </div>
@@ -127,9 +127,9 @@ export default function BuildingBlockInfo() {
 
                         </div>
                         <div className='desktop:grid-col-4'>
-                            <div className='bg-accent-cool-dark desktop:radius-md shadow-1 padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row'>
+                            <div className={`bg-accent-cool-dark desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row`}>
                                 <span>
-                                    <h2 className='text-white font-semibold text-center margin-bottom-2'>
+                                    <h2 className={`text-white font-semibold text-center margin-bottom-2 ${styles.getStartedHeader}`}>
                                         Ready to get started?
                                     </h2>
                                     <p className='text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-0'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>

@@ -36,6 +36,10 @@
   border: 0.5px solid #FFFFFF;
 }
 
+.getStartedHeader {
+  line-height: 38px;
+}
+
 @media(min-width:1024px) {
   .desktopHeroImage3 {
     margin-top: -333px;
@@ -55,7 +59,7 @@
   }
 
   .partnerItemHeaders {
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
@@ -72,6 +76,14 @@
 
   .subBodyTextLineHeight {
     line-height: 25.92px;
+  }
+
+  .homeNavItem {
+    display: none !important;
+  }
+
+  .dynamicShadow {
+    box-shadow: 0 1px .25rem 0 rgba(0, 0, 0, .1);
   }
 }
 
@@ -90,10 +102,10 @@
   }
 
   .partnerItemHeaders {
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-weight: 400;
     font-size: 22px;
-    line-height: 38px;
+    line-height: 26px;
   }
 
   .dynamicHeader {
@@ -108,6 +120,14 @@
 
   .subBodyTextLineHeight {
     line-height: 22.68px;
+  }
+
+  .homeNavItem {
+    display: inline;
+  }
+
+  .dynamicShadow {
+    box-shadow: none;
   }
 }
 

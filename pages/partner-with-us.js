@@ -24,7 +24,7 @@ export default function GetInvolved() {
                     </div>
                 </div>
                 <div className='grid-row desktop:grid-gap-4'>
-                    <div className="border-1px border-accent-cool desktop:border-0 desktop:grid-col-6">
+                    <div className="desktop:grid-col-6">
                         <div className='padding-x-205 padding-y-5 bg-primary-lighter desktop:radius-md desktop:padding-x-4'>
                             <div className="text-center margin-bottom-105 desktop:display-none">
                                 <Image alt='' src={mobileGetInvolved1} layout='fixed' />
@@ -43,7 +43,7 @@ export default function GetInvolved() {
                             </div>
                         </div>
                     </div>
-                    <div className="border-x-1px border-bottom-1px border-accent-cool desktop:border-0 desktop:grid-col-6">
+                    <div className="desktop:grid-col-6">
                         <div className='padding-x-205 desktop:padding-x-4 padding-y-5 bg-primary-lighter radius-md'>
                             <div className='desktop:grid-col-12 text-center desktop:display-none'>
                                 <Image alt='' src={mobileGetInvolved2} layout='responsive' />
