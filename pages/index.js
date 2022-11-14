@@ -29,14 +29,14 @@ export default function Home() {
         </div>
         <div className='grid-row desktop:margin-top-8 desktop:margin-top-3'>
           <div className='desktop:grid-col-5 desktop:margin-bottom-8 grid-col-12'>
-            <h1 className={`${styles.homeHeaderText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg`}>
+            <h1 className={`${styles.homeHeaderText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg padding-x-1 desktop:padding-x-0`}>
               Reponse-ready public health data systems
             </h1>
-            <p className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1}`}>
+            <p className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0`}>
               Public health data is often messy, heterogeneous, and siloed, and epidemiologists lack the tools and methods to efficiently turn it into meaningful intelligence that can drive timely public health action.
             </p>
             <br />
-            <p className='font-public-sans line-height-sans-6'>
+            <p className='font-public-sans line-height-sans-6 padding-right-05 desktop:padding-right-0'>
               The Public Health Data Infrastructure (PHDI) project is part of the Pandemic-Ready Interoperability Modernization Effort (PRIME), a multi-year collaboration between CDC and the U.S. Digital Service (USDS) to strengthen data quality and information technology systems in public health departments.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Home() {
                   </span>
                   <br /><br />
                   <div className='font-semibold text-underline text-primary'>
-                    <Link href="/">More about Building Blocks ›
+                    <Link href="/building-block-info">More about Building Blocks ›
                     </Link>
                   </div>
                 </div>
@@ -84,10 +84,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='grid-container maxw-tablet-lg margin-top-9 desktop:padding-top-5 padding-x-205'>
+      <div className='grid-container maxw-tablet-lg margin-top-5 desktop:margin-top-7 desktop:padding-top-5 padding-x-205'>
         <h1 className='text-bold text-center text-accent-cool-darker '>Our pilot partners</h1>
-        <p className='text-center text-base-darkest line-height-sans-6 padding-x-05 desktop:padding-x-9'>
-          We work with a range of public health departments to develop and iterate on Building Blocks that solve public health data-related challenges within their organizations.
+        <p className='text-center text-base-darkest line-height-sans-6 padding-x-3 desktop:padding-x-9'>
+          We work with a range of public health departments to develop and iterate on Building Blocks that solve healthcare
+          <br className='display-inline desktop:display-none' />
+          data-related challenges <br className='display-inline desktop:display-none' />
+          within their organizations.
         </p>
         <div className='grid-row margin-top-6'>
           <div className='desktop:grid-col-6'>
@@ -117,7 +120,7 @@ export default function Home() {
 
       <div className=''>
         <div className={`bg-accent-cool-dark ${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5 desktop:padding-top-0 desktop:padding-bottom-5`}>
-          <div class='grid-row desktop:display-none'>
+          <div className='grid-row desktop:display-none'>
             <div className='grid-col-12 text-center'>
               <Image alt='' src={mobileDesktopHero3} />
             </div>
@@ -128,9 +131,13 @@ export default function Home() {
 
           <div className={`position-relative ${styles.desktopHeroImage3} maxw-mobile-lg margin-x-auto`}>
             <h1 className='text-center text-bold text-white header-line-height'>An invitation to participate</h1>
-            <p className='line-height-sans-6 text-white text-center padding-x-3 desktop:padding-x-1'>We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.  </p>
+            <p className='line-height-sans-6 text-white text-center padding-x-4 desktop:padding-x-1'>
+              We are currently gathering input from public health agencies and partners to help us define and prioritize future Building Blocks that can help efficiently and effectively collect, use, analyze, and share public health data.
+            </p>
             <div className='text-center margin-top-3 width-card-lg margin-x-auto'>
-              <Button outline className={`${styles.buttonAccent} desktop:padding-x-4`}>Get Involved</Button>
+              <Link href='/partner-with-us'>
+                <Button outline className={`${styles.buttonAccent} desktop:padding-x-4`}>Get Involved</Button>
+              </Link>
             </div>
           </div>
 

@@ -28,7 +28,7 @@ export default function ProductOffering() {
                         <div className='desktop:margin-left-8 desktop:padding-top-8'>
                             <h2 className='header-line-height text-center text-accent-cool-darker font-bold text-3xl lg:text-4xl margin-bottom-2 lg:text-left'>Our product offerings</h2>
                             <p className="text-base-darkest font-semibold">Our products create a data architecture that is: </p>
-                            <ul class="usa-list list-disc">
+                            <ul className="usa-list list-disc">
                                 <li> Flexible and modular</li>
                                 <li> Easy to update</li>
                                 <li> Easier to understand</li>
@@ -44,7 +44,7 @@ export default function ProductOffering() {
             <div className='bg-primary-lighter padding-y-5 desktop:padding-y-7'>
                 <div className='grid-container desktop:radius-md shadow-1 padding-x-205 desktop:padding-x-5 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-105 margin-bottom-3 desktop:margin-bottom-5 border-1px border-accent-cool desktop:border-0'>
                     <h4 className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>Pipeline as a Product</h4>
-                    <div className='lg:text-base font-public-sans-xs'>
+                    <div className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}>
                         <div>A cloud-based, off-the-shelf data ingestion and processing pipeline
                             built from modular Building Blocks which public health departments
                             can easily integrate into existing data systems. The pipeline produces
@@ -57,7 +57,7 @@ export default function ProductOffering() {
                                     <Image alt='' src={azureImage} layout='fixed' height='100' width='100' />
                                 </div>
                                 <div>
-                                    <Link className='font-semibold' href='/s'>Access Azure repository</Link>
+                                    <Link className='font-semibold' href='https://github.com/CDCgov/phdi-azure' target='_blank'>Access Azure repository</Link>
                                 </div>
                             </div>
                             <div className='desktop:grid-col-3 desktop:margin-left-2 lg:text-center'>
@@ -66,7 +66,7 @@ export default function ProductOffering() {
                                 </div>
                                 <br />
                                 <div>
-                                    <Link className='font-semibold' href='/s'>Access GCP repository</Link>
+                                    <Link className='font-semibold' href='https://github.com/CDCgov/phdi-google-cloud' target='_blank'>Access GCP repository</Link>
                                 </div>
                                 <br />
                             </div>
@@ -81,15 +81,15 @@ export default function ProductOffering() {
                 </div>
                 <div className='grid-container desktop:radius-md shadow-1 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 border-1px border-accent-cool desktop:border-0'>
                     <h4 className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}>SDK</h4>
-                    <div className='lg:text-base font-public-sans-xs'>
+                    <div className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}>
                         <div className={styles.sdkInfoMaxWidth}>Access the range of modular Building Blocks with our&nbsp;
                             <span>
-                                <Link className='font-semibold' href='/'>SDK toolkit</Link>
+                                <Link className='font-semibold' href='https://pypi.org/project/phdi/' target='_blank'>SDK toolkit</Link>
                             </span>
                             .&nbsp;Public health agencies can import, experiment, and integrate these
                             features into their existing pipelines. To see the full suite of
                             functionality of our SDK, check out our <span>
-                                <Link className='font-semibold' href='/'>API documentation</Link>
+                                <Link className='font-semibold' href='https://cdcgov.github.io/phdi/v0.1.0-dev/' target='_blank'>API documentation</Link>
                             </span>.
                         </div>
                         <div>

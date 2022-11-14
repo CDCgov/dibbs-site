@@ -30,45 +30,6 @@ export default function FooterUSWDS() {
     }
 
     return (
-        // <footer className='usa-footer--slim'>
-        //     {returnToTop && returnToTop}
-        //     <div className="usa-footer__primary-section">
-        //         <div className=" usa-footer__primary-container grid-row">
-        //             <nav className={navClasses} {...elementAttributes}>
-        //                 {isBig && isExtendedNavLinks(links) && (
-        //                     <FooterExtendedNavList isMobile={isMobile} nestedLinks={links} />
-        //                 )}
-
-        //                 {!isExtendedNavLinks(links) && (
-        //                     <ul className="grid-row grid-gap">
-        //                         {links.map((link, i) => (
-        //                             <li key={`navLink-${i}`} className={listItemClasses}>
-        //                                 {link}
-        //                             </li>
-        //                         ))}
-        //                     </ul>
-        //                 )}
-        //             </nav>
-
-        //         </div>
-        //     </div>
-
-        //     <div className="usa-footer__secondary-section">
-        //         <div className="grid-container">
-        //             <Logo
-        //                 size="slim"
-        //                 image={
-        //                     <Image
-        //                         className="usa-footer__logo-img text-base-lightest"
-        //                         alt='CDC Logo'
-        //                         src={cdcLogo}
-        //                     />
-        //                 }
-        //                 heading={<p className="text-base-lightest usa-footer__logo-heading">Center for Disease Control</p>}
-        //             />
-        //         </div>
-        //     </div>
-        // </footer>
         <div className='desktop:padding-x-5 bg-primary-darker'>
             <Footer
                 size="slim"
@@ -89,9 +50,8 @@ export default function FooterUSWDS() {
                     </div>
                 }
                 secondary={
-
                     <div className='usa-footer__logo padding-left-3 desktop:padding-x-05' data-testid="footerLogo">
-                        <div className="desktop:display-none text-center padding-left-8 margin-bottom-1 margin-top-2">
+                        <div className="desktop:display-none text-center padding-left-8 margin-bottom-205 margin-top-2">
                             <div className={styles.footerBar}></div>
                         </div>
                         <div className='grid-row'>
@@ -110,17 +70,6 @@ export default function FooterUSWDS() {
                             </span>
                         </div>
                     </div>
-                    // <Logo
-                    //     size="slim"
-                    //     image={
-                    //         <Image
-                    //             className="usa-footer__logo-img text-base-lightest"
-                    //             alt='CDC Logo'
-                    //             src={cdcLogo}
-                    //         />
-                    //     }
-                    //     heading={<p className="text-base-lightest usa-footer__logo-heading">Center for Disease Control</p>}
-                    // />
                 }
             />
         </div>

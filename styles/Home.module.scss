@@ -33,7 +33,7 @@
 .footerBar {
   width: 100px;
   height: 0px;
-  border: 1px solid #FFFFFF;
+  border: 0.5px solid #FFFFFF;
 }
 
 @media(min-width:1024px) {
@@ -69,6 +69,10 @@
     font-size: 14px;
     text-align: right;
   }
+
+  .subBodyTextLineHeight {
+    line-height: 25.92px;
+  }
 }
 
 
@@ -100,6 +104,10 @@
     font-size: 12px;
     text-align: center;
 
+  }
+
+  .subBodyTextLineHeight {
+    line-height: 22.68px;
   }
 }
 

@@ -7,6 +7,7 @@ import locationIcon from '../public/icons/location.svg';
 import linkIcon from '../public/icons/link.svg'
 import codeIcon from '../public/icons/code.svg'
 import organizationIcon from '../public/icons/organization.svg'
+import Link from 'next/link';
 
 
 
@@ -32,7 +33,7 @@ export default function BuildingBlockInfo() {
                                 <p className='text-italic'>
                                     To qualify as a Building Block, a software service must meet one or more of the following:
                                 </p>
-                                <ul class="usa-list list-disc desktop:padding-right-4">
+                                <ul className="usa-list list-disc desktop:padding-right-4">
                                     <li> Can fill a gap where no solution currently exists</li>
                                     <li> Can provide more value than current solution(s) where a burden presents</li>
                                     <li> Reusable across multiple data streams and steps in the public health data journey</li>
@@ -132,9 +133,11 @@ export default function BuildingBlockInfo() {
                                         Ready to get started?
                                     </h2>
                                     <p className='text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-0'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
-                                    <Button outline className={`${styles.buttonAccent} desktop:padding-x-4`}>
-                                        View our product offerings
-                                    </Button>
+                                    <Link href='/product-offerings'>
+                                        <Button outline className={`${styles.buttonAccent} desktop:padding-x-4`}>
+                                            View our product offerings
+                                        </Button>
+                                    </Link>
                                 </span>
                             </div>
                         </div>
