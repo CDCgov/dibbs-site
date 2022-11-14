@@ -136,7 +136,7 @@ export default function Home() {
             </p>
             <div className='text-center margin-top-3 width-card-lg margin-x-auto'>
               <Link href='/partner-with-us'>
-                <Button outline className={`${styles.buttonAccent} desktop:padding-x-4`}>Get Involved</Button>
+                <Button outline className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}>Get Involved</Button>
               </Link>
             </div>
           </div>

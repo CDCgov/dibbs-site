@@ -193,7 +193,7 @@ h2 {
 @font-face {
   font-family: 'Public Sans';
   font-weight: 700;
-  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Bold.ttf) format('truetype');
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-SemiBold.ttf) format('truetype');
 }
 
 @font-face {

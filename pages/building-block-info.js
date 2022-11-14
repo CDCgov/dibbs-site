@@ -134,7 +134,7 @@ export default function BuildingBlockInfo() {
                                     </h2>
                                     <p className='text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-0'>You can now test out Building Blocks in your jurisdiction&apos;s data environment</p>
                                     <Link href='/product-offerings'>
-                                        <Button outline className={`${styles.buttonAccent} desktop:padding-x-4`}>
+                                        <Button outline className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}>
                                             View our product offerings
                                         </Button>
                                     </Link>

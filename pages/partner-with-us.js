@@ -38,8 +38,8 @@ export default function GetInvolved() {
                                 <br /> <br />
                                 We invite you to visit our SDK toolkit where you can explore the full range of modular Building Blocks. If interested in getting involved in our beta program, please reach out to our team.
                             </div>
-                            <div className="text-center margin-top-2 desktop:margin-top-7">
-                                <Button className='desktop:padding-x-7'>Learn More</Button>
+                            <div className="text-center margin-top-2 desktop:margin-top-7 padding-x-5 desktop:padding-x-0">
+                                <Button className='desktop:padding-x-7 padding-y-2'>Learn More</Button>
                             </div>
                         </div>
                     </div>
@@ -56,8 +56,8 @@ export default function GetInvolved() {
                                 We are conducting a series of focus groups to hear back from public health agency staff who interact with data related to childhood lead poisoning, Legionnaires’ disease, listeria, and HIV surveillance at any point along the data lifecycle (e.g., collection, ingestion, management, analysis, visualization).
                                 <br /> <br />
                                 The purpose of these focus groups is to gather STLT input on how we prioritize and design potential Building Blocks. Each focus group will last for approximately 60 minutes.</div>
-                            <div className="text-center margin-top-2 desktop:margin-top-4">
-                                <Button className='desktop:padding-x-7'>Learn More</Button>
+                            <div className="text-center margin-top-2 desktop:margin-top-4 padding-x-5 desktop:padding-x-0">
+                                <Button className='desktop:padding-x-7 padding-y-2'>Learn More</Button>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,9 @@ export default function GetInvolved() {
                         <div className={`margin-bottom-2 text-base-darkest lg:text-base font-public-sans-xs desktop:padding-right-8 ${styles.subBodyTextLineHeight}`}>
                             A CoP partner is a STLT who, in the immediate future, is interested in offering feedback about the design principles and application interface(s) for Building Blocks and, in the near future, is interested in participating to the Building Block ecosystem by contributing code, helping govern the open source community, or offering other services as needed.
                         </div>
-                        <Button className='desktop:padding-x-7'>Contact Us</Button>
+                        <div className='padding-x-4'>
+                            <Button className='desktop:padding-x-7 padding-y-2'>Contact Us</Button>
+                        </div>
 
                     </div>
                 </div>
