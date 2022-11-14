@@ -13,6 +13,10 @@ body {
   line-height: 26px;
 }
 
+.line-height-md {
+  line-height: 26px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -142,10 +146,30 @@ h2 {
   background-color: transparent !important;
 }
 
+.font-weight-sm {
+  font-weight: 300;
+}
+
+.font-weight-md {
+  font-weight: 400;
+}
+
+.usa-footer__logo-heading {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 26px !important;
+}
+
 
 @font-face {
   font-family: 'Public Sans';
   src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 300;
+  src: local('Public Sans'), url(../public/fonts/PublicSans/PublicSans-ExtraLight.ttf) format('truetype');
 }
 
 @font-face {

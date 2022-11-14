@@ -1,6 +1,8 @@
 import { Address, FooterNav, Logo, Footer } from "@trussworks/react-uswds";
 import Image from "next/image";
 import cdcLogo from '../../public/icons/cdc.svg'
+import styles from '../../styles/Home.module.scss';
+
 
 
 
@@ -11,16 +13,16 @@ export default function FooterUSWDS() {
 
     const createLinks = () => {
         return ([
-            <a key='home' className="padding-x-05 usa-footer__primary-link text-base-lightest" href="/">
+            <a key='home' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site">
                 Home
             </a>,
-            <a key='building-block' className="padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/building-block-info">
+            <a key='building-block' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/building-block-info">
                 What is a building block?
             </a>,
-            <a key='product-offerings' className="padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/product-offerings">
+            <a key='product-offerings' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/product-offerings">
                 Our product offerings
             </a>,
-            <a key='partner' className="padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/partner-with-us">
+            <a key='partner' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/partner-with-us">
                 Partner with us
             </a>,
 
@@ -71,6 +73,7 @@ export default function FooterUSWDS() {
             <Footer
                 size="slim"
                 returnToTop={returnToTop}
+                className='padding-x-05'
                 primary={
                     <div className=" usa-footer__primary-container grid-row">
                         <div className="mobile-lg:grid-col-12">
@@ -86,17 +89,26 @@ export default function FooterUSWDS() {
                     </div>
                 }
                 secondary={
-                    <div className='usa-footer__logo grid-row grid-gap-2' data-testid="footerLogo">
 
-                        <div className="desktop:grid-col-6">
-                            <Image
-                                className="usa-footer__logo-img text-base-lightest"
-                                alt='CDC Logo'
-                                src={cdcLogo}
-                            />
-                            <span className="text-base-lightest usa-footer__logo-heading">Center for Disease Control</span>
+                    <div className='usa-footer__logo padding-left-3 desktop:padding-x-05' data-testid="footerLogo">
+                        <div className="desktop:display-none text-center padding-left-8 margin-bottom-1 margin-top-2">
+                            <div className={styles.footerBar}></div>
                         </div>
-                        <span className="desktop:grid-col-6 text-right">© 2022 CDC. All rights reserved.</span>
+                        <div className='grid-row'>
+                            <div className="desktop:grid-col-6 grid-row grid-gap-2">
+                                <Image
+                                    className="usa-footer__logo-img text-base-lightest desktop:grid-col-auto grid-col-auto"
+                                    alt='CDC Logo'
+                                    src={cdcLogo}
+                                />
+                                <div className="margin-top-05 text-base-lightest desktop:grid-col-auto grid-col-9 font-public-sans-md font-weight-md line-height-md">
+                                    Centers for Disease Control and Prevention
+                                </div>
+                            </div>
+                            <span className={`desktop:grid-col-6 margin-y-3 desktop:margin-y-0 padding-right-5 desktop:padding-right-0 font-public-sans-xs text-base-lightest font-weight-sm ${styles.copyrightText}`}>
+                                © 2022 CDC. All rights reserved.
+                            </span>
+                        </div>
                     </div>
                     // <Logo
                     //     size="slim"

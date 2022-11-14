@@ -30,6 +30,12 @@
   letter-spacing: -0.2px;
 }
 
+.footerBar {
+  width: 100px;
+  height: 0px;
+  border: 1px solid #FFFFFF;
+}
+
 @media(min-width:1024px) {
   .desktopHeroImage3 {
     margin-top: -333px;
@@ -58,6 +64,11 @@
   .dynamicHeader {
     font-size: 40px;
   }
+
+  .copyrightText {
+    font-size: 14px;
+    text-align: right;
+  }
 }
 
 
@@ -83,6 +94,12 @@
 
   .dynamicHeader {
     font-size: 32px;
+  }
+
+  .copyrightText {
+    font-size: 12px;
+    text-align: center;
+
   }
 }
 
