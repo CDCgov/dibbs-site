@@ -13,9 +13,17 @@ body {
   line-height: 26px;
 }
 
+.line-height-md {
+  line-height: 26px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+li::marker {
+  font-size: 0.7em;
 }
 
 * {
@@ -49,6 +57,20 @@ a {
   font-size: 16px !important;
 }
 
+.usa-nav__link:hover::after {
+  background-color: white !important;
+  height: 0.12rem !important;
+  bottom: 0.3rem !important;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
 @media (max-width: 63.99em) {
   .usa-logo__text {
     font-weight: 400 !important;
@@ -66,6 +88,10 @@ a {
 
   .header-line-height {
     line-height: 47px;
+  }
+
+  .footer-margin {
+    margin-right: 120px;
   }
 }
 
@@ -119,10 +145,31 @@ a {
   background-color: transparent !important;
 }
 
+.font-weight-sm {
+  font-weight: 300;
+}
+
+.font-weight-md {
+  font-weight: 400;
+}
+
+.usa-footer__logo-heading {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 26px !important;
+}
+
 @font-face {
   font-family: 'Public Sans';
   src: local('Public Sans'),
     url(../public/fonts/PublicSans/PublicSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-weight: 300;
+  src: local('Public Sans'),
+    url(../public/fonts/PublicSans/PublicSans-ExtraLight.ttf) format('truetype');
 }
 
 @font-face {
@@ -150,7 +197,7 @@ a {
   font-family: 'Public Sans';
   font-weight: 700;
   src: local('Public Sans'),
-    url(../public/fonts/PublicSans/PublicSans-Bold.ttf) format('truetype');
+    url(../public/fonts/PublicSans/PublicSans-SemiBold.ttf) format('truetype');
 }
 
 @font-face {
@@ -179,7 +226,7 @@ a {
 
 .font-public-sans-xs {
   font-family: 'Public Sans', sans-serif;
-  font-size: 14.3px;
+  font-size: 14px;
 }
 
 .font-public-sans-sm {
@@ -189,7 +236,7 @@ a {
 
 .font-public-sans-md {
   font-family: 'Public Sans', sans-serif;
-  font-size: 16.2px;
+  font-size: 16px;
 }
 
 .font-public-sans-lg {

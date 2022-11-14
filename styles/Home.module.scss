@@ -11,7 +11,7 @@
 }
 
 .buidlingBlockInfoImage {
-  margin-bottom: -0px;
+  margin-bottom: 0px;
 }
 
 .productOfferingsImage {
@@ -22,10 +22,28 @@
   background-image: url('../public/desktop-hero-3.svg');
 }
 
+.sdkInfoMaxWidth {
+  max-width: 840px;
+}
+
+.letterSpacingNeg1 {
+  letter-spacing: -0.2px;
+}
+
+.footerBar {
+  width: 100px;
+  height: 0px;
+  border: 0.5px solid #FFFFFF;
+}
+
+.getStartedHeader {
+  line-height: 38px;
+}
+
 @media(min-width:1024px) {
   .desktopHeroImage3 {
-    margin-top: -333px;
-    margin-bottom: 20px;
+    margin-top: -321px;
+    margin-bottom: 0px;
   }
 
   .backgroundInvitation {
@@ -41,7 +59,7 @@
   }
 
   .partnerItemHeaders {
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
@@ -49,6 +67,23 @@
 
   .dynamicHeader {
     font-size: 40px;
+  }
+
+  .copyrightText {
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .subBodyTextLineHeight {
+    line-height: 25.92px;
+  }
+
+  .homeNavItem {
+    display: none !important;
+  }
+
+  .dynamicShadow {
+    box-shadow: 0 1px .25rem 0 rgba(0, 0, 0, .1);
   }
 }
 
@@ -67,14 +102,32 @@
   }
 
   .partnerItemHeaders {
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-weight: 400;
     font-size: 22px;
-    line-height: 38px;
+    line-height: 26px;
   }
 
   .dynamicHeader {
     font-size: 32px;
+  }
+
+  .copyrightText {
+    font-size: 12px;
+    text-align: center;
+
+  }
+
+  .subBodyTextLineHeight {
+    line-height: 22.68px;
+  }
+
+  .homeNavItem {
+    display: inline;
+  }
+
+  .dynamicShadow {
+    box-shadow: none;
   }
 }
 

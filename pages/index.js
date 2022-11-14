@@ -4,7 +4,6 @@ import '@trussworks/react-uswds/lib/index.css';
 import { Button } from '@trussworks/react-uswds';
 import Link from 'next/link';
 import Image from 'next/image';
-import Head from 'next/head';
 import desktopHero1 from './../public/desktop-hero-1.svg';
 import desktopHero2 from '../public/desktop-hero-2.svg';
 import desktopHero3 from '../public/desktop-hero-3.svg';
@@ -14,8 +13,8 @@ import mobileDesktopHero3 from '../public/mobile/mobile-hero-3.svg';
 import mobileVirginia from '../public/mobile/virginia.svg';
 import mobileLac from '../public/mobile/lac.svg';
 
-import vdhImage from '../public/vdh.png';
-import lacountyImage from '../public/lacounty.png';
+import vdhImage from '../public/vdh.svg';
+import lacountyImage from '../public/lacounty.svg';
 
 export default function Home() {
   return (
@@ -32,18 +31,20 @@ export default function Home() {
         <div className="grid-row desktop:margin-top-8 desktop:margin-top-3">
           <div className="desktop:grid-col-5 desktop:margin-bottom-8 grid-col-12">
             <h1
-              className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold`}
+              className={`${styles.homeHeaderText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg padding-x-1 desktop:padding-x-0`}
             >
               Reponse-ready public health data systems
             </h1>
-            <p className="font-public-sans-xs line-height-sans-6 font-semibold">
+            <p
+              className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0`}
+            >
               Public health data is often messy, heterogeneous, and siloed, and
               epidemiologists lack the tools and methods to efficiently turn it
               into meaningful intelligence that can drive timely public health
               action.
             </p>
             <br />
-            <p className="font-public-sans-xs line-height-sans-6">
+            <p className="font-public-sans line-height-sans-6 padding-right-05 desktop:padding-right-0">
               The Public Health Data Infrastructure (PHDI) project is part of
               the Pandemic-Ready Interoperability Modernization Effort (PRIME),
               a multi-year collaboration between CDC and the U.S. Digital
@@ -74,9 +75,9 @@ export default function Home() {
             <div className="desktop:grid-col-6 desktop:margin-y-7">
               <div className="desktop:margin-left-4">
                 <h1
-                  className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold`}
+                  className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold desktop:padding-right-7`}
                 >
-                  Introduction to Building Blocks and data modernization
+                  An introduction to Building Blocks and data modernization
                 </h1>
                 <div className="text-base-darkest line-height-sans-6">
                   PHDI&apos;s current body of work also falls within the scope
@@ -91,19 +92,24 @@ export default function Home() {
                   public health landscape.
                   <br />
                   <br />
-                  PHDI&apos;s work focuses on building and providing access to
-                  open source, modular software and tooling, known as “Building
-                  Blocks,” that states, territories, localities, tribes (STLTs),
-                  and other public health actors can integrate into their
-                  current workflows to reduce manual processes and solve
-                  challenges when working with public health data. Some Building
-                  Blocks offer relatively simple functionality, like
-                  standardizing patient names, while others perform more complex
-                  tasks, including geocoding and standardizing addresses.
+                  <span className="desktop:padding-right-5">
+                    PHDI&apos;s work focuses on building and providing access to
+                    open source, modular software and tooling, known as
+                    “Building Blocks,” that states, territories, localities,
+                    tribes (STLTs), and other public health actors can integrate
+                    into their current workflows to reduce manual processes and
+                    solve challenges when working with public health data. Some
+                    Building Blocks offer relatively simple functionality, like
+                    standardizing patient names, while others perform more
+                    complex tasks, including geocoding and standardizing
+                    addresses.
+                  </span>
                   <br />
                   <br />
                   <div className="font-semibold text-underline text-primary">
-                    <Link href="/">More about Building Blocks ›</Link>
+                    <Link href="/building-block-info">
+                      More about Building Blocks ›
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -111,14 +117,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid-container maxw-tablet-lg margin-top-9 desktop:padding-top-5 padding-x-205">
+      <div className="grid-container maxw-tablet-lg margin-top-5 desktop:margin-top-7 desktop:padding-top-5 padding-x-205">
         <h1 className="text-bold text-center text-accent-cool-darker ">
           Our pilot partners
         </h1>
-        <p className="text-center text-base-darkest line-height-sans-6 padding-x-05">
+        <p className="text-center text-base-darkest line-height-sans-6 padding-x-3 desktop:padding-x-9">
           We work with a range of public health departments to develop and
-          iterate on Building Blocks that solve public health data-related
-          challenges within their organizations.
+          iterate on Building Blocks that solve healthcare
+          <br className="display-inline desktop:display-none" />
+          data-related challenges{' '}
+          <br className="display-inline desktop:display-none" />
+          within their organizations.
         </p>
         <div className="grid-row margin-top-6">
           <div className="desktop:grid-col-6">
@@ -156,7 +165,7 @@ export default function Home() {
         <div
           className={`bg-accent-cool-dark ${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5 desktop:padding-top-0 desktop:padding-bottom-5`}
         >
-          <div class="grid-row desktop:display-none">
+          <div className="grid-row desktop:display-none">
             <div className="grid-col-12 text-center">
               <Image alt="" src={mobileDesktopHero3} />
             </div>
@@ -178,16 +187,21 @@ export default function Home() {
             <h1 className="text-center text-bold text-white header-line-height">
               An invitation to participate
             </h1>
-            <p className="line-height-sans-6 text-white text-center padding-x-3 desktop:padding-x-1">
+            <p className="line-height-sans-6 text-white text-center padding-x-4 desktop:padding-x-1">
               We are currently gathering input from public health agencies and
               partners to help us define and prioritize future Building Blocks
               that can help efficiently and effectively collect, use, analyze,
-              and share public health data.{' '}
+              and share public health data.
             </p>
             <div className="text-center margin-top-3 width-card-lg margin-x-auto">
-              <Button outline className={styles.buttonAccent}>
-                Get Involved
-              </Button>
+              <Link href="/partner-with-us">
+                <Button
+                  outline
+                  className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
+                >
+                  Get Involved
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
