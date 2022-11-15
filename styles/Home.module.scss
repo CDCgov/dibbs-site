@@ -1,5 +1,5 @@
 .desktopHeroImage2 {
-  margin-bottom: -80px;
+  margin-bottom: -77px;
 }
 
 .dekstopHeroImage1 {
@@ -40,9 +40,13 @@
   line-height: 38px;
 }
 
+.buildingBlockItemHeader {
+  font-size: 22px;
+}
+
 @media(min-width:1024px) {
   .desktopHeroImage3 {
-    margin-top: -321px;
+    margin-top: -339px;
     margin-bottom: 0px;
   }
 
@@ -91,6 +95,10 @@
 @media(max-width:1024px) {
   .desktopHeroImage3 {
     margin-top: 0px;
+  }
+
+  .backgroundInvitation {
+    background-color: #07648d;
   }
 
   .navbarItemText {

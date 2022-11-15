@@ -76,7 +76,7 @@ export default function Home() {
             <div className="desktop:grid-col-6 desktop:margin-y-7">
               <div className="desktop:margin-left-4">
                 <h2
-                  className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold desktop:padding-right-7`}
+                  className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold desktop:padding-right-7 padding-y-205`}
                 >
                   An introduction to Building Blocks and data modernization
                 </h2>
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </div>
       <div className="grid-container maxw-tablet-lg margin-top-5 desktop:margin-top-7 desktop:padding-top-5 padding-x-205">
-        <h2 className="text-bold text-center text-accent-cool-darker ">
+        <h2 className="text-bold text-center text-accent-cool-darker padding-y-205">
           Our pilot partners
         </h2>
         <p className="text-center text-base-darkest line-height-sans-6 padding-x-3 desktop:padding-x-9">
@@ -164,7 +164,7 @@ export default function Home() {
 
       <div className="">
         <div
-          className={`bg-accent-cool-dark ${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5 desktop:padding-top-0 desktop:padding-bottom-5`}
+          className={`${styles.backgroundInvitation} padding-x-0 grid-container maxw-desktop-lg padding-y-5 desktop:padding-top-0 desktop:padding-bottom-5`}
         >
           <div className="grid-row desktop:display-none">
             <div className="grid-col-12 text-center">
@@ -185,7 +185,7 @@ export default function Home() {
           <div
             className={`position-relative ${styles.desktopHeroImage3} maxw-mobile-lg margin-x-auto`}
           >
-            <h2 className="text-center text-bold text-white header-line-height">
+            <h2 className="text-center text-bold text-white header-line-height padding-y-205">
               An invitation to participate
             </h2>
             <p className="line-height-sans-6 text-white text-center padding-x-4 desktop:padding-x-1">

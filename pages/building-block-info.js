@@ -95,7 +95,7 @@ export default function BuildingBlockInfo() {
                 <div className="margin-bottom-1 text-center lg:text-left">
                   <Image alt="" src={locationIcon} layout="fixed"></Image>
                 </div>
-                <h2 className="text-center lg:text-left margin-bottom-1 text-accent-cool-darker">
+                <h2 className={`text-center lg:text-left margin-bottom-1 text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
                   Location Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
@@ -119,7 +119,7 @@ export default function BuildingBlockInfo() {
                 <div className="margin-bottom-105 text-center lg:text-left">
                   <Image alt="" src={codeIcon} layout="fixed"></Image>
                 </div>
-                <h2 className="margin-bottom-1 text-center lg:text-left text-accent-cool-darker">
+                <h2 className={`margin-bottom-1 text-center lg:text-left text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
                   Data Exchange Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
@@ -143,7 +143,7 @@ export default function BuildingBlockInfo() {
                 <div className="margin-bottom-1 text-center lg:text-left">
                   <Image alt="" src={organizationIcon} layout="fixed"></Image>
                 </div>
-                <h2 className="margin-bottom-1 text-center lg:text-left text-accent-cool-darker">
+                <h2 className={`margin-bottom-1 text-center lg:text-left text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
                   Data Harmonization Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
@@ -170,7 +170,7 @@ export default function BuildingBlockInfo() {
                 <div className="margin-bottom-105 text-center lg:text-left">
                   <Image alt="" src={linkIcon} layout="fixed"></Image>
                 </div>
-                <h2 className="margin-bottom-1 text-center lg:text-left text-accent-cool-darker">
+                <h2 className={`margin-bottom-1 text-center lg:text-left text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
                   Data Linkage Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
@@ -188,7 +188,7 @@ export default function BuildingBlockInfo() {
             </div>
             <div className="desktop:grid-col-4">
               <div
-                className={`bg-accent-cool-dark desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row`}
+                className={`bg-accent-cool-darker desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row`}
               >
                 <span>
                   <h2
