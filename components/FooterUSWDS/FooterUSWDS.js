@@ -14,23 +14,23 @@ export default function FooterUSWDS() {
 
     const createLinks = () => {
         return ([
-            <Link href='/'>
-                <a key='home' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link href='/' key='home'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     Home
                 </a>
             </Link>,
-            <Link href='/building-block-info'>
-                <a key='building-block' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link href='/building-block-info' key='building-block'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     What is a building block?
                 </a>
             </Link>,
-            <Link href='/product-offerings'>
-                <a key='product-offerings' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link href='/product-offerings' key='product-offerings'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     Our product offerings
                 </a>
             </Link>,
-            <Link href='/partner-with-us'>
-                <a key='partner' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link href='/partner-with-us' key='partner'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     Partner with us
                 </a>
             </Link>,
