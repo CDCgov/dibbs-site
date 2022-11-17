@@ -132,7 +132,8 @@ export default function GetInvolved() {
                 community, or offering other services as needed.
               </div>
               <div className="padding-x-4 desktop:padding-x-0">
-                <Button className="desktop:padding-x-7 padding-y-2">
+                <Button className="desktop:padding-x-7 padding-y-2" onClick={() => window.location = 'mailto:dmibuildingblocks@cdc.gov'}>
+
                   Contact Us
                 </Button>
               </div>
