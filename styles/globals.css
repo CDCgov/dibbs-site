@@ -13,8 +13,43 @@ body {
   line-height: 26px;
 }
 
+.link:hover,
+.usa-link:hover {
+  color: #162E51
+}
+
+.navbar-item {
+  line-height: .9;
+  padding: 1rem;
+  color: #565c65;
+  display: block;
+  font-weight: 700;
+}
+
+/* iframe:focus,
+[href]:focus,
+[tabindex]:focus,
+[contentEditable="true"]:focus {
+  outline: none !important;
+  outline-offset: 0;
+} */
+
+.navbar-item:hover {
+  cursor: pointer;
+}
+
 .line-height-md {
   line-height: 26px;
+}
+
+.navbar-item-active,
+.navbar-item-active:hover {
+  border-bottom: 2px solid white !important;
+  padding-bottom: 8px;
+}
+
+.usa-nav__link:hover::after {
+  display: none !important;
 }
 
 a {

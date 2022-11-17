@@ -32,7 +32,7 @@ export default function Home() {
         <div className="grid-row desktop:margin-top-8 desktop:margin-top-3">
           <div className="desktop:grid-col-5 desktop:margin-bottom-8 grid-col-12">
             <h1
-              className={`${styles.homeHeaderText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg padding-x-1 desktop:padding-x-0`}
+              className={`${styles.headerText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg padding-x-1 desktop:padding-x-0`}
             >
               Reponse-ready public health data systems
             </h1>
@@ -76,15 +76,18 @@ export default function Home() {
             <div className="desktop:grid-col-6 desktop:margin-y-7">
               <div className="desktop:margin-left-4">
                 <h2
-                  className={`${styles.homeHeaderText} header-line-height text-accent-cool-darker font-bold desktop:padding-right-7 padding-y-205`}
+                  className={`${styles.headerText} header-line-height text-accent-cool-darker font-bold desktop:padding-right-7 padding-y-205`}
                 >
                   An introduction to Building Blocks and data modernization
                 </h2>
                 <div className="text-base-darkest line-height-sans-6">
                   PHDI&apos;s current body of work also falls within the scope
                   of CDC&apos;s&nbsp;
-                  <span className="font-semibold text-underline text-primary">
-                    <Link className="underline text-primary" href="/">
+                  <span className="font-semibold text-underline text-primary link">
+                    <Link
+                      className="underline text-primary"
+                      href="https://www.cdc.gov/surveillance/projects/dmi-initiative/index.html"
+                      target='_blank'>
                       Data Modernization Initiative (DMI)
                     </Link>
                   </span>
@@ -107,7 +110,7 @@ export default function Home() {
                   </span>
                   <br />
                   <br />
-                  <div className="font-semibold text-underline text-primary">
+                  <div className="font-semibold text-underline text-primary link">
                     <Link href="/building-block-info">
                       More about Building Blocks ›
                     </Link>
@@ -132,31 +135,25 @@ export default function Home() {
         </p>
         <div className="grid-row margin-top-6">
           <div className="desktop:grid-col-6">
-            <div className="padding-bottom-3 desktop:padding-x-3 text-center">
+            <div className="padding-bottom-3 desktop:padding-bottom-0 desktop:padding-x-3 text-center">
               <div className="display-none desktop:display-block desktop:margin-top-1">
                 <Image alt="" src={vdhImage} layout="fixed" />
               </div>
               <div className="desktop:display-none">
                 <Image alt="" src={mobileVirginia} layout="fixed" />
               </div>
-              <p className="text-base-darkest line-height-sans-6 margin-top-3 desktop:margin-top-5 padding-x-3">
-                Lorem ipsum dolor set imet lorem ipsum dolor set imet lorem
-                ipsum dolor set.
-              </p>
+
             </div>
           </div>
           <div className="desktop:grid-col-6">
-            <div className="margin-bottom-4 margin-top-3 desktop:margin-top-0 desktop:padding-x-3 text-center">
+            <div className="margin-bottom-5 desktop:margin-bottom-0 margin-top-3 desktop:margin-top-0 desktop:padding-x-3 text-center">
               <div className="display-none desktop:display-block">
                 <Image alt="" src={lacountyImage} layout="fixed" />
               </div>
               <div className="desktop:display-none">
                 <Image alt="" src={mobileLac} layout="fixed" />
               </div>
-              <p className="text-base-darkest line-height-sans-6 margin-top-205 desktop:margin-top-2 padding-x-3">
-                Lorem ipsum dolor set imet lorem ipsum dolor set imet lorem
-                ipsum dolor set.
-              </p>
+
             </div>
           </div>
         </div>

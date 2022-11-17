@@ -36,7 +36,7 @@ export default function ProductOffering() {
           </div>
           <div className="desktop:grid-col-6 margin-top-2 desktop:margin-top-0">
             <div className="desktop:margin-left-8 desktop:padding-top-8">
-              <h1 className="header-line-height text-center text-accent-cool-darker font-bold text-3xl lg:text-4xl margin-bottom-2 lg:text-left">
+              <h1 className={`header-line-height ${styles.headerText} text-accent-cool-darker font-bold text-3xl lg:text-4xl margin-bottom-2`}>
                 Our product offerings
               </h1>
               <p className="text-base-darkest font-semibold">
@@ -60,7 +60,7 @@ export default function ProductOffering() {
           className={`grid-container desktop:radius-md padding-x-205 desktop:padding-x-5 bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-105 margin-bottom-3 desktop:margin-bottom-5 ${styles.dynamicShadow}`}
         >
           <h2
-            className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}
+            className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.headerText} text-accent-cool-darker`}
           >
             Pipeline as a Product
           </h2>
@@ -125,7 +125,7 @@ export default function ProductOffering() {
           className={`grid-container desktop:radius-md bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 ${styles.dynamicShadow}`}
         >
           <h2
-            className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.homeHeaderText} text-accent-cool-darker`}
+            className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.headerText} text-accent-cool-darker`}
           >
             SDK
           </h2>
@@ -166,7 +166,8 @@ export default function ProductOffering() {
                     </div>
                     <Link
                       className="font-semibold desktop:margin-top-1"
-                      href="/"
+                      href="https://github.com/CDCgov/phdi/tree/main/phdi/geospatial"
+                      target='_blank'
                     >
                       Location Services
                     </Link>
@@ -179,7 +180,8 @@ export default function ProductOffering() {
                     </div>
                     <Link
                       className="font-semibold desktop:margin-top-1"
-                      href="/"
+                      href="https://github.com/CDCgov/phdi/tree/main/phdi/harmonization"
+                      target='_blank'
                     >
                       Data Harmonization Services
                     </Link>
@@ -193,7 +195,10 @@ export default function ProductOffering() {
                       <Image alt="" src={transportIcon} />
                     </div>
                     {/* add margin */}
-                    <Link className="font-semibold" href="/">
+                    <Link
+                      className="font-semibold"
+                      href="https://github.com/CDCgov/phdi/tree/main/phdi/transport"
+                      target='_blank'>
                       Transport Services{' '}
                     </Link>
                   </div>
@@ -203,7 +208,10 @@ export default function ProductOffering() {
                     <div className="display-none desktop:display-inline-block margin-right-2">
                       <Image alt="" src={linkIcon} />
                     </div>
-                    <Link className="font-semibold" href="/">
+                    <Link
+                      className="font-semibold"
+                      href="https://github.com/CDCgov/phdi/tree/main/phdi/linkage"
+                      target='_blank'>
                       Data Linkage Services{' '}
                     </Link>
                   </div>

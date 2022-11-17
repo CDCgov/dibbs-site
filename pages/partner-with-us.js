@@ -117,7 +117,7 @@ export default function GetInvolved() {
             </div>
             <div className="desktop:grid-col-7 desktop:padding-left-7">
               <h2
-                className={`text-accent-cool-darker margin-bottom-105 ${styles.partnerItemHeaders} ${styles.homeHeaderText}`}
+                className={`text-accent-cool-darker margin-bottom-105 ${styles.partnerItemHeaders} ${styles.headerText}`}
               >
                 You can also help support the Community of Practice
               </h2>
@@ -131,7 +131,7 @@ export default function GetInvolved() {
                 ecosystem by contributing code, helping govern the open source
                 community, or offering other services as needed.
               </div>
-              <div className="padding-x-4">
+              <div className="padding-x-4 desktop:padding-x-0">
                 <Button className="desktop:padding-x-7 padding-y-2">
                   Contact Us
                 </Button>

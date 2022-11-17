@@ -29,7 +29,7 @@ export default function BuildingBlockInfo() {
           <div className="desktop:grid-col-7">
             <div className="desktop:margin-left-7 desktop:margin-top-9 desktop:margin-bottom-7">
               <h1
-                className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 text-center lg:text-left ${styles.dynamicHeader}`}
+                className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 ${styles.headerText} ${styles.dynamicHeader}`}
               >
                 Building Blocks
               </h1>
@@ -92,14 +92,14 @@ export default function BuildingBlockInfo() {
               <div
                 className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
               >
-                <div className="margin-bottom-1 text-center lg:text-left">
+                <div className={`margin-bottom-1 ${styles.buildingBlockItemHeader}`}>
                   <Image alt="" src={locationIcon} layout="fixed"></Image>
                 </div>
-                <h2 className={`text-center lg:text-left margin-bottom-1 text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
+                <h2 className={`${styles.buildingBlockItemHeader} margin-bottom-1 text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Location Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
-                  <p className="text-center lg:text-left font-semibold font-public-sans-3xs">
+                  <p className="${styles.buildingBlockItemHeader} font-semibold font-public-sans-3xs">
                     (address validation, standardization, and data enrichment)
                   </p>
                   <br />
@@ -116,14 +116,14 @@ export default function BuildingBlockInfo() {
               <div
                 className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
               >
-                <div className="margin-bottom-105 text-center lg:text-left">
+                <div className={`margin-bottom-105 ${styles.buildingBlockItemHeader}`}>
                   <Image alt="" src={codeIcon} layout="fixed"></Image>
                 </div>
-                <h2 className={`margin-bottom-1 text-center lg:text-left text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
+                <h2 className={`margin-bottom-1 ${styles.buildingBlockItemHeader} text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Data Exchange Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
-                  <p className="text-center lg:text-left font-semibold font-public-sans-3xs">
+                  <p className="${styles.buildingBlockItemHeader} font-semibold font-public-sans-3xs">
                     (for reporting to CDC)
                   </p>
                   <br />
@@ -140,14 +140,14 @@ export default function BuildingBlockInfo() {
               <div
                 className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
               >
-                <div className="margin-bottom-1 text-center lg:text-left">
+                <div className={`margin-bottom-1 ${styles.buildingBlockItemHeader}`}>
                   <Image alt="" src={organizationIcon} layout="fixed"></Image>
                 </div>
-                <h2 className={`margin-bottom-1 text-center lg:text-left text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
+                <h2 className={`margin-bottom-1 ${styles.buildingBlockItemHeader} text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Data Harmonization Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
-                  <p className="text-center lg:text-left font-semibold font-public-sans-3xs">
+                  <p className="${styles.buildingBlockItemHeader} font-semibold font-public-sans-3xs">
                     (for data structures and semantics)
                   </p>
                   <br />
@@ -167,14 +167,14 @@ export default function BuildingBlockInfo() {
               <div
                 className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
               >
-                <div className="margin-bottom-105 text-center lg:text-left">
+                <div className={`margin-bottom-105 ${styles.buildingBlockItemHeader}`}>
                   <Image alt="" src={linkIcon} layout="fixed"></Image>
                 </div>
-                <h2 className={`margin-bottom-1 text-center lg:text-left text-accent-cool-darker ${styles.buildingBlockItemHeader}`}>
+                <h2 className={`margin-bottom-1 ${styles.buildingBlockItemHeader} text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Data Linkage Services
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
-                  <p className="text-center lg:text-left font-semibold font-public-sans-3xs">
+                  <p className="${styles.buildingBlockItemHeader} font-semibold font-public-sans-3xs">
                     (for deduplicating data)
                   </p>
                   <br />

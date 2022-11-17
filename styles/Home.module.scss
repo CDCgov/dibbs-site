@@ -40,7 +40,7 @@
   line-height: 38px;
 }
 
-.buildingBlockItemHeader {
+.buildingBlockItemHeaderText {
   font-size: 22px;
 }
 
@@ -58,7 +58,13 @@
     color: #f0f0f0
   }
 
-  .homeHeaderText {
+  .navbarItemText:hover {
+    border-bottom: 2px solid white !important;
+    padding-bottom: 8px;
+  }
+
+  .headerText,
+  .buildingBlockItemHeader {
     text-align: left;
   }
 
@@ -89,6 +95,10 @@
   .dynamicShadow {
     box-shadow: 0 1px .25rem 0 rgba(0, 0, 0, .1);
   }
+
+  .navbarLogoText {
+    font-size: 22px;
+  }
 }
 
 
@@ -105,7 +115,8 @@
     color: #565c65;
   }
 
-  .homeHeaderText {
+  .headerText,
+  .buildingBlockItemHeader {
     text-align: center;
   }
 
@@ -136,6 +147,10 @@
 
   .dynamicShadow {
     box-shadow: none;
+  }
+
+  .navbarLogoText {
+    font-size: 13px;
   }
 }
 
