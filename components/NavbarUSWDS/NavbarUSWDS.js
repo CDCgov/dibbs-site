@@ -10,29 +10,14 @@ export default function Navbar({ }) {
     const onClick = () => { if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded) }
 
     const testItemsMenu = [
-        <NavigationLink href='/building-block-info' text='What is a Building Block' router={router} />,
-        <NavigationLink href='/product-offerings' text='Our product offerings' router={router} />,
-        <NavigationLink href='/partner-with-us' text='Partner with us' router={router} />,
-        // <Link href='/' key="one" >
-        //     <a className={`usa-nav__link ${styles.homeNavItem}`} onClick={onClick}>
-        //         <span className={styles.navbarItemText}>Home</span>
-        //     </a>
-        // </Link>,
-        // <Link href='/building-block-info'>
-        //     <a key="two" className="usa-nav__link" onClick={onClick}>
-        //         <span className={styles.navbarItemText}>What is a Building Block?</span>
-        //     </a>
-        // </Link>,
-        // <Link href='/product-offerings' key="three">
-        //     <a className="usa-nav__link" onClick={onClick}>
-        //         <span className={styles.navbarItemText}>Our product offerings</span>
-        //     </a>
-        // </Link>,
-        // <Link href='/partner-with-us' key="four">
-        //     <a className="usa-nav__link" onClick={onClick}>
-        //         <span className={styles.navbarItemText}>Partner with us</span>
-        //     </a>
-        // </Link>,
+        <Link href='/' key="one" >
+            <a className={`usa-nav__link ${styles.homeNavItem}`} onClick={onClick}>
+                <span className={styles.navbarItemText}>Home</span>
+            </a>
+        </Link>,
+        <NavigationLink href='/building-block-info' text='What is a Building Block' router={router} onClick={onClick} />,
+        <NavigationLink href='/product-offerings' text='Our product offerings' router={router} onClick={onClick} />,
+        <NavigationLink href='/partner-with-us' text='Partner with us' router={router} onClick={onClick} />,
     ]
 
     return (
@@ -55,6 +40,7 @@ export default function Navbar({ }) {
                     <PrimaryNav
                         items={testItemsMenu}
                         mobileExpanded={expanded}
+                        onToggleMobileNav={onClick}
                     >
                     </PrimaryNav>
                 </div>
@@ -63,14 +49,14 @@ export default function Navbar({ }) {
     );
 }
 
-function NavigationLink({ href, text, router }) {
+function NavigationLink({ href, text, router, onClick }) {
     const isActive = router.asPath === (href);
-    console.log(router.asPath)
     return (
         <Link href={href} passHref>
             <a
                 href={href}
                 className={`usa-nav__link`}
+                onClick={onClick}
             >
                 <span className={(isActive && "navbar-item-active") + ' ' + styles.navbarItemText}>{text}</span>
             </a>

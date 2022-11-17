@@ -42,12 +42,6 @@ body {
   line-height: 26px;
 }
 
-.navbar-item-active,
-.navbar-item-active:hover {
-  border-bottom: 2px solid white !important;
-  padding-bottom: 8px;
-}
-
 .usa-nav__link:hover::after {
   display: none !important;
 }
@@ -127,6 +121,12 @@ h2 {
 
   .footer-margin {
     margin-right: 120px;
+  }
+
+  .navbar-item-active,
+  .navbar-item-active:hover {
+    border-bottom: 2px solid white !important;
+    padding-bottom: 8px;
   }
 }
 
