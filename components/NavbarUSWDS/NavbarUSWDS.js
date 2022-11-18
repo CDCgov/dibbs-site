@@ -28,7 +28,7 @@ export default function Navbar({ }) {
                     <div className="w-full usa-navbar">
                         <Title className='text-base-lightest'>
                             <Link href='/'>
-                                <a>
+                                <a className="desktop:padding-1">
                                     <span className={styles.navbarLogoText} href='/phdi-site'>
                                         Public Health Data Infrastructure
                                     </span>
