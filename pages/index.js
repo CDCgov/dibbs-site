@@ -84,12 +84,12 @@ export default function Home() {
                   PHDI&apos;s current body of work also falls within the scope
                   of CDC&apos;s&nbsp;
                   <span className="font-semibold text-underline text-primary link">
-                    <Link
+                    <a
                       className="underline text-primary"
                       href="https://www.cdc.gov/surveillance/projects/dmi-initiative/index.html"
                       target='_blank'>
                       Data Modernization Initiative (DMI)
-                    </Link>
+                    </a>
                   </span>
                   ,&nbsp;which is an effort to modernize core public health data
                   and surveillance infrastructure across the federal and state
