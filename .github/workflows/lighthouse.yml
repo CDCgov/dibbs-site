@@ -68,7 +68,7 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
-          configPath: '../lighthouserc.yml'
+          configPath: './lighthouserc.yml'
           uploadArtifacts: false # save results as an action artifacts
           temporaryPublicStorage: false # upload lighthouse report to the temporary storage
   
