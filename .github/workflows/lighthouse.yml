@@ -1,7 +1,8 @@
 name: Lighthouse CI
 on:
   pull_request:
-    types: [opened, reopened, edited]
+    types: [opened, reopened]
+  push:
 jobs:
   # Build job
   build:
