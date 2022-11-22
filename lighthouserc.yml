@@ -2,12 +2,7 @@ ci:
   collect:
     staticDistDir: "./out"
   assert:
-    categories:
-      accessibility:
-        error:
-          minScore: 1
-        warning:
-          minScore: 1
+   "categories:accessibility": ["error", {"minScore": 1}]
   upload:
     # upload options here
   server:
