@@ -95,9 +95,9 @@ export default function BuildingBlockInfo() {
                 <div className={`margin-bottom-1 ${styles.buildingBlockItemHeader}`}>
                   <Image alt="" src={locationIcon} layout="fixed"></Image>
                 </div>
-                <h2 className={`${styles.buildingBlockItemHeader} margin-bottom-1 text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
+                <h3 className={`${styles.buildingBlockItemHeader} margin-bottom-1 text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Location Services
-                </h2>
+                </h3>
                 <div className="font-public-sans-xs line-height-sans-6">
                   <p className="${styles.buildingBlockItemHeader} font-semibold font-public-sans-3xs">
                     (address validation, standardization, and data enrichment)
