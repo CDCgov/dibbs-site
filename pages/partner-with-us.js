@@ -32,7 +32,7 @@ export default function GetInvolved() {
               <br />
               This is also an opportunity extended to any partner who would like
               their feedback incorporated into future Building Blocks work, but
-              who may not be immediately available to participate in a pilot.
+              who may not be immediately available to participate in the beta program.
             </div>
           </div>
           <div className="grid-row desktop:grid-gap-4">
@@ -127,9 +127,9 @@ export default function GetInvolved() {
                 A CoP partner is a STLT who, in the immediate future, is
                 interested in offering feedback about the design principles and
                 application interface(s) for Building Blocks and, in the near
-                future, is interested in participating to the Building Block
-                ecosystem by contributing code, helping govern the open source
-                community, or offering other services as needed.
+                future, is interested in getting involved in the Building Block
+                ecosystem by contributing code, helping define what the open source
+                community will look like, or offering other services as needed.
               </div>
               <div className="padding-x-4 desktop:padding-x-0">
                 <Button className="desktop:padding-x-7 padding-y-2" onClick={() => window.location = 'mailto:dmibuildingblocks@cdc.gov'}>

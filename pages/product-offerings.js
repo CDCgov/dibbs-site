@@ -62,18 +62,20 @@ export default function ProductOffering() {
           <h2
             className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.headerText} text-accent-cool-darker`}
           >
-            Pipeline as a Product
+            Starter Kit
           </h2>
           <div
             className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}
           >
             <div>
-              A cloud-based, off-the-shelf data ingestion and processing
-              pipeline built from modular Building Blocks which public health
-              departments can easily integrate into existing data systems. The
-              pipeline produces analysis-ready data by converting all incoming
-              data to a single standard, deduplicating and linking the data, and
-              then geocoding the cleaned results.
+              A cloud-based, out-of-the-box data pipeline built from a
+              core set of modular Building Blocks,  which public
+              health departments can easily integrate into existing data
+              systems. The pipeline addresses data clean-up and enrichment,
+              storage, and extraction to produce analysis-ready data. It
+              also saves STLTs time and manual effort, increases data
+              processing speed, creates a single source of truth for
+              incoming data, and removes the need for duplicative processes.
             </div>
             <div className="grid-row margin-top-3">
               <div className="desktop:grid-col-3 lg:text-center">
