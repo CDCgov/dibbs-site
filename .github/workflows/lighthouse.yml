@@ -5,7 +5,7 @@ on:
   push:
 jobs:
   # Build job
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
