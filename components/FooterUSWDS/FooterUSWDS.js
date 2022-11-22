@@ -1,5 +1,6 @@
 import { Address, FooterNav, Logo, Footer } from "@trussworks/react-uswds";
 import Image from "next/image";
+import Link from "next/link";
 import cdcLogo from '../../public/icons/cdc.svg'
 import styles from '../../styles/Home.module.scss';
 
@@ -13,18 +14,26 @@ export default function FooterUSWDS() {
 
     const createLinks = () => {
         return ([
-            <a key='home' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site">
-                Home
-            </a>,
-            <a key='building-block' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/building-block-info">
-                What is a building block?
-            </a>,
-            <a key='product-offerings' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/product-offerings">
-                Our product offerings
-            </a>,
-            <a key='partner' className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest" href="/phdi-site/partner-with-us">
-                Partner with us
-            </a>,
+            <Link href='/' key='home'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                    Home
+                </a>
+            </Link>,
+            <Link href='/building-block-info' key='building-block'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                    What is a building block?
+                </a>
+            </Link>,
+            <Link href='/product-offerings' key='product-offerings'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                    Our product offerings
+                </a>
+            </Link>,
+            <Link href='/partner-with-us' key='partner'>
+                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                    Partner with us
+                </a>
+            </Link>,
 
         ])
     }

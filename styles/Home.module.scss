@@ -1,5 +1,5 @@
 .desktopHeroImage2 {
-  margin-bottom: -80px;
+  margin-bottom: -77px;
 }
 
 .dekstopHeroImage1 {
@@ -40,9 +40,13 @@
   line-height: 38px;
 }
 
+.buildingBlockItemHeaderText {
+  font-size: 22px;
+}
+
 @media(min-width:1024px) {
   .desktopHeroImage3 {
-    margin-top: -321px;
+    margin-top: -340px;
     margin-bottom: 0px;
   }
 
@@ -54,7 +58,13 @@
     color: #f0f0f0
   }
 
-  .homeHeaderText {
+  .navbarItemText:hover {
+    border-bottom: 2px solid white !important;
+    padding-bottom: 8px;
+  }
+
+  .headerText,
+  .buildingBlockItemHeader {
     text-align: left;
   }
 
@@ -85,6 +95,10 @@
   .dynamicShadow {
     box-shadow: 0 1px .25rem 0 rgba(0, 0, 0, .1);
   }
+
+  .navbarLogoText {
+    font-size: 22px;
+  }
 }
 
 
@@ -93,11 +107,16 @@
     margin-top: 0px;
   }
 
+  .backgroundInvitation {
+    background-color: #07648d;
+  }
+
   .navbarItemText {
     color: #565c65;
   }
 
-  .homeHeaderText {
+  .headerText,
+  .buildingBlockItemHeader {
     text-align: center;
   }
 
@@ -128,6 +147,10 @@
 
   .dynamicShadow {
     box-shadow: none;
+  }
+
+  .navbarLogoText {
+    font-size: 13px;
   }
 }
 
