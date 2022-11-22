@@ -60,15 +60,11 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
-  lighthouse:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
           configPath: './lighthouserc.yml'
           uploadArtifacts: false # save results as an action artifacts
           temporaryPublicStorage: false # upload lighthouse report to the temporary storage
+      
   
