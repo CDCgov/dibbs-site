@@ -88,7 +88,7 @@ export default function Home() {
                       className="underline text-primary"
                       href="https://www.cdc.gov/surveillance/projects/dmi-initiative/index.html"
                       target='_blank'
-                      rel='noreferrer'>
+                      rel="noreferrer">
                       Data Modernization Initiative (DMI)
                     </a>
                   </span>
