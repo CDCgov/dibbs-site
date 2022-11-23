@@ -64,7 +64,7 @@ export default function GetInvolved() {
                   team.
                 </div>
                 <div className="text-center margin-top-2 desktop:margin-top-7 padding-x-5 desktop:padding-x-0">
-                  <a href='https://www.surveymonkey.com/r/L35PNRK' target='_blank'>
+                  <a href='https://www.surveymonkey.com/r/L35PNRK' target='_blank' rel="noreferrer">
                     <Button className="desktop:padding-x-7 padding-y-2">
                       Learn More
                     </Button>
@@ -99,7 +99,7 @@ export default function GetInvolved() {
                   focus group will last for approximately 60 minutes.
                 </div>
                 <div className="text-center margin-top-2 desktop:margin-top-4 padding-x-5 desktop:padding-x-0">
-                  <a href='https://www.surveymonkey.com/r/L35PNRK' target='_blank'>
+                  <a href='https://www.surveymonkey.com/r/L35PNRK' target='_blank' rel="noreferrer">
                     <Button className="desktop:padding-x-7 padding-y-2">
                       Learn More
                     </Button>
