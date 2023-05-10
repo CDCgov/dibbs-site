@@ -1,15 +1,13 @@
 import styles from '../styles/Home.module.scss';
 import productOfferingsImage from '../public/products.svg';
 import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg';
+import {SoftwareDevelopmentKitInfo} from "../components/product-offerings/software-development-kit-info";
+import {BuildingBlocksInfo} from "../components/product-offerings/building-blocks-links";
 
 import awsImage from '../public/icons/aws.svg';
 import azureImage from '../public/icons/azure.svg';
-import gcpImage from '../public/icons/gcp.svg';
-import locationIcon from '../public/icons/location.svg';
-import linkIcon from '../public/icons/link.svg';
-import transportIcon from '../public/icons/transport.svg';
-import organizationIcon from './../public/icons/organization.svg';
 
+import gcpImage from '../public/icons/gcp.svg';
 import Image from 'next/image';
 import { Link } from '@trussworks/react-uswds';
 import Head from 'next/head';
@@ -77,7 +75,7 @@ export default function ProductOffering() {
               processing speed, creates a single source of truth for
               incoming data, and removes the need for duplicative processes.
             </div>
-            <div className="grid-row margin-top-3">
+            <div className="grid-row margin-top-3 display-flex flex-justify-center">
               <div className="desktop:grid-col-3 lg:text-center">
                 <div className="display-none desktop:display-inline-block">
                   <Image
@@ -123,105 +121,8 @@ export default function ProductOffering() {
             </div>
           </div>
         </div>
-        <div
-          className={`grid-container desktop:radius-md bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 ${styles.dynamicShadow}`}
-        >
-          <h2
-            className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.headerText} text-accent-cool-darker`}
-          >
-            SDK
-          </h2>
-          <div
-            className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}
-          >
-            <div className={styles.sdkInfoMaxWidth}>
-              Access the range of modular Building Blocks with our&nbsp;
-              <span>
-                <Link
-                  className="font-semibold"
-                  href="https://pypi.org/project/phdi/"
-                  target="_blank"
-                >
-                  SDK toolkit
-                </Link>
-              </span>
-              .&nbsp;Public health agencies can import, experiment, and
-              integrate these features into their existing pipelines. To see the
-              full suite of functionality of our SDK, check out our{' '}
-              <span>
-                <Link
-                  className="font-semibold"
-                  href="https://cdcgov.github.io/phdi/v0.1.0-dev/"
-                  target="_blank"
-                >
-                  API documentation
-                </Link>
-              </span>
-              .
-            </div>
-            <div>
-              <div className="grid-row desktop:margin-y-6">
-                <div className="desktop:grid-col-4">
-                  <div className="grid-row margin-y-3 desktop:margin-y-0">
-                    <div className="display-none desktop:display-inline-block margin-right-2">
-                      <Image alt="" src={locationIcon} />
-                    </div>
-                    <Link
-                      className="font-semibold desktop:margin-top-1"
-                      href="https://github.com/CDCgov/phdi/tree/main/phdi/geospatial"
-                      target='_blank'
-                    >
-                      Location Services
-                    </Link>
-                  </div>
-                </div>
-                <div className="desktop:grid-col-4">
-                  <div className="grid-row margin-bottom-3 desktop:margin-bottom-0">
-                    <div className="display-none desktop:display-inline-block margin-right-2">
-                      <Image alt="" src={organizationIcon} />
-                    </div>
-                    <Link
-                      className="font-semibold desktop:margin-top-1"
-                      href="https://github.com/CDCgov/phdi/tree/main/phdi/harmonization"
-                      target='_blank'
-                    >
-                      Data Harmonization Services
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="grid-row">
-                <div className="desktop:grid-col-4">
-                  <div className="grid-row margin-bottom-3 desktop:margin-bottom-0">
-                    <div className="display-none desktop:display-inline-block margin-right-2">
-                      <Image alt="" src={transportIcon} />
-                    </div>
-                    {/* add margin */}
-                    <Link
-                      className="font-semibold"
-                      href="https://github.com/CDCgov/phdi/tree/main/phdi/transport"
-                      target='_blank'>
-                      Transport Services{' '}
-                    </Link>
-                  </div>
-                </div>
-                <div className="desktop:grid-col-4">
-                  <div className="grid-row">
-                    <div className="display-none desktop:display-inline-block margin-right-2">
-                      <Image alt="" src={linkIcon} />
-                    </div>
-                    <Link
-                      className="font-semibold"
-                      href="https://github.com/CDCgov/phdi/tree/main/phdi/linkage"
-                      target='_blank'>
-                      Data Linkage Services{' '}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BuildingBlocksInfo/>
+        <SoftwareDevelopmentKitInfo/>
       </div>
     </div>
   );

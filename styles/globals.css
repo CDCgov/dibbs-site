@@ -26,14 +26,6 @@ body {
   font-weight: 700;
 }
 
-/* iframe:focus,
-[href]:focus,
-[tabindex]:focus,
-[contentEditable="true"]:focus {
-  outline: none !important;
-  outline-offset: 0;
-} */
-
 .navbar-item:hover {
   cursor: pointer;
 }
@@ -137,10 +129,6 @@ h2 {
 .usa-footer__secondary-section>.grid-container {
   max-width: 88rem !important;
 }
-
-/* .grid-container {
-  max-width: 90rem !important;
-} */
 
 .usa-footer__primary-section {
   background: #162e51 !important;
