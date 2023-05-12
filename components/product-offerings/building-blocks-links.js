@@ -49,7 +49,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/alerts.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/alerts.html"
                                     target='_blank'
                                 >
                                     Alerts BB
@@ -63,7 +63,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/fhir-converter.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/fhir-converter.html"
                                     target='_blank'
                                 >
                                     FHIR Converter BB
@@ -77,7 +77,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/ingestion.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/ingestion.html"
                                     target='_blank'>
                                     Ingestion BB
                                 </Link>
@@ -90,7 +90,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/message_parser.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/message_parser.html"
                                     target='_blank'>
                                     Message Parser BB
                                 </Link>
@@ -105,7 +105,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/record_linkage.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/record_linkage.html"
                                     target='_blank'>
                                     Record Linkage BB
                                 </Link>
@@ -118,7 +118,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/tabulation.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/tabulation.html"
                                     target='_blank'>
                                     Tabulation BB
                                 </Link>
@@ -131,7 +131,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/containers/validation.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/validation.html"
                                     target='_blank'>
                                     Validation BB
                                 </Link>
