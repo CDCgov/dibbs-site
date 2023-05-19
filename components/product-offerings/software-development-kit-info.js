@@ -48,7 +48,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/cloud.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/cloud.html"
                                     target='_blank'
                                 >
                                     Cloud
@@ -62,7 +62,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/fhir.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/fhir.html"
                                     target='_blank'
                                 >
                                     FHIR
@@ -76,7 +76,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/geospatial.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/geospatial.html"
                                     target='_blank'>
                                     Geospatial
                                 </Link>
@@ -89,7 +89,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/harmonization.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/harmonization.html"
                                     target='_blank'>
                                     Harmonization
                                 </Link>
@@ -104,7 +104,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/linkage.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/linkage.html"
                                     target='_blank'>
                                     Linkage
                                 </Link>
@@ -117,7 +117,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/tabulation.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/tabulation.html"
                                     target='_blank'>
                                     Tabulation
                                 </Link>
@@ -130,7 +130,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/transport.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/transport.html"
                                     target='_blank'>
                                     Transport
                                 </Link>
@@ -143,7 +143,7 @@ export const SoftwareDevelopmentKitInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/sdk/phdi/validation.html"
+                                    href="https://cdcgov.github.io/phdi/latest/sdk/phdi/validation.html"
                                     target='_blank'>
                                     Validation
                                 </Link>
