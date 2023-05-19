@@ -6,7 +6,9 @@ export default function Layout({ children }) {
     return (
         <div>
             <NavbarUSWDS />
-            {children}
+            <div id="main-content">
+              {children}
+            </div>
             <FooterUSWDS />
         </div>
     )
