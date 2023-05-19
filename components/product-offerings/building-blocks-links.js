@@ -90,7 +90,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/message_parser.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/message-parser.html"
                                     target='_blank'>
                                     Message Parser BB
                                 </Link>
