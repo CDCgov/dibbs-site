@@ -105,7 +105,7 @@ export const BuildingBlocksInfo = () => {
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/record_linkage.html"
+                                    href="https://cdcgov.github.io/phdi/latest/containers/record-linkage.html"
                                     target='_blank'>
                                     Record Linkage BB
                                 </Link>
