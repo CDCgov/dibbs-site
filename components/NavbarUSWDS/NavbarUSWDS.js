@@ -15,7 +15,7 @@ export default function Navbar({ }) {
                 <span className={styles.navbarItemText}>Home</span>
             </a>
         </Link>,
-        <NavigationLink key="two" href='/building-block-info' text='What is a Building Block' router={router} onClick={onClick} />,
+        <NavigationLink key="two" href='/about' text='What is a Building Block' router={router} onClick={onClick} />,
         <NavigationLink key="three" href='/product-offerings' text='Our product offerings' router={router} onClick={onClick} />,
         <NavigationLink key="four" href='/partner-with-us' text='Partner with us' router={router} onClick={onClick} />,
     ]
