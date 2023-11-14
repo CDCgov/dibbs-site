@@ -72,7 +72,7 @@ export default function ProductOffering() {
               data streams (including eCR, ELR, ADT, and VXU) to create a single source
               of truth.
             </div>
-            <div className="grid-row margin-top-3 display-flex flex-justify-center">
+            <div className="grid-row display-none desktop:display-inline-block margin-top-3 flex-justify-center">
               <Image
                     alt=""
                     src={architectureImage}
