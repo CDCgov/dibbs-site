@@ -12,7 +12,7 @@ import messageParser from "../../public/icons/messageParser.svg";
 
 
 export const BuildingBlocksInfo = () => {
-    return(
+    return (
         <div
             className={`grid-container margin-bottom-5 desktop:radius-md bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 ${styles.dynamicShadow}`}
         >
@@ -24,9 +24,10 @@ export const BuildingBlocksInfo = () => {
             <div
                 className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}
             >
-                <div className={styles.sdkInfoMaxWidth}>
-                    Access the range of modular Building Blocks as containerized services, which can be imported out of
-                    the box to ingest and report on public health data. To see the full suite of containerized services,
+                <div className={`${styles.sdkInfoMaxWidth}`}>
+                    Below, you will find a description of how the five core Building
+                    Blocks work to clean and transform data as part of the Starter Kit
+                    data pipeline. To see the full suite of containerized services,
                     check out our&nbsp;
                     <span>
                     <Link
@@ -34,109 +35,100 @@ export const BuildingBlocksInfo = () => {
                         href="https://github.com/CDCgov/phdi/tree/main/containers"
                         target="_blank"
                     >
-                      containers repository
+                      containers repository.
                     </Link>
                   </span>
-                    &nbsp;and learn how to integrate them into your data system with our
-                    documentation below.
                 </div>
                 <div className={"grid-container padding-0 flex-align-center"}>
-                    <div className="grid-row desktop:margin-y-6">
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={cloudIcon}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/alerts.html"
-                                    target='_blank'
-                                >
-                                    Alerts BB
-                                </Link>
-                            </div>
+                    <div className="grid-row padding-top-3">
+                        <div
+                            className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
+                            <Image alt="" src={validation}/>
                         </div>
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={fhirConverter}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/fhir-converter.html"
-                                    target='_blank'
-                                >
-                                    FHIR Converter BB
-                                </Link>
-                            </div>
+                        <Link
+                            className="font-semibold flex-align-self-center"
+                            href="https://cdcgov.github.io/phdi/latest/containers/validation.html"
+                            target='_blank'>
+                            Validation
+                        </Link>
+                        Reads and validates all eCR fields of interest based on
+                        specified, custom preferences; ensures that its XML structure is
+                        valid, that the required fields are present and in the correct
+                        format, and that the data is trustworthy
+                    </div>
+                    <div className="grid-row padding-top-3">
+                        <div
+                            className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
+                            <Image alt="" src={fhirConverter}/>
                         </div>
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={organization}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/ingestion.html"
-                                    target='_blank'>
-                                    Ingestion BB
-                                </Link>
-                            </div>
+                        <Link
+                            className="font-semibold flex-align-self-center"
+                            href="https://cdcgov.github.io/phdi/latest/containers/fhir-converter.html"
+                            target='_blank'
+                        >
+                            FHIR Converter
+                        </Link>
+                        Converts incoming messages into the FHIR (Fast Healthcare
+                        Interoperability Resources) standard, which acts as a common
+                        language between data streams, thereby standardizing data
+                        streams for record linkage and making 1:1 comparisons
+                    </div>
+                    <div className="grid-row padding-top-3">
+                        <div
+                            className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
+                            <Image alt="" src={organization}/>
                         </div>
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center ">
-                                    <Image alt="" src={messageParser}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/message-parser.html"
-                                    target='_blank'>
-                                    Message Parser BB
-                                </Link>
-                            </div>
+                        <Link
+                            className="font-semibold flex-align-self-center"
+                            href="https://cdcgov.github.io/phdi/latest/containers/ingestion.html"
+                            target='_blank'>
+                            Ingestion
+                        </Link>
+                        <div>
+                            <p className={""}>Consists of two separate steps: (1) Standardization; (2)
+                                Geocoding</p>
+                            <br />
+                            <p><span
+                                className={"font-semibold"}>Standardization:</span> Standardizes
+                                data fields (including record
+                                name, date of birth, phone number, and geolocation)
+                                based on
+                                preset defaults to ensure consistency</p>
+                            <br />
+                            <p><span
+                                className={"font-semibold"}>Geocoding:</span> Enriches
+                                data by providing precise geographic
+                                locations based on patient street addresses from input
+                                data</p>
                         </div>
                     </div>
-                    <div className="grid-row">
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={link}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/record-linkage.html"
-                                    target='_blank'>
-                                    Record Linkage BB
-                                </Link>
-                            </div>
+                    <div className="grid-row padding-top-3">
+                        <div
+                            className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
+                            <Image alt="" src={link}/>
                         </div>
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={tabulation}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/tabulation.html"
-                                    target='_blank'>
-                                    Tabulation BB
-                                </Link>
-                            </div>
+                        <Link
+                            className="font-semibold flex-align-self-center"
+                            href="https://cdcgov.github.io/phdi/latest/containers/record-linkage.html"
+                            target='_blank'>
+                            Record Linkage
+                        </Link>
+                        Identifies multiple records referring to the same individual and
+                        combines them into a single, more complete patient record
+                    </div>
+                    <div className="grid-row padding-top-3">
+                        <div
+                            className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center ">
+                            <Image alt="" src={messageParser}/>
                         </div>
-                        <div className="desktop:grid-col-3">
-                            <div className="grid-row">
-                                <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={validation}/>
-                                </div>
-                                <Link
-                                    className="font-semibold flex-align-self-center"
-                                    href="https://cdcgov.github.io/phdi/latest/containers/validation.html"
-                                    target='_blank'>
-                                    Validation BB
-                                </Link>
-                            </div>
-                        </div>
+                        <Link
+                            className="font-semibold flex-align-self-center"
+                            href="https://cdcgov.github.io/phdi/latest/containers/message-parser.html"
+                            target='_blank'>
+                            Message Parser
+                        </Link>
+                        Extracts relevant data from an eCR into a tabular format (i.e.
+                        spreadsheet); customizable depending on user needs
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ import {BuildingBlocksInfo} from "../components/product-offerings/building-block
 
 import awsImage from '../public/icons/aws.svg';
 import azureImage from '../public/icons/azure.svg';
+import architectureImage from '../public/dibbs-architecture.png'
 
 import gcpImage from '../public/icons/gcp.svg';
 import Image from 'next/image';
@@ -42,12 +43,10 @@ export default function ProductOffering() {
               </p>
               <ul className="usa-list list-disc">
                 <li> Flexible and modular</li>
-                <li> Easy to update</li>
-                <li> Easier to understand</li>
-                <li> Easier to make open-source</li>
-                <li> Easier to integrate with STLTs’ existing systems</li>
-                <li> Performs similar operations consistently </li>
-                <li> Easier to share and reuse across STLTs </li>
+                <li> Open source</li>
+                <li> Easy to understand</li>
+                <li> Easy to integrate with existing workflows</li>
+                <li> Easy to test and implement</li>
               </ul>
             </div>
           </div>
@@ -60,69 +59,31 @@ export default function ProductOffering() {
           <h2
             className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.headerText} text-accent-cool-darker`}
           >
-            Starter Kit
+            Starter Kit Pipeline
           </h2>
           <div
             className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}
           >
             <div>
-              A cloud-based, out-of-the-box data pipeline built from a
-              core set of modular Building Blocks,  which public
-              health departments can easily integrate into existing data
-              systems. The pipeline addresses data clean-up and enrichment,
-              storage, and extraction to produce analysis-ready data. It
-              also saves STLTs time and manual effort, increases data
-              processing speed, creates a single source of truth for
-              incoming data, and removes the need for duplicative processes.
+              A cloud-based data ingestion and processing pipeline that validates,
+              cleans, standardizes, links, and stores public health data leveraging a
+              core set of five Building Blocks. Public health departments can integrate
+              our pipeline into their existing workflows to ingest and process multiple
+              data streams (including eCR, ELR, ADT, and VXU) to create a single source
+              of truth.
             </div>
             <div className="grid-row margin-top-3 display-flex flex-justify-center">
-              <div className="desktop:grid-col-3 lg:text-center">
-                <div className="display-none desktop:display-inline-block">
-                  <Image
+              <Image
                     alt=""
-                    src={azureImage}
+                    src={architectureImage}
                     layout="fixed"
-                    height="100"
-                    width="100"
+                    height="517"
+                    width="941"
                   />
-                </div>
-                <div>
-                  <Link
-                    className="font-semibold"
-                    href="https://github.com/CDCgov/phdi-azure"
-                    target="_blank"
-                  >
-                    Access Azure repository
-                  </Link>
-                </div>
-              </div>
-              <div className="desktop:grid-col-3 desktop:margin-left-2 lg:text-center">
-                <div className="display-none desktop:display-inline-block">
-                  <Image alt="" src={gcpImage} layout="fixed" />
-                </div>
-                <br />
-                <div>
-                  <Link
-                    className="font-semibold"
-                    href="https://github.com/CDCgov/phdi-google-cloud"
-                    target="_blank"
-                  >
-                    Access GCP repository
-                  </Link>
-                </div>
-                <br />
-              </div>
-              <div className="desktop:grid-col-3 lg:text-center desktop:margin-left-2">
-                <div className="display-none desktop:display-inline-block">
-                  <Image alt="" src={awsImage} layout="fixed" />
-                </div>
-                <div className="text-italic">AWS repository coming soon!</div>
-              </div>
             </div>
           </div>
         </div>
         <BuildingBlocksInfo/>
-        <SoftwareDevelopmentKitInfo/>
       </div>
     </div>
   );
