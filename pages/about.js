@@ -33,7 +33,7 @@ export default function BuildingBlockInfo() {
                 Our mission is to get better, faster data to public health departments so
                 that they can take timely public health action. Our work contributes to&nbsp;
                 <Link href="https://www.cdc.gov/surveillance/pdfs/PRIME_1-sheet_single-page.pdf" target="_blank">
-                  CDC's public health data strategy
+                  CDC&apos;s public health data strategy
                 </Link>.
                 and mission to develop a robust public health data ecosystem
               </p>
@@ -94,7 +94,7 @@ export default function BuildingBlockInfo() {
                 </li>
                 <li>
                   {' '}
-                  Integrating Building Blocks into CDC's NBS surveillance
+                  Integrating Building Blocks into CDC&apos;s NBS surveillance
                   system to support jurisdictions in their public health investigation workflows
                 </li>
               </ul>
@@ -111,7 +111,7 @@ export default function BuildingBlockInfo() {
       <div className="bg-primary-lighter padding-top-5 desktop:padding-y-7">
         <div className="grid-container maxw-widescreen padding-x-0 desktop:padding-x-7">
           <h2 className="text-bold text-center text-accent-cool-darker desktop:margin-bottom-4 margin-bottom-205 padding-x-205">
-            What we've done so far
+            What we&apos;ve done so far
           </h2>
           <div className="grid-row grid-gap-3">
             <div className="desktop:grid-col-4">
@@ -155,7 +155,7 @@ export default function BuildingBlockInfo() {
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
                   <p>
-                    Learn about the work we’ve done with Los Angeles County Public Health Department.
+                    Learn about the work we&apos;ve done with Los Angeles County Public Health Department.
                   </p>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export default function BuildingBlockInfo() {
                   <h2
                     className={`text-white font-semibold text-center margin-bottom-2 ${styles.getStartedHeader}`}
                   >
-                    See what we've built
+                    See what we&apos;ve built
                   </h2>
                   <p className="text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-2">
                     Find out how our modular software could work in  your jurisdiction&apos;s data environment
