@@ -7,7 +7,7 @@ import locationIcon from '../public/icons/location.svg';
 import linkIcon from '../public/icons/link.svg';
 import codeIcon from '../public/icons/code.svg';
 import organizationIcon from '../public/icons/organization.svg';
-import Link from 'next/link';
+import { Link } from '@trussworks/react-uswds';
 import Head from 'next/head';
 
 export default function BuildingBlockInfo() {
@@ -16,9 +16,9 @@ export default function BuildingBlockInfo() {
       <Head>
         <title>Who is DIBBs?</title>
       </Head>
-      <div className="grid-container padding-x-205 margin-y-5 desktop:padding-top-5 maxw-widescreen desktop:padding-x-9 desktop:margin-y-7 desktop:margin-y-0">
+      <div className="grid-container padding-x-205 margin-y-5 desktop:padding-top-5 maxw-widescreen desktop:padding-x-10 desktop:margin-y-7 desktop:margin-y-0">
         <div className="grid-row">
-          <div className="desktop:margin-left-7 desktop:margin-top-9 desktop:margin-bottom-7">
+          <div className="desktop:margin-left-7 desktop:margin-top-3 desktop:margin-bottom-7">
             <h1
               className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 ${styles.headerText} ${styles.dynamicHeader}`}
             >
@@ -31,8 +31,11 @@ export default function BuildingBlockInfo() {
               <br />
               <p>
                 Our mission is to get better, faster data to public health departments so
-                that they can take timely public health action. Our work contributes to CDC's
-                public health data strategy and mission to develop a robust public health data ecosystem
+                that they can take timely public health action. Our work contributes to&nbsp;
+                <Link href="https://www.cdc.gov/surveillance/pdfs/PRIME_1-sheet_single-page.pdf" target="_blank">
+                  CDC's public health data strategy
+                </Link>.
+                and mission to develop a robust public health data ecosystem
               </p>
               <br />
               <p className="font-semibold font-family-public-sans-1">
@@ -61,7 +64,10 @@ export default function BuildingBlockInfo() {
 
                 In an effort to strengthen the U.S. public health data infrastructure,
                 the CDC launched a multi-year collaboration with the U.S. Digital Service called
-                the Pandemic-Ready Interoperability Modernization Effort (PRIME).
+                the&nbsp;
+                <Link href="https://www.cdc.gov/surveillance/pdfs/PRIME_1-sheet_single-page.pdf" target="_blank">
+                  Pandemic-Ready Interoperability Modernization Effort (PRIME)
+                </Link>.
                 The DIBBs team (formerly PHDI) was tasked with developing and
                 providing access to open source, modular software and tooling, known as
                 “Building Blocks,” that public health departments can use to process and transform data.
@@ -104,24 +110,31 @@ export default function BuildingBlockInfo() {
       </div>
       <div className="bg-primary-lighter padding-top-5 desktop:padding-y-7">
         <div className="grid-container maxw-widescreen padding-x-0 desktop:padding-x-7">
+          <h2 className="text-bold text-center text-accent-cool-darker desktop:margin-bottom-4 margin-bottom-205 padding-x-205">
+            What we've done so far
+          </h2>
           <div className="grid-row grid-gap-3">
             <div className="desktop:grid-col-4">
               <div
-                className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
+                className={`bg-white padding-205 desktop:padding-y-5 desktop:padding-x-205 lg:h-56 desktop:radius-md ${styles.dynamicShadow}`}
               >
                 <h2 className={`${styles.buildingBlockItemHeader} margin-bottom-1 text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Virginia Pilot White Paper
                 </h2>
                 <div className="font-public-sans-xs line-height-sans-6">
                   <p className="desktop:padding-right-2">
-                    Read about our pilot project with the Virginia Department of Health.
+                    Read about our&nbsp;
+                    <Link href="https://www.cdc.gov/surveillance/data-modernization/technologies/public-health-data-pipelines.html" target='_blank'>
+                      pilot project
+                    </Link>
+                    &nbsp;with the Virginia Department of Health.
                   </p>
                 </div>
               </div>
             </div>
             <div className="desktop:grid-col-4 margin-y-2 desktop:margin-y-0">
               <div
-                className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
+                className={`bg-white padding-205 desktop:padding-y-5 desktop:padding-x-205 lg:h-56 desktop:radius-md ${styles.dynamicShadow}`}
               >
                 <h2 className={`margin-bottom-1 ${styles.buildingBlockItemHeader} text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   DIBBs Overview PDF
@@ -135,7 +148,7 @@ export default function BuildingBlockInfo() {
             </div>
             <div className="desktop:grid-col-4">
               <div
-                className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
+                className={`bg-white padding-205 desktop:padding-y-5 desktop:padding-x-205 lg:h-56 desktop:radius-md ${styles.dynamicShadow}`}
               >
                 <h2 className={`margin-bottom-1 ${styles.buildingBlockItemHeader} text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Los Angeles County Pilot - Executive Brief
@@ -151,7 +164,7 @@ export default function BuildingBlockInfo() {
           <div className="grid-row grid-gap-3  desktop:margin-top-205">
             <div className="desktop:grid-col-4 margin-y-2 desktop:margin-y-0">
               <div
-                className={`bg-white padding-205 lg:h-80 desktop:radius-md ${styles.dynamicShadow}`}
+                className={`bg-white padding-205 desktop:padding-y-5 desktop:padding-x-205 lg:h-56 desktop:radius-md ${styles.dynamicShadow}`}
               >
                 <h2 className={`margin-bottom-1 ${styles.buildingBlockItemHeader} text-accent-cool-darker ${styles.buildingBlockItemHeaderText}`}>
                   Los Angeles County Pilot -  Summary Findings Report
@@ -165,7 +178,7 @@ export default function BuildingBlockInfo() {
             </div>
             <div className="desktop:grid-col-4">
               <div
-                className={`bg-accent-cool-darker desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-80 flex-align-center flex flex-row`}
+                className={`bg-accent-cool-dark desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-56 flex-align-center flex flex-row`}
               >
                 <span>
                   <h2
@@ -173,7 +186,7 @@ export default function BuildingBlockInfo() {
                   >
                     See what we've built
                   </h2>
-                  <p className="text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-0">
+                  <p className="text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-2">
                     Find out how our modular software could work in  your jurisdiction&apos;s data environment
                   </p>
                   <Link href="/product-offerings">
