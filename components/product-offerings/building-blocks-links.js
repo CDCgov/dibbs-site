@@ -46,7 +46,7 @@ export const BuildingBlocksInfo = () => {
                             <Image alt="" src={validation}/>
                         </div>
                         <Link
-                            className="font-semibold flex-align-self-center"
+                            className="font-semibold flex-align-self-center padding-bottom-1"
                             href="https://cdcgov.github.io/phdi/latest/containers/validation.html"
                             target='_blank'>
                             Validation
@@ -62,7 +62,7 @@ export const BuildingBlocksInfo = () => {
                             <Image alt="" src={fhirConverter}/>
                         </div>
                         <Link
-                            className="font-semibold flex-align-self-center"
+                            className="font-semibold flex-align-self-center padding-bottom-1"
                             href="https://cdcgov.github.io/phdi/latest/containers/fhir-converter.html"
                             target='_blank'
                         >
@@ -79,7 +79,7 @@ export const BuildingBlocksInfo = () => {
                             <Image alt="" src={organization}/>
                         </div>
                         <Link
-                            className="font-semibold flex-align-self-center"
+                            className="font-semibold flex-align-self-center padding-bottom-1"
                             href="https://cdcgov.github.io/phdi/latest/containers/ingestion.html"
                             target='_blank'>
                             Ingestion
@@ -87,15 +87,13 @@ export const BuildingBlocksInfo = () => {
                         <div>
                             <p className={""}>Consists of two separate steps: (1) Standardization; (2)
                                 Geocoding</p>
-                            <br />
-                            <p><span
+                            <p className={"padding-top-1"}><span
                                 className={"font-semibold"}>Standardization:</span> Standardizes
                                 data fields (including record
                                 name, date of birth, phone number, and geolocation)
                                 based on
                                 preset defaults to ensure consistency</p>
-                            <br />
-                            <p><span
+                            <p className={"padding-top-1"}><span
                                 className={"font-semibold"}>Geocoding:</span> Enriches
                                 data by providing precise geographic
                                 locations based on patient street addresses from input
@@ -108,7 +106,7 @@ export const BuildingBlocksInfo = () => {
                             <Image alt="" src={link}/>
                         </div>
                         <Link
-                            className="font-semibold flex-align-self-center"
+                            className="font-semibold flex-align-self-center padding-bottom-1"
                             href="https://cdcgov.github.io/phdi/latest/containers/record-linkage.html"
                             target='_blank'>
                             Record Linkage
@@ -116,13 +114,13 @@ export const BuildingBlocksInfo = () => {
                         Identifies multiple records referring to the same individual and
                         combines them into a single, more complete patient record
                     </div>
-                    <div className="grid-row padding-top-3">
+                    <div className="grid-row padding-top-3 padding-bottom-2">
                         <div
                             className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center ">
                             <Image alt="" src={messageParser}/>
                         </div>
                         <Link
-                            className="font-semibold flex-align-self-center"
+                            className="font-semibold flex-align-self-center padding-bottom-2"
                             href="https://cdcgov.github.io/phdi/latest/containers/message-parser.html"
                             target='_blank'>
                             Message Parser
