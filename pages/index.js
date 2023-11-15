@@ -86,7 +86,7 @@ export default function Home() {
                   </p>
                   <br />
                   <p>
-                    Our interdisciplinary team of researchers and engineers works to solve your jurisdiction's data challenges
+                    Our interdisciplinary team of researchers and engineers works to solve your jurisdiction&apos;s data challenges
                     and integrate our flexible, modern tools into your existing workflows
                   </p>
                   <br />
@@ -109,7 +109,7 @@ export default function Home() {
                   <br />
                   <div className="font-semibold text-underline text-primary link">
                     <Link href="/building-block-info">
-                      Learn about what we've built ›
+                      Learn about what we&apos;ve built ›
                     </Link>
                   </div>
                 </div>
