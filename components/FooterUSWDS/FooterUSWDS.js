@@ -19,17 +19,17 @@ export default function FooterUSWDS() {
                     Home
                 </a>
             </Link>,
-            <Link href='/building-block-info' key='building-block'>
+            <Link href='/about' key='building-block'>
                 <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     What is a building block?
                 </a>
             </Link>,
-            <Link href='/product-offerings' key='product-offerings'>
+            <Link href='/products' key='product-offerings'>
                 <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     Our product offerings
                 </a>
             </Link>,
-            <Link href='/partner-with-us' key='partner'>
+            <Link href='/engage-with-us' key='partner'>
                 <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
                     Partner with us
                 </a>

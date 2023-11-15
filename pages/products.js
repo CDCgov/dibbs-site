@@ -1,8 +1,8 @@
 import styles from '../styles/Home.module.scss';
 import productOfferingsImage from '../public/products.svg';
-import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg';
-import {SoftwareDevelopmentKitInfo} from "../components/product-offerings/software-development-kit-info";
-import {BuildingBlocksInfo} from "../components/product-offerings/building-blocks-links";
+import mobileProductOfferingsImage from '../public/mobile/products.svg';
+import {SoftwareDevelopmentKitInfo} from "../components/products/software-development-kit-info";
+import {BuildingBlocksInfo} from "../components/products/building-blocks-links";
 
 import awsImage from '../public/icons/aws.svg';
 import azureImage from '../public/icons/azure.svg';
@@ -16,7 +16,7 @@ export default function ProductOffering() {
   return (
     <div>
       <Head>
-        <title>Our product offerings - Public Health Data Infrastructure</title>
+        <title>Our product offerings - Data Integration Building Blocks</title>
       </Head>
       <div className="grid-container padding-x-205 margin-y-5 desktop:margin-bottom-0 desktop:margin-top-9">
         <div className="grid-row">
@@ -35,7 +35,7 @@ export default function ProductOffering() {
           <div className="desktop:grid-col-6 margin-top-2 desktop:margin-top-0">
             <div className="desktop:margin-left-8 desktop:padding-top-8">
               <h1 className={`header-line-height ${styles.headerText} text-accent-cool-darker font-bold text-3xl lg:text-4xl margin-bottom-2`}>
-                Our product offerings
+                Our products
               </h1>
               <p className="text-base-darkest font-semibold">
                 Our products create a data architecture that is:{' '}

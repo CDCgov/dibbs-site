@@ -14,7 +14,7 @@ export default function GetInvolved() {
   return (
     <>
       <Head>
-        <title>Partner with us - Public Health Data Infrastructure</title>
+        <title>Engage with us - Data Integration Building Blocks</title>
       </Head>
       <div className="desktop:padding-bottom-9 desktop:padding-top-3">
         <div className="grid-container padding-0 maxw-desktop-lg">
