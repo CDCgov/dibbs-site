@@ -120,7 +120,7 @@ export const BuildingBlocksInfo = () => {
                             <Image alt="" src={messageParser}/>
                         </div>
                         <Link
-                            className="font-semibold flex-align-self-center padding-bottom-2"
+                            className="font-semibold flex-align-self-center padding-bottom-1"
                             href="https://cdcgov.github.io/phdi/latest/containers/message-parser.html"
                             target='_blank'>
                             Message Parser
