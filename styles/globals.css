@@ -146,6 +146,10 @@ h2 {
   color: white !important;
 }
 
+.fill-page {
+  min-height: 80vh
+}
+
 @media (min-width: 64em) {
   .usa-header--basic .usa-navbar {
     width: 60% !important;
