@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.scss';
 import productOfferingsImage from '../public/products.svg';
-import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg';
+import mobileProductOfferingsImage from '../public/mobile/products.svg';
 
 import {
     BuildingBlocksInfo
