@@ -16,20 +16,19 @@ export default function BuildingBlockInfo() {
       <Head>
         <title>Who is DIBBs?</title>
       </Head>
-      <div className="grid-container padding-x-205 margin-y-5 desktop:padding-top-5 maxw-widescreen desktop:padding-x-10 desktop:margin-y-7 desktop:margin-y-0">
+      <div className="grid-container padding-x-2 margin-y-5 desktop:padding-top-5 desktop:maxw-tablet-lg desktop:margin-x-15 desktop:margin-y-3">
         <div className="grid-row">
-          <div className="desktop:margin-left-7 desktop:margin-top-3 desktop:margin-bottom-7">
+          <div className="desktop:margin-x-10 desktop:margin-top-3 desktop:margin-bottom-7">
             <h1
               className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 ${styles.headerText} ${styles.dynamicHeader}`}
             >
               Who is DIBBs
             </h1>
             <div className="text-base-darkest desktop:margin-top-4">
-              <p className="font-semibold font-family-public-sans-1">
+              <p className="font-semibold font-family-public-sans-1 margin-bottom-1">
                 Mission
               </p>
-              <br />
-              <p>
+              <p className="margin-bottom-2">
                 Our mission is to get better, faster data to public health departments so
                 that they can take timely public health action. Our work contributes to&nbsp;
                 <Link href="https://www.cdc.gov/surveillance/pdfs/PRIME_1-sheet_single-page.pdf" target="_blank">
@@ -37,31 +36,26 @@ export default function BuildingBlockInfo() {
                 </Link>.
                 and mission to develop a robust public health data ecosystem
               </p>
-              <br />
-              <p className="font-semibold font-family-public-sans-1">
+              <p className="font-semibold font-family-public-sans-1 margin-bottom-1">
                 Vision
               </p>
-              <br />
-              <p>
+              <p className="margin-bottom-2">
                 By making disparate, complex data sources easier to use and integrate,
                 we reduce manual work and help public health departments devote more time to education,
                 prevention, and improving outcomes for their communities.
               </p>
-              <br />
-              <p className="font-semibold font-family-public-sans-1">
+              <p className="font-semibold font-family-public-sans-1 margin-bottom-1">
                 How we started
               </p>
-              <br />
-              <p>
+              <p className="margin-bottom-1">
                 The COVID-19 pandemic revealed that the U.S. needs to significantly improve the collection,
                 analysis, and use of public health data. This requires building a secure and scalable data
                 infrastructure to enable timely, complete data sharing for public health action,
                 breaking down silos that keep critical data disconnected,
                 and reducing the burden on jurisdictions for collecting, processing, and reporting data.
 
-                <br />
-                <br />
-
+              </p>
+              <p className="margin-bottom-1">
                 In an effort to strengthen the U.S. public health data infrastructure,
                 the CDC launched a multi-year collaboration with the U.S. Digital Service called
                 the&nbsp;
@@ -72,8 +66,8 @@ export default function BuildingBlockInfo() {
                 providing access to open source, modular software and tooling, known as
                 “Building Blocks,” that public health departments can use to process and transform data.
 
-                <br />
-                <br />
+              </p>
+              <p>
 
                 Our team has partnered with a variety of public health departments to reduce
                 their manual data integration processes and solve public health data challenges.
@@ -203,6 +197,6 @@ export default function BuildingBlockInfo() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
