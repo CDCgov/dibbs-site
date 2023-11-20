@@ -22,7 +22,7 @@ export default function BuildingBlockInfo() {
             <h1
               className={`text-accent-cool-darker margin-top-2 desktop:margin-top-0 font-bold margin-bottom-2 ${styles.headerText} ${styles.dynamicHeader}`}
             >
-              Who is DIBBs
+              Who is DIBBs?
             </h1>
             <div className="text-base-darkest desktop:margin-top-4">
               <p className="font-semibold font-family-public-sans-1 margin-bottom-1">
