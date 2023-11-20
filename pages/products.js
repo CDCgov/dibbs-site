@@ -1,20 +1,15 @@
 import styles from '../styles/Home.module.scss';
 import productOfferingsImage from '../public/products.svg';
-import mobileProductOfferingsImage from '../public/mobile/product-offerings.svg';
-import {
-    SoftwareDevelopmentKitInfo
-} from "../components/product-offerings/software-development-kit-info";
+import mobileProductOfferingsImage from '../public/mobile/products.svg';
+
 import {
     BuildingBlocksInfo
-} from "../components/product-offerings/building-blocks-links";
+} from "../components/products/building-blocks-links";
 
-import awsImage from '../public/icons/aws.svg';
-import azureImage from '../public/icons/azure.svg';
 import architectureImage from '../public/dibbs-architecture.png'
 
-import gcpImage from '../public/icons/gcp.svg';
 import Image from 'next/image';
-import {Link} from '@trussworks/react-uswds';
+
 import Head from 'next/head';
 
 export default function ProductOffering() {

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Public Health Data Infrastructure</title>
+        <title>Data Integration Building Blocks</title>
       </Head>
       <div className="grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg padding-x-205 desktop:padding-x-0">
         <div className="grid-row desktop:display-none">
@@ -34,7 +34,7 @@ export default function Home() {
             <h1
               className={`${styles.headerText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg padding-x-1 desktop:padding-x-0`}
             >
-              Reponse-ready public health data systems
+              Response-ready public health data systems
             </h1>
             <p
               className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0`}
@@ -112,7 +112,7 @@ export default function Home() {
                   <br />
                   <br />
                   <div className="font-semibold text-underline text-primary link">
-                    <Link href="/building-block-info">
+                    <Link href="/about">
                       More about Building Blocks ›
                     </Link>
                   </div>
@@ -193,7 +193,7 @@ export default function Home() {
               and share public health data.
             </p>
             <div className="text-center margin-top-3 width-card-lg margin-x-auto">
-              <Link href="/partner-with-us">
+              <Link href="/engage-with-us">
                 <Button
                   outline
                   className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
