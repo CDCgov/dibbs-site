@@ -34,23 +34,22 @@ export default function Home() {
             <h1
               className={`${styles.headerText} ${styles.dynamicHeader} header-line-height text-accent-cool-darker font-bold maxw-mobile-lg padding-x-1 desktop:padding-x-0`}
             >
-              Response-ready public health data systems
+              Streamlining public health data processing
             </h1>
             <p
-              className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0`}
+              className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0 margin-bottom-2`}
             >
               Public health data is often messy, heterogeneous, and siloed, and
               epidemiologists lack the tools and methods to efficiently turn it
               into meaningful intelligence that can drive timely public health
               action.
             </p>
-            <br />
+
             <p className="font-public-sans line-height-sans-6 padding-right-05 desktop:padding-right-0">
-              The Public Health Data Infrastructure (PHDI) project is part of
-              the Pandemic-Ready Interoperability Modernization Effort (PRIME),
-              a multi-year collaboration between CDC and the U.S. Digital
-              Service (USDS) to strengthen data quality and information
-              technology systems in public health departments.
+              The Data Integration Building Blocks (DIBBs) team,
+              formerly known as the Public Health Data Infrastructure (PHDI) project,
+              develops open source, cloud-based tools that public health departments can
+              integrate into their current workflows to improve data quality and reliability.
             </p>
           </div>
           <div
@@ -78,42 +77,33 @@ export default function Home() {
                 <h2
                   className={`${styles.headerText} header-line-height text-accent-cool-darker font-bold desktop:padding-right-7 padding-y-205`}
                 >
-                  An introduction to Building Blocks and data modernization
+                  How we can help
                 </h2>
-                <div className="text-base-darkest line-height-sans-6">
-                  PHDI&apos;s current body of work also falls within the scope
-                  of CDC&apos;s&nbsp;
-                  <span className="font-semibold text-underline text-primary link">
-                    <a
-                      className="underline text-primary"
-                      href="https://www.cdc.gov/surveillance/projects/dmi-initiative/index.html"
-                      target='_blank'
-                      rel="noreferrer">
-                      Data Modernization Initiative (DMI)
-                    </a>
-                  </span>
-                  ,&nbsp;which is an effort to modernize core public health data
-                  and surveillance infrastructure across the federal and state
-                  public health landscape.
-                  <br />
-                  <br />
-                  <span className="desktop:padding-right-5">
-                    PHDI&apos;s work focuses on building and providing access to
-                    open source, modular software and tooling, known as
-                    “Building Blocks,” that states, territories, localities,
-                    tribes (STLTs), and other public health actors can integrate
-                    into their current workflows to reduce manual processes and
-                    solve challenges when working with public health data. Some
-                    Building Blocks offer relatively simple functionality, like
-                    standardizing patient names, while others perform more
-                    complex tasks, including geocoding and standardizing
-                    addresses.
-                  </span>
-                  <br />
-                  <br />
+                <div className="text-base-darkest line-height-sans-6 font-public-sans line-height-sans">
+                  <p className="font-semibold margin-bottom-2">
+                    Automate your public health data processing so you can focus on taking meaningful public
+                    health action
+                  </p>
+                  <p className="margin-bottom-2">
+                    Our interdisciplinary team of researchers and engineers works to solve your jurisdiction&apos;s data challenges
+                    and integrate our flexible, modern tools into your existing workflows
+                  </p>
+                  <p className="font-semibold margin-bottom-2">
+                    Improve the quality and completeness of your data
+                  </p>
+                  <p className="margin-bottom-2">
+                    Using a pipeline of modular software components known as Building Blocks, we validate,
+                    clean, standardize, and enrich your data — all while reducing the need for manual processes
+                  </p>
+                  <p className="font-semibold margin-bottom-2">
+                    Get the data that you need in the format that you want it
+                  </p>
+                  <p className="margin-bottom-2">
+                    We want to understand your unique data needs and assess how our tooling could make your data more usable
+                  </p>
                   <div className="font-semibold text-underline text-primary link">
-                    <Link href="/about">
-                      More about Building Blocks ›
+                    <Link href="/building-block-info">
+                      Learn about what we&apos;ve built ›
                     </Link>
                   </div>
                 </div>
@@ -127,12 +117,7 @@ export default function Home() {
           Our pilot partners
         </h2>
         <p className="text-center text-base-darkest line-height-sans-6 padding-x-3 desktop:padding-x-9">
-          We work with a range of public health departments to develop and
-          iterate on Building Blocks that solve healthcare
-          <br className="display-inline desktop:display-none" />
-          data-related challenges{' '}
-          <br className="display-inline desktop:display-none" />
-          within their organizations.
+          We work with public health departments to solve their toughest data challenges
         </p>
         <div className="grid-row margin-top-6">
           <div className="desktop:grid-col-6">
@@ -183,14 +168,11 @@ export default function Home() {
           <div
             className={`position-relative ${styles.desktopHeroImage3} maxw-mobile-lg margin-x-auto`}
           >
-            <h2 className="text-center text-bold text-white header-line-height padding-y-205">
-              An invitation to participate
+            <h2 className="text-center text-bold text-white header-line-height padding-y-205 padding-x-205">
+              Want to connect with us?
             </h2>
             <p className="line-height-sans-6 text-white text-center padding-x-4 desktop:padding-x-1">
-              We are currently gathering input from public health agencies and
-              partners to help us define and prioritize future Building Blocks
-              that can help efficiently and effectively collect, use, analyze,
-              and share public health data.
+              Our team will respond to your questions or set up a time to discuss how we can support your work.
             </p>
             <div className="text-center margin-top-3 width-card-lg margin-x-auto">
               <Link href="/engage-with-us">
@@ -198,7 +180,7 @@ export default function Home() {
                   outline
                   className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
                 >
-                  Get Involved
+                  Contact Us
                 </Button>
               </Link>
             </div>
