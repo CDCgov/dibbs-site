@@ -15,9 +15,9 @@ export default function Navbar({ }) {
                 <span className={styles.navbarItemText}>Home</span>
             </a>
         </Link>,
-        <NavigationLink key="two" href='/about' text='What is a Building Block' router={router} onClick={onClick} />,
-        <NavigationLink key="three" href='/product-offerings' text='Our product offerings' router={router} onClick={onClick} />,
-        <NavigationLink key="four" href='/partner-with-us' text='Partner with us' router={router} onClick={onClick} />,
+        <NavigationLink key="two" href='/about' text='About' router={router} onClick={onClick} />,
+        <NavigationLink key="three" href='/products' text='Products' router={router} onClick={onClick} />,
+        <NavigationLink key="four" href='/engage-with-us' text='Engage with us' router={router} onClick={onClick} />,
     ]
 
     return (
@@ -31,7 +31,7 @@ export default function Navbar({ }) {
                             <Link href='/'>
                                 <a className="desktop:padding-1">
                                     <span className={styles.navbarLogoText} href='/phdi-site'>
-                                        Public Health Data Infrastructure
+                                        Data Integration Building Blocks
                                     </span>
                                 </a>
                             </Link>

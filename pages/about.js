@@ -178,12 +178,12 @@ export default function BuildingBlockInfo() {
                   <h2
                     className={`text-white font-semibold text-center margin-bottom-2 ${styles.getStartedHeader}`}
                   >
-                    See what we&apos;ve built
-                  </h2>
+                    See what we & apos;ve built
+                  </h2 >
                   <p className="text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-2">
                     Find out how our modular software could work in  your jurisdiction&apos;s data environment
                   </p>
-                  <Link href="/product-offerings">
+                  <Link href="/products">
                     <Button
                       outline
                       className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
@@ -191,12 +191,12 @@ export default function BuildingBlockInfo() {
                       View our product offerings
                     </Button>
                   </Link>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                </span >
+              </div >
+            </div >
+          </div >
+        </div >
+      </div >
     </div >
   );
 }
