@@ -37,14 +37,14 @@ export default function Home() {
               Streamlining public health data processing
             </h1>
             <p
-              className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0`}
+              className={`font-public-sans line-height-sans-6 font-semibold ${styles.letterSpacingNeg1} padding-right-1 desktop:padding-right-0 margin-bottom-2`}
             >
               Public health data is often messy, heterogeneous, and siloed, and
               epidemiologists lack the tools and methods to efficiently turn it
               into meaningful intelligence that can drive timely public health
               action.
             </p>
-            <br />
+
             <p className="font-public-sans line-height-sans-6 padding-right-05 desktop:padding-right-0">
               The Data Integration Building Blocks (DIBBs) team,
               formerly known as the Public Health Data Infrastructure (PHDI) project,
@@ -80,33 +80,27 @@ export default function Home() {
                   How we can help
                 </h2>
                 <div className="text-base-darkest line-height-sans-6 font-public-sans line-height-sans">
-                  <p className="font-semibold">
+                  <p className="font-semibold margin-bottom-2">
                     Automate your public health data processing so you can focus on taking meaningful public
                     health action
                   </p>
-                  <br />
-                  <p>
+                  <p className="margin-bottom-2">
                     Our interdisciplinary team of researchers and engineers works to solve your jurisdiction&apos;s data challenges
                     and integrate our flexible, modern tools into your existing workflows
                   </p>
-                  <br />
-                  <p className="font-semibold">
+                  <p className="font-semibold margin-bottom-2">
                     Improve the quality and completeness of your data
                   </p>
-                  <br />
-                  <p>
+                  <p className="margin-bottom-2">
                     Using a pipeline of modular software components known as Building Blocks, we validate,
                     clean, standardize, and enrich your data — all while reducing the need for manual processes
                   </p>
-                  <br />
-                  <p className="font-semibold">
+                  <p className="font-semibold margin-bottom-2">
                     Get the data that you need in the format that you want it
                   </p>
-                  <br />
-                  <p>
+                  <p className="margin-bottom-2">
                     We want to understand your unique data needs and assess how our tooling could make your data more usable
                   </p>
-                  <br />
                   <div className="font-semibold text-underline text-primary link">
                     <Link href="/building-block-info">
                       Learn about what we&apos;ve built ›

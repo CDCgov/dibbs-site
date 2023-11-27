@@ -22,7 +22,7 @@ export default function Navbar({ }) {
 
     return (
         <>
-            <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+            <a className="usa-skipnav" href="#main-content">Skip to main content</a>
             <div className={`usa-overlay ${expanded ? 'is-visible' : ''}`}></div>
             <Header basic={true} className='bg-primary-darker'>
                 <div className="desktop:padding-bottom-2 usa-nav-container max-w-full">
