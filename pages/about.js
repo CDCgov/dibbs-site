@@ -10,11 +10,11 @@ import organizationIcon from '../public/icons/organization.svg';
 import Link from 'next/link';
 import Head from 'next/head';
 
-export default function BuildingBlockInfo() {
+export default function About() {
   return (
     <div>
       <Head>
-        <title>Building Blocks - Public Health Data Infrastructure</title>
+        <title>Building Blocks - Data Integration Building Blocks</title>
       </Head>
       <div className="grid-container padding-x-205 margin-y-5 desktop:padding-top-5 maxw-widescreen desktop:padding-x-9 desktop:margin-y-7 desktop:margin-y-0">
         <div className="grid-row">
@@ -200,7 +200,7 @@ export default function BuildingBlockInfo() {
                     You can now test out Building Blocks in your
                     jurisdiction&apos;s data environment
                   </p>
-                  <Link href="/product-offerings">
+                  <Link href="/products">
                     <Button
                       outline
                       className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}

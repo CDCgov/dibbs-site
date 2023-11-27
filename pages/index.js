@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Public Health Data Infrastructure</title>
+        <title>Data Integration Building Blocks</title>
       </Head>
       <div className="grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg padding-x-205 desktop:padding-x-0">
         <div className="grid-row desktop:display-none">
@@ -181,7 +181,7 @@ export default function Home() {
               Our team will respond to your questions or set up a time to discuss how we can support your work.
             </p>
             <div className="text-center margin-top-3 width-card-lg margin-x-auto">
-              <Link href="/partner-with-us">
+              <Link href="/engage-with-us">
                 <Button
                   outline
                   className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
