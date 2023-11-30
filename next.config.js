@@ -8,8 +8,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '/'
   },
-  basePath: "/dibb-site",
-  assetPrefix: '/dibb-site',
+  basePath: "/dibbs-site",
+  assetPrefix: '/dibbs-site',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
