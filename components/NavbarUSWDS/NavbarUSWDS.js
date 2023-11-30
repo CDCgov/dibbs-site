@@ -30,7 +30,7 @@ export default function Navbar({ }) {
                         <Title className='text-base-lightest'>
                             <Link href='/'>
                                 <a className="desktop:padding-1">
-                                    <span className={styles.navbarLogoText} href='/phdi-site'>
+                                    <span className={styles.navbarLogoText} href='/dibbs-site'>
                                         Data Integration Building Blocks
                                     </span>
                                 </a>
