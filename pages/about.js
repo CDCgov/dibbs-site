@@ -224,7 +224,7 @@ export default function BuildingBlockInfo() {
                   <p className="text-white margin-bottom-2 desktop:margin-bottom-3 padding-x-205 desktop:padding-x-2">
                     Find out how our modular software could work in  your jurisdiction&apos;s data environment
                   </p>
-                  <Link href='/phdi-site/products'>
+                  <Link href='/dibbs-site/products'>
                     <Button
                         outline
                         className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
