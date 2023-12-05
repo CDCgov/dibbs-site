@@ -102,7 +102,7 @@ export default function Home() {
                     We want to understand your unique data needs and assess how our tooling could make your data more usable
                   </p>
                   <div className="font-semibold text-underline text-primary link">
-                    <Link href="/building-block-info">
+                    <Link href="/products">
                       Learn about what we&apos;ve built ›
                     </Link>
                   </div>
