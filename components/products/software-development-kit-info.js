@@ -1,6 +1,6 @@
 import styles from "../../styles/Home.module.scss";
 import {Link} from "@trussworks/react-uswds";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import cloudIcon from "../../public/icons/cloud.svg";
 import fhirConverter from "../../public/icons/fhirConverter.svg";
 import locationIcon from "../../public/icons/location.svg";
@@ -12,7 +12,7 @@ import transport from "../../public/icons/transport.svg";
 
 
 export const SoftwareDevelopmentKitInfo = () => {
-    return(
+    return (
         <div
             className={`grid-container desktop:radius-md bg-white padding-y-5 desktop:padding-top-5 desktop:padding-bottom-3  padding-x-205 desktop:padding-x-5 ${styles.dynamicShadow}`}
         >
@@ -44,7 +44,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={cloudIcon}/>
+                                    <Image
+                                        alt=""
+                                        src={cloudIcon}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -58,7 +64,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={fhirConverter}/>
+                                    <Image
+                                        alt=""
+                                        src={fhirConverter}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -72,7 +84,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={locationIcon}/>
+                                    <Image
+                                        alt=""
+                                        src={locationIcon}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -85,7 +103,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center ">
-                                    <Image alt="" src={organization}/>
+                                    <Image
+                                        alt=""
+                                        src={organization}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -100,7 +124,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={link}/>
+                                    <Image
+                                        alt=""
+                                        src={link}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -113,7 +143,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={tabulation}/>
+                                    <Image
+                                        alt=""
+                                        src={tabulation}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -126,7 +162,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={transport}/>
+                                    <Image
+                                        alt=""
+                                        src={transport}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -139,7 +181,13 @@ export const SoftwareDevelopmentKitInfo = () => {
                         <div className="desktop:grid-col-3">
                             <div className="grid-row">
                                 <div className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                                    <Image alt="" src={validation}/>
+                                    <Image
+                                        alt=""
+                                        src={validation}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto"
+                                        }} />
                                 </div>
                                 <Link
                                     className="font-semibold flex-align-self-center"
@@ -153,5 +201,5 @@ export const SoftwareDevelopmentKitInfo = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }

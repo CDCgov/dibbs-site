@@ -3,7 +3,7 @@ import '@trussworks/react-uswds/lib/uswds.css';
 import '@trussworks/react-uswds/lib/index.css';
 import { Button } from '@trussworks/react-uswds';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import desktopHero1 from './../public/desktop-hero-1.svg';
 import desktopHero2 from '../public/desktop-hero-2.svg';
 import desktopHero3 from '../public/desktop-hero-3.svg';
@@ -26,7 +26,7 @@ export default function Home() {
       <div className="grid-container margin-y-5 desktop:margin-y-0 maxw-desktop-lg padding-x-205 desktop:padding-x-0">
         <div className="grid-row desktop:display-none">
           <div className="text-center grid-col-12">
-            <Image alt="" src={mobileDesktopHero1} layout="fixed" />
+            <Image alt="" src={mobileDesktopHero1} />
           </div>
         </div>
         <div className="grid-row desktop:margin-top-8 desktop:margin-top-3">
@@ -55,7 +55,7 @@ export default function Home() {
           <div
             className={`desktop:grid-col-7 display-none desktop:display-inline-block ${styles.dekstopHeroImage1}`}
           >
-            <Image alt="" src={desktopHero1} layout="fill" />
+            <Image alt="" src={desktopHero1} fill sizes="100vw" />
           </div>
         </div>
       </div>
@@ -63,14 +63,14 @@ export default function Home() {
         <div className="grid-container padding-y-5 desktop:padding-y-0 maxw-desktop-lg padding-x-205 desktop:padding-x-0">
           <div className="grid-row desktop:display-none">
             <div className="text-center grid-col-12">
-              <Image alt="" src={mobileDesktopHero2} layout="fixed" />
+              <Image alt="" src={mobileDesktopHero2} />
             </div>
           </div>
           <div className="grid-row">
             <div
               className={`desktop:grid-col-6 ${styles.desktopHeroImage2} display-none desktop:display-inline-block`}
             >
-              <Image alt="" src={desktopHero2} layout="fill" />
+              <Image alt="" src={desktopHero2} fill sizes="100vw" />
             </div>
             <div className="desktop:grid-col-6 desktop:margin-y-7">
               <div className="desktop:margin-left-4">
@@ -123,10 +123,10 @@ export default function Home() {
           <div className="desktop:grid-col-6">
             <div className="padding-bottom-3 desktop:padding-bottom-0 desktop:padding-x-3 text-center">
               <div className="display-none desktop:display-block desktop:margin-top-1">
-                <Image alt="" src={vdhImage} layout="fixed" />
+                <Image alt="" src={vdhImage} />
               </div>
               <div className="desktop:display-none">
-                <Image alt="" src={mobileVirginia} layout="fixed" />
+                <Image alt="" src={mobileVirginia} />
               </div>
 
             </div>
@@ -134,10 +134,10 @@ export default function Home() {
           <div className="desktop:grid-col-6">
             <div className="margin-bottom-5 desktop:margin-bottom-0 margin-top-3 desktop:margin-top-0 desktop:padding-x-3 text-center">
               <div className="display-none desktop:display-block">
-                <Image alt="" src={lacountyImage} layout="fixed" />
+                <Image alt="" src={lacountyImage} />
               </div>
               <div className="desktop:display-none">
-                <Image alt="" src={mobileLac} layout="fixed" />
+                <Image alt="" src={mobileLac} />
               </div>
 
             </div>
@@ -151,18 +151,19 @@ export default function Home() {
         >
           <div className="grid-row desktop:display-none">
             <div className="grid-col-12 text-center">
-              <Image alt="" src={mobileDesktopHero3} />
+              <Image
+                alt=""
+                src={mobileDesktopHero3}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
           </div>
           <div
             className={`position-relative display-none desktop:display-block margin-bottom-4`}
           >
-            <Image
-              className="position-relative"
-              alt=""
-              src={desktopHero3}
-              layout=""
-            />
+            <Image className="position-relative" alt="" src={desktopHero3} />
           </div>
 
           <div

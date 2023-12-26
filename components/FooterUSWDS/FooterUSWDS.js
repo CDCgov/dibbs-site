@@ -1,5 +1,5 @@
 import { Address, FooterNav, Logo, Footer } from "@trussworks/react-uswds";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import cdcLogo from '../../public/icons/cdc.svg'
 import styles from '../../styles/Home.module.scss';
@@ -78,7 +78,10 @@ export default function FooterUSWDS() {
                                     className="usa-footer__logo-img text-base-lightest desktop:grid-col-auto grid-col-auto"
                                     alt='CDC Logo'
                                     src={cdcLogo}
-                                />
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
                                 <div className="margin-top-05 text-base-lightest desktop:grid-col-auto grid-col-9 font-public-sans-md font-weight-md line-height-md">
                                     Centers for Disease Control and Prevention
                                 </div>

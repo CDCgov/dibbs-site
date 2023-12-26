@@ -8,7 +8,7 @@ import {
 
 import architectureImage from '../public/dibbs-architecture.png'
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import Head from 'next/head';
 
@@ -23,17 +23,12 @@ export default function ProductOffering() {
                 <div className="grid-row">
                     <div
                         className="desktop:grid-col-12 text-center desktop:display-none">
-                        <Image
-                            alt=""
-                            src={mobileProductOfferingsImage}
-                            layout="fixed"
-                        ></Image>
+                        <Image alt="" src={mobileProductOfferingsImage}></Image>
                     </div>
                     <div
                         className={`display-none desktop:grid-col-6 desktop:display-block ${styles.productOfferingsImage}`}
                     >
-                        <Image alt="" src={productOfferingsImage}
-                               layout="fixed"></Image>
+                        <Image alt="" src={productOfferingsImage}></Image>
                     </div>
                     <div
                         className="desktop:grid-col-6 margin-top-2 desktop:margin-top-0">
@@ -82,13 +77,7 @@ export default function ProductOffering() {
                         </div>
                         <div
                             className="grid-row display-none desktop:display-inline-block margin-top-3 flex-justify-center">
-                            <Image
-                                alt=""
-                                src={architectureImage}
-                                layout="fixed"
-                                height="517"
-                                width="941"
-                            />
+                            <Image alt="" src={architectureImage} height="517" width="941" />
                         </div>
                     </div>
                 </div>

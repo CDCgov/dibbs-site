@@ -5,8 +5,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    loader: 'akamai',
-    path: '/'
+    loader: "custom",
+    loaderFile: "./akamai-loader.js"
   },
   basePath: "/dibbs-site",
   assetPrefix: '/dibbs-site',

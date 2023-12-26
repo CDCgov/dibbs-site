@@ -1,6 +1,6 @@
 import styles from "../../styles/Home.module.scss";
 import {Link} from "@trussworks/react-uswds";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import cloudIcon from "../../public/icons/cloud.svg";
 import fhirConverter from "../../public/icons/fhirConverter.svg";
 import locationIcon from "../../public/icons/location.svg";
@@ -43,7 +43,13 @@ export const BuildingBlocksInfo = () => {
                     <div className="grid-row padding-top-3">
                         <div
                             className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                            <Image alt="" src={validation}/>
+                            <Image
+                                alt=""
+                                src={validation}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                         <Link
                             className="font-semibold flex-align-self-center padding-bottom-1"
@@ -59,7 +65,13 @@ export const BuildingBlocksInfo = () => {
                     <div className="grid-row padding-top-3">
                         <div
                             className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                            <Image alt="" src={fhirConverter}/>
+                            <Image
+                                alt=""
+                                src={fhirConverter}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                         <Link
                             className="font-semibold flex-align-self-center padding-bottom-1"
@@ -76,7 +88,13 @@ export const BuildingBlocksInfo = () => {
                     <div className="grid-row padding-top-3">
                         <div
                             className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                            <Image alt="" src={organization}/>
+                            <Image
+                                alt=""
+                                src={organization}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                         <Link
                             className="font-semibold flex-align-self-center padding-bottom-1"
@@ -103,7 +121,13 @@ export const BuildingBlocksInfo = () => {
                     <div className="grid-row padding-top-3">
                         <div
                             className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
-                            <Image alt="" src={link}/>
+                            <Image
+                                alt=""
+                                src={link}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                         <Link
                             className="font-semibold flex-align-self-center padding-bottom-1"
@@ -117,7 +141,13 @@ export const BuildingBlocksInfo = () => {
                     <div className="grid-row padding-top-3 padding-bottom-2">
                         <div
                             className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center ">
-                            <Image alt="" src={messageParser}/>
+                            <Image
+                                alt=""
+                                src={messageParser}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                         <Link
                             className="font-semibold flex-align-self-center padding-bottom-1"
@@ -131,5 +161,5 @@ export const BuildingBlocksInfo = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
