@@ -213,7 +213,7 @@ export default function BuildingBlockInfo() {
                         {/*  </div>*/}
                         <div className="desktop:grid-col-4">
                             <div
-                                className={`bg-accent-cool-dark desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-56 flex-align-center flex flex-row`}
+                                className={`bg-accent-cool-darker desktop:radius-md ${styles.dynamicShadow} padding-y-6 padding-x-3 text-center lg:h-56 flex-align-center flex flex-row`}
                             >
                 <span>
                   <h2
