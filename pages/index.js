@@ -3,7 +3,7 @@ import '@trussworks/react-uswds/lib/uswds.css';
 import '@trussworks/react-uswds/lib/index.css';
 import { Button } from '@trussworks/react-uswds';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import desktopHero1 from './../public/desktop-hero-1.svg';
 import desktopHero2 from '../public/desktop-hero-2.svg';
 import desktopHero3 from '../public/desktop-hero-3.svg';

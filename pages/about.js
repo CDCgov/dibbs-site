@@ -1,5 +1,5 @@
 import {Button} from '@trussworks/react-uswds';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../styles/Home.module.scss';
 import buildingBlockImage from '../public/building-block-1.svg';
 import mobileBuildingBlockImage from '../public/mobile/mobile-building-block.svg';

@@ -8,7 +8,7 @@ import {
 
 import architectureImage from '../public/dibbs-architecture.png'
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import Head from 'next/head';
 

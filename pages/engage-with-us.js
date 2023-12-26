@@ -5,7 +5,7 @@ import getInvolved2 from '../public/get-involved-2.svg';
 import mobileGetInvolved1 from '../public/mobile/get-involved-1.svg';
 import mobileGetInvolved2 from '../public/mobile/get-involved-2.svg';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Head from 'next/head';
 
 export default function GetInvolved() {

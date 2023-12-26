@@ -1,5 +1,5 @@
 import { Address, FooterNav, Logo, Footer } from "@trussworks/react-uswds";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import cdcLogo from '../../public/icons/cdc.svg'
 import styles from '../../styles/Home.module.scss';

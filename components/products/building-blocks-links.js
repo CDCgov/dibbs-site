@@ -1,6 +1,6 @@
 import styles from "../../styles/Home.module.scss";
 import {Link} from "@trussworks/react-uswds";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import cloudIcon from "../../public/icons/cloud.svg";
 import fhirConverter from "../../public/icons/fhirConverter.svg";
 import locationIcon from "../../public/icons/location.svg";
