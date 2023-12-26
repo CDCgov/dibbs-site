@@ -175,7 +175,7 @@ export default function Home() {
               Our team will respond to your questions or set up a time to discuss how we can support your work.
             </p>
             <div className="text-center margin-top-3 width-card-lg margin-x-auto">
-              <Link href="/engage-with-us">
+              <Link href="/engage-with-us" legacyBehavior>
                 <Button
                   outline
                   className={`${styles.buttonAccent} desktop:padding-x-4 padding-y-2`}
