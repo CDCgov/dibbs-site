@@ -1,12 +1,5 @@
 import {Button} from '@trussworks/react-uswds';
-import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
-import buildingBlockImage from '../public/building-block-1.svg';
-import mobileBuildingBlockImage from '../public/mobile/mobile-building-block.svg';
-import locationIcon from '../public/icons/location.svg';
-import linkIcon from '../public/icons/link.svg';
-import codeIcon from '../public/icons/code.svg';
-import organizationIcon from '../public/icons/organization.svg';
 import {Link} from '@trussworks/react-uswds';
 import Head from 'next/head';
 
