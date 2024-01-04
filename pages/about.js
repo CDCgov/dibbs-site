@@ -93,7 +93,7 @@ export default function BuildingBlockInfo() {
 
                             </p>
                             <ul className="usa-list list-disc desktop:padding-right-4">
-                                <li> Building a cloud-based data pipeline “Starter Kit”
+                                <li> Building a cloud-based data pipeline
                                     that
                                     comes with a core set of Building Blocks to increase
                                     data processing speed,

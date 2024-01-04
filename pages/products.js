@@ -57,7 +57,7 @@ export default function ProductOffering() {
                     <h2
                         className={`lg:font-semibold text-2xl lg:text-3xl margin-bottom-105 ${styles.headerText} text-accent-cool-darker`}
                     >
-                        Starter Kit Pipeline
+                        DIBBs Pipeline
                     </h2>
                     <div
                         className={`lg:text-base font-public-sans-xs ${styles.subBodyTextLineHeight}`}

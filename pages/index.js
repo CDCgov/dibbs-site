@@ -85,7 +85,7 @@ export default function Home() {
                     health action
                   </p>
                   <p className="margin-bottom-2">
-                    Our interdisciplinary team of researchers and engineers works to solve your jurisdiction&apos;s data challenges
+                    Our interdisciplinary team of researchers, designers, and engineers works to solve your jurisdiction&apos;s data challenges
                     and integrate our flexible, modern tools into your existing workflows
                   </p>
                   <p className="font-semibold margin-bottom-2">

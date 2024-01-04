@@ -26,8 +26,8 @@ export const BuildingBlocksInfo = () => {
             >
                 <div className={`${styles.sdkInfoMaxWidth}`}>
                     Below, you will find a description of how the five core Building
-                    Blocks work to clean and transform data as part of the Starter Kit
-                    data pipeline. To see the full suite of containerized services,
+                    Blocks work to clean and transform data as part of the DIBBs
+                    pipeline. To see the full suite of containerized services,
                     check out our&nbsp;
                     <span>
                     <Link
