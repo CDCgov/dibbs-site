@@ -32,7 +32,7 @@ export default function BuildingBlockInfo() {
                                     href="https://www.cdc.gov/surveillance/pdfs/PRIME_1-sheet_single-page.pdf"
                                     target="_blank">
                                     CDC&apos;s public health data strategy
-                                </Link>.
+                                </Link>
                                 and mission to develop a robust public health data
                                 ecosystem
                             </p>
