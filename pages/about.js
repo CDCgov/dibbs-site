@@ -34,7 +34,7 @@ export default function BuildingBlockInfo() {
                   CDC&apos;s public health data strategy
                 </Link>
                 &nbsp;and mission to develop a robust public health data
-                ecosystem
+                ecosystem.
               </p>
               <p className="font-semibold font-family-public-sans-1 margin-bottom-1">
                 Vision
