@@ -4,38 +4,47 @@ import Link from "next/link";
 import cdcLogo from '../../public/icons/cdc.svg'
 import styles from '../../styles/Home.module.scss';
 
-
-
-
 export default function FooterUSWDS() {
     const returnToTop = () => {
         console.log('hi')
     }
 
     const createLinks = () => {
-        return ([
-            <Link href='/' key='home'>
-                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+        return [
+            <Link
+                href='/'
+                key='home'
+                className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                
                     Home
-                </a>
+                
             </Link>,
-            <Link href='/about' key='building-block'>
-                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link
+                href='/about'
+                key='building-block'
+                className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                
                     What is a building block?
-                </a>
+                
             </Link>,
-            <Link href='/products' key='product-offerings'>
-                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link
+                href='/products'
+                key='product-offerings'
+                className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                
                     Our product offerings
-                </a>
+                
             </Link>,
-            <Link href='/engage-with-us' key='partner'>
-                <a className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+            <Link
+                href='/engage-with-us'
+                key='partner'
+                className="font-public-sans-md padding-x-0 desktop:padding-x-05 usa-footer__primary-link text-base-lightest">
+                
                     Partner with us
-                </a>
+                
             </Link>,
 
-        ])
+        ];
     }
 
     return (
@@ -69,7 +78,10 @@ export default function FooterUSWDS() {
                                     className="usa-footer__logo-img text-base-lightest desktop:grid-col-auto grid-col-auto"
                                     alt='CDC Logo'
                                     src={cdcLogo}
-                                />
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
                                 <div className="margin-top-05 text-base-lightest desktop:grid-col-auto grid-col-9 font-public-sans-md font-weight-md line-height-md">
                                     Centers for Disease Control and Prevention
                                 </div>

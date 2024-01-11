@@ -1,12 +1,15 @@
 const path = require('path');
 
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    loader: 'akamai',
-    path: '/'
+    loader: "custom",
+    loaderFile: "./akamai-loader.js"
   },
   basePath: "/dibbs-site",
   assetPrefix: '/dibbs-site',
