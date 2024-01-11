@@ -29,7 +29,7 @@ export default function BuildingBlockInfo() {
                 that they can take timely public health action. Our work
                 contributes to&nbsp;
                 <Link
-                  href="https://www.cdc.gov/surveillance/pdfs/PRIME_1-sheet_single-page.pdf"
+                  href="https://www.cdc.gov/ophdst/public-health-data-strategy/"
                   target="_blank">
                   CDC&apos;s public health data strategy
                 </Link>
