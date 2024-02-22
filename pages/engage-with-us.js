@@ -27,7 +27,7 @@ export default function GetInvolved() {
                     <div
                         className="text-center margin-top-2 desktop:margin-top-4 padding-x-5 desktop:padding-x-0 padding-top-1">
                         <Button className="desktop:padding-x-7 padding-y-2"
-                                onClick={() => window.location = 'mailto:dmibuildingblocks@cdc.gov'}>
+                                onClick={() => window.location = 'mailto:dibbs@cdc.gov'}>
 
                             Contact Us
                         </Button>
