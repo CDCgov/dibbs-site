@@ -9,6 +9,7 @@ import link from "../../public/icons/link.svg";
 import tabulation from "../../public/icons/tabulation.svg";
 import validation from "../../public/icons/validation.svg";
 import messageParser from "../../public/icons/messageParser.svg";
+import orchestration from "../../public/icons/orchestration.svg";
 
 
 export const BuildingBlocksInfo = () => {
@@ -157,6 +158,26 @@ export const BuildingBlocksInfo = () => {
                         </Link>
                         Extracts relevant data from an eCR into a tabular format (i.e.
                         spreadsheet); customizable depending on user needs
+                    </div>
+                    <div className="grid-row padding-top-3">
+                        <div
+                            className="display-none desktop:display-inline-block margin-right-2 flex-align-self-center">
+                            <Image
+                                alt=""
+                                src={orchestration}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
+                        </div>
+                        <Link
+                            className="font-semibold flex-align-self-center padding-bottom-1"
+                            href="https://cdcgov.github.io/phdi/latest/containers/orchestration.html"
+                            target='_blank'>
+                            Orchestration
+                        </Link>
+                            Enables coordinated execution of DIBBs Building Blocks in
+                            any order, allowing for fully automated workflows
                     </div>
                 </div>
             </div>
