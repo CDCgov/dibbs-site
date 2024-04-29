@@ -39,11 +39,11 @@ export default function GetInvolved() {
                             className="padding-x-205 padding-y-5 bg-primary-lighter desktop:radius-md desktop:padding-x-4">
                             <div
                                 className="text-center margin-bottom-105 desktop:display-none">
-                                <Image alt="" src={mobileGetInvolved1} />
+                                <Image alt="" className={"margin-x-auto"} src={mobileGetInvolved1} />
                             </div>
                             <div
                                 className="text-center margin-bottom-105 display-none desktop:display-block">
-                                <Image alt="" src={getInvolved1} />
+                                <Image alt="" className={"margin-x-auto"} src={getInvolved1} />
                             </div>
                             <h2
                                 className={`text-center text-accent-cool-darker margin-bottom-105 ${styles.partnerItemHeaders}`}
@@ -63,11 +63,11 @@ export default function GetInvolved() {
                             className="padding-x-205 desktop:padding-x-4 padding-y-5 bg-primary-lighter radius-md">
                             <div
                                 className="text-center margin-bottom-105 desktop:display-none">
-                                <Image alt="" src={mobileGetInvolved2} />
+                                <Image alt="" className={"margin-x-auto"} src={mobileGetInvolved2} />
                             </div>
                             <div
                                 className="text-center margin-bottom-105 display-none desktop:display-block">
-                                <Image alt="" src={getInvolved2} />
+                                <Image alt="" className={"margin-x-auto"} src={getInvolved2} />
                             </div>
                             <h2
                                 className={`text-center text-accent-cool-darker ${styles.partnerItemHeaders} margin-top-205 desktop:margin-top-0 margin-bottom-105`}
