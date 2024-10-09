@@ -1,10 +1,4 @@
-# Overview
-
-The PHDI site is the landing page for the PHDI package. The goal is to be informative for different United States public health departments to understand the purpose of the PHDI package and the different building blocks. The site also links to various parts of the PHDI repo as well as other government pages to get involved. The static site uses the [NextJS framework](https://nextjs.org/).
-
-## Design and Accessibility
-
-The designs were created by the Skylight team using the [USWDS](https://designsystem.digital.gov/) framework. The USWDS framework includes accessibility designs that complies with [government standards](https://designsystem.digital.gov/documentation/accessibility/). In addition, the [Lighthouse CI](https://web.dev/lighthouse-ci/) is used to ensure accessibility from a programmatic standpoint.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -14,8 +8,29 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000/dibbs-site](http://localhost:3000/dibbs-site) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
