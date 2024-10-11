@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import { getMarkdownContent } from "./utils/markdown";
+import ReactMarkdown from 'react-markdown';
 
-export default function Home() {
+export default async function Home() {
+  const markdownContent = await getMarkdownContent('homepage.md');
+
   return (
     <div>
         <h1>Home</h1>
@@ -34,6 +38,11 @@ export default function Home() {
             </Link>
           </li>
         </ul>
+        <div>
+          <ReactMarkdown>
+            {markdownContent}
+          </ReactMarkdown>
+        </div>
     </div>
   );
 }
