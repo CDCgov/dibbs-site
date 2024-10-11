@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import * as matter from 'gray-matter';
+import matter from 'gray-matter';
 
 export async function getMarkdownContent(fileName: string) {
   const markdownFilePath = path.join(process.cwd(), 'src/content', fileName);
