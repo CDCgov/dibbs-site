@@ -15,7 +15,7 @@ const nextConfig = {
   assetPrefix: '/dibbs-site',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-  },
+  }
 }
 
 module.exports = nextConfig

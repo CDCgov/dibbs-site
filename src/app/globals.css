@@ -1,3 +1,6 @@
+@import '@trussworks/react-uswds/lib/uswds.css';
+@import '@trussworks/react-uswds/lib/index.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +8,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-teal: #224A58;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,8 +19,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* color: var(--foreground);
+  background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -28,4 +32,29 @@ body {
 h1 {
   margin: 2rem 0 2rem 0;
   font-size: larger;
+}
+
+.usa-logo a {
+  color: #ffffff;
+}
+
+.bg-background-teal {
+  background-color: var(--header-teal);
+}
+
+@media (min-width: 64em) {
+    .usa-logo {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.flex-vertical-center {
+  display: flex;
+  align-items: center !important;
+  height: auto;
 }
