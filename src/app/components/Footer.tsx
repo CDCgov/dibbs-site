@@ -1,11 +1,10 @@
 "use client"
-import { Header, NavMenuButton, PrimaryNav, Title } from "@trussworks/react-uswds";
+import { Header, PrimaryNav } from "@trussworks/react-uswds";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 import styles from "../styles/Home.module.scss"
-import getConfig from 'next/config';
 
 interface NavigationLinkProps {
   href: string;
