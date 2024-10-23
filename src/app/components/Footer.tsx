@@ -12,7 +12,7 @@ interface NavigationLinkProps {
   onClick?: () => void;
 }
 
-export default function Footer({ }) {
+export default function Footer() {
     const basePath = "/dibbs-site";
 
     const [expanded, setExpanded] = React.useState(false)
