@@ -1,14 +1,15 @@
-@import '@trussworks/react-uswds/lib/uswds.css';
-@import '@trussworks/react-uswds/lib/index.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@trussworks/react-uswds/lib/uswds.css';
+@import '@trussworks/react-uswds/lib/index.css';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --header-teal: #224A58;
+  --background-light-blue: #DCECF3;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,5 +57,57 @@ h1 {
 .flex-vertical-center {
   display: flex;
   align-items: center !important;
+  vertical-align: center;
   height: auto;
+}
+
+.flex-center {
+  text-align: center;
+}
+
+.usa-section--light-blue {
+  background-color: var(--background-light-blue);
+}
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50.28px;
+  text-align: left;
+}
+
+h2 {
+  color: #224A58;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+ul {
+  margin-bottom:1em;
+  margin-top:1em;
+  line-height:1.5;
+  padding-left:3ch;
+  list-style: disc;
+}
+ul:last-child{
+  margin-bottom:0;
+}
+ul, ol{
+  margin-top:0.25em;
+}
+ul li{
+  margin-bottom:0.25em;
+  max-width:68ex;
+}
+ul li:last-child{
+  margin-bottom:0;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
