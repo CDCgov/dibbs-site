@@ -6,10 +6,8 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import styles from "../styles/Home.module.scss"
 
-interface NavigationLinkProps {
-  href: string;
-  text: string;
-  onClick?: () => void;
+interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
+  children: React.ReactNode;
 }
 
 export default function Footer() {
