@@ -12,7 +12,7 @@ interface NavigationLinkProps {
   onClick?: () => void;
 }
 
-export default function Navbar({ }) {
+export default function Navbar() {
     const basePath = "/dibbs-site";
 
     const [expanded, setExpanded] = React.useState(false)
