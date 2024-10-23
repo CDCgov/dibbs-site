@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
-import Navbar from "./components/NavbarUSWDS";
+import Navbar from "./components/Header";
 import Footer from "./components/Footer";
-import USABanner from "./components/USAWebsite";
+import USABanner from "./components/UsaBanner";
 
 export const metadata: Metadata = {
   title: "DIBBS Site",

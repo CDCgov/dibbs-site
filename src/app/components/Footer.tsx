@@ -2,13 +2,9 @@
 import { Header, PrimaryNav } from "@trussworks/react-uswds";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import React from "react";
 import styles from "../styles/Home.module.scss"
-
-interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
-  children: React.ReactNode;
-}
+import { NavigationLink} from "./Header"
 
 export default function Footer() {
     const basePath = "/dibbs-site";
@@ -26,10 +22,27 @@ export default function Footer() {
             <span className={styles.navbarItemText}>Home</span>
 
         </Link>,
-        <NavigationLink key="two" href={`${basePath}/`} text='Home' onClick={onClick} />,
-        <NavigationLink key="two" href='/our-products' text='Our products' onClick={onClick} />,
-        <NavigationLink key="two" href='/our-products' text='Case studies' onClick={onClick} />,
-        <NavigationLink key="three" href='/engage-with-us' text='Engage with us' onClick={onClick} />
+        (
+          <NavigationLink key="two" href={`${basePath}/`} onClick={onClick}>
+            Home
+          </NavigationLink>
+        ),
+        (
+          <NavigationLink key="two" href={`${basePath}/our-products`} onClick={onClick}>
+            Our products
+          </NavigationLink>
+        ),
+        (
+          <NavigationLink key="two" href={`${basePath}/our-products`} onClick={onClick}>
+            Case studies
+          </NavigationLink>
+        ),
+        (
+          <NavigationLink key="three" href={`${basePath}/engage-with-us`} onClick={onClick}>
+            Engage with us
+          </NavigationLink>
+        )
+        
     ]
 
     return <>
@@ -56,14 +69,4 @@ export default function Footer() {
           </div>
         </Header>
     </>;
-}
-
-function NavigationLink({ href, text, onClick }: NavigationLinkProps) {
-    const pathname = usePathname(); // Use usePathname hook to get the current path
-    const isActive = pathname === href;
-    return (
-        (<Link href={href} passHref className={`usa-nav__link`} onClick={onClick}>
-            <span className={(isActive && "navbar-item-active") + ' ' + styles.navbarItemText}>{text}</span>
-        </Link>)
-    );
 }

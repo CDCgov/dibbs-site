@@ -5,11 +5,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 import styles from "../styles/Home.module.scss";
+import { LinkProps } from "next/link";
 
-interface NavigationLinkProps {
-  href: string;
-  text: string;
-  onClick?: () => void;
+interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
+  children: React.ReactNode;
 }
 
 export default function Navbar() {
@@ -28,9 +27,22 @@ export default function Navbar() {
             <span className={styles.navbarItemText}>Home</span>
 
         </Link>,
-        <NavigationLink key="two" href='/our-products' text='Our products' onClick={onClick} />,
-        <NavigationLink key="two" href='/our-products' text='Case studies' onClick={onClick} />,
-        <NavigationLink key="three" href='/engage-with-us' text='Engage with us' onClick={onClick} />
+        (
+          <NavigationLink key="two" href='/our-products' onClick={onClick}>
+            Our products
+          </NavigationLink>
+        ),
+        (
+          <NavigationLink key="two" href='/our-products' onClick={onClick}>
+            Case studies
+          </NavigationLink>
+        ),
+        (
+          <NavigationLink key="three" href='/engage-with-us' onClick={onClick}>
+            Engage with us
+          </NavigationLink>
+        )
+        
     ]
 
     return <>
@@ -61,12 +73,12 @@ export default function Navbar() {
     </>;
 }
 
-function NavigationLink({ href, text, onClick }: NavigationLinkProps) {
+export function NavigationLink({ href, children, onClick }: NavigationLinkProps) {
     const pathname = usePathname(); // Use usePathname hook to get the current path
     const isActive = pathname === href;
     return (
         (<Link href={href} passHref className={`usa-nav__link`} onClick={onClick}>
-            <span className={(isActive && "navbar-item-active") + ' ' + styles.navbarItemText}>{text}</span>
+            <span className={(isActive && "navbar-item-active") + ' ' + styles.navbarItemText}>{children}</span>
         </Link>)
     );
 }
