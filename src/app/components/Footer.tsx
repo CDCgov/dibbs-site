@@ -1,13 +1,13 @@
-"use client";
-import { Header, PrimaryNav } from "@trussworks/react-uswds";
-import Link from "next/link";
-import Image from "next/image";
-import React from "react";
-import styles from "../styles/Home.module.scss";
-import { NavigationLink } from "./Header";
+'use client';
+import { Header, PrimaryNav } from '@trussworks/react-uswds';
+import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
+import styles from '../styles/Home.module.scss';
+import { NavigationLink } from './Header';
 
 export default function Footer() {
-  const basePath = "/dibbs-site";
+  const basePath = '/dibbs-site';
 
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
@@ -52,7 +52,7 @@ export default function Footer() {
                     width={200}
                     height={40}
                     alt=""
-                    className={"margin-x-0"}
+                    className={'margin-x-0'}
                     src={`${basePath}/images/CDC.svg`}
                   />
                 </a>

@@ -1,18 +1,18 @@
-"use client";
-import { Header, PrimaryNav } from "@trussworks/react-uswds";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import React from "react";
-import styles from "../styles/Home.module.scss";
-import { LinkProps } from "next/link";
+'use client';
+import { Header, PrimaryNav } from '@trussworks/react-uswds';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import React from 'react';
+import styles from '../styles/Home.module.scss';
+import { LinkProps } from 'next/link';
 
-interface NavigationLinkProps extends Pick<LinkProps, "href" | "onClick"> {
+interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
   children: React.ReactNode;
 }
 
 export default function Navbar() {
-  const basePath = "/dibbs-site";
+  const basePath = '/dibbs-site';
 
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
@@ -50,7 +50,7 @@ export default function Navbar() {
                     width={200}
                     height={40}
                     alt=""
-                    className={"margin-x-0"}
+                    className={'margin-x-0'}
                     src={`${basePath}/images/dibbs-logo.svg`}
                   />
                 </a>
@@ -82,7 +82,7 @@ export function NavigationLink({
     <Link href={href} passHref className={`usa-nav__link`} onClick={onClick}>
       <span
         className={
-          (isActive && "navbar-item-active") + " " + styles.navbarItemText
+          (isActive && 'navbar-item-active') + ' ' + styles.navbarItemText
         }
       >
         {children}

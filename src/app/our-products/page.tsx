@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function ProductDetail() {
   return (
@@ -6,16 +6,16 @@ export default function ProductDetail() {
       <h1>Our Products</h1>
       <ul>
         <li>
-          <Link href={"/"}>Home</Link>
+          <Link href={'/'}>Home</Link>
         </li>
         <li>
-          <Link href={"/our-products"}>Our products</Link>
+          <Link href={'/our-products'}>Our products</Link>
         </li>
         <li>
-          <Link href={"/product-detail"}>Product detail</Link>
+          <Link href={'/product-detail'}>Product detail</Link>
         </li>
         <li>
-          <Link href={"/resources"}>Resources</Link>
+          <Link href={'/resources'}>Resources</Link>
         </li>
       </ul>
     </div>
