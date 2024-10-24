@@ -1,6 +1,6 @@
-"use client"
-import React, {useState} from 'react';
-import { 
+"use client";
+import React, { useState } from "react";
+import {
   Banner,
   BannerHeader,
   BannerButton,
@@ -9,19 +9,30 @@ import {
   BannerIcon,
   BannerFlag,
   MediaBlockBody,
-  Icon } from '@trussworks/react-uswds';
+  Icon,
+} from "@trussworks/react-uswds";
 
 export default function USABanner() {
-  const basePath: string = "/dibbs-site"
+  const basePath: string = "/dibbs-site";
   const [isOpen, setIsOpen] = useState(false);
-  const flagImg: string = `${basePath}/images/us-flag.png`
-  const dotGovIcon: string = `${basePath}/images/us-gov-icon.svg`
-  const httpsIcon: string = `${basePath}/images/https-icon.svg`
-  return <Banner aria-label="Official website of the state department of something specific">
-      <BannerHeader isOpen={isOpen} flagImg={<BannerFlag src={flagImg} aria-hidden alt="" />} headerText="This is an official website of the state department of something specific" headerActionText="Here's how you know">
-        <BannerButton isOpen={isOpen} aria-controls="custom-banner" onClick={(): void => {
-        setIsOpen(previousIsOpen => !previousIsOpen);
-      }}>
+  const flagImg: string = `${basePath}/images/us-flag.png`;
+  const dotGovIcon: string = `${basePath}/images/us-gov-icon.svg`;
+  const httpsIcon: string = `${basePath}/images/https-icon.svg`;
+  return (
+    <Banner aria-label="Official website of the state department of something specific">
+      <BannerHeader
+        isOpen={isOpen}
+        flagImg={<BannerFlag src={flagImg} aria-hidden alt="" />}
+        headerText="This is an official website of the state department of something specific"
+        headerActionText="Here's how you know"
+      >
+        <BannerButton
+          isOpen={isOpen}
+          aria-controls="custom-banner"
+          onClick={(): void => {
+            setIsOpen((previousIsOpen) => !previousIsOpen);
+          }}
+        >
           Here&apos;s how you know
         </BannerButton>
       </BannerHeader>
@@ -42,10 +53,10 @@ export default function USABanner() {
             <MediaBlockBody>
               <p>
                 <strong>Secure .gov websites use HTTPS</strong>
-                <br />A{' '}
+                <br />A{" "}
                 <strong>
                   lock (<Icon.Lock aria-label="Locked padlock icon" />)
-                </strong>{' '}
+                </strong>{" "}
                 or <strong>https://</strong> means you&apos;ve safely connected
                 to the .gov website. Share sensitive information only on
                 official, secure websites.
@@ -54,5 +65,6 @@ export default function USABanner() {
           </BannerGuidance>
         </div>
       </BannerContent>
-    </Banner>;
+    </Banner>
+  );
 }

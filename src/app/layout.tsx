@@ -16,18 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-      </head>
+      <head></head>
       <body>
         <USABanner />
         <div>
           <Navbar />
-          <main id="main-content">
-            {children}
-          </main>
+          <main id="main-content">{children}</main>
           <Footer />
         </div>
-        <Script src="https://cdn.jsdelivr.net/npm/uswds@3.1.0/dist/js/uswds.min.js"/>
+        <Script src="https://cdn.jsdelivr.net/npm/uswds@3.1.0/dist/js/uswds.min.js" />
       </body>
     </html>
   );
