@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "prettier": "prettier --write ."
+    "fmt": "prettier --write ."
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -16,6 +16,7 @@
   "dependencies": {
     "@trussworks/react-uswds": "^9.1.0",
     "@uswds/uswds": "^3.9.0",
+    "classnames": "^2.5.1",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "14.2.15",
@@ -29,13 +30,17 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.15",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "postcss": "^8",
     "postcss-import": "^16.1.0",
-    "prettier": "3.3.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "sass": "^1.79.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

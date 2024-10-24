@@ -1,6 +1,6 @@
 ci:
   collect:
-    staticDistDir: "./out"
+    staticDistDir: './out'
   assert:
     assertions:
       categories:accessibility: [error, { minScore: 1 }]

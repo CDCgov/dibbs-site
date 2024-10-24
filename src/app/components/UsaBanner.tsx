@@ -1,5 +1,5 @@
-"use client";
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
 import {
   Banner,
   BannerHeader,
@@ -10,14 +10,16 @@ import {
   BannerFlag,
   MediaBlockBody,
   Icon,
-} from "@trussworks/react-uswds";
+} from '@trussworks/react-uswds';
+import { basePath } from '../utils/constants';
 
 export default function USABanner() {
-  const basePath: string = "/dibbs-site";
   const [isOpen, setIsOpen] = useState(false);
-  const flagImg: string = `${basePath}/images/us-flag.png`;
-  const dotGovIcon: string = `${basePath}/images/us-gov-icon.svg`;
-  const httpsIcon: string = `${basePath}/images/https-icon.svg`;
+
+  const flagImg = `${basePath}/images/us-flag.png`;
+  const dotGovIcon = `${basePath}/images/us-gov-icon.svg`;
+  const httpsIcon = `${basePath}/images/https-icon.svg`;
+
   return (
     <Banner aria-label="Official website of the state department of something specific">
       <BannerHeader
@@ -53,10 +55,10 @@ export default function USABanner() {
             <MediaBlockBody>
               <p>
                 <strong>Secure .gov websites use HTTPS</strong>
-                <br />A{" "}
+                <br />A{' '}
                 <strong>
                   lock (<Icon.Lock aria-label="Locked padlock icon" />)
-                </strong>{" "}
+                </strong>{' '}
                 or <strong>https://</strong> means you&apos;ve safely connected
                 to the .gov website. Share sensitive information only on
                 official, secure websites.

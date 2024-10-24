@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@trussworks/react-uswds/lib/uswds.css";
-@import "@trussworks/react-uswds/lib/index.css";
+@import '@trussworks/react-uswds/lib/uswds.css';
+@import '@trussworks/react-uswds/lib/index.css';
 
 :root {
   --background: #ffffff;
@@ -69,7 +69,7 @@ h1 {
 }
 
 h1 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50.28px;
@@ -78,7 +78,7 @@ h1 {
 
 h2 {
   color: #224a58;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
