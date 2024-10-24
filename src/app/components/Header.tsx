@@ -1,32 +1,26 @@
 'use client';
-import { Header, PrimaryNav } from '@trussworks/react-uswds';
-import Link from 'next/link';
+import { Header as USWDSHeader, PrimaryNav } from '@trussworks/react-uswds';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import React from 'react';
 import styles from '../styles/Home.module.scss';
-import { LinkProps } from 'next/link';
+import classNames from 'classnames';
+import { basePath } from '../utils/constants';
+import { NavigationLink } from './NavigationLink';
 
-interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
-  children: React.ReactNode;
-}
-
-export default function Navbar() {
-  const basePath = '/dibbs-site';
-
+export default function Header() {
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
     if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
   };
 
   const testItemsMenu = [
-    <NavigationLink key="two" href="/our-products" onClick={onClick}>
+    <NavigationLink href="/our-products" onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink key="two" href="/case-studies" onClick={onClick}>
+    <NavigationLink href="/case-studies" onClick={onClick}>
       Case studies
     </NavigationLink>,
-    <NavigationLink key="three" href="/engage-with-us" onClick={onClick}>
+    <NavigationLink href="/engage-with-us" onClick={onClick}>
       Engage with us
     </NavigationLink>,
   ];
@@ -37,20 +31,22 @@ export default function Navbar() {
         Skip to main content
       </a>
 
-      <Header basic={true} className="bg-background-teal">
+      <USWDSHeader basic={true} className="bg-background-teal">
         <div className="usa-nav-container flex-vertical-center">
           <div className="usa-navbar">
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href={`${basePath}/`} title="<Project title>">
-                  <span className={`${styles.navbarLogoText} sr-only`}>
+                  <span
+                    className={classNames('sr-only', styles.navbarLogoText)}
+                  >
                     Data Integration Building Blocks
                   </span>
                   <Image
                     width={200}
                     height={40}
                     alt=""
-                    className={'margin-x-0'}
+                    className="margin-x-0"
                     src={`${basePath}/images/dibbs-logo.svg`}
                   />
                 </a>
@@ -66,27 +62,7 @@ export default function Navbar() {
             onToggleMobileNav={onClick}
           />
         </div>
-      </Header>
+      </USWDSHeader>
     </>
-  );
-}
-
-export function NavigationLink({
-  href,
-  children,
-  onClick,
-}: NavigationLinkProps) {
-  const pathname = usePathname(); // Use usePathname hook to get the current path
-  const isActive = pathname === href;
-  return (
-    <Link href={href} passHref className={`usa-nav__link`} onClick={onClick}>
-      <span
-        className={
-          (isActive && 'navbar-item-active') + ' ' + styles.navbarItemText
-        }
-      >
-        {children}
-      </span>
-    </Link>
   );
 }

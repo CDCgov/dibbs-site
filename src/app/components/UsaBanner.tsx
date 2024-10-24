@@ -11,13 +11,10 @@ import {
   MediaBlockBody,
   Icon,
 } from '@trussworks/react-uswds';
+import { dotGovIcon, flagImg, httpsIcon } from '../utils/constants';
 
 export default function USABanner() {
-  const basePath: string = '/dibbs-site';
   const [isOpen, setIsOpen] = useState(false);
-  const flagImg: string = `${basePath}/images/us-flag.png`;
-  const dotGovIcon: string = `${basePath}/images/us-gov-icon.svg`;
-  const httpsIcon: string = `${basePath}/images/https-icon.svg`;
   return (
     <Banner aria-label="Official website of the state department of something specific">
       <BannerHeader

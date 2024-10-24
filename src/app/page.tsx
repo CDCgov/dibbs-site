@@ -1,10 +1,9 @@
 import MarkdownContent from './components/MarkdownComponent';
 import { Grid } from '@trussworks/react-uswds';
 import Image from 'next/image';
+import { basePath } from './utils/constants';
 
 export default async function Home() {
-  const basePath = '/dibbs-site';
-
   return (
     <>
       <section className="usa-graphic-list usa-section usa-section--light-blue">

@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Script from 'next/script';
-import Navbar from './components/Header';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import USABanner from './components/UsaBanner';
+import { basePath } from './utils/constants';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',
+  icons: {
+    icon: `${basePath}/app/favicon.ico`,
+  },
 };
 
 export default function RootLayout({
@@ -16,11 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
       <body>
         <USABanner />
         <div>
-          <Navbar />
+          <Header />
           <main id="main-content">{children}</main>
           <Footer />
         </div>
