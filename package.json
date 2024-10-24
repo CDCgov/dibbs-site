@@ -6,21 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky",
+    "prettier": "prettier --write ."
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "react": "^18",
+    "@trussworks/react-uswds": "^9.1.0",
+    "@uswds/uswds": "^3.9.0",
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "next": "14.2.15",
+    "path": "^0.12.7",
+    "react": "^18.3.1",
     "react-dom": "^18",
-    "next": "14.2.15"
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
-    "eslint-config-next": "14.2.15"
+    "eslint-config-next": "14.2.15",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8",
+    "postcss-import": "^16.1.0",
+    "prettier": "3.3.3",
+    "sass": "^1.79.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
