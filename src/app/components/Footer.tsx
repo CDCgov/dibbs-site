@@ -23,7 +23,7 @@ export default function Footer() {
     >
       <span className={styles.navbarItemText}>Home</span>
     </Link>,
-    <NavigationLink key="two" href={`${basePath}/`} onClick={onClick}>
+    <NavigationLink key="two" href={`/`} onClick={onClick}>
       Home
     </NavigationLink>,
     <NavigationLink

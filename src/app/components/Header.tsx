@@ -23,7 +23,7 @@ export default function Navbar() {
     <NavigationLink key="two" href="/our-products" onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink key="two" href="/our-products" onClick={onClick}>
+    <NavigationLink key="two" href="/case-studies" onClick={onClick}>
       Case studies
     </NavigationLink>,
     <NavigationLink key="three" href="/engage-with-us" onClick={onClick}>
