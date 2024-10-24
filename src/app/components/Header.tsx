@@ -36,7 +36,7 @@ export default function Navbar() {
       <a className="usa-skipnav" href="#main-content">
         Skip to main content
       </a>
-      <div className={`usa-overlay ${expanded ? "is-visible" : ""}`}></div>
+
       <Header basic={true} className="bg-background-teal">
         <div className="usa-nav-container flex-vertical-center">
           <div className="usa-navbar">
