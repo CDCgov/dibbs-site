@@ -16,22 +16,23 @@ export default function Footer() {
 
   const testItemsMenu = [
     <Link
+      key="one"
       href="/"
       className={classNames('usa-nav__link', styles.homeNavItem)}
       onClick={onClick}
     >
       <span className={styles.navbarItemText}>Home</span>
     </Link>,
-    <NavigationLink href="/" onClick={onClick}>
+    <NavigationLink key="two" href="/" onClick={onClick}>
       Home
     </NavigationLink>,
-    <NavigationLink href="/our-products" onClick={onClick}>
+    <NavigationLink key="three" href="/our-products" onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink href="/case-studies" onClick={onClick}>
+    <NavigationLink key="four" href="/case-studies" onClick={onClick}>
       Case studies
     </NavigationLink>,
-    <NavigationLink href="/engage-with-us" onClick={onClick}>
+    <NavigationLink key="five" href="/engage-with-us" onClick={onClick}>
       Engage with us
     </NavigationLink>,
   ];

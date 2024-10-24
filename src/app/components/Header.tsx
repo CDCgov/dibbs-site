@@ -14,13 +14,13 @@ export default function Header() {
   };
 
   const testItemsMenu = [
-    <NavigationLink href="/our-products" onClick={onClick}>
+    <NavigationLink key="one" href="/our-products" onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink href="/case-studies" onClick={onClick}>
+    <NavigationLink key="two" href="/case-studies" onClick={onClick}>
       Case studies
     </NavigationLink>,
-    <NavigationLink href="/engage-with-us" onClick={onClick}>
+    <NavigationLink key="three" href="/engage-with-us" onClick={onClick}>
       Engage with us
     </NavigationLink>,
   ];
