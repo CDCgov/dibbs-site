@@ -1,5 +1,5 @@
 'use client';
-import { Header, PrimaryNav } from '@trussworks/react-uswds';
+import { PrimaryNav } from '@trussworks/react-uswds';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
@@ -38,7 +38,7 @@ export default function Footer() {
 
   return (
     <>
-      <Header basic={true} className="bg-background-teal">
+      <footer className="usa-header--basic bg-background-teal">
         <div className="usa-nav-container flex-vertical-center">
           <div className="usa-navbar">
             <div className="usa-logo">
@@ -69,7 +69,7 @@ export default function Footer() {
             onToggleMobileNav={onClick}
           />
         </div>
-      </Header>
+      </footer>
     </>
   );
 }
