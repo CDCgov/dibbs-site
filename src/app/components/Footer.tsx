@@ -26,25 +26,13 @@ export default function Footer() {
     <NavigationLink key="two" href={`/`} onClick={onClick}>
       Home
     </NavigationLink>,
-    <NavigationLink
-      key="two"
-      href={`${basePath}/our-products`}
-      onClick={onClick}
-    >
+    <NavigationLink key="two" href={`/our-products`} onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink
-      key="two"
-      href={`${basePath}/our-products`}
-      onClick={onClick}
-    >
+    <NavigationLink key="two" href={`/our-products`} onClick={onClick}>
       Case studies
     </NavigationLink>,
-    <NavigationLink
-      key="three"
-      href={`${basePath}/engage-with-us`}
-      onClick={onClick}
-    >
+    <NavigationLink key="three" href={`/engage-with-us`} onClick={onClick}>
       Engage with us
     </NavigationLink>,
   ];

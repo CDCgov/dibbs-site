@@ -42,7 +42,7 @@ export default function Navbar() {
           <div className="usa-navbar">
             <div className="usa-logo">
               <em className="usa-logo__text">
-                <a href="/" title="<Project title>">
+                <a href={`${basePath}/`} title="<Project title>">
                   <span className={`${styles.navbarLogoText} sr-only`}>
                     Data Integration Building Blocks
                   </span>
