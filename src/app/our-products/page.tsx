@@ -273,6 +273,9 @@ function DataPipeline() {
             Surveillance System (NEDSS) Base System (NBS)
           </p>
         </DataPipelineGridItem>
+        <DataPipelineGridItem>
+          <p>Empty spot</p>
+        </DataPipelineGridItem>
       </DataPipelineGrid>
     </section>
   );
@@ -303,9 +306,10 @@ function DataPipelineGridItem({ children }: DataPipelineGridItemProps) {
       tablet={{
         col: true,
       }}
-      className="border border-dashed"
     >
-      <div className="mx-2 mt-2">{children}</div>
+      <Grid className="mx-2 mt-2 h-full border border-dashed p-8">
+        {children}
+      </Grid>
     </Grid>
   );
 }
