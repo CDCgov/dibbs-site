@@ -16,7 +16,7 @@ export default function MultiImageCarousel() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerView = 3; // Number of images visible at once
+  const itemsPerView = 5; // Number of images visible at once
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
