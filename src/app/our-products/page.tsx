@@ -18,7 +18,7 @@ export default function OurProducts() {
       <section className="usa-section">
         <GridContainer>
           <h2>Standalone Products</h2>
-          <Grid row gap className="usa-graphic-list__row">
+          <Grid row gap>
             <Grid
               tablet={{
                 col: true,
@@ -30,7 +30,7 @@ export default function OurProducts() {
                 height="280"
                 alt="Placeholder"
               />
-              <div>
+              <div className="mt-2 flex flex-col items-start">
                 <h2 className="usa-graphic-list__heading">eCR Viewer</h2>
                 <p>
                   Graphic headings can be used a few different ways, depending
@@ -51,7 +51,7 @@ export default function OurProducts() {
                 height="280"
                 alt="Placeholder"
               />
-              <div>
+              <div className="mt-2 flex flex-col items-start">
                 <h2 className="usa-graphic-list__heading">Query Connector</h2>
                 <p>
                   Allows public health staff to query a wide network of
@@ -76,7 +76,7 @@ export default function OurProducts() {
                 height="280"
                 alt="Placeholder"
               />
-              <div>
+              <div className="mt-2 flex flex-col items-start">
                 <h2 className="usa-graphic-list__heading">eCR Parser</h2>
                 <p>
                   Enables public health staff to extract relevant data from eCR
@@ -98,7 +98,7 @@ export default function OurProducts() {
                 height="280"
                 alt="Placeholder"
               />
-              <div>
+              <div className="mt-2 flex flex-col items-start">
                 <h2 className="usa-graphic-list__heading">eCR Refiner</h2>
                 <p>
                   Reduces eCR files down to only the most useful, necessary
@@ -106,7 +106,7 @@ export default function OurProducts() {
                   disease surveillance systems and bring focus to pertinent data
                   for a given condition.
                 </p>
-                <Button type="button">Learn more about eCR Parser</Button>
+                <Button type="button">Learn more about eCR Refiner</Button>
               </div>
             </Grid>
           </Grid>
@@ -132,12 +132,8 @@ export default function OurProducts() {
         </GridContainer>
         <GridContainer>
           <h3>For Data Processing</h3>
-          <Grid row gap="lg" className="usa-graphic-list__row">
-            <Grid
-              tablet={{
-                col: true,
-              }}
-            >
+          <Grid row gap="md">
+            <Grid col={4} className="border border-dashed">
               <Image
                 src={`${basePath}/icons/orchestration.svg`}
                 width="88"
@@ -150,11 +146,7 @@ export default function OurProducts() {
                 for fully automated workflows
               </p>
             </Grid>
-            <Grid
-              tablet={{
-                col: true,
-              }}
-            >
+            <Grid col={4} className="border border-dashed">
               <Image
                 src={`${basePath}/icons/fhirConverter.svg`}
                 width="88"
@@ -167,11 +159,7 @@ export default function OurProducts() {
                 for fully automated workflows
               </p>
             </Grid>
-            <Grid
-              tablet={{
-                col: true,
-              }}
-            >
+            <Grid col={4} className="border border-dashed">
               <Image
                 src={`${basePath}/icons/validation.svg`}
                 width="88"
@@ -188,11 +176,12 @@ export default function OurProducts() {
         </GridContainer>
         <GridContainer>
           <h3>For Data Enrichment</h3>
-          <Grid row gap="lg" className="usa-graphic-list__row">
+          <Grid row gap className="usa-graphic-list__row">
             <Grid
               tablet={{
                 col: true,
               }}
+              className="border border-dashed"
             >
               <Image
                 src={`${basePath}/icons/code.svg`}
@@ -210,6 +199,7 @@ export default function OurProducts() {
               tablet={{
                 col: true,
               }}
+              className="border border-dashed"
             >
               <Image
                 src={`${basePath}/icons/messageParser.svg`}
@@ -227,6 +217,7 @@ export default function OurProducts() {
               tablet={{
                 col: true,
               }}
+              className="border border-dashed"
             >
               <Image
                 src={`${basePath}/icons/link.svg`}
@@ -249,6 +240,7 @@ export default function OurProducts() {
               tablet={{
                 col: true,
               }}
+              className="border border-dashed"
             >
               <Image
                 src={`${basePath}/icons/code.svg`}
@@ -266,6 +258,7 @@ export default function OurProducts() {
               tablet={{
                 col: true,
               }}
+              className="border border-dashed"
             >
               <Image
                 src={`${basePath}/icons/messageParser.svg`}
