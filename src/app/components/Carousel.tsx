@@ -68,13 +68,17 @@ export default function MultiImageCarousel() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      currentIndex === 0 ? images.length - itemsPerView : currentIndex - 1,
-    );
+    setCurrentIndex(currentIndex === 0 ? 0 : currentIndex - 1);
   };
 
   const nextSlide = () => {
-    setCurrentIndex((currentIndex + 1) % (images.length - itemsPerView + 1));
+    const newIndex = currentIndex + 1;
+    setCurrentIndex(
+      newIndex > images.length - itemsPerView + 2
+        ? images.length - itemsPerView + 2
+        : newIndex,
+    );
+    // setCurrentIndex((currentIndex + 1) % (images.length - itemsPerView + 1));
   };
 
   return (
