@@ -158,7 +158,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">Orchestration</p>
+          <h3 className="font-bold">Orchestration</h3>
           <p>
             Enables coordinated execution of DIBBs in any order, allowing for
             fully automated workflows
@@ -170,9 +170,9 @@ function DataPipeline() {
             width="88"
             height="88"
             alt="Placeholder"
-            style={{ minWidth: 88, minHeight: 88 }}
+            style={{ minWidth: 88, minHeight: 88, maxHeight: 88 }}
           />
-          <p className="font-bold">FHIR Converter</p>
+          <h3 className="font-bold">FHIR Converter</h3>
           <p>
             Converts incoming messages into the FHIR (Fast Healthcare
             Interoperability Resources) standard; acts as a common language
@@ -188,7 +188,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">Validation</p>
+          <h3 className="font-bold">Validation</h3>
           <p>
             Reads and validates all eCR fields of interest based on specified,
             custom preferences; ensures that its XML structure is valid, that
@@ -206,7 +206,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">Standardization</p>
+          <h3 className="font-bold">Standardization</h3>
           <p>
             Standardizes data fields (including record name, date of birth,
             phone number, and geolocation) based on preset defaults to ensure
@@ -222,7 +222,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">Geocoding</p>
+          <h3 className="font-bold">Geocoding</h3>
           <p>
             Enriches data by providing precise geographic locations based on
             patient street addresses from input data
@@ -236,7 +236,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">Record Linkage</p>
+          <h3 className="font-bold">Record Linkage</h3>
           <p>
             Identifies multiple records referring to the same individual and
             combines them into a single, more complete patient record
@@ -252,7 +252,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">Flat Formatter</p>
+          <h3 className="font-bold">Flat Formatter</h3>
           <p>
             Extracts relevant data from a given healthcare message and exports
             the data into a JSON file based on a user-defined parsing schema
@@ -266,7 +266,7 @@ function DataPipeline() {
             alt="Placeholder"
             style={{ minWidth: 88, minHeight: 88 }}
           />
-          <p className="font-bold">PHDC Converter</p>
+          <h3 className="font-bold">PHDC Converter</h3>
           <p>
             Converts a FHIR bundle to the Public Health Document Container
             (PHDC) format for ingestion into the National Electronic Disease
@@ -307,8 +307,14 @@ function DataPipelineGridItem({ children }: DataPipelineGridItemProps) {
         col: true,
       }}
     >
-      <Grid className="mx-2 mt-2 h-full border border-dashed p-8">
-        {children}
+      <Grid
+        style={{
+          maxWidth: '352px',
+          maxHeight: '360px',
+        }}
+        className="h-full rounded-md border border-dashed p-8"
+      >
+        <div>{children}</div>
       </Grid>
     </Grid>
   );
