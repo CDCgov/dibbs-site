@@ -85,6 +85,14 @@ h2 {
   line-height: normal;
 }
 
+h3 {
+  color: #224a58;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27,65px;
+}
+
 ul {
   margin-bottom: 1em;
   margin-top: 1em;
