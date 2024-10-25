@@ -11,6 +11,7 @@ export default function OurProducts() {
             <h1>Our ecosystem of DIBBs products</h1>
             <p className="grid-container p-0">
               Find out how DIBBs products can help empower your jurisdiction
+              with more usable data.
             </p>
           </div>
         </GridContainer>
@@ -31,7 +32,7 @@ export default function OurProducts() {
                 alt="Placeholder"
               />
               <div className="mt-2 flex flex-col items-start">
-                <h2 className="usa-graphic-list__heading">eCR Viewer</h2>
+                <h3 className="usa-graphic-list__heading">eCR Viewer</h3>
                 <p>
                   Graphic headings can be used a few different ways, depending
                   on what your landing page is for. Highlight your values,
@@ -52,7 +53,7 @@ export default function OurProducts() {
                 alt="Placeholder"
               />
               <div className="mt-2 flex flex-col items-start">
-                <h2 className="usa-graphic-list__heading">Query Connector</h2>
+                <h3 className="usa-graphic-list__heading">Query Connector</h3>
                 <p>
                   Allows public health staff to query a wide network of
                   healthcare organizations for data relevant to a given
@@ -77,7 +78,7 @@ export default function OurProducts() {
                 alt="Placeholder"
               />
               <div className="mt-2 flex flex-col items-start">
-                <h2 className="usa-graphic-list__heading">eCR Parser</h2>
+                <h3 className="usa-graphic-list__heading">eCR Parser</h3>
                 <p>
                   Enables public health staff to extract relevant data from eCR
                   messages based on a user-defined parsing schema. It exports
@@ -99,7 +100,7 @@ export default function OurProducts() {
                 alt="Placeholder"
               />
               <div className="mt-2 flex flex-col items-start">
-                <h2 className="usa-graphic-list__heading">eCR Refiner</h2>
+                <h3 className="usa-graphic-list__heading">eCR Refiner</h3>
                 <p>
                   Reduces eCR files down to only the most useful, necessary
                   information to alleviate performance and storage burden on
@@ -114,7 +115,7 @@ export default function OurProducts() {
       </section>
       <section className="usa-section">
         <GridContainer>
-          <Grid>
+          <div className="flex flex-col gap-y-2">
             <Image
               src={`${basePath}/images/placeholder.png`}
               width="1120"
@@ -128,12 +129,17 @@ export default function OurProducts() {
               they can be configured in a variety of ways to support the unique
               needs of your jurisdiction.
             </p>
-          </Grid>
+          </div>
         </GridContainer>
         <GridContainer>
-          <h3>For Data Processing</h3>
-          <Grid row gap="md">
-            <Grid col={4} className="border border-dashed">
+          <p>FOR DATA PROCESSING</p>
+          <Grid row gap className="usa-graphic-list__row">
+            <Grid
+              tablet={{
+                col: true,
+              }}
+              className="border border-dashed"
+            >
               <Image
                 src={`${basePath}/icons/orchestration.svg`}
                 width="88"
@@ -146,7 +152,12 @@ export default function OurProducts() {
                 for fully automated workflows
               </p>
             </Grid>
-            <Grid col={4} className="border border-dashed">
+            <Grid
+              tablet={{
+                col: true,
+              }}
+              className="border border-dashed"
+            >
               <Image
                 src={`${basePath}/icons/fhirConverter.svg`}
                 width="88"
@@ -159,7 +170,12 @@ export default function OurProducts() {
                 for fully automated workflows
               </p>
             </Grid>
-            <Grid col={4} className="border border-dashed">
+            <Grid
+              tablet={{
+                col: true,
+              }}
+              className="border border-dashed"
+            >
               <Image
                 src={`${basePath}/icons/validation.svg`}
                 width="88"
@@ -175,7 +191,7 @@ export default function OurProducts() {
           </Grid>
         </GridContainer>
         <GridContainer>
-          <h3>For Data Enrichment</h3>
+          <p>FOR DATA ENRICHMENT</p>
           <Grid row gap className="usa-graphic-list__row">
             <Grid
               tablet={{
@@ -234,7 +250,7 @@ export default function OurProducts() {
           </Grid>
         </GridContainer>
         <GridContainer>
-          <h3>For Data Transformation</h3>
+          <p>FOR DATA TRANSFORMATION</p>
           <Grid row gap="lg" className="usa-graphic-list__row">
             <Grid
               tablet={{
