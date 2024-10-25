@@ -46,7 +46,7 @@ function StandaloneProducts() {
               alt="Placeholder"
             />
             <div className="mt-2 flex flex-col items-start">
-              <h3 className="usa-graphic-list__heading">eCR Viewer</h3>
+              <h3>eCR Viewer</h3>
               <p>
                 Graphic headings can be used a few different ways, depending on
                 what your landing page is for. Highlight your values, specific
@@ -67,7 +67,7 @@ function StandaloneProducts() {
               alt="Placeholder"
             />
             <div className="mt-2 flex flex-col items-start">
-              <h3 className="usa-graphic-list__heading">Query Connector</h3>
+              <h3>Query Connector</h3>
               <p>
                 Allows public health staff to query a wide network of healthcare
                 organizations for data relevant to a given condition. It gives
@@ -91,7 +91,7 @@ function StandaloneProducts() {
               alt="Placeholder"
             />
             <div className="mt-2 flex flex-col items-start">
-              <h3 className="usa-graphic-list__heading">eCR Parser</h3>
+              <h3>eCR Parser</h3>
               <p>
                 Enables public health staff to extract relevant data from eCR
                 messages based on a user-defined parsing schema. It exports that
@@ -113,7 +113,7 @@ function StandaloneProducts() {
               alt="Placeholder"
             />
             <div className="mt-2 flex flex-col items-start">
-              <h3 className="usa-graphic-list__heading">eCR Refiner</h3>
+              <h3>eCR Refiner</h3>
               <p>
                 Reduces eCR files down to only the most useful, necessary
                 information to alleviate performance and storage burden on
