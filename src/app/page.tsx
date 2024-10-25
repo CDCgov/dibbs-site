@@ -2,6 +2,7 @@ import MarkdownContent from './components/MarkdownComponent';
 import { Grid } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
+import SimpleCarousel from './components/Carousel';
 
 export default async function Home() {
   return (
@@ -47,6 +48,9 @@ export default async function Home() {
             <Grid col={12} className="flex-center">
               {MarkdownContent('homepage/section_4.md')}
             </Grid>
+          </Grid>
+          <Grid row>
+            <SimpleCarousel />
           </Grid>
         </div>
       </section>
