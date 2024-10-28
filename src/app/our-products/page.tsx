@@ -1,4 +1,15 @@
-import { Button, Grid, GridContainer } from '@trussworks/react-uswds';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardGroup,
+  CardHeader,
+  CardMedia,
+  Grid,
+  GridContainer,
+  Link,
+} from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 
@@ -33,40 +44,55 @@ function StandaloneProducts() {
     <section className="usa-section">
       <GridContainer>
         <h2>Standalone Products</h2>
-        <Grid row gap>
-          <Grid
-            tablet={{
-              col: true,
+        <CardGroup>
+          <Card
+            gridLayout={{
+              tablet: {
+                col: 6,
+              },
             }}
+            containerProps={{ className: 'border-0' }}
           >
-            <Image
-              src={`${basePath}/images/placeholder.png`}
-              width="540"
-              height="280"
-              alt="Placeholder"
-            />
-            <div className="mt-2 flex flex-col items-start">
+            <CardBody>
+              <Image
+                src={`${basePath}/images/placeholder.png`}
+                width="540"
+                height="280"
+                alt="Placeholder"
+              />
               <h3>eCR Viewer</h3>
               <p>
                 Graphic headings can be used a few different ways, depending on
                 what your landing page is for. Highlight your values, specific
                 program areas, or results.
               </p>
-              <Button type="button">Learn more about eCR Viewer</Button>
-            </div>
-          </Grid>
-          <Grid
-            tablet={{
-              col: true,
+            </CardBody>
+            <CardFooter>
+              <Link
+                href={'#'}
+                variant="unstyled"
+                className="usa-button"
+                allowSpacebarActivation
+              >
+                Learn more about eCR Viewer
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card
+            gridLayout={{
+              tablet: {
+                col: 6,
+              },
             }}
+            containerProps={{ className: 'border-0' }}
           >
-            <Image
-              src={`${basePath}/images/placeholder.png`}
-              width="540"
-              height="280"
-              alt="Placeholder"
-            />
-            <div className="mt-2 flex flex-col items-start">
+            <CardBody>
+              <Image
+                src={`${basePath}/images/placeholder.png`}
+                width="540"
+                height="280"
+                alt="Placeholder"
+              />
               <h3>Query Connector</h3>
               <p>
                 Allows public health staff to query a wide network of healthcare
@@ -74,23 +100,33 @@ function StandaloneProducts() {
                 staff access to more complete and timely data without the need
                 for a direct connection to a healthcare provider.
               </p>
-              <Button type="button">Learn more about Query Connector</Button>
-            </div>
-          </Grid>
-        </Grid>
-        <Grid row gap="lg" className="usa-graphic-list__row">
-          <Grid
-            tablet={{
-              col: true,
+            </CardBody>
+            <CardFooter>
+              <Link
+                href={'#'}
+                variant="unstyled"
+                className="usa-button"
+                allowSpacebarActivation
+              >
+                Learn more about Query Connector
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card
+            gridLayout={{
+              tablet: {
+                col: 6,
+              },
             }}
+            containerProps={{ className: 'border-0' }}
           >
-            <Image
-              src={`${basePath}/images/placeholder.png`}
-              width="540"
-              height="280"
-              alt="Placeholder"
-            />
-            <div className="mt-2 flex flex-col items-start">
+            <CardBody>
+              <Image
+                src={`${basePath}/images/placeholder.png`}
+                width="540"
+                height="280"
+                alt="Placeholder"
+              />
               <h3>eCR Parser</h3>
               <p>
                 Enables public health staff to extract relevant data from eCR
@@ -98,21 +134,33 @@ function StandaloneProducts() {
                 data into a simple JSON file that can be easily loaded into a
                 tabular format (like a spreadsheet).
               </p>
-              <Button type="button">Learn more about eCR Parser</Button>
-            </div>
-          </Grid>
-          <Grid
-            tablet={{
-              col: true,
+            </CardBody>
+            <CardFooter>
+              <Link
+                href={'#'}
+                variant="unstyled"
+                className="usa-button"
+                allowSpacebarActivation
+              >
+                Learn more about eCR Parser
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card
+            gridLayout={{
+              tablet: {
+                col: 6,
+              },
             }}
+            containerProps={{ className: 'border-0' }}
           >
-            <Image
-              src={`${basePath}/images/placeholder.png`}
-              width="540"
-              height="280"
-              alt="Placeholder"
-            />
-            <div className="mt-2 flex flex-col items-start">
+            <CardBody>
+              <Image
+                src={`${basePath}/images/placeholder.png`}
+                width="540"
+                height="280"
+                alt="Placeholder"
+              />
               <h3>eCR Refiner</h3>
               <p>
                 Reduces eCR files down to only the most useful, necessary
@@ -120,10 +168,19 @@ function StandaloneProducts() {
                 disease surveillance systems and bring focus to pertinent data
                 for a given condition.
               </p>
-              <Button type="button">Learn more about eCR Refiner</Button>
-            </div>
-          </Grid>
-        </Grid>
+            </CardBody>
+            <CardFooter>
+              <Link
+                href={'#'}
+                variant="unstyled"
+                className="usa-button"
+                allowSpacebarActivation
+              >
+                Learn more about eCR Refiner
+              </Link>
+            </CardFooter>
+          </Card>
+        </CardGroup>
       </GridContainer>
     </section>
   );
