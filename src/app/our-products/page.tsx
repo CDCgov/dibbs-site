@@ -214,10 +214,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/orchestration.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="Orchestration icon"
               />
               <h3 className="font-bold">Orchestration</h3>
               <p>
@@ -237,10 +236,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/fhirConverter.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88, maxHeight: 88 }}
+                width={88}
+                height={88}
+                alt="FHIR Converter icon"
               />
               <h3 className="font-bold">FHIR Converter</h3>
               <p>
@@ -262,10 +260,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/validation.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="Validation icon"
               />
               <h3 className="font-bold">Validation</h3>
               <p>
@@ -291,10 +288,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/standardization.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="Standardization icon"
               />
               <h3 className="font-bold">Standardization</h3>
               <p>
@@ -316,10 +312,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/geocoding.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="Geocoding icon"
               />
               <h3 className="font-bold">Geocoding</h3>
               <p>
@@ -339,10 +334,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/recordLinkage.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="Record Linkage icon"
               />
               <h3 className="font-bold">Record Linkage</h3>
               <p>
@@ -366,10 +360,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/flatFormatter.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="Flat Formatter icon"
               />
               <h3 className="font-bold">Flat Formatter</h3>
               <p>
@@ -390,10 +383,9 @@ function DataPipeline() {
             <CardBody>
               <Image
                 src={`${basePath}/icons/our-products/phdcConverter.svg`}
-                width="88"
-                height="88"
-                alt="Placeholder"
-                style={{ minWidth: 88, minHeight: 88 }}
+                width={88}
+                height={88}
+                alt="PHDC Converter icon"
               />
               <h3 className="font-bold">PHDC Converter</h3>
               <p>
