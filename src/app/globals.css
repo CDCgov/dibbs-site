@@ -135,7 +135,7 @@ p {
 }
 
 .carousel-item {
-  min-width: calc(100% / 5); /* Adjust based on number of visible items */
+  min-width: calc(100% / 7); /* Adjust based on number of visible items */
   flex: 1 0 auto;
   padding: 0 10px;
 }
@@ -180,4 +180,8 @@ p {
 
 .next {
   right: 10px;
+}
+
+.max-width-100 {
+  max-width: 100%;
 }

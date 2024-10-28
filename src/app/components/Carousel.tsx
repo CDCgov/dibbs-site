@@ -20,6 +20,8 @@ export default function MultiImageCarousel() {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
+  const [finalOffset, setFinalOffset] = useState(0); // Stores the last offset when dragging stops
+  const [offsetType, setOffsetType] = useState('%'); // Stores the last offset when dragging stops
 
   const carouselRef = useRef(null);
 
@@ -27,15 +29,8 @@ export default function MultiImageCarousel() {
   const handleDragStart = (
     e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
   ) => {
-    let startX: number;
-
-    // Check if the event is a TouchEvent (touches exist on TouchEvent)
-    if ('touches' in e) {
-      startX = e.touches[0].clientX; // TouchEvent uses touches array
-    } else {
-      startX = e.pageX; // MouseEvent uses pageX
-    }
-
+    setOffsetType('px');
+    const startX = 'touches' in e ? e.touches[0].clientX : e.pageX;
     setDragStartX(startX);
     setIsDragging(true);
   };
@@ -45,40 +40,32 @@ export default function MultiImageCarousel() {
     e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
   ) => {
     if (!isDragging) return;
-    let currentX: number;
-    if ('touches' in e) {
-      currentX = e.touches[0].clientX;
-    } else {
-      currentX = e.pageX;
-    }
+
+    const currentX = 'touches' in e ? e.touches[0].clientX : e.pageX;
     setDragOffset(currentX - dragStartX);
   };
 
   // Handle drag end
   const handleDragEnd = () => {
-    if (Math.abs(dragOffset) > 50) {
-      if (dragOffset < 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
-    }
+    setFinalOffset(finalOffset + dragOffset); // Keep track of cumulative offset
     setIsDragging(false);
-    setDragOffset(0);
+    setDragOffset(0); // Reset drag offset after drag ends
+    // setFinalOffset(0);
   };
 
   const prevSlide = () => {
-    setCurrentIndex(currentIndex === 0 ? 0 : currentIndex - 1);
+    setOffsetType('%');
+    const newIndex = currentIndex === 0 ? 0 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    setFinalOffset(-newIndex * (100 / itemsPerView)); // Update finalOffset to reflect the new position
   };
 
   const nextSlide = () => {
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(
-      newIndex > images.length - itemsPerView + 2
-        ? images.length - itemsPerView + 2
-        : newIndex,
-    );
-    // setCurrentIndex((currentIndex + 1) % (images.length - itemsPerView + 1));
+    setOffsetType('%');
+    const maxIndex = images.length - itemsPerView;
+    const newIndex = currentIndex < maxIndex ? currentIndex + 1 : maxIndex;
+    setCurrentIndex(newIndex);
+    setFinalOffset(-newIndex * (100 / itemsPerView)); // Update finalOffset to reflect the new position
   };
 
   return (
@@ -100,7 +87,7 @@ export default function MultiImageCarousel() {
         <div
           className="carousel"
           style={{
-            transform: `translateX(calc(-${(currentIndex / images.length) * 100}% + ${dragOffset}px))`,
+            transform: `translateX(calc(${finalOffset}${offsetType} + ${dragOffset}${offsetType}))`,
             width: `${(images.length / itemsPerView) * 100}%`,
             transition: isDragging ? 'none' : 'transform 0.5s ease-in-out',
           }}

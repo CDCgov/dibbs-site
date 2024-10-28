@@ -43,7 +43,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="usa-section">
-        <div className="grid-container">
+        <div className="grid-container padding-x-0 max-width-100">
           <Grid row>
             <Grid col={12} className="flex-center">
               {MarkdownContent('homepage/section_4.md')}
