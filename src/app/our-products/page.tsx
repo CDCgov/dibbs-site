@@ -53,18 +53,20 @@ function StandaloneProducts() {
             containerProps={{ className: 'border-0' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/images/placeholder.png`}
-                width="540"
-                height="280"
-                alt="Placeholder"
-              />
-              <h3>eCR Viewer</h3>
-              <p>
-                Graphic headings can be used a few different ways, depending on
-                what your landing page is for. Highlight your values, specific
-                program areas, or results.
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/images/placeholder.png`}
+                  width="540"
+                  height="280"
+                  alt="Placeholder"
+                />
+                <h3>eCR Viewer</h3>
+                <p>
+                  Graphic headings can be used a few different ways, depending
+                  on what your landing page is for. Highlight your values,
+                  specific program areas, or results.
+                </p>
+              </div>
             </CardBody>
             <CardFooter>
               <Link href="#" className={classNames('usa-button', styles.btn)}>
@@ -81,19 +83,22 @@ function StandaloneProducts() {
             containerProps={{ className: 'border-0' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/images/placeholder.png`}
-                width="540"
-                height="280"
-                alt="Placeholder"
-              />
-              <h3>Query Connector</h3>
-              <p>
-                Allows public health staff to query a wide network of healthcare
-                organizations for data relevant to a given condition. It gives
-                staff access to more complete and timely data without the need
-                for a direct connection to a healthcare provider.
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/images/placeholder.png`}
+                  width="540"
+                  height="280"
+                  alt="Placeholder"
+                />
+                <h3>Query Connector</h3>
+                <p>
+                  Allows public health staff to query a wide network of
+                  healthcare organizations for data relevant to a given
+                  condition. It gives staff access to more complete and timely
+                  data without the need for a direct connection to a healthcare
+                  provider.
+                </p>
+              </div>
             </CardBody>
             <CardFooter>
               <Button type="button" disabled>
@@ -110,19 +115,21 @@ function StandaloneProducts() {
             containerProps={{ className: 'border-0' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/images/placeholder.png`}
-                width="540"
-                height="280"
-                alt="Placeholder"
-              />
-              <h3>eCR Parser</h3>
-              <p>
-                Enables public health staff to extract relevant data from eCR
-                messages based on a user-defined parsing schema. It exports that
-                data into a simple JSON file that can be easily loaded into a
-                tabular format (like a spreadsheet).
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/images/placeholder.png`}
+                  width="540"
+                  height="280"
+                  alt="Placeholder"
+                />
+                <h3>eCR Parser</h3>
+                <p>
+                  Enables public health staff to extract relevant data from eCR
+                  messages based on a user-defined parsing schema. It exports
+                  that data into a simple JSON file that can be easily loaded
+                  into a tabular format (like a spreadsheet).
+                </p>
+              </div>
             </CardBody>
             <CardFooter>
               <Button type="button" disabled>
@@ -139,19 +146,21 @@ function StandaloneProducts() {
             containerProps={{ className: 'border-0' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/images/placeholder.png`}
-                width="540"
-                height="280"
-                alt="Placeholder"
-              />
-              <h3>eCR Refiner</h3>
-              <p>
-                Reduces eCR files down to only the most useful, necessary
-                information to alleviate performance and storage burden on
-                disease surveillance systems and bring focus to pertinent data
-                for a given condition.
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/images/placeholder.png`}
+                  width="540"
+                  height="280"
+                  alt="Placeholder"
+                />
+                <h3>eCR Refiner</h3>
+                <p>
+                  Reduces eCR files down to only the most useful, necessary
+                  information to alleviate performance and storage burden on
+                  disease surveillance systems and bring focus to pertinent data
+                  for a given condition.
+                </p>
+              </div>
             </CardBody>
             <CardFooter>
               <Button type="button" disabled>
