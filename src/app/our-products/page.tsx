@@ -180,10 +180,10 @@ function DataPipeline() {
       <GridContainer>
         <div className="flex flex-col gap-y-6 pb-6">
           <Image
+            className={styles.dataPipelineImage}
             src={`${basePath}/images/placeholder.png`}
             width="1120"
             height="160"
-            style={{ maxHeight: '160px' }}
             alt="Placeholder"
           />
           <div className="flex flex-col gap-y-2">
