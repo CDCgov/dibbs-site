@@ -4,9 +4,9 @@ import {
   CardFooter,
   CardGroup,
   GridContainer,
-  Link,
 } from '@trussworks/react-uswds';
 import Image from 'next/image';
+import Link from 'next/link';
 import { basePath } from '../utils/constants';
 
 export default function OurProducts() {
@@ -64,12 +64,7 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link
-                href={'#'}
-                variant="unstyled"
-                className="usa-button"
-                allowSpacebarActivation
-              >
+              <Link href={'#'} className="usa-button">
                 Learn more about eCR Viewer
               </Link>
             </CardFooter>
@@ -98,12 +93,7 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link
-                href={'#'}
-                variant="unstyled"
-                className="usa-button"
-                allowSpacebarActivation
-              >
+              <Link href={'#'} className="usa-button">
                 Learn more about Query Connector
               </Link>
             </CardFooter>
@@ -132,12 +122,7 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link
-                href={'#'}
-                variant="unstyled"
-                className="usa-button"
-                allowSpacebarActivation
-              >
+              <Link href={'#'} className="usa-button">
                 Learn more about eCR Parser
               </Link>
             </CardFooter>
@@ -166,12 +151,7 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link
-                href={'#'}
-                variant="unstyled"
-                className="usa-button"
-                allowSpacebarActivation
-              >
+              <Link href={'#'} className="usa-button">
                 Learn more about eCR Refiner
               </Link>
             </CardFooter>
