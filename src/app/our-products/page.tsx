@@ -206,17 +206,19 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/orchestration.svg`}
-                width={88}
-                height={88}
-                alt="Orchestration icon"
-              />
-              <h3 className="font-bold">Orchestration</h3>
-              <p>
-                Enables coordinated execution of DIBBs in any order, allowing
-                for fully automated workflows
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/orchestration.svg`}
+                  width={88}
+                  height={88}
+                  alt="Orchestration icon"
+                />
+                <h3 className="font-bold">Orchestration</h3>
+                <p>
+                  Enables coordinated execution of DIBBs in any order, allowing
+                  for fully automated workflows
+                </p>
+              </div>
             </CardBody>
           </Card>
           <Card
@@ -228,19 +230,21 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/fhirConverter.svg`}
-                width={88}
-                height={88}
-                alt="FHIR Converter icon"
-              />
-              <h3 className="font-bold">FHIR Converter</h3>
-              <p>
-                Converts incoming messages into the FHIR (Fast Healthcare
-                Interoperability Resources) standard; acts as a common language
-                between data streams that allows for ease of processing data in
-                all the different DIBBs
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/fhirConverter.svg`}
+                  width={88}
+                  height={88}
+                  alt="FHIR Converter icon"
+                />
+                <h3 className="font-bold">FHIR Converter</h3>
+                <p>
+                  Converts incoming messages into the FHIR (Fast Healthcare
+                  Interoperability Resources) standard; acts as a common
+                  language between data streams that allows for ease of
+                  processing data in all the different DIBBs
+                </p>
+              </div>
             </CardBody>
           </Card>
           <Card
@@ -252,19 +256,21 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/validation.svg`}
-                width={88}
-                height={88}
-                alt="Validation icon"
-              />
-              <h3 className="font-bold">Validation</h3>
-              <p>
-                Reads and validates all eCR fields of interest based on
-                specified, custom preferences; ensures that its XML structure is
-                valid, that the required fields are present and in the correct
-                format, and that the data is trustworthy
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/validation.svg`}
+                  width={88}
+                  height={88}
+                  alt="Validation icon"
+                />
+                <h3 className="font-bold">Validation</h3>
+                <p>
+                  Reads and validates all eCR fields of interest based on
+                  specified, custom preferences; ensures that its XML structure
+                  is valid, that the required fields are present and in the
+                  correct format, and that the data is trustworthy
+                </p>
+              </div>
             </CardBody>
           </Card>
         </CardGroup>
@@ -280,19 +286,21 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/standardization.svg`}
-                width={88}
-                height={88}
-                alt="Standardization icon"
-              />
-              <h3 className="font-bold">Standardization</h3>
-              <p>
-                Standardizes data fields (including record name, date of birth,
-                phone number, and geolocation) based on preset defaults to
-                ensure consistency; for example, standardizing phone formats
-                (888-555-1234 vs. (888)555-1234)
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/standardization.svg`}
+                  width={88}
+                  height={88}
+                  alt="Standardization icon"
+                />
+                <h3 className="font-bold">Standardization</h3>
+                <p>
+                  Standardizes data fields (including record name, date of
+                  birth, phone number, and geolocation) based on preset defaults
+                  to ensure consistency; for example, standardizing phone
+                  formats (888-555-1234 vs. (888)555-1234)
+                </p>
+              </div>
             </CardBody>
           </Card>
           <Card
@@ -304,17 +312,19 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/geocoding.svg`}
-                width={88}
-                height={88}
-                alt="Geocoding icon"
-              />
-              <h3 className="font-bold">Geocoding</h3>
-              <p>
-                Enriches data by providing precise geographic locations based on
-                patient street addresses from input data
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/geocoding.svg`}
+                  width={88}
+                  height={88}
+                  alt="Geocoding icon"
+                />
+                <h3 className="font-bold">Geocoding</h3>
+                <p>
+                  Enriches data by providing precise geographic locations based
+                  on patient street addresses from input data
+                </p>
+              </div>
             </CardBody>
           </Card>
           <Card
@@ -326,17 +336,19 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/recordLinkage.svg`}
-                width={88}
-                height={88}
-                alt="Record Linkage icon"
-              />
-              <h3 className="font-bold">Record Linkage</h3>
-              <p>
-                Identifies multiple records referring to the same individual and
-                combines them into a single, more complete patient record
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/recordLinkage.svg`}
+                  width={88}
+                  height={88}
+                  alt="Record Linkage icon"
+                />
+                <h3 className="font-bold">Record Linkage</h3>
+                <p>
+                  Identifies multiple records referring to the same individual
+                  and combines them into a single, more complete patient record
+                </p>
+              </div>
             </CardBody>
           </Card>
         </CardGroup>
@@ -352,18 +364,20 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/flatFormatter.svg`}
-                width={88}
-                height={88}
-                alt="Flat Formatter icon"
-              />
-              <h3 className="font-bold">Flat Formatter</h3>
-              <p>
-                Extracts relevant data from a given healthcare message and
-                exports the data into a JSON file based on a user-defined
-                parsing schema
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/flatFormatter.svg`}
+                  width={88}
+                  height={88}
+                  alt="Flat Formatter icon"
+                />
+                <h3 className="font-bold">Flat Formatter</h3>
+                <p>
+                  Extracts relevant data from a given healthcare message and
+                  exports the data into a JSON file based on a user-defined
+                  parsing schema
+                </p>
+              </div>
             </CardBody>
           </Card>
           <Card
@@ -375,18 +389,20 @@ function DataPipeline() {
             containerProps={{ className: 'border-dashed' }}
           >
             <CardBody>
-              <Image
-                src={`${basePath}/icons/our-products/phdcConverter.svg`}
-                width={88}
-                height={88}
-                alt="PHDC Converter icon"
-              />
-              <h3 className="font-bold">PHDC Converter</h3>
-              <p>
-                Converts a FHIR bundle to the Public Health Document Container
-                (PHDC) format for ingestion into the National Electronic Disease
-                Surveillance System (NEDSS) Base System (NBS)
-              </p>
+              <div className="flex flex-col gap-y-4">
+                <Image
+                  src={`${basePath}/icons/our-products/phdcConverter.svg`}
+                  width={88}
+                  height={88}
+                  alt="PHDC Converter icon"
+                />
+                <h3 className="font-bold">PHDC Converter</h3>
+                <p>
+                  Converts a FHIR bundle to the Public Health Document Container
+                  (PHDC) format for ingestion into the National Electronic
+                  Disease Surveillance System (NEDSS) Base System (NBS)
+                </p>
+              </div>
             </CardBody>
           </Card>
         </CardGroup>
