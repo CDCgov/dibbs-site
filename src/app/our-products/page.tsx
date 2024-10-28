@@ -169,7 +169,7 @@ function DataPipeline() {
   return (
     <section className="usa-section">
       <GridContainer>
-        <div className="flex flex-col gap-y-2">
+        <div className="flex flex-col gap-y-6 pb-6">
           <Image
             src={`${basePath}/images/placeholder.png`}
             width="1120"
@@ -177,12 +177,14 @@ function DataPipeline() {
             style={{ maxHeight: '160px' }}
             alt="Placeholder"
           />
-          <h2>DIBBs to support the entire data pipeline</h2>
-          <p>
-            These are the underlying services that power each of our products;
-            they can be configured in a variety of ways to support the unique
-            needs of your jurisdiction.
-          </p>
+          <div className="flex flex-col gap-y-2">
+            <h2>DIBBs to support the entire data pipeline</h2>
+            <p>
+              These are the underlying services that power each of our products;
+              they can be configured in a variety of ways to support the unique
+              needs of your jurisdiction.
+            </p>
+          </div>
         </div>
         <p>FOR DATA PROCESSING</p>
         <CardGroup>
