@@ -213,7 +213,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/orchestration.svg`}
+                src={`${basePath}/icons/our-products/orchestration.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -236,7 +236,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/fhirConverter.svg`}
+                src={`${basePath}/icons/our-products/fhirConverter.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -261,7 +261,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/validation.svg`}
+                src={`${basePath}/icons/our-products/validation.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -290,7 +290,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/code.svg`}
+                src={`${basePath}/icons/our-products/standardization.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -315,7 +315,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/messageParser.svg`}
+                src={`${basePath}/icons/our-products/geocoding.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -338,7 +338,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/link.svg`}
+                src={`${basePath}/icons/our-products/recordLinkage.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -365,7 +365,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/code.svg`}
+                src={`${basePath}/icons/our-products/flatFormatter.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
@@ -389,7 +389,7 @@ function DataPipeline() {
           >
             <CardBody>
               <Image
-                src={`${basePath}/icons/messageParser.svg`}
+                src={`${basePath}/icons/our-products/phdcConverter.svg`}
                 width="88"
                 height="88"
                 alt="Placeholder"
