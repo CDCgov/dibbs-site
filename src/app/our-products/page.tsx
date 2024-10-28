@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -8,6 +9,8 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { basePath } from '../utils/constants';
+import styles from './../styles/OurProducts.module.scss';
+import classNames from 'classnames';
 
 export default function OurProducts() {
   return (
@@ -64,7 +67,7 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link href={'#'} className="usa-button">
+              <Link href="#" className={classNames('usa-button', styles.btn)}>
                 Learn more about eCR Viewer
               </Link>
             </CardFooter>
@@ -93,9 +96,9 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link href={'#'} className="usa-button">
+              <Button type="button" disabled>
                 Learn more about Query Connector
-              </Link>
+              </Button>
             </CardFooter>
           </Card>
           <Card
@@ -122,9 +125,9 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link href={'#'} className="usa-button">
+              <Button type="button" disabled>
                 Learn more about eCR Parser
-              </Link>
+              </Button>
             </CardFooter>
           </Card>
           <Card
@@ -151,9 +154,9 @@ function StandaloneProducts() {
               </p>
             </CardBody>
             <CardFooter>
-              <Link href={'#'} className="usa-button">
+              <Button type="button" disabled>
                 Learn more about eCR Refiner
-              </Link>
+              </Button>
             </CardFooter>
           </Card>
         </CardGroup>
