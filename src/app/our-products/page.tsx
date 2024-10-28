@@ -42,7 +42,7 @@ function StandaloneProducts() {
   return (
     <section className="usa-section">
       <GridContainer>
-        <h2 className="ml-5">Standalone Products</h2>
+        <h2>Standalone Products</h2>
         <CardGroup>
           <Card
             gridLayout={{
@@ -52,14 +52,16 @@ function StandaloneProducts() {
             }}
             containerProps={{ className: 'border-0' }}
           >
-            <CardBody>
+            <CardBody className={styles.cardBody}>
               <div className="flex flex-col gap-y-4">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
+                <div className="add-aspect-16x9">
+                  <Image
+                    src={`${basePath}/images/placeholder.png`}
+                    width="540"
+                    height="280"
+                    alt="Placeholder"
+                  />
+                </div>
                 <h3>eCR Viewer</h3>
                 <p>
                   Graphic headings can be used a few different ways, depending
@@ -68,7 +70,7 @@ function StandaloneProducts() {
                 </p>
               </div>
             </CardBody>
-            <CardFooter>
+            <CardFooter className={styles.cardFooter}>
               <Link href="#" className={classNames('usa-button', styles.btn)}>
                 Learn more about eCR Viewer
               </Link>
@@ -82,14 +84,16 @@ function StandaloneProducts() {
             }}
             containerProps={{ className: 'border-0' }}
           >
-            <CardBody>
+            <CardBody className={styles.cardBody}>
               <div className="flex flex-col gap-y-4">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
+                <div className="add-aspect-16x9">
+                  <Image
+                    src={`${basePath}/images/placeholder.png`}
+                    width="540"
+                    height="280"
+                    alt="Placeholder"
+                  />
+                </div>
                 <h3>Query Connector</h3>
                 <p>
                   Allows public health staff to query a wide network of
@@ -100,7 +104,7 @@ function StandaloneProducts() {
                 </p>
               </div>
             </CardBody>
-            <CardFooter>
+            <CardFooter className={styles.cardFooter}>
               <Button type="button" disabled>
                 Learn more about Query Connector
               </Button>
@@ -114,14 +118,16 @@ function StandaloneProducts() {
             }}
             containerProps={{ className: 'border-0' }}
           >
-            <CardBody>
+            <CardBody className={styles.cardBody}>
               <div className="flex flex-col gap-y-4">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
+                <div className="add-aspect-16x9">
+                  <Image
+                    src={`${basePath}/images/placeholder.png`}
+                    width="540"
+                    height="280"
+                    alt="Placeholder"
+                  />
+                </div>
                 <h3>eCR Parser</h3>
                 <p>
                   Enables public health staff to extract relevant data from eCR
@@ -131,7 +137,7 @@ function StandaloneProducts() {
                 </p>
               </div>
             </CardBody>
-            <CardFooter>
+            <CardFooter className={styles.cardFooter}>
               <Button type="button" disabled>
                 Learn more about eCR Parser
               </Button>
@@ -145,14 +151,16 @@ function StandaloneProducts() {
             }}
             containerProps={{ className: 'border-0' }}
           >
-            <CardBody>
+            <CardBody className={styles.cardBody}>
               <div className="flex flex-col gap-y-4">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
+                <div className="add-aspect-16x9">
+                  <Image
+                    src={`${basePath}/images/placeholder.png`}
+                    width="540"
+                    height="280"
+                    alt="Placeholder"
+                  />
+                </div>
                 <h3>eCR Refiner</h3>
                 <p>
                   Reduces eCR files down to only the most useful, necessary
@@ -162,7 +170,7 @@ function StandaloneProducts() {
                 </p>
               </div>
             </CardBody>
-            <CardFooter>
+            <CardFooter className={styles.cardFooter}>
               <Button type="button" disabled>
                 Learn more about eCR Refiner
               </Button>
