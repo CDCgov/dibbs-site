@@ -81,7 +81,7 @@ export default function MultiImageCarousel() {
       ref={carouselRef}
     >
       <button onClick={prevSlide} className="carousel-btn prev">
-        ❮
+        ❮<span className="sr-only">Previous slide</span>
       </button>
       <div className="carousel-wrapper">
         <div
@@ -106,7 +106,7 @@ export default function MultiImageCarousel() {
         </div>
       </div>
       <button onClick={nextSlide} className="carousel-btn next">
-        ❯
+        ❯<span className="sr-only">Next slide</span>
       </button>
     </div>
   );
