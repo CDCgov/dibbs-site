@@ -39,7 +39,7 @@ function StandaloneProducts() {
   return (
     <section className="usa-section">
       <GridContainer>
-        <h2>Standalone Products</h2>
+        <h2 className="ml-5">Standalone Products</h2>
         <CardGroup>
           <Card
             gridLayout={{
