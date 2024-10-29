@@ -28,7 +28,7 @@ function Intro() {
       <GridContainer>
         <div>
           <h1>Our ecosystem of DIBBs products</h1>
-          <p className="grid-container p-0">
+          <p className="p-0">
             Find out how DIBBs products can help empower your jurisdiction with
             more usable data.
           </p>
