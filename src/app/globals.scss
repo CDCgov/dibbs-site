@@ -1,8 +1,10 @@
+@forward "uswds-settings";
+@forward "uswds";
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '@trussworks/react-uswds/lib/uswds.css';
-@import '@trussworks/react-uswds/lib/index.css';
 
 :root {
   --background: #ffffff;

@@ -14,7 +14,9 @@ const nextConfig = {
   basePath: '/dibbs-site',
   assetPrefix: '/dibbs-site',
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [
+      path.join(__dirname, './', 'node_modules', '@uswds', 'uswds', 'packages'),
+    ],
   },
 };
 
