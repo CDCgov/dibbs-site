@@ -2,6 +2,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
+import '../styles/Carousel.module.scss';
 
 export default function MultiImageCarousel() {
   const images = [

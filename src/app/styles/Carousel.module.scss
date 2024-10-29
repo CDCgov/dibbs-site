@@ -1,0 +1,61 @@
+.carousel-container {
+  position: relative;
+  width: 100%; /* Full width of the container */
+}
+
+.carousel-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  cursor: grab; /* Shows a hand cursor when hovering for drag */
+}
+
+.carousel-wrapper:active {
+  cursor: grabbing; /* Changes cursor when dragging */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.carousel-item {
+  min-width: calc(100% / 7); /* Adjust based on number of visible items */
+  flex: 1 0 auto;
+  padding: 0 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.carousel-btn:focus {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s ease;
+  width: auto;
+  height: auto;
+  margin: inherit;
+  overflow: visible;
+  clip: inherit;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
