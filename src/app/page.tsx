@@ -3,6 +3,7 @@ import { Grid } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Hero from './components/Hero';
+import InvitationCta from './components/InvitationCta';
 
 export default async function Home() {
   return (
@@ -53,6 +54,7 @@ export default async function Home() {
           </Grid>
         </div>
       </section>
+      <InvitationCta />
     </>
   );
 }
