@@ -2,15 +2,18 @@ import MarkdownContent from './components/MarkdownComponent';
 import { Grid } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
+import Hero from './components/Hero';
 
 export default async function Home() {
   return (
     <>
-      <section className="usa-graphic-list usa-section usa-section--light-blue">
-        <div className="grid-container">
-          {MarkdownContent('homepage/section_1.md')}
-        </div>
-      </section>
+      <Hero
+        header="Improve the way your jurisdiction collects, processes, and views public
+      health data"
+        subheader="Turn your jurisdiction's data into meaningful intelligence that drives
+      timely public health action using CDC's free, cloud-based products built
+      from Data Integration Building Blocks, or DIBBs."
+      />
       <section className="usa-section">
         <div className="grid-container">
           <Grid row>
