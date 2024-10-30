@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import USABanner from './components/UsaBanner';
 import { basePath } from './utils/constants';
 import './globals.scss';
+import './custom-styles.css';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',

@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
+  }
+
+  h1 {
+    margin: 2rem 0 2rem 0;
+    font-size: larger;
+  }
+
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --header-teal: #224a58;
+    --background-light-blue: #dcecf3;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  
+  body {
+    /* color: var(--foreground);
+    background: var(--background); */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  
+  .usa-logo a {
+    color: #ffffff;
+  }
+  
+  .bg-background-teal {
+    background-color: var(--header-teal);
+  }
+  
+  @media (min-width: 64em) {
+    .usa-logo {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .height-100 {
+    height: 100%;
+  }
+  
+  .flex-vertical-center {
+    display: flex;
+    align-items: center !important;
+    vertical-align: center;
+    height: auto;
+  }
+  
+  .flex-center {
+    text-align: center;
+  }
+  
+  .usa-section--light-blue {
+    background-color: var(--background-light-blue);
+  }
+  
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50.28px;
+    text-align: left;
+  }
+  
+  h2 {
+    color: #224a58;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  ul {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    line-height: 1.5;
+    padding-left: 3ch;
+    list-style: disc;
+  }
+  ul:last-child {
+    margin-bottom: 0;
+  }
+  ul,
+  ol {
+    margin-top: 0.25em;
+  }
+  ul li {
+    margin-bottom: 0.25em;
+    max-width: 68ex;
+  }
+  ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
