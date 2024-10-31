@@ -29,39 +29,35 @@ export default function Footer() {
   ];
 
   return (
-    <>
-      <footer className="usa-header--basic bg-background-teal">
-        <div className="usa-nav-container flex-vertical-center">
-          <div className="usa-navbar">
-            <div className="usa-logo">
-              <em className="usa-logo__text">
-                <a href="http://cdc.gov" title="<Project title>">
-                  <span
-                    className={classNames('sr-only', styles.navbarLogoText)}
-                  >
-                    CDC US center for disease control and prevention
-                  </span>
-                  <Image
-                    width={200}
-                    height={40}
-                    alt=""
-                    className="margin-x-0"
-                    src={`${basePath}/images/CDC.svg`}
-                  />
-                </a>
-              </em>
-            </div>
-            <button type="button" className="usa-menu-btn">
-              Menu
-            </button>
+    <footer className="usa-header--basic bg-background-teal">
+      <div className="usa-nav-container flex-vertical-center">
+        <div className="usa-navbar">
+          <div className="usa-logo">
+            <em className="usa-logo__text">
+              <a href="http://cdc.gov" title="<Project title>">
+                <span className={classNames('sr-only', styles.navbarLogoText)}>
+                  CDC US center for disease control and prevention
+                </span>
+                <Image
+                  width={200}
+                  height={40}
+                  alt=""
+                  className="margin-x-0"
+                  src={`${basePath}/images/CDC.svg`}
+                />
+              </a>
+            </em>
           </div>
-          <PrimaryNav
-            items={testItemsMenu}
-            mobileExpanded={expanded}
-            onToggleMobileNav={onClick}
-          />
+          <button type="button" className="usa-menu-btn">
+            Menu
+          </button>
         </div>
-      </footer>
-    </>
+        <PrimaryNav
+          items={testItemsMenu}
+          mobileExpanded={expanded}
+          onToggleMobileNav={onClick}
+        />
+      </div>
+    </footer>
   );
 }
