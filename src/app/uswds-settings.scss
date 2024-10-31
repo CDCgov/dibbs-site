@@ -1,18 +1,18 @@
 // reference: https://github.com/CDCgov/dibbs-query-connector/blob/main/query-connector/src/styles/uswds-settings.scss
 
-@use "uswds-core" with (
-    // General
-    $theme-image-path: "../../../../../../dist/img",
+@use 'uswds-core' with (
+  // General
+  $theme-image-path: '../../../../../../dist/img',
 
-    // Color
-    // Component
-    $theme-hero-image: "../../../../dist/img/hero.jpg",
+  // Color
+  // Component
+  $theme-hero-image: '../../../../dist/img/hero.jpg',
 
-    // Spacing
-    $theme-grid-container-max-width: "widescreen",
-    $theme-header-max-width: "widescreen",
-    $theme-banner-max-width: "widescreen",
-    
-    // Typography
-    $theme-font-path: "../../../../../../dist/fonts",
-  );
+  // Spacing
+  $theme-grid-container-max-width: 'widescreen',
+  $theme-header-max-width: 'widescreen',
+  $theme-banner-max-width: 'widescreen',
+
+  // Typography
+  $theme-font-path: '../../../../../../dist/fonts'
+);
