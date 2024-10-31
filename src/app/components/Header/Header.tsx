@@ -1,61 +1,53 @@
 'use client';
-import { PrimaryNav } from '@trussworks/react-uswds';
-import Link from 'next/link';
+import { Header as USWDSHeader, PrimaryNav } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import React from 'react';
-import styles from '../styles/Home.module.scss';
-import { NavigationLink } from './NavigationLink';
 import classNames from 'classnames';
-import { basePath } from '../utils/constants';
+import { basePath } from '../../utils/constants';
+import { NavigationLink } from '../NavigationLink/NavigationLink';
+import styles from './Header.module.scss';
 
-export default function Footer() {
+export default function Header() {
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
     if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
   };
 
   const testItemsMenu = [
-    <Link
-      key="one"
-      href="/"
-      className={classNames('usa-nav__link', styles.homeNavItem)}
-      onClick={onClick}
-    >
-      <span className={styles.navbarItemText}>Home</span>
-    </Link>,
-    <NavigationLink key="two" href="/" onClick={onClick}>
-      Home
-    </NavigationLink>,
-    <NavigationLink key="three" href="/our-products" onClick={onClick}>
+    <NavigationLink key="one" href="/our-products" onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink key="four" href="/case-studies" onClick={onClick}>
+    <NavigationLink key="two" href="/case-studies" onClick={onClick}>
       Case studies
     </NavigationLink>,
-    <NavigationLink key="five" href="/engage-with-us" onClick={onClick}>
+    <NavigationLink key="three" href="/engage-with-us" onClick={onClick}>
       Engage with us
     </NavigationLink>,
   ];
 
   return (
     <>
-      <footer className="usa-header--basic bg-background-teal">
+      <a className="usa-skipnav" href="#main-content">
+        Skip to main content
+      </a>
+
+      <USWDSHeader basic={true} className="bg-background-teal">
         <div className="usa-nav-container flex-vertical-center">
           <div className="usa-navbar">
             <div className="usa-logo">
               <em className="usa-logo__text">
-                <a href="http://cdc.gov" title="<Project title>">
+                <a href={`${basePath}/`} title="<Project title>">
                   <span
                     className={classNames('sr-only', styles.navbarLogoText)}
                   >
-                    CDC US center for disease control and prevention
+                    Data Integration Building Blocks
                   </span>
                   <Image
                     width={200}
                     height={40}
                     alt=""
                     className="margin-x-0"
-                    src={`${basePath}/images/CDC.svg`}
+                    src={`${basePath}/images/dibbs-logo.svg`}
                   />
                 </a>
               </em>
@@ -70,7 +62,7 @@ export default function Footer() {
             onToggleMobileNav={onClick}
           />
         </div>
-      </footer>
+      </USWDSHeader>
     </>
   );
 }

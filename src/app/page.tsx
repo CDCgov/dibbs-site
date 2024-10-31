@@ -1,9 +1,9 @@
-import MarkdownContent from './components/MarkdownComponent';
+import MarkdownContent from './components/MarkdownComponent/MarkdownComponent';
 import { Grid } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
-import Hero from './components/Hero';
-import InvitationCta from './components/InvitationCta';
+import Hero from './components/Hero/Hero';
+import InvitationCta from './components/InvitationCta/InvitationCta';
 
 export default async function Home() {
   return (

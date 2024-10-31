@@ -1,5 +1,5 @@
 import { GridContainer } from '@trussworks/react-uswds';
-import styles from '../styles/Hero.module.scss';
+import styles from './Hero.module.scss';
 
 interface HeroProps {
   header: string;

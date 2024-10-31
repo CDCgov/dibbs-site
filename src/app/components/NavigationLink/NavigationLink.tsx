@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import Link, { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from '../styles/Home.module.scss';
+import styles from './NavigationLink.module.scss';
 
 interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
   children: React.ReactNode;
