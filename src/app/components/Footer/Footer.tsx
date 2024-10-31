@@ -1,6 +1,5 @@
 'use client';
 import { PrimaryNav } from '@trussworks/react-uswds';
-import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
