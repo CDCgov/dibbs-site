@@ -1,9 +1,10 @@
 ---
 ---
 
-## Introducing Data Integration Building Blocks
+## Introducing PHDI
 
-DIBBs are modular, open-source software that can be configured to clean, transform, and enrich data. We build cloud-enabled products that leverage DIBBs to provide the following benefits to public health jurisdictions:
+Introducing Data Integration Building Blocks
+DIBBs are modular, open-source software that can be configured as a pipeline to clean, transform, and enrich data. We build cloud-enabled products that leverage DIBBs to provide the following benefits to public health jurisdictions:
 
 - Better, higher quality data for use in data analysis
 - Time-savings for public health staff thanks to reduced manual work
