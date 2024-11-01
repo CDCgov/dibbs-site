@@ -29,24 +29,24 @@ function SectionOne() {
     <ContentContainer align>
       <Grid row gap>
         <Image
-          className="max-h-[320px] max-w-[480px]"
+          className="max-h-[20rem] max-w-[30rem]"
           src={`${basePath}/images/placeholder.png`}
           width={480}
           height={320}
           alt="Placeholder"
         />
         <div className="flex max-w-screen-md flex-col gap-5">
-          <h2 className="font-['Source Sans Pro'] text-[32px] font-bold text-[#224a58]">
+          <h2 className="text-[2rem] font-bold text-[#224a58]">
             Introducing Data Integration Building Blocks
           </h2>
           <div className="flex flex-col gap-2">
-            <p className="font-['Source Sans Pro'] m-0 max-w-[635px] p-0 text-base font-normal leading-relaxed text-[#224a58]">
+            <p className="m-0 max-w-[39.7rem] p-0 text-base font-normal leading-relaxed text-[#224a58]">
               DIBBs are modular, open-source software that can be configured to
               clean, transform, and enrich data. We build cloud-enabled products
               that leverage DIBBs to provide the following benefits to public
               health jurisdictions:
             </p>
-            <ul className="font-['Source Sans Pro'] text-base font-semibold leading-relaxed text-[#224a58]">
+            <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
               <li>Better, higher quality data for use in data analysis</li>
               <li>
                 Time-savings for public health staff thanks to reduced manual
@@ -71,10 +71,10 @@ function SectionTwo() {
     <ContentContainer align>
       <Grid row gap>
         <div>
-          <h2 className="font-['Source Sans Pro'] max-w-[372px] text-[32px] font-bold text-[#224a58]">
+          <h2 className="font-['Source Sans Pro'] max-w-[23.25rem] text-[2rem] font-bold text-[#224a58]">
             Unlock the value of your jurisdiction's data
           </h2>
-          <p className="font-['Source Sans Pro'] max-w-[450px] text-base font-normal leading-relaxed text-[#224a58]">
+          <p className="font-['Source Sans Pro'] max-w-[28.13rem] text-base font-normal leading-relaxed text-[#224a58]">
             DIBBs products help jurisdictions make the most of their data. From
             improving the usability of electronic case reporting (eCR) data to
             streamlining data collection from healthcare providers without the
@@ -86,7 +86,7 @@ function SectionTwo() {
           </Link>
         </div>
         <Image
-          className="max-h-[320px] max-w-[480px]"
+          className="max-h-[20rem] max-w-[30rem]"
           src={`${basePath}/images/placeholder.png`}
           width={480}
           height={320}
@@ -101,10 +101,10 @@ function SectionThree() {
   return (
     <ContentContainer align>
       <div className="flex flex-col items-center">
-        <h2 className="font-['Source Sans Pro'] text-center text-[32px] font-bold text-[#224a58]">
+        <h2 className="text-center text-[2rem] font-bold text-[#224a58]">
           Jurisdictions working with DIBBs
         </h2>
-        <p className="font-['Source Sans Pro'] text-center text-base font-normal leading-relaxed text-[#224a58]">
+        <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
           State and local public health jurisdictions across the United States
           used DIBBs to solve their toughest data challenges
         </p>
@@ -118,10 +118,10 @@ function InvitationCta() {
     <section className="usa-graphic-list usa-section usa-section--light-blue">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <div className="font-['Source Sans Pro'] self-stretch text-center text-[32px] font-bold text-[#224a58]">
+          <div className="self-stretch text-center text-[2rem] font-bold text-[#224a58]">
             Interested in getting started with DIBBs?
           </div>
-          <div className="font-['Source Sans Pro'] self-stretch text-center text-base font-normal leading-relaxed text-[#224a58]">
+          <div className="self-stretch text-center text-base font-normal leading-relaxed text-[#224a58]">
             Contact our team to learn more about how our products can help
             improve your data workflows
           </div>
