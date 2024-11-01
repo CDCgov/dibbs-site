@@ -22,7 +22,6 @@ export default function EngageWithUs() {
         <Grid
           row
           gap="lg"
-          className="px-10"
           tablet={{
             col: true,
           }}
@@ -46,7 +45,7 @@ function Left() {
       <p>Fill out the form below to get in touch with us</p>
       <Form
         onSubmit={() => {}}
-        className="align-start flex min-w-[500px] flex-col gap-y-2"
+        className="align-start flex min-w-[31.25rem] flex-col gap-y-2"
       >
         <Label
           htmlFor="name"
@@ -108,23 +107,23 @@ function Left() {
 function Right() {
   return (
     <>
-      <div id="content" className="flex max-w-[524px] flex-col gap-10 pt-4">
+      <div id="content" className="flex max-w-[32.75rem] flex-col gap-10 pt-4">
         <div className="border border-dashed p-2 text-center">
-          <p className="text-center text-[22px] font-bold leading-[33px] text-black">
+          <p className="text-center text-[1.38rem] font-bold leading-[2rem] text-black">
             All consultations with the DIBBs team are 100% free. There's no cost
             to use our products beyond costs to host within your jurisdiction
             should you choose to do so.
           </p>
         </div>
         <div>
-          <div className="max-w-[500px]">
-            <p className="text-[22px] font-bold leading-[33px] text-[#224a58]">
+          <div className="max-w-[31.25rem]">
+            <p className="text-[1.38rem] font-bold leading-[2rem] text-[#224a58]">
               "Our epidemiologists waste 80% of their time cleaning data and
               can't do useful analysis. The end goal of DIBBs infrastructure is
               to free up that 80% of their time to do actual public health
               work."
             </p>
-            <p className="text-[22px] font-light leading-[33px] text-[#224a58]">
+            <p className="text-[1.38rem] font-light leading-[2rem] text-[#224a58]">
               - Public Health Official, Virginia Department of Health
             </p>
           </div>
