@@ -50,28 +50,28 @@ function Left() {
       >
         <Label
           htmlFor="name"
-          className="font-['Source Sans Pro'] self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
         >
           Name
         </Label>
         <TextInput id="name" name="name" type="text" />
         <Label
           htmlFor="email"
-          className="font-['Source Sans Pro'] self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
         >
           Email Address
         </Label>
         <TextInput id="email" name="email" type="email" />
         <Label
           htmlFor="organization"
-          className="font-['Source Sans Pro'] self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
         >
           Organization
         </Label>
         <TextInput id="organization" name="organization" type="text" />
         <Label
           htmlFor="inquiry"
-          className="font-['Source Sans Pro'] self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
         >
           Type of inquiry
         </Label>
@@ -89,7 +89,7 @@ function Left() {
         />
         <Label
           htmlFor="message"
-          className="font-['Source Sans Pro'] self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
         >
           Message
         </Label>
@@ -97,7 +97,7 @@ function Left() {
       </Form>
       <Button
         type="submit"
-        className="font-['Source Sans Pro'] mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-[#224a58] px-5 py-3 text-right text-base font-bold text-white"
+        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-[#224a58] px-5 py-3 text-right text-base font-bold text-white"
       >
         Send inquiry
       </Button>
