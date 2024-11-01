@@ -109,22 +109,22 @@ function Right() {
   return (
     <>
       <div id="content" className="flex max-w-[524px] flex-col gap-10 pt-4">
-        <div className="border border-dashed bg-white p-2 text-center">
-          <p className="font-['Source Sans Pro'] text-center text-[22px] font-bold leading-[33px] text-black">
+        <div className="border border-dashed p-2 text-center">
+          <p className="text-center text-[22px] font-bold leading-[33px] text-black">
             All consultations with the DIBBs team are 100% free. There's no cost
             to use our products beyond costs to host within your jurisdiction
             should you choose to do so.
           </p>
         </div>
         <div>
-          <div className="w-[500px]">
-            <p className="font-['Source Sans Pro'] text-[22px] font-bold leading-[33px] text-[#224a58]">
+          <div className="max-w-[500px]">
+            <p className="text-[22px] font-bold leading-[33px] text-[#224a58]">
               "Our epidemiologists waste 80% of their time cleaning data and
               can't do useful analysis. The end goal of DIBBs infrastructure is
               to free up that 80% of their time to do actual public health
               work."
             </p>
-            <p className="font-['Source Sans Pro'] text-[22px] font-light leading-[33px] text-[#224a58]">
+            <p className="text-[22px] font-light leading-[33px] text-[#224a58]">
               - Public Health Official, Virginia Department of Health
             </p>
           </div>
