@@ -19,17 +19,11 @@ export default function EngageWithUs() {
         subheader="Learn how your jurisdiction can start working with the DIBBs team."
       />
       <ContentContainer>
-        <Grid
-          row
-          gap="lg"
-          tablet={{
-            col: true,
-          }}
-        >
-          <Grid>
+        <Grid row>
+          <Grid col={6}>
             <Left />
           </Grid>
-          <Grid>
+          <Grid col={6}>
             <Right />
           </Grid>
         </Grid>
@@ -41,51 +35,58 @@ export default function EngageWithUs() {
 function Left() {
   return (
     <>
-      <h2>Contact Us</h2>
+      <h2>Contact us</h2>
       <p>Fill out the form below to get in touch with us</p>
       <Form
         onSubmit={() => {}}
         className="align-start flex min-w-[31.25rem] flex-col gap-y-2"
       >
-        <Label
-          htmlFor="name"
-          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
-        >
-          Name
-        </Label>
-        <TextInput id="name" name="name" type="text" />
-        <Label
-          htmlFor="email"
-          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
-        >
-          Email Address
-        </Label>
-        <TextInput id="email" name="email" type="email" />
-        <Label
-          htmlFor="organization"
-          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
-        >
-          Organization
-        </Label>
-        <TextInput id="organization" name="organization" type="text" />
-        <Label
-          htmlFor="inquiry"
-          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
-        >
-          Type of inquiry
-        </Label>
-        <ComboBox
-          id="inquiry"
-          name="inquiry"
-          options={[
-            {
-              label: 'General interest in DIBBs products',
-              value: 'general-interest',
-            },
-          ]}
-          defaultValue="general-interest"
-          onChange={() => {}}
-        />
+        <div className="max-w-[70%]">
+          <Label
+            htmlFor="name"
+            className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          >
+            Name
+          </Label>
+          <TextInput
+            id="name"
+            name="name"
+            type="text"
+            className="max-w-[2rem]"
+          />
+          <Label
+            htmlFor="email"
+            className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          >
+            Email Address
+          </Label>
+          <TextInput id="email" name="email" type="email" />
+          <Label
+            htmlFor="organization"
+            className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          >
+            Organization
+          </Label>
+          <TextInput id="organization" name="organization" type="text" />
+          <Label
+            htmlFor="inquiry"
+            className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          >
+            Type of inquiry
+          </Label>
+          <ComboBox
+            id="inquiry"
+            name="inquiry"
+            options={[
+              {
+                label: 'General interest in DIBBs products',
+                value: 'general-interest',
+              },
+            ]}
+            defaultValue="general-interest"
+            onChange={() => {}}
+          />
+        </div>
         <Label
           htmlFor="message"
           className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
@@ -116,8 +117,8 @@ function Right() {
           </p>
         </div>
         <div>
-          <div className="max-w-[31.25rem]">
-            <p className="text-[1.38rem] font-bold leading-[2rem] text-[#224a58]">
+          <div className="ml-2 flex max-w-[31.25rem] flex-col gap-2">
+            <p className="text-[1.38rem] font-bold italic leading-[2rem] text-[#224a58]">
               "Our epidemiologists waste 80% of their time cleaning data and
               can't do useful analysis. The end goal of DIBBs infrastructure is
               to free up that 80% of their time to do actual public health

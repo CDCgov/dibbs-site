@@ -26,7 +26,7 @@ export default async function Home() {
 
 function SectionOne() {
   return (
-    <ContentContainer>
+    <ContentContainer align>
       <Grid row gap>
         <Image
           className="max-h-[320px] max-w-[480px]"
@@ -68,7 +68,7 @@ function SectionOne() {
 
 function SectionTwo() {
   return (
-    <ContentContainer>
+    <ContentContainer align>
       <Grid row gap>
         <div>
           <h2 className="font-['Source Sans Pro'] max-w-[372px] text-[32px] font-bold text-[#224a58]">
@@ -99,7 +99,7 @@ function SectionTwo() {
 
 function SectionThree() {
   return (
-    <ContentContainer>
+    <ContentContainer align>
       <div className="flex flex-col items-center">
         <h2 className="font-['Source Sans Pro'] text-center text-[32px] font-bold text-[#224a58]">
           Jurisdictions working with DIBBs
