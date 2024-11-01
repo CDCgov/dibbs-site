@@ -19,7 +19,7 @@ export default function EngageWithUs() {
         subheader="Learn how your jurisdiction can start working with the DIBBs team."
       />
       <ContentContainer>
-        <Grid row>
+        <Grid row gap={6}>
           <Grid col={6}>
             <Left />
           </Grid>
@@ -108,8 +108,8 @@ function Left() {
 function Right() {
   return (
     <>
-      <div id="content" className="flex max-w-[32.75rem] flex-col gap-10 pt-4">
-        <div className="border border-dashed p-2 text-center">
+      <div id="content" className="flex flex-col gap-10 pt-4">
+        <div className="border border-dashed p-4 text-center">
           <p className="text-center text-[1.38rem] font-bold leading-[2rem] text-black">
             All consultations with the DIBBs team are 100% free. There's no cost
             to use our products beyond costs to host within your jurisdiction
@@ -117,14 +117,14 @@ function Right() {
           </p>
         </div>
         <div>
-          <div className="ml-2 flex max-w-[31.25rem] flex-col gap-2">
+          <div className="ml-2 flex min-w-[35.25rem] flex-col gap-2">
             <p className="text-[1.38rem] font-bold italic leading-[2rem] text-[#224a58]">
               "Our epidemiologists waste 80% of their time cleaning data and
               can't do useful analysis. The end goal of DIBBs infrastructure is
               to free up that 80% of their time to do actual public health
               work."
             </p>
-            <p className="text-[1.38rem] font-light leading-[2rem] text-[#224a58]">
+            <p className="min-w-full text-[1.38rem] font-light leading-[2rem] text-[#224a58]">
               - Public Health Official, Virginia Department of Health
             </p>
           </div>
