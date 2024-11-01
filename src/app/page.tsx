@@ -113,7 +113,7 @@ function SectionThree() {
   );
 }
 
-export function InvitationCta() {
+function InvitationCta() {
   return (
     <section className="usa-graphic-list usa-section usa-section--light-blue">
       <GridContainer>
