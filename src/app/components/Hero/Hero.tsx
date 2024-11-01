@@ -13,7 +13,7 @@ export default function Hero({ header, subheader }: HeroProps) {
         <div className={styles.content}>
           <div className="flex flex-col items-start gap-3 self-start">
             <h1 className={styles.heading}>{header}</h1>
-            <p className="font-['Source Sans Pro'] m-0 max-w-[862px] text-[22px] font-light leading-[33px] text-[#224a58]">
+            <p className="m-0 max-w-[53.9rem] text-[1.38rem] font-light leading-[2rem] text-[#224a58]">
               {subheader}
             </p>
           </div>
