@@ -35,7 +35,7 @@ function SectionOne() {
           height={320}
           alt="Placeholder"
         />
-        <div className="flex max-w-screen-md flex-col gap-5">
+        <div className="flex max-w-screen-lg flex-col gap-5">
           <h2 className="text-[2rem] font-bold text-[#224a58]">
             Introducing Data Integration Building Blocks
           </h2>
@@ -47,14 +47,20 @@ function SectionOne() {
               health jurisdictions:
             </p>
             <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
-              <li>Better, higher quality data for use in data analysis</li>
-              <li>
+              <li className="min-w-full">
+                Better, higher quality data for use in data analysis
+              </li>
+              <li className="min-w-full">
                 Time-savings for public health staff thanks to reduced manual
                 work
               </li>
-              <li>More usable data that makes case investigation easier</li>
-              <li>Automated data processing that streamlines data workflows</li>
-              <li>
+              <li className="min-w-full">
+                More usable data that makes case investigation easier
+              </li>
+              <li className="min-w-full">
+                Automated data processing that streamlines data workflows
+              </li>
+              <li className="min-w-full">
                 Flexible cloud deployment options, including free central
                 hosting through CDC
               </li>
