@@ -109,7 +109,7 @@ function Right() {
   return (
     <>
       <div id="content" className="flex flex-col gap-10 pt-4">
-        <div className="border border-dashed p-4 text-center">
+        <div className="border border-dashed bg-white p-4 text-center">
           <p className="text-center text-[1.38rem] font-bold leading-[2rem] text-black">
             All consultations with the DIBBs team are 100% free. There's no cost
             to use our products beyond costs to host within your jurisdiction
