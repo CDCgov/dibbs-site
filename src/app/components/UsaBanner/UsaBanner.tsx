@@ -11,7 +11,7 @@ import {
   MediaBlockBody,
   Icon,
 } from '@trussworks/react-uswds';
-import { basePath } from '../utils/constants';
+import { basePath } from '../../utils/constants';
 
 export default function USABanner() {
   const [isOpen, setIsOpen] = useState(false);
