@@ -36,7 +36,9 @@ function Left() {
   return (
     <>
       <h2>Contact us</h2>
-      <p>Fill out the form below to get in touch with us</p>
+      <p className="text-base font-normal leading-relaxed text-[#224a58]">
+        Fill out the form below to get in touch with us
+      </p>
       <Form
         onSubmit={() => {}}
         className="align-start flex min-w-[31.25rem] flex-col gap-y-2"
@@ -110,7 +112,7 @@ function Right() {
     <>
       <div id="content" className="flex flex-col gap-10 pt-4">
         <div className="border border-dashed bg-white p-4 text-center">
-          <p className="text-center text-[1.38rem] font-bold leading-[2rem] text-black">
+          <p className="text-center text-[1.40rem] font-bold leading-[2rem] text-black">
             All consultations with the DIBBs team are 100% free. There's no cost
             to use our products beyond costs to host within your jurisdiction
             should you choose to do so.
