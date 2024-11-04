@@ -1,37 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '@trussworks/react-uswds/lib/uswds.css';
-@import '@trussworks/react-uswds/lib/index.css';
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --header-teal: #224a58;
-  --background-light-blue: #dcecf3;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  /* color: var(--foreground);
-  background: var(--background); */
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-h1 {
-  margin: 2rem 0 2rem 0;
-  font-size: larger;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --header-teal: #224a58;
+  --background-light-blue: #dcecf3;
+  font-size: 16px; /* base value for rem */
+}
+
+html,
+body {
+  background: #e7f2f580;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .usa-logo a {
@@ -69,7 +57,6 @@ h1 {
 }
 
 h1 {
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50.28px;
