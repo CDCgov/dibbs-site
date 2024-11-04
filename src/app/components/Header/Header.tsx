@@ -2,10 +2,10 @@
 import { Header as USWDSHeader, PrimaryNav } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import React from 'react';
-import styles from '../styles/Home.module.scss';
 import classNames from 'classnames';
-import { basePath } from '../utils/constants';
-import { NavigationLink } from './NavigationLink';
+import { basePath } from '../../utils/constants';
+import { NavigationLink } from '../NavigationLink/NavigationLink';
+import styles from './Header.module.scss';
 
 export default function Header() {
   const [expanded, setExpanded] = React.useState(false);
