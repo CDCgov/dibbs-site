@@ -83,11 +83,11 @@ function ProductCard({
   linkToHref,
 }: ProductCardProps) {
   return (
-    <div className="grid max-w-[33.75rem] grid-cols-1 items-start">
+    <div className="grid h-full max-w-[33.75rem] grid-cols-1 items-start">
       <div className="add-aspect-16x9">
         <Image src={imgSrc} width="540" height="280" alt="Placeholder" />
       </div>
-      <div className="flex flex-col items-start">
+      <div className="flex min-h-[11.12rem] flex-col">
         <div className="content mb-5 mt-4 flex flex-col gap-3">
           <h3>{title}</h3>
           <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
