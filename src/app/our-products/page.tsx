@@ -114,7 +114,7 @@ interface DataPipelineCardProps {
 
 function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
   return (
-    <div className="rounded border border-dashed border-[#224A58] bg-background p-8">
+    <div className="min-h-[23.69rem] rounded border border-dashed border-[#224A58] bg-background p-8">
       <Image
         className="pb-4"
         src={imgSrc}
@@ -159,7 +159,9 @@ function DataPipeline() {
           </p>
         </div>
       </div>
-      <p>FOR DATA PROCESSING</p>
+      <p className="text-2xl font-normal uppercase text-[#224a58]">
+        FOR DATA PROCESSING
+      </p>
       <DataPipelineGrid>
         <DataPipelineCard
           title="Orchestration"
@@ -181,7 +183,9 @@ function DataPipeline() {
           imgSrc={`${basePath}/icons/our-products/validation.svg`}
         />
       </DataPipelineGrid>
-      <p>FOR DATA ENRICHMENT</p>
+      <p className="pt-8 text-2xl font-normal uppercase text-[#224a58]">
+        FOR DATA ENRICHMENT
+      </p>
       <DataPipelineGrid>
         <DataPipelineCard
           title="Standardization"
@@ -199,7 +203,9 @@ function DataPipeline() {
           imgSrc={`${basePath}/icons/our-products/recordLinkage.svg`}
         />
       </DataPipelineGrid>
-      <p>FOR DATA TRANSFORMATION</p>
+      <p className="pt-8 text-2xl font-normal uppercase text-[#224a58]">
+        FOR DATA TRANSFORMATION
+      </p>
       <DataPipelineGrid>
         <DataPipelineCard
           title="Flat Formatter"
