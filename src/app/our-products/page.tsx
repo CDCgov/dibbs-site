@@ -29,141 +29,87 @@ function StandaloneProducts() {
   return (
     <ContentContainer>
       <h2>Standalone Products</h2>
-      <CardGroup>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 6,
-            },
-          }}
-          containerProps={{ className: 'border-0 bg-background' }}
-        >
-          <CardBody className="p-0">
-            <div className="flex flex-col gap-y-4">
-              <div className="add-aspect-16x9">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
-              </div>
-              <h3>eCR Viewer</h3>
-              <p className="m-0 p-0">
-                Makes it easier for public health staff to find relevant
+      <div className="mt-5 grid grid-cols-1 gap-10 md:grid-cols-2">
+        <ProductCard
+          title="eCR Viewer"
+          text="Makes it easier for public health staff to find relevant
                 information in eCR documents. It combines both the eICR and RR
                 records into a single view and highlights relevant lab or
-                clinical information for conditions present in the eCR.
-              </p>
-            </div>
-          </CardBody>
-          <CardFooter className="mt-5 p-0">
-            <Link href="#" className="usa-button bg-[#224a58]">
-              Learn more about eCR Viewer
-            </Link>
-          </CardFooter>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 6,
-            },
-          }}
-          containerProps={{ className: 'border-0 bg-background' }}
-        >
-          <CardBody className="p-0">
-            <div className="flex flex-col gap-y-1">
-              <div className="add-aspect-16x9">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
-              </div>
-              <h3>Query Connector</h3>
-              <p className="m-0 p-0">
-                Allows public health staff to query a wide network of healthcare
-                organizations for data relevant to a given condition. It gives
-                staff access to more complete and timely data without the need
-                for a direct connection to a healthcare provider.
-              </p>
-            </div>
-          </CardBody>
-          <CardFooter className="mt-5 p-0">
-            <Button type="button" disabled>
-              Learn more about Query Connector
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 6,
-            },
-          }}
-          containerProps={{ className: 'border-0 bg-background' }}
-        >
-          <CardBody className="p-0">
-            <div className="flex flex-col gap-y-4">
-              <div className="add-aspect-16x9">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
-              </div>
-              <h3>eCR Parser</h3>
-              <p className="m-0 p-0">
-                Enables public health staff to extract relevant data from eCR
-                messages based on a user-defined parsing schema. It exports that
-                data into a simple JSON file that can be easily loaded into a
-                tabular format (like a spreadsheet).
-              </p>
-            </div>
-          </CardBody>
-          <CardFooter className="mt-5 p-0">
-            <Button type="button" disabled>
-              Learn more about eCR Parser
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 6,
-            },
-          }}
-          containerProps={{ className: 'border-0 bg-background' }}
-        >
-          <CardBody className="p-0">
-            <div className="flex flex-col gap-y-4">
-              <div className="add-aspect-16x9">
-                <Image
-                  src={`${basePath}/images/placeholder.png`}
-                  width="540"
-                  height="280"
-                  alt="Placeholder"
-                />
-              </div>
-              <h3>eCR Refiner</h3>
-              <p className="m-0 p-0">
-                Reduces eCR files down to only the most useful, necessary
-                information to alleviate performance and storage burden on
-                disease surveillance systems and bring focus to pertinent data
-                for a given condition.
-              </p>
-            </div>
-          </CardBody>
-          <CardFooter className="mt-5 p-0">
-            <Button type="button" disabled>
-              Learn more about eCR Refiner
-            </Button>
-          </CardFooter>
-        </Card>
-      </CardGroup>
+                clinical information for conditions present in the eCR."
+          imgSrc={`${basePath}/images/placeholder.png`}
+          linkText="Learn more about eCR Viewer"
+          linkToHref="#"
+        />
+        <ProductCard
+          title="Query Connector"
+          text="Allows public health staff to query a wide network of healthcare
+              organizations for data relevant to a given condition. It gives
+              staff access to more complete and timely data without the need for
+              a direct connection to a healthcare provider."
+          imgSrc={`${basePath}/images/placeholder.png`}
+          linkText="Learn more about Query Connector"
+          linkToHref=""
+        />
+        <ProductCard
+          title="eCR Parser"
+          text="Enables public health staff to extract relevant data from eCR
+              messages based on a user-defined parsing schema. It exports that
+              data into a simple JSON file that can be easily loaded into a
+              tabular format (like a spreadsheet)."
+          imgSrc={`${basePath}/images/placeholder.png`}
+          linkText="Learn more about eCR Parser"
+          linkToHref=""
+        />
+        <ProductCard
+          title="eCR Refiner"
+          text="Reduces eCR files down to only the most useful, necessary
+              information to alleviate performance and storage burden on disease
+              surveillance systems and bring focus to pertinent data for a given
+              condition."
+          imgSrc={`${basePath}/images/placeholder.png`}
+          linkText="Learn more about eCR Refiner"
+          linkToHref=""
+        />
+      </div>
     </ContentContainer>
+  );
+}
+
+interface ProductCardProps {
+  title: string;
+  text: string;
+  imgSrc: string;
+  linkText: string;
+  linkToHref: string;
+}
+function ProductCard({
+  title,
+  text,
+  imgSrc,
+  linkText,
+  linkToHref,
+}: ProductCardProps) {
+  return (
+    <div className="grid max-w-[33.75rem] grid-cols-1 items-start">
+      <div className="add-aspect-16x9">
+        <Image src={imgSrc} width="540" height="280" alt="Placeholder" />
+      </div>
+      <div className="flex flex-col items-start">
+        <div className="content mb-5 mt-4 flex flex-col gap-3">
+          <h3>{title}</h3>
+          <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+            {text}
+          </p>
+        </div>
+      </div>
+      <Link
+        aria-disabled={linkToHref ? 'false' : 'true'}
+        href={linkToHref}
+        className="usa-button self-end justify-self-start bg-[#224a58]"
+      >
+        {linkText}
+      </Link>
+    </div>
   );
 }
 
