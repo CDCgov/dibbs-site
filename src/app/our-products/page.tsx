@@ -115,10 +115,16 @@ interface DataPipelineCardProps {
 function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
   return (
     <div className="rounded border border-dashed border-[#224A58] bg-background p-8">
-      <div className="flex flex-col gap-y-4">
-        <Image src={imgSrc} width={88} height={88} alt={`${title} icon`} />
+      <Image
+        className="pb-4"
+        src={imgSrc}
+        width={88}
+        height={88}
+        alt={`${title} icon`}
+      />
+      <div className="flex flex-col gap-y-2">
         <h3 className="font-bold">{title}</h3>
-        <p>{text}</p>
+        <p className="m-0 p-0">{text}</p>
       </div>
     </div>
   );
