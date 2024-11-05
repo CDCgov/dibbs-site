@@ -12,8 +12,8 @@ export function ContentContainer({
   return (
     <section>
       <GridContainer
-        className={classNames('px-14 py-20', {
-          'px-32': !align,
+        className={classNames('py-4 sm:px-14 sm:py-20', {
+          'sm:px-32': !align,
         })}
       >
         {children}
