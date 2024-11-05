@@ -126,7 +126,7 @@ function DataPipeline() {
         />
         <div className="flex flex-col gap-y-2">
           <h2>DIBBs to support the entire data pipeline</h2>
-          <p>
+          <p className="max-w-[48rem] text-base font-normal leading-relaxed text-[#224a58]">
             These are the underlying services that power each of our products;
             they can be configured in a variety of ways to support the unique
             needs of your jurisdiction.
