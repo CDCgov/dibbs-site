@@ -1,10 +1,3 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardGroup,
-} from '@trussworks/react-uswds';
 import Image from 'next/image';
 import Link from 'next/link';
 import { basePath } from '../utils/constants';
@@ -113,6 +106,33 @@ function ProductCard({
   );
 }
 
+interface DataPipelineCardProps {
+  title: string;
+  text: string;
+  imgSrc: string;
+}
+
+function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
+  return (
+    <div className="rounded border border-dashed border-[#224A58] bg-background p-8">
+      <div className="flex flex-col gap-y-4">
+        <Image src={imgSrc} width={88} height={88} alt={`${title} icon`} />
+        <h3 className="font-bold">{title}</h3>
+        <p>{text}</p>
+      </div>
+    </div>
+  );
+}
+
+interface DataPipelineGridProps {
+  children: React.ReactNode;
+}
+function DataPipelineGrid({ children }: DataPipelineGridProps) {
+  return (
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">{children}</div>
+  );
+}
+
 function DataPipeline() {
   return (
     <ContentContainer>
@@ -134,232 +154,58 @@ function DataPipeline() {
         </div>
       </div>
       <p>FOR DATA PROCESSING</p>
-      <CardGroup>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/orchestration.svg`}
-                width={88}
-                height={88}
-                alt="Orchestration icon"
-              />
-              <h3 className="font-bold">Orchestration</h3>
-              <p>
-                Enables coordinated execution of DIBBs in any order, allowing
-                for fully automated workflows
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/fhirConverter.svg`}
-                width={88}
-                height={88}
-                alt="FHIR Converter icon"
-              />
-              <h3 className="font-bold">FHIR Converter</h3>
-              <p>
-                Converts incoming messages into the FHIR (Fast Healthcare
+      <DataPipelineGrid>
+        <DataPipelineCard
+          title="Orchestration"
+          text="Enables coordinated execution of DIBBs in any order, allowing for
+              fully automated workflows"
+          imgSrc={`${basePath}/icons/our-products/orchestration.svg`}
+        />
+        <DataPipelineCard
+          title="FHIR Converter"
+          text="Converts incoming messages into the FHIR (Fast Healthcare
                 Interoperability Resources) standard; acts as a common language
                 between data streams that allows for ease of processing data in
-                all the different DIBBs
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/validation.svg`}
-                width={88}
-                height={88}
-                alt="Validation icon"
-              />
-              <h3 className="font-bold">Validation</h3>
-              <p>
-                Reads and validates all eCR fields of interest based on
-                specified, custom preferences; ensures that its XML structure is
-                valid, that the required fields are present and in the correct
-                format, and that the data is trustworthy
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-      </CardGroup>
-
+                all the different DIBBs"
+          imgSrc={`${basePath}/icons/our-products/fhirConverter.svg`}
+        />
+        <DataPipelineCard
+          title="Validation"
+          text="Reads and validates all eCR fields of interest based on specified, custom preferences; ensures that its XML structure is valid, that the required fields are present and in the correct format, and that the data is trustworthy"
+          imgSrc={`${basePath}/icons/our-products/validation.svg`}
+        />
+      </DataPipelineGrid>
       <p>FOR DATA ENRICHMENT</p>
-      <CardGroup>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/standardization.svg`}
-                width={88}
-                height={88}
-                alt="Standardization icon"
-              />
-              <h3 className="font-bold">Standardization</h3>
-              <p>
-                Standardizes data fields (including record name, date of birth,
-                phone number, and geolocation) based on preset defaults to
-                ensure consistency; for example, standardizing phone formats
-                (888-555-1234 vs. (888)555-1234)
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/geocoding.svg`}
-                width={88}
-                height={88}
-                alt="Geocoding icon"
-              />
-              <h3 className="font-bold">Geocoding</h3>
-              <p>
-                Enriches data by providing precise geographic locations based on
-                patient street addresses from input data
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/recordLinkage.svg`}
-                width={88}
-                height={88}
-                alt="Record Linkage icon"
-              />
-              <h3 className="font-bold">Record Linkage</h3>
-              <p>
-                Identifies multiple records referring to the same individual and
-                combines them into a single, more complete patient record
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-      </CardGroup>
-
+      <DataPipelineGrid>
+        <DataPipelineCard
+          title="Standardization"
+          text="Standardizes data fields (including record name, date of birth, phone number, and geolocation) based on preset defaults to ensure consistency; for example, standardizing phone formats (888-555-1234 vs. (888)555-1234)"
+          imgSrc={`${basePath}/icons/our-products/standardization.svg`}
+        />
+        <DataPipelineCard
+          title="Geocoding"
+          text="Enriches data by providing precise geographic locations based on patient street addresses from input data"
+          imgSrc={`${basePath}/icons/our-products/geocoding.svg`}
+        />
+        <DataPipelineCard
+          title="Record Linkage"
+          text="Identifies multiple records referring to the same individual and combines them into a single, more complete patient record"
+          imgSrc={`${basePath}/icons/our-products/recordLinkage.svg`}
+        />
+      </DataPipelineGrid>
       <p>FOR DATA TRANSFORMATION</p>
-      <CardGroup>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/flatFormatter.svg`}
-                width={88}
-                height={88}
-                alt="Flat Formatter icon"
-              />
-              <h3 className="font-bold">Flat Formatter</h3>
-              <p>
-                Extracts relevant data from a given healthcare message and
-                exports the data into a JSON file based on a user-defined
-                parsing schema
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-        <Card
-          gridLayout={{
-            tablet: {
-              col: 4,
-            },
-          }}
-          containerProps={{
-            className: ' border-dashed border-[#224A58] bg-background',
-          }}
-        >
-          <CardBody>
-            <div className="flex flex-col gap-y-4">
-              <Image
-                src={`${basePath}/icons/our-products/phdcConverter.svg`}
-                width={88}
-                height={88}
-                alt="PHDC Converter icon"
-              />
-              <h3 className="font-bold">PHDC Converter</h3>
-              <p>
-                Converts a FHIR bundle to the Public Health Document Container
-                (PHDC) format for ingestion into the National Electronic Disease
-                Surveillance System (NEDSS) Base System (NBS)
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-      </CardGroup>
+      <DataPipelineGrid>
+        <DataPipelineCard
+          title="Flat Formatter"
+          text="Extracts relevant data from a given healthcare message and exports the data into a JSON file based on a user-defined parsing schema"
+          imgSrc={`${basePath}/icons/our-products/flatFormatter.svg`}
+        />
+        <DataPipelineCard
+          title="PHDC Converter"
+          text="Converts a FHIR bundle to the Public Health Document Container (PHDC) format for ingestion into the National Electronic Disease Surveillance System (NEDSS) Base System (NBS)"
+          imgSrc={`${basePath}/icons/our-products/phdcConverter.svg`}
+        />
+      </DataPipelineGrid>
     </ContentContainer>
   );
 }
