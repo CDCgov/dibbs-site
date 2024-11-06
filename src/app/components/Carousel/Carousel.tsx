@@ -1,10 +1,11 @@
 'use client';
 import Slider from 'react-slick';
-import styles from './Carousel.module.scss';
 import { basePath } from '../../utils/constants';
 import Image from 'next/image';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-export default function SimpleSlider() {
+export default function Carousel() {
   const images = [
     `${basePath}/images/placeholder-carousel-numbered-1.png`,
     `${basePath}/images/placeholder-carousel-numbered-2.png`,
@@ -34,7 +35,7 @@ export default function SimpleSlider() {
   };
 
   return (
-    <div className={styles.sliderContainer}>
+    <div className={'sliderContainer'}>
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index}>

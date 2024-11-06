@@ -1,4 +1,3 @@
-import { GridContainer } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 
 interface ContentContainerProps {
@@ -9,17 +8,17 @@ interface ContentContainerProps {
 export function ContentContainer({
   children,
   align = false,
-  classes = 'px-14 py20',
+  classes = 'ml-auto mr-auto flex max-w-[87.5rem] flex-col px-10 py-4 sm:px-14 sm:py-20',
 }: ContentContainerProps) {
   return (
     <section>
-      <GridContainer
+      <div
         className={classNames(classes, {
-          'px-32': !align,
+          'md:px-32': !align,
         })}
       >
         {children}
-      </GridContainer>
+      </div>
     </section>
   );
 }

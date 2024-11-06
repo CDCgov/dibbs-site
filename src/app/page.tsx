@@ -1,7 +1,7 @@
 import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
-import SimpleCarousel from './components/Carousel/Carousel';
+import Carousel from './components/Carousel/Carousel';
 import Hero from './components/Hero/Hero';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import Link from 'next/link';
@@ -123,7 +123,7 @@ function SectionThree() {
         </Grid>
       </ContentContainer>
       <div className="pb-20 pt-10">
-        <SimpleCarousel />
+        <Carousel />
       </div>
     </>
   );
