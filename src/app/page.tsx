@@ -107,7 +107,7 @@ function SectionTwo() {
 function SectionThree() {
   return (
     <>
-      <ContentContainer align classes="px-14 pt-20 pb-10">
+      <ContentContainer align extraClasses="px-14 pt-20 pb-10 sm:pb-10">
         <Grid row gap>
           <Grid col={12}>
             <div className="flex flex-col items-center">
