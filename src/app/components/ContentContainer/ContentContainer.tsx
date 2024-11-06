@@ -4,15 +4,17 @@ import classNames from 'classnames';
 interface ContentContainerProps {
   children: React.ReactNode;
   align?: boolean;
+  classes?: string;
 }
 export function ContentContainer({
   children,
   align = false,
+  classes = 'px-14 py20',
 }: ContentContainerProps) {
   return (
     <section>
       <GridContainer
-        className={classNames('px-14 py-20', {
+        className={classNames(classes, {
           'px-32': !align,
         })}
       >

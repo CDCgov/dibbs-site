@@ -1,7 +1,7 @@
 import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
-import SimpleCarousel from './components/Carousel';
+import SimpleCarousel from './components/Carousel/Carousel';
 import Hero from './components/Hero/Hero';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import Link from 'next/link';
@@ -106,22 +106,26 @@ function SectionTwo() {
 
 function SectionThree() {
   return (
-    <ContentContainer align>
-      <Grid row gap>
-        <div className="flex flex-col items-center">
-          <h2 className="text-center text-[2rem] font-bold text-[#224a58]">
-            Jurisdictions working with DIBBs
-          </h2>
-          <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
-            State and local public health jurisdictions across the United States
-            used DIBBs to solve their toughest data challenges
-          </p>
-        </div>
-      </Grid>
-      <Grid row gap>
+    <>
+      <ContentContainer align classes="px-14 pt-20 pb-10">
+        <Grid row gap>
+          <Grid col={12}>
+            <div className="flex flex-col items-center">
+              <h2 className="text-center text-[2rem] font-bold text-[#224a58]">
+                Jurisdictions working with DIBBs
+              </h2>
+              <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
+                State and local public health jurisdictions across the United
+                States used DIBBs to solve their toughest data challenges
+              </p>
+            </div>
+          </Grid>
+        </Grid>
+      </ContentContainer>
+      <div className="pb-20 pt-10">
         <SimpleCarousel />
-      </Grid>
-    </ContentContainer>
+      </div>
+    </>
   );
 }
 
