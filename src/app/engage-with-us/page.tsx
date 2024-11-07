@@ -99,7 +99,7 @@ function Left() {
       </Form>
       <Button
         type="submit"
-        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-[#224a58] px-5 py-3 text-right text-base font-bold text-white"
+        className="hover:bg-green mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-[#224a58] px-5 py-3 text-right text-base font-bold text-white"
       >
         Send inquiry
       </Button>
