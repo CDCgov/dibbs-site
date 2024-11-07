@@ -10,12 +10,14 @@ export function LinkButton({
   variant,
   href,
   disabled = false,
+  ...props
 }: LinkButtonProps) {
   if (variant === 'secondary') {
     return (
       <Link
         href={href}
         className="usa-button hover:bg-red items-center justify-start gap-2.5 rounded border-2 border-[#224a58] bg-white px-5 py-3 hover:border-2"
+        {...props}
       >
         <span className="text-center text-base font-bold leading-none text-[#224a58]">
           {children}
@@ -32,8 +34,9 @@ export function LinkButton({
     <Link
       href={href}
       className="usa-button hover:bg-green self-end justify-self-start bg-[#224a58]"
+      {...props}
     >
-      <span className="text-right text-base font-bold text-white">
+      <span className="text-center text-base font-bold text-white">
         {children}
       </span>
     </Link>
