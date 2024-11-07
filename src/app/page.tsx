@@ -4,7 +4,7 @@ import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import Hero from './components/Hero/Hero';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
-import Link from 'next/link';
+import { LinkButton } from './components/LinkButton/LinkButton';
 
 export default async function Home() {
   return (
@@ -88,9 +88,9 @@ function SectionTwo() {
             need for a direct connection, our products save jurisdictions time
             and effort for case investigation and analysis.
           </p>
-          <Link className="usa-button usa-button--active" href="/">
+          <LinkButton href="/our-products" variant="primary">
             Find out more about our products
-          </Link>
+          </LinkButton>
         </div>
         <Image
           className="max-h-[20rem] max-w-[30rem]"
@@ -141,14 +141,9 @@ function InvitationCta() {
             Contact our team to learn more about how our products can help
             improve your data workflows
           </div>
-          <Link
-            href="/engage-with-us"
-            className="usa-btn inline-flex items-center justify-start gap-2.5 rounded border-2 border-[#224a58] bg-white px-5 py-3"
-          >
-            <span className="text-center text-base font-bold leading-none text-[#224a58]">
-              Engage with us
-            </span>
-          </Link>
+          <LinkButton href="/engage-with-us" variant="secondary">
+            Engage with us
+          </LinkButton>
         </div>
       </GridContainer>
     </section>

@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { basePath } from '../utils/constants';
 import Hero from '../components/Hero/Hero';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
+import { LinkButton } from '../components/LinkButton/LinkButton';
 
 export default function OurProducts() {
   return (
@@ -95,13 +95,9 @@ function ProductCard({
           </p>
         </div>
       </div>
-      <Link
-        aria-disabled={linkToHref ? 'false' : 'true'}
-        href={linkToHref}
-        className="usa-button self-end justify-self-start bg-[#224a58]"
-      >
+      <LinkButton variant="primary" disabled={!linkToHref} href={linkToHref}>
         {linkText}
-      </Link>
+      </LinkButton>
     </div>
   );
 }
