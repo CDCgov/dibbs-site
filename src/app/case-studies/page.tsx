@@ -12,9 +12,9 @@ export default function CaseStudies() {
         subheader="Explore our case studies to see the impact of DIBBs."
       />
       <ContentContainer>
-        <div className="grid grid-cols-1 lg:grid-cols-3">
-          <div className="col-span-2 grid max-w-[40.25rem] grid-cols-1 pt-8">
-            <h2 className="text-[2rem] font-bold text-[#224a58]">
+        <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
+          <div className="flex flex-col items-start gap-3 pt-8">
+            <h2 className="max-w-[40.25rem] text-[2rem] font-bold text-[#224a58]">
               Creating a modular, cloud-based data processing pipeline for LA
               County
             </h2>
@@ -29,9 +29,8 @@ export default function CaseStudies() {
               View case study
             </LinkButton>
           </div>
-          <div className="mr-20">
+          <div className="content-center">
             <Image
-              className="mr-20 max-h-[20rem] max-w-[30rem]"
               src={`${basePath}/images/placeholder.png`}
               width={480}
               height={320}
