@@ -13,9 +13,10 @@ export default function CaseStudies() {
         subheader="Explore our case studies to see the impact of DIBBs."
       />
       <ContentContainer>
-        <div className="grid grid-cols-1 gap-10">
-          <ContentGrid>
-            <FlexContainer>
+        <div className="flex flex-col gap-10">
+          {/* Section 1 */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+            <div className="order-2 lg:order-1 lg:items-center">
               <Title>
                 Creating a modular, cloud-based data processing pipeline for LA
                 County
@@ -30,8 +31,8 @@ export default function CaseStudies() {
               <LinkButton variant="primary" href="/">
                 View case study
               </LinkButton>
-            </FlexContainer>
-            <div className="content-center">
+            </div>
+            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-2 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -39,9 +40,10 @@ export default function CaseStudies() {
                 alt="Placeholder"
               />
             </div>
-          </ContentGrid>
-          <ContentGrid>
-            <div className="content-center">
+          </div>
+          {/* Section 2 */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-1 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -49,7 +51,7 @@ export default function CaseStudies() {
                 alt="Placeholder"
               />
             </div>
-            <FlexContainer>
+            <div className="order-2 lg:order-2 lg:items-center">
               <Title>
                 Surfacing actionable insights from electronic case reporting
                 data
@@ -64,10 +66,12 @@ export default function CaseStudies() {
               <LinkButton variant="primary" href="/">
                 View case study
               </LinkButton>
-            </FlexContainer>
-          </ContentGrid>
-          <ContentGrid>
-            <FlexContainer>
+            </div>
+          </div>
+
+          {/* Section 3 */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+            <div className="order-2 lg:order-1 lg:items-center">
               <Title>
                 Improving public health data infrastructure through flexible,
                 modern approaches to cloud services
@@ -82,8 +86,8 @@ export default function CaseStudies() {
               <LinkButton variant="primary" href="/">
                 View case study
               </LinkButton>
-            </FlexContainer>
-            <div className="content-center">
+            </div>
+            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-2 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -91,9 +95,11 @@ export default function CaseStudies() {
                 alt="Placeholder"
               />
             </div>
-          </ContentGrid>
-          <ContentGrid>
-            <div className="content-center">
+          </div>
+
+          {/* Section 4 */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-1 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -101,7 +107,7 @@ export default function CaseStudies() {
                 alt="Placeholder"
               />
             </div>
-            <FlexContainer>
+            <div className="order-2 lg:order-2 lg:items-center">
               <Title>
                 Building a prototype for modernized public health infrastructure
                 in Virginia
@@ -116,8 +122,8 @@ export default function CaseStudies() {
               <LinkButton variant="primary" href="/">
                 View case study
               </LinkButton>
-            </FlexContainer>
-          </ContentGrid>
+            </div>
+          </div>
         </div>
       </ContentContainer>
     </div>
@@ -130,18 +136,8 @@ function Title({ children }: { children: React.ReactNode }) {
 
 function Text({ children }: { children: React.ReactNode }) {
   return (
-    <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+    <p className="m-0 mb-5 mt-5 p-0 text-base font-normal leading-relaxed text-[#224a58]">
       {children}
     </p>
   );
-}
-
-function ContentGrid({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">{children}</div>
-  );
-}
-
-function FlexContainer({ children }: { children: React.ReactNode }) {
-  return <div className="flex flex-col items-start gap-3 pt-8">{children}</div>;
 }
