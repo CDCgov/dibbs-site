@@ -1,6 +1,6 @@
 ci:
   collect:
-    url: ['http://localhost:3000/dibbs-site']
+    url: ['http://localhost:3000/']
   assert:
     assertions:
       categories:accessibility: [error, { minScore: 1 }]
