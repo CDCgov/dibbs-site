@@ -1,12 +1,12 @@
 ci:
   collect:
-    url: ['http://localhost:3000/']
+    staticDistDir: './out'
   assert:
     assertions:
       categories:accessibility: [error, { minScore: 1 }]
   upload:
-    # Add upload options here if needed, e.g., for temporary storage or specific storage providers
+    # upload options here
   server:
-    # Add any additional server options here if required
+    # server options here
   wizard:
-    # Wizard options here if needed
+    # wizard options here

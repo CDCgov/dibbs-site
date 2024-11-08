@@ -4,7 +4,7 @@ const path = require('path');
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  output: 'standalone',
+  output: process.env.LIGHTHOUSE ? 'export' : 'standalone',
   reactStrictMode: true,
   swcMinify: true,
   images: {
