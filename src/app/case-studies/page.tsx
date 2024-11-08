@@ -13,7 +13,7 @@ export default function CaseStudies() {
         subheader="Explore our case studies to see the impact of DIBBs."
       />
       <ContentContainer>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-20">
           {/* Section 1 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
             <div className="order-2 lg:order-1 lg:items-center">
