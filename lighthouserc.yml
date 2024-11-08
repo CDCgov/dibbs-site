@@ -1,12 +1,12 @@
 ci:
   collect:
-    staticDistDir: './out'
+    url: ['http://localhost:3000/dibbs-site']
   assert:
     assertions:
       categories:accessibility: [error, { minScore: 1 }]
   upload:
-    # upload options here
+    # Add upload options here if needed, e.g., for temporary storage or specific storage providers
   server:
-    # server options here
+    # Add any additional server options here if required
   wizard:
-    # wizard options here
+    # Wizard options here if needed
