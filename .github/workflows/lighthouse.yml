@@ -1,8 +1,10 @@
 name: Lighthouse CI
+
 on:
   pull_request:
     types: [opened, reopened]
   push:
+
 jobs:
   # Build job
   build-and-test:
@@ -10,6 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -27,41 +30,39 @@ jobs:
             echo "Unable to determine packager manager"
             exit 1
           fi
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+
       - name: Restore cache
         uses: actions/cache@v3
         with:
           path: |
             .next/cache
-          # Generate a new cache whenever packages or source files change.
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./out
+
+      # Serve the app from the standalone directory
+      - name: Start Standalone Server
+        run: |
+          nohup node .next/standalone/server.js &
+          sleep 5  # wait for the server to start
+
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
+          # The URL to audit should match your base path.
+          urls: 'http://localhost/dibbs-site'
           configPath: './lighthouserc.yml'
-          uploadArtifacts: false # save results as an action artifacts
-          temporaryPublicStorage: false # upload lighthouse report to the temporary storage
-
+          uploadArtifacts: false
+          temporaryPublicStorage: false
