@@ -32,7 +32,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:items-center">
+            <div className="order-1 flex justify-start lg:order-2 lg:items-center lg:justify-end">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -87,7 +87,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:items-center">
+            <div className="order-1 flex justify-start lg:order-2 lg:items-center lg:justify-end">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
