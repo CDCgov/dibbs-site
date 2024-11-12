@@ -69,7 +69,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto_min(30rem)]">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(40.8rem)_min(30rem)]">
             <div className="order-2 lg:order-1 lg:items-center">
               <Title>
                 Improving public health data infrastructure through flexible,
