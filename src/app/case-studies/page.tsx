@@ -32,7 +32,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-2 lg:items-center lg:justify-start">
+            <div className="order-1 flex justify-center lg:order-2 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -43,7 +43,7 @@ export default function CaseStudies() {
           </div>
           {/* Section 2 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
-            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-1 lg:items-center lg:justify-start">
+            <div className="order-1 flex justify-center lg:order-1 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -87,7 +87,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-2 lg:items-center lg:justify-start">
+            <div className="order-1 flex justify-center lg:order-2 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -99,7 +99,7 @@ export default function CaseStudies() {
 
           {/* Section 4 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
-            <div className="add-aspect-16x9 order-1 flex justify-center lg:order-1 lg:items-center lg:justify-start">
+            <div className="order-1 flex justify-center lg:order-1 lg:items-center lg:justify-start">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
