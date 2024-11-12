@@ -1,4 +1,3 @@
-import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import Hero from '../components/Hero/Hero';
 import { LinkButton } from '../components/LinkButton/LinkButton';
 import Image from 'next/image';
@@ -12,10 +11,10 @@ export default function CaseStudies() {
         header="See how DIBBs solutions have helped others"
         subheader="Explore our case studies to see the impact of DIBBs."
       />
-      <ContentContainer>
+      <div className="ml-auto mr-auto flex max-w-[75rem] flex-col py-20 pl-10">
         <div className="flex flex-col gap-20">
           {/* Section 1 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto,min(30rem)]">
             <div className="order-2 lg:order-1 lg:items-center">
               <Title>
                 Creating a modular, cloud-based data processing pipeline for LA
@@ -42,7 +41,7 @@ export default function CaseStudies() {
             </div>
           </div>
           {/* Section 2 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto]">
             <div className="order-1 flex justify-start lg:order-1 lg:items-center">
               <Image
                 src={`${basePath}/images/placeholder.png`}
@@ -70,7 +69,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto_min(30rem)]">
             <div className="order-2 lg:order-1 lg:items-center">
               <Title>
                 Improving public health data infrastructure through flexible,
@@ -98,7 +97,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 4 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto]">
             <div className="order-1 flex justify-start lg:order-1 lg:items-center">
               <Image
                 src={`${basePath}/images/placeholder.png`}
@@ -125,7 +124,7 @@ export default function CaseStudies() {
             </div>
           </div>
         </div>
-      </ContentContainer>
+      </div>
     </div>
   );
 }
