@@ -95,7 +95,12 @@ function ProductCard({
           </p>
         </div>
       </div>
-      <LinkButton variant="primary" disabled={!linkToHref} href={linkToHref}>
+      <LinkButton
+        className="justify-self-start"
+        variant="primary"
+        disabled={!linkToHref}
+        href={linkToHref}
+      >
         {linkText}
       </LinkButton>
     </div>
