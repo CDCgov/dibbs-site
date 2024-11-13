@@ -12,10 +12,10 @@ export default function CaseStudies() {
         subheader="Explore our case studies to see the impact of DIBBs."
       />
       <div className="ml-auto mr-auto flex max-w-[75rem] flex-col py-20 pl-10">
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-[7.5rem]">
           {/* Section 1 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto,min(30rem)]">
-            <div className="order-2 lg:order-1 lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto,min(30rem)] lg:items-center">
+            <div className="order-2 lg:order-1">
               <Title>
                 Creating a modular, cloud-based data processing pipeline for LA
                 County
@@ -31,7 +31,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:items-center lg:justify-end">
+            <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -41,8 +41,8 @@ export default function CaseStudies() {
             </div>
           </div>
           {/* Section 2 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto]">
-            <div className="order-1 flex justify-start lg:order-1 lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto] lg:items-center">
+            <div className="order-1 flex justify-start lg:order-1">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -69,8 +69,8 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(40.8rem)_min(30rem)]">
-            <div className="order-2 lg:order-1 lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(40.8rem)_min(30rem)] lg:items-center">
+            <div className="order-2 lg:order-1">
               <Title>
                 Improving public health data infrastructure through flexible,
                 modern approaches to cloud services
@@ -86,7 +86,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:items-center lg:justify-end">
+            <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -97,8 +97,8 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 4 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto]">
-            <div className="order-1 flex justify-start lg:order-1 lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_42rem] lg:items-center">
+            <div className="order-1 flex justify-start lg:order-1">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
@@ -106,7 +106,7 @@ export default function CaseStudies() {
                 alt="Placeholder"
               />
             </div>
-            <div className="order-2 lg:order-2 lg:items-center">
+            <div className="order-2 lg:order-2">
               <Title>
                 Building a prototype for modernized public health infrastructure
                 in Virginia
