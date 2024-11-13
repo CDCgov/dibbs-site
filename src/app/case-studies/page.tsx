@@ -69,7 +69,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(40.8rem)_min(30rem)] lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(40.8rem)_min(33rem)] lg:items-center">
             <div className="order-2 lg:order-1">
               <Title>
                 Improving public health data infrastructure through flexible,
@@ -86,7 +86,7 @@ export default function CaseStudies() {
                 View case study
               </LinkButton>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
+            <div className="order-1 flex justify-start lg:order-2 lg:ml-4">
               <Image
                 src={`${basePath}/images/placeholder.png`}
                 width={480}
