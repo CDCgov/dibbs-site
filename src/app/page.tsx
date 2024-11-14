@@ -28,18 +28,18 @@ export default async function Home() {
 function SectionOne() {
   return (
     <ContentContainer align>
-      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-2 xl:gap-0">
+      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[1fr_2fr] xl:justify-items-start xl:gap-14">
         <div className="order-1">
           <Image
-            className="max-h-[20rem] max-w-[30rem]"
+            className="xl:max-h-[20rem] xl:max-w-[30rem]"
             src={`${basePath}/images/placeholder.png`}
             width={480}
             height={320}
             alt="Placeholder"
           />
         </div>
-        <div className="order-2 flex max-w-screen-lg flex-col gap-5">
-          <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
+        <div className="order-2 flex flex-col gap-5">
+          <h2 className="min-w-full text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
             Introducing Data Integration Building Blocks
           </h2>
           <div className="flex flex-col gap-2">
@@ -78,7 +78,7 @@ function SectionOne() {
 function SectionTwo() {
   return (
     <ContentContainer align>
-      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-2 xl:gap-0">
+      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[2fr_3fr] xl:justify-items-start xl:gap-0">
         <div className="order-2 justify-items-center xl:order-1 xl:justify-items-start">
           <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:max-w-[23.25rem] xl:text-start xl:text-[2rem]">
             Unlock the value of your jurisdiction's data
@@ -100,7 +100,7 @@ function SectionTwo() {
         </div>
         <div className="order-1 xl:order-2 xl:justify-self-start">
           <Image
-            className="max-h-[20rem] max-w-[30rem]"
+            className="xl:max-h-[20rem] xl:max-w-[30rem]"
             src={`${basePath}/images/placeholder.png`}
             width={480}
             height={320}
@@ -119,7 +119,7 @@ function SectionThree() {
         <Grid row gap>
           <Grid col={12}>
             <div className="flex flex-col items-center">
-              <h2 className="text-center text-[2rem] font-bold text-[#224a58]">
+              <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
                 Jurisdictions working with DIBBs
               </h2>
               <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
@@ -130,7 +130,7 @@ function SectionThree() {
           </Grid>
         </Grid>
       </ContentContainer>
-      <div className="pb-20 pt-0">
+      <div className="ml-8 mr-8 pb-20 pt-0">
         <Carousel />
       </div>
     </>
@@ -142,7 +142,7 @@ function InvitationCta() {
     <section className="usa-graphic-list usa-section usa-section--light-blue">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <div className="self-stretch text-center text-[2rem] font-bold text-[#224a58]">
+          <div className="self-stretch text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
             Interested in getting started with DIBBs?
           </div>
           <div className="self-stretch text-center text-base font-normal leading-relaxed text-[#224a58]">
