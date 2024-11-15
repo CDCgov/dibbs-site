@@ -17,7 +17,7 @@ export default function Footer() {
     <NavigationLink key="one" href="/" onClick={onClick}>
       Home
     </NavigationLink>,
-    <NavigationLink key="two" href="/our-products" onClick={onClick}>
+    <NavigationLink key="two" href="/products" onClick={onClick}>
       Our products
     </NavigationLink>,
     <NavigationLink key="three" href="/case-studies" onClick={onClick}>

@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   const testItemsMenu = [
-    <NavigationLink key="one" href="/our-products" onClick={onClick}>
+    <NavigationLink key="one" href="/products" onClick={onClick}>
       Our products
     </NavigationLink>,
     <NavigationLink key="two" href="/case-studies" onClick={onClick}>

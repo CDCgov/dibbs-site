@@ -88,7 +88,7 @@ function SectionTwo() {
             need for a direct connection, our products save jurisdictions time
             and effort for case investigation and analysis.
           </p>
-          <LinkButton href="/our-products" variant="primary">
+          <LinkButton href="/products" variant="primary">
             Find out more about our products
           </LinkButton>
         </div>
