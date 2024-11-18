@@ -11,4 +11,8 @@ li.usa-process-list__item::before {
 
 button.usa-accordion__button {
   background-color: #dae9ee;
+
+  &:hover {
+    background-color: #cce0e7; // placeholder color
+  }
 }
