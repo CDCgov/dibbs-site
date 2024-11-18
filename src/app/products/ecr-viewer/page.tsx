@@ -29,10 +29,8 @@ export default function EcrViewer() {
           </div>
           <div className="grid grid-cols-1 gap-[3.75rem] pl-10 pr-10">
             <div id="overview">
-              <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
-                Overview
-              </h1>
-              <p className="font-['Source Sans Pro'] flex flex-col gap-10 text-base font-normal leading-relaxed text-[#224a58]">
+              <h1 className="font-bold text-[#224a58]">Overview</h1>
+              <p className="flex flex-col gap-10 text-base font-normal leading-relaxed text-[#224a58]">
                 <span>
                   The eCR Viewer is a tool that aims to improve the usability of
                   electronic case reporting (eCR) data by displaying a summary
@@ -51,7 +49,7 @@ export default function EcrViewer() {
             </div>
             <div className="flex flex-col gap-3">
               <h2>The value to you</h2>
-              <ul className="font-['Source Sans Pro'] flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
+              <ul className="flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
                 <li>
                   Surfaces the most relevant information in a summary at the top
                   of the eCR, so any staff member can quickly find the
@@ -87,7 +85,7 @@ export default function EcrViewer() {
                   height={383}
                   src={`${basePath}/images/placeholder.png`}
                 />
-                <span className="font-['Source Sans Pro'] w-[646.01px] text-base font-normal leading-relaxed text-[#224a58]">
+                <span className="text-base font-normal leading-relaxed text-[#224a58]">
                   See how the eCR Viewer can improve the way your jurisdiction
                   uses eCR data.
                 </span>
@@ -119,11 +117,11 @@ export default function EcrViewer() {
                 </div>
                 <div className="flex flex-col gap-6">
                   <div>
-                    <p className="font-['Source Sans Pro'] text-base font-bold leading-relaxed text-[#224a58]">
+                    <p className="text-base font-bold leading-relaxed text-[#224a58]">
                       We've grouped the full eCR docuent into five main
                       sections:
                     </p>
-                    <ul className="font-['Source Sans Pro'] text-base font-bold leading-relaxed text-[#224a58]">
+                    <ul className="text-base font-bold leading-relaxed text-[#224a58]">
                       <li>Patient Info</li>
                       <li>Encounter Info</li>
                       <li>Clinical Info</li>
@@ -171,19 +169,16 @@ export default function EcrViewer() {
             <div id="getting-started">
               <div className="flex flex-col gap-10">
                 <div>
-                  <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
-                    Getting started
-                  </h2>
-
-                  <p className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
+                  <h2 className="font-bold text-[#224a58]">Getting started</h2>
+                  <p className="text-base font-normal leading-relaxed text-[#224a58]">
                     Before you can use the eCR Viewer, you'll need to set it up
                     and get your staff comfortable with how the eCR Viewer can
                     help improve their data workflows.
                   </p>
-                  <p className="font-['Source Sans Pro'] text-base font-bold leading-relaxed text-[#224a58]">
+                  <p className="text-base font-bold leading-relaxed text-[#224a58]">
                     What's expected from a pilot partner:
                   </p>
-                  <ul className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
+                  <ul className="text-base font-normal leading-relaxed text-[#224a58]">
                     <li>
                       Work with the DIBBs team to set expectations and establish
                       a regular meeting cadence
@@ -243,10 +238,10 @@ export default function EcrViewer() {
             </div>
             <div id="technical-resources">
               <div>
-                <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
+                <h2 className="font-bold text-[#224a58]">
                   Technical resources
                 </h2>
-                <p className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
+                <p className="text-base font-normal leading-relaxed text-[#224a58]">
                   Find the resources you need to successfully use the eCR Viewer
                   in your jurisdiction.
                 </p>
@@ -313,9 +308,7 @@ export default function EcrViewer() {
             </div>
             <div id="faqs" className="flex flex-col gap-10">
               <div className="flex flex-col gap-3">
-                <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
-                  FAQs
-                </h2>
+                <h2 className="font-bold text-[#224a58]">FAQs</h2>
                 <p className="m-0 p-0">
                   Find answers to commonly asked questions about the eCR Viewer.
                 </p>
@@ -435,13 +428,13 @@ function GithubNav({ version, githubHref }: GithubNavProps) {
   return (
     <div className="bg-[#e7f2f5] pb-5 pt-7">
       <div className="mr-10 flex flex-col items-center gap-1">
-        <p className="font-['Source Sans Pro'] m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+        <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
           Current version: {version}
         </p>
         <hr className="ml-10 h-[0px] w-full border border-[#a9aeb1]" />
         <Link
           href={githubHref}
-          className="font-['Source Sans Pro'] text-base font-semibold leading-relaxed text-[#3a7d95] underline"
+          className="text-base font-semibold leading-relaxed text-[#3a7d95] underline"
         >
           GitHub Respository
         </Link>
