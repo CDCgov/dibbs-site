@@ -98,26 +98,24 @@ function DibbsSection() {
 }
 
 function ValueSection() {
+  const { valueSection } = homeContent;
+
   return (
     <ContentContainer align>
       <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[2fr_3fr] xl:justify-items-start xl:gap-0">
         <div className="order-2 justify-items-center xl:order-1 xl:justify-items-start">
           <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:max-w-[23.25rem] xl:text-start xl:text-[2rem]">
-            Unlock the value of your jurisdiction's data
+            {valueSection.title}
           </h2>
           <p className="text-base font-normal leading-relaxed text-[#224a58] xl:max-w-[28.13rem]">
-            DIBBs products help jurisdictions make the most of their data. From
-            improving the usability of electronic case reporting (eCR) data to
-            streamlining data collection from healthcare providers without the
-            need for a direct connection, our products save jurisdictions time
-            and effort for case investigation and analysis.
+            {valueSection.description}
           </p>
           <LinkButton
-            href="/our-products"
+            href={valueSection.ctaHref}
             variant="primary"
             className="justify-self-start"
           >
-            Find out more about our products
+            {valueSection.ctaText}
           </LinkButton>
         </div>
         <div className="order-1 xl:order-2 xl:justify-self-start">
@@ -135,6 +133,8 @@ function ValueSection() {
 }
 
 function JurisdictionSection() {
+  const { jurisdictions } = homeContent;
+
   return (
     <>
       <ContentContainer align classes="px-14 pt-20 pb-10 sm:pb-10">
@@ -142,10 +142,10 @@ function JurisdictionSection() {
           <Grid col={12}>
             <div className="flex flex-col items-center">
               <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
-                Jurisdictions working with DIBBs
+                {jurisdictions.title}
               </h2>
               <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
-                {homeContent.jurisdictions.description}
+                {jurisdictions.description}
               </p>
             </div>
           </Grid>
@@ -164,7 +164,7 @@ function InvitationCta() {
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-5 self-stretch">
           <div className="self-stretch text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
-            Interested in getting started with DIBBs?
+            {homeContent.cta.title}
           </div>
           <div className="self-stretch text-center text-base font-normal leading-relaxed text-[#224a58]">
             {homeContent.cta.description}
