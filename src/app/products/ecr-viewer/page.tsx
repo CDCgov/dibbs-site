@@ -352,6 +352,7 @@ function Navigation() {
     <NavItem
       title="Demo"
       id="demo"
+      key="demo"
       selectedHash={selectedHash}
       setSelectedHash={setSelectedHash}
     />,
@@ -363,6 +364,7 @@ function Navigation() {
           <NavItem
             title="Overview"
             id="overview"
+            key="overview"
             selectedHash={selectedHash}
             setSelectedHash={setSelectedHash}
           />
@@ -371,24 +373,28 @@ function Navigation() {
         <NavItem
           title="How it works"
           id="how-it-works"
+          key="how-it-works"
           selectedHash={selectedHash}
           setSelectedHash={setSelectedHash}
         />,
         <NavItem
           title="Getting started"
           id="getting-started"
+          key="getting-started"
           selectedHash={selectedHash}
           setSelectedHash={setSelectedHash}
         />,
         <NavItem
           title="Technical resources"
           id="technical-resources"
+          key="technical-resources"
           selectedHash={selectedHash}
           setSelectedHash={setSelectedHash}
         />,
         <NavItem
           title="FAQs"
           id="faqs"
+          key="faqs"
           selectedHash={selectedHash}
           setSelectedHash={setSelectedHash}
         />,
