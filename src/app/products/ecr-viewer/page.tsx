@@ -12,7 +12,7 @@ import {
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 
 export default function EcrViewer() {
   return (
@@ -22,13 +22,13 @@ export default function EcrViewer() {
         subheader="An intuitive interface that helps epidemiologists and case investigators make better sense of eCR data, faster."
       />
       <ContentContainer align>
-        <div className="grid grid-cols-[1fr_2fr_1fr]">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr]">
+          <div className="pt-[.625rem]">
             <Navigation />
           </div>
-          <div className="grid grid-cols-1 gap-[3.75rem]">
+          <div className="grid grid-cols-1 gap-[3.75rem] pl-10 pr-10">
             <div id="overview">
-              <h1 className="font-['Source Sans Pro'] text-[40px] font-bold text-[#224a58]">
+              <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                 Overview
               </h1>
               <p className="font-['Source Sans Pro'] flex flex-col gap-10 text-base font-normal leading-relaxed text-[#224a58]">
@@ -48,7 +48,7 @@ export default function EcrViewer() {
                 </span>
               </p>
             </div>
-            <div className="value flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               <h2>The value to you</h2>
               <ul className="font-['Source Sans Pro'] text-base font-semibold leading-relaxed text-[#224a58]">
                 <li>
@@ -169,7 +169,7 @@ export default function EcrViewer() {
             </div>
             <div id="getting-started">
               <div>
-                <h1 className="font-['Source Sans Pro'] text-[40px] font-bold text-[#224a58]">
+                <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                   Getting started
                 </h1>
                 <div>
@@ -241,7 +241,7 @@ export default function EcrViewer() {
             </div>
             <div id="technical-resources">
               <div>
-                <h1 className="font-['Source Sans Pro'] text-[40px] font-bold text-[#224a58]">
+                <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                   Technical resources
                 </h1>
                 <p className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
@@ -349,77 +349,75 @@ export default function EcrViewer() {
 }
 
 function Navigation() {
-  const [hash, setHash] = useState('#overview');
+  const [selectedHash, setSelectedHash] = useState('#overview');
 
   const subItems = [
-    <a
-      href="#demo"
-      key="demo"
-      className={classNames({
-        'usa-current': hash === '#demo',
-      })}
-      onClick={() => setHash('#demo')}
-    >
-      Demo
-    </a>,
+    <NavItem
+      title="Demo"
+      id="demo"
+      selectedHash={selectedHash}
+      setSelectedHash={setSelectedHash}
+    />,
   ];
   return (
     <SideNav
       items={[
         <>
-          <a
-            href="#overview"
-            key="overview"
-            className={classNames({
-              'usa-current': hash === '#overview',
-            })}
-            onClick={() => setHash('#overview')}
-          >
-            Overview
-          </a>
+          <NavItem
+            title="Overview"
+            id="overview"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />
           <SideNav isSubnav items={subItems} />
         </>,
-        <a
-          href="#how-it-works"
-          key="how-it-works"
-          className={classNames({
-            'usa-current': hash === '#how-it-works',
-          })}
-          onClick={() => setHash('#how-it-works')}
-        >
-          How it works
-        </a>,
-        <a
-          href="#getting-started"
-          key="getting-started"
-          className={classNames({
-            'usa-current': hash === '#getting-started',
-          })}
-          onClick={() => setHash('#getting-started')}
-        >
-          Getting started
-        </a>,
-        <a
-          href="#technical-resources"
-          key="technical-resources"
-          className={classNames({
-            'usa-current': hash === '#technical-resources',
-          })}
-          onClick={() => setHash('#technical-resources')}
-        >
-          Technical resources
-        </a>,
-        <a
-          href="#faqs"
-          key="faqs"
-          className={classNames({
-            'usa-current': hash === '#faqs',
-          })}
-          onClick={() => setHash('#faqs')}
-        >
-          FAQs
-        </a>,
+        <NavItem
+          title="How it works"
+          id="how-it-works"
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
+        />,
+        <NavItem
+          title="Getting started"
+          id="getting-started"
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
+        />,
+        <NavItem
+          title="Technical resources"
+          id="technical-resources"
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
+        />,
+        <NavItem
+          title="FAQs"
+          id="faqs"
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
+        />,
       ]}
     />
+  );
+}
+
+interface NavItemProps {
+  title: string;
+  id: string;
+  selectedHash: string;
+  setSelectedHash: (value: SetStateAction<string>) => void;
+}
+function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
+  const itemHash = `#${id}`;
+  return (
+    <a
+      href={itemHash}
+      key={id}
+      className={classNames({
+        'usa-current': itemHash === selectedHash,
+      })}
+      onClick={() => setSelectedHash(itemHash)}
+    >
+      {title}
+    </a>
   );
 }
