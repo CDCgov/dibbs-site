@@ -1,3 +1,4 @@
+'use client';
 import { ContentContainer } from '@/app/components/ContentContainer/ContentContainer';
 import Hero from '@/app/components/Hero/Hero';
 import { basePath } from '@/app/utils/constants';
@@ -7,8 +8,12 @@ import {
   ProcessListHeading,
   Accordion,
   Link,
+  SideNav,
 } from '@trussworks/react-uswds';
+import classNames from 'classnames';
 import Image from 'next/image';
+import { useParams, usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function EcrViewer() {
   return (
@@ -19,9 +24,11 @@ export default function EcrViewer() {
       />
       <ContentContainer align>
         <div className="grid grid-cols-[1fr_2fr_1fr]">
-          <div>Subnav</div>
+          <div>
+            <Navigation />
+          </div>
           <div className="grid grid-cols-1 gap-[3.75rem]">
-            <div className="overview">
+            <div id="overview">
               <h1 className="font-['Source Sans Pro'] text-[40px] font-bold text-[#224a58]">
                 Overview
               </h1>
@@ -71,7 +78,7 @@ export default function EcrViewer() {
                 </li>
               </ul>
             </div>
-            <div className="demo">
+            <div id="demo">
               <h2>Demo</h2>
               <div>
                 <Image
@@ -86,7 +93,7 @@ export default function EcrViewer() {
                 </span>
               </div>
             </div>
-            <div className="how-it-works">
+            <div id="how-it-works">
               <div className="flex flex-col gap-3">
                 <h2>How it works</h2>
                 <p className="flex flex-col gap-10">
@@ -161,7 +168,7 @@ export default function EcrViewer() {
                 </div>
               </div>
             </div>
-            <div className="getting-started">
+            <div id="getting-started">
               <div>
                 <h1 className="font-['Source Sans Pro'] text-[40px] font-bold text-[#224a58]">
                   Getting started
@@ -233,7 +240,7 @@ export default function EcrViewer() {
                 </ProcessList>
               </div>
             </div>
-            <div className="technical-resources">
+            <div id="technical-resources">
               <div>
                 <h1 className="font-['Source Sans Pro'] text-[40px] font-bold text-[#224a58]">
                   Technical resources
@@ -303,7 +310,7 @@ export default function EcrViewer() {
                 </div>
               </div>
             </div>
-            <div className="faqs">
+            <div id="faqs">
               <div>
                 <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                   FAQs
@@ -339,5 +346,81 @@ export default function EcrViewer() {
         </div>
       </ContentContainer>
     </div>
+  );
+}
+
+function Navigation() {
+  const [hash, setHash] = useState('#overview');
+
+  const subItems = [
+    <a
+      href="#demo"
+      key="demo"
+      className={classNames({
+        'usa-current': hash === '#demo',
+      })}
+      onClick={() => setHash('#demo')}
+    >
+      Demo
+    </a>,
+  ];
+  return (
+    <SideNav
+      items={[
+        <>
+          <a
+            href="#overview"
+            key="overview"
+            className={classNames({
+              'usa-current': hash === '#overview',
+            })}
+            onClick={() => setHash('#overview')}
+          >
+            Overview
+          </a>
+          <SideNav isSubnav items={subItems} />
+        </>,
+        <a
+          href="#how-it-works"
+          key="how-it-works"
+          className={classNames({
+            'usa-current': hash === '#how-it-works',
+          })}
+          onClick={() => setHash('#how-it-works')}
+        >
+          How it works
+        </a>,
+        <a
+          href="#getting-started"
+          key="getting-started"
+          className={classNames({
+            'usa-current': hash === '#getting-started',
+          })}
+          onClick={() => setHash('#getting-started')}
+        >
+          Getting started
+        </a>,
+        <a
+          href="#technical-resources"
+          key="technical-resources"
+          className={classNames({
+            'usa-current': hash === '#technical-resources',
+          })}
+          onClick={() => setHash('#technical-resources')}
+        >
+          Technical resources
+        </a>,
+        <a
+          href="#faqs"
+          key="faqs"
+          className={classNames({
+            'usa-current': hash === '#faqs',
+          })}
+          onClick={() => setHash('#faqs')}
+        >
+          FAQs
+        </a>,
+      ]}
+    />
   );
 }
