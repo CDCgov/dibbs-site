@@ -51,7 +51,7 @@ export default function EcrViewer() {
             </div>
             <div className="flex flex-col gap-3">
               <h2>The value to you</h2>
-              <ul className="font-['Source Sans Pro'] text-base font-semibold leading-relaxed text-[#224a58]">
+              <ul className="font-['Source Sans Pro'] flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
                 <li>
                   Surfaces the most relevant information in a summary at the top
                   of the eCR, so any staff member can quickly find the
@@ -169,11 +169,12 @@ export default function EcrViewer() {
               </div>
             </div>
             <div id="getting-started">
-              <div>
-                <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
-                  Getting started
-                </h2>
+              <div className="flex flex-col gap-10">
                 <div>
+                  <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
+                    Getting started
+                  </h2>
+
                   <p className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
                     Before you can use the eCR Viewer, you'll need to set it up
                     and get your staff comfortable with how the eCR Viewer can
