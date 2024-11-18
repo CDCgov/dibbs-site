@@ -317,21 +317,154 @@ export default function EcrViewer() {
                 bordered={false}
                 items={[
                   {
+                    id: '1',
                     className: 'bg-background',
-                    id: 'test',
                     headingLevel: 'h3',
                     expanded: false,
                     title: 'Who will use this tool?',
-                    content:
-                      'Case investigators, epidemiologists, and other public health practitioners who actively reference eCRs for their work will use the eCR Viewer as a workflow optimization tool.',
+                    content: (
+                      <>
+                        Case investigators, epidemiologists, and other public
+                        health practitioners who actively reference eCRs for
+                        their work will use the eCR Viewer as a workflow
+                        optimization tool.
+                      </>
+                    ),
+                  },
+                  {
+                    id: '2',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title:
+                      'What case surveillance systems are compatible with eCR Viewer?',
+                    content: (
+                      <>
+                        We have two versions of eCR Viewer currently available:
+                        <ol className="list-decimal">
+                          <li>A version integrated directly within NBS</li>
+                          <li>
+                            A standalone version that operates outside of a
+                            jurisdiction's surveillance system
+                          </li>
+                        </ol>
+                        We are also working on a direct integration with
+                        EpiTrax. If you're interested in integrating the eCR
+                        Viewer with other surveillance systems, please reach out
+                        to us at <SendMailLink />
+                      </>
+                    ),
+                  },
+                  {
+                    id: '3',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title: 'Where can I find the eCR Viewer within NBS?',
+                    content: (
+                      <>
+                        You can open the eCR Viewer by clicking the “View eICR
+                        Document” button while looking at the eCR page in NBS.
+                        Clicking this button would open the new eCR Viewer,
+                        replacing the existing eCR document viewer.
+                      </>
+                    ),
+                  },
+                  {
+                    id: '4',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title:
+                      "Can my jurisdiction set up eCR Viewer if we don't use NBS?",
+                    content: (
+                      <>
+                        Yes! The standalone eCR Viewer offers flexibility for
+                        jurisdictions with other surveillance systems (e.g.,
+                        Maven). Staff will be able to view eCR documents through
+                        a separate homepage called the eCR Library rather than
+                        within the surveillance system itself.
+                      </>
+                    ),
+                  },
+                  {
+                    id: '5',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title:
+                      'Who at our organization needs to be involved to set up this tool? ',
+                    content: (
+                      <>
+                        We'll need participation from several people in your
+                        public health department to successfully set up the eCR
+                        Viewer. This includes: A jurisdictional subject matter
+                        expert who can help the DIBBs team understand how and
+                        where DIBBs tooling could be hosted This could be an
+                        engineer or IT personnel, either directly embedded in
+                        your public health department or shared at the
+                        jurisdiction. An eCR expert who is familiar with
+                        existing eCR workflows and data sources This could be an
+                        epidemiologist, program manager, or anyone else in your
+                        jurisdiction who is familiar with existing eCR data
+                        workflows.
+                      </>
+                    ),
+                  },
+                  {
+                    id: '6',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title:
+                      'Can you speak to privacy preservation in your tool?',
+                    content: (
+                      <>
+                        All information is transmitted and protected using
+                        standards mandated by individual jurisdictions or the
+                        Department of Health and Human Services as applicable
+                        based on hosting location.
+                      </>
+                    ),
+                  },
+                  {
+                    id: '7',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title: 'What is the long-term viability of this product?',
+                    content: (
+                      <>
+                        Our team is working with stakeholders at CDC to
+                        establish a roadmap for near- and long-term support. As
+                        eCR data becomes more embedded in the public health
+                        ecosystem, this product will also give your jurisdiction
+                        the chance to provide direct feedback to CDC on what you
+                        need to make eCR data as usable as possible to improve
+                        public health outcomes.
+                      </>
+                    ),
+                  },
+                  {
+                    id: '8',
+                    className: 'bg-background',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title: 'How do I get started?',
+                    content: (
+                      <>
+                        Reach out to our team at <SendMailLink /> for a free
+                        consultation and find our whether the eCR Viewer is
+                        right for your jurisdiction.,
+                      </>
+                    ),
                   },
                 ]}
               />
               <div className="flex flex-col gap-3">
                 <h3>Have a question that isn't answered above?</h3>
                 <p className="m-0 p-0">
-                  Please get in touch with our team at{' '}
-                  <Link href="mailto:dibbs@cdc.gov">dibbs@cdc.gov</Link>
+                  Please get in touch with our team at <SendMailLink />
                 </p>
               </div>
             </div>
@@ -447,4 +580,8 @@ function GithubNav({ version, githubHref }: GithubNavProps) {
       </div>
     </div>
   );
+}
+
+function SendMailLink() {
+  return <Link href="mailto:dibbs@cdc.gov">dibbs@cdc.gov</Link>;
 }
