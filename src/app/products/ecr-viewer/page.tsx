@@ -13,6 +13,7 @@ import {
 import classNames from 'classnames';
 import Image from 'next/image';
 import { SetStateAction, useState } from 'react';
+import './styles.scss';
 
 export default function EcrViewer() {
   return (

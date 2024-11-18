@@ -1,0 +1,14 @@
+li.usa-process-list__item {
+  border-left-color: #dae9ee;
+}
+
+li.usa-process-list__item::before {
+  background-color: var(--background);
+  color: #6499af;
+  box-shadow: 0 0;
+  border-color: #6499af;
+}
+
+button.usa-accordion__button {
+  background-color: #dae9ee;
+}
