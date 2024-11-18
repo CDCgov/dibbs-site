@@ -341,7 +341,7 @@ export default function EcrViewer() {
                     content: (
                       <>
                         We have two versions of eCR Viewer currently available:
-                        <ol className="list-decimal">
+                        <ol className="list-decimal pt-4">
                           <li>A version integrated directly within NBS</li>
                           <li>
                             A standalone version that operates outside of a
@@ -351,7 +351,7 @@ export default function EcrViewer() {
                         We are also working on a direct integration with
                         EpiTrax. If you're interested in integrating the eCR
                         Viewer with other surveillance systems, please reach out
-                        to us at <SendMailLink />
+                        to us at <SendMailLink />.
                       </>
                     ),
                   },
@@ -398,16 +398,32 @@ export default function EcrViewer() {
                       <>
                         We'll need participation from several people in your
                         public health department to successfully set up the eCR
-                        Viewer. This includes: A jurisdictional subject matter
-                        expert who can help the DIBBs team understand how and
-                        where DIBBs tooling could be hosted This could be an
-                        engineer or IT personnel, either directly embedded in
-                        your public health department or shared at the
-                        jurisdiction. An eCR expert who is familiar with
-                        existing eCR workflows and data sources This could be an
-                        epidemiologist, program manager, or anyone else in your
-                        jurisdiction who is familiar with existing eCR data
-                        workflows.
+                        Viewer. This includes:
+                        <ol className="list-decimal pt-4">
+                          <li>
+                            A jurisdictional subject matter expert who can help
+                            the DIBBs team understand how and where DIBBs
+                            tooling could be hosted
+                            <ol className="list-[lower-alpha] pl-4">
+                              <li>
+                                This could be an engineer or IT personnel,
+                                either directly embedded in your public health
+                                department or shared at the jurisdiction.
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            An eCR expert who is familiar with existing eCR
+                            workflows and data sources
+                            <ol className="list-[lower-alpha] pl-4">
+                              <li>
+                                This could be an epidemiologist, program
+                                manager, or anyone else in your jurisdiction who
+                                is familiar with existing eCR data workflows.
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
                       </>
                     ),
                   },
@@ -455,7 +471,7 @@ export default function EcrViewer() {
                       <>
                         Reach out to our team at <SendMailLink /> for a free
                         consultation and find our whether the eCR Viewer is
-                        right for your jurisdiction.,
+                        right for your jurisdiction.
                       </>
                     ),
                   },
