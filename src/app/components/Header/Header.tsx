@@ -6,8 +6,33 @@ import classNames from 'classnames';
 import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import styles from './Header.module.scss';
+import Hero from '../Hero/Hero';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  interface HeroContent {
+    heroClass?: string;
+    heroHeader: string;
+    heroSubheader: string;
+  }
+
+  type SpecialContent = {
+    [key: string]: HeroContent;
+  };
+
+  const specialContent: SpecialContent = {
+    '/': {
+      heroClass: 'homepage-hero',
+      heroHeader: `Improve the way your jurisdiction collects, processes, and
+      views public health data`,
+      heroSubheader: `Turn your jurisdiction's data into meaningful intelligence that drives
+      timely public health action using CDC's free, cloud-based products built
+      from Data Integration Building Blocks, or DIBBs.`,
+    },
+  };
+  const pathname = usePathname();
+  const customContent = specialContent[pathname];
+
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
     if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
@@ -26,7 +51,11 @@ export default function Header() {
   ];
 
   return (
-    <>
+    <div
+      className={
+        customContent?.heroClass ? styles[customContent.heroClass] : ''
+      }
+    >
       <a className="usa-skipnav" href="#main-content">
         Skip to main content
       </a>
@@ -63,6 +92,12 @@ export default function Header() {
           />
         </div>
       </USWDSHeader>
-    </>
+      {customContent && (
+        <Hero
+          header={customContent.heroHeader}
+          subheader={customContent.heroSubheader}
+        />
+      )}
+    </div>
   );
 }

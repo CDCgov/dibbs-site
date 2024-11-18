@@ -2,21 +2,12 @@ import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
-import Hero from './components/Hero/Hero';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { LinkButton } from './components/LinkButton/LinkButton';
 
 export default async function Home() {
   return (
     <>
-      <Hero
-        header="Improve the way your jurisdiction collects, processes, and views public
-      health data"
-        subheader="Turn your jurisdiction's data into meaningful intelligence that drives
-      timely public health action using CDC's free, cloud-based products built
-      from Data Integration Building Blocks, or DIBBs."
-      />
-
       <SectionOne />
       <SectionTwo />
       <SectionThree />
