@@ -169,9 +169,9 @@ export default function EcrViewer() {
             </div>
             <div id="getting-started">
               <div>
-                <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
+                <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                   Getting started
-                </h1>
+                </h2>
                 <div>
                   <p className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
                     Before you can use the eCR Viewer, you'll need to set it up
@@ -241,16 +241,16 @@ export default function EcrViewer() {
             </div>
             <div id="technical-resources">
               <div>
-                <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
+                <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                   Technical resources
-                </h1>
+                </h2>
                 <p className="font-['Source Sans Pro'] text-base font-normal leading-relaxed text-[#224a58]">
                   Find the resources you need to successfully use the eCR Viewer
                   in your jurisdiction.
                 </p>
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                   <div className="flex flex-col gap-2">
-                    <h2 className="text-xl">Installing eCR Viewer</h2>
+                    <h3 className="text-xl">Installing eCR Viewer</h3>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">
@@ -271,7 +271,7 @@ export default function EcrViewer() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h2 className="text-xl">Maintenance & Support</h2>
+                    <h3 className="text-xl">Maintenance & Support</h3>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">Runbook for common issues</Link>
@@ -285,7 +285,7 @@ export default function EcrViewer() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h2 className="text-xl">Terraform</h2>
+                    <h3 className="text-xl">Terraform</h3>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">AWS Terraform Installation</Link>
@@ -296,7 +296,7 @@ export default function EcrViewer() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h2 className="text-xl">Troubleshooting</h2>
+                    <h3 className="text-xl">Troubleshooting</h3>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">Usage Guide</Link>
@@ -309,39 +309,41 @@ export default function EcrViewer() {
                 </div>
               </div>
             </div>
-            <div id="faqs">
-              <div>
-                <h1 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
+            <div id="faqs" className="flex flex-col gap-10">
+              <div className="flex flex-col gap-3">
+                <h2 className="font-['Source Sans Pro'] font-bold text-[#224a58]">
                   FAQs
-                </h1>
-                <p>
+                </h2>
+                <p className="m-0 p-0">
                   Find answers to commonly asked questions about the eCR Viewer.
                 </p>
-                <Accordion
-                  bordered={false}
-                  items={[
-                    {
-                      className: 'bg-background',
-                      id: 'test',
-                      headingLevel: 'h2',
-                      expanded: false,
-                      title: 'Who will use this tool?',
-                      content:
-                        'Case investigators, epidemiologists, and other public health practitioners who actively reference eCRs for their work will use the eCR Viewer as a workflow optimization tool.',
-                    },
-                  ]}
-                />
               </div>
-              <div>
-                <h3>Have a question that isn't answered?</h3>
-                <p>
+              <Accordion
+                bordered={false}
+                items={[
+                  {
+                    className: 'bg-background',
+                    id: 'test',
+                    headingLevel: 'h3',
+                    expanded: false,
+                    title: 'Who will use this tool?',
+                    content:
+                      'Case investigators, epidemiologists, and other public health practitioners who actively reference eCRs for their work will use the eCR Viewer as a workflow optimization tool.',
+                  },
+                ]}
+              />
+              <div className="flex flex-col gap-3">
+                <h3>Have a question that isn't answered above?</h3>
+                <p className="m-0 p-0">
                   Please get in touch with our team at{' '}
                   <Link href="mailto:dibbs@cdc.gov">dibbs@cdc.gov</Link>
                 </p>
               </div>
             </div>
           </div>
-          <div>Github links</div>
+          <div>
+            <GithubNav version="1.1.1" githubHref="/" />
+          </div>
         </div>
       </ContentContainer>
     </div>
@@ -419,5 +421,29 @@ function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
     >
       {title}
     </a>
+  );
+}
+
+interface GithubNavProps {
+  version: string;
+  githubHref: string;
+}
+
+function GithubNav({ version, githubHref }: GithubNavProps) {
+  return (
+    <div className="bg-[#e7f2f5] pb-5 pt-7">
+      <div className="mr-10 flex flex-col items-center gap-1">
+        <p className="font-['Source Sans Pro'] m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+          Current version: {version}
+        </p>
+        <hr className="ml-10 h-[0px] w-full border border-[#a9aeb1]" />
+        <Link
+          href={githubHref}
+          className="font-['Source Sans Pro'] text-base font-semibold leading-relaxed text-[#3a7d95] underline"
+        >
+          GitHub Respository
+        </Link>
+      </div>
+    </div>
   );
 }
