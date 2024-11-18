@@ -12,7 +12,6 @@ import {
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { useParams, usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function EcrViewer() {
