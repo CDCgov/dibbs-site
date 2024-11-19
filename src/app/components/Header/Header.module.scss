@@ -34,17 +34,16 @@
     z-index: 0;
   }
 
-  .usa-nav-container,
-  .usa-header,
-  .usa-logo,
-  .usa-navbar {
-    position: relative;
-    z-index: 1;
+  :global {
+    .usa-navbar {
+      position: relative;
+      z-index: 1;
+    }
   }
+
   section h1,
   section p {
-    position: relative;
     z-index: 1;
-    color: white !important;
+    color: white;
   }
 }
