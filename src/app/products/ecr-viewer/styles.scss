@@ -16,3 +16,9 @@ button.usa-accordion__button {
     background-color: #cce0e7; // placeholder color
   }
 }
+
+.list__full-width {
+  li {
+    min-width: 100%;
+  }
+}

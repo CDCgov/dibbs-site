@@ -23,7 +23,7 @@ export default function EcrViewer() {
         subheader="An intuitive interface that helps epidemiologists and case investigators make better sense of eCR data, faster."
       />
       <ContentContainer align>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_2fr_1fr] lg:gap-0">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr_1fr] lg:gap-0">
           <div className="pt-[.625rem]">
             <div className="lg:sticky lg:top-4">
               <Navigation />
@@ -51,7 +51,7 @@ export default function EcrViewer() {
             </div>
             <div className="flex flex-col gap-3">
               <h2 className="text-2xl">The value to you</h2>
-              <ul className="flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
+              <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
                 <li>
                   Surfaces the most relevant information in a summary at the top
                   of the eCR, so any staff member can quickly find the
@@ -182,7 +182,7 @@ export default function EcrViewer() {
                   <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
                     What's expected from a pilot partner:
                   </p>
-                  <ul className="text-base font-normal leading-relaxed text-[#224a58]">
+                  <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
                     <li>
                       Work with the DIBBs team to set expectations and establish
                       a regular meeting cadence
@@ -585,7 +585,7 @@ interface GithubNavProps {
 
 function GithubNav({ version, githubHref }: GithubNavProps) {
   return (
-    <div className="bg-[#e7f2f5] pb-5 pt-7">
+    <div className="max-w-[16.25rem] bg-[#e7f2f5] pb-5 pt-7">
       <div className="mr-10 flex flex-col items-center gap-1">
         <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
           Current version: {version}
