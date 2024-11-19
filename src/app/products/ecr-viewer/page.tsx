@@ -47,6 +47,17 @@ export default function EcrViewer() {
                   relevant information easier to find by displaying eCR data in
                   a way that's more intuitive.
                 </span>
+                <span>
+                  Public health jurisdictions can access the eCR Viewer in two
+                  ways:
+                  <ol className="list-decimal pl-4">
+                    <li>
+                      A direct integration with NBS (National Electronic Disease
+                      Surveillance System Base System)
+                    </li>
+                    <li>A standalone option for non-NBS jurisdictions</li>
+                  </ol>
+                </span>
               </p>
             </div>
             <div className="flex flex-col gap-3">
