@@ -48,7 +48,7 @@ export default function EcrViewer() {
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <h2>The value to you</h2>
+              <h2 className="text-2xl">The value to you</h2>
               <ul className="flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
                 <li>
                   Surfaces the most relevant information in a summary at the top
@@ -78,34 +78,36 @@ export default function EcrViewer() {
             </div>
             <div id="demo">
               <h2>Demo</h2>
-              <div>
+              <div className="flex flex-col gap-2">
                 <Image
                   alt="placeholder video"
                   width={652}
                   height={383}
                   src={`${basePath}/images/placeholder.png`}
                 />
-                <span className="text-base font-normal leading-relaxed text-[#224a58]">
+                <span className="text-base font-normal italic leading-relaxed text-[#224a58]">
                   See how the eCR Viewer can improve the way your jurisdiction
                   uses eCR data.
                 </span>
               </div>
             </div>
             <div id="how-it-works">
-              <div className="flex flex-col gap-3">
-                <h2>How it works</h2>
-                <p className="flex flex-col gap-10">
-                  <span>
-                    Using the eCR Viewer, public health staff can easily find
-                    data relevant to a reportable condition.
-                  </span>
-                  <span>
-                    The eCR Viewer surfaces key information in a summary at the
-                    top of the eCR document. This eCR Summary divided into three
-                    categories: Patient Summary, Encounter Summary, and
-                    Condition Summary.
-                  </span>
-                </p>
+              <div className="flex flex-col gap-10">
+                <div>
+                  <h2>How it works</h2>
+                  <p className="flex flex-col gap-10">
+                    <span>
+                      Using the eCR Viewer, public health staff can easily find
+                      data relevant to a reportable condition.
+                    </span>
+                    <span>
+                      The eCR Viewer surfaces key information in a summary at
+                      the top of the eCR document. This eCR Summary divided into
+                      three categories: Patient Summary, Encounter Summary, and
+                      Condition Summary.
+                    </span>
+                  </p>
+                </div>
                 <div className="flex flex-col gap-3">
                   <h3>eCR Summary</h3>
                   <Image
@@ -117,7 +119,7 @@ export default function EcrViewer() {
                 </div>
                 <div className="flex flex-col gap-6">
                   <div>
-                    <p className="text-base font-bold leading-relaxed text-[#224a58]">
+                    <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
                       We've grouped the full eCR docuent into five main
                       sections:
                     </p>
@@ -175,7 +177,7 @@ export default function EcrViewer() {
                     and get your staff comfortable with how the eCR Viewer can
                     help improve their data workflows.
                   </p>
-                  <p className="text-base font-bold leading-relaxed text-[#224a58]">
+                  <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
                     What's expected from a pilot partner:
                   </p>
                   <ul className="text-base font-normal leading-relaxed text-[#224a58]">
