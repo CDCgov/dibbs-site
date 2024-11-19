@@ -2,7 +2,6 @@ import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
-import Hero from './components/Hero/Hero';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { LinkButton } from './components/LinkButton/LinkButton';
 
@@ -49,11 +48,6 @@ const homeContent = {
 export default async function Home() {
   return (
     <>
-      <Hero
-        header={homeContent.hero.header}
-        subheader={homeContent.hero.subheader}
-      />
-
       <DibbsSection />
       <ValueSection />
       <JurisdictionSection />
