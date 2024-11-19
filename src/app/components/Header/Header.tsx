@@ -26,6 +26,21 @@ const specialContent: SpecialContent = {
       timely public health action using CDC's free, cloud-based products built
       from Data Integration Building Blocks, or DIBBs.`,
   },
+  '/our-products': {
+    heroClass: 'homepage-hero',
+    heroHeader: `Our ecosystem of DIBBs products`,
+    heroSubheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
+  },
+  '/case-studies': {
+    heroClass: 'homepage-hero',
+    heroHeader: `See how DIBBs solutions have helped others`,
+    heroSubheader: `Explore our case studies to see the impact of DIBBs.`,
+  },
+  '/engage-with-us': {
+    heroClass: 'homepage-hero',
+    heroHeader: `Get started with DIBBs products`,
+    heroSubheader: `Learn how your jurisdiction can start working with the DIBBs team.`,
+  },
 };
 
 const navigationItems = [
@@ -66,7 +81,9 @@ export default function Header() {
   return (
     <div
       className={classNames(
-        customContent?.heroClass && styles[customContent.heroClass],
+        customContent?.heroClass
+          ? styles[customContent.heroClass]
+          : styles['homepage-hero'],
       )}
     >
       <a className="usa-skipnav" href="#main-content">

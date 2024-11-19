@@ -1,17 +1,11 @@
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
-import Hero from '../components/Hero/Hero';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { LinkButton } from '../components/LinkButton/LinkButton';
 
 export default function OurProducts() {
   return (
     <div>
-      <Hero
-        header="Our ecosystem of DIBBs products"
-        subheader="Find out how DIBBs products can help empower your jurisdiction with
-            more usable data."
-      />
       <StandaloneProducts />
       <DataPipeline />
     </div>
