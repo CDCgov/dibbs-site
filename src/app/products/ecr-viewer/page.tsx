@@ -32,21 +32,23 @@ export default function EcrViewer() {
           <div className="grid grid-cols-1 gap-[3.75rem] pl-10 pr-10">
             <div id="overview">
               <h1 className="font-bold text-[#224a58]">Overview</h1>
-              <p className="flex flex-col gap-10 text-base font-normal leading-relaxed text-[#224a58]">
-                <span>
-                  The eCR Viewer is a tool that aims to improve the usability of
-                  electronic case reporting (eCR) data by displaying a summary
-                  of key data contained in an eCR so that public health staff
-                  can quickly find the information they need.
-                </span>
-                <span>
-                  In user research with public health staff who review eCRs and
-                  other case data, we've heard that eCR data is often difficult
-                  to make sense of — it's like getting someone's entire medical
-                  record dropped on your desk. The eCR Viewer aims to make
-                  relevant information easier to find by displaying eCR data in
-                  a way that's more intuitive.
-                </span>
+              <div className="flex flex-col gap-10">
+                <p className="m-0 flex flex-col gap-10 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+                  <span>
+                    The eCR Viewer is a tool that aims to improve the usability
+                    of electronic case reporting (eCR) data by displaying a
+                    summary of key data contained in an eCR so that public
+                    health staff can quickly find the information they need.
+                  </span>
+                  <span>
+                    In user research with public health staff who review eCRs
+                    and other case data, we've heard that eCR data is often
+                    difficult to make sense of — it's like getting someone's
+                    entire medical record dropped on your desk. The eCR Viewer
+                    aims to make relevant information easier to find by
+                    displaying eCR data in a way that's more intuitive.
+                  </span>
+                </p>
                 <span>
                   Public health jurisdictions can access the eCR Viewer in two
                   ways:
@@ -58,7 +60,7 @@ export default function EcrViewer() {
                     <li>A standalone option for non-NBS jurisdictions</li>
                   </ol>
                 </span>
-              </p>
+              </div>
             </div>
             <div className="flex flex-col gap-3">
               <h2 className="text-2xl">The value to you</h2>
