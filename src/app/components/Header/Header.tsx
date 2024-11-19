@@ -15,7 +15,7 @@ interface HeroContent {
   heroSubheader: string;
 }
 
-type SpecialContent = Record<string, HeroContent>;
+type SpecialContent = Record<string, HeroContent | undefined>;
 
 const specialContent: SpecialContent = {
   '/': {
