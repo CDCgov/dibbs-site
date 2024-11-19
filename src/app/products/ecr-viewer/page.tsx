@@ -25,7 +25,9 @@ export default function EcrViewer() {
       <ContentContainer align>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr]">
           <div className="pt-[.625rem]">
-            <Navigation />
+            <div className="md:sticky md:top-4">
+              <Navigation />
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-[3.75rem] pl-10 pr-10">
             <div id="overview">
