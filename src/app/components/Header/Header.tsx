@@ -1,13 +1,13 @@
 'use client';
+import { useState } from 'react';
 import { Header as USWDSHeader, PrimaryNav } from '@trussworks/react-uswds';
 import Image from 'next/image';
-import React from 'react';
+import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import styles from './Header.module.scss';
 import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
-import styles from './Header.module.scss';
 import Hero from '../Hero/Hero';
-import { usePathname } from 'next/navigation';
 
 interface HeroContent {
   heroClass?: string;
@@ -15,7 +15,7 @@ interface HeroContent {
   heroSubheader: string;
 }
 
-type SpecialContent = Record<string, HeroContent | undefined>;
+type SpecialContent = Record<string, HeroContent>;
 
 const specialContent: SpecialContent = {
   '/': {
@@ -28,44 +28,57 @@ const specialContent: SpecialContent = {
   },
 };
 
+const navigationItems = [
+  {
+    key: 'products',
+    href: '/our-products',
+    text: 'Our products',
+  },
+  {
+    key: 'case-studies',
+    href: '/case-studies',
+    text: 'Case studies',
+  },
+  {
+    key: 'engage',
+    href: '/engage-with-us',
+    text: 'Engage with us',
+  },
+];
+
 export default function Header() {
   const pathname = usePathname();
   const customContent = specialContent[pathname];
+  const [expanded, setExpanded] = useState(false);
 
-  const [expanded, setExpanded] = React.useState(false);
-  const onClick = () => {
-    if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
+  const handleClick = () => {
+    if (window.innerWidth < 1024) {
+      setExpanded((prev) => !prev);
+    }
   };
 
-  const testItemsMenu = [
-    <NavigationLink key="one" href="/our-products" onClick={onClick}>
-      Our products
-    </NavigationLink>,
-    <NavigationLink key="two" href="/case-studies" onClick={onClick}>
-      Case studies
-    </NavigationLink>,
-    <NavigationLink key="three" href="/engage-with-us" onClick={onClick}>
-      Engage with us
-    </NavigationLink>,
-  ];
+  const navigationLinks = navigationItems.map(({ key, href, text }) => (
+    <NavigationLink key={key} href={href} onClick={handleClick}>
+      {text}
+    </NavigationLink>
+  ));
 
   return (
     <div
       className={classNames(
-        customContent?.heroClass ? styles[customContent.heroClass] : '',
-        customContent?.heroClass,
+        customContent?.heroClass && styles[customContent.heroClass],
       )}
     >
       <a className="usa-skipnav" href="#main-content">
         Skip to main content
       </a>
 
-      <USWDSHeader basic={true} className="bg-background-teal">
+      <USWDSHeader basic className="bg-background-teal">
         <div className="usa-nav-container flex-vertical-center">
           <div className="usa-navbar">
             <div className="usa-logo">
               <em className="usa-logo__text">
-                <a href={`${basePath}/`} title="<Project title>">
+                <a href={`${basePath}/`} title="DIBBs">
                   <span
                     className={classNames('sr-only', styles.navbarLogoText)}
                   >
@@ -77,6 +90,7 @@ export default function Header() {
                     alt=""
                     className="margin-x-0"
                     src={`${basePath}/images/dibbs-logo.svg`}
+                    priority
                   />
                 </a>
               </em>
@@ -86,12 +100,13 @@ export default function Header() {
             </button>
           </div>
           <PrimaryNav
-            items={testItemsMenu}
+            items={navigationLinks}
             mobileExpanded={expanded}
-            onToggleMobileNav={onClick}
+            onToggleMobileNav={handleClick}
           />
         </div>
       </USWDSHeader>
+
       {customContent && (
         <Hero
           header={customContent.heroHeader}

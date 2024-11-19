@@ -17,10 +17,7 @@
   &::before {
     content: '';
     position: absolute;
-    top: -20%;
-    left: -10%;
-    right: -10%;
-    bottom: 0;
+    inset: -20% -10% 0;
     background: linear-gradient(
         90deg,
         rgba(76, 43, 100, 0.85) 12%,
@@ -35,15 +32,27 @@
   }
 
   :global {
-    .usa-navbar {
+    .usa-navbar,
+    .usa-hero {
       position: relative;
       z-index: 1;
     }
   }
-
   section h1,
   section p {
-    z-index: 1;
     color: white;
+    z-index: 1;
   }
+}
+
+.navbarLogoText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
