@@ -23,9 +23,9 @@ export default function EcrViewer() {
         subheader="An intuitive interface that helps epidemiologists and case investigators make better sense of eCR data, faster."
       />
       <ContentContainer align>
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr]">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_2fr_1fr] lg:gap-0">
           <div className="pt-[.625rem]">
-            <div className="md:sticky md:top-4">
+            <div className="lg:sticky lg:top-4">
               <Navigation />
             </div>
           </div>
