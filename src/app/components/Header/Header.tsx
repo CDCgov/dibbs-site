@@ -9,15 +9,15 @@ import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
 
-interface HeroContent {
+interface HeroObject {
   heroClass?: string;
   heroHeader: string;
   heroSubheader: string;
 }
 
-type SpecialContent = Record<string, HeroContent | undefined>;
+type HeroContent = Record<string, HeroObject | undefined>;
 
-const specialContent: SpecialContent = {
+const heroContent: HeroContent = {
   '/': {
     heroClass: 'homepage-hero',
     heroHeader: `Improve the way your jurisdiction collects, processes, and
@@ -63,9 +63,8 @@ const navigationItems = [
 
 export default function Header() {
   const pathname = usePathname();
-  const customContent = specialContent[pathname];
+  const customHeroContent = heroContent[pathname];
   const [expanded, setExpanded] = useState(false);
-  console.log(customContent);
 
   const handleClick = () => {
     if (window.innerWidth < 1024) {
@@ -82,8 +81,8 @@ export default function Header() {
   return (
     <div
       className={classNames(
-        customContent?.heroClass
-          ? styles[customContent.heroClass]
+        customHeroContent?.heroClass
+          ? styles[customHeroContent.heroClass]
           : styles['homepage-hero'],
       )}
     >
@@ -125,10 +124,10 @@ export default function Header() {
         </div>
       </USWDSHeader>
 
-      {customContent && (
+      {customHeroContent && (
         <Hero
-          header={customContent.heroHeader}
-          subheader={customContent.heroSubheader}
+          header={customHeroContent.heroHeader}
+          subheader={customHeroContent.heroSubheader}
         />
       )}
     </div>
