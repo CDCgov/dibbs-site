@@ -27,17 +27,17 @@ const specialContent: SpecialContent = {
       from Data Integration Building Blocks, or DIBBs.`,
   },
   '/our-products': {
-    heroClass: 'homepage-hero',
+    heroClass: 'our-products-hero',
     heroHeader: `Our ecosystem of DIBBs products`,
     heroSubheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
   },
   '/case-studies': {
-    heroClass: 'homepage-hero',
+    heroClass: 'case-studies-hero',
     heroHeader: `See how DIBBs solutions have helped others`,
     heroSubheader: `Explore our case studies to see the impact of DIBBs.`,
   },
   '/engage-with-us': {
-    heroClass: 'homepage-hero',
+    heroClass: 'engage-with-us-hero',
     heroHeader: `Get started with DIBBs products`,
     heroSubheader: `Learn how your jurisdiction can start working with the DIBBs team.`,
   },
@@ -65,6 +65,7 @@ export default function Header() {
   const pathname = usePathname();
   const customContent = specialContent[pathname];
   const [expanded, setExpanded] = useState(false);
+  console.log(customContent);
 
   const handleClick = () => {
     if (window.innerWidth < 1024) {

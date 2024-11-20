@@ -8,7 +8,6 @@ import {
   TextInput,
 } from '@trussworks/react-uswds';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
-import Hero from '../components/Hero/Hero';
 
 export default function EngageWithUs() {
   return (
