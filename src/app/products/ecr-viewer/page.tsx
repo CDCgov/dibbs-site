@@ -99,122 +99,155 @@ export default function EcrViewer() {
               </ul>
             </div>
             <div id="demo">
-              <h2>Demo</h2>
-              <div className="flex flex-col gap-2">
-                <Image
-                  alt="placeholder video"
-                  width={652}
-                  height={383}
-                  src={`${basePath}/images/placeholder.png`}
-                />
-                <span className="text-base font-normal italic leading-relaxed text-[#224a58]">
-                  See how the eCR Viewer can improve the way your jurisdiction
-                  uses eCR data.
-                </span>
+              <div className="flex flex-col gap-3">
+                <h2>Demo</h2>
+                <div className="flex flex-col gap-3">
+                  <Image
+                    alt="placeholder video"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/placeholder.png`}
+                  />
+                  <span className="text-base font-normal italic leading-relaxed text-[#224a58]">
+                    See how the eCR Viewer can improve the way your jurisdiction
+                    uses eCR data.
+                  </span>
+                </div>
               </div>
             </div>
-            <div id="how-it-works">
-              <div className="flex flex-col gap-10">
+            <div id="product-features">
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-3">
+                  <h2>Product features</h2>
+                  <p className="m-0 p-0">
+                    Using the eCR Viewer, public health staff can easily find
+                    data relevant to a reportable condition. The eCR Viewer
+                    offers several features that make eCR data more usable for
+                    your jurisdiction.
+                  </p>
+                </div>
                 <div>
-                  <h2>How it works</h2>
-                  <p className="flex flex-col gap-10">
+                  <h3>eCR Summary</h3>
+                  <p>
+                    The eCR Viewer surfaces key information in a summary at the
+                    top of the eCR document, helping you understand the eCR
+                    document at a glance. This eCR Summary is divided into three
+                    categories: Patient Summary, Encounter Summary, and
+                    Condition Summary.
+                  </p>
+                </div>
+                <Image
+                  alt="eCR Viewer - how it works"
+                  width={652}
+                  height={383}
+                  src={`${basePath}/images/ecr-viewer_how-it-works.gif`}
+                />
+                <div className="flex flex-col gap-6">
+                  <h3>Combined RR and eICR</h3>
+                  <p className="m-0 flex flex-col gap-8 p-0">
                     <span>
-                      Using the eCR Viewer, public health staff can easily find
-                      data relevant to a reportable condition.
+                      The eCR Viewer combines electronic initial case report
+                      (eICR) and Reportability Response (RR) data together,
+                      enabling you to see all of the reportable conditions for
+                      the eCR, why the eCR was triggered, and which
+                      jurisdictions the eCR was sent to, none of which are
+                      possible to view in the eICR data alone.
                     </span>
                     <span>
-                      The eCR Viewer surfaces key information in a summary at
-                      the top of the eCR document. This eCR Summary divided into
-                      three categories: Patient Summary, Encounter Summary, and
-                      Condition Summary.
+                      The eCR Viewer also pulls out more data fields from the
+                      eICR XML, allowing public health staff to see more data
+                      than what's currently available by default in the HTML or
+                      surveillance system views
                     </span>
                   </p>
                 </div>
-                <div className="flex flex-col gap-3">
-                  <h3>eCR Summary</h3>
-                  <Image
-                    alt="eCR Viewer - how it works"
-                    width={652}
-                    height={383}
-                    src={`${basePath}/images/ecr-viewer_how-it-works.gif`}
-                  />
+                <div className="flex flex-col gap-6">
+                  <h3>Consistent data display</h3>
+                  <p className="m-0 p-0">
+                    No matter who sent the eCR, every eCR you view in the eCR
+                    Viewer will look the same. The eCR Viewer groups the full
+                    eCR document into five main sections:
+                  </p>
+                  <ul className="mt-0 list-disc font-semibold">
+                    <li>Patient Info</li>
+                    <li>Encounter Info</li>
+                    <li>Clinical Info</li>
+                    <li>Lab Info</li>
+                    <li>eCR Metadata</li>
+                  </ul>
+                  <p className="m-0 p-0">
+                    The ordering of the five main sections, as well as the
+                    fields within those sections, is always the same, so you can
+                    quickly scroll through the eCR to find the information
+                    you're looking for.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="how-it-works">
+              <h2>How it works</h2>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6">
+                  <p>We currently offer two versions of the eCR Viewer.</p>
+                  <ol className="mt-0 list-decimal pl-4">
+                    <li>Direct integration with NBS</li>
+                    <li>Standalone option for non-NBS jurisdictions</li>
+                  </ol>
+                  <p>Below, we outline how each version works.</p>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <div>
-                    <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
-                      We've grouped the full eCR docuent into five main
-                      sections:
-                    </p>
-                    <ul className="text-base font-bold leading-relaxed text-[#224a58]">
-                      <li>Patient Info</li>
-                      <li>Encounter Info</li>
-                      <li>Clinical Info</li>
-                      <li>Lab Info</li>
-                      <li>eCR Metadata</li>
-                    </ul>
-                  </div>
-                  <p className="flex flex-col gap-8">
-                    <span>
-                      No matter who sent the eCR, every eCR you view in the eCR
-                      Viewer will look the same. The ordering of the five main
-                      sections, as well as the fields within those sections, is
-                      always the same, so you can quickly scroll through the eCR
-                      to find the information you're looking for.
-                    </span>
-                    <span>
-                      You can use the side navigation to skip to any section
-                      within the eCR. It's always visible as you scroll so you
-                      can see where you are within the document and quickly move
-                      to different sections.
-                    </span>
-                    <span>
-                      The eCR Viewer allows you to see more data than what's
-                      currently available by default in the HTML or surveillance
-                      system views. We pull out more data fields from the eICR
-                      XML and also combine eICR and RR data together.
-                    </span>
-                    <span>
-                      For example, with the eCR Viewer, you can see all of the
-                      reportable conditions for the eCR, why the eCR was
-                      triggered, and which jurisdictions the eCR was sent to,
-                      none of which are possible to view in the eICR data alone
-                    </span>
-                    <span>
-                      With the eCR Viewer, you can quickly see what data is
-                      missing in an eCR so you don't have to wonder whether you
-                      can't find the data or if it's just not there. All of the
-                      unavailable fields are consolidated at the bottom of the
-                      eCR for quick scanning.
-                    </span>
+                  <h3>Integrated eCR Viewer</h3>
+                  <p className="m-0 p-0">
+                    The integrated version allows users to access the eCR Viewer
+                    directly within their surveillance system. Direct
+                    integration is currently supported by NBS. Once installed,
+                    the eCR Viewer is activated from the existing eCR document
+                    view in NBS, using the “View eICR Document” button. This
+                    will open a separate window with the eCR Viewer.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-6">
+                  <h3>Non-integrated eCR Viewer</h3>
+                  <p className="m-0 p-0">
+                    The non-integrated version offers a standalone tool for
+                    users to view eCR documents outside of their jurisdiction's
+                    surveillance system. In addition to the core eCR Viewer,
+                    this tool provides an eCR Library homepage, allowing users
+                    to filter and sort eCR documents. Users would log into the
+                    standalone tool separately from their surveillance system.
                   </p>
                 </div>
               </div>
             </div>
             <div id="getting-started">
               <div className="flex flex-col gap-10">
-                <div>
+                <div className='flex flex-col gap-4'>
                   <h2 className="font-bold text-[#224a58]">Getting started</h2>
-                  <p className="text-base font-normal leading-relaxed text-[#224a58]">
-                    Before you can use the eCR Viewer, you'll need to set it up
-                    and get your staff comfortable with how the eCR Viewer can
-                    help improve their data workflows.
-                  </p>
-                  <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
-                    What's expected from a pilot partner:
-                  </p>
-                  <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
-                    <li>
-                      Work with the DIBBs team to set expectations and establish
-                      a regular meeting cadence
-                    </li>
-                    <li>
-                      Deploy the eCR Viewer in your production environment
-                    </li>
-                    <li>
-                      Provide feedback on an ongoing basis to ensure the eCR
-                      Viewer in working properly
-                    </li>
-                  </ul>
+                  <div className="flex flex-col gap-6">
+                    <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+                      Before you can use the eCR Viewer, you'll need to set it
+                      up and get your staff comfortable with how the eCR Viewer
+                      can help improve their data workflows.
+                    </p>
+                    <div>
+                      <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
+                        What's expected from a pilot partner:
+                      </p>
+                      <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
+                        <li>
+                          Work with the DIBBs team to set expectations and
+                          establish a regular meeting cadence
+                        </li>
+                        <li>
+                          Deploy the eCR Viewer in your production environment
+                        </li>
+                        <li>
+                          Provide feedback on an ongoing basis to ensure the eCR
+                          Viewer in working properly
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <ProcessList>
                   <ProcessListItem>
