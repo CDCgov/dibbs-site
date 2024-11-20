@@ -1,4 +1,3 @@
-import Hero from '../components/Hero/Hero';
 import { LinkButton } from '../components/LinkButton/LinkButton';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
@@ -7,10 +6,6 @@ import React from 'react';
 export default function CaseStudies() {
   return (
     <div>
-      <Hero
-        header="See how DIBBs solutions have helped others"
-        subheader="Explore our case studies to see the impact of DIBBs."
-      />
       <div className="ml-auto mr-auto flex max-w-[75rem] flex-col py-20 pl-10">
         <div className="flex flex-col gap-[7.5rem]">
           {/* Section 1 */}

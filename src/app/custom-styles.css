@@ -13,6 +13,7 @@
   --foreground: #171717;
   --header-teal: #224a58;
   --background-light-blue: #dcecf3;
+  --background-dark-blue: #0e1e25;
   --ifm-color-primary: #2e8555;
   font-size: 16px; /* base value for rem */
 }
@@ -29,6 +30,10 @@ body {
 
 .bg-background-teal {
   background-color: var(--header-teal);
+}
+
+.bg-background-dark-blue {
+  background-color: var(--background-dark-blue);
 }
 
 @media (min-width: 64em) {

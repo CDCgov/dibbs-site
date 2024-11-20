@@ -9,3 +9,31 @@
     font-size: 13px;
   }
 }
+
+.footer-phdi {
+  display: flex;
+  width: 100%;
+  padding-top: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.75rem;
+  background: linear-gradient(90deg, #0081a1 2%, #005ea2 50%, #4c2b64 96%);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/homepage-hero-bg.jpeg');
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+  }
+
+  // Keep content above background
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}

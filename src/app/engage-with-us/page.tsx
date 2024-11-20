@@ -8,15 +8,10 @@ import {
   TextInput,
 } from '@trussworks/react-uswds';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
-import Hero from '../components/Hero/Hero';
 
 export default function EngageWithUs() {
   return (
     <div>
-      <Hero
-        header="Get started with DIBBs products"
-        subheader="Learn how your jurisdiction can start working with the DIBBs team."
-      />
       <ContentContainer>
         <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 lg:justify-items-start">
           <div>
