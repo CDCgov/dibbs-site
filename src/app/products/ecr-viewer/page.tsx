@@ -37,29 +37,36 @@ export default function EcrViewer() {
                   <span>
                     The eCR Viewer is a tool that aims to improve the usability
                     of electronic case reporting (eCR) data by displaying a
-                    summary of key data contained in an eCR so that public
-                    health staff can quickly find the information they need.
+                    summary of key data contained in an eCR document so that
+                    public health staff can quickly find the information they
+                    need.
                   </span>
                   <span>
-                    In user research with public health staff who review eCRs
-                    and other case data, we've heard that eCR data is often
-                    difficult to make sense of — it's like getting someone's
-                    entire medical record dropped on your desk. The eCR Viewer
-                    aims to make relevant information easier to find by
-                    displaying eCR data in a way that's more intuitive.
+                    In user research with public health staff, we've heard that
+                    eCR data is often difficult to make sense of — it's like
+                    getting someone's entire medical record dropped on your
+                    desk. The eCR Viewer aims to make relevant information
+                    easier to find by displaying eCR data in a way that's more
+                    intuitive.
+                  </span>
+                  <span>
+                    There are two versions of the eCR Viewer — one that's
+                    integrated directly into a case surveillance system, and
+                    another that's an independent tool.
+                  </span>
+                  <span>
+                    The integrated version allows users to access the eCR Viewer
+                    directly within their surveillance system, replacing the
+                    existing way they view eCR documents. Direct integration is
+                    currently supported by NBS (National Electronic Disease
+                    Surveillance System Base System).
+                  </span>
+                  <span>
+                    The non-integrated version offers a standalone tool for
+                    non-NBS jurisdictions to manage and view eCR documents
+                    separately from their surveillance system.
                   </span>
                 </p>
-                <span>
-                  Public health jurisdictions can access the eCR Viewer in two
-                  ways:
-                  <ol className="list-decimal pl-4">
-                    <li>
-                      A direct integration with NBS (National Electronic Disease
-                      Surveillance System Base System)
-                    </li>
-                    <li>A standalone option for non-NBS jurisdictions</li>
-                  </ol>
-                </span>
               </div>
             </div>
             <div className="flex flex-col gap-3">
