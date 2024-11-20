@@ -33,7 +33,7 @@ body {
 }
 
 .bg-background-dark-blue {
-  background-color: var(--header-teal);
+  background-color: var(--background-dark-blue);
 }
 
 @media (min-width: 64em) {
