@@ -26,7 +26,7 @@ const heroContent: HeroContent = {
       timely public health action using CDC's free, cloud-based products built
       from Data Integration Building Blocks, or DIBBs.`,
   },
-  '/our-products': {
+  '/products': {
     heroClass: 'our-products-hero',
     heroHeader: `Our ecosystem of DIBBs products`,
     heroSubheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
