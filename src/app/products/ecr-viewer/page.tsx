@@ -556,28 +556,23 @@ export default function EcrViewer() {
 function Navigation() {
   const [selectedHash, setSelectedHash] = useState('#overview');
 
-  const subItems = [
-    <NavItem
-      title="Demo"
-      id="demo"
-      key="demo"
-      selectedHash={selectedHash}
-      setSelectedHash={setSelectedHash}
-    />,
-  ];
   return (
     <SideNav
       items={[
-        <>
-          <NavItem
-            title="Overview"
-            id="overview"
-            key="overview"
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />
-          <SideNav isSubnav items={subItems} />
-        </>,
+        <NavItem
+          title="Overview"
+          id="overview"
+          key="overview"
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
+        />,
+        <NavItem
+          title="Product features"
+          id="product-features"
+          key="product-features"
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
+        />,
         <NavItem
           title="How it works"
           id="how-it-works"
