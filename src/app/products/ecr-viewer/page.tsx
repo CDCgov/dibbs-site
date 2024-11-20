@@ -31,42 +31,44 @@ export default function EcrViewer() {
           </div>
           <div className="grid grid-cols-1 gap-[3.75rem] pl-10 pr-10">
             <div id="overview">
-              <h1 className="font-bold text-[#224a58]">Overview</h1>
-              <div className="flex flex-col gap-10">
-                <p className="m-0 flex flex-col gap-10 p-0 text-base font-normal leading-relaxed text-[#224a58]">
-                  <span>
-                    The eCR Viewer is a tool that aims to improve the usability
-                    of electronic case reporting (eCR) data by displaying a
-                    summary of key data contained in an eCR document so that
-                    public health staff can quickly find the information they
-                    need.
-                  </span>
-                  <span>
-                    In user research with public health staff, we've heard that
-                    eCR data is often difficult to make sense of — it's like
-                    getting someone's entire medical record dropped on your
-                    desk. The eCR Viewer aims to make relevant information
-                    easier to find by displaying eCR data in a way that's more
-                    intuitive.
-                  </span>
-                  <span>
-                    There are two versions of the eCR Viewer — one that's
-                    integrated directly into a case surveillance system, and
-                    another that's an independent tool.
-                  </span>
-                  <span>
-                    The integrated version allows users to access the eCR Viewer
-                    directly within their surveillance system, replacing the
-                    existing way they view eCR documents. Direct integration is
-                    currently supported by NBS (National Electronic Disease
-                    Surveillance System Base System).
-                  </span>
-                  <span>
-                    The non-integrated version offers a standalone tool for
-                    non-NBS jurisdictions to manage and view eCR documents
-                    separately from their surveillance system.
-                  </span>
-                </p>
+              <div className="flex flex-col gap-3">
+                <h1 className="font-bold text-[#224a58]">Overview</h1>
+                <div className="flex flex-col gap-10">
+                  <p className="m-0 flex flex-col gap-10 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+                    <span>
+                      The eCR Viewer is a tool that aims to improve the
+                      usability of electronic case reporting (eCR) data by
+                      displaying a summary of key data contained in an eCR
+                      document so that public health staff can quickly find the
+                      information they need.
+                    </span>
+                    <span>
+                      In user research with public health staff, we've heard
+                      that eCR data is often difficult to make sense of — it's
+                      like getting someone's entire medical record dropped on
+                      your desk. The eCR Viewer aims to make relevant
+                      information easier to find by displaying eCR data in a way
+                      that's more intuitive.
+                    </span>
+                    <span>
+                      There are two versions of the eCR Viewer — one that's
+                      integrated directly into a case surveillance system, and
+                      another that's an independent tool.
+                    </span>
+                    <span>
+                      The integrated version allows users to access the eCR
+                      Viewer directly within their surveillance system,
+                      replacing the existing way they view eCR documents. Direct
+                      integration is currently supported by NBS (National
+                      Electronic Disease Surveillance System Base System).
+                    </span>
+                    <span>
+                      The non-integrated version offers a standalone tool for
+                      non-NBS jurisdictions to manage and view eCR documents
+                      separately from their surveillance system.
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
             <div className="flex flex-col gap-3">
@@ -116,7 +118,7 @@ export default function EcrViewer() {
               </div>
             </div>
             <div id="product-features">
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-10">
                 <div className="flex flex-col gap-3">
                   <h2>Product features</h2>
                   <p className="m-0 p-0">
@@ -126,9 +128,9 @@ export default function EcrViewer() {
                     your jurisdiction.
                   </p>
                 </div>
-                <div>
+                <div className="flex flex-col gap-8">
                   <h3>eCR Summary</h3>
-                  <p>
+                  <p className="m-0 p-0">
                     The eCR Viewer surfaces key information in a summary at the
                     top of the eCR document, helping you understand the eCR
                     document at a glance. This eCR Summary is divided into three
@@ -168,7 +170,7 @@ export default function EcrViewer() {
                     Viewer will look the same. The eCR Viewer groups the full
                     eCR document into five main sections:
                   </p>
-                  <ul className="mt-0 list-disc font-semibold">
+                  <ul className="mt-0 flex list-disc flex-col gap-2 font-semibold">
                     <li>Patient Info</li>
                     <li>Encounter Info</li>
                     <li>Clinical Info</li>
@@ -221,7 +223,7 @@ export default function EcrViewer() {
             </div>
             <div id="getting-started">
               <div className="flex flex-col gap-10">
-                <div className='flex flex-col gap-4'>
+                <div className="flex flex-col gap-4">
                   <h2 className="font-bold text-[#224a58]">Getting started</h2>
                   <div className="flex flex-col gap-6">
                     <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
@@ -656,5 +658,12 @@ function GithubNav({ version, githubHref }: GithubNavProps) {
 }
 
 function SendMailLink() {
-  return <Link href="mailto:dibbs@cdc.gov">dibbs@cdc.gov</Link>;
+  return (
+    <Link
+      className="text-base font-bold text-[#3a7d95] no-underline"
+      href="mailto:dibbs@cdc.gov"
+    >
+      dibbs@cdc.gov
+    </Link>
+  );
 }
