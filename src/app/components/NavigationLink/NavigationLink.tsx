@@ -12,9 +12,15 @@ export function NavigationLink({
   onClick,
 }: NavigationLinkProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.includes(href.toString());
+
   return (
-    <Link href={href} passHref onClick={onClick}>
+    <Link
+      href={href}
+      passHref
+      onClick={onClick}
+      {...(isActive ? { 'aria-current': 'page' } : {})}
+    >
       <span
         className={classNames('text-white', {
           underline: isActive,
