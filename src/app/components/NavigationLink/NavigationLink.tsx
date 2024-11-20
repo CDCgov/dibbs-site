@@ -11,8 +11,7 @@ export function NavigationLink({
   children,
   onClick,
 }: NavigationLinkProps) {
-  const pathname = usePathname();
-  const isActive = pathname.includes(href.toString());
+  const isActive = useIsActive(href);
 
   return (
     <Link
@@ -23,11 +22,26 @@ export function NavigationLink({
     >
       <span
         className={classNames('text-white', {
-          underline: isActive,
+          'underline underline-offset-8': isActive,
         })}
       >
         {children}
       </span>
     </Link>
   );
+}
+
+function useIsActive(url: NavigationLinkProps['href']) {
+  const pathname = usePathname();
+
+  // top-level match
+  if (pathname === url.toString()) {
+    return true;
+  }
+
+  // child routes also match
+  const pathSegments = pathname.split('/').filter((segment) => segment !== '');
+  if (url.toString().includes(pathSegments[0])) return true;
+
+  return false;
 }
