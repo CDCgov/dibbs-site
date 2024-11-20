@@ -31,7 +31,7 @@ const specialContent: SpecialContent = {
 const navigationItems = [
   {
     key: 'products',
-    href: '/our-products',
+    href: '/products',
     text: 'Our products',
   },
   {
@@ -106,7 +106,6 @@ export default function Header() {
           />
         </div>
       </USWDSHeader>
-
       {customContent && (
         <Hero
           header={customContent.heroHeader}
