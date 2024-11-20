@@ -9,7 +9,7 @@ export default function ProductDetail() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/our-products">Our products</Link>
+          <Link href="/products">Our products</Link>
         </li>
         <li>
           <Link href="/product-detail">Product detail</Link>

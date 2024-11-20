@@ -1,0 +1,28 @@
+li.usa-process-list__item {
+  border-left-color: #dae9ee;
+
+  &:before {
+    background-color: var(--background);
+    color: #6499af;
+    box-shadow: 0 0;
+    border-color: #6499af;
+  }
+
+  h4 {
+    color: #224a58;
+  }
+}
+
+button.usa-accordion__button {
+  background-color: #dae9ee;
+
+  &:hover {
+    background-color: #cce0e7; // placeholder color
+  }
+}
+
+.list__full-width {
+  li {
+    min-width: 100%;
+  }
+}

@@ -29,7 +29,7 @@ const homeContent = {
     description:
       'DIBBs products help jurisdictions make the most of their data. From improving the usability of electronic case reporting (eCR) data to streamlining data collection from healthcare providers without the need for a direct connection, our products save jurisdictions time and effort for case investigation and analysis.',
     ctaText: 'Find out more about our products',
-    ctaHref: '/our-products',
+    ctaHref: '/products',
   },
   jurisdictions: {
     title: 'Jurisdictions working with DIBBs',
@@ -104,11 +104,7 @@ function ValueSection() {
           <p className="text-base font-normal leading-relaxed text-[#224a58] xl:max-w-[28.13rem]">
             {valueSection.description}
           </p>
-          <LinkButton
-            href={valueSection.ctaHref}
-            variant="primary"
-            className="justify-self-start"
-          >
+          <LinkButton href={valueSection.ctaHref} variant="primary">
             {valueSection.ctaText}
           </LinkButton>
         </div>

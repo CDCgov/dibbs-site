@@ -46,7 +46,7 @@ const heroContent: HeroContent = {
 const navigationItems = [
   {
     key: 'products',
-    href: '/our-products',
+    href: '/products',
     text: 'Our products',
   },
   {
