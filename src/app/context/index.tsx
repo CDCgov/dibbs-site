@@ -2,7 +2,7 @@
 
 import { createContext, useState, useContext } from 'react';
 import { usePathname } from 'next/navigation';
-import { homePageHero } from '../page';
+import { homePageHero } from '../data/home';
 
 interface HeroContent {
   heroContent: {
