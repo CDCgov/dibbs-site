@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useHeroContext } from '../context';
 
 interface HeroInitProps {
@@ -10,7 +10,6 @@ interface HeroInitProps {
 
 export function useHeroInit({ header, subheader, heroClass }: HeroInitProps) {
   const { setHeroContent } = useHeroContext();
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     setHeroContent({
@@ -18,8 +17,5 @@ export function useHeroInit({ header, subheader, heroClass }: HeroInitProps) {
       subheader,
       heroClass,
     });
-    setIsReady(true);
   }, [setHeroContent, header, subheader, heroClass]);
-
-  return isReady;
 }
