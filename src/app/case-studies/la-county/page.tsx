@@ -18,9 +18,9 @@ export default function LaCountyCaseStudy() {
           </h1>
         </section>
         <section id="challenge">
-          <div>
+          <div className="flex flex-col gap-3">
             <h2>The challenge</h2>
-            <p>
+            <p className="m-0 flex flex-col gap-6 p-0">
               <span>
                 Timely access to electronic case reporting (eCR) data is
                 critical for public health departments to respond swiftly to
@@ -50,10 +50,10 @@ export default function LaCountyCaseStudy() {
           </div>
         </section>
         <section id="solution">
-          <div>
+          <div className="flex flex-col gap-3">
             <h2>The solution</h2>
-            <div>
-              <p>
+            <div className="flex flex-col gap-6">
+              <p className="m-0 p-0">
                 The DIBBs team worked with LAC to develop and deploy a
                 cutting-edge, modular data pipeline to automatically process and
                 enrich COVID-19 eCR files. This open-source, cloud-based
@@ -95,7 +95,7 @@ export default function LaCountyCaseStudy() {
                   operate and customize the pipeline
                 </li>
               </ul>
-              <p>
+              <p className="m-0 p-0">
                 We are currently commencing pilots with jurisdictions to test
                 the eCR Viewer in a production data environment and further
                 validate the tool's downstream public health impact. Our aim is
@@ -107,9 +107,9 @@ export default function LaCountyCaseStudy() {
           </div>
         </section>
         <section id="results">
-          <div>
+          <div className="flex flex-col gap-3">
             <h2>The results</h2>
-            <p>
+            <p className="m-0 p-0">
               Following the pilot, LAC now has access to an automated feed of
               analysis-ready eCR data with fields relevant to downstream disease
               teams. LAC plans to continue to leverage the DIBBs pipeline
