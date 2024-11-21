@@ -8,8 +8,15 @@ import {
   TextInput,
 } from '@trussworks/react-uswds';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
+import { useHeroInit } from '../hooks/useHeroInit';
 
 export default function EngageWithUs() {
+  useHeroInit({
+    header: `Get started with DIBBs products`,
+    subheader: `Learn how your jurisdiction can start working with the DIBBs team.`,
+    heroClass: 'engage-with-us-hero',
+  });
+
   return (
     <div>
       <ContentContainer>
