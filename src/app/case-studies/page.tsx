@@ -1,9 +1,16 @@
+'use client';
 import { LinkButton } from '../components/LinkButton/LinkButton';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import React from 'react';
+import { useHeroInit } from '../hooks/useHeroInit';
 
 export default function CaseStudies() {
+  useHeroInit({
+    header: `See how DIBBs solutions have helped others`,
+    subheader: `Explore our case studies to see the impact of DIBBs.`,
+    heroClass: 'case-studies-hero',
+  });
   return (
     <div>
       <div className="ml-auto mr-auto flex max-w-[75rem] flex-col py-20 pl-10">

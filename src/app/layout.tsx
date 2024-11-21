@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import USABanner from './components/UsaBanner/UsaBanner';
 import './globals.scss';
 import './custom-styles.css';
+import { HeroContextProvider } from './context';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',
@@ -19,9 +20,11 @@ export default function RootLayout({
       <body>
         <USABanner />
         <div>
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
+          <HeroContextProvider>
+            <Header />
+            <main id="main-content">{children}</main>
+            <Footer />
+          </HeroContextProvider>
         </div>
       </body>
     </html>

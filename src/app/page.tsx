@@ -1,51 +1,15 @@
+'use client';
 import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { LinkButton } from './components/LinkButton/LinkButton';
+import { useHeroInit } from './hooks/useHeroInit';
+import { homePageHero, homeContent } from './data/home';
 
-const homeContent = {
-  hero: {
-    header:
-      'Improve the way your jurisdiction collects, processes, and views public health data',
-    subheader:
-      "Turn your jurisdiction's data into meaningful intelligence that drives timely public health action using CDC's free, cloud-based products built from Data Integration Building Blocks, or DIBBs.",
-  },
-  dibbs: {
-    title: 'Introducing Data Integration Building Blocks',
-    description:
-      'DIBBs are modular, open-source software that can be configured to clean, transform, and enrich data. We build cloud-enabled products that leverage DIBBs to provide the following benefits to public health jurisdictions:',
-    benefits: [
-      'Better, higher quality data for use in data analysis',
-      'Time-savings for public health staff thanks to reduced manual work',
-      'More usable data that makes case investigation easier',
-      'Automated data processing that streamlines data workflows',
-      'Flexible cloud deployment options, including free central hosting through CDC',
-    ],
-  },
-  valueSection: {
-    title: "Unlock the value of your jurisdiction's data",
-    description:
-      'DIBBs products help jurisdictions make the most of their data. From improving the usability of electronic case reporting (eCR) data to streamlining data collection from healthcare providers without the need for a direct connection, our products save jurisdictions time and effort for case investigation and analysis.',
-    ctaText: 'Find out more about our products',
-    ctaHref: '/products',
-  },
-  jurisdictions: {
-    title: 'Jurisdictions working with DIBBs',
-    description:
-      'State and local public health jurisdictions across the United States used DIBBs to solve their toughest data challenges',
-  },
-  cta: {
-    title: 'Interested in getting started with DIBBs?',
-    description:
-      'Contact our team to learn more about how our products can help improve your data workflows',
-    ctaText: 'Engage with us',
-    ctaHref: '/engage-with-us',
-  },
-};
-
-export default async function Home() {
+export default function Home() {
+  useHeroInit(homePageHero);
   return (
     <>
       <DibbsSection />
