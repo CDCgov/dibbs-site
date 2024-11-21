@@ -29,7 +29,7 @@ const HeroContext = createContext<HeroContent>({
   setHeroContent: () => {},
 });
 
-export function HeroWrapper({
+export function HeroContextProvider({
   children,
 }: Readonly<{
   children: React.ReactNode;
