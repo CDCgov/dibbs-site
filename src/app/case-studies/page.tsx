@@ -22,7 +22,7 @@ export default function CaseStudies() {
                 data pipeline that automatically processes and enriches eCR data
                 to improve downstream data analysis and case investigation.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton variant="primary" href="/case-studies/la-county">
                 View case study
               </LinkButton>
             </div>
