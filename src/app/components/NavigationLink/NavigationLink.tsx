@@ -31,17 +31,25 @@ export function NavigationLink({
   );
 }
 
+/**
+ * Given a nav Link URL, returns `true` if the current page in the application matches
+ * the navigation Link's URL. If the user is on a subroute of a matching page, that will also match.
+ * @param url URL of the navigation Link
+ * @returns `true` if the current route matches the nav Link's URL, otherwise `false`
+ */
 function useIsActive(url: NavigationLinkProps['href']) {
   const pathname = usePathname();
 
-  // top-level match
+  // top-level route (/products, /case-studies) match
   if (pathname === url.toString()) {
     return true;
   }
 
-  // child routes also match
+  // subroutes (/products/ecr-viewer) match
   const pathSegments = pathname.split('/').filter((segment) => segment !== '');
-  if (url.toString().includes(pathSegments[0])) return true;
+  if (pathSegments.length > 0 && url.toString().includes(pathSegments[0])) {
+    return true;
+  }
 
   return false;
 }
