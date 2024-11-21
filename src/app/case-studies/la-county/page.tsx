@@ -64,7 +64,7 @@ export default function LaCountyCaseStudy() {
                 the quality of that data. Over the course of the year-long
                 pilot, the DIBBs team:
               </p>
-              <ul>
+              <ul className="font-semibold">
                 <li>
                   Conducted discovery research to understand eCR workflows,
                   identify product support needs, and assess the value of
@@ -124,7 +124,7 @@ export default function LaCountyCaseStudy() {
           </div>
         </section>
         <section id="read-more">
-          <div>
+          <div className="flex flex-col gap-3">
             <h2>Read more about our work</h2>
             <ExternalLink
               className="font-['Public Sans'] text-base font-bold leading-snug text-[#3a7d95] underline"
