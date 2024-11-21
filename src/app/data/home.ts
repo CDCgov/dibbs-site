@@ -38,4 +38,5 @@ export const homePageHero = {
   subheader:
     "Turn your jurisdiction's data into meaningful intelligence that drives timely public health action using CDC's free, cloud-based products built from Data Integration Building Blocks, or DIBBs.",
   heroClass: 'homepage-hero',
+  pathname: '/',
 };

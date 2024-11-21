@@ -8,6 +8,7 @@ import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
 import { useHeroContext } from '../../context';
+import { usePathname } from 'next/navigation';
 
 const navigationItems = [
   {
@@ -29,7 +30,10 @@ const navigationItems = [
 
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
-  const { heroContent } = useHeroContext();
+  let { heroContent } = useHeroContext();
+  if (usePathname() !== heroContent.pathname) {
+    heroContent = { ...heroContent, header: '', subheader: '', heroClass: '' };
+  }
 
   const handleClick = () => {
     if (window.innerWidth < 1024) {

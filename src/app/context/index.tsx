@@ -9,11 +9,13 @@ interface HeroContent {
     header: string;
     subheader: string;
     heroClass: string;
+    pathname: string;
   };
   setHeroContent: (content: {
     header: string;
     subheader: string;
     heroClass: string;
+    pathname: string;
   }) => void;
 }
 
@@ -22,6 +24,7 @@ const HeroContext = createContext<HeroContent>({
     header: '',
     subheader: '',
     heroClass: '',
+    pathname: '',
   },
   setHeroContent: () => {},
 });
@@ -40,6 +43,7 @@ export function HeroWrapper({
           header: '',
           subheader: '',
           heroClass: '',
+          pathname: '',
         },
   );
 
