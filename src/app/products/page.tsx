@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { LinkButton } from '../components/LinkButton/LinkButton';
+import { useHeroInit } from '../hooks/useHeroInit';
 
 export default function OurProducts() {
   return (
@@ -13,6 +15,12 @@ export default function OurProducts() {
 }
 
 function StandaloneProducts() {
+  useHeroInit({
+    header: `Our ecosystem of DIBBs products`,
+    subheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
+    heroClass: 'our-products-hero',
+  });
+
   return (
     <ContentContainer>
       <h2>Standalone Products</h2>

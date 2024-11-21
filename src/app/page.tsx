@@ -1,17 +1,12 @@
+'use client';
 import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { LinkButton } from './components/LinkButton/LinkButton';
-
+import { useHeroInit } from './hooks/useHeroInit';
 const homeContent = {
-  hero: {
-    header:
-      'Improve the way your jurisdiction collects, processes, and views public health data',
-    subheader:
-      "Turn your jurisdiction's data into meaningful intelligence that drives timely public health action using CDC's free, cloud-based products built from Data Integration Building Blocks, or DIBBs.",
-  },
   dibbs: {
     title: 'Introducing Data Integration Building Blocks',
     description:
@@ -45,7 +40,16 @@ const homeContent = {
   },
 };
 
-export default async function Home() {
+export const homePageHero = {
+  header:
+    'Improve the way your jurisdiction collects, processes, and views public health data',
+  subheader:
+    "Turn your jurisdiction's data into meaningful intelligence that drives timely public health action using CDC's free, cloud-based products built from Data Integration Building Blocks, or DIBBs.",
+  heroClass: 'homepage-hero',
+};
+
+export default function Home() {
+  useHeroInit(homePageHero);
   return (
     <>
       <DibbsSection />
