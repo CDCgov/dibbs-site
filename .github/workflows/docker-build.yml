@@ -14,9 +14,6 @@ on:
         description: 'Additional tag suffix (optional)'
         required: false
         type: string
-  push:
-    branches:
-      - deploy-workflow
 
 env:
   REGISTRY: ghcr.io
