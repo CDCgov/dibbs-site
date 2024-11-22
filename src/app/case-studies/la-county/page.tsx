@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
+import './styles.scss';
 
 export default function LaCountyCaseStudy() {
   return (
@@ -64,7 +65,7 @@ export default function LaCountyCaseStudy() {
                 the quality of that data. Over the course of the year-long
                 pilot, the DIBBs team:
               </p>
-              <ul className="font-semibold">
+              <ul className="list__full-width flex flex-col gap-2 font-semibold">
                 <li>
                   Conducted discovery research to understand eCR workflows,
                   identify product support needs, and assess the value of
