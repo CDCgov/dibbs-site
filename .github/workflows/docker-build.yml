@@ -50,17 +50,27 @@ jobs:
           SHA_SHORT=$(git rev-parse --short HEAD)
           TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 
+          # Convert repository name to lowercase
+          REPO_NAME=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
+
+          # Set default environment for push events
+          if [ "${{ github.event_name }}" = "push" ]; then
+            ENV="dev"
+          else
+            ENV="${{ github.event.inputs.environment }}"
+          fi
+
           # Base tags
-          TAGS="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.inputs.environment }}"
-          TAGS="${TAGS},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${BRANCH_NAME}-${SHA_SHORT}"
-          TAGS="${TAGS},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${BRANCH_NAME}-${{ github.event.inputs.environment }}"
+          TAGS="${{ env.REGISTRY }}/${REPO_NAME}:${ENV}"
+          TAGS="${TAGS},${{ env.REGISTRY }}/${REPO_NAME}:${BRANCH_NAME}-${SHA_SHORT}"
+          TAGS="${TAGS},${{ env.REGISTRY }}/${REPO_NAME}:${BRANCH_NAME}-${ENV}"
 
           # Add timestamp tag
-          TAGS="${TAGS},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${BRANCH_NAME}-${TIMESTAMP}"
+          TAGS="${TAGS},${{ env.REGISTRY }}/${REPO_NAME}:${BRANCH_NAME}-${TIMESTAMP}"
 
-          # Add custom suffix if provided
-          if [ -n "${{ github.event.inputs.tag_suffix }}" ]; then
-            TAGS="${TAGS},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.inputs.environment }}-${{ github.event.inputs.tag_suffix }}"
+          # Add custom suffix if provided (only for workflow_dispatch)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.tag_suffix }}" ]; then
+            TAGS="${TAGS},${{ env.REGISTRY }}/${REPO_NAME}:${ENV}-${{ github.event.inputs.tag_suffix }}"
           fi
 
           echo "tags=${TAGS}" >> $GITHUB_OUTPUT
