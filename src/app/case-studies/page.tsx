@@ -64,7 +64,7 @@ export default function CaseStudies() {
                 key information from eCR files to make them more useful for
                 monitoring the spread of reportable conditions.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton variant="primary" href="/case-studies/2">
                 View case study
               </LinkButton>
             </div>
