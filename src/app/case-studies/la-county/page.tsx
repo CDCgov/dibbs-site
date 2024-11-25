@@ -4,7 +4,7 @@ import './styles.scss';
 
 export default function LaCountyCaseStudy() {
   return (
-    <div className="main ml-auto mr-auto max-w-[75rem] pb-20 pl-[7.5rem] pr-[7.5rem]">
+    <div className="main ml-auto mr-auto flex items-center justify-center pb-20 pl-[7.5rem] pr-[7.5rem]">
       <div className="content grid max-w-[53rem] grid-cols-1 gap-[3.75rem] pl-[3.75rem] pr-[3.75rem] pt-10">
         <section id="heading">
           <Link
