@@ -9,7 +9,8 @@
 }
 
 :root {
-  --background: #e7f2f580;
+  --background: #e7f2f5;
+  --card-background: #fbfbfb;
   --foreground: #171717;
   --header-teal: #224a58;
   --background-light-blue: #dcecf3;
@@ -23,7 +24,23 @@ body {
   background: var(--background);
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+.main-content {
+  background: var(--background);
+}
+.image-card {
+  background: var(--card-background);
+  border-radius: 2.5rem 0rem 2.5rem 0rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image-card .text-box {
+  padding: 2.5rem;
+}
+.image-box {
+  border-radius: 2.5rem 0rem 0rem 0rem;
+  img {
+    border-radius: 2.5rem 0rem 0rem 0rem;
+  }
+}
 .usa-logo a {
   color: #ffffff;
 }

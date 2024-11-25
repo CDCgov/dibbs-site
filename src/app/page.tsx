@@ -23,17 +23,17 @@ export default function Home() {
 function DibbsSection() {
   return (
     <ContentContainer align>
-      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[1fr_2fr] xl:justify-items-start xl:gap-14">
-        <div className="order-1">
+      <div className="image-card grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[1fr_2fr] xl:justify-items-start xl:gap-14">
+        <div className="image-box order-1">
           <Image
             className="xl:max-h-[20rem] xl:max-w-[30rem]"
             src={`${basePath}/images/placeholder.png`}
             width={480}
-            height={320}
+            height={410}
             alt="Placeholder"
           />
         </div>
-        <div className="order-2 flex flex-col gap-5">
+        <div className="text-box order-2 flex flex-col gap-5">
           <h2 className="min-w-full text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
             Introducing Data Integration Building Blocks
           </h2>
