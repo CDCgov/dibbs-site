@@ -1,24 +1,26 @@
-import Link from 'next/link';
+import {
+  ContentContainer,
+  PageContainer,
+  ReturnToCaseStudiesLink,
+  SectionContentContainer,
+  Text,
+  UnorderedList,
+} from '../_ui';
 
 export default function EcrViewer() {
   return (
-    <div className="main ml-auto mr-auto max-w-[75rem] pb-20 pl-[7.5rem] pr-[7.5rem]">
-      <div className="content grid max-w-[53rem] grid-cols-1 gap-[3.75rem] pl-[3.75rem] pr-[3.75rem] pt-10">
+    <PageContainer>
+      <ContentContainer>
         <section id="heading">
-          <Link
-            className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
-            href="/case-studies"
-          >
-            Return to all case studies
-          </Link>
+          <ReturnToCaseStudiesLink />
           <h1>
             Surfacing actionable insights from electronic case reporting data
           </h1>
         </section>
         <section id="challenge">
-          <div className="flex flex-col gap-3">
+          <SectionContentContainer>
             <h2>The challenge</h2>
-            <p className="m-0 flex flex-col gap-6 p-0">
+            <Text>
               <span>
                 Electronic case reporting (eCR) is intended to make disease
                 reporting faster and easier by automating the process of
@@ -51,14 +53,14 @@ export default function EcrViewer() {
                 information from incoming eCR data so they can take timely
                 public health action.
               </span>
-            </p>
-          </div>
+            </Text>
+          </SectionContentContainer>
         </section>
         <section id="solution">
-          <div className="flex flex-col gap-3">
+          <SectionContentContainer>
             <h2>The solution</h2>
             <div className="flex flex-col gap-6">
-              <p className="m-0 p-0">
+              <Text>
                 To make eCR data more usable for public health staff, the DIBBs
                 team has developed the eCR Viewer, an intuitive interface that
                 surfaces a summary of condition-specific information in a more
@@ -70,12 +72,12 @@ export default function EcrViewer() {
                 for public health staff to find clinical information for case
                 investigation, eCR becomes a more useful data source, thereby
                 reducing the need to manually contact healthcare providers.
-              </p>
-              <p className="m-0 p-0">
+              </Text>
+              <Text>
                 To date, the DIBBs team has undertaken the following work
                 related to the eCR Viewer:
-              </p>
-              <ul className="list__full-width flex flex-col gap-2 font-semibold">
+              </Text>
+              <UnorderedList>
                 <li>
                   Conducted generative research with staff at public health
                   departments to understand how eCR fits into case ascertainment
@@ -105,22 +107,22 @@ export default function EcrViewer() {
                   to evaluate using the eCR Viewer outside of a surveillance
                   system as a web-based tool hosted by CDC
                 </li>
-              </ul>
-              <p className="m-0 p-0">
+              </UnorderedList>
+              <Text>
                 We are currently commencing pilots with jurisdictions to test
                 the eCR Viewer in a production data environment and further
                 validate the tool's downstream public health impact. Our aim is
                 to scale the eCR Viewer with a wide range of jurisdictions to
                 turn eCR into the go-to data source for case ascertainment and
                 investigation.
-              </p>
+              </Text>
             </div>
-          </div>
+          </SectionContentContainer>
         </section>
         <section id="results">
-          <div className="flex flex-col gap-3">
+          <SectionContentContainer>
             <h2>The results</h2>
-            <ul className="list__full-width flex flex-col gap-2 font-semibold">
+            <UnorderedList>
               <li>
                 Completed design and development of an eCR Viewer MVP and
                 validated its potential time savings with public health staff
@@ -135,10 +137,10 @@ export default function EcrViewer() {
                 staff to process all eCR files in a queue (over 5,000) in just
                 one week rather than 4.5 months
               </li>
-            </ul>
-          </div>
+            </UnorderedList>
+          </SectionContentContainer>
         </section>
-      </div>
-    </div>
+      </ContentContainer>
+    </PageContainer>
   );
 }
