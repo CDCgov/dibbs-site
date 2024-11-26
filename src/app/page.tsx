@@ -1,4 +1,5 @@
 'use client';
+import { memo } from 'react';
 import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
@@ -9,35 +10,34 @@ import { useHeroInit } from './hooks/useHeroInit';
 import { homePageHero, homeContent } from './data/home';
 import { ImageCard } from './components/ImageCard/ImageCard';
 
-export default function Home() {
-  useHeroInit(homePageHero);
-  return (
-    <>
-      <DibbsSection />
-      <ValueSection />
-      <JurisdictionSection />
-      <InvitationCta />
-    </>
-  );
-}
+const commonTextStyles = {
+  heading: 'text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]',
+  paragraph: 'text-base font-normal leading-relaxed text-[#224a58]',
+};
 
-function DibbsSection() {
+const DibbsSection = memo(function DibbsSection() {
   return (
     <ContentContainer align>
       <ImageCard
         imageUrl={`${basePath}/images/homepage-1.jpeg`}
-        imageAlt=""
-        imageHeight={1047}
-        imageWidth={2000}
+        imageAlt="Data Integration Building Blocks illustration"
+        imageFirst={false}
+        imageStyle={{
+          transform: 'scale(1.4) translate(-8%, 3%)',
+        }}
       >
-        <h2 className="min-w-full text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
+        <h2
+          className={`min-w-full text-center ${commonTextStyles.heading} xl:text-left`}
+        >
           Introducing Data Integration Building Blocks
         </h2>
         <div className="flex flex-col gap-2">
-          <p className="m-0 max-w-[39.7rem] p-0 text-base font-normal leading-relaxed text-[#224a58]">
+          <p
+            className={`m-0 max-w-[39.7rem] p-0 ${commonTextStyles.paragraph}`}
+          >
             {homeContent.dibbs.description}
           </p>
-          <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+          <ul className={`${commonTextStyles.paragraph} font-semibold`}>
             {homeContent.dibbs.benefits.map((benefit, index) => (
               <li className="min-w-full" key={`benefit-${index}`}>
                 {benefit}
@@ -48,19 +48,21 @@ function DibbsSection() {
       </ImageCard>
     </ContentContainer>
   );
-}
+});
 
-function ValueSection() {
+const ValueSection = memo(function ValueSection() {
   const { valueSection } = homeContent;
 
   return (
     <ContentContainer align>
       <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[2fr_3fr] xl:justify-items-start xl:gap-0">
         <div className="order-2 justify-items-center xl:order-1 xl:justify-items-start">
-          <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:max-w-[23.25rem] xl:text-start xl:text-[2rem]">
+          <h2
+            className={`text-center ${commonTextStyles.heading} xl:max-w-[23.25rem] xl:text-start`}
+          >
             {valueSection.title}
           </h2>
-          <p className="text-base font-normal leading-relaxed text-[#224a58] xl:max-w-[28.13rem]">
+          <p className={`${commonTextStyles.paragraph} xl:max-w-[28.13rem]`}>
             {valueSection.description}
           </p>
           <LinkButton href={valueSection.ctaHref} variant="primary">
@@ -73,15 +75,16 @@ function ValueSection() {
             src={`${basePath}/images/placeholder.png`}
             width={480}
             height={320}
-            alt="Placeholder"
+            alt="Value section illustration"
+            priority
           />
         </div>
       </div>
     </ContentContainer>
   );
-}
+});
 
-function JurisdictionSection() {
+const JurisdictionSection = memo(function JurisdictionSection() {
   const { jurisdictions } = homeContent;
 
   return (
@@ -90,10 +93,10 @@ function JurisdictionSection() {
         <Grid row gap>
           <Grid col={12}>
             <div className="flex flex-col items-center">
-              <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
+              <h2 className={`text-center ${commonTextStyles.heading}`}>
                 {jurisdictions.title}
               </h2>
-              <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
+              <p className={`text-center ${commonTextStyles.paragraph}`}>
                 {jurisdictions.description}
               </p>
             </div>
@@ -105,17 +108,21 @@ function JurisdictionSection() {
       </div>
     </>
   );
-}
+});
 
-function InvitationCta() {
+const InvitationCta = memo(function InvitationCta() {
   return (
     <section className="usa-graphic-list usa-section usa-section--light-blue">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <div className="self-stretch text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
+          <div
+            className={`self-stretch text-center ${commonTextStyles.heading}`}
+          >
             {homeContent.cta.title}
           </div>
-          <div className="self-stretch text-center text-base font-normal leading-relaxed text-[#224a58]">
+          <div
+            className={`self-stretch text-center ${commonTextStyles.paragraph}`}
+          >
             {homeContent.cta.description}
           </div>
           <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
@@ -124,5 +131,18 @@ function InvitationCta() {
         </div>
       </GridContainer>
     </section>
+  );
+});
+
+export default function Home() {
+  useHeroInit(homePageHero);
+
+  return (
+    <>
+      <DibbsSection />
+      <ValueSection />
+      <JurisdictionSection />
+      <InvitationCta />
+    </>
   );
 }

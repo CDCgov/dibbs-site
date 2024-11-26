@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import { type CSSProperties, memo } from 'react';
+import styles from './ImageCard.module.scss';
+import classNames from 'classnames';
 
 interface ImageCardProps {
   imageUrl: string;
@@ -7,36 +10,56 @@ interface ImageCardProps {
   imageFirst?: boolean;
   imageWidth?: number;
   imageHeight?: number;
+  imageStyle?: CSSProperties;
 }
 
-export function ImageCard({
+const baseClasses = {
+  container:
+    'grid grid-cols-2 justify-items-center gap-4 xl:justify-items-start xl:gap-14',
+  imageBox: 'image-box h-full w-[30rem] overflow-hidden',
+  textBox: 'text-box order-2 flex flex-col gap-5 pb-10 pt-10',
+};
+
+export const ImageCard = memo(function ImageCard({
   imageUrl,
   imageAlt,
   children,
   imageFirst = true,
   imageWidth = 0,
   imageHeight = 0,
+  imageStyle = {},
 }: ImageCardProps) {
+  const containerClasses = classNames(
+    styles['image-card'],
+    baseClasses.container,
+    imageFirst ? 'xl:grid-cols-[1fr_2fr]' : 'xl:grid-cols-[2fr_1fr]',
+  );
+
+  const imageBoxClasses = classNames(
+    imageFirst ? styles['image-box'] : styles['image-box-reverse'],
+    baseClasses.imageBox,
+    imageFirst ? 'order-1' : 'order-1 xl:order-2',
+  );
+
+  const textBoxClasses = classNames(
+    baseClasses.textBox,
+    imageFirst ? '' : 'xl:order-1 xl:pl-10',
+  );
+
   return (
-    <div className="image-card grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[1fr_2fr] xl:justify-items-start xl:gap-14">
-      <div
-        className={`image-box h-[100%] w-[30rem] overflow-hidden ${
-          imageFirst ? 'order-1' : 'order-1 xl:order-2'
-        }`}
-      >
+    <div className={containerClasses}>
+      <div className={imageBoxClasses}>
         <Image
           className="h-full w-full object-cover"
           src={imageUrl}
           width={imageWidth}
           height={imageHeight}
           alt={imageAlt}
+          style={imageStyle}
+          priority={true} // If this is above the fold
         />
       </div>
-      <div
-        className={`text-box order-2 flex flex-col gap-5 ${imageFirst ? '' : 'xl:order-1'}`}
-      >
-        {children}
-      </div>
+      <div className={textBoxClasses}>{children}</div>
     </div>
   );
-}
+});

@@ -1,0 +1,22 @@
+.image-card {
+  background: var(--card-background);
+  border-radius: 2.5rem 0rem 2.5rem 0rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image-card .text-box {
+  padding: 2.5rem;
+}
+
+.image-box {
+  border-radius: 2.5rem 0rem 0rem 0rem;
+  img {
+    border-radius: 2.5rem 0rem 0rem 0rem;
+  }
+}
+
+.image-box-reverse {
+  border-radius: 0rem 0rem 2.5rem 0rem;
+  img {
+    border-radius: 0rem 0rem 2.5rem 0rem;
+  }
+}
