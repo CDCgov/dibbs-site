@@ -7,6 +7,7 @@ import { ContentContainer } from './components/ContentContainer/ContentContainer
 import { LinkButton } from './components/LinkButton/LinkButton';
 import { useHeroInit } from './hooks/useHeroInit';
 import { homePageHero, homeContent } from './data/home';
+import { ImageCard } from './components/ImageCard/ImageCard';
 
 export default function Home() {
   useHeroInit(homePageHero);
@@ -23,34 +24,28 @@ export default function Home() {
 function DibbsSection() {
   return (
     <ContentContainer align>
-      <div className="image-card grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[1fr_2fr] xl:justify-items-start xl:gap-14">
-        <div className="image-box order-1">
-          <Image
-            className="xl:max-h-[20rem] xl:max-w-[30rem]"
-            src={`${basePath}/images/placeholder.png`}
-            width={480}
-            height={410}
-            alt="Placeholder"
-          />
+      <ImageCard
+        imageUrl={`${basePath}/images/homepage-1.jpeg`}
+        imageAlt=""
+        imageHeight={1047}
+        imageWidth={2000}
+      >
+        <h2 className="min-w-full text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
+          Introducing Data Integration Building Blocks
+        </h2>
+        <div className="flex flex-col gap-2">
+          <p className="m-0 max-w-[39.7rem] p-0 text-base font-normal leading-relaxed text-[#224a58]">
+            {homeContent.dibbs.description}
+          </p>
+          <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+            {homeContent.dibbs.benefits.map((benefit, index) => (
+              <li className="min-w-full" key={`benefit-${index}`}>
+                {benefit}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="text-box order-2 flex flex-col gap-5">
-          <h2 className="min-w-full text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
-            Introducing Data Integration Building Blocks
-          </h2>
-          <div className="flex flex-col gap-2">
-            <p className="m-0 max-w-[39.7rem] p-0 text-base font-normal leading-relaxed text-[#224a58]">
-              {homeContent.dibbs.description}
-            </p>
-            <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
-              {homeContent.dibbs.benefits.map((benefit, index) => (
-                <li className="min-w-full" key={`benefit-${index}`}>
-                  {benefit}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+      </ImageCard>
     </ContentContainer>
   );
 }
