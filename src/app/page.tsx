@@ -21,7 +21,7 @@ const DibbsSection = memo(function DibbsSection() {
       <ImageCard
         imageUrl={`${basePath}/images/homepage-1.jpeg`}
         imageAlt="Data Integration Building Blocks illustration"
-        imageFirst={false}
+        imageFirst={true}
         imageStyle={{
           transform: 'scale(1.4) translate(-8%, 3%)',
         }}
