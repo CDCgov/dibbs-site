@@ -19,5 +19,5 @@ export function useHeroInit({ header, subheader, heroClass }: HeroInitProps) {
       heroClass,
       pathname,
     });
-  }, [setHeroContent, header, subheader, heroClass]);
+  }, [setHeroContent, header, subheader, heroClass, pathname]);
 }
