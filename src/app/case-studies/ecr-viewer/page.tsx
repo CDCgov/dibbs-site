@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function LaCountyCaseStudy() {
+export default function EcrViewer() {
   return (
     <div className="main ml-auto mr-auto max-w-[75rem] pb-20 pl-[7.5rem] pr-[7.5rem]">
       <div className="content grid max-w-[53rem] grid-cols-1 gap-[3.75rem] pl-[3.75rem] pr-[3.75rem] pt-10">
