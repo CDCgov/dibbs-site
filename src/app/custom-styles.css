@@ -7,9 +7,10 @@
     text-wrap: balance;
   }
 }
-
+/* --xl-breakpoint: 1280px; */
 :root {
-  --background: #e7f2f580;
+  --background: #e7f2f5;
+  --card-background: #fbfbfb;
   --foreground: #171717;
   --header-teal: #224a58;
   --background-light-blue: #dcecf3;
@@ -22,6 +23,9 @@ html,
 body {
   background: var(--background);
   font-family: 'Source Sans Pro', sans-serif;
+}
+.main-content {
+  background: var(--background);
 }
 
 .usa-logo a {

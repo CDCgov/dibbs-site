@@ -7,67 +7,51 @@ import { ContentContainer } from './components/ContentContainer/ContentContainer
 import { LinkButton } from './components/LinkButton/LinkButton';
 import { useHeroInit } from './hooks/useHeroInit';
 import { homePageHero, homeContent } from './data/home';
+import { ImageCard } from './components/ImageCard/ImageCard';
+import { Heading, Paragraph } from './_ui';
 
-export default function Home() {
-  useHeroInit(homePageHero);
-  return (
-    <>
-      <DibbsSection />
-      <ValueSection />
-      <JurisdictionSection />
-      <InvitationCta />
-    </>
-  );
-}
-
-function DibbsSection() {
-  return (
-    <ContentContainer align>
-      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[1fr_2fr] xl:justify-items-start xl:gap-14">
-        <div className="order-1">
-          <Image
-            className="xl:max-h-[20rem] xl:max-w-[30rem]"
-            src={`${basePath}/images/placeholder.png`}
-            width={480}
-            height={320}
-            alt="Placeholder"
-          />
-        </div>
-        <div className="order-2 flex flex-col gap-5">
-          <h2 className="min-w-full text-center text-[1.5rem] font-bold text-[#224a58] xl:text-left xl:text-[2rem]">
-            Introducing Data Integration Building Blocks
-          </h2>
-          <div className="flex flex-col gap-2">
-            <p className="m-0 max-w-[39.7rem] p-0 text-base font-normal leading-relaxed text-[#224a58]">
-              {homeContent.dibbs.description}
-            </p>
-            <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
-              {homeContent.dibbs.benefits.map((benefit, index) => (
-                <li className="min-w-full" key={`benefit-${index}`}>
-                  {benefit}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+const DibbsSection = () => (
+  <ContentContainer align>
+    <ImageCard
+      imageUrl={`${basePath}/images/homepage-1.jpeg`}
+      imageAlt="Data Integration Building Blocks illustration"
+      imageFirst={true}
+      imageStyle={{
+        transform: 'scale(1.4) translate(-8%, 3%)',
+      }}
+    >
+      <Heading className="min-w-full text-center xl:text-left">
+        Introducing Data Integration Building Blocks
+      </Heading>
+      <div className="flex flex-col gap-2">
+        <Paragraph className="m-0 max-w-[39.7rem] p-0">
+          {homeContent.dibbs.description}
+        </Paragraph>
+        <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+          {homeContent.dibbs.benefits.map((benefit, index) => (
+            <li className="min-w-full" key={`benefit-${index}`}>
+              {benefit}
+            </li>
+          ))}
+        </ul>
       </div>
-    </ContentContainer>
-  );
-}
+    </ImageCard>
+  </ContentContainer>
+);
 
-function ValueSection() {
+const ValueSection = () => {
   const { valueSection } = homeContent;
 
   return (
     <ContentContainer align>
       <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[2fr_3fr] xl:justify-items-start xl:gap-0">
         <div className="order-2 justify-items-center xl:order-1 xl:justify-items-start">
-          <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:max-w-[23.25rem] xl:text-start xl:text-[2rem]">
+          <Heading className="text-center xl:max-w-[23.25rem] xl:text-start">
             {valueSection.title}
-          </h2>
-          <p className="text-base font-normal leading-relaxed text-[#224a58] xl:max-w-[28.13rem]">
+          </Heading>
+          <Paragraph className="xl:max-w-[28.13rem]">
             {valueSection.description}
-          </p>
+          </Paragraph>
           <LinkButton href={valueSection.ctaHref} variant="primary">
             {valueSection.ctaText}
           </LinkButton>
@@ -78,15 +62,16 @@ function ValueSection() {
             src={`${basePath}/images/placeholder.png`}
             width={480}
             height={320}
-            alt="Placeholder"
+            alt="Value section illustration"
+            priority
           />
         </div>
       </div>
     </ContentContainer>
   );
-}
+};
 
-function JurisdictionSection() {
+const JurisdictionSection = () => {
   const { jurisdictions } = homeContent;
 
   return (
@@ -95,12 +80,10 @@ function JurisdictionSection() {
         <Grid row gap>
           <Grid col={12}>
             <div className="flex flex-col items-center">
-              <h2 className="text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
-                {jurisdictions.title}
-              </h2>
-              <p className="text-center text-base font-normal leading-relaxed text-[#224a58]">
+              <Heading className="text-center">{jurisdictions.title}</Heading>
+              <Paragraph className="text-center">
                 {jurisdictions.description}
-              </p>
+              </Paragraph>
             </div>
           </Grid>
         </Grid>
@@ -110,24 +93,37 @@ function JurisdictionSection() {
       </div>
     </>
   );
-}
+};
 
-function InvitationCta() {
+const InvitationCta = () => (
+  <section className="usa-graphic-list usa-section usa-section--light-blue">
+    <GridContainer>
+      <div className="flex flex-col items-center justify-center gap-5 self-stretch">
+        <Heading className="self-stretch text-center">
+          {homeContent.cta.title}
+        </Heading>
+        <Paragraph className="self-stretch text-center">
+          {homeContent.cta.description}
+        </Paragraph>
+        <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
+          {homeContent.cta.ctaText}
+        </LinkButton>
+      </div>
+    </GridContainer>
+  </section>
+);
+
+const Home = () => {
+  useHeroInit(homePageHero);
+
   return (
-    <section className="usa-graphic-list usa-section usa-section--light-blue">
-      <GridContainer>
-        <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <div className="self-stretch text-center text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]">
-            {homeContent.cta.title}
-          </div>
-          <div className="self-stretch text-center text-base font-normal leading-relaxed text-[#224a58]">
-            {homeContent.cta.description}
-          </div>
-          <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
-            {homeContent.cta.ctaText}
-          </LinkButton>
-        </div>
-      </GridContainer>
-    </section>
+    <>
+      <DibbsSection />
+      <ValueSection />
+      <JurisdictionSection />
+      <InvitationCta />
+    </>
   );
-}
+};
+
+export default Home;
