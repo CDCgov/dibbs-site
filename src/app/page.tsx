@@ -10,38 +10,36 @@ import { homePageHero, homeContent } from './data/home';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
 
-function DibbsSection() {
-  return (
-    <ContentContainer align>
-      <ImageCard
-        imageUrl={`${basePath}/images/homepage-1.jpeg`}
-        imageAlt="Data Integration Building Blocks illustration"
-        imageFirst={true}
-        imageStyle={{
-          transform: 'scale(1.4) translate(-8%, 3%)',
-        }}
-      >
-        <Heading className="min-w-full text-center xl:text-left">
-          Introducing Data Integration Building Blocks
-        </Heading>
-        <div className="flex flex-col gap-2">
-          <Paragraph className="m-0 max-w-[39.7rem] p-0">
-            {homeContent.dibbs.description}
-          </Paragraph>
-          <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
-            {homeContent.dibbs.benefits.map((benefit, index) => (
-              <li className="min-w-full" key={`benefit-${index}`}>
-                {benefit}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </ImageCard>
-    </ContentContainer>
-  );
-}
+const DibbsSection = () => (
+  <ContentContainer align>
+    <ImageCard
+      imageUrl={`${basePath}/images/homepage-1.jpeg`}
+      imageAlt="Data Integration Building Blocks illustration"
+      imageFirst={true}
+      imageStyle={{
+        transform: 'scale(1.4) translate(-8%, 3%)',
+      }}
+    >
+      <Heading className="min-w-full text-center xl:text-left">
+        Introducing Data Integration Building Blocks
+      </Heading>
+      <div className="flex flex-col gap-2">
+        <Paragraph className="m-0 max-w-[39.7rem] p-0">
+          {homeContent.dibbs.description}
+        </Paragraph>
+        <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+          {homeContent.dibbs.benefits.map((benefit, index) => (
+            <li className="min-w-full" key={`benefit-${index}`}>
+              {benefit}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ImageCard>
+  </ContentContainer>
+);
 
-function ValueSection() {
+const ValueSection = () => {
   const { valueSection } = homeContent;
 
   return (
@@ -71,9 +69,9 @@ function ValueSection() {
       </div>
     </ContentContainer>
   );
-}
+};
 
-function JurisdictionSection() {
+const JurisdictionSection = () => {
   const { jurisdictions } = homeContent;
 
   return (
@@ -95,29 +93,27 @@ function JurisdictionSection() {
       </div>
     </>
   );
-}
+};
 
-function InvitationCta() {
-  return (
-    <section className="usa-graphic-list usa-section usa-section--light-blue">
-      <GridContainer>
-        <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <Heading className="self-stretch text-center">
-            {homeContent.cta.title}
-          </Heading>
-          <Paragraph className="self-stretch text-center">
-            {homeContent.cta.description}
-          </Paragraph>
-          <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
-            {homeContent.cta.ctaText}
-          </LinkButton>
-        </div>
-      </GridContainer>
-    </section>
-  );
-}
+const InvitationCta = () => (
+  <section className="usa-graphic-list usa-section usa-section--light-blue">
+    <GridContainer>
+      <div className="flex flex-col items-center justify-center gap-5 self-stretch">
+        <Heading className="self-stretch text-center">
+          {homeContent.cta.title}
+        </Heading>
+        <Paragraph className="self-stretch text-center">
+          {homeContent.cta.description}
+        </Paragraph>
+        <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
+          {homeContent.cta.ctaText}
+        </LinkButton>
+      </div>
+    </GridContainer>
+  </section>
+);
 
-export default function Home() {
+const Home = () => {
   useHeroInit(homePageHero);
 
   return (
@@ -128,4 +124,6 @@ export default function Home() {
       <InvitationCta />
     </>
   );
-}
+};
+
+export default Home;
