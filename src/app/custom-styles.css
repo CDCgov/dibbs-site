@@ -7,7 +7,7 @@
     text-wrap: balance;
   }
 }
-
+/* --xl-breakpoint: 1280px; */
 :root {
   --background: #e7f2f5;
   --card-background: #fbfbfb;

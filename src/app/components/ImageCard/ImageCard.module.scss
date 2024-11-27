@@ -1,22 +1,32 @@
-.image-card {
+.imageCard {
   background: var(--card-background);
-  border-radius: 2.5rem 0rem 2.5rem 0rem;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-}
-.image-card .text-box {
-  padding: 2.5rem;
-}
-
-.image-box {
-  border-radius: 2.5rem 0rem 0rem 0rem;
-  img {
-    border-radius: 2.5rem 0rem 0rem 0rem;
+  @media (min-width: 1280px) {
+    border-radius: 2.5rem 0rem 2.5rem 0rem;
   }
-}
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 
-.image-box-reverse {
-  border-radius: 0rem 0rem 2.5rem 0rem;
-  img {
-    border-radius: 0rem 0rem 2.5rem 0rem;
+  .imageContainer {
+    @media (min-width: 1280px) {
+      border-radius: 2.5rem 0rem 0rem 0rem;
+      img {
+        border-radius: 2.5rem 0rem 0rem 0rem;
+      }
+    }
+    @media (max-width: 1279px) {
+      margin-top: 2rem;
+    }
+  }
+
+  .textBox {
+    padding: 2.5rem;
+  }
+
+  .imageContainerReverse {
+    @media (min-width: 1280px) {
+      border-radius: 0rem 0rem 2.5rem 0rem;
+      img {
+        border-radius: 0rem 0rem 2.5rem 0rem;
+      }
+    }
   }
 }

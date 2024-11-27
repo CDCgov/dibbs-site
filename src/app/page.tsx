@@ -1,5 +1,4 @@
 'use client';
-import { memo } from 'react';
 import { Grid, GridContainer } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import { basePath } from './utils/constants';
@@ -9,13 +8,9 @@ import { LinkButton } from './components/LinkButton/LinkButton';
 import { useHeroInit } from './hooks/useHeroInit';
 import { homePageHero, homeContent } from './data/home';
 import { ImageCard } from './components/ImageCard/ImageCard';
+import { Heading, Paragraph } from './_ui';
 
-const commonTextStyles = {
-  heading: 'text-[1.5rem] font-bold text-[#224a58] xl:text-[2rem]',
-  paragraph: 'text-base font-normal leading-relaxed text-[#224a58]',
-};
-
-const DibbsSection = memo(function DibbsSection() {
+function DibbsSection() {
   return (
     <ContentContainer align>
       <ImageCard
@@ -26,18 +21,14 @@ const DibbsSection = memo(function DibbsSection() {
           transform: 'scale(1.4) translate(-8%, 3%)',
         }}
       >
-        <h2
-          className={`min-w-full text-center ${commonTextStyles.heading} xl:text-left`}
-        >
+        <Heading className="min-w-full text-center xl:text-left">
           Introducing Data Integration Building Blocks
-        </h2>
+        </Heading>
         <div className="flex flex-col gap-2">
-          <p
-            className={`m-0 max-w-[39.7rem] p-0 ${commonTextStyles.paragraph}`}
-          >
+          <Paragraph className="m-0 max-w-[39.7rem] p-0">
             {homeContent.dibbs.description}
-          </p>
-          <ul className={`${commonTextStyles.paragraph} font-semibold`}>
+          </Paragraph>
+          <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
             {homeContent.dibbs.benefits.map((benefit, index) => (
               <li className="min-w-full" key={`benefit-${index}`}>
                 {benefit}
@@ -48,23 +39,21 @@ const DibbsSection = memo(function DibbsSection() {
       </ImageCard>
     </ContentContainer>
   );
-});
+}
 
-const ValueSection = memo(function ValueSection() {
+function ValueSection() {
   const { valueSection } = homeContent;
 
   return (
     <ContentContainer align>
       <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[2fr_3fr] xl:justify-items-start xl:gap-0">
         <div className="order-2 justify-items-center xl:order-1 xl:justify-items-start">
-          <h2
-            className={`text-center ${commonTextStyles.heading} xl:max-w-[23.25rem] xl:text-start`}
-          >
+          <Heading className="text-center xl:max-w-[23.25rem] xl:text-start">
             {valueSection.title}
-          </h2>
-          <p className={`${commonTextStyles.paragraph} xl:max-w-[28.13rem]`}>
+          </Heading>
+          <Paragraph className="xl:max-w-[28.13rem]">
             {valueSection.description}
-          </p>
+          </Paragraph>
           <LinkButton href={valueSection.ctaHref} variant="primary">
             {valueSection.ctaText}
           </LinkButton>
@@ -82,9 +71,9 @@ const ValueSection = memo(function ValueSection() {
       </div>
     </ContentContainer>
   );
-});
+}
 
-const JurisdictionSection = memo(function JurisdictionSection() {
+function JurisdictionSection() {
   const { jurisdictions } = homeContent;
 
   return (
@@ -93,12 +82,10 @@ const JurisdictionSection = memo(function JurisdictionSection() {
         <Grid row gap>
           <Grid col={12}>
             <div className="flex flex-col items-center">
-              <h2 className={`text-center ${commonTextStyles.heading}`}>
-                {jurisdictions.title}
-              </h2>
-              <p className={`text-center ${commonTextStyles.paragraph}`}>
+              <Heading className="text-center">{jurisdictions.title}</Heading>
+              <Paragraph className="text-center">
                 {jurisdictions.description}
-              </p>
+              </Paragraph>
             </div>
           </Grid>
         </Grid>
@@ -108,23 +95,19 @@ const JurisdictionSection = memo(function JurisdictionSection() {
       </div>
     </>
   );
-});
+}
 
-const InvitationCta = memo(function InvitationCta() {
+function InvitationCta() {
   return (
     <section className="usa-graphic-list usa-section usa-section--light-blue">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <div
-            className={`self-stretch text-center ${commonTextStyles.heading}`}
-          >
+          <Heading className="self-stretch text-center">
             {homeContent.cta.title}
-          </div>
-          <div
-            className={`self-stretch text-center ${commonTextStyles.paragraph}`}
-          >
+          </Heading>
+          <Paragraph className="self-stretch text-center">
             {homeContent.cta.description}
-          </div>
+          </Paragraph>
           <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
             {homeContent.cta.ctaText}
           </LinkButton>
@@ -132,7 +115,7 @@ const InvitationCta = memo(function InvitationCta() {
       </GridContainer>
     </section>
   );
-});
+}
 
 export default function Home() {
   useHeroInit(homePageHero);
