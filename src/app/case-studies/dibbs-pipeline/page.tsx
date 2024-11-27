@@ -1,27 +1,29 @@
-import Link from 'next/link';
-import { Link as ExternalLink } from '@trussworks/react-uswds';
-import './styles.scss';
+import {
+  PageContainer,
+  ContentContainer,
+  ReturnToCaseStudiesLink,
+  SectionContentContainer,
+  UnorderedList,
+  Text,
+  ReadMore,
+} from '../_ui';
+import '../_ui/styles.scss';
 
-export default function LaCountyCaseStudy() {
+const DibbsPipeline = () => {
   return (
-    <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
-      <div className="content grid max-w-[53rem] grid-cols-1 gap-[3.75rem] pl-[3.75rem] pr-[3.75rem] pt-10">
+    <PageContainer>
+      <ContentContainer>
         <section id="heading">
-          <Link
-            className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
-            href="/case-studies"
-          >
-            Return to all case studies
-          </Link>
+          <ReturnToCaseStudiesLink />
           <h1>
             Creating a modular, cloud-based data processing pipeline for LA
             County
           </h1>
         </section>
         <section id="challenge">
-          <div className="flex flex-col gap-3">
+          <SectionContentContainer>
             <h2>The challenge</h2>
-            <p className="m-0 flex flex-col gap-6 p-0">
+            <Text>
               <span>
                 Timely access to electronic case reporting (eCR) data is
                 critical for public health departments to respond swiftly to
@@ -47,14 +49,14 @@ export default function LaCountyCaseStudy() {
                 investigation less onerous for epidemiologists and other public
                 health staff.
               </span>
-            </p>
-          </div>
+            </Text>
+          </SectionContentContainer>
         </section>
         <section id="solution">
-          <div className="flex flex-col gap-3">
+          <SectionContentContainer>
             <h2>The solution</h2>
             <div className="flex flex-col gap-6">
-              <p className="m-0 p-0">
+              <Text>
                 The DIBBs team worked with LAC to develop and deploy a
                 cutting-edge, modular data pipeline to automatically process and
                 enrich COVID-19 eCR files. This open-source, cloud-based
@@ -64,8 +66,8 @@ export default function LaCountyCaseStudy() {
                 receive and act upon public health data, while also improving
                 the quality of that data. Over the course of the year-long
                 pilot, the DIBBs team:
-              </p>
-              <ul className="list__full-width flex flex-col gap-2 font-semibold">
+              </Text>
+              <UnorderedList>
                 <li>
                   Conducted discovery research to understand eCR workflows,
                   identify product support needs, and assess the value of
@@ -95,49 +97,63 @@ export default function LaCountyCaseStudy() {
                   LAC staff to use post-pilot that enables them to independently
                   operate and customize the pipeline
                 </li>
-              </ul>
-              <p className="m-0 p-0">
-                We are currently commencing pilots with jurisdictions to test
-                the eCR Viewer in a production data environment and further
-                validate the tool's downstream public health impact. Our aim is
-                to scale the eCR Viewer with a wide range of jurisdictions to
-                turn eCR into the go-to data source for case ascertainment and
-                investigation.
-              </p>
+              </UnorderedList>
+              <Text>
+                Following the pilot, LAC now has access to an automated feed of
+                analysis-ready eCR data with fields relevant to downstream
+                disease teams. LAC plans to continue to leverage the DIBBs
+                pipeline infrastructure to give additional disease teams access
+                to processed eCR data, including the HIV and STD prevention team
+                and the Community Outbreak Team (focused on viral respiratory
+                pathogens). Through the LAC pilot, the DIBBs team gained
+                insights on how to use and adapt our modular, open-source
+                solutions to solve data challenges for multiple disease
+                surveillance systems across public health jurisdictions.
+              </Text>
             </div>
-          </div>
+          </SectionContentContainer>
         </section>
         <section id="results">
-          <div className="flex flex-col gap-3">
+          <SectionContentContainer>
             <h2>The results</h2>
-            <p className="m-0 p-0">
-              Following the pilot, LAC now has access to an automated feed of
-              analysis-ready eCR data with fields relevant to downstream disease
-              teams. LAC plans to continue to leverage the DIBBs pipeline
-              infrastructure to give additional disease teams access to
-              processed eCR data, including the HIV and STD prevention team and
-              the Community Outbreak Team (focused on viral respiratory
-              pathogens). Through the LAC pilot, the DIBBs team gained insights
-              on how to use and adapt our modular, open-source solutions to
-              solve data challenges for multiple disease surveillance systems
-              across public health jurisdictions.
-            </p>
-          </div>
+            <UnorderedList>
+              <li>
+                LAC staff can create program-specific data marts in a few hours
+                rather than months, giving disease teams access to processed eCR
+                data for case investigation and analysis
+              </li>
+              <li>
+                Case investigators on the Hepatitis team can receive eCR data
+                95% faster (from 20 hours to 1 hour)
+              </li>
+              <li>
+                Case investigators can quickly and easily identify positive
+                Hepatitis A cases in an aggregated tabular format (versus
+                sifting through individual HTML files) resulting in ~12 minutes
+                of time savings per Hepatitis A case
+              </li>
+              <li>
+                Pipeline can save LAC technical staff 6 hours a week by
+                eliminating the need to manually run data processing scripts
+              </li>
+              <li>
+                LAC staff can operate the pipeline independently and
+                continuously expand use of eCR data to new program areas
+              </li>
+            </UnorderedList>
+          </SectionContentContainer>
         </section>
         <section id="read-more">
-          <div className="flex flex-col gap-3">
-            <h2>Read more about our work</h2>
-            <ExternalLink
-              className="font-['Public Sans'] text-base font-bold leading-snug text-[#3a7d95] underline"
+          <SectionContentContainer>
+            <ReadMore
               href="https://github.com/CDCgov/phdi/blob/main/publications/LAC%20Pilot%20Executive%20Brief_Final.pdf"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Findings from a Los Angeles County Pilot - Executive Brief
-            </ExternalLink>
-          </div>
+              linkText="Findings from a Los Angeles County Pilot - Executive Brief"
+            />
+          </SectionContentContainer>
         </section>
-      </div>
-    </div>
+      </ContentContainer>
+    </PageContainer>
   );
-}
+};
+
+export default DibbsPipeline;
