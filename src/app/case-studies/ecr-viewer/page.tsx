@@ -7,7 +7,7 @@ import {
   UnorderedList,
 } from '../_ui';
 
-export default function EcrViewer() {
+const EcrViewer = () => {
   return (
     <PageContainer>
       <ContentContainer>
@@ -143,4 +143,6 @@ export default function EcrViewer() {
       </ContentContainer>
     </PageContainer>
   );
-}
+};
+
+export default EcrViewer;

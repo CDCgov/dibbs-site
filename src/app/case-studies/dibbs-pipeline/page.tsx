@@ -9,7 +9,7 @@ import {
 } from '../_ui';
 import '../_ui/styles.scss';
 
-export default function DibbsPipeline() {
+const DibbsPipeline = () => {
   return (
     <PageContainer>
       <ContentContainer>
@@ -154,4 +154,6 @@ export default function DibbsPipeline() {
       </ContentContainer>
     </PageContainer>
   );
-}
+};
+
+export default DibbsPipeline;
