@@ -8,7 +8,7 @@ import { useHeroInit } from './hooks/useHeroInit';
 import { homePageHero, homeContent } from './data/home';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
-import styles from './_styles/homepage.module.scss';
+import styles from './_styles/Homepage.module.scss';
 
 const DibbsSection = () => (
   <ContentContainer align>
