@@ -1,6 +1,5 @@
 'use client';
 import { Grid, GridContainer } from '@trussworks/react-uswds';
-import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
