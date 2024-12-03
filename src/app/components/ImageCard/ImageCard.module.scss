@@ -1,9 +1,7 @@
 .imageCard {
-  background: var(--card-background);
   @media (min-width: 1280px) {
     border-radius: 2.5rem 0rem 2.5rem 0rem;
   }
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 
   .imageContainer {
     @media (min-width: 1280px) {
@@ -29,4 +27,17 @@
       }
     }
   }
+}
+
+.imageCard-white {
+  background: var(--card-background);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  @media (min-width: 1280px) {
+    border-radius: 2.5rem 0rem 2.5rem 0rem;
+  }
+}
+
+// None variant
+.imageCard-none {
+  background: none;
 }

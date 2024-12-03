@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import USABanner from './components/UsaBanner/UsaBanner';
 import './globals.scss';
-import './custom-styles.css';
+import './_styles/custom-styles.css';
 import { HeroContextProvider } from './context';
 
 export const metadata: Metadata = {

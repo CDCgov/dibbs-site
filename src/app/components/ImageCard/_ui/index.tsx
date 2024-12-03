@@ -4,9 +4,14 @@ import styles from '../ImageCard.module.scss';
 interface ContainerProps {
   children: React.ReactNode;
   imageFirst?: boolean;
+  cardBackground?: 'none' | 'white';
 }
 
-export const Container = ({ children, imageFirst = true }: ContainerProps) => {
+export const Container = ({
+  children,
+  imageFirst = true,
+  cardBackground = 'white',
+}: ContainerProps) => {
   const imageFirstClass = imageFirst
     ? 'xl:grid-cols-[1fr_2fr]'
     : 'xl:grid-cols-[2fr_1fr]';
@@ -17,6 +22,7 @@ export const Container = ({ children, imageFirst = true }: ContainerProps) => {
         'grid grid-cols-1 justify-items-center gap-4 xl:justify-items-start xl:gap-14',
         imageFirstClass,
         styles.imageCard,
+        styles[`imageCard-${cardBackground}`],
       )}
     >
       {children}
