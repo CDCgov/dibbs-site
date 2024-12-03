@@ -3,7 +3,8 @@ import Link, { LinkProps } from 'next/link';
 
 const BUTTON_STYLES = {
   primary: {
-    button: 'usa-button bg-[#224a58] hover:bg-green',
+    button:
+      'usa-button bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70',
     text: 'text-white',
   },
   secondary: {
@@ -33,7 +34,7 @@ export function LinkButton({
   if (disabled) {
     return (
       <div
-        className="usa-button usa-button--disabled self-end justify-self-start bg-[#224a58]"
+        className="usa-button border-violet-warm-60 self-end justify-self-start"
         aria-disabled="true"
         role="link"
         aria-label={ariaLabel}
