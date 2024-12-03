@@ -7,7 +7,6 @@ import {
   Text,
   ReadMore,
 } from '../_ui';
-import '../_ui/styles.scss';
 
 const DibbsPipeline = () => {
   return (

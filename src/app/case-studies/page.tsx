@@ -84,7 +84,7 @@ export default function CaseStudies() {
                 cloud-based software solutions, so they can meet the scope and
                 scale of emerging public health threats.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton variant="primary" href="/case-studies/cloud-hosting">
                 View case study
               </LinkButton>
             </div>
