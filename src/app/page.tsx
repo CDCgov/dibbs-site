@@ -1,6 +1,5 @@
 'use client';
 import { Grid, GridContainer } from '@trussworks/react-uswds';
-import Image from 'next/image';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
@@ -9,12 +8,13 @@ import { useHeroInit } from './hooks/useHeroInit';
 import { homePageHero, homeContent } from './data/home';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
+import styles from './_styles/Homepage.module.scss';
 
 const DibbsSection = () => (
   <ContentContainer align>
     <ImageCard
       imageUrl={`${basePath}/images/homepage-1.jpeg`}
-      imageAlt="Data Integration Building Blocks illustration"
+      imageAlt=""
       imageFirst={true}
       imageStyle={{
         transform: 'scale(1.4) translate(-8%, 3%)',
@@ -43,30 +43,31 @@ const ValueSection = () => {
   const { valueSection } = homeContent;
 
   return (
-    <ContentContainer align>
-      <div className="grid grid-cols-1 justify-items-center gap-4 xl:grid-cols-[2fr_3fr] xl:justify-items-start xl:gap-0">
-        <div className="order-2 justify-items-center xl:order-1 xl:justify-items-start">
+    <ContentContainer sectionClasses={styles.valueSection} align>
+      <ImageCard
+        imageFirst={false}
+        imageUrl={`${basePath}/images/homepage-2.jpeg`}
+        xlHideImage={true}
+        imageAlt=""
+        imageStyle={{
+          transform: 'scale(1.4) translate(-8%, 3%)',
+        }}
+        cardBackground="none"
+      >
+        <div className="my-auto flex flex-col gap-2">
           <Heading className="text-center xl:max-w-[23.25rem] xl:text-start">
             {valueSection.title}
           </Heading>
           <Paragraph className="xl:max-w-[28.13rem]">
             {valueSection.description}
           </Paragraph>
-          <LinkButton href={valueSection.ctaHref} variant="primary">
-            {valueSection.ctaText}
-          </LinkButton>
+          <div>
+            <LinkButton href={valueSection.ctaHref} variant="primary">
+              {valueSection.ctaText}
+            </LinkButton>
+          </div>
         </div>
-        <div className="order-1 xl:order-2 xl:justify-self-start">
-          <Image
-            className="xl:max-h-[20rem] xl:max-w-[30rem]"
-            src={`${basePath}/images/placeholder.png`}
-            width={480}
-            height={320}
-            alt="Value section illustration"
-            priority
-          />
-        </div>
-      </div>
+      </ImageCard>
     </ContentContainer>
   );
 };
