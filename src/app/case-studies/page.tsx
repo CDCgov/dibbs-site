@@ -120,7 +120,10 @@ export default function CaseStudies() {
                 ingestion pipeline that improves data processing and analysis to
                 more efficiently inform public health action.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton
+                variant="primary"
+                href="/case-studies/dibbs-prototype"
+              >
                 View case study
               </LinkButton>
             </div>
