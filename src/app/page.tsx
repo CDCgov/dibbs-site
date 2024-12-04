@@ -61,9 +61,11 @@ const ValueSection = () => {
           <Paragraph className="xl:max-w-[28.13rem]">
             {valueSection.description}
           </Paragraph>
-          <LinkButton href={valueSection.ctaHref} variant="primary">
-            {valueSection.ctaText}
-          </LinkButton>
+          <div>
+            <LinkButton href={valueSection.ctaHref} variant="primary">
+              {valueSection.ctaText}
+            </LinkButton>
+          </div>
         </div>
       </ImageCard>
     </ContentContainer>

@@ -51,7 +51,7 @@ export const TextContainer = ({ children, imageFirst }: ChildrenProps) => (
   <div
     className={classNames(
       'text-box order-2 flex flex-col gap-5 pb-10 pt-10',
-      imageFirst ? '' : 'xl:order-1 xl:pl-10',
+      imageFirst ? 'xl:order-2 xl:pl-10' : 'xl:order-1',
     )}
   >
     {children}
