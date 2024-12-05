@@ -30,13 +30,7 @@ export default function Footer() {
 
   return (
     <>
-      <div
-        className={classNames(
-          styles['footer-phdi'],
-          'footer-phdi',
-          'usa-header--basic bg-background-teal',
-        )}
-      ></div>
+      <div className={classNames(styles.footerPhdi, 'footer-bar')}></div>
       <footer
         className={classNames('usa-header--basic bg-background-dark-blue')}
       >

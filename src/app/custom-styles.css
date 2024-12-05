@@ -118,10 +118,10 @@ p {
   margin-bottom: 1rem;
 }
 
-main:has(.hide-footer-bar) ~ .footer-phdi::before {
+main:has(.hide-footer-bar) ~ .footer-bar::before {
   display: none !important;
 }
 
-main:has(.hide-footer-bar) ~ .footer-phdi {
+main:has(.hide-footer-bar) ~ .footer-bar {
   display: none !important;
 }

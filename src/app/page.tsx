@@ -100,8 +100,7 @@ const InvitationCta = () => (
   <section
     className={classNames(
       styles.invitationCtaSection,
-      'hide-footer-bar',
-      'usa-graphic-list usa-section usa-section--light-blue',
+      'hide-footer-bar usa-section',
     )}
   >
     <GridContainer>
