@@ -9,8 +9,8 @@ const BUTTON_STYLES = {
   },
   secondary: {
     button:
-      'usa-button hover:bg-red items-center gap-2.5 rounded border-2 border-[#224a58] bg-white px-5 py-3 hover:border-2',
-    text: 'text-[#224a58]',
+      'usa-button items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-60 bg-white px-5 py-3 hover:border-2 hover:bg-white',
+    text: 'text-violet-warm-60',
   },
 } as const;
 
