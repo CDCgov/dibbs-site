@@ -33,6 +33,7 @@ export default function Footer() {
       <div
         className={classNames(
           styles['footer-phdi'],
+          'footer-phdi',
           'usa-header--basic bg-background-teal',
         )}
       ></div>

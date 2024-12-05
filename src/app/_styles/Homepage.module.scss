@@ -20,3 +20,25 @@
     }
   }
 }
+
+.invitationCtaSection {
+  h2,
+  p {
+    color: #fff;
+  }
+
+  background-color: #fff;
+  background-image: linear-gradient(90deg, #0081a1 2%, #005ea2 50%, #4c2b64 96%),
+    url('#{$base-path}/images/homepage-3.jpeg');
+
+  background-position:
+    center,
+    -7.128px -317.022px;
+  background-size:
+    auto,
+    123.317% 245.285%;
+  background-repeat: no-repeat, no-repeat;
+
+  // Blend mode for each layer
+  background-blend-mode: multiply, multiply, normal;
+}
