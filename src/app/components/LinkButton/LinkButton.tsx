@@ -12,7 +12,7 @@ const BUTTON_STYLES = {
   },
   transparent: {
     button:
-      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent',
+      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent active:border-violet-warm-70 hover:!text-violet-warm-50',
   },
 } as const;
 
@@ -53,7 +53,9 @@ export function LinkButton({
       aria-label={ariaLabel}
       {...props}
     >
-      {children}
+      <span className="text-center text-base font-bold text-inherit">
+        {children}
+      </span>
     </Link>
   );
 }
