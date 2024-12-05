@@ -12,11 +12,16 @@ const BUTTON_STYLES = {
       'usa-button items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-60 bg-white px-5 py-3 hover:border-2 hover:bg-white',
     text: 'text-violet-warm-60',
   },
+  transparent: {
+    button:
+      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2',
+    text: 'text-white',
+  },
 } as const;
 
 interface LinkButtonProps extends LinkProps {
   children: React.ReactNode;
-  variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary' | 'transparent';
   className?: string;
   disabled?: boolean;
   'aria-label'?: string;
