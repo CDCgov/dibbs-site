@@ -17,6 +17,9 @@ const nextConfig = {
     includePaths: [
       path.join(__dirname, './', 'node_modules', '@uswds', 'uswds', 'packages'),
     ],
+    additionalData: `
+      $base-path: '${process.env.NODE_ENV === 'production' ? '/dibbs-site' : ''}';
+    `,
   },
 };
 
