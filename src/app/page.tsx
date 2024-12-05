@@ -112,7 +112,7 @@ const InvitationCta = () => (
         <Paragraph className="self-stretch text-center">
           {homeContent.cta.description}
         </Paragraph>
-        <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
+        <LinkButton href={homeContent.cta.ctaHref} variant="transparent">
           {homeContent.cta.ctaText}
         </LinkButton>
       </div>
