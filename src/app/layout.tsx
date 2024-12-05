@@ -5,7 +5,6 @@ import USABanner from './components/UsaBanner/UsaBanner';
 import './globals.scss';
 import './custom-styles.css';
 import { HeroContextProvider } from './context';
-import { basePath } from './utils/constants';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',
