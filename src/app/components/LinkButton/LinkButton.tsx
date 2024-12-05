@@ -4,18 +4,15 @@ import Link, { LinkProps } from 'next/link';
 const BUTTON_STYLES = {
   primary: {
     button:
-      'usa-button bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70',
-    text: 'text-white',
+      'text-white usa-button bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70',
   },
   secondary: {
     button:
-      'usa-button items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-60 bg-white px-5 py-3 hover:border-2 hover:bg-white',
-    text: 'text-violet-warm-60',
+      'usa-button !text-violet-warm-60 items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-50 bg-white px-5 py-3 hover:border-violet-warm-50 hover:border-2 hover:bg-white active:border-violet-warm-70 hover:!text-violet-warm-50',
   },
   transparent: {
     button:
-      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2',
-    text: 'text-white',
+      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent',
   },
 } as const;
 
@@ -56,14 +53,7 @@ export function LinkButton({
       aria-label={ariaLabel}
       {...props}
     >
-      <span
-        className={classNames(
-          'text-center text-base font-bold',
-          BUTTON_STYLES[variant].text,
-        )}
-      >
-        {children}
-      </span>
+      {children}
     </Link>
   );
 }
