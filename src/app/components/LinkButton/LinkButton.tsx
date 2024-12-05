@@ -34,7 +34,7 @@ export function LinkButton({
   if (disabled) {
     return (
       <div
-        className="usa-button border-violet-warm-60 self-end justify-self-start"
+        className="usa-button usa-button--disabled self-end justify-self-start"
         aria-disabled="true"
         role="link"
         aria-label={ariaLabel}
