@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
+import { ArrowBackIcon } from './ArrowBackIcon';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -29,12 +30,15 @@ const SectionContentContainer = ({ children }: ContainerProps) => {
 
 const ReturnToCaseStudiesLink = () => {
   return (
-    <Link
-      className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
-      href="/case-studies"
-    >
-      Return to all case studies
-    </Link>
+    <div className='flex flex-row gap-2 items-center'>
+      <ArrowBackIcon />
+      <Link
+        className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
+        href="/case-studies"
+      >
+        Return to all case studies
+      </Link>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   PageContainer,
   ContentContainer,
@@ -7,17 +8,30 @@ import {
   Text,
   ReadMore,
 } from '../_ui';
+import { basePath } from '@/app/utils/constants';
 
 const DibbsPipeline = () => {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <ReturnToCaseStudiesLink />
-          <h1>
-            Creating a modular, cloud-based data processing pipeline for LA
-            County
-          </h1>
+          <div className="flex flex-col gap-[2.5rem]">
+            <div className="flex flex-col gap-5">
+              <ReturnToCaseStudiesLink />
+              <Image
+                src={`${basePath}/images/case-studies/image1.png`}
+                alt="Medical records"
+                width={300}
+                height={654}
+                className="inline-flex h-full w-full items-center justify-center rounded-br-[2.5rem] rounded-tl-[2.5rem] shadow"
+                priority
+              />
+            </div>
+            <h1>
+              Creating a modular, cloud-based data processing pipeline for LA
+              County
+            </h1>
+          </div>
         </section>
         <section id="challenge">
           <SectionContentContainer>
