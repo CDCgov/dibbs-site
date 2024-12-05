@@ -3,19 +3,22 @@ import Link, { LinkProps } from 'next/link';
 
 const BUTTON_STYLES = {
   primary: {
-    button: 'usa-button bg-[#224a58] hover:bg-green',
-    text: 'text-white',
+    button:
+      'text-white usa-button bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70',
   },
   secondary: {
     button:
-      'usa-button hover:bg-red items-center gap-2.5 rounded border-2 border-[#224a58] bg-white px-5 py-3 hover:border-2',
-    text: 'text-[#224a58]',
+      'usa-button !text-violet-warm-60 items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-50 bg-white px-5 py-3 hover:border-violet-warm-50 hover:border-2 hover:bg-white active:border-violet-warm-70 hover:!text-violet-warm-50',
+  },
+  transparent: {
+    button:
+      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent active:border-violet-warm-70 hover:!text-violet-warm-50',
   },
 } as const;
 
 interface LinkButtonProps extends LinkProps {
   children: React.ReactNode;
-  variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary' | 'transparent';
   className?: string;
   disabled?: boolean;
   'aria-label'?: string;
@@ -33,7 +36,7 @@ export function LinkButton({
   if (disabled) {
     return (
       <div
-        className="usa-button usa-button--disabled self-end justify-self-start bg-[#224a58]"
+        className="usa-button usa-button--disabled self-end justify-self-start"
         aria-disabled="true"
         role="link"
         aria-label={ariaLabel}
@@ -50,12 +53,7 @@ export function LinkButton({
       aria-label={ariaLabel}
       {...props}
     >
-      <span
-        className={classNames(
-          'text-center text-base font-bold',
-          BUTTON_STYLES[variant].text,
-        )}
-      >
+      <span className="text-center text-base font-bold text-inherit">
         {children}
       </span>
     </Link>
