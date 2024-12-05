@@ -35,7 +35,7 @@ export default function CaseStudies() {
             </div>
             <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
               <Image
-                src={`${basePath}/images/placeholder.png`}
+                src={`${basePath}/images/case-studies/image1.png`}
                 width={480}
                 height={320}
                 alt="Placeholder"
@@ -46,7 +46,7 @@ export default function CaseStudies() {
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto] lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
               <Image
-                src={`${basePath}/images/placeholder.png`}
+                src={`${basePath}/images/case-studies/image2.png`}
                 width={480}
                 height={320}
                 alt="Placeholder"
@@ -90,7 +90,7 @@ export default function CaseStudies() {
             </div>
             <div className="order-1 flex justify-start lg:order-2 lg:ml-4">
               <Image
-                src={`${basePath}/images/placeholder.png`}
+                src={`${basePath}/images/case-studies/image3.png`}
                 width={480}
                 height={320}
                 alt="Placeholder"
@@ -102,7 +102,7 @@ export default function CaseStudies() {
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_42rem] lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
               <Image
-                src={`${basePath}/images/placeholder.png`}
+                src={`${basePath}/images/case-studies/image4.png`}
                 width={480}
                 height={320}
                 alt="Placeholder"
