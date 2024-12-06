@@ -6,11 +6,11 @@ import styles from './InvitationCta.module.scss';
 
 export const InvitationCta = () => {
   const content = {
-    title: 'Ready to get started?', // or whatever the default title is
+    title: 'Interested in getting started with DIBBs?',
     description:
-      'Learn more about how DIBBs can help your jurisdiction make the most of its data.', // default description
-    ctaText: 'Contact us', // default CTA text
-    ctaHref: '/engage-with-us', // default href
+      'Contact our team to learn more about how our products can help improve your data workflows',
+    ctaText: 'Contact us',
+    ctaHref: '/engage-with-us',
   };
 
   return (
@@ -21,13 +21,15 @@ export const InvitationCta = () => {
       )}
     >
       <GridContainer>
-        <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-          <Heading className="self-stretch text-center">
-            {content.title}
-          </Heading>
-          <Paragraph className="self-stretch text-center">
-            {content.description}
-          </Paragraph>
+        <div className="flex flex-col items-center justify-center gap-6 self-stretch">
+          <div className='flex flex-col gap-1'>
+            <Heading className="self-stretch text-center">
+              {content.title}
+            </Heading>
+            <Paragraph className="self-stretch text-center font-extralight p-0 m-0">
+              {content.description}
+            </Paragraph>
+          </div>
           <LinkButton href={content.ctaHref} variant="transparent">
             {content.ctaText}
           </LinkButton>
