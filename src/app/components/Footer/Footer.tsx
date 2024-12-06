@@ -35,7 +35,7 @@ export default function Footer() {
         className={classNames('usa-header--basic bg-background-dark-blue')}
       >
         <div className="usa-nav-container lg:flex-vertical-center">
-          <div className="usa-navbar">
+          <div className="usa-navbar border-none">
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href="http://cdc.gov" title="<Project title>">

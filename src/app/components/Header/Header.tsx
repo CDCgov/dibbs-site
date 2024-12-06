@@ -61,7 +61,7 @@ export default function Header() {
 
       <USWDSHeader basic className="bg-background-teal">
         <div className="usa-nav-container lg:flex-vertical-center">
-          <div className="usa-navbar">
+          <div className="usa-navbar border-none">
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href={`${basePath}/`} title="DIBBs">
