@@ -22,7 +22,7 @@ export function NavigationLink({
       {...(isActive ? { 'aria-current': 'page' } : {})}
     >
       <span
-        className={classNames('text-white', {
+        className={classNames('lg:text-white', {
           underline: isActive,
         })}
       >
