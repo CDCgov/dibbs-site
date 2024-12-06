@@ -19,7 +19,7 @@ const EcrViewer = () => {
             <HeadingImageContainer>
               <RoundedImage
                 src={`${basePath}/images/case-studies/image2.png`}
-                alt="Medical records"
+                alt="Medical documentation"
                 width={300}
                 height={654}
                 priority

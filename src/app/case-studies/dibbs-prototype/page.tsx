@@ -20,7 +20,7 @@ const DibbsPrototype = () => {
             <HeadingImageContainer>
               <RoundedImage
                 src={`${basePath}/images/case-studies/image4.png`}
-                alt="Medical records"
+                alt="COVID-19 - global pandemic"
                 width={300}
                 height={654}
                 priority

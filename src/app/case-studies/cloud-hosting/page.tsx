@@ -19,7 +19,7 @@ const CloudHosting = () => {
             <HeadingImageContainer>
               <RoundedImage
                 src={`${basePath}/images/case-studies/image3.png`}
-                alt="Medical records"
+                alt="Data center"
                 width={300}
                 height={654}
                 priority
