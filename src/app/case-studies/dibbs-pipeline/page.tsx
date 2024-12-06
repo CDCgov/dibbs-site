@@ -20,7 +20,7 @@ const DibbsPipeline = () => {
             <HeadingImageContainer>
               <RoundedImage
                 src={`${basePath}/images/case-studies/image1.png`}
-                alt="Medical records"
+                alt="Medical documentation"
                 width={300}
                 height={654}
                 priority

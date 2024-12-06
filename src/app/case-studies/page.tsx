@@ -36,9 +36,9 @@ export default function CaseStudies() {
             <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
               <RoundedImage
                 src={`${basePath}/images/case-studies/image1.png`}
+                alt="Medical documentation"
                 width={480}
                 height={320}
-                alt="Placeholder"
               />
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function CaseStudies() {
                 src={`${basePath}/images/case-studies/image2.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt="Folder on a computer screen"
               />
             </div>
             <div className="order-2 lg:order-2 lg:items-center">
@@ -93,7 +93,7 @@ export default function CaseStudies() {
                 src={`${basePath}/images/case-studies/image3.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt="Data center"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function CaseStudies() {
                 src={`${basePath}/images/case-studies/image4.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt="COVID-19 - global pandemic"
               />
             </div>
             <div className="order-2 lg:order-2">
