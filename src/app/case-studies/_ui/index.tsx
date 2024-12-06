@@ -3,6 +3,7 @@ import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
 import { ArrowBackIcon } from './ArrowBackIcon';
+import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -10,9 +11,12 @@ interface ContainerProps {
 
 const PageContainer = ({ children }: ContainerProps) => {
   return (
-    <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
-      {children}
-    </div>
+    <>
+      <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
+        {children}
+      </div>
+      <InvitationCta />
+    </>
   );
 };
 
