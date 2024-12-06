@@ -1,11 +1,14 @@
+import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
+import { basePath } from '@/app/utils/constants';
 import {
   PageContainer,
   ContentContainer,
-  ReturnToCaseStudiesLink,
   SectionContentContainer,
   Text,
   UnorderedList,
   ReadMore,
+  HeadingContentContainer,
+  HeadingImageContainer,
 } from '../_ui';
 
 const DibbsPrototype = () => {
@@ -13,11 +16,21 @@ const DibbsPrototype = () => {
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <ReturnToCaseStudiesLink />
-          <h1>
-            Building a prototype for modernized public health infrastructure in
-            Virginia
-          </h1>
+          <HeadingContentContainer>
+            <HeadingImageContainer>
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image4.png`}
+                alt="Medical records"
+                width={300}
+                height={654}
+                priority
+              />
+            </HeadingImageContainer>
+            <h1>
+              Building a prototype for modernized public health infrastructure
+              in Virginia
+            </h1>
+          </HeadingContentContainer>
         </section>
         <section id="challenge">
           <SectionContentContainer>

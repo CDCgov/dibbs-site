@@ -1,37 +1,36 @@
-import Image from 'next/image';
 import {
   PageContainer,
   ContentContainer,
-  ReturnToCaseStudiesLink,
   SectionContentContainer,
   UnorderedList,
   Text,
   ReadMore,
+  HeadingContentContainer,
+  HeadingImageContainer,
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
+import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
 
 const DibbsPipeline = () => {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <div className="flex flex-col gap-[2.5rem]">
-            <div className="flex flex-col gap-5">
-              <ReturnToCaseStudiesLink />
-              <Image
+          <HeadingContentContainer>
+            <HeadingImageContainer>
+              <RoundedImage
                 src={`${basePath}/images/case-studies/image1.png`}
                 alt="Medical records"
                 width={300}
                 height={654}
-                className="inline-flex h-full w-full items-center justify-center rounded-br-[2.5rem] rounded-tl-[2.5rem] shadow"
                 priority
               />
-            </div>
+            </HeadingImageContainer>
             <h1>
               Creating a modular, cloud-based data processing pipeline for LA
               County
             </h1>
-          </div>
+          </HeadingContentContainer>
         </section>
         <section id="challenge">
           <SectionContentContainer>

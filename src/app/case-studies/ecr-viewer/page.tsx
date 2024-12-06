@@ -1,7 +1,10 @@
+import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
+import { basePath } from '@/app/utils/constants';
 import {
   ContentContainer,
+  HeadingContentContainer,
+  HeadingImageContainer,
   PageContainer,
-  ReturnToCaseStudiesLink,
   SectionContentContainer,
   Text,
   UnorderedList,
@@ -12,10 +15,20 @@ const EcrViewer = () => {
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <ReturnToCaseStudiesLink />
-          <h1>
-            Surfacing actionable insights from electronic case reporting data
-          </h1>
+          <HeadingContentContainer>
+            <HeadingImageContainer>
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image2.png`}
+                alt="Medical records"
+                width={300}
+                height={654}
+                priority
+              />
+            </HeadingImageContainer>
+            <h1>
+              Surfacing actionable insights from electronic case reporting data
+            </h1>
+          </HeadingContentContainer>
         </section>
         <section id="challenge">
           <SectionContentContainer>

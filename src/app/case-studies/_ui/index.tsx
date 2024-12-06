@@ -28,9 +28,24 @@ const SectionContentContainer = ({ children }: ContainerProps) => {
   return <div className="flex flex-col gap-3">{children}</div>;
 };
 
+const HeadingContentContainer = ({ children }: ContainerProps) => {
+  return <div className="flex flex-col gap-[2.5rem]">{children}</div>;
+};
+
+const HeadingImageContainer = ({ children }: ContainerProps) => {
+  return (
+    <div className="flex flex-col gap-5">
+      <>
+        <ReturnToCaseStudiesLink />
+        {children}
+      </>
+    </div>
+  );
+};
+
 const ReturnToCaseStudiesLink = () => {
   return (
-    <div className='flex flex-row gap-2 items-center'>
+    <div className="flex flex-row items-center gap-2">
       <ArrowBackIcon />
       <Link
         className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
@@ -79,8 +94,9 @@ export {
   ContentContainer,
   PageContainer,
   SectionContentContainer,
-  ReturnToCaseStudiesLink,
+  HeadingContentContainer,
   Text,
   UnorderedList,
   ReadMore,
+  HeadingImageContainer,
 };
