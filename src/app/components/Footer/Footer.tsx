@@ -34,8 +34,8 @@ export default function Footer() {
       <footer
         className={classNames('usa-header--basic bg-background-dark-blue')}
       >
-        <div className="usa-nav-container flex-vertical-center">
-          <div className="usa-navbar">
+        <div className="usa-nav-container lg:flex-vertical-center">
+          <div className="usa-navbar border-none">
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href="http://cdc.gov" title="<Project title>">
@@ -54,9 +54,6 @@ export default function Footer() {
                 </a>
               </em>
             </div>
-            <button type="button" className="usa-menu-btn">
-              Menu
-            </button>
           </div>
           <PrimaryNav
             items={testItemsMenu}

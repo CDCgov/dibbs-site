@@ -60,8 +60,8 @@ export default function Header() {
       </a>
 
       <USWDSHeader basic className="bg-background-teal">
-        <div className="usa-nav-container flex-vertical-center">
-          <div className="usa-navbar">
+        <div className="usa-nav-container lg:flex-vertical-center">
+          <div className="usa-navbar border-none">
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href={`${basePath}/`} title="DIBBs">
@@ -81,7 +81,11 @@ export default function Header() {
                 </a>
               </em>
             </div>
-            <button type="button" className="usa-menu-btn">
+            <button
+              type="button"
+              className="usa-menu-btn"
+              onClick={handleClick}
+            >
               Menu
             </button>
           </div>
