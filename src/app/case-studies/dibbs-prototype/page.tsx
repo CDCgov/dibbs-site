@@ -20,7 +20,7 @@ const DibbsPrototype = () => {
             <HeadingImageContainer>
               <HeadingImage
                 src={`${basePath}/images/case-studies/image4.png`}
-                alt="COVID-19 - global pandemic"
+                alt=""
               />
             </HeadingImageContainer>
             <h1>
