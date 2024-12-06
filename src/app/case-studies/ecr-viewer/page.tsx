@@ -1,10 +1,13 @@
+import { basePath } from '@/app/utils/constants';
 import {
   ContentContainer,
+  HeadingContentContainer,
+  HeadingImageContainer,
   PageContainer,
-  ReturnToCaseStudiesLink,
   SectionContentContainer,
   Text,
   UnorderedList,
+  HeadingImage,
 } from '../_ui';
 
 const EcrViewer = () => {
@@ -12,10 +15,17 @@ const EcrViewer = () => {
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <ReturnToCaseStudiesLink />
-          <h1>
-            Surfacing actionable insights from electronic case reporting data
-          </h1>
+          <HeadingContentContainer>
+            <HeadingImageContainer>
+              <HeadingImage
+                src={`${basePath}/images/case-studies/image2.png`}
+                alt=""
+              />
+            </HeadingImageContainer>
+            <h1>
+              Surfacing actionable insights from electronic case reporting data
+            </h1>
+          </HeadingContentContainer>
         </section>
         <section id="challenge">
           <SectionContentContainer>

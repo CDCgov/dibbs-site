@@ -2,6 +2,12 @@ import Link from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
+import { ArrowBackIcon } from './ArrowBackIcon';
+import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
+import {
+  RoundedImage,
+  RoundedImageProps,
+} from '@/app/components/RoundedImage/RoundedImage';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -9,9 +15,12 @@ interface ContainerProps {
 
 const PageContainer = ({ children }: ContainerProps) => {
   return (
-    <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
-      {children}
-    </div>
+    <>
+      <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
+        {children}
+      </div>
+      <InvitationCta />
+    </>
   );
 };
 
@@ -27,14 +36,32 @@ const SectionContentContainer = ({ children }: ContainerProps) => {
   return <div className="flex flex-col gap-3">{children}</div>;
 };
 
+const HeadingContentContainer = ({ children }: ContainerProps) => {
+  return <div className="flex flex-col gap-[2.5rem]">{children}</div>;
+};
+
+const HeadingImageContainer = ({ children }: ContainerProps) => {
+  return (
+    <div className="flex flex-col gap-5">
+      <>
+        <ReturnToCaseStudiesLink />
+        <div className="h-[18.75rem] w-full overflow-hidden">{children}</div>
+      </>
+    </div>
+  );
+};
+
 const ReturnToCaseStudiesLink = () => {
   return (
-    <Link
-      className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
-      href="/case-studies"
-    >
-      Return to all case studies
-    </Link>
+    <div className="flex flex-row items-center gap-2">
+      <ArrowBackIcon />
+      <Link
+        className="font-['Public Sans'] text-base font-normal leading-relaxed text-[#3a7d95] underline"
+        href="/case-studies"
+      >
+        Return to all case studies
+      </Link>
+    </div>
   );
 };
 
@@ -71,12 +98,26 @@ const ReadMore = ({ href, linkText }: { href: string; linkText: string }) => {
   );
 };
 
+const HeadingImage = (props: RoundedImageProps) => {
+  return (
+    <RoundedImage
+      width={300}
+      height={654}
+      priority
+      className="h-full w-full object-cover object-bottom"
+      {...props}
+    />
+  );
+};
+
 export {
   ContentContainer,
   PageContainer,
   SectionContentContainer,
-  ReturnToCaseStudiesLink,
+  HeadingContentContainer,
   Text,
   UnorderedList,
   ReadMore,
+  HeadingImageContainer,
+  HeadingImage,
 };

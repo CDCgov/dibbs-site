@@ -1,23 +1,33 @@
 import {
   PageContainer,
   ContentContainer,
-  ReturnToCaseStudiesLink,
   SectionContentContainer,
   UnorderedList,
   Text,
   ReadMore,
+  HeadingContentContainer,
+  HeadingImageContainer,
+  HeadingImage,
 } from '../_ui';
+import { basePath } from '@/app/utils/constants';
 
 const DibbsPipeline = () => {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <ReturnToCaseStudiesLink />
-          <h1>
-            Creating a modular, cloud-based data processing pipeline for LA
-            County
-          </h1>
+          <HeadingContentContainer>
+            <HeadingImageContainer>
+              <HeadingImage
+                src={`${basePath}/images/case-studies/image1.png`}
+                alt=""
+              />
+            </HeadingImageContainer>
+            <h1>
+              Creating a modular, cloud-based data processing pipeline for LA
+              County
+            </h1>
+          </HeadingContentContainer>
         </section>
         <section id="challenge">
           <SectionContentContainer>

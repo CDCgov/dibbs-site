@@ -1,10 +1,13 @@
+import { basePath } from '@/app/utils/constants';
 import {
   PageContainer,
   ContentContainer,
-  ReturnToCaseStudiesLink,
   SectionContentContainer,
   Text,
   UnorderedList,
+  HeadingContentContainer,
+  HeadingImageContainer,
+  HeadingImage,
 } from '../_ui';
 
 const CloudHosting = () => {
@@ -12,11 +15,18 @@ const CloudHosting = () => {
     <PageContainer>
       <ContentContainer>
         <section id="heading">
-          <ReturnToCaseStudiesLink />
-          <h1>
-            Improving public health data infrastructure through flexible, modern
-            approaches to cloud services
-          </h1>
+          <HeadingContentContainer>
+            <HeadingImageContainer>
+              <HeadingImage
+                src={`${basePath}/images/case-studies/image3.png`}
+                alt=""
+              />
+            </HeadingImageContainer>
+            <h1>
+              Improving public health data infrastructure through flexible,
+              modern approaches to cloud services
+            </h1>
+          </HeadingContentContainer>
         </section>
         <section id="challenge">
           <SectionContentContainer>

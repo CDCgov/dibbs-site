@@ -1,9 +1,9 @@
 'use client';
 import { LinkButton } from '../components/LinkButton/LinkButton';
-import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import React from 'react';
 import { useHeroInit } from '../hooks/useHeroInit';
+import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 
 export default function CaseStudies() {
   useHeroInit({
@@ -34,22 +34,22 @@ export default function CaseStudies() {
               </LinkButton>
             </div>
             <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image1.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
           </div>
           {/* Section 2 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto] lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image2.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
             <div className="order-2 lg:order-2 lg:items-center">
@@ -89,11 +89,11 @@ export default function CaseStudies() {
               </LinkButton>
             </div>
             <div className="order-1 flex justify-start lg:order-2 lg:ml-4">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image3.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
           </div>
@@ -101,11 +101,11 @@ export default function CaseStudies() {
           {/* Section 4 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_42rem] lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image4.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
             <div className="order-2 lg:order-2">
