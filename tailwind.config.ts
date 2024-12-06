@@ -11,6 +11,11 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        'violet-warm': {
+          50: '#b04abd',
+          60: '#864381',
+          70: '#5c395a',
+        },
       },
     },
   },

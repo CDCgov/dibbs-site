@@ -11,14 +11,14 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './akamai-loader.js',
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/dibbs-site' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/dibbs-site' : '',
+  basePath: '',
+  assetPrefix: '',
   sassOptions: {
     includePaths: [
       path.join(__dirname, './', 'node_modules', '@uswds', 'uswds', 'packages'),
     ],
     additionalData: `
-      $base-path: '${process.env.NODE_ENV === 'production' ? '/dibbs-site' : ''}';
+      $base-path: '';
     `,
   },
 };

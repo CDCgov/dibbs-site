@@ -1,5 +1,5 @@
 'use client';
-import { Grid, GridContainer } from '@trussworks/react-uswds';
+import { Grid } from '@trussworks/react-uswds';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
@@ -9,7 +9,7 @@ import { homePageHero, homeContent } from './data/home';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
 import styles from './_styles/Homepage.module.scss';
-
+import { InvitationCta } from './components/InvitationCta/InvitationCta';
 const DibbsSection = () => (
   <ContentContainer align>
     <ImageCard
@@ -95,24 +95,6 @@ const JurisdictionSection = () => {
     </>
   );
 };
-
-const InvitationCta = () => (
-  <section className="usa-graphic-list usa-section usa-section--light-blue">
-    <GridContainer>
-      <div className="flex flex-col items-center justify-center gap-5 self-stretch">
-        <Heading className="self-stretch text-center">
-          {homeContent.cta.title}
-        </Heading>
-        <Paragraph className="self-stretch text-center">
-          {homeContent.cta.description}
-        </Paragraph>
-        <LinkButton href={homeContent.cta.ctaHref} variant="secondary">
-          {homeContent.cta.ctaText}
-        </LinkButton>
-      </div>
-    </GridContainer>
-  </section>
-);
 
 const Home = () => {
   useHeroInit(homePageHero);
