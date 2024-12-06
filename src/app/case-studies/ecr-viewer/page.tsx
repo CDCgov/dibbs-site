@@ -1,4 +1,3 @@
-import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
 import { basePath } from '@/app/utils/constants';
 import {
   ContentContainer,
@@ -8,6 +7,7 @@ import {
   SectionContentContainer,
   Text,
   UnorderedList,
+  HeadingImage,
 } from '../_ui';
 
 const EcrViewer = () => {
@@ -17,12 +17,9 @@ const EcrViewer = () => {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer>
-              <RoundedImage
+              <HeadingImage
                 src={`${basePath}/images/case-studies/image2.png`}
                 alt="Folder on a computer screen"
-                width={300}
-                height={654}
-                priority
               />
             </HeadingImageContainer>
             <h1>

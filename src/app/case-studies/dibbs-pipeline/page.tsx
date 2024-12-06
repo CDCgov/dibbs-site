@@ -7,9 +7,9 @@ import {
   ReadMore,
   HeadingContentContainer,
   HeadingImageContainer,
+  HeadingImage,
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
-import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
 
 const DibbsPipeline = () => {
   return (
@@ -18,12 +18,9 @@ const DibbsPipeline = () => {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer>
-              <RoundedImage
+              <HeadingImage
                 src={`${basePath}/images/case-studies/image1.png`}
                 alt="Medical documentation"
-                width={300}
-                height={654}
-                priority
               />
             </HeadingImageContainer>
             <h1>

@@ -1,9 +1,13 @@
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
 import { ArrowBackIcon } from './ArrowBackIcon';
 import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
+import {
+  RoundedImage,
+  RoundedImageProps,
+} from '@/app/components/RoundedImage/RoundedImage';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -41,7 +45,7 @@ const HeadingImageContainer = ({ children }: ContainerProps) => {
     <div className="flex flex-col gap-5">
       <>
         <ReturnToCaseStudiesLink />
-        {children}
+        <div className="h-[18.75rem] w-full overflow-hidden">{children}</div>
       </>
     </div>
   );
@@ -94,6 +98,18 @@ const ReadMore = ({ href, linkText }: { href: string; linkText: string }) => {
   );
 };
 
+const HeadingImage = (props: RoundedImageProps) => {
+  return (
+    <RoundedImage
+      width={300}
+      height={654}
+      priority
+      className="h-full w-full object-cover object-bottom"
+      {...props}
+    />
+  );
+};
+
 export {
   ContentContainer,
   PageContainer,
@@ -103,4 +119,5 @@ export {
   UnorderedList,
   ReadMore,
   HeadingImageContainer,
+  HeadingImage,
 };

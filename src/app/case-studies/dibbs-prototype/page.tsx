@@ -1,4 +1,3 @@
-import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
 import { basePath } from '@/app/utils/constants';
 import {
   PageContainer,
@@ -9,6 +8,7 @@ import {
   ReadMore,
   HeadingContentContainer,
   HeadingImageContainer,
+  HeadingImage,
 } from '../_ui';
 
 const DibbsPrototype = () => {
@@ -18,12 +18,9 @@ const DibbsPrototype = () => {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer>
-              <RoundedImage
+              <HeadingImage
                 src={`${basePath}/images/case-studies/image4.png`}
                 alt="COVID-19 - global pandemic"
-                width={300}
-                height={654}
-                priority
               />
             </HeadingImageContainer>
             <h1>

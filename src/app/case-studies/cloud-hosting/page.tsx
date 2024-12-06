@@ -1,4 +1,3 @@
-import { RoundedImage } from '@/app/components/RoundedImage/RoundedImage';
 import { basePath } from '@/app/utils/constants';
 import {
   PageContainer,
@@ -8,6 +7,7 @@ import {
   UnorderedList,
   HeadingContentContainer,
   HeadingImageContainer,
+  HeadingImage,
 } from '../_ui';
 
 const CloudHosting = () => {
@@ -17,12 +17,9 @@ const CloudHosting = () => {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer>
-              <RoundedImage
+              <HeadingImage
                 src={`${basePath}/images/case-studies/image3.png`}
                 alt="Data center"
-                width={300}
-                height={654}
-                priority
               />
             </HeadingImageContainer>
             <h1>
