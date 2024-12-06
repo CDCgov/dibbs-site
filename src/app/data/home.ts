@@ -23,13 +23,6 @@ export const homeContent = {
     description:
       'State and local public health jurisdictions across the United States used DIBBs to solve their toughest data challenges',
   },
-  cta: {
-    title: 'Interested in getting started with DIBBs?',
-    description:
-      'Contact our team to learn more about how our products can help improve your data workflows',
-    ctaText: 'Engage with us',
-    ctaHref: '/engage-with-us',
-  },
 };
 
 export const homePageHero = {
