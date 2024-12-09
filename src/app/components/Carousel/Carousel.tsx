@@ -7,20 +7,30 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel() {
   const images = [
-    `${basePath}/images/placeholder-carousel-numbered-1.png`,
-    `${basePath}/images/placeholder-carousel-numbered-2.png`,
-    `${basePath}/images/placeholder-carousel-numbered-3.png`,
-    `${basePath}/images/placeholder-carousel-numbered-4.png`,
-    `${basePath}/images/placeholder-carousel-numbered-5.png`,
-    `${basePath}/images/placeholder-carousel-numbered-6.png`,
-    `${basePath}/images/placeholder-carousel-numbered-7.png`,
-    `${basePath}/images/placeholder-carousel-numbered-1.png`,
-    `${basePath}/images/placeholder-carousel-numbered-2.png`,
-    `${basePath}/images/placeholder-carousel-numbered-3.png`,
-    `${basePath}/images/placeholder-carousel-numbered-4.png`,
-    `${basePath}/images/placeholder-carousel-numbered-5.png`,
-    `${basePath}/images/placeholder-carousel-numbered-6.png`,
-    `${basePath}/images/placeholder-carousel-numbered-7.png`,
+    {
+      image: `${basePath}/images/jurisdictions/LAC.png`,
+      alt: 'County of Los Angeles Public Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
+      alt: 'NM Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/Philly.png`,
+      alt: 'City of Philadelphia',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/LAC.png`,
+      alt: 'County of Los Angeles Public Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
+      alt: 'NM Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/Philly.png`,
+      alt: 'City of Philadelphia',
+    },
   ];
 
   const settings = {
@@ -37,11 +47,11 @@ export default function Carousel() {
   return (
     <div className={'sliderContainer'}>
       <Slider {...settings}>
-        {images.map((src, index) => (
+        {images.map((imgObj, index) => (
           <div key={index}>
             <Image
-              src={src}
-              alt={`Slide ${index + 1}`}
+              src={imgObj.image}
+              alt={imgObj.alt}
               width={160}
               height={100}
               draggable={false}
