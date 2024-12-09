@@ -11,7 +11,7 @@ import { ContentContainer } from '../components/ContentContainer/ContentContaine
 import { useHeroInit } from '../hooks/useHeroInit';
 import classNames from 'classnames';
 
-export default function EngageWithUs() {
+const EngageWithUs = () => {
   useHeroInit({
     header: `Get started with DIBBs products`,
     subheader: `Learn how your jurisdiction can start working with the DIBBs team.`,
@@ -41,7 +41,7 @@ export default function EngageWithUs() {
   );
 }
 
-function Left() {
+const Left = () => {
   return (
     <div className="lg:pl-5">
       <Form
@@ -145,7 +145,7 @@ const RoundedBackground = ({
   );
 };
 
-function Right() {
+const Right = () => {
   return (
     <RoundedBackground className="p-6 xl:p-10">
       <div className="ml-2 flex flex-col gap-3">
@@ -163,7 +163,7 @@ function Right() {
       </div>
     </RoundedBackground>
   );
-}
+};
 
 const Alert = () => {
   return (
@@ -180,3 +180,5 @@ const Alert = () => {
     </div>
   );
 };
+
+export default EngageWithUs;
