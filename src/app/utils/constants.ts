@@ -1,3 +1,3 @@
-const basePath = process.env.NODE_ENV === 'production' ? '/dibbs-site' : '';
+const basePath = '';
 
 export { basePath };
