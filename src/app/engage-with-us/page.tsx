@@ -9,7 +9,7 @@ import {
 } from '@trussworks/react-uswds';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { useHeroInit } from '../hooks/useHeroInit';
-import classNames from 'classnames';
+import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
 
 const EngageWithUs = () => {
   useHeroInit({
@@ -39,7 +39,7 @@ const EngageWithUs = () => {
       </div>
     </ContentContainer>
   );
-}
+};
 
 const Left = () => {
   return (
@@ -119,28 +119,6 @@ const Left = () => {
       >
         Send inquiry
       </Button>
-    </div>
-  );
-}
-
-interface RoundedBackgroundProps extends React.ComponentProps<'div'> {
-  children: React.ReactNode;
-}
-
-const RoundedBackground = ({
-  children,
-  className,
-  ...props
-}: RoundedBackgroundProps) => {
-  return (
-    <div
-      {...props}
-      className={classNames(
-        'rounded-br-[2.5rem] rounded-tl-[2.5rem] border-2 border-[#82b4c9] bg-white/50',
-        className,
-      )}
-    >
-      {children}
     </div>
   );
 };
