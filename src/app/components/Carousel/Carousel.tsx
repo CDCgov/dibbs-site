@@ -7,12 +7,30 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel() {
   const images = [
-    `${basePath}/images/jurisdictions/LAC.png`,
-    `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
-    `${basePath}/images/jurisdictions/Philly.png`,
-    `${basePath}/images/jurisdictions/LAC.png`,
-    `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
-    `${basePath}/images/jurisdictions/Philly.png`,
+    {
+      image: `${basePath}/images/jurisdictions/LAC.png`,
+      title: 'County of Los Angeles Public Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
+      title: 'NM Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/Philly.png`,
+      title: 'City of Philadelphia',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/LAC.png`,
+      title: 'County of Los Angeles Public Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
+      title: 'NM Health',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/Philly.png`,
+      title: 'City of Philadelphia',
+    },
   ];
 
   const settings = {
@@ -29,11 +47,11 @@ export default function Carousel() {
   return (
     <div className={'sliderContainer'}>
       <Slider {...settings}>
-        {images.map((src, index) => (
+        {images.map((imgObj, index) => (
           <div key={index}>
             <Image
-              src={src}
-              alt={`Slide ${index + 1}`}
+              src={imgObj.image}
+              alt={imgObj.title}
               width={160}
               height={100}
               draggable={false}
