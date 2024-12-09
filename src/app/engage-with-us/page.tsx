@@ -21,7 +21,7 @@ const EngageWithUs = () => {
   return (
     <ContentContainer classes="sm:pt-10">
       <div className="flex flex-col gap-10">
-        <Alert />
+        <ConsultationAlert />
         <div className="lg:pl-5">
           <h2>Contact us</h2>
           <p className="text-base font-normal leading-relaxed text-[#224a58]">
@@ -31,17 +31,17 @@ const EngageWithUs = () => {
       </div>
       <div className="grid grid-cols-1 justify-items-start gap-[3.75rem] lg:grid-cols-2">
         <div className="min-w-full">
-          <Left />
+          <ContactForm />
         </div>
         <div className="justify-self-center lg:justify-self-start">
-          <Right />
+          <CustomerTestimonial />
         </div>
       </div>
     </ContentContainer>
   );
 };
 
-const Left = () => {
+const ContactForm = () => {
   return (
     <div className="lg:pl-5">
       <Form
@@ -123,7 +123,7 @@ const Left = () => {
   );
 };
 
-const Right = () => {
+const CustomerTestimonial = () => {
   return (
     <RoundedBackground className="p-6 xl:p-10">
       <div className="ml-2 flex flex-col gap-3">
@@ -143,7 +143,7 @@ const Right = () => {
   );
 };
 
-const Alert = () => {
+const ConsultationAlert = () => {
   return (
     <div className="usa-alert usa-alert--info usa-alert--no-icon border-l-[#00BDE3] lg:max-w-[80%]">
       <div className="usa-alert__body !bg-[#2E6276]">
