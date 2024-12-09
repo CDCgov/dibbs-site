@@ -9,27 +9,27 @@ export default function Carousel() {
   const images = [
     {
       image: `${basePath}/images/jurisdictions/LAC.png`,
-      title: 'County of Los Angeles Public Health',
+      alt: 'County of Los Angeles Public Health',
     },
     {
       image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
-      title: 'NM Health',
+      alt: 'NM Health',
     },
     {
       image: `${basePath}/images/jurisdictions/Philly.png`,
-      title: 'City of Philadelphia',
+      alt: 'City of Philadelphia',
     },
     {
       image: `${basePath}/images/jurisdictions/LAC.png`,
-      title: 'County of Los Angeles Public Health',
+      alt: 'County of Los Angeles Public Health',
     },
     {
       image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
-      title: 'NM Health',
+      alt: 'NM Health',
     },
     {
       image: `${basePath}/images/jurisdictions/Philly.png`,
-      title: 'City of Philadelphia',
+      alt: 'City of Philadelphia',
     },
   ];
 
@@ -51,7 +51,7 @@ export default function Carousel() {
           <div key={index}>
             <Image
               src={imgObj.image}
-              alt={imgObj.title}
+              alt={imgObj.alt}
               width={160}
               height={100}
               draggable={false}
