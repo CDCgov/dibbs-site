@@ -130,7 +130,7 @@ const Right = () => {
         <p className="font-['Public Sans'] m-0 p-0 text-base font-light uppercase leading-normal text-[#2e6276]">
           Customer Testimonial
         </p>
-        <p className="font-['Public Sans'] m-0 max-w-[28rem] p-0 text-[1rem] font-bold italic leading-[2rem] text-[#224a58] xl:text-[1.38rem]">
+        <p className="font-['Public Sans'] m-0 max-w-[28rem] p-0 text-[1rem] font-bold leading-[2rem] text-[#224a58] xl:text-[1.38rem]">
           “Our epidemiologists waste 80% of their time cleaning data and can't
           do useful analysis. The end goal of DIBBs infrastructure is to free up
           that 80% of their time to do actual public health work.”
