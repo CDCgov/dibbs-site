@@ -19,7 +19,7 @@ const EngageWithUs = () => {
   });
 
   return (
-    <ContentContainer>
+    <ContentContainer classes="sm:pt-10">
       <div className="flex flex-col gap-10">
         <Alert />
         <div className="lg:pl-5">
