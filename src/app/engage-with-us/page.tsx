@@ -25,7 +25,7 @@ const EngageWithUs = () => {
         <div className="lg:pl-5">
           <h2>Contact us</h2>
           <p className="text-base font-normal leading-relaxed text-[#224a58]">
-            Fill out the form below to get in touch with us
+            Fill out the form below to get in touch with us.
           </p>
         </div>
       </div>
