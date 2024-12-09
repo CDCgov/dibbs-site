@@ -22,13 +22,19 @@ export default function EngageWithUs() {
     <ContentContainer>
       <div className="flex flex-col gap-10">
         <Alert />
-        <div className="grid grid-cols-1 justify-items-center gap-[3.75rem] lg:grid-cols-2 lg:justify-items-start">
-          <div>
-            <Left />
-          </div>
-          <div>
-            <Right />
-          </div>
+        <div className="lg:pl-5">
+          <h2>Contact us</h2>
+          <p className="text-base font-normal leading-relaxed text-[#224a58]">
+            Fill out the form below to get in touch with us
+          </p>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 justify-items-start gap-[3.75rem] lg:grid-cols-2">
+        <div className="min-w-full">
+          <Left />
+        </div>
+        <div className="justify-self-center lg:justify-self-start">
+          <Right />
         </div>
       </div>
     </ContentContainer>
@@ -38,13 +44,9 @@ export default function EngageWithUs() {
 function Left() {
   return (
     <div className="lg:pl-5">
-      <h2>Contact us</h2>
-      <p className="text-base font-normal leading-relaxed text-[#224a58]">
-        Fill out the form below to get in touch with us
-      </p>
       <Form
         onSubmit={() => {}}
-        className="align-start flex flex-col gap-2 lg:min-w-[31.25rem]"
+        className="align-start flex min-w-full flex-col gap-5 lg:min-w-[31.25rem]"
       >
         <div className="flex flex-col gap-5 lg:max-w-[70%]">
           <div>
@@ -88,6 +90,7 @@ function Left() {
             Type of inquiry
           </Label>
           <ComboBox
+            className="!min-w-full"
             id="inquiry"
             name="inquiry"
             options={[
@@ -100,14 +103,15 @@ function Left() {
             onChange={() => {}}
           />
         </div>
-
-        <Label
-          htmlFor="message"
-          className="self-stretch text-base font-bold leading-relaxed text-[#224a58]"
-        >
-          Message
-        </Label>
-        <Textarea id="message" name="message" className="resize-none" />
+        <div>
+          <Label
+            htmlFor="message"
+            className="m-0 self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+          >
+            Message
+          </Label>
+          <Textarea id="message" name="message" className="resize-none" />
+        </div>
       </Form>
       <Button
         type="submit"
@@ -143,17 +147,17 @@ const RoundedBackground = ({
 
 function Right() {
   return (
-    <RoundedBackground className="p-10">
-      <div className="ml-2 flex flex-col gap-3 xl:min-w-[35.25rem]">
+    <RoundedBackground className="p-6 xl:p-10">
+      <div className="ml-2 flex flex-col gap-3">
         <p className="font-['Public Sans'] m-0 p-0 text-base font-light uppercase leading-normal text-[#2e6276]">
           Customer Testimonial
         </p>
-        <p className="font-['Public Sans'] m-0 max-w-[28rem] p-0 text-[1rem] font-bold italic leading-[2rem] text-[#224a58] lg:text-[1.38rem]">
-          "Our epidemiologists waste 80% of their time cleaning data and can't
+        <p className="font-['Public Sans'] m-0 max-w-[28rem] p-0 text-[1rem] font-bold italic leading-[2rem] text-[#224a58] xl:text-[1.38rem]">
+          “Our epidemiologists waste 80% of their time cleaning data and can't
           do useful analysis. The end goal of DIBBs infrastructure is to free up
-          that 80% of their time to do actual public health work."
+          that 80% of their time to do actual public health work.”
         </p>
-        <p className="m-0 text-nowrap p-0 text-[1rem] font-light leading-[2rem] text-[#224a58] lg:text-base xl:min-w-full">
+        <p className="m-0 p-0 text-[1rem] font-light leading-normal text-[#224a58] lg:text-nowrap lg:text-base xl:min-w-full">
           - Public Health Official, Virginia Department of Health
         </p>
       </div>
