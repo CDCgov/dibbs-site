@@ -7,20 +7,12 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel() {
   const images = [
-    `${basePath}/images/placeholder-carousel-numbered-1.png`,
-    `${basePath}/images/placeholder-carousel-numbered-2.png`,
-    `${basePath}/images/placeholder-carousel-numbered-3.png`,
-    `${basePath}/images/placeholder-carousel-numbered-4.png`,
-    `${basePath}/images/placeholder-carousel-numbered-5.png`,
-    `${basePath}/images/placeholder-carousel-numbered-6.png`,
-    `${basePath}/images/placeholder-carousel-numbered-7.png`,
-    `${basePath}/images/placeholder-carousel-numbered-1.png`,
-    `${basePath}/images/placeholder-carousel-numbered-2.png`,
-    `${basePath}/images/placeholder-carousel-numbered-3.png`,
-    `${basePath}/images/placeholder-carousel-numbered-4.png`,
-    `${basePath}/images/placeholder-carousel-numbered-5.png`,
-    `${basePath}/images/placeholder-carousel-numbered-6.png`,
-    `${basePath}/images/placeholder-carousel-numbered-7.png`,
+    `${basePath}/images/jurisdictions/LAC.png`,
+    `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
+    `${basePath}/images/jurisdictions/Philly.png`,
+    `${basePath}/images/jurisdictions/LAC.png`,
+    `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
+    `${basePath}/images/jurisdictions/Philly.png`,
   ];
 
   const settings = {
