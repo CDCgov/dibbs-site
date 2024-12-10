@@ -48,7 +48,7 @@
         rgba(0, 94, 162, 0.85) 50%,
         rgba(0, 129, 161, 0.85) 98%
       ),
-      url('/images/homepage-hero-bg.jpeg');
+      url($base-path + '/images/homepage-hero-bg.jpeg');
   }
 }
 
@@ -62,7 +62,7 @@
         rgba(0, 94, 162, 0.85) 50%,
         rgba(0, 129, 161, 0.85) 98%
       ),
-      url('/images/our-products-hero-bg.jpeg');
+      url($base-path + '/images/our-products-hero-bg.jpeg');
   }
 }
 
@@ -76,7 +76,7 @@
         rgba(0, 94, 162, 0.85) 50%,
         rgba(0, 129, 161, 0.85) 98%
       ),
-      url('/images/case-studies-hero-bg.jpeg');
+      url($base-path + '/images/case-studies-hero-bg.jpeg');
   }
 }
 
@@ -90,7 +90,7 @@
         rgba(0, 94, 162, 0.85) 50%,
         rgba(0, 129, 161, 0.85) 98%
       ),
-      url('/images/engage-with-us-hero-bg.jpeg');
+      url($base-path + '/images/engage-with-us-hero-bg.jpeg');
   }
 }
 

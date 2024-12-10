@@ -21,9 +21,12 @@ export function NavigationLink({
       {...(isActive ? { 'aria-current': 'page' } : {})}
     >
       <span
-        className={classNames('text-white', {
-          'underline underline-offset-8': isActive,
-        })}
+        className={classNames(
+          "lg:text-l font-['Public Sans'] font-bold leading-7 lg:text-white",
+          {
+            'underline underline-offset-8': isActive,
+          },
+        )}
       >
         {children}
       </span>

@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { LinkButton } from '../components/LinkButton/LinkButton';
+import { useHeroInit } from '../hooks/useHeroInit';
 
 export default function OurProducts() {
   return (
@@ -13,6 +15,12 @@ export default function OurProducts() {
 }
 
 function StandaloneProducts() {
+  useHeroInit({
+    header: `Our ecosystem of DIBBs products`,
+    subheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
+    heroClass: 'our-products-hero',
+  });
+
   return (
     <ContentContainer>
       <h2>Standalone Products</h2>
@@ -26,6 +34,7 @@ function StandaloneProducts() {
           imgSrc={`${basePath}/images/placeholder.png`}
           linkText="Learn more about eCR Viewer"
           linkToHref="/products/ecr-viewer"
+          linkVariant="primary"
         />
         <ProductCard
           title="Query Connector"
@@ -36,6 +45,7 @@ function StandaloneProducts() {
           imgSrc={`${basePath}/images/placeholder.png`}
           linkText="Learn more about Query Connector"
           linkToHref=""
+          linkVariant="primary"
         />
         <ProductCard
           title="eCR Parser"
@@ -46,6 +56,7 @@ function StandaloneProducts() {
           imgSrc={`${basePath}/images/placeholder.png`}
           linkText="Learn more about eCR Parser"
           linkToHref=""
+          linkVariant="secondary"
         />
         <ProductCard
           title="eCR Refiner"
@@ -56,6 +67,7 @@ function StandaloneProducts() {
           imgSrc={`${basePath}/images/placeholder.png`}
           linkText="Learn more about eCR Refiner"
           linkToHref=""
+          linkVariant="secondary"
         />
       </div>
     </ContentContainer>
@@ -68,6 +80,7 @@ interface ProductCardProps {
   imgSrc: string;
   linkText: string;
   linkToHref: string;
+  linkVariant: 'primary' | 'secondary' | 'transparent';
 }
 function ProductCard({
   title,
@@ -75,6 +88,7 @@ function ProductCard({
   imgSrc,
   linkText,
   linkToHref,
+  linkVariant,
 }: ProductCardProps) {
   return (
     <div className="grid h-full max-w-[33.75rem] grid-cols-1 items-start">
@@ -91,8 +105,7 @@ function ProductCard({
       </div>
       <LinkButton
         className="justify-self-start"
-        variant="primary"
-        disabled={!linkToHref}
+        variant={linkVariant}
         href={linkToHref}
       >
         {linkText}

@@ -1,9 +1,16 @@
+'use client';
 import { LinkButton } from '../components/LinkButton/LinkButton';
-import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import React from 'react';
+import { useHeroInit } from '../hooks/useHeroInit';
+import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 
 export default function CaseStudies() {
+  useHeroInit({
+    header: `See how DIBBs solutions have helped others`,
+    subheader: `Explore our case studies to see the impact of DIBBs.`,
+    heroClass: 'case-studies-hero',
+  });
   return (
     <div>
       <div className="ml-auto mr-auto flex max-w-[75rem] flex-col py-20 pl-10">
@@ -22,27 +29,27 @@ export default function CaseStudies() {
                 data pipeline that automatically processes and enriches eCR data
                 to improve downstream data analysis and case investigation.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton variant="primary" href="/case-studies/dibbs-pipeline">
                 View case study
               </LinkButton>
             </div>
             <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image1.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
           </div>
           {/* Section 2 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto] lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image2.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
             <div className="order-2 lg:order-2 lg:items-center">
@@ -57,7 +64,7 @@ export default function CaseStudies() {
                 key information from eCR files to make them more useful for
                 monitoring the spread of reportable conditions.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton variant="primary" href="/case-studies/ecr-viewer">
                 View case study
               </LinkButton>
             </div>
@@ -77,16 +84,16 @@ export default function CaseStudies() {
                 cloud-based software solutions, so they can meet the scope and
                 scale of emerging public health threats.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton variant="primary" href="/case-studies/cloud-hosting">
                 View case study
               </LinkButton>
             </div>
             <div className="order-1 flex justify-start lg:order-2 lg:ml-4">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image3.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
           </div>
@@ -94,11 +101,11 @@ export default function CaseStudies() {
           {/* Section 4 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_42rem] lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
-              <Image
-                src={`${basePath}/images/placeholder.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image4.png`}
                 width={480}
                 height={320}
-                alt="Placeholder"
+                alt=""
               />
             </div>
             <div className="order-2 lg:order-2">
@@ -113,7 +120,10 @@ export default function CaseStudies() {
                 ingestion pipeline that improves data processing and analysis to
                 more efficiently inform public health action.
               </Text>
-              <LinkButton variant="primary" href="/">
+              <LinkButton
+                variant="primary"
+                href="/case-studies/dibbs-prototype"
+              >
                 View case study
               </LinkButton>
             </div>

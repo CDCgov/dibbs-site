@@ -10,7 +10,7 @@
   }
 }
 
-.footer-phdi {
+.footerPhdi {
   display: flex;
   width: 100%;
   padding-top: 2.5rem;
@@ -23,7 +23,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('/images/homepage-hero-bg.jpeg');
+    background-image: url($base-path + '/images/homepage-hero-bg.jpeg');
     background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;

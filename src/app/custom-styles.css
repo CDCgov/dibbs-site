@@ -7,9 +7,10 @@
     text-wrap: balance;
   }
 }
-
+/* --xl-breakpoint: 1280px; */
 :root {
-  --background: #e7f2f580;
+  --background: #e7f2f5;
+  --card-background: #fbfbfb;
   --foreground: #171717;
   --header-teal: #224a58;
   --background-light-blue: #dcecf3;
@@ -22,6 +23,9 @@ html,
 body {
   background: var(--background);
   font-family: 'Source Sans Pro', sans-serif;
+}
+.main-content {
+  background: var(--background);
 }
 
 .usa-logo a {
@@ -63,6 +67,7 @@ body {
 }
 
 h1 {
+  color: #224a58;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.125rem;
@@ -111,4 +116,12 @@ ul li:last-child {
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+main:has(.hide-footer-bar) ~ .footer-bar::before {
+  display: none !important;
+}
+
+main:has(.hide-footer-bar) ~ .footer-bar {
+  display: none !important;
 }
