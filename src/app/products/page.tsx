@@ -117,7 +117,7 @@ function ProductCard({
         ) : null}
         <div className="p-6">
           <div className="flex min-h-[11.12rem] flex-col">
-            <div className="content mb-5 mt-4 flex flex-col gap-3">
+            <div className="content mb-4 flex flex-col gap-3">
               <div className="flex flex-row gap-2">
                 <h3 className="font-['Public Sans'] text-xl font-bold leading-7 text-[#14333d]">
                   {title}
