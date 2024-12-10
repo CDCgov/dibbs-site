@@ -8,16 +8,17 @@ li.usa-process-list__item {
     border-color: #6499af;
   }
 
-  h4 {
+  h3 {
     color: #224a58;
   }
 }
 
 button.usa-accordion__button {
-  background-color: #dae9ee;
+  background-color: white;
+  color: #224a58;
 
   &:hover {
-    background-color: #cce0e7; // placeholder color
+    background-color: #fbfcfc; // placeholder color
   }
 }
 
