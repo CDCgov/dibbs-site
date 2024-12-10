@@ -106,7 +106,13 @@ function ProductCard({
       <div className="grid h-full grid-cols-1 items-start lg:max-w-[33.75rem]">
         {imgSrc ? (
           <div>
-            <RoundedImage src={imgSrc} width="540" height="200" alt="" />
+            <RoundedImage
+              className="rounded-br-none"
+              src={imgSrc}
+              width="540"
+              height="200"
+              alt=""
+            />
           </div>
         ) : null}
         <div className="p-6">
