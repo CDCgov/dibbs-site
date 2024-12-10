@@ -4,12 +4,14 @@ import { usePathname } from 'next/navigation';
 
 interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
   children: React.ReactNode;
+  showActive?: boolean;
 }
 
 export function NavigationLink({
   href,
   children,
   onClick,
+  showActive = true,
 }: NavigationLinkProps) {
   const isActive = useIsActive(href);
 
@@ -24,7 +26,7 @@ export function NavigationLink({
         className={classNames(
           "lg:text-l font-['Public Sans'] font-bold leading-7 lg:text-white",
           {
-            'underline underline-offset-8': isActive,
+            'underline underline-offset-8': isActive && showActive,
           },
         )}
       >
