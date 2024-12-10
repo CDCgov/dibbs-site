@@ -169,17 +169,15 @@ interface DataPipelineCardProps {
 
 function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
   return (
-    <div className="min-h-[23.69rem] rounded border border-dashed border-[#224A58] bg-background p-8">
-      <Image
-        className="pb-4"
-        src={imgSrc}
-        width={88}
-        height={88}
-        alt={`${title} icon`}
-      />
+    <div className="px-2 py-6">
+      <Image className="pb-4" src={imgSrc} width={60} height={60} alt="" />
       <div className="flex flex-col gap-y-2">
-        <h3 className="font-bold">{title}</h3>
-        <p className="m-0 p-0">{text}</p>
+        <h3 className="font-['Public Sans'] text-base font-bold leading-snug text-[#14333d]">
+          {title}
+        </h3>
+        <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
+          {text}
+        </p>
       </div>
     </div>
   );
@@ -196,7 +194,10 @@ function DataPipelineGrid({ children }: DataPipelineGridProps) {
 
 function DataPipeline() {
   return (
-    <ContentContainer classes="bg-[#dae9ee] md:px-[10rem]">
+    <ContentContainer
+      classes="bg-[#dae9ee] md:px-[10rem]"
+      sectionClasses="bg-[#dae9ee]"
+    >
       <div className="flex flex-col gap-y-6 pb-6">
         <div className="flex flex-col gap-y-2">
           <h2 className="text-[#14333d]">
@@ -231,6 +232,7 @@ function DataPipeline() {
           imgSrc={`${basePath}/icons/products/validation.svg`}
         />
       </DataPipelineGrid>
+      <Break />
       <DataSectionText>For data enrichment</DataSectionText>
       <DataPipelineGrid>
         <DataPipelineCard
@@ -249,6 +251,7 @@ function DataPipeline() {
           imgSrc={`${basePath}/icons/products/recordLinkage.svg`}
         />
       </DataPipelineGrid>
+      <Break />
       <DataSectionText>For data transformation</DataSectionText>
       <DataPipelineGrid>
         <DataPipelineCard
@@ -274,5 +277,13 @@ const DataSectionText = ({ children }: DataSectionText) => {
     <p className="font-['Public Sans'] text-[1.38rem] font-light uppercase leading-[1.93rem] text-[#14333d]">
       {children}
     </p>
+  );
+};
+
+const Break = () => {
+  return (
+    <div className="py-10">
+      <hr className="border border-[#6499af]" />
+    </div>
   );
 };
