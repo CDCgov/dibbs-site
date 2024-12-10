@@ -30,7 +30,7 @@ function StandaloneProducts() {
         <h2 className="font-['Public Sans'] text-[1.75rem] font-bold leading-[2.4rem] text-[#14333d] lg:ml-[-2rem]">
           DIBBs-powered products
         </h2>
-        <div className="mt-5 grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="mt-5 grid grid-cols-1 gap-10 lg:grid-cols-2">
           <ProductCard
             title="eCR Viewer"
             text="Makes it easier for public health staff to find relevant
@@ -103,7 +103,7 @@ function ProductCard({
 }: ProductCardProps) {
   return (
     <RoundedBackground className="border-none !bg-white">
-      <div className="grid h-full max-w-[33.75rem] grid-cols-1 items-start">
+      <div className="grid h-full grid-cols-1 items-start lg:max-w-[33.75rem]">
         {imgSrc ? (
           <div>
             <RoundedImage src={imgSrc} width="540" height="200" alt="" />
