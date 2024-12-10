@@ -11,8 +11,8 @@ import { Heading, Paragraph } from './_ui';
 import styles from './_styles/Homepage.module.scss';
 import { InvitationCta } from './components/InvitationCta/InvitationCta';
 const DibbsSection = () => (
-  <ContentContainer align>
-    <section>
+  <section>
+    <ContentContainer align>
       <ImageCard
         imageUrl={`${basePath}/images/homepage-1.jpeg`}
         imageAlt=""
@@ -37,17 +37,17 @@ const DibbsSection = () => (
           </ul>
         </div>
       </ImageCard>
-    </section>
-  </ContentContainer>
+    </ContentContainer>
+  </section>
 );
 
 const ValueSection = () => {
   const { valueSection } = homeContent;
 
   return (
-    <div className={styles.valueSection}>
-      <ContentContainer align>
-        <section>
+    <section>
+      <div className={styles.valueSection}>
+        <ContentContainer align>
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/homepage-2.jpeg`}
@@ -72,9 +72,9 @@ const ValueSection = () => {
               </div>
             </div>
           </ImageCard>
-        </section>
-      </ContentContainer>
-    </div>
+        </ContentContainer>
+      </div>
+    </section>
   );
 };
 
@@ -83,8 +83,8 @@ const JurisdictionSection = () => {
 
   return (
     <>
-      <ContentContainer align classes="sm:pb-10">
-        <section>
+      <section>
+        <ContentContainer align classes="sm:pb-10">
           <Grid row gap>
             <Grid col={12}>
               <div className="flex flex-col items-center">
@@ -95,8 +95,8 @@ const JurisdictionSection = () => {
               </div>
             </Grid>
           </Grid>
-        </section>
-      </ContentContainer>
+        </ContentContainer>
+      </section>
       <div className="ml-8 mr-8 pb-20 pt-0">
         <Carousel />
       </div>

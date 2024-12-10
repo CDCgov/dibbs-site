@@ -22,8 +22,8 @@ function StandaloneProducts() {
   });
 
   return (
-    <ContentContainer>
-      <section>
+    <section>
+      <ContentContainer>
         <h2>Standalone Products</h2>
         <div className="mt-5 grid grid-cols-1 gap-10 md:grid-cols-2">
           <ProductCard
@@ -71,8 +71,8 @@ function StandaloneProducts() {
             linkVariant="secondary"
           />
         </div>
-      </section>
-    </ContentContainer>
+      </ContentContainer>
+    </section>
   );
 }
 
@@ -151,8 +151,8 @@ function DataPipelineGrid({ children }: DataPipelineGridProps) {
 
 function DataPipeline() {
   return (
-    <ContentContainer>
-      <section>
+    <section>
+      <ContentContainer>
         <div className="flex flex-col gap-y-6 pb-6">
           <Image
             className="max-h-[10rem]"
@@ -229,7 +229,7 @@ function DataPipeline() {
             imgSrc={`${basePath}/icons/our-products/phdcConverter.svg`}
           />
         </DataPipelineGrid>
-      </section>
-    </ContentContainer>
+      </ContentContainer>
+    </section>
   );
 }
