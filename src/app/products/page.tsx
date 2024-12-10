@@ -27,7 +27,9 @@ function StandaloneProducts() {
   return (
     <div className="border-b border-[#adcfdc]">
       <ContentContainer classes="sm:py-[3.75rem] md:px-[10rem]">
-        <h2>DIBBs-powered products</h2>
+        <h2 className="font-['Public Sans'] text-[1.75rem] font-bold leading-[2.4rem] text-[#14333d] lg:ml-[-2rem]">
+          DIBBs-powered products
+        </h2>
         <div className="mt-5 grid grid-cols-1 gap-10 md:grid-cols-2">
           <ProductCard
             title="eCR Viewer"
@@ -111,7 +113,9 @@ function ProductCard({
           <div className="flex min-h-[11.12rem] flex-col">
             <div className="content mb-5 mt-4 flex flex-col gap-3">
               <div className="flex flex-row gap-2">
-                <h3>{title}</h3>
+                <h3 className="font-['Public Sans'] text-xl font-bold leading-7 text-[#14333d]">
+                  {title}
+                </h3>
                 <StatusTag variant={status} />
               </div>
               <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
