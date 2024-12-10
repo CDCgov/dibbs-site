@@ -104,18 +104,18 @@ export default function EcrViewer() {
             <div id="demo">
               <div className="flex flex-col gap-3">
                 <SectionSubheader>Demo</SectionSubheader>
-                <div className="flex flex-col gap-3">
+                <figure className="flex flex-col gap-3">
                   <Image
                     alt="placeholder video"
                     width={652}
                     height={383}
                     src={`${basePath}/images/placeholder.png`}
                   />
-                  <span className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
+                  <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
                     See how the eCR Viewer can improve the way your jurisdiction
                     uses eCR data.
-                  </span>
-                </div>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <div id="product-features">
@@ -221,17 +221,17 @@ export default function EcrViewer() {
                   </p>
                 </div>
                 <figure>
-                    <Image
-                      alt="eCR Viewer - how it works"
-                      width={652}
-                      height={383}
-                      src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
-                    />
-                    <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
-                      View of the eCR Library within the non-integrated eCR
-                      Viewer containing sample data.
-                    </figcaption>
-                  </figure>
+                  <Image
+                    alt="eCR Viewer - how it works"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
+                  />
+                  <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
+                    View of the eCR Library within the non-integrated eCR Viewer
+                    containing sample data.
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <div id="getting-started">
