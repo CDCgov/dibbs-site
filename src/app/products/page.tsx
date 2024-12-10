@@ -128,14 +128,16 @@ function ProductCard({
                 {text}
               </p>
             </div>
+            <div>
+              <LinkButton
+                className="justify-self-start"
+                variant={linkVariant}
+                href={linkToHref}
+              >
+                {linkText}
+              </LinkButton>
+            </div>
           </div>
-          <LinkButton
-            className="justify-self-start"
-            variant={linkVariant}
-            href={linkToHref}
-          >
-            {linkText}
-          </LinkButton>
         </div>
       </div>
     </RoundedBackground>
