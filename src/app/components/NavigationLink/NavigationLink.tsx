@@ -42,17 +42,9 @@ export function NavigationLink({
  */
 function useIsActive(url: NavigationLinkProps['href']) {
   const pathname = usePathname();
-
-  // top-level route (/products, /case-studies) match
-  if (pathname === url.toString()) {
-    return true;
-  }
-
-  // subroutes (/products/ecr-viewer) match
-  const pathSegments = pathname.split('/').filter((segment) => segment !== '');
-  if (pathSegments.length > 0 && url.toString().includes(pathSegments[0])) {
-    return true;
-  }
-
-  return false;
+  const urlStr = url.toString();
+  return (
+    pathname === urlStr ||
+    (pathname.startsWith(urlStr) && (urlStr !== '/' || pathname === '/'))
+  );
 }
