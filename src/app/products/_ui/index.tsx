@@ -305,6 +305,19 @@ const Text = ({ children, className }: TextProps) => {
   return <p className={classNames('m-0 p-0', className)}>{children}</p>;
 };
 
+const ValueList = ({ children }: ContainerProps) => {
+  return (
+    <RoundedBackground className="p-10">
+      <SubsectionContainer>
+        <SectionSubheader>The value to you:</SectionSubheader>
+        <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
+          {children}
+        </ul>
+      </SubsectionContainer>
+    </RoundedBackground>
+  );
+};
+
 export {
   SendMailLink,
   TitleSection,
@@ -325,4 +338,5 @@ export {
   SubsectionContainer,
   Figure,
   Text,
+  ValueList,
 };
