@@ -171,7 +171,7 @@ export default function EcrViewer() {
                     Viewer will look the same. The eCR Viewer groups the full
                     eCR document into five main sections:
                   </p>
-                  <ul className="mt-0 flex list-disc flex-col gap-2 font-semibold">
+                  <ul className="mt-0 flex list-disc flex-col font-semibold">
                     <li>Patient Info</li>
                     <li>Encounter Info</li>
                     <li>Clinical Info</li>
@@ -192,7 +192,7 @@ export default function EcrViewer() {
               <div className="flex flex-col gap-10">
                 <div className="flex flex-col gap-3">
                   <p>We currently offer two versions of the eCR Viewer.</p>
-                  <ol className="mt-0 list-decimal pl-4">
+                  <ol className="mt-0 list-decimal pl-4 font-semibold">
                     <li>Direct integration with NBS</li>
                     <li>Standalone option for non-NBS jurisdictions</li>
                   </ol>
