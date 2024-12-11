@@ -1,5 +1,10 @@
 import { RoundedBackground } from '@/app/components/RoundedBackground/RoundedBackground';
-import { ProcessList, ProcessListHeading, ProcessListItem, SideNav } from '@trussworks/react-uswds';
+import {
+  ProcessList,
+  ProcessListHeading,
+  ProcessListItem,
+  SideNav,
+} from '@trussworks/react-uswds';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { SetStateAction, useState } from 'react';
@@ -255,6 +260,25 @@ const GettingStartedProcessList = ({
   );
 };
 
+interface VideoProps {
+  src: string;
+  description?: string;
+}
+const Video = ({ src, description }: VideoProps) => {
+  return (
+    <div>
+      <iframe
+        className="h-[31.25rem] w-full border-none"
+        src={src}
+        allowFullScreen
+      ></iframe>
+      <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
+        {description}
+      </p>
+    </div>
+  );
+};
+
 export {
   SendMailLink,
   TitleSection,
@@ -270,4 +294,5 @@ export {
   GridRight,
   HaveAQuestionSection,
   GettingStartedProcessList,
+  Video,
 };

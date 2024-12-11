@@ -19,6 +19,7 @@ import {
   GridMiddle,
   HaveAQuestionSection,
   GettingStartedProcessList,
+  Video,
 } from '../_ui';
 
 export default function EcrViewer() {
@@ -110,18 +111,11 @@ export default function EcrViewer() {
             <div id="demo">
               <div className="flex flex-col gap-3">
                 <SectionSubheader>Demo</SectionSubheader>
-                <figure className="flex flex-col gap-3">
-                  <Image
-                    alt="placeholder video"
-                    width={652}
-                    height={383}
-                    src={`${basePath}/images/placeholder.png`}
-                  />
-                  <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
-                    See how the eCR Viewer can improve the way your jurisdiction
-                    uses eCR data.
-                  </figcaption>
-                </figure>
+                <Video
+                  src="https://www.loom.com/embed/f59bf06efe3847c286829da95d4fd36d?sid=7171105a-cff8-4dd0-8ee5-9f32cca35f60"
+                  description="See how the eCR Viewer can improve the way your jurisdiction
+                  uses eCR data."
+                />
               </div>
             </div>
             <div id="product-features">
