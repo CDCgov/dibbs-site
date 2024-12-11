@@ -44,7 +44,7 @@ export default function EcrViewer() {
               <SubsectionContainer>
                 <SectionHeader>Overview</SectionHeader>
                 <SectionContentContainer>
-                  <Text className="font-['Public Sans'] flex flex-col gap-6 text-base font-normal leading-snug text-[#224a58]">
+                  <Text className="flex flex-col gap-6">
                     <span>
                       The eCR Viewer is a tool that aims to improve the
                       usability of electronic case reporting (eCR) data by
@@ -231,7 +231,7 @@ export default function EcrViewer() {
                     containing sample data."
                 >
                   <Image
-                    alt="eCR Viewer - how it works"
+                    alt="Non-integrated eCR Viewer example"
                     width={652}
                     height={383}
                     src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
@@ -318,7 +318,7 @@ export default function EcrViewer() {
               <SectionContentContainer>
                 <SubsectionContainer>
                   <SectionHeader>FAQs</SectionHeader>
-                  <Text className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
+                  <Text>
                     Find answers to commonly asked questions about the eCR
                     Viewer.
                   </Text>
