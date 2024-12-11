@@ -30,7 +30,7 @@ export const SideNav = ({ sections }: SideNavProps) => {
         });
       },
       {
-        rootMargin: '-20% 0px -70% 0px',
+        rootMargin: '-30% 0px -60% 0px',
         threshold: 0,
       },
     );
@@ -50,19 +50,6 @@ export const SideNav = ({ sections }: SideNavProps) => {
 
   return (
     <>
-      <div
-        id="detection-zone"
-        style={{
-          position: 'fixed',
-          top: '20%',
-          bottom: '70%',
-          left: 0,
-          right: 0,
-          backgroundColor: 'rgba(255, 0, 0, 0.2)',
-          pointerEvents: 'none',
-          zIndex: 9999,
-        }}
-      />
       <UswdsSideNav
         items={sections.map(({ title, id }) => (
           <NavItem
