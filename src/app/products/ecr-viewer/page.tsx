@@ -8,11 +8,9 @@ import {
   ProcessListHeading,
   Accordion,
   Link,
-  SideNav,
 } from '@trussworks/react-uswds';
-import classNames from 'classnames';
+import { SideNav } from '@/app/components/SideNav/SideNav';
 import Image from 'next/image';
-import { SetStateAction, useState } from 'react';
 import './styles.scss';
 
 export default function EcrViewer() {
@@ -554,78 +552,15 @@ export default function EcrViewer() {
 }
 
 function Navigation() {
-  const [selectedHash, setSelectedHash] = useState('#overview');
-
-  return (
-    <SideNav
-      items={[
-        <NavItem
-          title="Overview"
-          id="overview"
-          key="overview"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="Product features"
-          id="product-features"
-          key="product-features"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="How it works"
-          id="how-it-works"
-          key="how-it-works"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="Getting started"
-          id="getting-started"
-          key="getting-started"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="Technical resources"
-          id="technical-resources"
-          key="technical-resources"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="FAQs"
-          id="faqs"
-          key="faqs"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-      ]}
-    />
-  );
-}
-
-interface NavItemProps {
-  title: string;
-  id: string;
-  selectedHash: string;
-  setSelectedHash: (value: SetStateAction<string>) => void;
-}
-function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
-  const itemHash = `#${id}`;
-  return (
-    <a
-      href={itemHash}
-      key={id}
-      className={classNames({
-        'usa-current': itemHash === selectedHash,
-      })}
-      onClick={() => setSelectedHash(itemHash)}
-    >
-      {title}
-    </a>
-  );
+  const sections = [
+    { title: 'Overview', id: 'overview' },
+    { title: 'Product features', id: 'product-features' },
+    { title: 'How it works', id: 'how-it-works' },
+    { title: 'Getting started', id: 'getting-started' },
+    { title: 'Technical resources', id: 'technical-resources' },
+    { title: 'FAQs', id: 'faqs' },
+  ];
+  return <SideNav sections={sections} />;
 }
 
 interface GithubNavProps {
