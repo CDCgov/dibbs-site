@@ -232,6 +232,7 @@ export default function EcrViewer() {
                 >
                   <Image
                     alt="Non-integrated eCR Viewer example"
+                    className="rounded-lg shadow"
                     width={652}
                     height={383}
                     src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
