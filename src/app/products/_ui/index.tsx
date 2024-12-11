@@ -61,8 +61,17 @@ const SectionSubheader = ({ children }: SectionHeaderProps) => {
 interface SectionContentContainerProps {
   children: React.ReactNode;
 }
-const SectionContentContainer = ({ children }: SectionContentContainerProps) => {
+const SectionContentContainer = ({
+  children,
+}: SectionContentContainerProps) => {
   return <div className="flex flex-col gap-10">{children}</div>;
+};
+
+interface SubsectionContainerProps {
+  children: React.ReactNode;
+}
+const SubsectionContainer = ({ children }: SubsectionContainerProps) => {
+  return <div className="flex flex-col gap-3">{children}</div>;
 };
 
 interface GithubNavProps {
@@ -303,4 +312,5 @@ export {
   GettingStartedProcessList,
   Video,
   SectionContentContainer,
+  SubsectionContainer,
 };

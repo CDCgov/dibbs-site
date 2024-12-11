@@ -21,6 +21,7 @@ import {
   GettingStartedProcessList,
   Video,
   SectionContentContainer,
+  SubsectionContainer,
 } from '../_ui';
 
 export default function EcrViewer() {
@@ -40,7 +41,7 @@ export default function EcrViewer() {
                 investigators make better sense of eCR data, faster."
             />
             <div id="overview">
-              <div className="flex flex-col gap-3">
+              <SubsectionContainer>
                 <SectionHeader>Overview</SectionHeader>
                 <SectionContentContainer>
                   <p className="font-['Public Sans'] m-0 flex flex-col gap-6 p-0 text-base font-normal leading-snug text-[#224a58]">
@@ -78,50 +79,52 @@ export default function EcrViewer() {
                     </span>
                   </p>
                 </SectionContentContainer>
-              </div>
+              </SubsectionContainer>
             </div>
-            <RoundedBackground className="flex flex-col gap-3 p-10">
-              <SectionSubheader>The value to you</SectionSubheader>
-              <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
-                <li>
-                  Surfaces the most relevant information in a summary at the top
-                  of the eCR, so any staff member can quickly find the
-                  information they need
-                </li>
-                <li>
-                  Combines information from both the eICR and RR, so
-                  epidemiologists reviewing the eCR can understand why it was
-                  sent to their jurisdiction
-                </li>
-                <li>
-                  Lives outside your case surveillance system as an API, which
-                  reduces storage burden on your overall system while allowing
-                  seamless access for epidemiologists who need it
-                </li>
-                <li>
-                  Keeps data formats consistent regardless of which EHR system
-                  generated the eCR
-                </li>
-                <li>Open source and free to use</li>
-                <li>
-                  Offers flexible hosting, either within your jurisdiction or
-                  through a CDC-hosted option
-                </li>
-              </ul>
+            <RoundedBackground className="p-10">
+              <SubsectionContainer>
+                <SectionSubheader>The value to you</SectionSubheader>
+                <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
+                  <li>
+                    Surfaces the most relevant information in a summary at the
+                    top of the eCR, so any staff member can quickly find the
+                    information they need
+                  </li>
+                  <li>
+                    Combines information from both the eICR and RR, so
+                    epidemiologists reviewing the eCR can understand why it was
+                    sent to their jurisdiction
+                  </li>
+                  <li>
+                    Lives outside your case surveillance system as an API, which
+                    reduces storage burden on your overall system while allowing
+                    seamless access for epidemiologists who need it
+                  </li>
+                  <li>
+                    Keeps data formats consistent regardless of which EHR system
+                    generated the eCR
+                  </li>
+                  <li>Open source and free to use</li>
+                  <li>
+                    Offers flexible hosting, either within your jurisdiction or
+                    through a CDC-hosted option
+                  </li>
+                </ul>
+              </SubsectionContainer>
             </RoundedBackground>
             <div id="demo">
-              <div className="flex flex-col gap-3">
+              <SubsectionContainer>
                 <SectionSubheader>Demo</SectionSubheader>
                 <Video
                   src="https://www.loom.com/embed/f59bf06efe3847c286829da95d4fd36d?sid=7171105a-cff8-4dd0-8ee5-9f32cca35f60"
                   description="See how the eCR Viewer can improve the way your jurisdiction
                   uses eCR data."
                 />
-              </div>
+              </SubsectionContainer>
             </div>
             <div id="product-features">
               <SectionContentContainer>
-                <div className="flex flex-col gap-3">
+                <SubsectionContainer>
                   <SectionHeader>Product features</SectionHeader>
                   <p className="m-0 p-0">
                     Using the eCR Viewer, public health staff can easily find
@@ -129,8 +132,8 @@ export default function EcrViewer() {
                     offers several features that make eCR data more usable for
                     your jurisdiction.
                   </p>
-                </div>
-                <div className="flex flex-col gap-3">
+                </SubsectionContainer>
+                <SubsectionContainer>
                   <SectionSubheader>eCR Summary</SectionSubheader>
                   <p className="m-0 p-0">
                     The eCR Viewer surfaces key information in a summary at the
@@ -139,14 +142,14 @@ export default function EcrViewer() {
                     categories: Patient Summary, Encounter Summary, and
                     Condition Summary.
                   </p>
-                </div>
+                </SubsectionContainer>
                 <Image
                   alt="eCR Viewer - how it works"
                   width={652}
                   height={383}
                   src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
                 />
-                <div className="flex flex-col gap-3">
+                <SubsectionContainer>
                   <SectionSubheader>Combined RR and eICR</SectionSubheader>
                   <p className="m-0 flex flex-col gap-8 p-0">
                     <span>
@@ -164,8 +167,8 @@ export default function EcrViewer() {
                       surveillance system views
                     </span>
                   </p>
-                </div>
-                <div className="flex flex-col gap-3">
+                </SubsectionContainer>
+                <SubsectionContainer>
                   <SectionSubheader>Consistent data display</SectionSubheader>
                   <p className="m-0 p-0">
                     No matter who sent the eCR, every eCR you view in the eCR
@@ -185,21 +188,21 @@ export default function EcrViewer() {
                     quickly scroll through the eCR to find the information
                     you're looking for.
                   </p>
-                </div>
+                </SubsectionContainer>
               </SectionContentContainer>
             </div>
             <div id="how-it-works">
               <SectionHeader>How it works</SectionHeader>
               <SectionContentContainer>
-                <div className="flex flex-col gap-3">
+                <SubsectionContainer>
                   <p>We currently offer two versions of the eCR Viewer.</p>
                   <ol className="mt-0 list-decimal pl-4 font-semibold">
                     <li>Direct integration with NBS</li>
                     <li>Standalone option for non-NBS jurisdictions</li>
                   </ol>
                   <p>Below, we outline how each version works.</p>
-                </div>
-                <div className="flex flex-col gap-3">
+                </SubsectionContainer>
+                <SubsectionContainer>
                   <SectionSubheader>Integrated eCR Viewer</SectionSubheader>
                   <p className="m-0 p-0">
                     The integrated version allows users to access the eCR Viewer
@@ -209,8 +212,8 @@ export default function EcrViewer() {
                     view in NBS, using the “View eICR Document” button. This
                     will open a separate window with the eCR Viewer.
                   </p>
-                </div>
-                <div className="flex flex-col gap-3">
+                </SubsectionContainer>
+                <SubsectionContainer>
                   <SectionSubheader>Non-integrated eCR Viewer</SectionSubheader>
                   <p className="m-0 p-0">
                     The non-integrated version offers a standalone tool for
@@ -220,7 +223,7 @@ export default function EcrViewer() {
                     to filter and sort eCR documents. Users would log into the
                     standalone tool separately from their surveillance system.
                   </p>
-                </div>
+                </SubsectionContainer>
                 <figure>
                   <Image
                     alt="eCR Viewer - how it works"
@@ -338,13 +341,13 @@ export default function EcrViewer() {
             </div>
             <div id="faqs">
               <SectionContentContainer>
-                <div className="flex flex-col gap-3">
+                <SubsectionContainer>
                   <SectionHeader>FAQs</SectionHeader>
                   <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
                     Find answers to commonly asked questions about the eCR
                     Viewer.
                   </p>
-                </div>
+                </SubsectionContainer>
                 <Accordion
                   bordered={false}
                   items={[
