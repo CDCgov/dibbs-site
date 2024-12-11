@@ -23,6 +23,7 @@ import {
   SectionContentContainer,
   SubsectionContainer,
   Figure,
+  Text,
 } from '../_ui';
 
 export default function EcrViewer() {
@@ -31,9 +32,7 @@ export default function EcrViewer() {
       <ContentContainer align>
         <GridContainer>
           <GridLeft>
-            <div className="lg:sticky lg:top-4">
-              <Navigation />
-            </div>
+            <Navigation />
           </GridLeft>
           <GridMiddle>
             <TitleSection
@@ -127,22 +126,22 @@ export default function EcrViewer() {
               <SectionContentContainer>
                 <SubsectionContainer>
                   <SectionHeader>Product features</SectionHeader>
-                  <p className="m-0 p-0">
+                  <Text>
                     Using the eCR Viewer, public health staff can easily find
                     data relevant to a reportable condition. The eCR Viewer
                     offers several features that make eCR data more usable for
                     your jurisdiction.
-                  </p>
+                  </Text>
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>eCR Summary</SectionSubheader>
-                  <p className="m-0 p-0">
+                  <Text>
                     The eCR Viewer surfaces key information in a summary at the
                     top of the eCR document, helping you understand the eCR
                     document at a glance. This eCR Summary is divided into three
                     categories: Patient Summary, Encounter Summary, and
                     Condition Summary.
-                  </p>
+                  </Text>
                 </SubsectionContainer>
                 <Figure caption="View of the eCR Summary section within the eCR Viewer containing sample data.">
                   <Image
@@ -173,11 +172,11 @@ export default function EcrViewer() {
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>Consistent data display</SectionSubheader>
-                  <p className="m-0 p-0">
+                  <Text>
                     No matter who sent the eCR, every eCR you view in the eCR
                     Viewer will look the same. The eCR Viewer groups the full
                     eCR document into five main sections:
-                  </p>
+                  </Text>
                   <ul className="mt-0 flex list-disc flex-col font-semibold">
                     <li>Patient Info</li>
                     <li>Encounter Info</li>
@@ -185,12 +184,12 @@ export default function EcrViewer() {
                     <li>Lab Info</li>
                     <li>eCR Metadata</li>
                   </ul>
-                  <p className="m-0 p-0">
+                  <Text>
                     The ordering of the five main sections, as well as the
                     fields within those sections, is always the same, so you can
                     quickly scroll through the eCR to find the information
                     you're looking for.
-                  </p>
+                  </Text>
                 </SubsectionContainer>
               </SectionContentContainer>
             </div>
@@ -207,25 +206,25 @@ export default function EcrViewer() {
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>Integrated eCR Viewer</SectionSubheader>
-                  <p className="m-0 p-0">
+                  <Text>
                     The integrated version allows users to access the eCR Viewer
                     directly within their surveillance system. Direct
                     integration is currently supported by NBS. Once installed,
                     the eCR Viewer is activated from the existing eCR document
                     view in NBS, using the “View eICR Document” button. This
                     will open a separate window with the eCR Viewer.
-                  </p>
+                  </Text>
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>Non-integrated eCR Viewer</SectionSubheader>
-                  <p className="m-0 p-0">
+                  <Text>
                     The non-integrated version offers a standalone tool for
                     users to view eCR documents outside of their jurisdiction's
                     surveillance system. In addition to the core eCR Viewer,
                     this tool provides an eCR Library homepage, allowing users
                     to filter and sort eCR documents. Users would log into the
                     standalone tool separately from their surveillance system.
-                  </p>
+                  </Text>
                 </SubsectionContainer>
                 <Figure
                   caption="View of the eCR Library within the non-integrated eCR Viewer
@@ -245,11 +244,11 @@ export default function EcrViewer() {
                 <div className="flex flex-col gap-4">
                   <SectionHeader>Getting started</SectionHeader>
                   <div className="flex flex-col gap-6">
-                    <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+                    <Text className="text-base font-normal leading-relaxed text-[#224a58]">
                       Before you can use the eCR Viewer, you'll need to set it
                       up and get your staff comfortable with how the eCR Viewer
                       can help improve their data workflows.
-                    </p>
+                    </Text>
                     <div>
                       <SectionSubheader>
                         What's expected from a pilot partner:
@@ -345,10 +344,10 @@ export default function EcrViewer() {
               <SectionContentContainer>
                 <SubsectionContainer>
                   <SectionHeader>FAQs</SectionHeader>
-                  <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
+                  <Text className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
                     Find answers to commonly asked questions about the eCR
                     Viewer.
-                  </p>
+                  </Text>
                 </SubsectionContainer>
                 <Accordion
                   bordered={false}

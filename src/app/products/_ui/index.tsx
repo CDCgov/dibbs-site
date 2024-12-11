@@ -130,52 +130,54 @@ const Navigation = () => {
   const [selectedHash, setSelectedHash] = useState('#overview');
 
   return (
-    <SideNav
-      items={[
-        <NavItem
-          title="Overview"
-          id="overview"
-          key="overview"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="Product features"
-          id="product-features"
-          key="product-features"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="How it works"
-          id="how-it-works"
-          key="how-it-works"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="Getting started"
-          id="getting-started"
-          key="getting-started"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="Technical resources"
-          id="technical-resources"
-          key="technical-resources"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-        <NavItem
-          title="FAQs"
-          id="faqs"
-          key="faqs"
-          selectedHash={selectedHash}
-          setSelectedHash={setSelectedHash}
-        />,
-      ]}
-    />
+    <div className="lg:sticky lg:top-4">
+      <SideNav
+        items={[
+          <NavItem
+            title="Overview"
+            id="overview"
+            key="overview"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />,
+          <NavItem
+            title="Product features"
+            id="product-features"
+            key="product-features"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />,
+          <NavItem
+            title="How it works"
+            id="how-it-works"
+            key="how-it-works"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />,
+          <NavItem
+            title="Getting started"
+            id="getting-started"
+            key="getting-started"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />,
+          <NavItem
+            title="Technical resources"
+            id="technical-resources"
+            key="technical-resources"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />,
+          <NavItem
+            title="FAQs"
+            id="faqs"
+            key="faqs"
+            selectedHash={selectedHash}
+            setSelectedHash={setSelectedHash}
+          />,
+        ]}
+      />
+    </div>
   );
 };
 
@@ -296,6 +298,13 @@ const Figure = ({ children, caption }: FigureProps) => {
   );
 };
 
+interface TextProps extends ContainerProps {
+  className?: string;
+}
+const Text = ({ children, className }: TextProps) => {
+  return <p className={classNames('m-0 p-0', className)}>{children}</p>;
+};
+
 export {
   SendMailLink,
   TitleSection,
@@ -315,4 +324,5 @@ export {
   SectionContentContainer,
   SubsectionContainer,
   Figure,
+  Text,
 };
