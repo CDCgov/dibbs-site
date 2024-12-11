@@ -277,7 +277,7 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
             <SectionSubheader>
               What's expected from a pilot partner:
             </SectionSubheader>
-            <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
+            <ul className="list__full-width text-base font-semibold leading-relaxed text-[#224a58]">
               <li>
                 Work with the DIBBs team to set expectations and establish a
                 regular meeting cadence
