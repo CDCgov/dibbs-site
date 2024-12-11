@@ -211,9 +211,9 @@ const HaveAQuestionSection = () => {
   return (
     <div className="flex flex-col gap-3">
       <h3>Have a question that isn't answered above?</h3>
-      <p className="font-['Public Sans'] m-0 p-0 text-base font-bold leading-snug text-[#224a58]">
+      <Text className="font-bold">
         Please get in touch with our team at <SendMailLink />
-      </p>
+      </Text>
     </div>
   );
 };
@@ -276,11 +276,7 @@ const Video = ({ src, description }: VideoProps) => {
         src={src}
         allowFullScreen
       ></iframe>
-      {description ? (
-        <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
-          {description}
-        </p>
-      ) : null}
+      {description ? <Text>{description}</Text> : null}
     </div>
   );
 };
@@ -304,7 +300,16 @@ interface TextProps extends ContainerProps {
   className?: string;
 }
 const Text = ({ children, className }: TextProps) => {
-  return <p className={classNames('m-0 p-0', className)}>{children}</p>;
+  return (
+    <p
+      className={classNames(
+        "font-['Public Sans'] m-0 p-0 text-base leading-snug text-[#224a58]",
+        className,
+      )}
+    >
+      {children}
+    </p>
+  );
 };
 
 const ValueList = ({ children }: ContainerProps) => {

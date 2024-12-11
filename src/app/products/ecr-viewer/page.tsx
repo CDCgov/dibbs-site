@@ -29,7 +29,7 @@ import {
 export default function EcrViewer() {
   return (
     <div>
-      <ContentContainer classes='sm:pt-0' align>
+      <ContentContainer classes="sm:pt-0" align>
         <GridContainer>
           <GridLeft>
             <Navigation />
@@ -44,7 +44,7 @@ export default function EcrViewer() {
               <SubsectionContainer>
                 <SectionHeader>Overview</SectionHeader>
                 <SectionContentContainer>
-                  <p className="font-['Public Sans'] m-0 flex flex-col gap-6 p-0 text-base font-normal leading-snug text-[#224a58]">
+                  <Text className="font-['Public Sans'] flex flex-col gap-6 text-base font-normal leading-snug text-[#224a58]">
                     <span>
                       The eCR Viewer is a tool that aims to improve the
                       usability of electronic case reporting (eCR) data by
@@ -77,7 +77,7 @@ export default function EcrViewer() {
                       non-NBS jurisdictions to manage and view eCR documents
                       separately from their surveillance system.
                     </span>
-                  </p>
+                  </Text>
                   <SubsectionContainer>
                     <ValueList>
                       <li>
@@ -151,7 +151,7 @@ export default function EcrViewer() {
                 </Figure>
                 <SubsectionContainer>
                   <SectionSubheader>Combined RR and eICR</SectionSubheader>
-                  <p className="m-0 flex flex-col gap-8 p-0">
+                  <Text className="flex flex-col gap-8">
                     <span>
                       The eCR Viewer combines electronic initial case report
                       (eICR) and Reportability Response (RR) data together,
@@ -166,7 +166,7 @@ export default function EcrViewer() {
                       than what's currently available by default in the HTML or
                       surveillance system views
                     </span>
-                  </p>
+                  </Text>
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>Consistent data display</SectionSubheader>
@@ -192,15 +192,17 @@ export default function EcrViewer() {
               </SectionContentContainer>
             </section>
             <section id="how-it-works">
-              <SectionHeader>How it works</SectionHeader>
               <SectionContentContainer>
                 <SubsectionContainer>
-                  <p>We currently offer two versions of the eCR Viewer.</p>
+                  <SectionHeader>How it works</SectionHeader>
+                  <Text>
+                    We currently offer two versions of the eCR Viewer.
+                  </Text>
                   <ol className="mt-0 list-decimal pl-4 font-semibold">
                     <li>Direct integration with NBS</li>
                     <li>Standalone option for non-NBS jurisdictions</li>
                   </ol>
-                  <p>Below, we outline how each version works.</p>
+                  <Text>Below, we outline how each version works.</Text>
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>Integrated eCR Viewer</SectionSubheader>
@@ -271,12 +273,14 @@ export default function EcrViewer() {
               </SectionContentContainer>
             </section>
             <section id="technical-resources">
-              <div>
-                <SectionHeader>Technical resources</SectionHeader>
-                <p className="text-base font-normal leading-relaxed text-[#224a58]">
-                  Find the resources you need to successfully use the eCR Viewer
-                  in your jurisdiction.
-                </p>
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-[.94rem]">
+                  <SectionHeader>Technical resources</SectionHeader>
+                  <Text>
+                    Find the resources you need to successfully use the eCR
+                    Viewer in your jurisdiction.
+                  </Text>
+                </div>
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                   <div className="flex flex-col gap-2">
                     <SectionSubheader>Installing eCR Viewer</SectionSubheader>
