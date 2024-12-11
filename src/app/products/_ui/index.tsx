@@ -73,15 +73,17 @@ interface GithubNavProps {
 
 const GithubNav = ({ version, githubHref }: GithubNavProps) => {
   return (
-    <div className="max-w-[16.25rem] bg-[#dae9ee] pb-5 pt-7">
-      <div className="mr-10 flex flex-col items-center gap-1">
-        <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+    <div className="bg-[#dae9ee] pb-5 pt-7 xl:max-w-[16.25rem]">
+      <div className="flex flex-col gap-1 pl-7 pt-12">
+        <Text className="text-base font-normal leading-relaxed text-[#224a58]">
           Current version: {version}
-        </p>
-        <hr className="ml-10 h-[0px] w-full border border-[#a9aeb1]" />
+        </Text>
+        <div className="py-3">
+          <hr className="h-[0px] border border-[#a9aeb1]" />
+        </div>
         <Link
           href={githubHref}
-          className="text-base font-semibold leading-relaxed text-[#3a7d95] underline"
+          className="text-base font-semibold leading-relaxed text-[#14333d] underline"
         >
           GitHub Respository
         </Link>
@@ -190,12 +192,12 @@ const GridContainer = ({ children }: ContainerProps) => {
 };
 
 const GridLeft = ({ children }: ContainerProps) => {
-  return <div className="pt-[.625rem]">{children}</div>;
+  return <div className="pt-[3.75rem]">{children}</div>;
 };
 
 const GridMiddle = ({ children }: ContainerProps) => {
   return (
-    <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem]">
+    <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem] pt-[3.75rem]">
       {children}
     </div>
   );

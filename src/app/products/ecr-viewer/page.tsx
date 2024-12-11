@@ -29,7 +29,7 @@ import {
 export default function EcrViewer() {
   return (
     <div>
-      <ContentContainer align>
+      <ContentContainer classes='sm:pt-0' align>
         <GridContainer>
           <GridLeft>
             <Navigation />
