@@ -9,6 +9,10 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { SetStateAction, useState } from 'react';
 
+interface ContainerProps {
+  children: React.ReactNode;
+}
+
 const SendMailLink = () => {
   return (
     <Link
@@ -38,11 +42,7 @@ const TitleSection = ({ title, text }: TitleSectionProps) => {
   );
 };
 
-interface SectionHeaderProps {
-  children: React.ReactNode;
-}
-
-const SectionHeader = ({ children }: SectionHeaderProps) => {
+const SectionHeader = ({ children }: ContainerProps) => {
   return (
     <h2 className="font-['Public Sans'] text-[1.75rem] font-bold leading-[2.4rem] text-[#14333d]">
       {children}
@@ -50,7 +50,7 @@ const SectionHeader = ({ children }: SectionHeaderProps) => {
   );
 };
 
-const SectionSubheader = ({ children }: SectionHeaderProps) => {
+const SectionSubheader = ({ children }: ContainerProps) => {
   return (
     <h3 className="font-['Public Sans'] text-xl font-bold leading-7 text-[#224a58]">
       {children}
@@ -58,19 +58,11 @@ const SectionSubheader = ({ children }: SectionHeaderProps) => {
   );
 };
 
-interface SectionContentContainerProps {
-  children: React.ReactNode;
-}
-const SectionContentContainer = ({
-  children,
-}: SectionContentContainerProps) => {
+const SectionContentContainer = ({ children }: ContainerProps) => {
   return <div className="flex flex-col gap-10">{children}</div>;
 };
 
-interface SubsectionContainerProps {
-  children: React.ReactNode;
-}
-const SubsectionContainer = ({ children }: SubsectionContainerProps) => {
+const SubsectionContainer = ({ children }: ContainerProps) => {
   return <div className="flex flex-col gap-3">{children}</div>;
 };
 
@@ -126,11 +118,7 @@ const NavItem = ({
   );
 };
 
-interface AccordionItemContentProps {
-  children: React.ReactNode;
-}
-
-const AccordionItemContent = ({ children }: AccordionItemContentProps) => {
+const AccordionItemContent = ({ children }: ContainerProps) => {
   return (
     <span className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
       {children}
@@ -191,11 +179,7 @@ const Navigation = () => {
   );
 };
 
-interface GridContainerProps {
-  children: React.ReactNode;
-}
-
-const GridContainer = ({ children }: GridContainerProps) => {
+const GridContainer = ({ children }: ContainerProps) => {
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr_1fr] lg:gap-0">
       {children}
@@ -203,11 +187,11 @@ const GridContainer = ({ children }: GridContainerProps) => {
   );
 };
 
-const GridLeft = ({ children }: GridContainerProps) => {
+const GridLeft = ({ children }: ContainerProps) => {
   return <div className="pt-[.625rem]">{children}</div>;
 };
 
-const GridMiddle = ({ children }: GridContainerProps) => {
+const GridMiddle = ({ children }: ContainerProps) => {
   return (
     <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem]">
       {children}
@@ -215,7 +199,7 @@ const GridMiddle = ({ children }: GridContainerProps) => {
   );
 };
 
-const GridRight = ({ children }: GridContainerProps) => {
+const GridRight = ({ children }: ContainerProps) => {
   return <div>{children}</div>;
 };
 
@@ -288,10 +272,27 @@ const Video = ({ src, description }: VideoProps) => {
         src={src}
         allowFullScreen
       ></iframe>
-      <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
-        {description}
-      </p>
+      {description ? (
+        <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
+          {description}
+        </p>
+      ) : null}
     </div>
+  );
+};
+
+interface FigureProps extends ContainerProps {
+  caption: string;
+}
+
+const Figure = ({ children, caption }: FigureProps) => {
+  return (
+    <figure>
+      {children}
+      <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
+        {caption}
+      </figcaption>
+    </figure>
   );
 };
 
@@ -313,4 +314,5 @@ export {
   Video,
   SectionContentContainer,
   SubsectionContainer,
+  Figure,
 };

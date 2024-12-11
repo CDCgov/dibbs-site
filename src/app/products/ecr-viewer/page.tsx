@@ -22,6 +22,7 @@ import {
   Video,
   SectionContentContainer,
   SubsectionContainer,
+  Figure,
 } from '../_ui';
 
 export default function EcrViewer() {
@@ -143,12 +144,14 @@ export default function EcrViewer() {
                     Condition Summary.
                   </p>
                 </SubsectionContainer>
-                <Image
-                  alt="eCR Viewer - how it works"
-                  width={652}
-                  height={383}
-                  src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
-                />
+                <Figure caption="View of the eCR Summary section within the eCR Viewer containing sample data.">
+                  <Image
+                    alt="eCR Viewer - how it works"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
+                  />
+                </Figure>
                 <SubsectionContainer>
                   <SectionSubheader>Combined RR and eICR</SectionSubheader>
                   <p className="m-0 flex flex-col gap-8 p-0">
@@ -224,18 +227,17 @@ export default function EcrViewer() {
                     standalone tool separately from their surveillance system.
                   </p>
                 </SubsectionContainer>
-                <figure>
+                <Figure
+                  caption="View of the eCR Library within the non-integrated eCR Viewer
+                    containing sample data."
+                >
                   <Image
                     alt="eCR Viewer - how it works"
                     width={652}
                     height={383}
                     src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
                   />
-                  <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
-                    View of the eCR Library within the non-integrated eCR Viewer
-                    containing sample data.
-                  </figcaption>
-                </figure>
+                </Figure>
               </SectionContentContainer>
             </div>
             <div id="getting-started">
