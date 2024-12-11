@@ -17,7 +17,7 @@ import {
   GridLeft,
   GridMiddle,
   HaveAQuestionSection,
-  GettingStartedProcessList,
+  GettingStarted,
   Video,
   SectionContentContainer,
   SubsectionContainer,
@@ -241,35 +241,7 @@ export default function EcrViewer() {
             </section>
             <section id="getting-started">
               <SectionContentContainer>
-                <div className="flex flex-col gap-4">
-                  <SectionHeader>Getting started</SectionHeader>
-                  <div className="flex flex-col gap-6">
-                    <Text className="text-base font-normal leading-relaxed text-[#224a58]">
-                      Before you can use the eCR Viewer, you'll need to set it
-                      up and get your staff comfortable with how the eCR Viewer
-                      can help improve their data workflows.
-                    </Text>
-                    <div>
-                      <SectionSubheader>
-                        What's expected from a pilot partner:
-                      </SectionSubheader>
-                      <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
-                        <li>
-                          Work with the DIBBs team to set expectations and
-                          establish a regular meeting cadence
-                        </li>
-                        <li>
-                          Deploy the eCR Viewer in your production environment
-                        </li>
-                        <li>
-                          Provide feedback on an ongoing basis to ensure the eCR
-                          Viewer in working properly
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <GettingStartedProcessList systemName="eCR Viewer" />
+                <GettingStarted systemName="eCR Viewer" />
               </SectionContentContainer>
             </section>
             <section id="technical-resources">

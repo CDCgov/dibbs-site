@@ -218,12 +218,10 @@ const HaveAQuestionSection = () => {
   );
 };
 
-interface GettingStartedProcessListProps {
+interface GettingStartedProps {
   systemName: string;
 }
-const GettingStartedProcessList = ({
-  systemName,
-}: GettingStartedProcessListProps) => {
+const GettingStartedProcessList = ({ systemName }: GettingStartedProps) => {
   return (
     <RoundedBackground className="p-10">
       <ProcessList>
@@ -261,6 +259,40 @@ const GettingStartedProcessList = ({
         </ProcessListItem>
       </ProcessList>
     </RoundedBackground>
+  );
+};
+
+const GettingStarted = ({ systemName }: GettingStartedProps) => {
+  return (
+    <>
+      <div className="flex flex-col gap-4">
+        <SectionHeader>Getting started</SectionHeader>
+        <div className="flex flex-col gap-6">
+          <Text>
+            Before you can use the {systemName}, you'll need to set it up and
+            get your staff comfortable with how the {systemName} can help
+            improve their data workflows.
+          </Text>
+          <div>
+            <SectionSubheader>
+              What's expected from a pilot partner:
+            </SectionSubheader>
+            <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
+              <li>
+                Work with the DIBBs team to set expectations and establish a
+                regular meeting cadence
+              </li>
+              <li>Deploy the {systemName} in your production environment</li>
+              <li>
+                Provide feedback on an ongoing basis to ensure the {systemName}{' '}
+                in working properly
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <GettingStartedProcessList systemName={systemName} />
+    </>
   );
 };
 
@@ -339,6 +371,7 @@ export {
   GridMiddle,
   GridRight,
   HaveAQuestionSection,
+  GettingStarted,
   GettingStartedProcessList,
   Video,
   SectionContentContainer,
