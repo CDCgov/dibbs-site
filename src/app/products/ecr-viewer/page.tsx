@@ -1,13 +1,7 @@
 'use client';
 import { ContentContainer } from '@/app/components/ContentContainer/ContentContainer';
 import { basePath } from '@/app/utils/constants';
-import {
-  ProcessList,
-  ProcessListItem,
-  ProcessListHeading,
-  Accordion,
-  Link,
-} from '@trussworks/react-uswds';
+import { Accordion, Link } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import './styles.scss';
 import { RoundedBackground } from '@/app/components/RoundedBackground/RoundedBackground';
@@ -19,19 +13,25 @@ import {
   AccordionItemContent,
   SendMailLink,
   GithubNav,
+  GridContainer,
+  GridRight,
+  GridLeft,
+  GridMiddle,
+  HaveAQuestionSection,
+  GettingStartedProcessList,
 } from '../_ui';
 
 export default function EcrViewer() {
   return (
     <div>
       <ContentContainer align>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr_1fr] lg:gap-0">
-          <div className="pt-[.625rem]">
+        <GridContainer>
+          <GridLeft>
             <div className="lg:sticky lg:top-4">
               <Navigation />
             </div>
-          </div>
-          <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem]">
+          </GridLeft>
+          <GridMiddle>
             <TitleSection
               title="eCR Viewer"
               text="An intuitive interface that helps epidemiologists and case
@@ -270,50 +270,7 @@ export default function EcrViewer() {
                     </div>
                   </div>
                 </div>
-                <RoundedBackground className="p-10">
-                  <ProcessList>
-                    <ProcessListItem>
-                      <ProcessListHeading type="h3">
-                        Gather your team
-                      </ProcessListHeading>
-                      <p>
-                        You'll need someone at your jurisdiction to act as the
-                        point of contact with the DIBBs team as well as a
-                        technical point of contact who is familiar with your
-                        data environment. Sometimes one person fills both of
-                        those roles.
-                      </p>
-                    </ProcessListItem>
-                    <ProcessListItem>
-                      <ProcessListHeading type="h3">
-                        Attend kickoff call
-                      </ProcessListHeading>
-                      <p>
-                        During this kickoff, we'll discuss how eCR Viewer works,
-                        the technical requirements, and your eCR data needs.
-                      </p>
-                    </ProcessListItem>
-                    <ProcessListItem>
-                      <ProcessListHeading type="h3">
-                        Get set up
-                      </ProcessListHeading>
-                      <p>
-                        Work with the DIBBs team to test the eCR Viewer with
-                        your staff and to get the tool up and running in your
-                        data environment.
-                      </p>
-                    </ProcessListItem>
-                    <ProcessListItem>
-                      <ProcessListHeading type="h3">
-                        Provide ongoing feedback
-                      </ProcessListHeading>
-                      <p>
-                        Tell us what's going well and what could be better so we
-                        can improve your experience with the eCR Viewer.
-                      </p>
-                    </ProcessListItem>
-                  </ProcessList>
-                </RoundedBackground>
+                <GettingStartedProcessList systemName="eCR Viewer" />
               </div>
             </div>
             <div id="technical-resources">
@@ -555,18 +512,13 @@ export default function EcrViewer() {
                   },
                 ]}
               />
-              <div className="flex flex-col gap-3">
-                <h3>Have a question that isn't answered above?</h3>
-                <p className="font-['Public Sans'] m-0 p-0 text-base font-bold leading-snug text-[#224a58]">
-                  Please get in touch with our team at <SendMailLink />
-                </p>
-              </div>
+              <HaveAQuestionSection />
             </div>
-          </div>
-          <div>
+          </GridMiddle>
+          <GridRight>
             <GithubNav version="1.1.1" githubHref="/" />
-          </div>
-        </div>
+          </GridRight>
+        </GridContainer>
       </ContentContainer>
     </div>
   );

@@ -1,4 +1,5 @@
-import { SideNav } from '@trussworks/react-uswds';
+import { RoundedBackground } from '@/app/components/RoundedBackground/RoundedBackground';
+import { ProcessList, ProcessListHeading, ProcessListItem, SideNav } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { SetStateAction, useState } from 'react';
@@ -169,6 +170,91 @@ const Navigation = () => {
   );
 };
 
+interface GridContainerProps {
+  children: React.ReactNode;
+}
+
+const GridContainer = ({ children }: GridContainerProps) => {
+  return (
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr_1fr] lg:gap-0">
+      {children}
+    </div>
+  );
+};
+
+const GridLeft = ({ children }: GridContainerProps) => {
+  return <div className="pt-[.625rem]">{children}</div>;
+};
+
+const GridMiddle = ({ children }: GridContainerProps) => {
+  return (
+    <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem]">
+      {children}
+    </div>
+  );
+};
+
+const GridRight = ({ children }: GridContainerProps) => {
+  return <div>{children}</div>;
+};
+
+const HaveAQuestionSection = () => {
+  return (
+    <div className="flex flex-col gap-3">
+      <h3>Have a question that isn't answered above?</h3>
+      <p className="font-['Public Sans'] m-0 p-0 text-base font-bold leading-snug text-[#224a58]">
+        Please get in touch with our team at <SendMailLink />
+      </p>
+    </div>
+  );
+};
+
+interface GettingStartedProcessListProps {
+  systemName: string;
+}
+const GettingStartedProcessList = ({
+  systemName,
+}: GettingStartedProcessListProps) => {
+  return (
+    <RoundedBackground className="p-10">
+      <ProcessList>
+        <ProcessListItem>
+          <ProcessListHeading type="h3">Gather your team</ProcessListHeading>
+          <p>
+            You'll need someone at your jurisdiction to act as the point of
+            contact with the DIBBs team as well as a technical point of contact
+            who is familiar with your data environment. Sometimes one person
+            fills both of those roles.
+          </p>
+        </ProcessListItem>
+        <ProcessListItem>
+          <ProcessListHeading type="h3">Attend kickoff call</ProcessListHeading>
+          <p>
+            During this kickoff, we'll discuss how {systemName} works, the
+            technical requirements, and your eCR data needs.
+          </p>
+        </ProcessListItem>
+        <ProcessListItem>
+          <ProcessListHeading type="h3">Get set up</ProcessListHeading>
+          <p>
+            Work with the DIBBs team to test the {systemName} with your staff
+            and to get the tool up and running in your data environment.
+          </p>
+        </ProcessListItem>
+        <ProcessListItem>
+          <ProcessListHeading type="h3">
+            Provide ongoing feedback
+          </ProcessListHeading>
+          <p>
+            Tell us what's going well and what could be better so we can improve
+            your experience with the {systemName}.
+          </p>
+        </ProcessListItem>
+      </ProcessList>
+    </RoundedBackground>
+  );
+};
+
 export {
   SendMailLink,
   TitleSection,
@@ -178,4 +264,10 @@ export {
   NavItem,
   AccordionItemContent,
   Navigation,
+  GridContainer,
+  GridLeft,
+  GridMiddle,
+  GridRight,
+  HaveAQuestionSection,
+  GettingStartedProcessList,
 };
