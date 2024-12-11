@@ -73,7 +73,7 @@ interface GithubNavProps {
 
 const GithubNav = ({ version, githubHref }: GithubNavProps) => {
   return (
-    <div className="max-w-[16.25rem] bg-[#dae9ee] bg-[#e7f2f5] pb-5 pt-7">
+    <div className="max-w-[16.25rem] bg-[#dae9ee] pb-5 pt-7">
       <div className="mr-10 flex flex-col items-center gap-1">
         <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
           Current version: {version}
