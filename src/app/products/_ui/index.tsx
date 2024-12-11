@@ -319,7 +319,7 @@ interface FigureProps extends ContainerProps {
 
 const Figure = ({ children, caption }: FigureProps) => {
   return (
-    <figure>
+    <figure className="flex flex-col gap-3">
       {children}
       <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
         {caption}
