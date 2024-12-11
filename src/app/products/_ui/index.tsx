@@ -193,7 +193,7 @@ const GridLeft = ({ children }: GridContainerProps) => {
 
 const GridMiddle = ({ children }: GridContainerProps) => {
   return (
-    <div className="grid grid-cols-1 gap-10 px-[3.75rem]">
+    <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem]">
       {children}
     </div>
   );
