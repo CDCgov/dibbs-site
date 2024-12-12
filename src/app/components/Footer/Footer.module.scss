@@ -23,11 +23,11 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url($base-path + '/images/homepage-hero-bg.jpeg');
-    background-size: 120%;
+    background-image: url($base-path + '/images/footer-bg.png');
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 1;
     z-index: 0;
   }
 

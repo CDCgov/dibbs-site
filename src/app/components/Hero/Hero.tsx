@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ header, subheader }: HeroProps) {
   return (
-    <section className="usa-graphic-list usa-section usa-section--light-blue">
+    <section className="usa-graphic-list usa-section">
       <GridContainer>
         <div className={styles.content}>
           <div className="flex flex-col items-start gap-3 self-start">

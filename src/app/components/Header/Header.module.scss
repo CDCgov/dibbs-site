@@ -40,15 +40,12 @@
 
 .homepage-hero {
   @extend %hero-base;
+  background: #1d2553;
 
   &::before {
-    background: linear-gradient(
-        90deg,
-        rgba(76, 43, 100, 0.85) 12%,
-        rgba(0, 94, 162, 0.85) 50%,
-        rgba(0, 129, 161, 0.85) 98%
-      ),
-      url($base-path + '/images/homepage-hero-bg.jpeg');
+    background: url($base-path + '/images/homepage-hero-bg.png') no-repeat
+      center center;
+    background-size: cover;
   }
 }
 
