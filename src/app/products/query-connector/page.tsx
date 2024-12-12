@@ -146,21 +146,21 @@ pull relevant data from a wide network of healthcare providers."
                 />
                 <SubsectionContainer>
                   <SectionSubheader>Build custom queries</SectionSubheader>
+                  <Text>
+                    Administrators at your jurisdiction can generate custom
+                    queries from pre-set condition templates that leverage
+                    values published by the Value Set Authority Center (VSAC).
+                    Case investigators will use these custom queries to search
+                    for data specific to their use case. Administrators can also
+                    manage user access through custom permissions.
+                  </Text>
+                  <Image
+                    alt="Query Connector - custom query example"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/products/query-connector/custom-query.png`}
+                  />
                 </SubsectionContainer>
-                <Text>
-                  Administrators at your jurisdiction can generate custom
-                  queries from pre-set condition templates that leverage values
-                  published by the Value Set Authority Center (VSAC). Case
-                  investigators will use these custom queries to search for data
-                  specific to their use case. Administrators can also manage
-                  user access through custom permissions.
-                </Text>
-                <Image
-                  alt="Query Connector - custom query example"
-                  width={652}
-                  height={383}
-                  src={`${basePath}/images/products/query-connector/custom-query.png`}
-                />
                 <SubsectionContainer>
                   <SectionSubheader>Automated data connection</SectionSubheader>
                   <Text>
