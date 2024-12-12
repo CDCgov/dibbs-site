@@ -131,53 +131,27 @@ const AccordionItemContent = ({ children }: ContainerProps) => {
 const Navigation = () => {
   const [selectedHash, setSelectedHash] = useState('#overview');
 
+  const navItems = [
+    { title: 'Overview', id: 'overview' },
+    { title: 'Product features', id: 'product-features' },
+    { title: 'How it works', id: 'how-it-works' },
+    { title: 'Getting started', id: 'getting-started' },
+    { title: 'Technical resources', id: 'technical-resources' },
+    { title: 'FAQs', id: 'faqs' },
+  ];
+
   return (
     <div className="lg:sticky lg:top-4">
       <SideNav
-        items={[
+        items={navItems.map(({ title, id }) => (
           <NavItem
-            title="Overview"
-            id="overview"
-            key="overview"
+            title={title}
+            id={id}
+            key={id}
             selectedHash={selectedHash}
             setSelectedHash={setSelectedHash}
-          />,
-          <NavItem
-            title="Product features"
-            id="product-features"
-            key="product-features"
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />,
-          <NavItem
-            title="How it works"
-            id="how-it-works"
-            key="how-it-works"
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />,
-          <NavItem
-            title="Getting started"
-            id="getting-started"
-            key="getting-started"
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />,
-          <NavItem
-            title="Technical resources"
-            id="technical-resources"
-            key="technical-resources"
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />,
-          <NavItem
-            title="FAQs"
-            id="faqs"
-            key="faqs"
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />,
-        ]}
+          />
+        ))}
       />
     </div>
   );
