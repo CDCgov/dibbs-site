@@ -34,6 +34,13 @@ section {
   background: var(--background);
 }
 
+main
+  section:last-of-type:not(:has(~ .remove-footer-bar)):not(
+    :where(:has(.remove-footer-bar) *)
+  ) {
+  margin-bottom: 2rem;
+}
+
 .usa-logo a {
   color: #ffffff;
 }

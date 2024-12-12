@@ -17,7 +17,7 @@ export const InvitationCta = () => {
     <section
       className={classNames(
         styles.invitationCtaSection,
-        'hide-footer-bar usa-section bg-transparent',
+        'hide-footer-bar usa-section remove-footer-bar bg-transparent',
       )}
     >
       <GridContainer>
