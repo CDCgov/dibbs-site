@@ -53,7 +53,7 @@ function StandaloneProducts() {
               status="development"
               imgSrc={`${basePath}/images/products/query-connector.png`}
               linkText="Learn more about Query Connector"
-              linkToHref=""
+              linkToHref="/products/query-connector"
               linkVariant="primary"
             />
             <ProductCard
