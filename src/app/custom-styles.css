@@ -30,6 +30,10 @@ body {
   background: var(--background);
 }
 
+section {
+  background: var(--background);
+}
+
 .usa-logo a {
   color: #ffffff;
 }
@@ -138,4 +142,18 @@ main:has(.hide-footer-bar) ~ .footer-bar::before {
 
 main:has(.hide-footer-bar) ~ .footer-bar {
   display: none !important;
+}
+
+.site-background {
+  background: var(--background);
+  background-image: url('/images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  min-height: 100vh;
+}
+
+/* Only affects immediate parent */
+*:has(> .remove-parent-bg) {
+  background: transparent !important;
 }

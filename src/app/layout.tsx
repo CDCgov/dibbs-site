@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <USABanner />
-        <div>
+        <div className="site-background">
           <HeroContextProvider>
             <Header />
             <main id="main-content">{children}</main>
