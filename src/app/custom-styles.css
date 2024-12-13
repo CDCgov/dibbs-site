@@ -38,11 +38,11 @@ main
   > *:last-child:not(:has(~ .remove-footer-bar)):not(
     :where(:has(.remove-footer-bar) *)
   ) {
-  margin-bottom: 2rem;
+  @apply mb-8;
 }
 
 main > *:not(.remove-footer-bar) {
-  background: var(--background);
+  @apply bg-background;
 }
 
 .usa-logo a {
