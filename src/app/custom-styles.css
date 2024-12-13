@@ -39,7 +39,6 @@ main
     :where(:has(.remove-footer-bar) *)
   ) {
   margin-bottom: 2rem;
-  background: var(--background);
 }
 
 main > *:not(.remove-footer-bar) {
