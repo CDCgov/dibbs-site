@@ -8,6 +8,7 @@ import {
 import classNames from 'classnames';
 import Link from 'next/link';
 import { SetStateAction, useState } from 'react';
+import './styles.scss';
 
 interface ContainerProps {
   children: React.ReactNode;

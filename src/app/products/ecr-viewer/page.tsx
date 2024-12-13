@@ -3,7 +3,6 @@ import { ContentContainer } from '@/app/components/ContentContainer/ContentConta
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import Image from 'next/image';
-import './styles.scss';
 import {
   Navigation,
   TitleSection,
