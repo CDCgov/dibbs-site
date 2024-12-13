@@ -250,13 +250,15 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
             <SectionSubheader>
               What's expected from a pilot partner:
             </SectionSubheader>
-            <ul className="list__full-width text-base font-semibold leading-relaxed text-[#224a58]">
-              <li>
+            <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+              <li className="min-w-full">
                 Work with the DIBBs team to set expectations and establish a
                 regular meeting cadence
               </li>
-              <li>Deploy the {systemName} in your production environment</li>
-              <li>
+              <li className="min-w-full">
+                Deploy the {systemName} in your production environment
+              </li>
+              <li className="min-w-full">
                 Provide feedback on an ongoing basis to ensure the {systemName}{' '}
                 in working properly
               </li>
