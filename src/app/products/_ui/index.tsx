@@ -172,7 +172,7 @@ const GridLeft = ({ children }: ContainerProps) => {
 
 const GridMiddle = ({ children }: ContainerProps) => {
   return (
-    <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem] pt-[3.75rem]">
+    <div className="grid grid-cols-1 gap-[3.75rem] px-2 pt-2 md:px-[3.75rem] md:pt-[3.75rem]">
       {children}
     </div>
   );
