@@ -35,10 +35,15 @@ section {
 }
 
 main
-  section:last-of-type:not(:has(~ .remove-footer-bar)):not(
+  > *:last-child:not(:has(~ .remove-footer-bar)):not(
     :where(:has(.remove-footer-bar) *)
   ) {
   margin-bottom: 2rem;
+  background: var(--background);
+}
+
+main:has(.remove-footer-bar) > *:nth-last-child(2) {
+  background: var(--background);
 }
 
 .usa-logo a {
