@@ -324,7 +324,7 @@ const ValueList = ({ children }: ContainerProps) => {
     <RoundedBackground className="p-10">
       <SubsectionContainer>
         <SectionSubheader>The value to you:</SectionSubheader>
-        <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
+        <ul className="flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
           {children}
         </ul>
       </SubsectionContainer>
