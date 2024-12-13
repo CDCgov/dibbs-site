@@ -1,23 +1,16 @@
-li.usa-process-list__item {
-  border-left-color: #dae9ee;
+.process-list-item {
+  li {
+    border-left-color: #dae9ee;
 
-  &:before {
-    background-color: var(--background);
-    color: #6499af;
-    box-shadow: 0 0;
-    border-color: #6499af;
-  }
+    &:before {
+      background-color: var(--background);
+      color: #6499af;
+      box-shadow: 0 0;
+      border-color: #6499af;
+    }
 
-  h3 {
-    color: #224a58;
-  }
-}
-
-button.usa-accordion__button {
-  background-color: white;
-  color: #224a58;
-
-  &:hover {
-    background-color: #fbfcfc; // placeholder color
+    h3 {
+      color: #224a58;
+    }
   }
 }

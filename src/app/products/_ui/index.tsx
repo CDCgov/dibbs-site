@@ -224,7 +224,7 @@ const GettingStartedProcessList = ({ systemName }: GettingStartedProps) => {
 
   return (
     <RoundedBackground className="p-10">
-      <ProcessList>
+      <ProcessList className="process-list-item">
         {steps.map(({ heading, content }) => (
           <ProcessListItem key={heading}>
             <ProcessListHeading type="h3">{heading}</ProcessListHeading>
