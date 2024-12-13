@@ -42,7 +42,7 @@ main
   background: var(--background);
 }
 
-main:has(.remove-footer-bar) > *:nth-last-child(2) {
+main > *:not(.remove-footer-bar) {
   background: var(--background);
 }
 
