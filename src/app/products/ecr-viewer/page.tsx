@@ -23,15 +23,24 @@ import {
   Figure,
   Text,
   ValueList,
+  NavItem,
 } from '../_ui';
 
 export default function EcrViewer() {
+  const navItems: NavItem[] = [
+    { title: 'Overview', id: 'overview' },
+    { title: 'Product features', id: 'product-features' },
+    { title: 'How it works', id: 'how-it-works' },
+    { title: 'Getting started', id: 'getting-started' },
+    { title: 'Technical resources', id: 'technical-resources' },
+    { title: 'FAQs', id: 'faqs' },
+  ];
   return (
     <div>
       <ContentContainer classes="sm:pt-0" align>
         <GridContainer>
           <GridLeft>
-            <Navigation />
+            <Navigation navItems={navItems} />
           </GridLeft>
           <GridMiddle>
             <TitleSection

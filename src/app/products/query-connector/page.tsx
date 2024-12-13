@@ -16,17 +16,24 @@ import {
   SectionSubheader,
   GettingStarted,
   HaveAQuestionSection,
+  NavItem,
 } from '../_ui';
 import Image from 'next/image';
 import { basePath } from '@/app/utils/constants';
 
 export default function QueryConnector() {
+  const navItems: NavItem[] = [
+    { title: 'Overview', id: 'overview' },
+    { title: 'Product features', id: 'product-features' },
+    { title: 'Development status', id: 'development-status' },
+    { title: 'Getting started', id: 'getting-started' },
+  ];
   return (
     <div>
       <ContentContainer classes="sm:pt-0" align>
         <GridContainer>
           <GridLeft>
-            <Navigation />
+            <Navigation navItems={navItems} />
           </GridLeft>
           <GridMiddle>
             <TitleSection

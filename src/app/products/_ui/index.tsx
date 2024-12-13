@@ -129,17 +129,12 @@ const AccordionItemContent = ({ children }: ContainerProps) => {
   );
 };
 
-const Navigation = () => {
+export type NavItem = { title: string; id: string };
+interface NavigationProps {
+  navItems: NavItem[];
+}
+const Navigation = ({ navItems }: NavigationProps) => {
   const [selectedHash, setSelectedHash] = useState('#overview');
-
-  const navItems = [
-    { title: 'Overview', id: 'overview' },
-    { title: 'Product features', id: 'product-features' },
-    { title: 'How it works', id: 'how-it-works' },
-    { title: 'Getting started', id: 'getting-started' },
-    { title: 'Technical resources', id: 'technical-resources' },
-    { title: 'FAQs', id: 'faqs' },
-  ];
 
   return (
     <div className="lg:sticky lg:top-4">
