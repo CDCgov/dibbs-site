@@ -137,13 +137,13 @@ pull relevant data from a wide network of healthcare providers."
                     relevant to the use case in an easily readable format,
                     making data more usable for case investigation.
                   </Text>
+                  <Image
+                    alt="Query Connector - enter patient information form"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/products/query-connector/surface-patient-data.png`}
+                  />
                 </SubsectionContainer>
-                <Image
-                  alt="Query Connector - enter patient information form"
-                  width={652}
-                  height={383}
-                  src={`${basePath}/images/products/query-connector/surface-patient-data.png`}
-                />
                 <SubsectionContainer>
                   <SectionSubheader>Build custom queries</SectionSubheader>
                   <Text>
