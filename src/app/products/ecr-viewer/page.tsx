@@ -1,38 +1,51 @@
 'use client';
 import { ContentContainer } from '@/app/components/ContentContainer/ContentContainer';
-import Hero from '@/app/components/Hero/Hero';
 import { basePath } from '@/app/utils/constants';
-import {
-  ProcessList,
-  ProcessListItem,
-  ProcessListHeading,
-  Accordion,
-  Link,
-} from '@trussworks/react-uswds';
+import { Accordion, Link } from '@trussworks/react-uswds';
 import { SideNav } from '@/app/components/SideNav/SideNav';
 import Image from 'next/image';
 import './styles.scss';
+import {
+  Navigation,
+  TitleSection,
+  SectionHeader,
+  SectionSubheader,
+  AccordionItemContent,
+  SendMailLink,
+  GithubNav,
+  GridContainer,
+  GridRight,
+  GridLeft,
+  GridMiddle,
+  HaveAQuestionSection,
+  GettingStarted,
+  Video,
+  SectionContentContainer,
+  SubsectionContainer,
+  Figure,
+  Text,
+  ValueList,
+} from '../_ui';
 
 export default function EcrViewer() {
   return (
     <div>
-      <Hero
-        header="eCR Viewer"
-        subheader="An intuitive interface that helps epidemiologists and case investigators make better sense of eCR data, faster."
-      />
-      <ContentContainer align>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr_1fr] lg:gap-0">
-          <div className="pt-[.625rem]">
-            <div className="lg:sticky lg:top-4">
-              <Navigation />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-[3.75rem] pl-10 pr-10">
-            <div id="overview">
-              <div className="flex flex-col gap-3">
-                <h1 className="font-bold text-[#224a58]">Overview</h1>
-                <div className="flex flex-col gap-10">
-                  <p className="m-0 flex flex-col gap-10 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+      <ContentContainer classes="sm:pt-0" align>
+        <GridContainer>
+          <GridLeft>
+            <Navigation />
+          </GridLeft>
+          <GridMiddle>
+            <TitleSection
+              title="eCR Viewer"
+              text="An intuitive interface that helps epidemiologists and case
+                investigators make better sense of eCR data, faster."
+            />
+            <section id="overview">
+              <SubsectionContainer>
+                <SectionHeader>Overview</SectionHeader>
+                <SectionContentContainer>
+                  <Text className="flex flex-col gap-6">
                     <span>
                       The eCR Viewer is a tool that aims to improve the
                       usability of electronic case reporting (eCR) data by
@@ -65,86 +78,81 @@ export default function EcrViewer() {
                       non-NBS jurisdictions to manage and view eCR documents
                       separately from their surveillance system.
                     </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h2 className="text-2xl">The value to you</h2>
-              <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
-                <li>
-                  Surfaces the most relevant information in a summary at the top
-                  of the eCR, so any staff member can quickly find the
-                  information they need
-                </li>
-                <li>
-                  Combines information from both the eICR and RR, so
-                  epidemiologists reviewing the eCR can understand why it was
-                  sent to their jurisdiction
-                </li>
-                <li>
-                  Lives outside your case surveillance system as an API, which
-                  reduces storage burden on your overall system while allowing
-                  seamless access for epidemiologists who need it
-                </li>
-                <li>
-                  Keeps data formats consistent regardless of which EHR system
-                  generated the eCR
-                </li>
-                <li>Open source and free to use</li>
-                <li>
-                  Offers flexible hosting, either within your jurisdiction or
-                  through a CDC-hosted option
-                </li>
-              </ul>
-            </div>
-            <div id="demo">
-              <div className="flex flex-col gap-3">
-                <h2>Demo</h2>
-                <div className="flex flex-col gap-3">
-                  <Image
-                    alt="placeholder video"
-                    width={652}
-                    height={383}
-                    src={`${basePath}/images/placeholder.png`}
-                  />
-                  <span className="text-base font-normal italic leading-relaxed text-[#224a58]">
-                    See how the eCR Viewer can improve the way your jurisdiction
-                    uses eCR data.
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div id="product-features">
-              <div className="flex flex-col gap-10">
-                <div className="flex flex-col gap-3">
-                  <h2>Product features</h2>
-                  <p className="m-0 p-0">
+                  </Text>
+                  <SubsectionContainer>
+                    <ValueList>
+                      <li>
+                        Surfaces the most relevant information in a summary at
+                        the top of the eCR, so any staff member can quickly find
+                        the information they need
+                      </li>
+                      <li>
+                        Combines information from both the eICR and RR, so
+                        epidemiologists reviewing the eCR can understand why it
+                        was sent to their jurisdiction
+                      </li>
+                      <li>
+                        Lives outside your case surveillance system as an API,
+                        which reduces storage burden on your overall system
+                        while allowing seamless access for epidemiologists who
+                        need it
+                      </li>
+                      <li>
+                        Keeps data formats consistent regardless of which EHR
+                        system generated the eCR
+                      </li>
+                      <li>Open source and free to use</li>
+                      <li>
+                        Offers flexible hosting, either within your jurisdiction
+                        or through a CDC-hosted option
+                      </li>
+                    </ValueList>
+                  </SubsectionContainer>
+                  <div>
+                    <SubsectionContainer>
+                      <SectionSubheader>Demo</SectionSubheader>
+                      <Video
+                        src="https://www.loom.com/embed/f59bf06efe3847c286829da95d4fd36d?sid=7171105a-cff8-4dd0-8ee5-9f32cca35f60"
+                        description="See how the eCR Viewer can improve the way your jurisdiction
+                  uses eCR data."
+                      />
+                    </SubsectionContainer>
+                  </div>
+                </SectionContentContainer>
+              </SubsectionContainer>
+            </section>
+            <section id="product-features">
+              <SectionContentContainer>
+                <SubsectionContainer>
+                  <SectionHeader>Product features</SectionHeader>
+                  <Text>
                     Using the eCR Viewer, public health staff can easily find
                     data relevant to a reportable condition. The eCR Viewer
                     offers several features that make eCR data more usable for
                     your jurisdiction.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-8">
-                  <h3>eCR Summary</h3>
-                  <p className="m-0 p-0">
+                  </Text>
+                </SubsectionContainer>
+                <SubsectionContainer>
+                  <SectionSubheader>eCR Summary</SectionSubheader>
+                  <Text>
                     The eCR Viewer surfaces key information in a summary at the
                     top of the eCR document, helping you understand the eCR
                     document at a glance. This eCR Summary is divided into three
                     categories: Patient Summary, Encounter Summary, and
                     Condition Summary.
-                  </p>
-                </div>
-                <Image
-                  alt="eCR Viewer - how it works"
-                  width={652}
-                  height={383}
-                  src={`${basePath}/images/ecr-viewer_how-it-works.gif`}
-                />
-                <div className="flex flex-col gap-6">
-                  <h3>Combined RR and eICR</h3>
-                  <p className="m-0 flex flex-col gap-8 p-0">
+                  </Text>
+                </SubsectionContainer>
+                <Figure caption="View of the eCR Summary section within the eCR Viewer containing sample data.">
+                  <Image
+                    alt="eCR Viewer - how it works"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
+                  />
+                </Figure>
+                <SubsectionContainer>
+                  <SectionSubheader>Combined RR and eICR</SectionSubheader>
+                  <Text className="flex flex-col gap-8">
                     <span>
                       The eCR Viewer combines electronic initial case report
                       (eICR) and Reportability Response (RR) data together,
@@ -159,152 +167,97 @@ export default function EcrViewer() {
                       than what's currently available by default in the HTML or
                       surveillance system views
                     </span>
-                  </p>
-                </div>
-                <div className="flex flex-col gap-6">
-                  <h3>Consistent data display</h3>
-                  <p className="m-0 p-0">
+                  </Text>
+                </SubsectionContainer>
+                <SubsectionContainer>
+                  <SectionSubheader>Consistent data display</SectionSubheader>
+                  <Text>
                     No matter who sent the eCR, every eCR you view in the eCR
                     Viewer will look the same. The eCR Viewer groups the full
                     eCR document into five main sections:
-                  </p>
-                  <ul className="mt-0 flex list-disc flex-col gap-2 font-semibold">
+                  </Text>
+                  <ul className="mt-0 flex list-disc flex-col font-semibold">
                     <li>Patient Info</li>
                     <li>Encounter Info</li>
                     <li>Clinical Info</li>
                     <li>Lab Info</li>
                     <li>eCR Metadata</li>
                   </ul>
-                  <p className="m-0 p-0">
+                  <Text>
                     The ordering of the five main sections, as well as the
                     fields within those sections, is always the same, so you can
                     quickly scroll through the eCR to find the information
                     you're looking for.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div id="how-it-works">
-              <h2>How it works</h2>
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-6">
-                  <p>We currently offer two versions of the eCR Viewer.</p>
-                  <ol className="mt-0 list-decimal pl-4">
+                  </Text>
+                </SubsectionContainer>
+              </SectionContentContainer>
+            </section>
+            <section id="how-it-works">
+              <SectionContentContainer>
+                <SubsectionContainer>
+                  <SectionHeader>How it works</SectionHeader>
+                  <Text>
+                    We currently offer two versions of the eCR Viewer.
+                  </Text>
+                  <ol className="mt-0 list-decimal pl-4 font-semibold">
                     <li>Direct integration with NBS</li>
                     <li>Standalone option for non-NBS jurisdictions</li>
                   </ol>
-                  <p>Below, we outline how each version works.</p>
-                </div>
-                <div className="flex flex-col gap-6">
-                  <h3>Integrated eCR Viewer</h3>
-                  <p className="m-0 p-0">
+                  <Text>Below, we outline how each version works.</Text>
+                </SubsectionContainer>
+                <SubsectionContainer>
+                  <SectionSubheader>Integrated eCR Viewer</SectionSubheader>
+                  <Text>
                     The integrated version allows users to access the eCR Viewer
                     directly within their surveillance system. Direct
                     integration is currently supported by NBS. Once installed,
                     the eCR Viewer is activated from the existing eCR document
                     view in NBS, using the “View eICR Document” button. This
                     will open a separate window with the eCR Viewer.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-6">
-                  <h3>Non-integrated eCR Viewer</h3>
-                  <p className="m-0 p-0">
+                  </Text>
+                </SubsectionContainer>
+                <SubsectionContainer>
+                  <SectionSubheader>Non-integrated eCR Viewer</SectionSubheader>
+                  <Text>
                     The non-integrated version offers a standalone tool for
                     users to view eCR documents outside of their jurisdiction's
                     surveillance system. In addition to the core eCR Viewer,
                     this tool provides an eCR Library homepage, allowing users
                     to filter and sort eCR documents. Users would log into the
                     standalone tool separately from their surveillance system.
-                  </p>
+                  </Text>
+                </SubsectionContainer>
+                <Figure
+                  caption="View of the eCR Library within the non-integrated eCR Viewer
+                    containing sample data."
+                >
+                  <Image
+                    alt="Non-integrated eCR Viewer example"
+                    className="rounded-lg shadow"
+                    width={652}
+                    height={383}
+                    src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
+                  />
+                </Figure>
+              </SectionContentContainer>
+            </section>
+            <section id="getting-started">
+              <SectionContentContainer>
+                <GettingStarted systemName="eCR Viewer" />
+              </SectionContentContainer>
+            </section>
+            <section id="technical-resources">
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-[.94rem]">
+                  <SectionHeader>Technical resources</SectionHeader>
+                  <Text>
+                    Find the resources you need to successfully use the eCR
+                    Viewer in your jurisdiction.
+                  </Text>
                 </div>
-              </div>
-            </div>
-            <div id="getting-started">
-              <div className="flex flex-col gap-10">
-                <div className="flex flex-col gap-4">
-                  <h2 className="font-bold text-[#224a58]">Getting started</h2>
-                  <div className="flex flex-col gap-6">
-                    <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
-                      Before you can use the eCR Viewer, you'll need to set it
-                      up and get your staff comfortable with how the eCR Viewer
-                      can help improve their data workflows.
-                    </p>
-                    <div>
-                      <p className="m-0 p-0 text-base font-bold leading-relaxed text-[#224a58]">
-                        What's expected from a pilot partner:
-                      </p>
-                      <ul className="list__full-width text-base font-normal leading-relaxed text-[#224a58]">
-                        <li>
-                          Work with the DIBBs team to set expectations and
-                          establish a regular meeting cadence
-                        </li>
-                        <li>
-                          Deploy the eCR Viewer in your production environment
-                        </li>
-                        <li>
-                          Provide feedback on an ongoing basis to ensure the eCR
-                          Viewer in working properly
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <ProcessList>
-                  <ProcessListItem>
-                    <ProcessListHeading type="h4">
-                      Gather your team
-                    </ProcessListHeading>
-                    <p>
-                      You'll need someone at your jurisdiction to act as the
-                      point of contact with the DIBBs team as well as a
-                      technical point of contact who is familiar with your data
-                      environment. Sometimes one person fills both of those
-                      roles.
-                    </p>
-                  </ProcessListItem>
-                  <ProcessListItem>
-                    <ProcessListHeading type="h4">
-                      Attend kickoff call
-                    </ProcessListHeading>
-                    <p>
-                      During this kickoff, we'll discuss how eCR Viewer works,
-                      the technical requirements, and your eCR data needs.
-                    </p>
-                  </ProcessListItem>
-                  <ProcessListItem>
-                    <ProcessListHeading type="h4">
-                      Get set up
-                    </ProcessListHeading>
-                    <p>
-                      Work with the DIBBs team to test the eCR Viewer with your
-                      staff and to get the tool up and running in your data
-                      environment.
-                    </p>
-                  </ProcessListItem>
-                  <ProcessListItem>
-                    <ProcessListHeading type="h4">
-                      Provide ongoing feedback
-                    </ProcessListHeading>
-                    <p>
-                      Tell us what's going well and what could be better so we
-                      can improve your experience with the eCR Viewer.
-                    </p>
-                  </ProcessListItem>
-                </ProcessList>
-              </div>
-            </div>
-            <div id="technical-resources">
-              <div>
-                <h2 className="font-bold text-[#224a58]">
-                  Technical resources
-                </h2>
-                <p className="text-base font-normal leading-relaxed text-[#224a58]">
-                  Find the resources you need to successfully use the eCR Viewer
-                  in your jurisdiction.
-                </p>
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-xl">Installing eCR Viewer</h3>
+                    <SectionSubheader>Installing eCR Viewer</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">
@@ -325,7 +278,7 @@ export default function EcrViewer() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-xl">Maintenance & Support</h3>
+                    <SectionSubheader>Maintenance & Support</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">Runbook for common issues</Link>
@@ -339,7 +292,7 @@ export default function EcrViewer() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-xl">Terraform</h3>
+                    <SectionSubheader>Terraform</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">AWS Terraform Installation</Link>
@@ -350,7 +303,7 @@ export default function EcrViewer() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-xl">Troubleshooting</h3>
+                    <SectionSubheader>Troubleshooting</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
                         <Link href="/">Usage Guide</Link>
@@ -362,190 +315,190 @@ export default function EcrViewer() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div id="faqs" className="flex flex-col gap-10">
-              <div className="flex flex-col gap-3">
-                <h2 className="font-bold text-[#224a58]">FAQs</h2>
-                <p className="m-0 p-0">
-                  Find answers to commonly asked questions about the eCR Viewer.
-                </p>
-              </div>
-              <Accordion
-                bordered={false}
-                items={[
-                  {
-                    id: '1',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title: 'Who will use this tool?',
-                    content: (
-                      <>
-                        Case investigators, epidemiologists, and other public
-                        health practitioners who actively reference eCRs for
-                        their work will use the eCR Viewer as a workflow
-                        optimization tool.
-                      </>
-                    ),
-                  },
-                  {
-                    id: '2',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title:
-                      'What case surveillance systems are compatible with eCR Viewer?',
-                    content: (
-                      <>
-                        We have two versions of eCR Viewer currently available:
-                        <ol className="list-decimal pt-4">
-                          <li>A version integrated directly within NBS</li>
-                          <li>
-                            A standalone version that operates outside of a
-                            jurisdiction's surveillance system
-                          </li>
-                        </ol>
-                        We are also working on a direct integration with
-                        EpiTrax. If you're interested in integrating the eCR
-                        Viewer with other surveillance systems, please reach out
-                        to us at <SendMailLink />.
-                      </>
-                    ),
-                  },
-                  {
-                    id: '3',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title: 'Where can I find the eCR Viewer within NBS?',
-                    content: (
-                      <>
-                        You can open the eCR Viewer by clicking the “View eICR
-                        Document” button while looking at the eCR page in NBS.
-                        Clicking this button would open the new eCR Viewer,
-                        replacing the existing eCR document viewer.
-                      </>
-                    ),
-                  },
-                  {
-                    id: '4',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title:
-                      "Can my jurisdiction set up eCR Viewer if we don't use NBS?",
-                    content: (
-                      <>
-                        Yes! The standalone eCR Viewer offers flexibility for
-                        jurisdictions with other surveillance systems (e.g.,
-                        Maven). Staff will be able to view eCR documents through
-                        a separate homepage called the eCR Library rather than
-                        within the surveillance system itself.
-                      </>
-                    ),
-                  },
-                  {
-                    id: '5',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title:
-                      'Who at our organization needs to be involved to set up this tool? ',
-                    content: (
-                      <>
-                        We'll need participation from several people in your
-                        public health department to successfully set up the eCR
-                        Viewer. This includes:
-                        <ol className="list-decimal pt-4">
-                          <li>
-                            A jurisdictional subject matter expert who can help
-                            the DIBBs team understand how and where DIBBs
-                            tooling could be hosted
-                            <ol className="list-[lower-alpha] pl-4">
-                              <li>
-                                This could be an engineer or IT personnel,
-                                either directly embedded in your public health
-                                department or shared at the jurisdiction.
-                              </li>
-                            </ol>
-                          </li>
-                          <li>
-                            An eCR expert who is familiar with existing eCR
-                            workflows and data sources
-                            <ol className="list-[lower-alpha] pl-4">
-                              <li>
-                                This could be an epidemiologist, program
-                                manager, or anyone else in your jurisdiction who
-                                is familiar with existing eCR data workflows.
-                              </li>
-                            </ol>
-                          </li>
-                        </ol>
-                      </>
-                    ),
-                  },
-                  {
-                    id: '6',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title:
-                      'Can you speak to privacy preservation in your tool?',
-                    content: (
-                      <>
-                        All information is transmitted and protected using
-                        standards mandated by individual jurisdictions or the
-                        Department of Health and Human Services as applicable
-                        based on hosting location.
-                      </>
-                    ),
-                  },
-                  {
-                    id: '7',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title: 'What is the long-term viability of this product?',
-                    content: (
-                      <>
-                        Our team is working with stakeholders at CDC to
-                        establish a roadmap for near- and long-term support. As
-                        eCR data becomes more embedded in the public health
-                        ecosystem, this product will also give your jurisdiction
-                        the chance to provide direct feedback to CDC on what you
-                        need to make eCR data as usable as possible to improve
-                        public health outcomes.
-                      </>
-                    ),
-                  },
-                  {
-                    id: '8',
-                    className: 'bg-background',
-                    headingLevel: 'h3',
-                    expanded: false,
-                    title: 'How do I get started?',
-                    content: (
-                      <>
-                        Reach out to our team at <SendMailLink /> for a free
-                        consultation and find our whether the eCR Viewer is
-                        right for your jurisdiction.
-                      </>
-                    ),
-                  },
-                ]}
-              />
-              <div className="flex flex-col gap-3">
-                <h3>Have a question that isn't answered above?</h3>
-                <p className="m-0 p-0">
-                  Please get in touch with our team at <SendMailLink />
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
+            </section>
+            <section id="faqs">
+              <SectionContentContainer>
+                <SubsectionContainer>
+                  <SectionHeader>FAQs</SectionHeader>
+                  <Text>
+                    Find answers to commonly asked questions about the eCR
+                    Viewer.
+                  </Text>
+                </SubsectionContainer>
+                <Accordion
+                  bordered={false}
+                  items={[
+                    {
+                      id: '1',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title: 'Who will use this tool?',
+                      content: (
+                        <AccordionItemContent>
+                          Case investigators, epidemiologists, and other public
+                          health practitioners who actively reference eCRs for
+                          their work will use the eCR Viewer as a workflow
+                          optimization tool.
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '2',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title:
+                        'What case surveillance systems are compatible with eCR Viewer?',
+                      content: (
+                        <AccordionItemContent>
+                          We have two versions of eCR Viewer currently
+                          available:
+                          <ol className="list-decimal pt-4">
+                            <li>A version integrated directly within NBS</li>
+                            <li>
+                              A standalone version that operates outside of a
+                              jurisdiction's surveillance system
+                            </li>
+                          </ol>
+                          We are also working on a direct integration with
+                          EpiTrax. If you're interested in integrating the eCR
+                          Viewer with other surveillance systems, please reach
+                          out to us at <SendMailLink />.
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '3',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title: 'Where can I find the eCR Viewer within NBS?',
+                      content: (
+                        <AccordionItemContent>
+                          You can open the eCR Viewer by clicking the “View eICR
+                          Document” button while looking at the eCR page in NBS.
+                          Clicking this button would open the new eCR Viewer,
+                          replacing the existing eCR document viewer.
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '4',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title:
+                        "Can my jurisdiction set up eCR Viewer if we don't use NBS?",
+                      content: (
+                        <AccordionItemContent>
+                          Yes! The standalone eCR Viewer offers flexibility for
+                          jurisdictions with other surveillance systems (e.g.,
+                          Maven). Staff will be able to view eCR documents
+                          through a separate homepage called the eCR Library
+                          rather than within the surveillance system itself.
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '5',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title:
+                        'Who at our organization needs to be involved to set up this tool? ',
+                      content: (
+                        <AccordionItemContent>
+                          We'll need participation from several people in your
+                          public health department to successfully set up the
+                          eCR Viewer. This includes:
+                          <ol className="list-decimal pt-4">
+                            <li>
+                              A jurisdictional subject matter expert who can
+                              help the DIBBs team understand how and where DIBBs
+                              tooling could be hosted
+                              <ol className="list-[lower-alpha] pl-4">
+                                <li>
+                                  This could be an engineer or IT personnel,
+                                  either directly embedded in your public health
+                                  department or shared at the jurisdiction.
+                                </li>
+                              </ol>
+                            </li>
+                            <li>
+                              An eCR expert who is familiar with existing eCR
+                              workflows and data sources
+                              <ol className="list-[lower-alpha] pl-4">
+                                <li>
+                                  This could be an epidemiologist, program
+                                  manager, or anyone else in your jurisdiction
+                                  who is familiar with existing eCR data
+                                  workflows.
+                                </li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '6',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title:
+                        'Can you speak to privacy preservation in your tool?',
+                      content: (
+                        <AccordionItemContent>
+                          All information is transmitted and protected using
+                          standards mandated by individual jurisdictions or the
+                          Department of Health and Human Services as applicable
+                          based on hosting location.
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '7',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title: 'What is the long-term viability of this product?',
+                      content: (
+                        <AccordionItemContent>
+                          Our team is working with stakeholders at CDC to
+                          establish a roadmap for near- and long-term support.
+                          As eCR data becomes more embedded in the public health
+                          ecosystem, this product will also give your
+                          jurisdiction the chance to provide direct feedback to
+                          CDC on what you need to make eCR data as usable as
+                          possible to improve public health outcomes.
+                        </AccordionItemContent>
+                      ),
+                    },
+                    {
+                      id: '8',
+                      className: 'bg-[#f0f0f0]',
+                      headingLevel: 'h4',
+                      expanded: false,
+                      title: 'How do I get started?',
+                      content: (
+                        <AccordionItemContent>
+                          Reach out to our team at <SendMailLink /> for a free
+                          consultation and find our whether the eCR Viewer is
+                          right for your jurisdiction.
+                        </AccordionItemContent>
+                      ),
+                    },
+                  ]}
+                />
+                <HaveAQuestionSection />
+              </SectionContentContainer>
+            </section>
+          </GridMiddle>
+          <GridRight>
             <GithubNav version="1.1.1" githubHref="/" />
-          </div>
-        </div>
+          </GridRight>
+        </GridContainer>
       </ContentContainer>
     </div>
   );
@@ -561,39 +514,4 @@ function Navigation() {
     { title: 'FAQs', id: 'faqs' },
   ];
   return <SideNav sections={sections} />;
-}
-
-interface GithubNavProps {
-  version: string;
-  githubHref: string;
-}
-
-function GithubNav({ version, githubHref }: GithubNavProps) {
-  return (
-    <div className="max-w-[16.25rem] bg-[#e7f2f5] pb-5 pt-7">
-      <div className="mr-10 flex flex-col items-center gap-1">
-        <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
-          Current version: {version}
-        </p>
-        <hr className="ml-10 h-[0px] w-full border border-[#a9aeb1]" />
-        <Link
-          href={githubHref}
-          className="text-base font-semibold leading-relaxed text-[#3a7d95] underline"
-        >
-          GitHub Respository
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-function SendMailLink() {
-  return (
-    <Link
-      className="text-base font-bold text-[#3a7d95] no-underline"
-      href="mailto:dibbs@cdc.gov"
-    >
-      dibbs@cdc.gov
-    </Link>
-  );
 }

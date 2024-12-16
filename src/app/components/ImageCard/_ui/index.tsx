@@ -23,6 +23,7 @@ export const Container = ({
         imageFirstClass,
         styles.imageCard,
         styles[`imageCard-${cardBackground}`],
+        cardBackground !== 'none' ? 'shadow-lg' : '',
       )}
     >
       {children}

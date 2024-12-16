@@ -12,7 +12,7 @@ const BUTTON_STYLES = {
   },
   transparent: {
     button:
-      'usa-button items-center gap-2.5 rounded border-2 border-white bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent active:border-violet-warm-70 hover:!text-violet-warm-50',
+      'usa-button items-center gap-2.5 rounded border-2 border-blue-cool-5 bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent active:border-blue-cool-30 hover:!text-blue-cool-20',
   },
 } as const;
 

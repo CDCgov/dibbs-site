@@ -19,25 +19,27 @@ const EngageWithUs = () => {
   });
 
   return (
-    <ContentContainer classes="sm:pt-10">
-      <div className="flex flex-col gap-10">
-        <ConsultationAlert />
-        <div className="lg:pl-5">
-          <h2>Contact us</h2>
-          <p className="text-base font-normal leading-relaxed text-[#224a58]">
-            Fill out the form below to get in touch with us.
-          </p>
+    <section>
+      <ContentContainer classes="sm:pt-10">
+        <div className="flex flex-col gap-10">
+          <ConsultationAlert />
+          <div className="lg:pl-5">
+            <h2>Contact us</h2>
+            <p className="text-base font-normal leading-relaxed text-[#224a58]">
+              Fill out the form below to get in touch with us.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="grid grid-cols-1 justify-items-start gap-[3.75rem] lg:grid-cols-2">
-        <div className="min-w-full">
-          <ContactForm />
+        <div className="grid grid-cols-1 justify-items-start gap-[3.75rem] lg:grid-cols-2">
+          <div className="min-w-full">
+            <ContactForm />
+          </div>
+          <div className="justify-self-center lg:justify-self-start">
+            <CustomerTestimonial />
+          </div>
         </div>
-        <div className="justify-self-center lg:justify-self-start">
-          <CustomerTestimonial />
-        </div>
-      </div>
-    </ContentContainer>
+      </ContentContainer>
+    </section>
   );
 };
 
@@ -115,7 +117,7 @@ const ContactForm = () => {
       </Form>
       <Button
         type="submit"
-        className="bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70 mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded px-5 py-3 text-right text-base font-bold text-white"
+        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right text-base font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70"
       >
         Send inquiry
       </Button>

@@ -17,16 +17,16 @@ export const InvitationCta = () => {
     <section
       className={classNames(
         styles.invitationCtaSection,
-        'hide-footer-bar usa-section',
+        'hide-footer-bar usa-section remove-footer-bar bg-transparent',
       )}
     >
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-6 self-stretch">
-          <div className='flex flex-col gap-1'>
+          <div className="flex flex-col gap-1">
             <Heading className="self-stretch text-center">
               {content.title}
             </Heading>
-            <Paragraph className="self-stretch text-center font-extralight p-0 m-0">
+            <Paragraph className="m-0 self-stretch p-0 text-center font-extralight">
               {content.description}
             </Paragraph>
           </div>

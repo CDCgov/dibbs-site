@@ -11,6 +11,8 @@
 :root {
   --background: #e7f2f5;
   --card-background: #fbfbfb;
+  --blue-cool-80: #14333d;
+  --blue-cool-70: #224a58;
   --foreground: #171717;
   --header-teal: #224a58;
   --background-light-blue: #dcecf3;
@@ -26,6 +28,25 @@ body {
 }
 .main-content {
   background: var(--background);
+}
+
+section {
+  background: var(--background);
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+main
+  > *:last-child:not(:has(~ .remove-footer-bar)):not(
+    :where(:has(.remove-footer-bar) *)
+  ) {
+  @apply mb-8;
+}
+
+main > *:not(.remove-footer-bar) {
+  @apply bg-background;
 }
 
 .usa-logo a {
@@ -72,11 +93,12 @@ h1 {
   font-weight: 700;
   line-height: 3.125rem;
   text-align: left;
+  font-family: 'Merriweather', serif;
 }
 
 h2 {
-  color: #224a58;
-  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--blue-cool-80);
+  font-family: 'Public Sans', sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -84,11 +106,20 @@ h2 {
 }
 
 h3 {
-  color: #224a58;
-  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--blue-cool-80);
+  font-family: 'Public Sans', sans-serif;
   font-weight: 700;
   font-size: 1.38rem;
   line-height: 1.69rem;
+}
+
+h4 {
+  color: var(--blue-cool-80);
+  font-family: 'Public Sans';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 1.4rem */
 }
 
 ul {
@@ -114,6 +145,8 @@ ul li:last-child {
 }
 
 p {
+  color: var(--blue-cool-70);
+  font-family: 'Public Sans', sans-serif;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -124,4 +157,18 @@ main:has(.hide-footer-bar) ~ .footer-bar::before {
 
 main:has(.hide-footer-bar) ~ .footer-bar {
   display: none !important;
+}
+
+.site-background {
+  background-color: var(--background);
+  background-image: url('/images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% clamp(381px, 30%, 100vh);
+  min-height: 100vh;
+}
+
+/* Only affects immediate parent */
+*:has(> .remove-parent-bg) {
+  background: transparent !important;
 }
