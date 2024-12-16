@@ -97,9 +97,11 @@ const JurisdictionSection = () => {
           </Grid>
         </ContentContainer>
       </section>
-      <div className="ml-8 mr-8 pb-20 pt-0">
-        <Carousel />
-      </div>
+      <section>
+        <div className="ml-8 mr-8 pb-20 pt-0">
+          <Carousel />
+        </div>
+      </section>
     </>
   );
 };
