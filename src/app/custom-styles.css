@@ -87,35 +87,45 @@ main > *:not(.remove-footer-bar) {
   background-color: var(--background-light-blue);
 }
 
+p {
+  color: var(--blue-cool-70);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
 h1 {
-  color: #224a58;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3.125rem;
-  text-align: left;
+  color: var(--blue-cool-70);
   font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
 }
 
 h2 {
   color: var(--blue-cool-80);
   font-family: 'Public Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 140%;
 }
 
 h3 {
   color: var(--blue-cool-80);
   font-family: 'Public Sans', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
   font-weight: 700;
-  font-size: 1.38rem;
-  line-height: 1.69rem;
+  line-height: 140%;
 }
 
 h4 {
-  color: var(--blue-cool-80);
-  font-family: 'Public Sans';
+  color: var(--blue-cool-70);
+  font-family: 'Public Sans', sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -142,13 +152,6 @@ ul li {
 }
 ul li:last-child {
   margin-bottom: 0;
-}
-
-p {
-  color: var(--blue-cool-70);
-  font-family: 'Public Sans', sans-serif;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 main:has(.hide-footer-bar) ~ .footer-bar::before {
