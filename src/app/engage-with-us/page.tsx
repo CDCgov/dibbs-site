@@ -1,15 +1,16 @@
 'use client';
 import {
   Button,
-  ComboBox,
   Form,
   Label,
+  Select,
   Textarea,
   TextInput,
 } from '@trussworks/react-uswds';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
+import './styles.scss';
 
 const EngageWithUs = () => {
   useHeroInit({
@@ -89,19 +90,11 @@ const ContactForm = () => {
           >
             Type of inquiry
           </Label>
-          <ComboBox
-            className="!min-w-full"
-            id="inquiry"
-            name="inquiry"
-            options={[
-              {
-                label: 'General interest in DIBBs products',
-                value: 'general-interest',
-              },
-            ]}
-            defaultValue="general-interest"
-            onChange={() => {}}
-          />
+          <Select id="inquiry" name="inquiry" defaultValue="general-interest">
+            <option value="general-interest">
+              General interest in DIBBs products
+            </option>
+          </Select>
         </div>
         <div>
           <Label
@@ -115,7 +108,7 @@ const ContactForm = () => {
       </Form>
       <Button
         type="submit"
-        className="bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70 mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded px-5 py-3 text-right text-base font-bold text-white"
+        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right text-base font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70"
       >
         Send inquiry
       </Button>
