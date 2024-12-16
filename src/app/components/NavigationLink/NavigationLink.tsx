@@ -24,9 +24,9 @@ export function NavigationLink({
     >
       <span
         className={classNames(
-          "font-['Public Sans'] font-bold leading-7 underline-offset-8 hover:underline lg:text-white",
+          "font-['Public Sans'] font-bold leading-7 underline-offset-8 hover:text-slate-200 hover:underline lg:text-white",
           {
-            'underline decoration-[#82b4c9] underline-offset-8':
+            'underline decoration-[#82b4c9] underline-offset-8 active:text-slate-300':
               isActive && isTopNav,
             'lg:text-xl': isTopNav,
           },
