@@ -32,6 +32,10 @@ body {
 
 section {
   background: var(--background);
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 main
@@ -156,7 +160,7 @@ main:has(.hide-footer-bar) ~ .footer-bar {
 }
 
 .site-background {
-  @apply bg-background;
+  background-color: var(--background);
   background-image: url('/images/footer-bg.png');
   background-repeat: no-repeat;
   background-position: bottom;
