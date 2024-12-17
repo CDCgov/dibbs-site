@@ -139,7 +139,5 @@ function Title({ children }: { children: React.ReactNode }) {
 }
 
 function Text({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="m-0 mb-5 mt-5 p-0 font-normal leading-relaxed">{children}</p>
-  );
+  return <p className="m-0 mb-5 mt-5 p-0">{children}</p>;
 }

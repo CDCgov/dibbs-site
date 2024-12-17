@@ -65,7 +65,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
   return (
     <div className="bg-[#dae9ee] pb-5 pt-7 xl:max-w-[16.25rem]">
       <div className="flex flex-col gap-1 pl-7 pt-12">
-        <Text className="font-normal leading-relaxed text-[#224a58]">
+        <Text>
           Current version: {version}
         </Text>
         <div className="py-3">

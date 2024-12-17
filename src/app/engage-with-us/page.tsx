@@ -25,9 +25,7 @@ const EngageWithUs = () => {
           <ConsultationAlert />
           <div className="lg:pl-5">
             <h2>Contact us</h2>
-            <p className="font-normal leading-relaxed text-[#224a58]">
-              Fill out the form below to get in touch with us.
-            </p>
+            <p>Fill out the form below to get in touch with us.</p>
           </div>
         </div>
         <div className="grid grid-cols-1 justify-items-start gap-[3.75rem] lg:grid-cols-2">
@@ -152,7 +150,7 @@ const ConsultationAlert = () => {
         <p className="usa-alert__text font-['Public Sans'] text-[1.38rem] font-bold text-[#e7f2f5]">
           All consultations with the DIBBs team are 100% free!
         </p>
-        <p className="usa-alert__text font-['Public Sans'] font-normal leading-snug text-[#e7f2f5]">
+        <p className="usa-alert__text text-[#e7f2f5]">
           There's no cost to use our products beyond costs to host within your
           jurisdiction should you choose to do so.
         </p>

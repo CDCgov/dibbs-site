@@ -122,9 +122,7 @@ function ProductCard({
                 <h3>{title}</h3>
                 <StatusTag variant={status} />
               </div>
-              <p className="m-0 p-0 font-normal leading-relaxed text-[#224a58]">
-                {text}
-              </p>
+              <p className="m-0 p-0">{text}</p>
             </div>
             <div>
               <LinkButton
@@ -182,11 +180,8 @@ function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
     <div className="px-2 py-6">
       <Image className="pb-4" src={imgSrc} width={60} height={60} alt="" />
       <div className="flex flex-col gap-y-2">
-        {/* TODO: should this be an h3 or h4? */}
         <h3 className="text-[1rem]">{title}</h3>
-        <p className="font-['Public Sans'] m-0 p-0 font-normal leading-snug text-[#224a58]">
-          {text}
-        </p>
+        <p className="m-0 p-0">{text}</p>
       </div>
     </div>
   );
