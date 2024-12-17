@@ -19,7 +19,7 @@ export const Container = ({
   return (
     <div
       className={classNames(
-        'grid grid-cols-1 justify-items-center gap-4 xl:justify-items-start xl:gap-14',
+        'grid grid-cols-1 justify-items-center gap-4 xl:justify-items-start xl:gap-0',
         imageFirstClass,
         styles.imageCard,
         styles[`imageCard-${cardBackground}`],
