@@ -25,7 +25,7 @@ const EngageWithUs = () => {
           <ConsultationAlert />
           <div className="lg:pl-5">
             <h2>Contact us</h2>
-            <p className="text-base font-normal leading-relaxed text-[#224a58]">
+            <p className="font-normal leading-relaxed text-[#224a58]">
               Fill out the form below to get in touch with us.
             </p>
           </div>
@@ -54,7 +54,7 @@ const ContactForm = () => {
           <div>
             <Label
               htmlFor="name"
-              className="m-0 self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+              className="m-0 self-stretch font-bold leading-relaxed text-[#224a58]"
             >
               Name
             </Label>
@@ -68,7 +68,7 @@ const ContactForm = () => {
           <div>
             <Label
               htmlFor="email"
-              className="m-0 self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+              className="m-0 self-stretch font-bold leading-relaxed text-[#224a58]"
             >
               Email Address
             </Label>
@@ -77,7 +77,7 @@ const ContactForm = () => {
           <div>
             <Label
               htmlFor="organization"
-              className="m-0 self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+              className="m-0 self-stretch font-bold leading-relaxed text-[#224a58]"
             >
               Organization
             </Label>
@@ -87,7 +87,7 @@ const ContactForm = () => {
         <div className="lg:max-w-[85%]">
           <Label
             htmlFor="inquiry"
-            className="m-0 self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+            className="m-0 self-stretch font-bold leading-relaxed text-[#224a58]"
           >
             Type of inquiry
           </Label>
@@ -108,7 +108,7 @@ const ContactForm = () => {
         <div>
           <Label
             htmlFor="message"
-            className="m-0 self-stretch text-base font-bold leading-relaxed text-[#224a58]"
+            className="m-0 self-stretch font-bold leading-relaxed text-[#224a58]"
           >
             Message
           </Label>
@@ -117,7 +117,7 @@ const ContactForm = () => {
       </Form>
       <Button
         type="submit"
-        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right text-base font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70"
+        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70"
       >
         Send inquiry
       </Button>
@@ -129,7 +129,7 @@ const CustomerTestimonial = () => {
   return (
     <RoundedBackground className="p-6 xl:p-10">
       <div className="ml-2 flex flex-col gap-3">
-        <p className="font-['Public Sans'] m-0 p-0 text-base font-light uppercase leading-normal text-[#2e6276]">
+        <p className="font-['Public Sans'] m-0 p-0 font-light uppercase leading-normal text-[#2e6276]">
           Customer Testimonial
         </p>
         <p className="font-['Public Sans'] m-0 max-w-[28rem] p-0 text-[1rem] font-bold leading-[2rem] text-[#224a58] xl:text-[1.38rem]">
@@ -137,7 +137,7 @@ const CustomerTestimonial = () => {
           do useful analysis. The end goal of DIBBs infrastructure is to free up
           that 80% of their time to do actual public health work.”
         </p>
-        <p className="m-0 p-0 text-[1rem] font-light leading-normal text-[#224a58] lg:text-nowrap lg:text-base xl:min-w-full">
+        <p className="m-0 p-0 text-[1rem] font-light leading-normal text-[#224a58] lg:text-nowrap xl:min-w-full">
           - Public Health Official, Virginia Department of Health
         </p>
       </div>
@@ -152,7 +152,7 @@ const ConsultationAlert = () => {
         <p className="usa-alert__text font-['Public Sans'] text-[1.38rem] font-bold text-[#e7f2f5]">
           All consultations with the DIBBs team are 100% free!
         </p>
-        <p className="usa-alert__text font-['Public Sans'] text-base font-normal leading-snug text-[#e7f2f5]">
+        <p className="usa-alert__text font-['Public Sans'] font-normal leading-snug text-[#e7f2f5]">
           There's no cost to use our products beyond costs to host within your
           jurisdiction should you choose to do so.
         </p>

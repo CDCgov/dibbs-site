@@ -126,7 +126,7 @@ function ProductCard({
                 </h3>
                 <StatusTag variant={status} />
               </div>
-              <p className="m-0 p-0 text-base font-normal leading-relaxed text-[#224a58]">
+              <p className="m-0 p-0 font-normal leading-relaxed text-[#224a58]">
                 {text}
               </p>
             </div>
@@ -156,7 +156,7 @@ const StatusTag = ({ variant }: StatusTagProps) => {
         className="inline-flex h-6 items-center justify-start gap-2.5 rounded-sm px-2 py-1"
         background="#c4eeeb"
       >
-        <p className="font-['Source Sans Pro'] m-0 p-0 text-base font-normal uppercase leading-none text-[#14333d]">
+        <p className="font-['Source Sans Pro'] m-0 p-0 font-normal uppercase leading-none text-[#14333d]">
           currently piloting
         </p>
       </Tag>
@@ -168,7 +168,7 @@ const StatusTag = ({ variant }: StatusTagProps) => {
       className="inline-flex h-6 items-center justify-start gap-2.5 rounded-sm px-2 py-1"
       background="#f1e5cd"
     >
-      <p className="font-['Source Sans Pro'] m-0 p-0 text-base font-normal uppercase leading-none text-[#14333d]">
+      <p className="font-['Source Sans Pro'] m-0 p-0 font-normal uppercase leading-none text-[#14333d]">
         Under development
       </p>
     </Tag>
@@ -186,10 +186,10 @@ function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
     <div className="px-2 py-6">
       <Image className="pb-4" src={imgSrc} width={60} height={60} alt="" />
       <div className="flex flex-col gap-y-2">
-        <h3 className="font-['Public Sans'] text-base font-bold leading-snug text-[#14333d]">
+        <h3 className="font-['Public Sans'] font-bold leading-snug text-[#14333d]">
           {title}
         </h3>
-        <p className="font-['Public Sans'] m-0 p-0 text-base font-normal leading-snug text-[#224a58]">
+        <p className="font-['Public Sans'] m-0 p-0 font-normal leading-snug text-[#224a58]">
           {text}
         </p>
       </div>
@@ -218,7 +218,7 @@ function DataPipeline() {
             <h2 className="text-[#14333d]">
               DIBBs to support the entire data pipeline
             </h2>
-            <p className="max-w-[38.5rem] text-base font-normal leading-snug text-[#224a58]">
+            <p className="max-w-[38.5rem] font-normal leading-snug text-[#224a58]">
               These are the underlying services that power each of our products;
               they can be configured in a variety of ways to support the unique
               needs of your jurisdiction.

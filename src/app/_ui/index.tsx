@@ -15,9 +15,7 @@ export function Heading({ children, className = '' }: TextProps) {
 
 export function Paragraph({ children, className = '' }: TextProps) {
   return (
-    <p
-      className={`text-base font-normal leading-relaxed text-[#224a58] ${className}`}
-    >
+    <p className={`font-normal leading-relaxed text-[#224a58] ${className}`}>
       {children}
     </p>
   );

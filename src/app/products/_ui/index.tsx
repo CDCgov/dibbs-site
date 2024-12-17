@@ -16,7 +16,7 @@ interface ContainerProps {
 const SendMailLink = () => {
   return (
     <Link
-      className="font-['Public Sans'] text-base font-bold leading-snug text-[#3a7d95]"
+      className="font-['Public Sans'] font-bold leading-snug text-[#3a7d95]"
       href="mailto:dibbs@cdc.gov"
     >
       dibbs@cdc.gov
@@ -75,7 +75,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
   return (
     <div className="bg-[#dae9ee] pb-5 pt-7 xl:max-w-[16.25rem]">
       <div className="flex flex-col gap-1 pl-7 pt-12">
-        <Text className="text-base font-normal leading-relaxed text-[#224a58]">
+        <Text className="font-normal leading-relaxed text-[#224a58]">
           Current version: {version}
         </Text>
         <div className="py-3">
@@ -83,7 +83,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
         </div>
         <Link
           href={githubHref}
-          className="text-base font-semibold leading-relaxed text-[#14333d] underline"
+          className="font-semibold leading-relaxed text-[#14333d] underline"
         >
           GitHub Respository
         </Link>
@@ -122,7 +122,7 @@ const NavItem = ({
 
 const AccordionItemContent = ({ children }: ContainerProps) => {
   return (
-    <span className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
+    <span className="font-['Public Sans'] font-normal leading-snug text-[#224a58]">
       {children}
     </span>
   );
@@ -250,7 +250,7 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
             <SectionSubheader>
               What's expected from a pilot partner:
             </SectionSubheader>
-            <ul className="list__full-width text-base font-semibold leading-relaxed text-[#224a58]">
+            <ul className="list__full-width font-semibold leading-relaxed text-[#224a58]">
               <li>
                 Work with the DIBBs team to set expectations and establish a
                 regular meeting cadence
@@ -294,7 +294,7 @@ const Figure = ({ children, caption }: FigureProps) => {
   return (
     <figure className="flex flex-col gap-3">
       {children}
-      <figcaption className="font-['Public Sans'] text-base font-normal leading-snug text-[#224a58]">
+      <figcaption className="font-['Public Sans'] font-normal leading-snug text-[#224a58]">
         {caption}
       </figcaption>
     </figure>
@@ -308,7 +308,7 @@ const Text = ({ children, className }: TextProps) => {
   return (
     <p
       className={classNames(
-        "font-['Public Sans'] m-0 p-0 text-base leading-snug text-[#224a58]",
+        "font-['Public Sans'] m-0 p-0 leading-snug text-[#224a58]",
         className,
       )}
     >
@@ -322,7 +322,7 @@ const ValueList = ({ children }: ContainerProps) => {
     <RoundedBackground className="p-10">
       <SubsectionContainer>
         <SectionSubheader>The value to you:</SectionSubheader>
-        <ul className="list__full-width flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
+        <ul className="list__full-width flex flex-col gap-3 font-semibold leading-relaxed text-[#224a58]">
           {children}
         </ul>
       </SubsectionContainer>
