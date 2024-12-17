@@ -32,9 +32,7 @@ interface TitleSectionProps {
 const TitleSection = ({ title, text }: TitleSectionProps) => {
   return (
     <div className="flex flex-col gap-2">
-      <h1 className="font-bold leading-[2.8rem]">
-        {title}
-      </h1>
+      <h1 className="font-bold leading-[2.8rem]">{title}</h1>
       <p className="font-['Public Sans'] m-0 p-0 text-[1.38rem] font-extralight leading-[2rem] text-[#224a58]">
         {text}
       </p>
@@ -43,11 +41,7 @@ const TitleSection = ({ title, text }: TitleSectionProps) => {
 };
 
 const SectionHeader = ({ children }: ContainerProps) => {
-  return (
-    <h2 className="font-['Public Sans'] text-[1.75rem] font-bold leading-[2.4rem] text-[#14333d]">
-      {children}
-    </h2>
-  );
+  return <h2>{children}</h2>;
 };
 
 const SectionSubheader = ({ children }: ContainerProps) => {

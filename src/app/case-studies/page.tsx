@@ -135,13 +135,11 @@ export default function CaseStudies() {
 }
 
 function Title({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-[2rem] font-bold text-[#224a58]">{children}</h2>;
+  return <h2>{children}</h2>;
 }
 
 function Text({ children }: { children: React.ReactNode }) {
   return (
-    <p className="m-0 mb-5 mt-5 p-0 font-normal leading-relaxed text-[#224a58]">
-      {children}
-    </p>
+    <p className="m-0 mb-5 mt-5 p-0 font-normal leading-relaxed">{children}</p>
   );
 }
