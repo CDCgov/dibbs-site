@@ -8,11 +8,11 @@ interface Section {
 }
 
 interface SideNavProps {
-  sections: Section[];
+  items: Section[];
 }
 
-export const SideNav = ({ sections }: SideNavProps) => {
-  const [selectedHash, setSelectedHash] = useState(`#${sections[0].id}`);
+export const SideNav = ({ items }: SideNavProps) => {
+  const [selectedHash, setSelectedHash] = useState(`#${items[0].id}`);
 
   useEffect(() => {
     let currentSection = '';
@@ -30,28 +30,28 @@ export const SideNav = ({ sections }: SideNavProps) => {
         });
       },
       {
-        rootMargin: '-30% 0px -60% 0px',
+        rootMargin: '-246px 0px -60% 0px',
         threshold: 0,
       },
     );
 
-    sections.forEach(({ id }) => {
+    items.forEach(({ id }) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
 
     return () => {
-      sections.forEach(({ id }) => {
+      items.forEach(({ id }) => {
         const element = document.getElementById(id);
         if (element) observer.unobserve(element);
       });
     };
-  }, [sections]);
+  }, [items]);
 
   return (
     <>
       <UswdsSideNav
-        items={sections.map(({ title, id }) => (
+        items={items.map(({ title, id }) => (
           <NavItem
             title={title}
             id={id}

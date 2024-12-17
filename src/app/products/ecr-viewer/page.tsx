@@ -2,7 +2,6 @@
 import { ContentContainer } from '@/app/components/ContentContainer/ContentContainer';
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
-import { SideNav } from '@/app/components/SideNav/SideNav';
 import Image from 'next/image';
 import './styles.scss';
 import {
@@ -502,16 +501,4 @@ export default function EcrViewer() {
       </ContentContainer>
     </div>
   );
-}
-
-function Navigation() {
-  const sections = [
-    { title: 'Overview', id: 'overview' },
-    { title: 'Product features', id: 'product-features' },
-    { title: 'How it works', id: 'how-it-works' },
-    { title: 'Getting started', id: 'getting-started' },
-    { title: 'Technical resources', id: 'technical-resources' },
-    { title: 'FAQs', id: 'faqs' },
-  ];
-  return <SideNav sections={sections} />;
 }
