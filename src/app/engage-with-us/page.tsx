@@ -23,9 +23,9 @@ const EngageWithUs = () => {
       <ContentContainer classes="sm:pt-10">
         <div className="flex flex-col gap-10">
           <ConsultationAlert />
-          <div className="lg:pl-5">
-            <h2>Contact us</h2>
-            <p>Fill out the form below to get in touch with us.</p>
+          <div className="lg:pl-5 flex flex-col gap-3 pb-5">
+              <h2>Contact us</h2>
+              <p>Fill out the form below to get in touch with us.</p>
           </div>
         </div>
         <div className="grid grid-cols-1 justify-items-start gap-[3.75rem] lg:grid-cols-2">
