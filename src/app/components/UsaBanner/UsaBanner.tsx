@@ -20,12 +20,14 @@ export default function USABanner() {
   const dotGovIcon = `${basePath}/images/us-gov-icon.svg`;
   const httpsIcon = `${basePath}/images/https-icon.svg`;
 
+  const bannerLabel = 'An official website of the United States government';
   return (
-    <Banner aria-label="Official website of the state department of something specific">
+    <Banner aria-label={bannerLabel}>
       <BannerHeader
+        className="py-[.31rem]"
         isOpen={isOpen}
         flagImg={<BannerFlag src={flagImg} aria-hidden alt="" />}
-        headerText="This is an official website of the state department of something specific"
+        headerText={bannerLabel}
         headerActionText="Here's how you know"
       >
         <BannerButton
