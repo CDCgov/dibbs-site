@@ -119,9 +119,7 @@ function ProductCard({
           <div className="flex min-h-[11.12rem] flex-col">
             <div className="content mb-4 flex flex-col gap-3">
               <div className="flex flex-row gap-2">
-                <h3 className="font-['Public Sans'] text-xl font-bold leading-7 text-[#14333d]">
-                  {title}
-                </h3>
+                <h3>{title}</h3>
                 <StatusTag variant={status} />
               </div>
               <p className="m-0 p-0 font-normal leading-relaxed text-[#224a58]">
@@ -184,9 +182,8 @@ function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
     <div className="px-2 py-6">
       <Image className="pb-4" src={imgSrc} width={60} height={60} alt="" />
       <div className="flex flex-col gap-y-2">
-        <h3 className="font-['Public Sans'] font-bold leading-snug text-[#14333d]">
-          {title}
-        </h3>
+        {/* TODO: should this be an h3 or h4? */}
+        <h3 className="text-[1rem]">{title}</h3>
         <p className="font-['Public Sans'] m-0 p-0 font-normal leading-snug text-[#224a58]">
           {text}
         </p>
@@ -213,9 +210,7 @@ function DataPipeline() {
       >
         <div className="flex flex-col gap-y-6 pb-6">
           <div className="flex flex-col gap-y-2">
-            <h2>
-              DIBBs to support the entire data pipeline
-            </h2>
+            <h2>DIBBs to support the entire data pipeline</h2>
             <p className="max-w-[38.5rem] font-normal leading-snug text-[#224a58]">
               These are the underlying services that power each of our products;
               they can be configured in a variety of ways to support the unique

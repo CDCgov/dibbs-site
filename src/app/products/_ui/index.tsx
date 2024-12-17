@@ -45,11 +45,7 @@ const SectionHeader = ({ children }: ContainerProps) => {
 };
 
 const SectionSubheader = ({ children }: ContainerProps) => {
-  return (
-    <h3 className="font-['Public Sans'] text-xl font-bold leading-7 text-[#224a58]">
-      {children}
-    </h3>
-  );
+  return <h3>{children}</h3>;
 };
 
 const SectionContentContainer = ({ children }: ContainerProps) => {
