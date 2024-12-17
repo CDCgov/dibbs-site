@@ -131,6 +131,7 @@ h4 {
   line-height: 140%; /* 1.4rem */
 }
 
+ol,
 ul {
   color: var(--blue-cool-70);
   font-family: 'Public Sans', sans-serif;
@@ -142,11 +143,6 @@ ul {
 
 ul:last-child {
   margin-bottom: 0;
-}
-
-ul,
-ol {
-  margin-top: 0.25em;
 }
 
 ul li {
