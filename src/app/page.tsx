@@ -87,7 +87,7 @@ const JurisdictionSection = () => {
         <ContentContainer align classes="sm:pb-10">
           <Grid row gap>
             <Grid col={12}>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-2">
                 <Heading className="text-center">{jurisdictions.title}</Heading>
                 <Paragraph className="text-center">
                   {jurisdictions.description}
