@@ -171,7 +171,7 @@ const GridRight = ({ children }: ContainerProps) => {
 
 const HaveAQuestionSection = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 pt-5">
       <h2>Have a question that isn't answered above?</h2>
       <Text className="font-bold">
         Please get in touch with our team at <SendMailLink />
