@@ -28,7 +28,7 @@ const DibbsSection = () => (
           <Paragraph className="m-0 max-w-[39.7rem] p-0">
             {homeContent.dibbs.description}
           </Paragraph>
-          <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+          <ul className="font-semibold leading-relaxed text-[#224a58]">
             {homeContent.dibbs.benefits.map((benefit, index) => (
               <li className="min-w-full" key={`benefit-${index}`}>
                 {benefit}
@@ -65,11 +65,11 @@ const ValueSection = () => {
               <Paragraph className="xl:max-w-[28.13rem]">
                 {valueSection.description}
               </Paragraph>
-              <div>
-                <LinkButton href={valueSection.ctaHref} variant="primary">
-                  {valueSection.ctaText}
-                </LinkButton>
-              </div>
+            </div>
+            <div>
+              <LinkButton href={valueSection.ctaHref} variant="primary">
+                {valueSection.ctaText}
+              </LinkButton>
             </div>
           </ImageCard>
         </ContentContainer>
@@ -87,7 +87,7 @@ const JurisdictionSection = () => {
         <ContentContainer align classes="sm:pb-10">
           <Grid row gap>
             <Grid col={12}>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-2">
                 <Heading className="text-center">{jurisdictions.title}</Heading>
                 <Paragraph className="text-center">
                   {jurisdictions.description}
