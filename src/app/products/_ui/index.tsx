@@ -65,9 +65,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
   return (
     <div className="bg-[#dae9ee] pb-5 pt-7 xl:max-w-[16.25rem]">
       <div className="flex flex-col gap-1 pl-7 pt-12">
-        <Text>
-          Current version: {version}
-        </Text>
+        <Text>Current version: {version}</Text>
         <div className="py-3">
           <hr className="h-[0px] border border-[#a9aeb1]" />
         </div>
@@ -215,7 +213,7 @@ const GettingStartedProcessList = ({ systemName }: GettingStartedProps) => {
     <RoundedBackground className="p-10">
       <ProcessList>
         {steps.map(({ heading, content }) => (
-          <ProcessListItem key={heading}>
+          <ProcessListItem key={heading} className="last:pb-0">
             <ProcessListHeading type="h3">{heading}</ProcessListHeading>
             <p>{content}</p>
           </ProcessListItem>
