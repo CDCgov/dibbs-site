@@ -360,19 +360,25 @@ export default function EcrViewer() {
                         'What case surveillance systems are compatible with eCR Viewer?',
                       content: (
                         <AccordionItemContent>
-                          We have two versions of eCR Viewer currently
-                          available:
-                          <ol className="list-decimal pt-4">
-                            <li>A version integrated directly within NBS</li>
-                            <li>
-                              A standalone version that operates outside of a
-                              jurisdiction's surveillance system
-                            </li>
-                          </ol>
-                          We are also working on a direct integration with
-                          EpiTrax. If you're interested in integrating the eCR
-                          Viewer with other surveillance systems, please reach
-                          out to us at <SendMailLink />.
+                          <div className="flex flex-col gap-2">
+                            <span>
+                              We have two versions of eCR Viewer currently
+                              available:
+                            </span>
+                            <ol className="list-decimal">
+                              <li>A version integrated directly within NBS</li>
+                              <li>
+                                A standalone version that operates outside of a
+                                jurisdiction's surveillance system
+                              </li>
+                            </ol>
+                            <span>
+                              We are also working on a direct integration with
+                              EpiTrax. If you're interested in integrating the
+                              eCR Viewer with other surveillance systems, please
+                              reach out to us at <SendMailLink />.
+                            </span>
+                          </div>
                         </AccordionItemContent>
                       ),
                     },

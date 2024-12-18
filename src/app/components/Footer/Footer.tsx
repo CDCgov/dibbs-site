@@ -45,10 +45,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className={classNames(styles.footerPhdi, 'footer-bar')}></div>
-      <footer
-        className={classNames('usa-header--basic bg-background-dark-blue')}
-      >
+      <footer className={classNames('usa-header--basic', styles.footer)}>
         <div className="usa-nav-container lg:flex-vertical-center">
           <div className="usa-navbar border-none">
             <div className="usa-logo">
