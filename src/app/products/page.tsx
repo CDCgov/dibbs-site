@@ -118,7 +118,7 @@ function ProductCard({
         <div className="p-6">
           <div className="flex min-h-[11.12rem] flex-col">
             <div className="content mb-4 flex flex-col gap-3">
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row items-center gap-2">
                 <h3>{title}</h3>
                 <StatusTag variant={status} />
               </div>
@@ -150,7 +150,7 @@ const StatusTag = ({ variant }: StatusTagProps) => {
         className="inline-flex h-6 items-center justify-start gap-2.5 rounded-sm px-2 py-1"
         background="#c4eeeb"
       >
-        <p className="font-['Source Sans Pro'] m-0 p-0 font-normal uppercase leading-none text-[#14333d]">
+        <p className="m-0 p-0 uppercase leading-none text-[#14333d]">
           currently piloting
         </p>
       </Tag>
@@ -162,7 +162,7 @@ const StatusTag = ({ variant }: StatusTagProps) => {
       className="inline-flex h-6 items-center justify-start gap-2.5 rounded-sm px-2 py-1"
       background="#f1e5cd"
     >
-      <p className="font-['Source Sans Pro'] m-0 p-0 font-normal uppercase leading-none text-[#14333d]">
+      <p className="m-0 p-0 uppercase leading-none text-[#14333d]">
         Under development
       </p>
     </Tag>
