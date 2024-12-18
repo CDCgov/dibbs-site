@@ -1,4 +1,4 @@
-import { useState, useEffect, SetStateAction } from 'react';
+import { useState, useEffect } from 'react';
 import { SideNav as UswdsSideNav } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 
@@ -15,36 +15,60 @@ export const SideNav = ({ items }: SideNavProps) => {
   const [selectedHash, setSelectedHash] = useState(`#${items[0].id}`);
 
   useEffect(() => {
-    let currentSection = '';
+    const handleScroll = () => {
+      // Don't update side nav on mobile/tablet screens
+      if (window.innerWidth <= 1023) {
+        return;
+      }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const newSection = `#${entry.target.id}`;
-            if (currentSection !== newSection) {
-              currentSection = newSection;
-              setSelectedHash(newSection);
-            }
-          }
+      // Check if we're at the top or bottom of the page
+      if (window.scrollY === 0) {
+        setSelectedHash(`#${items[0].id}`);
+        return;
+      }
+
+      const scrolledToBottom =
+        Math.ceil(window.scrollY + window.innerHeight) >=
+        document.documentElement.scrollHeight;
+
+      if (scrolledToBottom) {
+        setSelectedHash(`#${items[items.length - 1].id}`);
+        return;
+      }
+
+      // Get section element in or near center of viewport
+      const viewportCenter = window.innerHeight / 2;
+      const element = document
+        .elementFromPoint(
+          document.documentElement.clientWidth / 2,
+          viewportCenter,
+        )
+        ?.closest('section'); // Find nearest section element
+
+      if (element?.id && items.some((item) => item.id === element.id)) {
+        setSelectedHash(`#${element.id}`);
+      }
+    };
+
+    // Throttle scroll events for better performance
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
         });
-      },
-      {
-        rootMargin: '-246px 0px -60% 0px',
-        threshold: 0,
-      },
-    );
+        ticking = true;
+      }
+    };
 
-    items.forEach(({ id }) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+    window.addEventListener('scroll', scrollListener);
+
+    // Initial check
+    handleScroll();
 
     return () => {
-      items.forEach(({ id }) => {
-        const element = document.getElementById(id);
-        if (element) observer.unobserve(element);
-      });
+      window.removeEventListener('scroll', scrollListener);
     };
   }, [items]);
 
