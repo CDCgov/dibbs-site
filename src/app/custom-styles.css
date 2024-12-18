@@ -136,22 +136,10 @@ ul {
   color: var(--blue-cool-70);
   font-family: 'Public Sans', sans-serif;
   font-size: 1rem;
+  font-style: normal;
   line-height: 150%;
   padding-left: 3ch;
   list-style: disc;
-}
-
-ul:last-child {
-  margin-bottom: 0;
-}
-
-ul li {
-  margin-bottom: 0.25em;
-  max-width: 68ex;
-}
-
-ul li:last-child {
-  margin-bottom: 0;
 }
 
 main:has(.hide-footer-bar) ~ .footer-bar::before {
