@@ -14,6 +14,11 @@ interface SideNavProps {
 export const SideNav = ({ items }: SideNavProps) => {
   const [selectedHash, setSelectedHash] = useState(`#${items[0].id}`);
 
+  // Add effect to update URL when selectedHash changes
+  useEffect(() => {
+    window.history.replaceState(null, '', selectedHash);
+  }, [selectedHash]);
+
   useEffect(() => {
     const handleScroll = () => {
       // Don't update side nav on mobile/tablet screens
@@ -37,7 +42,7 @@ export const SideNav = ({ items }: SideNavProps) => {
       }
 
       // Get section element in or near center of viewport
-      const viewportCenter = window.innerHeight / 2;
+      const viewportCenter = window.innerHeight * 0.2;
       const element = document
         .elementFromPoint(
           document.documentElement.clientWidth / 2,
