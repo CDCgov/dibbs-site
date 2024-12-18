@@ -14,31 +14,16 @@ export default function Footer() {
   };
 
   const footerMenu = [
-    <NavigationLink key="one" href="/" onClick={onClick} showActive={false}>
+    <NavigationLink key="one" href="/" onClick={onClick}>
       Home
     </NavigationLink>,
-    <NavigationLink
-      key="two"
-      href="/products"
-      onClick={onClick}
-      showActive={false}
-    >
+    <NavigationLink key="two" href="/products" onClick={onClick}>
       Our products
     </NavigationLink>,
-    <NavigationLink
-      key="three"
-      href="/case-studies"
-      onClick={onClick}
-      showActive={false}
-    >
+    <NavigationLink key="three" href="/case-studies" onClick={onClick}>
       Case studies
     </NavigationLink>,
-    <NavigationLink
-      key="four"
-      href="/engage-with-us"
-      onClick={onClick}
-      showActive={false}
-    >
+    <NavigationLink key="four" href="/engage-with-us" onClick={onClick}>
       Engage with us
     </NavigationLink>,
   ];

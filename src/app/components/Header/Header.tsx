@@ -42,7 +42,7 @@ export default function Header() {
   };
 
   const navigationLinks = navigationItems.map(({ key, href, text }) => (
-    <NavigationLink key={key} href={href} onClick={handleClick}>
+    <NavigationLink key={key} href={href} onClick={handleClick} isTopNav>
       {text}
     </NavigationLink>
   ));
