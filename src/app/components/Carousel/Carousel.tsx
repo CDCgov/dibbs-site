@@ -42,15 +42,23 @@ export default function Carousel() {
 
   const settings = {
     infinite: true,
-    speed: 1500, // Adjust speed to make it constant
+    speed: 15000, // Adjust speed to make it constant
     slidesToShow: 7, // Number of visible slides
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0, // Continuous without pause
     cssEase: 'linear', // For smooth, continuous movement
-    pauseOnHover: false,
+    pauseOnHover: true,
     arrows: false,
     dots: false,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+    ],
   };
 
   return (
