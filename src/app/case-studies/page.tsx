@@ -13,11 +13,11 @@ export default function CaseStudies() {
   });
   return (
     <div>
-      <div className="ml-auto mr-auto flex max-w-[90rem] flex-col px-5 md:px-[10rem] pb-[5rem] pt-[3.75rem]">
+      <div className="ml-auto mr-auto flex max-w-[90rem] flex-col px-5 pb-[5rem] pt-[3.75rem] md:px-[10rem]">
         <div className="flex flex-col gap-[3.75rem]">
           {/* Section 1 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 py-12 lg:order-1">
               <ContentContainer>
                 <TextContainer>
                   <Title>
@@ -62,7 +62,7 @@ export default function CaseStudies() {
                 alt=""
               />
             </div>
-            <div className="order-2 lg:order-2 lg:items-center">
+            <div className="order-2 py-12 lg:order-2 lg:items-center">
               <ContentContainer>
                 <TextContainer>
                   <Title>
@@ -88,7 +88,7 @@ export default function CaseStudies() {
 
           {/* Section 3 */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 py-12 lg:order-1">
               <ContentContainer>
                 <TextContainer>
                   <Title>
@@ -133,7 +133,7 @@ export default function CaseStudies() {
                 alt=""
               />
             </div>
-            <div className="order-2 lg:order-2">
+            <div className="order-2 py-12 lg:order-2">
               <ContentContainer>
                 <TextContainer>
                   <Title>
