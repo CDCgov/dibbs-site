@@ -13,10 +13,10 @@ export default function CaseStudies() {
   });
   return (
     <div>
-      <div className="ml-auto mr-auto flex max-w-[75rem] flex-col py-20 pl-10">
-        <div className="flex flex-col gap-[7.5rem]">
+      <div className="ml-auto mr-auto flex max-w-[90rem] flex-col px-[10rem] pb-[5rem] pt-[3.75rem]">
+        <div className="flex flex-col gap-[3.75rem]">
           {/* Section 1 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto,min(30rem)] lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
             <div className="order-2 lg:order-1">
               <Title>
                 Creating a modular, cloud-based data processing pipeline for LA
@@ -36,19 +36,19 @@ export default function CaseStudies() {
             <div className="order-1 flex justify-start lg:order-2 lg:justify-end">
               <RoundedImage
                 src={`${basePath}/images/case-studies/image1.png`}
-                width={480}
-                height={320}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
           </div>
           {/* Section 2 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_auto] lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
               <RoundedImage
                 src={`${basePath}/images/case-studies/image2.png`}
-                width={480}
-                height={320}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
@@ -71,7 +71,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(40.8rem)_min(33rem)] lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
             <div className="order-2 lg:order-1">
               <Title>
                 Improving public health data infrastructure through flexible,
@@ -91,20 +91,20 @@ export default function CaseStudies() {
             <div className="order-1 flex justify-start lg:order-2 lg:ml-4">
               <RoundedImage
                 src={`${basePath}/images/case-studies/image3.png`}
-                width={480}
-                height={320}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
           </div>
 
           {/* Section 4 */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[min(30rem)_42rem] lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
             <div className="order-1 flex justify-start lg:order-1">
               <RoundedImage
                 src={`${basePath}/images/case-studies/image4.png`}
-                width={480}
-                height={320}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
@@ -135,13 +135,9 @@ export default function CaseStudies() {
 }
 
 function Title({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-[2rem] font-bold text-[#224a58]">{children}</h2>;
+  return <h2>{children}</h2>;
 }
 
 function Text({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="m-0 mb-5 mt-5 p-0 text-base font-normal leading-relaxed text-[#224a58]">
-      {children}
-    </p>
-  );
+  return <p>{children}</p>;
 }
