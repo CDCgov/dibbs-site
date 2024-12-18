@@ -3,7 +3,6 @@ import { ContentContainer } from '@/app/components/ContentContainer/ContentConta
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import Image from 'next/image';
-import './styles.scss';
 import {
   Navigation,
   TitleSection,
@@ -24,15 +23,24 @@ import {
   Figure,
   Text,
   ValueList,
+  NavItem,
 } from '../_ui';
 
 export default function EcrViewer() {
+  const navItems: NavItem[] = [
+    { title: 'Overview', id: 'overview' },
+    { title: 'Product features', id: 'product-features' },
+    { title: 'How it works', id: 'how-it-works' },
+    { title: 'Getting started', id: 'getting-started' },
+    { title: 'Technical resources', id: 'technical-resources' },
+    { title: 'FAQs', id: 'faqs' },
+  ];
   return (
     <div>
       <ContentContainer classes="sm:pt-0" align>
         <GridContainer>
           <GridLeft>
-            <Navigation />
+            <Navigation navItems={navItems} />
           </GridLeft>
           <GridMiddle>
             <TitleSection
@@ -325,6 +333,7 @@ export default function EcrViewer() {
                   </Text>
                 </SubsectionContainer>
                 <Accordion
+                  className="[&_button]:bg-white [&_button]:text-[#224a58]"
                   bordered={false}
                   items={[
                     {

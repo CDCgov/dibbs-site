@@ -8,6 +8,7 @@ import {
 import classNames from 'classnames';
 import Link from 'next/link';
 import { SetStateAction, useState } from 'react';
+import './styles.scss';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -116,17 +117,12 @@ const AccordionItemContent = ({ children }: ContainerProps) => {
   );
 };
 
-const Navigation = () => {
+export type NavItem = { title: string; id: string };
+interface NavigationProps {
+  navItems: NavItem[];
+}
+const Navigation = ({ navItems }: NavigationProps) => {
   const [selectedHash, setSelectedHash] = useState('#overview');
-
-  const navItems = [
-    { title: 'Overview', id: 'overview' },
-    { title: 'Product features', id: 'product-features' },
-    { title: 'How it works', id: 'how-it-works' },
-    { title: 'Getting started', id: 'getting-started' },
-    { title: 'Technical resources', id: 'technical-resources' },
-    { title: 'FAQs', id: 'faqs' },
-  ];
 
   return (
     <div className="lg:sticky lg:top-4">
@@ -159,7 +155,7 @@ const GridLeft = ({ children }: ContainerProps) => {
 
 const GridMiddle = ({ children }: ContainerProps) => {
   return (
-    <div className="grid grid-cols-1 gap-[3.75rem] px-[3.75rem] pt-[3.75rem]">
+    <div className="grid grid-cols-1 gap-[3.75rem] px-2 pt-2 md:px-[3.75rem] md:pt-[3.75rem]">
       {children}
     </div>
   );
@@ -211,7 +207,7 @@ const GettingStartedProcessList = ({ systemName }: GettingStartedProps) => {
 
   return (
     <RoundedBackground className="p-10">
-      <ProcessList>
+      <ProcessList className="process-list-item">
         {steps.map(({ heading, content }) => (
           <ProcessListItem key={heading} className="last:pb-0">
             <ProcessListHeading type="h3">{heading}</ProcessListHeading>
@@ -238,13 +234,15 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
             <SectionSubheader>
               What's expected from a pilot partner:
             </SectionSubheader>
-            <ul className="list__full-width font-semibold leading-relaxed text-[#224a58]">
-              <li>
+            <ul className="text-base font-semibold leading-relaxed text-[#224a58]">
+              <li className="min-w-full">
                 Work with the DIBBs team to set expectations and establish a
                 regular meeting cadence
               </li>
-              <li>Deploy the {systemName} in your production environment</li>
-              <li>
+              <li className="min-w-full">
+                Deploy the {systemName} in your production environment
+              </li>
+              <li className="min-w-full">
                 Provide feedback on an ongoing basis to ensure the {systemName}{' '}
                 in working properly
               </li>
@@ -310,7 +308,7 @@ const ValueList = ({ children }: ContainerProps) => {
     <RoundedBackground className="p-10">
       <SubsectionContainer>
         <SectionSubheader>The value to you:</SectionSubheader>
-        <ul className="list__full-width flex flex-col gap-3 font-semibold leading-relaxed text-[#224a58]">
+        <ul className="flex flex-col gap-3 text-base font-semibold leading-relaxed text-[#224a58]">
           {children}
         </ul>
       </SubsectionContainer>
