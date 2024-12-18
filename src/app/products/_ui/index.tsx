@@ -269,7 +269,7 @@ const Video = ({ src, description }: VideoProps) => {
         src={src}
         allowFullScreen
       ></iframe>
-      {description ? <Text>{description}</Text> : null}
+      {description ? <Text className="italic">{description}</Text> : null}
     </div>
   );
 };
@@ -282,7 +282,7 @@ const Figure = ({ children, caption }: FigureProps) => {
   return (
     <figure className="flex flex-col gap-3">
       {children}
-      <figcaption className="font-['Public Sans'] font-normal leading-snug text-[#224a58]">
+      <figcaption className="font-['Public Sans'] font-normal italic leading-snug text-[#224a58]">
         {caption}
       </figcaption>
     </figure>
