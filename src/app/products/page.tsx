@@ -177,7 +177,7 @@ interface DataPipelineCardProps {
 
 function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
   return (
-    <div className="px-2 py-6">
+    <div className="px-2 py-5">
       <Image className="pb-4" src={imgSrc} width={60} height={60} alt="" />
       <div className="flex flex-col gap-y-2">
         <h3 className="text-[1rem]">{title}</h3>
