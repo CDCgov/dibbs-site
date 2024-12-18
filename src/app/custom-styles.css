@@ -14,7 +14,6 @@
   --blue-cool-80: #14333d;
   --blue-cool-70: #224a58;
   --foreground: #171717;
-  --header-teal: #224a58;
   --background-light-blue: #dcecf3;
   --background-dark-blue: #0e1e25;
   --ifm-color-primary: #2e8555;
@@ -54,7 +53,7 @@ main > *:not(.remove-footer-bar) {
 }
 
 .bg-background-teal {
-  background-color: var(--header-teal);
+  background-color: var(--blue-cool-70);
 }
 
 .bg-background-dark-blue {
@@ -132,26 +131,15 @@ h4 {
   line-height: 140%; /* 1.4rem */
 }
 
+ol,
 ul {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  line-height: 1.5;
+  color: var(--blue-cool-70);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 150%;
   padding-left: 3ch;
   list-style: disc;
-}
-ul:last-child {
-  margin-bottom: 0;
-}
-ul,
-ol {
-  margin-top: 0.25em;
-}
-ul li {
-  margin-bottom: 0.25em;
-  max-width: 68ex;
-}
-ul li:last-child {
-  margin-bottom: 0;
 }
 
 main:has(.hide-footer-bar) ~ .footer-bar::before {
