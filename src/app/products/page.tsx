@@ -150,7 +150,7 @@ const StatusTag = ({ variant }: StatusTagProps) => {
         className="inline-flex h-6 items-center justify-start gap-2.5 rounded-sm px-2 py-1"
         background="#c4eeeb"
       >
-        <p className="m-0 p-0 uppercase leading-none text-[#14333d]">
+        <p className="m-0 p-0 uppercase leading-none text-blue-cool-80">
           currently piloting
         </p>
       </Tag>
@@ -162,7 +162,7 @@ const StatusTag = ({ variant }: StatusTagProps) => {
       className="inline-flex h-6 items-center justify-start gap-2.5 rounded-sm px-2 py-1"
       background="#f1e5cd"
     >
-      <p className="m-0 p-0 uppercase leading-none text-[#14333d]">
+      <p className="m-0 p-0 uppercase leading-none text-blue-cool-80">
         Under development
       </p>
     </Tag>
@@ -212,7 +212,7 @@ function DataPipeline() {
         <div className="flex flex-col gap-y-6 pb-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>
-            <p className="max-w-[38.5rem] font-normal leading-snug text-[#224a58]">
+            <p className="max-w-[38.5rem] font-normal leading-snug text-blue-cool-70">
               These are the underlying services that power each of our products;
               they can be configured in a variety of ways to support the unique
               needs of your jurisdiction.
@@ -284,7 +284,7 @@ interface DataSectionText {
 }
 const DataSectionText = ({ children }: DataSectionText) => {
   return (
-    <p className="font-['Public Sans'] text-[1.38rem] font-light uppercase leading-[1.93rem] text-[#14333d]">
+    <p className="font-['Public Sans'] text-[1.38rem] font-light uppercase leading-[1.93rem] text-blue-cool-80">
       {children}
     </p>
   );

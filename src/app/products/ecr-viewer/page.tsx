@@ -333,7 +333,7 @@ export default function EcrViewer() {
                   </Text>
                 </SubsectionContainer>
                 <Accordion
-                  className="[&_button]:bg-white [&_button]:text-[#224a58]"
+                  className="[&_button]:bg-white [&_button]:text-blue-cool-70"
                   bordered={false}
                   items={[
                     {
