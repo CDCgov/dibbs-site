@@ -21,16 +21,21 @@ const DibbsSection = () => (
           transform: 'scale(1.4) translate(-8%, 3%)',
         }}
       >
-        <Heading className="min-w-full text-center xl:text-left">
-          Introducing Data Integration Building Blocks
-        </Heading>
-        <div className="flex flex-col gap-2">
-          <Paragraph className="m-0 max-w-[39.7rem] p-0">
-            {homeContent.dibbs.description}
-          </Paragraph>
-          <ul className="font-semibold leading-relaxed text-[#224a58]">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
+            <Heading className="text-center xl:text-left">
+              Introducing Data Integration Building Blocks
+            </Heading>
+            <Paragraph className="m-0 max-w-[35rem] p-0">
+              {homeContent.dibbs.description}
+            </Paragraph>
+          </div>
+          <ul className="flex list-none flex-col gap-4 font-semibold text-[#224a58]">
             {homeContent.dibbs.benefits.map((benefit, index) => (
-              <li className="min-w-full" key={`benefit-${index}`}>
+              <li
+                className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:min-w-fit"
+                key={`benefit-${index}`}
+              >
                 {benefit}
               </li>
             ))}

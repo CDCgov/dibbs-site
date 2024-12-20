@@ -3,11 +3,10 @@ import {
   ProcessList,
   ProcessListHeading,
   ProcessListItem,
-  SideNav,
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { SetStateAction, useState } from 'react';
+import { SideNav } from '@/app/components/SideNav/SideNav';
 import './styles.scss';
 
 interface ContainerProps {
@@ -81,34 +80,6 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
   );
 };
 
-interface NavItemProps {
-  title: string;
-  id: string;
-  selectedHash: string;
-  setSelectedHash: (value: SetStateAction<string>) => void;
-}
-
-const NavItem = ({
-  title,
-  id,
-  selectedHash,
-  setSelectedHash,
-}: NavItemProps) => {
-  const itemHash = `#${id}`;
-  return (
-    <a
-      href={itemHash}
-      key={id}
-      className={classNames({
-        'usa-current': itemHash === selectedHash,
-      })}
-      onClick={() => setSelectedHash(itemHash)}
-    >
-      {title}
-    </a>
-  );
-};
-
 const AccordionItemContent = ({ children }: ContainerProps) => {
   return (
     <span className="font-['Public Sans'] font-normal leading-snug text-[#224a58]">
@@ -122,21 +93,9 @@ interface NavigationProps {
   navItems: NavItem[];
 }
 const Navigation = ({ navItems }: NavigationProps) => {
-  const [selectedHash, setSelectedHash] = useState('#overview');
-
   return (
     <div className="lg:sticky lg:top-4">
-      <SideNav
-        items={navItems.map(({ title, id }) => (
-          <NavItem
-            title={title}
-            id={id}
-            key={id}
-            selectedHash={selectedHash}
-            setSelectedHash={setSelectedHash}
-          />
-        ))}
-      />
+      <SideNav items={navItems} />
     </div>
   );
 };
@@ -322,7 +281,6 @@ export {
   SectionHeader,
   SectionSubheader,
   GithubNav,
-  NavItem,
   AccordionItemContent,
   Navigation,
   GridContainer,
