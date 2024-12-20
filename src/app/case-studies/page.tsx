@@ -113,7 +113,7 @@ export default function CaseStudies() {
                 </div>
               </ContentContainer>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:ml-[-1.25rem]">
+            <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
               <Image
                 src={`${basePath}/images/case-studies/image3.png`}
                 width={550}
