@@ -11,6 +11,7 @@ import { ContentContainer } from '../components/ContentContainer/ContentContaine
 import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
 import './styles.scss';
+import { FormEvent, useState } from 'react';
 
 const EngageWithUs = () => {
   useHeroInit({
@@ -43,10 +44,64 @@ const EngageWithUs = () => {
 };
 
 const ContactForm = () => {
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');
+  const [emailError, setEmailError] = useState<string>('');
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const hasFormErrors = () => {
+    return Boolean(emailError);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitStatus('loading');
+
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get('email') as string;
+
+    if (!validateEmail(email)) {
+      setEmailError('Please enter a valid email address');
+      setSubmitStatus('idle');
+      return;
+    }
+    setEmailError('');
+
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      organization: formData.get('organization'),
+      inquiry: formData.get('inquiry'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error('Failed to send message');
+
+      setSubmitStatus('success');
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus('error');
+    }
+  };
+
   return (
     <div className="lg:pl-5">
       <Form
-        onSubmit={() => {}}
+        onSubmit={handleSubmit}
         className="align-start flex min-w-full flex-col gap-5 lg:min-w-[31.25rem]"
       >
         <div className="flex flex-col gap-5 lg:max-w-[70%]">
@@ -71,7 +126,21 @@ const ContactForm = () => {
             >
               Email Address
             </Label>
-            <TextInput id="email" name="email" type="email" />
+            <TextInput
+              id="email"
+              name="email"
+              type="email"
+              onBlur={(e) => {
+                if (!validateEmail(e.target.value)) {
+                  setEmailError('Please enter a valid email address');
+                } else {
+                  setEmailError('');
+                }
+              }}
+            />
+            {emailError && (
+              <span className="mt-1 text-sm text-red-600">{emailError}</span>
+            )}
           </div>
           <div>
             <Label
@@ -105,13 +174,23 @@ const ContactForm = () => {
           </Label>
           <Textarea id="message" name="message" className="resize-none" />
         </div>
+        <Button
+          type="submit"
+          disabled={submitStatus === 'loading' || hasFormErrors()}
+          className="mt-6 inline-flex h-11 w-fit items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70 disabled:opacity-50"
+        >
+          {submitStatus === 'loading' ? 'Sending...' : 'Send inquiry'}
+        </Button>
+
+        {submitStatus === 'success' && (
+          <p className="text-green-600">Message sent successfully!</p>
+        )}
+        {submitStatus === 'error' && (
+          <p className="text-red-600">
+            Failed to send message. Please try again.
+          </p>
+        )}
       </Form>
-      <Button
-        type="submit"
-        className="mt-6 inline-flex h-11 items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70"
-      >
-        Send inquiry
-      </Button>
     </div>
   );
 };
