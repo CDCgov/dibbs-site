@@ -56,7 +56,7 @@ const ReturnToCaseStudiesLink = () => {
     <div className="flex flex-row items-center gap-2">
       <ArrowBackIcon />
       <Link
-        className="font-['Public Sans'] font-normal leading-relaxed text-[#3a7d95] underline"
+        className="font-['Public Sans'] font-normal leading-relaxed text-blue-cool-50 underline"
         href="/case-studies"
       >
         Return to all case studies
@@ -87,7 +87,7 @@ const ReadMore = ({ href, linkText }: { href: string; linkText: string }) => {
     <>
       <h2>Read more about our work</h2>
       <ExternalLink
-        className="font-['Public Sans'] font-bold leading-snug text-[#3a7d95] underline"
+        className="font-['Public Sans'] font-bold leading-snug text-blue-cool-50 underline"
         href={href}
         target="_blank"
         rel="noreferrer noopener"

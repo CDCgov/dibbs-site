@@ -30,7 +30,7 @@ const DibbsSection = () => (
               {homeContent.dibbs.description}
             </Paragraph>
           </div>
-          <ul className="flex list-none flex-col gap-4 font-semibold text-[#224a58]">
+          <ul className="flex list-none flex-col gap-4 font-semibold text-blue-cool-70">
             {homeContent.dibbs.benefits.map((benefit, index) => (
               <li
                 className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:min-w-fit"
