@@ -13,6 +13,19 @@ import { RoundedBackground } from '../components/RoundedBackground/RoundedBackgr
 import './styles.scss';
 import { FormEvent, useState } from 'react';
 
+type FormField = {
+  id: string;
+  label: string;
+  type?: 'text' | 'email' | 'number' | 'password' | 'search' | 'tel' | 'url';
+  component: typeof TextInput | typeof Select | typeof Textarea;
+  className?: string;
+  wrapperClass?: string;
+  defaultValue?: string;
+  error?: string;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  children?: React.ReactNode;
+};
+
 const EngageWithUs = () => {
   useHeroInit({
     header: `Get started with DIBBs products`,
@@ -98,85 +111,112 @@ const ContactForm = () => {
     }
   };
 
+  const formFields: FormField[] = [
+    {
+      id: 'name',
+      label: 'Name',
+      type: 'text',
+      className: 'lg:max-w-[2rem]',
+      component: TextInput,
+    },
+    {
+      id: 'email',
+      label: 'Email Address',
+      type: 'email',
+      component: TextInput,
+      onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
+        if (!validateEmail(e.target.value)) {
+          setEmailError('Please enter a valid email address');
+        } else {
+          setEmailError('');
+        }
+      },
+      error: emailError,
+    },
+    {
+      id: 'organization',
+      label: 'Organization',
+      type: 'text',
+      component: TextInput,
+    },
+    {
+      id: 'inquiry',
+      label: 'Type of inquiry',
+      component: Select,
+      defaultValue: 'general-interest',
+      wrapperClass: 'lg:max-w-[85%]',
+      children: (
+        <option value="general-interest">
+          General interest in DIBBs products
+        </option>
+      ),
+    },
+    {
+      id: 'message',
+      label: 'Message',
+      component: Textarea,
+      className: 'resize-none',
+    },
+  ];
+
+  const renderFormField = (field: FormField) => {
+    const commonProps = {
+      id: field.id,
+      name: field.id,
+      className: field.className,
+      disabled: submitStatus === 'success',
+    };
+
+    return (
+      <div
+        key={field.id}
+        className={`${field.component === TextInput ? 'lg:max-w-[70%]' : ''} ${field.wrapperClass || ''}`}
+      >
+        <Label
+          htmlFor={field.id}
+          className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
+        >
+          {field.label}
+        </Label>
+
+        {field.component === TextInput && (
+          <field.component
+            {...commonProps}
+            onBlur={field.onBlur}
+            type={field.type || 'text'}
+          />
+        )}
+        {field.component === Select && (
+          <field.component {...commonProps} defaultValue={field.defaultValue}>
+            {field.children}
+          </field.component>
+        )}
+        {field.component === Textarea && (
+          <field.component {...commonProps}>{field.children}</field.component>
+        )}
+
+        {field.error && (
+          <span className="mt-1 text-sm text-red-600">{field.error}</span>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="lg:pl-5">
       <Form
         onSubmit={handleSubmit}
         className="align-start flex min-w-full flex-col gap-5 lg:min-w-[31.25rem]"
       >
-        <div className="flex flex-col gap-5 lg:max-w-[70%]">
-          <div>
-            <Label
-              htmlFor="name"
-              className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
-            >
-              Name
-            </Label>
-            <TextInput
-              id="name"
-              name="name"
-              type="text"
-              className="lg:max-w-[2rem]"
-            />
-          </div>
-          <div>
-            <Label
-              htmlFor="email"
-              className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
-            >
-              Email Address
-            </Label>
-            <TextInput
-              id="email"
-              name="email"
-              type="email"
-              onBlur={(e) => {
-                if (!validateEmail(e.target.value)) {
-                  setEmailError('Please enter a valid email address');
-                } else {
-                  setEmailError('');
-                }
-              }}
-            />
-            {emailError && (
-              <span className="mt-1 text-sm text-red-600">{emailError}</span>
-            )}
-          </div>
-          <div>
-            <Label
-              htmlFor="organization"
-              className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
-            >
-              Organization
-            </Label>
-            <TextInput id="organization" name="organization" type="text" />
-          </div>
-        </div>
-        <div className="lg:max-w-[85%]">
-          <Label
-            htmlFor="inquiry"
-            className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
-          >
-            Type of inquiry
-          </Label>
-          <Select id="inquiry" name="inquiry" defaultValue="general-interest">
-            <option value="general-interest">
-              General interest in DIBBs products
-            </option>
-          </Select>
-        </div>
-        <div>
-          <Label
-            htmlFor="message"
-            className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
-          >
-            Message
-          </Label>
-          <Textarea id="message" name="message" className="resize-none" />
-        </div>
+        {formFields.map(renderFormField)}
+
         <Button
           type="submit"
-          disabled={submitStatus === 'loading' || hasFormErrors()}
+          disabled={
+            submitStatus === 'loading' ||
+            hasFormErrors() ||
+            submitStatus === 'success'
+          }
           className="mt-6 inline-flex h-11 w-fit items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70 disabled:opacity-50"
         >
           {submitStatus === 'loading' ? 'Sending...' : 'Send inquiry'}
