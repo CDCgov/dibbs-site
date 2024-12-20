@@ -42,6 +42,8 @@ export default function Carousel() {
     autoplaySpeed: 0, // Continuous without pause
     cssEase: 'linear', // For smooth, continuous movement
     pauseOnHover: false,
+    arrows: false,
+    dots: false,
   };
 
   return (

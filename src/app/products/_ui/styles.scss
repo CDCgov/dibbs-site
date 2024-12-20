@@ -1,0 +1,16 @@
+.process-list-item {
+  li {
+    border-left-color: #dae9ee;
+
+    &:before {
+      background-color: var(--background);
+      color: #6499af;
+      box-shadow: 0 0;
+      border-color: #6499af;
+    }
+
+    h3 {
+      color: #224a58;
+    }
+  }
+}

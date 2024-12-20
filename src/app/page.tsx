@@ -30,7 +30,7 @@ const DibbsSection = () => (
               {homeContent.dibbs.description}
             </Paragraph>
           </div>
-          <ul className="flex list-none flex-col gap-4 text-base font-semibold leading-relaxed text-[#224a58]">
+          <ul className="flex list-none flex-col gap-4 font-semibold text-[#224a58]">
             {homeContent.dibbs.benefits.map((benefit, index) => (
               <li
                 className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:min-w-fit"
@@ -70,11 +70,11 @@ const ValueSection = () => {
               <Paragraph className="xl:max-w-[28.13rem]">
                 {valueSection.description}
               </Paragraph>
-              <div>
-                <LinkButton href={valueSection.ctaHref} variant="primary">
-                  {valueSection.ctaText}
-                </LinkButton>
-              </div>
+            </div>
+            <div>
+              <LinkButton href={valueSection.ctaHref} variant="primary">
+                {valueSection.ctaText}
+              </LinkButton>
             </div>
           </ImageCard>
         </ContentContainer>
@@ -92,7 +92,7 @@ const JurisdictionSection = () => {
         <ContentContainer align classes="sm:pb-10">
           <Grid row gap>
             <Grid col={12}>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center gap-2">
                 <Heading className="text-center">{jurisdictions.title}</Heading>
                 <Paragraph className="text-center">
                   {jurisdictions.description}
@@ -102,9 +102,11 @@ const JurisdictionSection = () => {
           </Grid>
         </ContentContainer>
       </section>
-      <div className="ml-8 mr-8 pb-20 pt-0">
-        <Carousel />
-      </div>
+      <section>
+        <div className="ml-8 mr-8 pb-20 pt-0">
+          <Carousel />
+        </div>
+      </section>
     </>
   );
 };

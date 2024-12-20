@@ -14,7 +14,6 @@
   --blue-cool-80: #14333d;
   --blue-cool-70: #224a58;
   --foreground: #171717;
-  --header-teal: #224a58;
   --background-light-blue: #dcecf3;
   --background-dark-blue: #0e1e25;
   --ifm-color-primary: #2e8555;
@@ -30,12 +29,31 @@ body {
   background: var(--background);
 }
 
+section {
+  background: var(--background);
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+main
+  > *:last-child:not(:has(~ .remove-footer-bar)):not(
+    :where(:has(.remove-footer-bar) *)
+  ) {
+  @apply mb-8;
+}
+
+main > *:not(.remove-footer-bar) {
+  @apply bg-background;
+}
+
 .usa-logo a {
   color: #ffffff;
 }
 
 .bg-background-teal {
-  background-color: var(--header-teal);
+  background-color: var(--blue-cool-70);
 }
 
 .bg-background-dark-blue {
@@ -68,67 +86,60 @@ body {
   background-color: var(--background-light-blue);
 }
 
+p {
+  color: var(--blue-cool-70);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
 h1 {
-  color: #224a58;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3.125rem;
-  text-align: left;
+  color: var(--blue-cool-70);
   font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
 }
 
 h2 {
   color: var(--blue-cool-80);
   font-family: 'Public Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 140%;
 }
 
 h3 {
   color: var(--blue-cool-80);
   font-family: 'Public Sans', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
   font-weight: 700;
-  font-size: 1.38rem;
-  line-height: 1.69rem;
+  line-height: 140%;
 }
 
 h4 {
-  color: var(--blue-cool-80);
-  font-family: 'Public Sans';
+  color: var(--blue-cool-70);
+  font-family: 'Public Sans', sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: 140%; /* 1.4rem */
 }
 
+ol,
 ul {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  line-height: 1.5;
-  list-style: disc;
-}
-ul:last-child {
-  margin-bottom: 0;
-}
-ul,
-ol {
-  margin-top: 0.25em;
-}
-ul li {
-  margin-bottom: 0.25em;
-  max-width: 68ex;
-}
-ul li:last-child {
-  margin-bottom: 0;
-}
-
-p {
   color: var(--blue-cool-70);
   font-family: 'Public Sans', sans-serif;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 150%;
+  padding-left: 3ch;
+  list-style: disc;
 }
 
 main:has(.hide-footer-bar) ~ .footer-bar::before {
@@ -137,4 +148,18 @@ main:has(.hide-footer-bar) ~ .footer-bar::before {
 
 main:has(.hide-footer-bar) ~ .footer-bar {
   display: none !important;
+}
+
+.site-background {
+  background-color: var(--background);
+  background-image: url('/images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% clamp(381px, 30%, 100vh);
+  min-height: 100vh;
+}
+
+/* Only affects immediate parent */
+*:has(> .remove-parent-bg) {
+  background: transparent !important;
 }

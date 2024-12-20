@@ -41,7 +41,7 @@ export function LinkButton({
         role="link"
         aria-label={ariaLabel}
       >
-        <span className="text-base font-bold text-black">{children}</span>
+        <span className="font-bold text-black">{children}</span>
       </div>
     );
   }
@@ -53,9 +53,7 @@ export function LinkButton({
       aria-label={ariaLabel}
       {...props}
     >
-      <span className="text-center text-base font-bold text-inherit">
-        {children}
-      </span>
+      <span className="text-center font-bold text-inherit">{children}</span>
     </Link>
   );
 }
