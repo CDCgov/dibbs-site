@@ -3,10 +3,7 @@ import { LinkButton } from '../components/LinkButton/LinkButton';
 import { basePath } from '../utils/constants';
 import React from 'react';
 import { useHeroInit } from '../hooks/useHeroInit';
-import {
-  RoundedImage,
-  RoundedImageProps,
-} from '../components/RoundedImage/RoundedImage';
+import Image from 'next/image';
 
 export default function CaseStudies() {
   useHeroInit({
@@ -46,18 +43,22 @@ export default function CaseStudies() {
                 </div>
               </ContentContainer>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:ml-[-1.25rem]">
+            <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
               <Image
                 src={`${basePath}/images/case-studies/image1.png`}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
           </div>
           {/* Section 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center lg:gap-10">
-            <div className="order-1 flex justify-start lg:order-1">
+            <div className="order-1 flex lg:order-1">
               <Image
                 src={`${basePath}/images/case-studies/image2.png`}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
@@ -115,6 +116,8 @@ export default function CaseStudies() {
             <div className="order-1 flex justify-start lg:order-2 lg:ml-[-1.25rem]">
               <Image
                 src={`${basePath}/images/case-studies/image3.png`}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
@@ -122,9 +125,11 @@ export default function CaseStudies() {
 
           {/* Section 4 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center lg:gap-10">
-            <div className="order-1 flex justify-start lg:order-1">
+            <div className="order-1 flex lg:order-1">
               <Image
                 src={`${basePath}/images/case-studies/image4.png`}
+                width={550}
+                height={300}
                 alt=""
               />
             </div>
@@ -175,16 +180,4 @@ function Title({ children }: { children: React.ReactNode }) {
 
 function Text({ children }: { children: React.ReactNode }) {
   return <p className="lg:max-w-[31.25rem]">{children}</p>;
-}
-
-function Image({ src, ...props }: RoundedImageProps) {
-  return (
-    <RoundedImage
-      className="h-[18.75rem] w-[34.375rem]"
-      src={src}
-      width={550}
-      height={300}
-      {...props}
-    />
-  );
 }
