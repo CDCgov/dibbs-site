@@ -46,7 +46,7 @@ export default function CaseStudies() {
                 </div>
               </ContentContainer>
             </div>
-            <div className="order-1 flex justify-start lg:order-2">
+            <div className="order-1 flex justify-start lg:order-2 lg:ml-[-1.25rem]">
               <Image
                 src={`${basePath}/images/case-studies/image1.png`}
                 alt=""
@@ -112,7 +112,7 @@ export default function CaseStudies() {
                 </div>
               </ContentContainer>
             </div>
-            <div className="order-1 flex justify-start lg:order-2 lg:ml-4">
+            <div className="order-1 flex justify-start lg:order-2 lg:ml-[-1.25rem]">
               <Image
                 src={`${basePath}/images/case-studies/image3.png`}
                 alt=""
@@ -170,11 +170,11 @@ function TextContainer({ children }: { children: React.ReactNode }) {
 }
 
 function Title({ children }: { children: React.ReactNode }) {
-  return <h2>{children}</h2>;
+  return <h2 className="lg:max-w-[32rem]">{children}</h2>;
 }
 
 function Text({ children }: { children: React.ReactNode }) {
-  return <p>{children}</p>;
+  return <p className="lg:max-w-[31.25rem]">{children}</p>;
 }
 
 function Image({ src, ...props }: RoundedImageProps) {
