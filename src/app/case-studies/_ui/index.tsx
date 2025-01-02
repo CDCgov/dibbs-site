@@ -53,7 +53,7 @@ const HeadingImageContainer = ({ children }: ContainerProps) => {
 
 const ReturnToCaseStudiesLink = () => {
   return (
-    <div className="flex flex-row items-center gap-2">
+    <div className="flex flex-row items-center gap-1">
       <ArrowBackIcon />
       <Link
         className="font-bold text-blue-cool-50 underline underline-offset-4"
