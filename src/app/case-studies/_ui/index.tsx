@@ -16,7 +16,7 @@ interface ContainerProps {
 const PageContainer = ({ children }: ContainerProps) => {
   return (
     <>
-      <div className="main ml-auto mr-auto flex items-center justify-center lg:px-[7.5rem] lg:pb-[5rem]">
+      <div className="main ml-auto mr-auto flex items-center justify-center pb-[5rem] lg:px-[7.5rem]">
         {children}
       </div>
       <InvitationCta />
