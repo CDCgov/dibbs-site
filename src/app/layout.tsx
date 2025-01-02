@@ -5,6 +5,8 @@ import USABanner from './components/UsaBanner/UsaBanner';
 import './globals.scss';
 import './custom-styles.css';
 import { HeroContextProvider } from './context';
+import { merriweather, publicSans } from './fonts';
+import classNames from 'classnames';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',
@@ -17,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body
+        className={classNames(merriweather.className, publicSans.className)}
+      >
         <USABanner />
         <div className="site-background">
           <HeroContextProvider>
