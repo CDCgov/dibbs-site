@@ -16,7 +16,7 @@ interface ContainerProps {
 const PageContainer = ({ children }: ContainerProps) => {
   return (
     <>
-      <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
+      <div className="main ml-auto mr-auto flex items-center justify-center lg:px-[7.5rem] lg:pb-[5rem]">
         {children}
       </div>
       <InvitationCta />
@@ -26,7 +26,7 @@ const PageContainer = ({ children }: ContainerProps) => {
 
 const ContentContainer = ({ children }: ContainerProps) => {
   return (
-    <div className="content grid max-w-[53rem] grid-cols-1 gap-[3.75rem] pl-[3.75rem] pr-[3.75rem] pt-10">
+    <div className="content grid max-w-[48.25rem] grid-cols-1 gap-[3.75rem] px-[3.75rem] pt-[2.5rem]">
       {children}
     </div>
   );
