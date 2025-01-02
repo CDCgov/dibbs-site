@@ -9,7 +9,7 @@ export const merriweather = Merriweather({
 
 export const publicSans = Public_Sans({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: ['200', '400', '600', '700'],
   display: 'swap',
   variable: '--font-public-sans',
 });
