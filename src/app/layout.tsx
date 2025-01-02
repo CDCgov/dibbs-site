@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classNames(merriweather.className, publicSans.className)}
+        className={`${merriweather.variable} ${publicSans.variable} font-sans`}
       >
         <USABanner />
         <div className="site-background">

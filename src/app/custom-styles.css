@@ -89,7 +89,7 @@ main > *:not(.remove-footer-bar) {
 
 p {
   color: var(--blue-cool-70);
-  font-family: 'Public Sans', sans-serif;
+  font-family: var(--font-public-sans), sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -98,7 +98,7 @@ p {
 
 h1 {
   color: var(--blue-cool-70);
-  font-family: 'Merriweather', serif;
+  font-family: var(--font-merriweather), serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -107,7 +107,7 @@ h1 {
 
 h2 {
   color: var(--blue-cool-80);
-  font-family: 'Public Sans', sans-serif;
+  font-family: var(--font-public-sans), sans-serif;
   font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
@@ -116,7 +116,7 @@ h2 {
 
 h3 {
   color: var(--blue-cool-80);
-  font-family: 'Public Sans', sans-serif;
+  font-family: var(--font-public-sans), sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
@@ -125,7 +125,7 @@ h3 {
 
 h4 {
   color: var(--blue-cool-70);
-  font-family: 'Public Sans', sans-serif;
+  font-family: var(--font-public-sans), sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -135,7 +135,7 @@ h4 {
 ol,
 ul {
   color: var(--blue-cool-70);
-  font-family: 'Public Sans', sans-serif;
+  font-family: var(--font-public-sans), sans-serif;
   font-size: 1rem;
   font-style: normal;
   line-height: 150%;
