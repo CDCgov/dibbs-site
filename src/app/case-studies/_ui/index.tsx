@@ -110,6 +110,10 @@ const HeadingImage = (props: RoundedImageProps) => {
   );
 };
 
+const HeadingTitle = ({ children }: ContainerProps) => {
+  return <h1 className="max-w-[39.7rem]">{children}</h1>;
+};
+
 export {
   ContentContainer,
   PageContainer,
@@ -120,4 +124,5 @@ export {
   ReadMore,
   HeadingImageContainer,
   HeadingImage,
+  HeadingTitle,
 };

@@ -8,6 +8,7 @@ import {
   HeadingContentContainer,
   HeadingImageContainer,
   HeadingImage,
+  HeadingTitle,
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
 
@@ -23,10 +24,10 @@ const DibbsPipeline = () => {
                 alt=""
               />
             </HeadingImageContainer>
-            <h1>
+            <HeadingTitle>
               Creating a modular, cloud-based data processing pipeline for LA
               County
-            </h1>
+            </HeadingTitle>
           </HeadingContentContainer>
         </section>
         <section id="challenge">
