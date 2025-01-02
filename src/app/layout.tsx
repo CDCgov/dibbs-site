@@ -6,7 +6,6 @@ import './globals.scss';
 import './custom-styles.css';
 import { HeroContextProvider } from './context';
 import { merriweather, publicSans } from './fonts';
-import classNames from 'classnames';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',
