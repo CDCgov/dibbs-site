@@ -7,8 +7,7 @@ export const ArrowBackIcon = () => {
   return (
     <Icon.ArrowBack
       className={styles.svgBlueFill}
-      height={4}
-      width={4}
+      size={3}
       role="img"
       aria-label="Back arrow"
     />
