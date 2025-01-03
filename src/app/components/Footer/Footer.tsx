@@ -36,17 +36,14 @@ export default function Footer() {
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href="http://cdc.gov" title="<Project title>">
-                  <span
-                    className={classNames('sr-only', styles.navbarLogoText)}
-                  >
+                  <span className="sr-only">
                     CDC US center for disease control and prevention
                   </span>
                   <Image
                     width={200}
                     height={40}
                     alt=""
-                    className="margin-x-0"
-                    src={`${basePath}/images/CDC.svg`}
+                    src={`${basePath}/images/cdc.svg`}
                   />
                 </a>
               </em>
