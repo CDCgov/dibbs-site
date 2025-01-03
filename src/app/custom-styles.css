@@ -67,21 +67,6 @@ main > *:not(.remove-footer-bar) {
   }
 }
 
-.height-100 {
-  height: 100%;
-}
-
-.flex-vertical-center {
-  display: flex;
-  align-items: center !important;
-  vertical-align: center;
-  height: auto;
-}
-
-.flex-center {
-  text-align: center;
-}
-
 .usa-section--light-blue {
   background-color: var(--background-light-blue);
 }
