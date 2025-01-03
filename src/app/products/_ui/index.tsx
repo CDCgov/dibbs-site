@@ -94,7 +94,7 @@ interface NavigationProps {
 }
 const Navigation = ({ navItems }: NavigationProps) => {
   return (
-    <div className="lg:sticky lg:top-4">
+    <div className="w-[12.5rem] bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4">
       <SideNav items={navItems} />
     </div>
   );
