@@ -40,9 +40,10 @@ export default function Footer() {
                     CDC US center for disease control and prevention
                   </span>
                   <Image
-                    width={200}
-                    height={40}
-                    alt=""
+                    className="lg:h-[4rem] lg:w-[17rem]"
+                    width={140}
+                    height={64}
+                    alt="Centers for Disease Control and Prevention"
                     src={`${basePath}/images/cdc.svg`}
                   />
                 </a>
