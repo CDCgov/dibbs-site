@@ -16,7 +16,7 @@ interface ContainerProps {
 const PageContainer = ({ children }: ContainerProps) => {
   return (
     <>
-      <div className="main ml-auto mr-auto flex items-center justify-center pb-20 lg:pl-[7.5rem] lg:pr-[7.5rem]">
+      <div className="main ml-auto mr-auto flex items-center justify-center pb-[5rem] lg:px-[7.5rem]">
         {children}
       </div>
       <InvitationCta />
@@ -26,7 +26,7 @@ const PageContainer = ({ children }: ContainerProps) => {
 
 const ContentContainer = ({ children }: ContainerProps) => {
   return (
-    <div className="content grid max-w-[53rem] grid-cols-1 gap-[3.75rem] pl-[3.75rem] pr-[3.75rem] pt-10">
+    <div className="content grid max-w-[48.25rem] grid-cols-1 gap-[2.5rem] px-[3.75rem] pt-[2.5rem]">
       {children}
     </div>
   );
@@ -53,13 +53,13 @@ const HeadingImageContainer = ({ children }: ContainerProps) => {
 
 const ReturnToCaseStudiesLink = () => {
   return (
-    <div className="flex flex-row items-center gap-2">
+    <div className="flex flex-row items-center gap-1">
       <ArrowBackIcon />
       <Link
-        className="font-['Public Sans'] font-normal leading-relaxed text-blue-cool-50 underline"
+        className="font-bold text-blue-cool-50 underline underline-offset-4"
         href="/case-studies"
       >
-        Return to all case studies
+        View all case studies
       </Link>
     </div>
   );
@@ -110,6 +110,10 @@ const HeadingImage = (props: RoundedImageProps) => {
   );
 };
 
+const HeadingTitle = ({ children }: ContainerProps) => {
+  return <h1 className="max-w-[39.7rem]">{children}</h1>;
+};
+
 export {
   ContentContainer,
   PageContainer,
@@ -120,4 +124,5 @@ export {
   ReadMore,
   HeadingImageContainer,
   HeadingImage,
+  HeadingTitle,
 };
