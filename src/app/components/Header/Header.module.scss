@@ -43,9 +43,19 @@
   background: #1d2553;
 
   &::before {
-    background: url($base-path + '/images/homepage-hero-bg.png') no-repeat
-      center center;
+    background: url($base-path + '/images/home/hero.png') no-repeat center
+      center;
     background-size: cover;
+  }
+}
+
+.detail-hero {
+  @extend %hero-base;
+
+  &::before {
+    background: url($base-path + '/images/products/detail-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -53,13 +63,9 @@
   @extend %hero-base;
 
   &::before {
-    background: linear-gradient(
-        90deg,
-        rgba(76, 43, 100, 0.85) 12%,
-        rgba(0, 94, 162, 0.85) 50%,
-        rgba(0, 129, 161, 0.85) 98%
-      ),
-      url($base-path + '/images/our-products-hero-bg.jpeg');
+    background: url($base-path + '/images/products/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -67,13 +73,9 @@
   @extend %hero-base;
 
   &::before {
-    background: linear-gradient(
-        90deg,
-        rgba(76, 43, 100, 0.85) 12%,
-        rgba(0, 94, 162, 0.85) 50%,
-        rgba(0, 129, 161, 0.85) 98%
-      ),
-      url($base-path + '/images/case-studies-hero-bg.jpeg');
+    background: url($base-path + '/images/case-studies/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -81,13 +83,9 @@
   @extend %hero-base;
 
   &::before {
-    background: linear-gradient(
-        90deg,
-        rgba(76, 43, 100, 0.85) 12%,
-        rgba(0, 94, 162, 0.85) 50%,
-        rgba(0, 129, 161, 0.85) 98%
-      ),
-      url($base-path + '/images/engage-with-us-hero-bg.jpeg');
+    background: url($base-path + '/images/engage-with-us/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
