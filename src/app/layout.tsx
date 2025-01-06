@@ -5,6 +5,7 @@ import USABanner from './components/UsaBanner/UsaBanner';
 import './globals.scss';
 import './custom-styles.css';
 import { HeroContextProvider } from './context';
+import { merriweather, publicSans } from './fonts';
 
 export const metadata: Metadata = {
   title: 'DIBBS Site',
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className="site-background">
+      <body
+        suppressHydrationWarning
+        className={`${merriweather.variable} ${publicSans.variable} site-background font-sans`}
+      >
         <USABanner />
         <div>
           <HeroContextProvider>

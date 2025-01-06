@@ -8,6 +8,7 @@ import {
   Text,
   UnorderedList,
   HeadingImage,
+  HeadingTitle,
 } from '../_ui';
 
 const EcrViewer = () => {
@@ -22,9 +23,9 @@ const EcrViewer = () => {
                 alt=""
               />
             </HeadingImageContainer>
-            <h1>
+            <HeadingTitle>
               Surfacing actionable insights from electronic case reporting data
-            </h1>
+            </HeadingTitle>
           </HeadingContentContainer>
         </section>
         <section id="challenge">

@@ -9,6 +9,7 @@ import {
   HeadingContentContainer,
   HeadingImageContainer,
   HeadingImage,
+  HeadingTitle,
 } from '../_ui';
 
 const DibbsPrototype = () => {
@@ -23,10 +24,10 @@ const DibbsPrototype = () => {
                 alt=""
               />
             </HeadingImageContainer>
-            <h1>
+            <HeadingTitle>
               Building a prototype for modernized public health infrastructure
               in Virginia
-            </h1>
+            </HeadingTitle>
           </HeadingContentContainer>
         </section>
         <section id="challenge">

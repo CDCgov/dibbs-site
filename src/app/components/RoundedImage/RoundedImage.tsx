@@ -12,7 +12,7 @@ export const RoundedImage = ({
   return (
     <Image
       className={classNames(
-        'inline-flex h-full w-full items-center justify-center rounded-br-[2.5rem] rounded-tl-[2.5rem] shadow',
+        'rounded-br-[2.5rem] rounded-tl-[2.5rem] shadow-lg',
         className,
       )}
       src={src}

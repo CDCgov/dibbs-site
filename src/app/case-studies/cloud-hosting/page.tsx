@@ -8,6 +8,7 @@ import {
   HeadingContentContainer,
   HeadingImageContainer,
   HeadingImage,
+  HeadingTitle,
 } from '../_ui';
 
 const CloudHosting = () => {
@@ -22,10 +23,10 @@ const CloudHosting = () => {
                 alt=""
               />
             </HeadingImageContainer>
-            <h1>
+            <HeadingTitle>
               Improving public health data infrastructure through flexible,
               modern approaches to cloud services
-            </h1>
+            </HeadingTitle>
           </HeadingContentContainer>
         </section>
         <section id="challenge">
