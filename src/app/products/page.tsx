@@ -102,7 +102,7 @@ function ProductCard({
   linkVariant,
 }: ProductCardProps) {
   return (
-    <RoundedBackground className="border-none !bg-white">
+    <RoundedBackground className="border-none !bg-white shadow-lg">
       <div className="grid h-full grid-cols-1 items-start lg:max-w-[33.75rem]">
         {imgSrc ? (
           <div>
