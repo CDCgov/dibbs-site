@@ -107,7 +107,7 @@ function ProductCard({
         {imgSrc ? (
           <div>
             <RoundedImage
-              className="rounded-br-none"
+              className="rounded-br-none shadow-none"
               src={imgSrc}
               width="540"
               height="200"
