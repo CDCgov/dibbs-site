@@ -52,7 +52,7 @@ export default function Header() {
       className={classNames(
         heroContent?.heroClass
           ? styles[heroContent?.heroClass]
-          : styles['homepage-hero'],
+          : styles['detail-hero'],
       )}
     >
       <a className="usa-skipnav" href="#main-content">
