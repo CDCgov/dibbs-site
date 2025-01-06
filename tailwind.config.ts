@@ -14,6 +14,13 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        success: {
+          DEFAULT: '#446443',
+        },
+        error: {
+          DEFAULT: '#6F3331',
+          dark: '#B50909',
+        },
         'violet-warm': {
           50: '#b04abd',
           60: '#864381',

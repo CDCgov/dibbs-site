@@ -19,7 +19,6 @@ export async function POST(request: Request) {
 
     // In a production environment, you would send the actual email here
     // using a service like SendGrid, AWS SES, or similar
-
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error processing contact form:', error);

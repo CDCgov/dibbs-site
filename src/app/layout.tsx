@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'DIBBS Site',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning className="site-background">
         <USABanner />
-        <div className="site-background">
+        <div>
           <HeroContextProvider>
             <Header />
             <main id="main-content">{children}</main>
