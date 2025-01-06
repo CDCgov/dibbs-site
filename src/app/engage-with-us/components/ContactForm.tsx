@@ -133,8 +133,13 @@ export const ContactForm = () => {
               name="inquiry"
               control={control}
               defaultValue="general-interest"
-              render={({ field }) => (
-                <Select {...field} id="inquiry">
+              render={({ field: { onChange, value, name } }) => (
+                <Select
+                  onChange={onChange}
+                  value={value}
+                  name={name}
+                  id="inquiry"
+                >
                   <option value="general-interest">
                     General interest in DIBBs products
                   </option>
@@ -159,8 +164,14 @@ export const ContactForm = () => {
             <Controller
               name="message"
               control={control}
-              render={({ field }) => (
-                <Textarea {...field} id="message" className="resize-none" />
+              render={({ field: { onChange, value, name } }) => (
+                <Textarea
+                  onChange={onChange}
+                  value={value}
+                  name={name}
+                  id="message"
+                  className="resize-none"
+                />
               )}
             />
           </div>
