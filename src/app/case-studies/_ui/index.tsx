@@ -45,7 +45,7 @@ const HeadingImageContainer = ({ children }: ContainerProps) => {
     <div className="flex flex-col gap-5">
       <>
         <ReturnToCaseStudiesLink />
-        <div className="h-[18.75rem] w-full overflow-hidden">{children}</div>
+        <div>{children}</div>
       </>
     </div>
   );
@@ -104,7 +104,7 @@ const HeadingImage = (props: RoundedImageProps) => {
       width={300}
       height={654}
       priority
-      className="h-full w-full object-cover object-bottom"
+      className="h-full w-full"
       {...props}
     />
   );
