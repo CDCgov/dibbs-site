@@ -133,7 +133,7 @@ export const ContactForm = () => {
               name="inquiry"
               control={control}
               defaultValue="general-interest"
-              render={({ field: { ref, ...field } }) => (
+              render={({ field }) => (
                 <Select {...field} id="inquiry">
                   <option value="general-interest">
                     General interest in DIBBs products
@@ -159,7 +159,7 @@ export const ContactForm = () => {
             <Controller
               name="message"
               control={control}
-              render={({ field: { ref, ...field } }) => (
+              render={({ field }) => (
                 <Textarea {...field} id="message" className="resize-none" />
               )}
             />
