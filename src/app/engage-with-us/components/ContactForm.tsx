@@ -122,7 +122,7 @@ export const ContactForm = () => {
             />
           </div>
 
-          <div className="lg:max-w-[70%]">
+          <div className="lg:max-w-[84%]">
             <Label
               htmlFor="inquiry"
               className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
@@ -148,7 +148,7 @@ export const ContactForm = () => {
             />
           </div>
 
-          <div className="lg:max-w-[70%]">
+          <div className="lg:max-w-[100%]">
             <Label
               htmlFor="message"
               className={classNames(
