@@ -10,18 +10,20 @@ import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
 import styles from './_styles/Homepage.module.scss';
 import { InvitationCta } from './components/InvitationCta/InvitationCta';
+import Image from 'next/image';
+
 const DibbsSection = () => (
   <section>
-    <ContentContainer>
-      <ImageCard
-        imageUrl={`${basePath}/images/homepage-1.jpeg`}
-        imageAlt=""
-        imageFirst={true}
-        imageStyle={{
-          transform: 'scale(1.4) translate(-8%, 3%)',
-        }}
-      >
-        <div className="flex flex-col gap-6">
+    <PageContainer>
+      <div className="flex flex-col items-center xl:flex-row">
+        <Image
+          src={`${basePath}/images/home/intro-tout.png`}
+          alt=""
+          width={480}
+          height={411}
+          className="shrink-0 rounded-tl-[2.5rem]"
+        />
+        <div className="flex h-full w-full flex-col gap-6 rounded-br-[2.5rem] bg-white p-10">
           <div className="flex flex-col gap-2">
             <Heading className="text-center xl:text-left">
               Introducing Data Integration Building Blocks
@@ -30,10 +32,11 @@ const DibbsSection = () => (
               {homeContent.dibbs.description}
             </Paragraph>
           </div>
-          <ul className="flex list-none flex-col gap-4 font-semibold text-blue-cool-70">
+
+          <ul className="flex list-none flex-col gap-4 pl-0 font-semibold text-blue-cool-70">
             {homeContent.dibbs.benefits.map((benefit, index) => (
               <li
-                className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:min-w-fit"
+                className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:mr-[-20px] last:min-w-fit"
                 key={`benefit-${index}`}
               >
                 {benefit}
@@ -41,10 +44,18 @@ const DibbsSection = () => (
             ))}
           </ul>
         </div>
-      </ImageCard>
-    </ContentContainer>
+      </div>
+    </PageContainer>
   </section>
 );
+
+const PageContainer = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="ml-auto mr-auto flex justify-center pb-[5rem] pt-[3.75rem] lg:px-[7.5rem]">
+      {children}
+    </div>
+  );
+};
 
 const ValueSection = () => {
   const { valueSection } = homeContent;
@@ -52,10 +63,10 @@ const ValueSection = () => {
   return (
     <section>
       <div className={styles.valueSection}>
-        <ContentContainer>
+        <PageContainer>
           <ImageCard
             imageFirst={false}
-            imageUrl={`${basePath}/images/homepage-2.jpeg`}
+            imageUrl={`${basePath}/images/home/value-tout.png`}
             xlHideImage={true}
             imageAlt=""
             imageStyle={{
@@ -77,7 +88,7 @@ const ValueSection = () => {
               </LinkButton>
             </div>
           </ImageCard>
-        </ContentContainer>
+        </PageContainer>
       </div>
     </section>
   );
