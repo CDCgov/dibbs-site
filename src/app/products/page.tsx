@@ -102,12 +102,12 @@ function ProductCard({
   linkVariant,
 }: ProductCardProps) {
   return (
-    <RoundedBackground className="border-none !bg-white">
+    <RoundedBackground className="border-none !bg-white shadow-lg">
       <div className="grid h-full grid-cols-1 items-start lg:max-w-[33.75rem]">
         {imgSrc ? (
           <div>
             <RoundedImage
-              className="rounded-br-none"
+              className="rounded-br-none shadow-none"
               src={imgSrc}
               width="540"
               height="200"
@@ -206,74 +206,76 @@ function DataPipeline() {
   return (
     <section className="bg-[#dae9ee]">
       <ContentContainer
-        classes="bg-[#dae9ee] md:px-[10rem]"
+        classes="bg-[#dae9ee] md:px-[10rem] gap-y-[3.75rem]"
         sectionClasses="bg-[#dae9ee]"
       >
-        <div className="flex flex-col gap-y-6 pb-6">
+        <div className="flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>
             <p className="max-w-[38.5rem] font-normal leading-snug text-blue-cool-70">
               These are the underlying services that power each of our products;
               they can be configured in a variety of ways to support the unique
-              needs of your jurisdiction.
+              needs of your jurisdiction:
             </p>
           </div>
         </div>
-        <DataSectionText>For data processing</DataSectionText>
-        <DataPipelineGrid>
-          <DataPipelineCard
-            title="Orchestration"
-            text="Enables coordinated execution of DIBBs in any order, allowing for
+        <div>
+          <DataSectionText>For data processing</DataSectionText>
+          <DataPipelineGrid>
+            <DataPipelineCard
+              title="Orchestration"
+              text="Enables coordinated execution of DIBBs in any order, allowing for
               fully automated workflows"
-            imgSrc={`${basePath}/icons/products/orchestration.svg`}
-          />
-          <DataPipelineCard
-            title="FHIR Converter"
-            text="Converts incoming messages into the FHIR (Fast Healthcare
+              imgSrc={`${basePath}/icons/products/orchestration.svg`}
+            />
+            <DataPipelineCard
+              title="FHIR Converter"
+              text="Converts incoming messages into the FHIR (Fast Healthcare
                 Interoperability Resources) standard; acts as a common language
                 between data streams that allows for ease of processing data in
                 all the different DIBBs"
-            imgSrc={`${basePath}/icons/products/fhirConverter.svg`}
-          />
-          <DataPipelineCard
-            title="Validation"
-            text="Reads and validates all eCR fields of interest based on specified, custom preferences; ensures that its XML structure is valid, that the required fields are present and in the correct format, and that the data is trustworthy"
-            imgSrc={`${basePath}/icons/products/validation.svg`}
-          />
-        </DataPipelineGrid>
-        <Break />
-        <DataSectionText>For data enrichment</DataSectionText>
-        <DataPipelineGrid>
-          <DataPipelineCard
-            title="Standardization"
-            text="Standardizes data fields (including record name, date of birth, phone number, and geolocation) based on preset defaults to ensure consistency; for example, standardizing phone formats (888-555-1234 vs. (888)555-1234)"
-            imgSrc={`${basePath}/icons/products/standardization.svg`}
-          />
-          <DataPipelineCard
-            title="Geocoding"
-            text="Enriches data by providing precise geographic locations based on patient street addresses from input data"
-            imgSrc={`${basePath}/icons/products/geocoding.svg`}
-          />
-          <DataPipelineCard
-            title="Record Linkage"
-            text="Identifies multiple records referring to the same individual and combines them into a single, more complete patient record"
-            imgSrc={`${basePath}/icons/products/recordLinkage.svg`}
-          />
-        </DataPipelineGrid>
-        <Break />
-        <DataSectionText>For data transformation</DataSectionText>
-        <DataPipelineGrid>
-          <DataPipelineCard
-            title="Flat Formatter"
-            text="Extracts relevant data from a given healthcare message and exports the data into a JSON file based on a user-defined parsing schema"
-            imgSrc={`${basePath}/icons/products/flatFormatter.svg`}
-          />
-          <DataPipelineCard
-            title="PHDC Converter"
-            text="Converts a FHIR bundle to the Public Health Document Container (PHDC) format for ingestion into the National Electronic Disease Surveillance System (NEDSS) Base System (NBS)"
-            imgSrc={`${basePath}/icons/products/phdcConverter.svg`}
-          />
-        </DataPipelineGrid>
+              imgSrc={`${basePath}/icons/products/fhirConverter.svg`}
+            />
+            <DataPipelineCard
+              title="Validation"
+              text="Reads and validates all eCR fields of interest based on specified, custom preferences; ensures that its XML structure is valid, that the required fields are present and in the correct format, and that the data is trustworthy"
+              imgSrc={`${basePath}/icons/products/validation.svg`}
+            />
+          </DataPipelineGrid>
+          <Break />
+          <DataSectionText>For data enrichment</DataSectionText>
+          <DataPipelineGrid>
+            <DataPipelineCard
+              title="Standardization"
+              text="Standardizes data fields (including record name, date of birth, phone number, and geolocation) based on preset defaults to ensure consistency; for example, standardizing phone formats (888-555-1234 vs. (888)555-1234)"
+              imgSrc={`${basePath}/icons/products/standardization.svg`}
+            />
+            <DataPipelineCard
+              title="Geocoding"
+              text="Enriches data by providing precise geographic locations based on patient street addresses from input data"
+              imgSrc={`${basePath}/icons/products/geocoding.svg`}
+            />
+            <DataPipelineCard
+              title="Record Linkage"
+              text="Identifies multiple records referring to the same individual and combines them into a single, more complete patient record"
+              imgSrc={`${basePath}/icons/products/recordLinkage.svg`}
+            />
+          </DataPipelineGrid>
+          <Break />
+          <DataSectionText>For data transformation</DataSectionText>
+          <DataPipelineGrid>
+            <DataPipelineCard
+              title="Flat Formatter"
+              text="Extracts relevant data from a given healthcare message and exports the data into a JSON file based on a user-defined parsing schema"
+              imgSrc={`${basePath}/icons/products/flatFormatter.svg`}
+            />
+            <DataPipelineCard
+              title="PHDC Converter"
+              text="Converts a FHIR bundle to the Public Health Document Container (PHDC) format for ingestion into the National Electronic Disease Surveillance System (NEDSS) Base System (NBS)"
+              imgSrc={`${basePath}/icons/products/phdcConverter.svg`}
+            />
+          </DataPipelineGrid>
+        </div>
       </ContentContainer>
     </section>
   );
