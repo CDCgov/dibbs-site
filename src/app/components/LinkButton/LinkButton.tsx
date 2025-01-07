@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import Link, { LinkProps } from 'next/link';
+import { LaunchIcon } from './LaunchIcon';
 
 const BUTTON_STYLES = {
   primary: {
@@ -22,6 +23,7 @@ interface LinkButtonProps extends LinkProps {
   className?: string;
   disabled?: boolean;
   'aria-label'?: string;
+  isExternal?: boolean;
 }
 
 export function LinkButton({
@@ -31,6 +33,7 @@ export function LinkButton({
   className = '',
   disabled = false,
   'aria-label': ariaLabel,
+  isExternal = false,
   ...props
 }: LinkButtonProps) {
   if (disabled) {
@@ -43,6 +46,24 @@ export function LinkButton({
       >
         <span className="font-bold text-black">{children}</span>
       </div>
+    );
+  }
+
+  if (isExternal) {
+    return (
+      <Link
+        href={href}
+        className={classNames(BUTTON_STYLES[variant].button, className)}
+        aria-label={ariaLabel}
+        target="_blank"
+        rel="noreferrer noopener"
+        {...props}
+      >
+        <span className="flex items-center gap-2 text-center font-bold text-inherit">
+          <span>{children}</span>
+          <LaunchIcon />
+        </span>
+      </Link>
     );
   }
 
