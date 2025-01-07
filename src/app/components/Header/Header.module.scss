@@ -17,10 +17,7 @@
   &::before {
     content: '';
     position: absolute;
-    inset: -20% -10% 0;
-    background-size: cover;
-    background-position: center 40%;
-    transform: scale(1.2);
+    inset: -1% -5% 0;
     z-index: 0;
   }
 
@@ -43,9 +40,9 @@
   background: #1d2553;
 
   &::before {
-    background: url($base-path + '/images/home/hero.png') no-repeat center
-      center;
+    background: url($base-path + '/images/home/hero.png');
     background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
