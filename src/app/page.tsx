@@ -12,7 +12,7 @@ import styles from './_styles/Homepage.module.scss';
 import { InvitationCta } from './components/InvitationCta/InvitationCta';
 const DibbsSection = () => (
   <section>
-    <ContentContainer align>
+    <ContentContainer>
       <ImageCard
         imageUrl={`${basePath}/images/homepage-1.jpeg`}
         imageAlt=""
@@ -52,7 +52,7 @@ const ValueSection = () => {
   return (
     <section>
       <div className={styles.valueSection}>
-        <ContentContainer align>
+        <ContentContainer>
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/homepage-2.jpeg`}
@@ -89,7 +89,7 @@ const JurisdictionSection = () => {
   return (
     <>
       <section>
-        <ContentContainer align classes="sm:pb-10">
+        <ContentContainer classes="sm:pb-10">
           <Grid row gap>
             <Grid col={12}>
               <div className="flex flex-col items-center gap-2">
