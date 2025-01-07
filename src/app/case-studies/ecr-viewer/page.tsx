@@ -19,7 +19,7 @@ const EcrViewer = () => {
           <HeadingContentContainer>
             <HeadingImageContainer>
               <HeadingImage
-                src={`${basePath}/images/case-studies/image2.png`}
+                src={`${basePath}/images/case-studies/ecr-viewer/image1.png`}
                 alt=""
               />
             </HeadingImageContainer>

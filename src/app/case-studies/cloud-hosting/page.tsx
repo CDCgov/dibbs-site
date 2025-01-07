@@ -19,7 +19,7 @@ const CloudHosting = () => {
           <HeadingContentContainer>
             <HeadingImageContainer>
               <HeadingImage
-                src={`${basePath}/images/case-studies/image3.png`}
+                src={`${basePath}/images/case-studies/cloud-hosting/image1.png`}
                 alt=""
               />
             </HeadingImageContainer>

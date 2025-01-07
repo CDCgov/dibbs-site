@@ -20,7 +20,7 @@ const DibbsPrototype = () => {
           <HeadingContentContainer>
             <HeadingImageContainer>
               <HeadingImage
-                src={`${basePath}/images/case-studies/image4.png`}
+                src={`${basePath}/images/case-studies/dibbs-prototype/image1.png`}
                 alt=""
               />
             </HeadingImageContainer>
