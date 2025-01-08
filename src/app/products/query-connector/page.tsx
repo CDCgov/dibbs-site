@@ -17,11 +17,10 @@ import {
   GettingStarted,
   HaveAQuestionSection,
   NavItem,
-  Figure,
 } from '../_ui';
 import Image from 'next/image';
 import { basePath } from '@/app/utils/constants';
-import { Link } from '@trussworks/react-uswds';
+import { LinkButton } from '@/app/components/LinkButton/LinkButton';
 
 export default function QueryConnector() {
   const navItems: NavItem[] = [
@@ -118,22 +117,19 @@ pull relevant data from a wide network of healthcare providers."
                   <div>
                     <SubsectionContainer>
                       <SectionSubheader>Demo</SectionSubheader>
-                      <Link
-                        variant="external"
-                        href="https://dibbs.cloud/query-connector"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        Query Connector demo
-                      </Link>
-                      <Figure caption="See how the Query Connector can improve the way your jurisdiction searches for data.">
-                        <Image
-                          alt="Query Connector demo site"
-                          width={652}
-                          height={383}
-                          src={`${basePath}/images/products/query-connector/demo-site.png`}
-                        />
-                      </Figure>
+                      <Text>
+                        See how the Query Connector can improve the way your
+                        jurisdiction searches for data:
+                      </Text>
+                      <div>
+                        <LinkButton
+                          isExternal
+                          variant="primary"
+                          href="https://dibbs.cloud/query-connector"
+                        >
+                          Launch demo
+                        </LinkButton>
+                      </div>
                     </SubsectionContainer>
                   </div>
                 </SectionContentContainer>
