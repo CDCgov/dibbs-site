@@ -63,7 +63,7 @@ const ValueSection = () => {
   return (
     <section>
       <div className={styles.valueSection}>
-        <PageContainer>
+        <ContentContainer>
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/home/value-tout.png`}
@@ -88,7 +88,7 @@ const ValueSection = () => {
               </LinkButton>
             </div>
           </ImageCard>
-        </PageContainer>
+        </ContentContainer>
       </div>
     </section>
   );
