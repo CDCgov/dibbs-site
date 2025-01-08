@@ -11,6 +11,7 @@ import { Heading, Paragraph } from './_ui';
 import styles from './_styles/Homepage.module.scss';
 import { InvitationCta } from './components/InvitationCta/InvitationCta';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 const DibbsSection = () => (
   <section>
@@ -62,7 +63,12 @@ const ValueSection = () => {
 
   return (
     <section>
-      <div className={styles.valueSection}>
+      <div
+        className={classNames(
+          styles.valueSection,
+          'after:left-[44%] 2xl:after:left-[46%]',
+        )}
+      >
         <ContentContainer>
           <ImageCard
             imageFirst={false}

@@ -26,7 +26,7 @@ export const ImageCard = ({
     <ImageContainer imageFirst={imageFirst}>
       <Image
         className={classNames(
-          'h-full w-full object-cover',
+          'h-full w-full object-cover place-self-start',
           xlHideImage ? 'block xl:hidden' : '',
         )}
         src={imageUrl}
