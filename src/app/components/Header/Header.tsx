@@ -52,7 +52,7 @@ export default function Header() {
       className={classNames(
         heroContent?.heroClass
           ? styles[heroContent?.heroClass]
-          : styles['homepage-hero'],
+          : styles['detail-hero'],
       )}
     >
       <a className="usa-skipnav" href="#main-content">
@@ -60,7 +60,7 @@ export default function Header() {
       </a>
 
       <USWDSHeader basic className="bg-background-teal">
-        <div className="usa-nav-container">
+        <div className="usa-nav-container lg:px-[5rem]">
           <div className="usa-navbar border-none">
             <div className="usa-logo">
               <em className="usa-logo__text">
