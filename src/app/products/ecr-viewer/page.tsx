@@ -338,7 +338,7 @@ export default function EcrViewer() {
                   items={[
                     {
                       id: '1',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title: 'Who will use this tool?',
@@ -353,7 +353,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '2',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title:
@@ -384,7 +384,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '3',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title: 'Where can I find the eCR Viewer within NBS?',
@@ -399,7 +399,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '4',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title:
@@ -416,7 +416,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '5',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title:
@@ -457,7 +457,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '6',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title:
@@ -473,7 +473,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '7',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title: 'What is the long-term viability of this product?',
@@ -491,7 +491,7 @@ export default function EcrViewer() {
                     },
                     {
                       id: '8',
-                      className: 'bg-[#f0f0f0]',
+                      className: 'bg-[#f0f0f0] shadow-lg',
                       headingLevel: 'h4',
                       expanded: false,
                       title: 'How do I get started?',
