@@ -13,12 +13,20 @@ export default function Carousel() {
       alt: 'County of Los Angeles Public Health',
     },
     {
-      image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
-      alt: 'NM Health',
+      image: `${basePath}/images/jurisdictions/NM.png`,
+      alt: 'New Mexico Health',
     },
     {
       image: `${basePath}/images/jurisdictions/Philly.png`,
       alt: 'City of Philadelphia',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/CO.png`,
+      alt: 'Colorado Department of Public Health & Environment',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/VDH.png`,
+      alt: 'Virigina Department of Health',
     },
   ];
 
