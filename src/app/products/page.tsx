@@ -27,9 +27,9 @@ function StandaloneProducts() {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
-        <ContentContainer classes="sm:py-[3.75rem] md:px-[10rem]">
-          <h2 className="lg:ml-[-2rem]">DIBBs-powered products</h2>
-          <div className="mt-5 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <ContentContainer classes="sm:py-[3.75rem] md:px-[10rem] gap-8">
+          <h2>DIBBs-powered products</h2>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <ProductCard
               title="eCR Viewer"
               text="Makes it easier for public health staff to find relevant
