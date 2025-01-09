@@ -24,7 +24,7 @@ export default function USABanner() {
   return (
     <Banner aria-label={bannerLabel}>
       <BannerHeader
-        className="py-[.31rem]"
+        className="py-[.31rem] [&>div]:lg:px-[5rem]"
         isOpen={isOpen}
         flagImg={<BannerFlag src={flagImg} aria-hidden alt="" />}
         headerText={bannerLabel}
