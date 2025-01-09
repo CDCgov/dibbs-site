@@ -67,7 +67,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
       <div className="flex flex-col gap-1 pl-7 pt-12">
         <Text>Current version: {version}</Text>
         <div className="py-3">
-          <hr className="h-[0px] border border-[#a9aeb1]" />
+          <hr className="h-[.0625rem] border-none bg-[#a9aeb1]" />
         </div>
         <Link
           href={githubHref}
