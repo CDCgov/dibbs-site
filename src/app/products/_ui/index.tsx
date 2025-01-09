@@ -72,6 +72,8 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
         <Link
           href={githubHref}
           className="font-semibold leading-relaxed text-blue-cool-80 underline"
+          target="_blank"
+          rel="noreferrer noopener"
         >
           GitHub Respository
         </Link>
@@ -94,7 +96,7 @@ interface NavigationProps {
 }
 const Navigation = ({ navItems }: NavigationProps) => {
   return (
-    <div className="lg:w-[12.5rem] bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4">
+    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4 lg:w-[12.5rem]">
       <SideNav items={navItems} />
     </div>
   );
