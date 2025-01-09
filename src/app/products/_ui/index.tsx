@@ -222,7 +222,7 @@ interface VideoProps {
 }
 const Video = ({ src, description }: VideoProps) => {
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <iframe
         className="h-[31.25rem] w-full border-none"
         src={src}
