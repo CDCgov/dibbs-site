@@ -510,7 +510,10 @@ export default function EcrViewer() {
             </section>
           </GridMiddle>
           <GridRight>
-            <GithubNav version="1.1.1" githubHref="/" />
+            <GithubNav
+              version="1.7.6"
+              githubHref="https://github.com/CDCgov/phdi/tree/main/containers/ecr-viewer"
+            />
           </GridRight>
         </GridContainer>
       </ContentContainer>
