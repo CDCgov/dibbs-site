@@ -286,7 +286,7 @@ interface DataSectionText {
 }
 const DataSectionText = ({ children }: DataSectionText) => {
   return (
-    <p className="font-['Public Sans'] text-[1.38rem] font-light uppercase leading-[1.93rem] text-blue-cool-80">
+    <p className="text-[1.38rem] font-light uppercase leading-[1.93rem] text-blue-cool-80">
       {children}
     </p>
   );
