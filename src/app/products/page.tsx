@@ -295,7 +295,7 @@ const DataSectionText = ({ children }: DataSectionText) => {
 const Break = () => {
   return (
     <div className="py-10">
-      <hr className="border border-[#6499af]" />
+      <hr className="h-[.0625rem] border-none bg-[#6499af]" />
     </div>
   );
 };
