@@ -72,6 +72,12 @@ main > *:not(.remove-footer-bar) {
   background-color: var(--background-light-blue);
 }
 
+span,
+figcaption,
+a {
+  font-family: var(--font-public-sans), sans-serif;
+}
+
 p {
   color: var(--blue-cool-70);
   font-family: var(--font-public-sans), sans-serif;

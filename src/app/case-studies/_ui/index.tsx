@@ -87,7 +87,7 @@ const ReadMore = ({ href, linkText }: { href: string; linkText: string }) => {
     <>
       <h2>Read more about our work</h2>
       <ExternalLink
-        className="font-['Public Sans'] font-bold leading-snug text-blue-cool-50 underline"
+        className="font-bold leading-snug text-blue-cool-50 underline"
         href={href}
         target="_blank"
         rel="noreferrer noopener"

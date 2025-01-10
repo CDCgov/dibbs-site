@@ -16,7 +16,7 @@ interface ContainerProps {
 const SendMailLink = () => {
   return (
     <Link
-      className="font-['Public Sans'] font-bold leading-snug text-blue-cool-50"
+      className="font-bold leading-snug text-blue-cool-50"
       href="mailto:dibbs@cdc.gov"
     >
       dibbs@cdc.gov
@@ -33,7 +33,7 @@ const TitleSection = ({ title, text }: TitleSectionProps) => {
   return (
     <div className="flex flex-col gap-2">
       <h1 className="font-bold leading-[2.8rem]">{title}</h1>
-      <p className="font-['Public Sans'] m-0 p-0 text-[1.38rem] font-extralight leading-[2rem] text-blue-cool-70">
+      <p className="m-0 p-0 text-[1.38rem] font-extralight leading-[2rem] text-blue-cool-70">
         {text}
       </p>
     </div>
@@ -84,7 +84,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
 
 const AccordionItemContent = ({ children }: ContainerProps) => {
   return (
-    <span className="font-['Public Sans'] font-normal leading-snug text-blue-cool-70">
+    <span className="font-normal leading-snug text-blue-cool-70">
       {children}
     </span>
   );
@@ -241,7 +241,7 @@ const Figure = ({ children, caption }: FigureProps) => {
   return (
     <figure className="flex flex-col gap-3">
       {children}
-      <figcaption className="font-['Public Sans'] font-normal italic leading-snug text-blue-cool-70">
+      <figcaption className="font-normal italic leading-snug text-blue-cool-70">
         {caption}
       </figcaption>
     </figure>
@@ -255,7 +255,7 @@ const Text = ({ children, className }: TextProps) => {
   return (
     <p
       className={classNames(
-        "font-['Public Sans'] m-0 p-0 leading-snug text-blue-cool-70",
+        'm-0 p-0 leading-snug text-blue-cool-70',
         className,
       )}
     >
