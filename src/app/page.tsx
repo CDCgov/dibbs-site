@@ -16,7 +16,7 @@ import classNames from 'classnames';
 const DibbsSection = () => (
   <section>
     <PageContainer>
-      <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-10 shadow-lg xl:flex-row xl:p-0">
+      <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-4 md:p-10 shadow-lg xl:flex-row xl:p-0">
         <Image
           src={`${basePath}/images/home/intro-tout.png`}
           alt=""
@@ -24,7 +24,7 @@ const DibbsSection = () => (
           height={411}
           className="shrink-0 rounded-tl-[2.5rem]"
         />
-        <div className="flex h-full w-full flex-col gap-6 rounded-br-[2.5rem] bg-white p-10">
+        <div className="flex h-full w-full flex-col gap-6 rounded-br-[2.5rem] bg-white p-4 md:p-10">
           <div className="flex flex-col gap-2">
             <Heading className="text-center xl:text-left">
               Introducing Data Integration Building Blocks
