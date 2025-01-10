@@ -86,7 +86,7 @@ export const ContactForm = () => {
                 },
               )}
             >
-              Email Address<span className="ml-1 !text-error-dark">*</span>
+              Email Address<span className="!text-error-dark ml-1">*</span>
             </Label>
             <TextInput
               id="email"
@@ -102,7 +102,7 @@ export const ContactForm = () => {
               aria-invalid={errors.email ? 'true' : 'false'}
             />
             {errors.email && (
-              <span className="mt-1 text-sm !text-error-dark" role="alert">
+              <span className="!text-error-dark mt-1 text-sm" role="alert">
                 {errors.email.message}
               </span>
             )}
@@ -190,21 +190,20 @@ export const ContactForm = () => {
 };
 
 const SuccessMessage = () => (
-  <div className="usa-alert usa-alert--success border-2 border-solid border-success">
+  <div className="usa-alert usa-alert--success border-success border-2 border-solid">
     <div className="usa-alert__body">
       <h4 className="usa-alert__heading text-success">
-        Message successfully sent!
+        Message successfully sent
       </h4>
       <p className="usa-alert__text text-success">
-        Your inquiry has been received, and our team will be in touch with you
-        soon!
+        Our team will be in touch with you soon!
       </p>
     </div>
   </div>
 );
 
 const ErrorMessage = () => (
-  <div className="usa-alert usa-alert--error border-2 border-solid border-error">
+  <div className="usa-alert usa-alert--error border-error border-2 border-solid">
     <div className="usa-alert__body">
       <h4 className="usa-alert__heading text-error">
         We couldn't submit your inquiry
@@ -213,7 +212,7 @@ const ErrorMessage = () => (
         An unexpected error has occurred. Please try again or email{' '}
         <a
           href="mailto:dibbs@cdc.gov"
-          className="font-bold !text-error underline"
+          className="!text-error font-bold underline"
         >
           dibbs@cdc.gov
         </a>{' '}
