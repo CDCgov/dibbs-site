@@ -16,7 +16,7 @@ import classNames from 'classnames';
 const DibbsSection = () => (
   <section>
     <PageContainer>
-      <div className="flex flex-col items-center xl:flex-row">
+      <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-10 shadow-lg xl:flex-row xl:p-0">
         <Image
           src={`${basePath}/images/home/intro-tout.png`}
           alt=""
@@ -120,7 +120,7 @@ const JurisdictionSection = () => {
         </ContentContainer>
       </section>
       <section>
-        <div className="ml-8 mr-8 pb-20 pt-0">
+        <div className="pb-20 pt-0">
           <Carousel />
         </div>
       </section>

@@ -16,7 +16,7 @@ interface ContainerProps {
 const SendMailLink = () => {
   return (
     <Link
-      className="font-['Public Sans'] font-bold leading-snug text-blue-cool-50"
+      className="font-bold leading-snug text-blue-cool-50"
       href="mailto:dibbs@cdc.gov"
     >
       dibbs@cdc.gov
@@ -33,7 +33,7 @@ const TitleSection = ({ title, text }: TitleSectionProps) => {
   return (
     <div className="flex flex-col gap-2">
       <h1 className="font-bold leading-[2.8rem]">{title}</h1>
-      <p className="font-['Public Sans'] m-0 p-0 text-[1.38rem] font-extralight leading-[2rem] text-blue-cool-70">
+      <p className="m-0 p-0 text-[1.38rem] font-extralight leading-[2rem] text-blue-cool-70">
         {text}
       </p>
     </div>
@@ -67,11 +67,13 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
       <div className="flex flex-col gap-1 pl-7 pt-12">
         <Text>Current version: {version}</Text>
         <div className="py-3">
-          <hr className="h-[0px] border border-[#a9aeb1]" />
+          <hr className="h-[.0625rem] border-none bg-[#a9aeb1]" />
         </div>
         <Link
           href={githubHref}
           className="font-semibold leading-relaxed text-blue-cool-80 underline"
+          target="_blank"
+          rel="noreferrer noopener"
         >
           GitHub Respository
         </Link>
@@ -82,7 +84,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
 
 const AccordionItemContent = ({ children }: ContainerProps) => {
   return (
-    <span className="font-['Public Sans'] font-normal leading-snug text-blue-cool-70">
+    <span className="font-normal leading-snug text-blue-cool-70">
       {children}
     </span>
   );
@@ -94,7 +96,7 @@ interface NavigationProps {
 }
 const Navigation = ({ navItems }: NavigationProps) => {
   return (
-    <div className="lg:w-[12.5rem] bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4">
+    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4 lg:w-[12.5rem]">
       <SideNav items={navItems} />
     </div>
   );
@@ -220,7 +222,7 @@ interface VideoProps {
 }
 const Video = ({ src, description }: VideoProps) => {
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <iframe
         className="h-[31.25rem] w-full border-none"
         src={src}
@@ -239,7 +241,7 @@ const Figure = ({ children, caption }: FigureProps) => {
   return (
     <figure className="flex flex-col gap-3">
       {children}
-      <figcaption className="font-['Public Sans'] font-normal italic leading-snug text-blue-cool-70">
+      <figcaption className="font-normal italic leading-snug text-blue-cool-70">
         {caption}
       </figcaption>
     </figure>
@@ -253,7 +255,7 @@ const Text = ({ children, className }: TextProps) => {
   return (
     <p
       className={classNames(
-        "font-['Public Sans'] m-0 p-0 leading-snug text-blue-cool-70",
+        'm-0 p-0 leading-snug text-blue-cool-70',
         className,
       )}
     >

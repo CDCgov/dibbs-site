@@ -224,7 +224,10 @@ pull relevant data from a wide network of healthcare providers."
             <HaveAQuestionSection />
           </GridMiddle>
           <GridRight>
-            <GithubNav version="1.1.1" githubHref="/" />
+            <GithubNav
+              version="1.0"
+              githubHref="https://github.com/CDCgov/dibbs-query-connector"
+            />
           </GridRight>
         </GridContainer>
       </ContentContainer>

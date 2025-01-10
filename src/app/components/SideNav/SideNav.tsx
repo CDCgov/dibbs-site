@@ -109,7 +109,7 @@ function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
       className={classNames({
         'usa-current !text-blue-cool-80 after:!bg-blue-cool-50':
           itemHash === selectedHash,
-        'font-semibold !text-blue-cool-50': itemHash !== selectedHash,
+        '!text-blue-cool-50': itemHash !== selectedHash,
       })}
       onClick={() => setSelectedHash(itemHash)}
     >

@@ -2,18 +2,26 @@ import classNames from 'classnames';
 import Link, { LinkProps } from 'next/link';
 import { LaunchIcon } from './LaunchIcon';
 
+const commonStyles = 'usa-button leading-[140%] text-[1rem]';
+
 const BUTTON_STYLES = {
   primary: {
-    button:
-      'text-white usa-button bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70',
+    button: classNames(
+      'text-white bg-violet-warm-60 hover:bg-violet-warm-50 active:bg-violet-warm-70 ',
+      commonStyles,
+    ),
   },
   secondary: {
-    button:
-      'usa-button !text-violet-warm-60 items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-50 bg-white px-5 py-3 hover:border-violet-warm-50 hover:border-2 hover:bg-white active:border-violet-warm-70 hover:!text-violet-warm-50',
+    button: classNames(
+      '!text-violet-warm-60 items-center gap-2.5 rounded border-2 border-violet-warm-60 hover:border-violet-warm-50 bg-white hover:border-violet-warm-50 hover:border-2 hover:bg-white active:border-violet-warm-70 hover:!text-violet-warm-50',
+      commonStyles,
+    ),
   },
   transparent: {
-    button:
-      'usa-button items-center gap-2.5 rounded border-2 border-blue-cool-5 bg-transparent px-5 py-3 hover:border-2 hover:bg-transparent active:border-blue-cool-30 hover:!text-blue-cool-20',
+    button: classNames(
+      'items-center gap-2.5 rounded border-2 border-blue-cool-5 bg-transparent hover:border-2 hover:bg-transparent active:border-blue-cool-30 hover:!text-blue-cool-20',
+      commonStyles,
+    ),
   },
 } as const;
 

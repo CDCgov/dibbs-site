@@ -1,5 +1,5 @@
 'use client';
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import { basePath } from '../../utils/constants';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
@@ -13,12 +13,20 @@ export default function Carousel() {
       alt: 'County of Los Angeles Public Health',
     },
     {
-      image: `${basePath}/images/jurisdictions/NMDOH-Logo-White.png`,
-      alt: 'NM Health',
+      image: `${basePath}/images/jurisdictions/NM.png`,
+      alt: 'New Mexico Health',
     },
     {
       image: `${basePath}/images/jurisdictions/Philly.png`,
       alt: 'City of Philadelphia',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/CO.png`,
+      alt: 'Colorado Department of Public Health & Environment',
+    },
+    {
+      image: `${basePath}/images/jurisdictions/VDH.png`,
+      alt: 'Virigina Department of Health',
     },
   ];
 
@@ -40,10 +48,10 @@ export default function Carousel() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const settings = {
+  const settings: Settings = {
     infinite: true,
     speed: 15000, // Adjust speed to make it constant
-    slidesToShow: 7, // Number of visible slides
+    slidesToShow: 4, // Number of visible slides
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0, // Continuous without pause
@@ -82,13 +90,16 @@ export default function Carousel() {
           <Slider {...settings}>
             {images.map((imgObj, index) => (
               <div key={index}>
-                <Image
-                  src={imgObj.image}
-                  alt={imgObj.alt}
-                  width={160}
-                  height={100}
-                  draggable={false}
-                />
+                <div className="flex h-[6.25rem] justify-center px-[5rem]">
+                  <Image
+                    src={imgObj.image}
+                    alt={imgObj.alt}
+                    width={160}
+                    height={100}
+                    draggable={false}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
               </div>
             ))}
           </Slider>
