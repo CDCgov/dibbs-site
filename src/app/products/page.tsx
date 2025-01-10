@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
-import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { LinkButton } from '../components/LinkButton/LinkButton';
 import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
@@ -17,6 +16,14 @@ export default function OurProducts() {
   );
 }
 
+function ContentContainer({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col gap-8 px-10 py-4 sm:px-[10rem] sm:py-[3.75rem]">
+      {children}
+    </div>
+  );
+}
+
 function StandaloneProducts() {
   useHeroInit({
     header: `Our ecosystem of DIBBs products`,
@@ -27,7 +34,7 @@ function StandaloneProducts() {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
-        <ContentContainer classes="sm:py-[3.75rem] md:px-[10rem] gap-8">
+        <ContentContainer>
           <h2>DIBBs-powered products</h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <ProductCard
@@ -205,10 +212,7 @@ function DataPipelineGrid({ children }: DataPipelineGridProps) {
 function DataPipeline() {
   return (
     <section className="bg-[#dae9ee]">
-      <ContentContainer
-        classes="bg-[#dae9ee] md:px-[10rem] gap-y-[3.75rem]"
-        sectionClasses="bg-[#dae9ee]"
-      >
+      <ContentContainer>
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>
