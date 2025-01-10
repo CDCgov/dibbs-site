@@ -3,3 +3,14 @@
 .usa-textarea {
   @apply border-[#3a7d95] text-blue-cool-70;
 }
+
+.usa-alert--success .usa-alert__body {
+  &::before {
+    @apply bg-success !important;
+  }
+}
+.usa-alert--error .usa-alert__body {
+  &::before {
+    @apply bg-error !important;
+  }
+}
