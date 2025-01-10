@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: 'DIBBS Site',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,10 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${merriweather.variable} ${publicSans.variable} font-sans`}
+        suppressHydrationWarning
+        className={`${merriweather.variable} ${publicSans.variable} site-background font-sans`}
       >
         <USABanner />
-        <div className="site-background">
+        <div>
           <HeroContextProvider>
             <Header />
             <main id="main-content">{children}</main>
