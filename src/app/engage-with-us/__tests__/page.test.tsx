@@ -77,9 +77,7 @@ describe('EngageWithUs Contact Form', () => {
 
     // Check if success message appears
     await waitFor(() => {
-      expect(
-        screen.getByText('Message successfully sent!'),
-      ).toBeInTheDocument();
+      expect(screen.getByText('Message successfully sent')).toBeInTheDocument();
     });
   });
 
