@@ -26,7 +26,7 @@ const PageContainer = ({ children }: ContainerProps) => {
 
 const ContentContainer = ({ children }: ContainerProps) => {
   return (
-    <div className="content grid max-w-[48.25rem] grid-cols-1 gap-[2.5rem] px-[3.75rem] pt-[2.5rem]">
+    <div className="content grid max-w-[48.25rem] grid-cols-1 gap-[2.5rem] px-2 pt-[2.5rem] md:px-[3.75rem]">
       {children}
     </div>
   );
