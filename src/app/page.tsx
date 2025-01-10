@@ -16,7 +16,7 @@ import classNames from 'classnames';
 const DibbsSection = () => (
   <section>
     <PageContainer>
-      <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-4 md:p-10 shadow-lg xl:flex-row xl:p-0">
+      <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-4 shadow-lg md:p-10 xl:flex-row xl:p-0">
         <Image
           src={`${basePath}/images/home/intro-tout.png`}
           alt=""
@@ -52,7 +52,7 @@ const DibbsSection = () => (
 
 const PageContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="ml-auto mr-auto flex justify-center pb-[5rem] pt-[3.75rem] lg:px-[7.5rem]">
+    <div className="ml-auto mr-auto flex justify-center pb-[2rem] pt-[3.75rem] lg:px-[7.5rem] lg:pb-[5rem]">
       {children}
     </div>
   );
@@ -69,7 +69,7 @@ const ValueSection = () => {
           'after:left-[44%] 2xl:after:left-[46%]',
         )}
       >
-        <ContentContainer>
+        <ContentContainer classes="!py-0 xl:!py-20">
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/home/value-tout.png`}
@@ -106,7 +106,7 @@ const JurisdictionSection = () => {
   return (
     <>
       <section>
-        <ContentContainer classes="sm:pb-10">
+        <ContentContainer classes="sm:pb-10 pt-8 lg:!pt-20">
           <Grid row gap>
             <Grid col={12}>
               <div className="flex flex-col items-center gap-2">
