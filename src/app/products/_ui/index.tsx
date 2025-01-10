@@ -111,7 +111,7 @@ const GridContainer = ({ children }: ContainerProps) => {
 };
 
 const GridLeft = ({ children }: ContainerProps) => {
-  return <div className="pt-[3.75rem]">{children}</div>;
+  return <div className="md:pt-[3.75rem]">{children}</div>;
 };
 
 const GridMiddle = ({ children }: ContainerProps) => {
@@ -277,6 +277,14 @@ const ValueList = ({ children }: ContainerProps) => {
   );
 };
 
+const ContentContainer = ({ children }: ContainerProps) => {
+  return (
+    <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col p-2 xl:px-[7.5rem] lg:pb-[5rem]">
+      {children}
+    </div>
+  );
+};
+
 export {
   SendMailLink,
   TitleSection,
@@ -294,6 +302,7 @@ export {
   GettingStartedProcessList,
   Video,
   SectionContentContainer,
+  ContentContainer,
   SubsectionContainer,
   Figure,
   Text,

@@ -1,5 +1,4 @@
 'use client';
-import { ContentContainer } from '@/app/components/ContentContainer/ContentContainer';
 import {
   GithubNav,
   GridContainer,
@@ -17,6 +16,7 @@ import {
   GettingStarted,
   HaveAQuestionSection,
   NavItem,
+  ContentContainer,
 } from '../_ui';
 import Image from 'next/image';
 import { basePath } from '@/app/utils/constants';
@@ -31,7 +31,7 @@ export default function QueryConnector() {
   ];
   return (
     <div>
-      <ContentContainer classes="sm:pt-0" align>
+      <ContentContainer>
         <GridContainer>
           <GridLeft>
             <Navigation navItems={navItems} />
