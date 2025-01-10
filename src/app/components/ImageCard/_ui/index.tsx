@@ -40,7 +40,7 @@ export const ImageContainer = ({ children, imageFirst }: ChildrenProps) => (
   <div
     className={classNames(
       imageFirst ? styles.imageContainer : styles['image-box-reverse'],
-      'image-box h-full overflow-hidden sm:w-[30rem]',
+      'image-box h-full overflow-hidden rounded-tl-[2.5rem] sm:w-[30rem]',
       imageFirst ? 'order-1' : 'order-1 xl:order-2',
     )}
   >
