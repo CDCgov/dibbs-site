@@ -28,6 +28,10 @@ export default function Carousel() {
       image: `${basePath}/images/jurisdictions/VDH.png`,
       alt: 'Virigina Department of Health',
     },
+    {
+      image: `${basePath}/images/jurisdictions/ME.png`,
+      alt: 'Maine Center for Disease Control and Prevention',
+    },
   ];
 
   const images = [...Array(Math.ceil(10 / baseImages.length))]
