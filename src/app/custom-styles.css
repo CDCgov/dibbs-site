@@ -32,7 +32,7 @@
   }
 
   h2 {
-    @apply text-[1.75rem];
+    @apply text-[1.5rem] md:text-[1.75rem];
     color: var(--blue-cool-80);
     font-family: var(--font-public-sans), sans-serif;
   }
