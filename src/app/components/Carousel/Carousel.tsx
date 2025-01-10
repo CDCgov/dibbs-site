@@ -38,20 +38,6 @@ export default function Carousel() {
     .flatMap(() => baseImages)
     .slice(0, 10);
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    // Set initial value
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const settings: Settings = {
     infinite: true,
     speed: 15000, // Adjust speed to make it constant
@@ -75,40 +61,37 @@ export default function Carousel() {
 
   return (
     <>
-      {isMobile ? (
-        <div className="flex flex-wrap justify-center gap-8 px-4 py-6">
-          {baseImages.map((imgObj, index) => (
-            <div key={index} className="flex-shrink-0">
-              <Image
-                src={imgObj.image}
-                alt={imgObj.alt}
-                width={160}
-                height={100}
-                draggable={false}
-              />
+      <div className="block flex flex-wrap justify-center gap-8 px-4 py-6 xl:hidden">
+        {baseImages.map((imgObj, index) => (
+          <div key={index} className="flex-shrink-0">
+            <Image
+              src={imgObj.image}
+              alt={imgObj.alt}
+              width={160}
+              height={100}
+              draggable={false}
+            />
+          </div>
+        ))}
+      </div>
+      <div className="sliderContainer hidden xl:block">
+        <Slider {...settings}>
+          {images.map((imgObj, index) => (
+            <div key={index}>
+              <div className="flex h-[6.25rem] justify-center px-[5rem]">
+                <Image
+                  src={imgObj.image}
+                  alt={imgObj.alt}
+                  width={160}
+                  height={100}
+                  draggable={false}
+                  className="h-full w-full object-contain"
+                />
+              </div>
             </div>
           ))}
-        </div>
-      ) : (
-        <div className="sliderContainer">
-          <Slider {...settings}>
-            {images.map((imgObj, index) => (
-              <div key={index}>
-                <div className="flex h-[6.25rem] justify-center px-[5rem]">
-                  <Image
-                    src={imgObj.image}
-                    alt={imgObj.alt}
-                    width={160}
-                    height={100}
-                    draggable={false}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      )}
+        </Slider>
+      </div>
     </>
   );
 }
