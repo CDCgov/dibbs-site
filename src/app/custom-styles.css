@@ -2,11 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  span,
+  figcaption,
+  a {
+    font-family: var(--font-public-sans), sans-serif;
+  }
+
+  p {
+    @apply text-[1rem];
+    color: var(--blue-cool-70);
+    font-family: var(--font-public-sans), sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold not-italic leading-[140%];
+  }
+
+  h1 {
+    @apply text-[1.75rem] md:text-[2rem];
+    color: var(--blue-cool-70);
+    font-family: var(--font-merriweather), serif;
+  }
+
+  h2 {
+    @apply text-[1.75rem];
+    color: var(--blue-cool-80);
+    font-family: var(--font-public-sans), sans-serif;
+  }
+
+  h3 {
+    @apply text-[1.25rem];
+    color: var(--blue-cool-80);
+    font-family: var(--font-public-sans), sans-serif;
+  }
+
+  h4 {
+    @apply text-[1rem];
+    color: var(--blue-cool-70);
+    font-family: var(--font-public-sans), sans-serif;
+  }
+
+  ol,
+  ul {
+    color: var(--blue-cool-70);
+    font-family: var(--font-public-sans), sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 150%;
+    padding-left: 3ch;
+    list-style: disc;
   }
 }
+
 /* --xl-breakpoint: 1280px; */
 :root {
   --background: #e7f2f5;
@@ -70,68 +124,6 @@ main > *:not(.remove-footer-bar) {
 
 .usa-section--light-blue {
   background-color: var(--background-light-blue);
-}
-
-span,
-figcaption,
-a {
-  font-family: var(--font-public-sans), sans-serif;
-}
-
-p {
-  color: var(--blue-cool-70);
-  font-family: var(--font-public-sans), sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
-
-h1 {
-  color: var(--blue-cool-70);
-  font-family: var(--font-merriweather), serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-
-h2 {
-  color: var(--blue-cool-80);
-  font-family: var(--font-public-sans), sans-serif;
-  font-size: 1.75rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-
-h3 {
-  color: var(--blue-cool-80);
-  font-family: var(--font-public-sans), sans-serif;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-
-h4 {
-  color: var(--blue-cool-70);
-  font-family: var(--font-public-sans), sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 1.4rem */
-}
-
-ol,
-ul {
-  color: var(--blue-cool-70);
-  font-family: var(--font-public-sans), sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  line-height: 150%;
-  padding-left: 3ch;
-  list-style: disc;
 }
 
 main:has(.hide-footer-bar) ~ .footer-bar::before {
