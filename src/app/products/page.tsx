@@ -105,9 +105,9 @@ function ProductCard({
     <RoundedBackground className="border-none !bg-white shadow-lg">
       <div className="grid h-full grid-cols-1 items-start lg:max-w-[33.75rem]">
         {imgSrc ? (
-          <div>
+          <div className="bg-background">
             <RoundedImage
-              className="rounded-br-none shadow-none"
+              className="h-full w-full rounded-br-none shadow-none"
               src={imgSrc}
               width="540"
               height="200"
