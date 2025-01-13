@@ -267,15 +267,19 @@ export default function EcrViewer() {
                     <SectionSubheader>Installing eCR Viewer</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">NBS Integration Guide</Link>
+                        <ExternalLink href="https://github.com/CDCgov/dibbs-site/blob/next/documentation/NBS%20Integration%20Guide_GA.pdf">
+                          NBS Integration Guide
+                        </ExternalLink>
                       </li>
                       <li>
-                        <Link href="/">Technical Acceptance Testing - AWS</Link>
+                        <ExternalLink href="https://github.com/CDCgov/dibbs-site/blob/next/documentation/Technical%20Acceptance%20Testing%20Guide%20-%20AWS_GA.pdf">
+                          Technical Acceptance Testing - AWS
+                        </ExternalLink>
                       </li>
                       <li>
-                        <Link href="/">
+                        <ExternalLink href="https://github.com/CDCgov/dibbs-site/blob/next/documentation/Technical%20Acceptance%20Testing%20Guide%20-%20Azure_GA.pdf">
                           Technical Acceptance Testing - Azure
-                        </Link>
+                        </ExternalLink>
                       </li>
                     </ul>
                   </div>
@@ -283,7 +287,9 @@ export default function EcrViewer() {
                     <SectionSubheader>Maintenance & Support</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">Customer Support Guide</Link>
+                        <ExternalLink href="https://github.com/CDCgov/dibbs-site/blob/next/documentation/Customer%20Support%20Guide_GA.pdf">
+                          Customer Support Guide
+                        </ExternalLink>
                       </li>
                     </ul>
                   </div>
@@ -291,10 +297,10 @@ export default function EcrViewer() {
                     <SectionSubheader>Terraform</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">AWS Terraform Installation</Link>
+                        <ExternalLink href="/">AWS Terraform Installation</ExternalLink>
                       </li>
                       <li>
-                        <Link href="/">Azure Terraform Installation</Link>
+                        <ExternalLink href="/">Azure Terraform Installation</ExternalLink>
                       </li>
                     </ul>
                   </div> */}
@@ -302,7 +308,9 @@ export default function EcrViewer() {
                     <SectionSubheader>Troubleshooting</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">eCR Viewer User Guide</Link>
+                        <ExternalLink href="https://github.com/CDCgov/dibbs-site/blob/next/documentation/eCR%20Viewer%20User%20Guide_GA.pdf">
+                          eCR Viewer User Guide
+                        </ExternalLink>
                       </li>
                     </ul>
                   </div>
@@ -504,5 +512,18 @@ export default function EcrViewer() {
         </GridContainer>
       </ContentContainer>
     </div>
+  );
+}
+
+interface ExternalLinkProps {
+  children: React.ReactNode;
+  href: string;
+}
+
+function ExternalLink({ children, href }: ExternalLinkProps) {
+  return (
+    <Link href={href} target="_blank" rel="noreferrer noopener">
+      {children}
+    </Link>
   );
 }
