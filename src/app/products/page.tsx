@@ -6,20 +6,13 @@ import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 import { Tag } from '@trussworks/react-uswds';
+import classNames from 'classnames';
 
 export default function OurProducts() {
   return (
     <div>
       <StandaloneProducts />
       <DataPipeline />
-    </div>
-  );
-}
-
-function ContentContainer({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col gap-8 px-10 py-4 sm:px-[10rem] sm:py-[3.75rem]">
-      {children}
     </div>
   );
 }
@@ -34,7 +27,7 @@ function StandaloneProducts() {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
-        <ContentContainer>
+        <ContentContainer className="gap-5 px-4 py-4 sm:px-[10rem] sm:py-[3.75rem]">
           <h2>DIBBs-powered products</h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <ProductCard
@@ -208,7 +201,7 @@ function DataPipelineGrid({ children }: DataPipelineGridProps) {
 function DataPipeline() {
   return (
     <section className="bg-[#dae9ee]">
-      <ContentContainer>
+      <ContentContainer className="gap-[3.75rem] px-4 py-4 sm:px-[10rem] sm:py-[5rem]">
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>
@@ -299,3 +292,20 @@ const Break = () => {
     </div>
   );
 };
+
+interface ContentContainerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+function ContentContainer({ children, className = '' }: ContentContainerProps) {
+  return (
+    <div
+      className={classNames(
+        'ml-auto mr-auto flex max-w-[87.5rem] flex-col',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+}

@@ -87,7 +87,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center lg:items-center lg:gap-10">
+          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-2 py-12 lg:order-1">
               <ContentContainer>
                 <TextContainer>
@@ -124,7 +124,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 4 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center lg:items-center lg:gap-10">
+          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
               <Image
                 src={`${basePath}/images/case-studies/image4.png`}
