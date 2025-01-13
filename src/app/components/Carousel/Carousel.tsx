@@ -84,7 +84,7 @@ export default function Carousel() {
                   width={160}
                   height={100}
                   draggable={false}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full min-w-[13.63rem] object-contain"
                 />
               </div>
             </div>
