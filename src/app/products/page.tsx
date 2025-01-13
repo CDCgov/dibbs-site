@@ -118,7 +118,7 @@ function ProductCard({
         <div className="p-6">
           <div className="flex min-h-[11.12rem] flex-col">
             <div className="content mb-4 flex flex-col gap-3">
-              <div className="flex flex-col items-center gap-2 md:flex-row">
+              <div className="flex flex-col items-center gap-2 xl:flex-row">
                 <h3>{title}</h3>
                 <StatusTag variant={status} />
               </div>
