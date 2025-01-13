@@ -189,7 +189,6 @@ pull relevant data from a wide network of healthcare providers."
                       process by returning a FHIR bundle that your IT team could
                       integrate directly into your data surveillance system.
                     </span>
-
                     <span>
                       For instance, if your jurisdiction wants to query back to
                       a healthcare provider every time you receive a lab for an
@@ -205,19 +204,26 @@ pull relevant data from a wide network of healthcare providers."
               <SectionContentContainer>
                 <SubsectionContainer>
                   <SectionHeader>Development status</SectionHeader>
-                  <Text className="flex flex-col gap-6">
-                    <span>
-                      We're currently testing the Query Connector with a small
-                      group of pilot jurisdictions and are continuing to tweak
-                      it and add new features.
-                    </span>
-                    <span>
-                      Once these pilots are complete, we're hoping to open up
-                      the Query Connector to a broader user audience with robust
-                      documentation about how to implement the product in
-                      different technical setups.
-                    </span>
-                  </Text>
+                  <div className='flex flex-col gap-5'>
+                    <Text className="flex flex-col gap-6">
+                      <span>
+                        We're currently testing the Query Connector with a small
+                        group of pilot jurisdictions and are continuing to tweak
+                        it and add new features.
+                      </span>
+                      <span>
+                        Once these pilots are complete, we're hoping to open up
+                        the Query Connector to a broader user audience with
+                        robust documentation about how to implement the product
+                        in different technical setups.
+                      </span>
+                    </Text>
+                    <div>
+                      <LinkButton href="/engage-with-us" variant="primary">
+                        Become a pilot partner
+                      </LinkButton>
+                    </div>
+                  </div>
                 </SubsectionContainer>
               </SectionContentContainer>
             </section>
