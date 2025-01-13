@@ -65,7 +65,7 @@ const DibbsSection = () => {
 
 const PageContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="ml-auto mr-auto flex justify-center pb-[2rem] pt-[3.75rem] lg:px-[7.5rem] lg:pb-[5rem]">
+    <div className="ml-auto mr-auto flex justify-center pb-[2rem] pt-[3.75rem] lg:px-[7.5rem] lg:pb-[6.25rem]">
       {children}
     </div>
   );
@@ -80,7 +80,7 @@ const ValueSection = () => {
           'after:left-[44%] 2xl:after:left-[46%]',
         )}
       >
-        <ContentContainer classes="!py-0 xl:!py-20">
+        <ContentContainer classes="!py-0 xl:!pt-[6.25rem]">
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/home/value-tout.png`}
@@ -104,7 +104,7 @@ const ValueSection = () => {
                 analysis.
               </Paragraph>
             </div>
-            <div>
+            <div className="self-center xl:self-start">
               <LinkButton href="/products" variant="primary">
                 Learn about our products
               </LinkButton>
@@ -120,7 +120,7 @@ const JurisdictionSection = () => {
   return (
     <>
       <section>
-        <ContentContainer classes="sm:pb-10 pt-8 lg:!pt-20">
+        <ContentContainer classes="sm:pb-10 pt-8 lg:!pt-[6.25rem]">
           <Grid row gap>
             <Grid col={12}>
               <div className="flex flex-col items-center gap-2">
