@@ -1,6 +1,5 @@
 'use client';
 import { HeroInitializer } from './components/HeroInitializer';
-import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { CustomerTestimonial } from './components/CustomerTestimonial';
 import './styles.scss';
 import { ContactForm } from './components/ContactForm';
@@ -9,7 +8,7 @@ const EngageWithUs = () => {
   return (
     <section>
       <HeroInitializer />
-      <ContentContainer classes="sm:pt-10">
+      <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-2 pb-[5rem] pt-[2.5rem] xl:px-[10rem]">
         <div className="flex flex-col gap-10">
           <ConsultationAlert />
           <div className="flex flex-col gap-3 pb-5 lg:pl-5">
@@ -25,7 +24,7 @@ const EngageWithUs = () => {
             <CustomerTestimonial />
           </div>
         </div>
-      </ContentContainer>
+      </div>
     </section>
   );
 };

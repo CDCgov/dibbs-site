@@ -16,7 +16,7 @@ export default function CaseStudies() {
       <div className="ml-auto mr-auto flex max-w-[90rem] flex-col px-5 pb-[5rem] pt-[3.75rem] md:px-[10rem]">
         <div className="flex flex-col gap-[3.75rem]">
           {/* Section 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center lg:gap-10">
+          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-2 py-12 lg:order-1">
               <ContentContainer>
                 <TextContainer>
@@ -53,7 +53,7 @@ export default function CaseStudies() {
             </div>
           </div>
           {/* Section 2 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center lg:gap-10">
+          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
               <Image
                 src={`${basePath}/images/case-studies/image2.png`}
@@ -87,7 +87,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center lg:gap-10">
+          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-2 py-12 lg:order-1">
               <ContentContainer>
                 <TextContainer>
@@ -124,7 +124,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Section 4 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center lg:gap-10">
+          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
               <Image
                 src={`${basePath}/images/case-studies/image4.png`}

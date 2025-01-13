@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
-import { ContentContainer } from '../components/ContentContainer/ContentContainer';
 import { LinkButton } from '../components/LinkButton/LinkButton';
 import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 import { Tag } from '@trussworks/react-uswds';
+import classNames from 'classnames';
 
 export default function OurProducts() {
   return (
@@ -27,7 +27,7 @@ function StandaloneProducts() {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
-        <ContentContainer classes="sm:py-[3.75rem] md:px-[10rem] gap-8">
+        <ContentContainer className="gap-5 px-4 py-4 sm:px-[10rem] sm:py-[3.75rem]">
           <h2>DIBBs-powered products</h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <ProductCard
@@ -124,12 +124,8 @@ function ProductCard({
               </div>
               <p className="m-0 p-0">{text}</p>
             </div>
-            <div>
-              <LinkButton
-                className="justify-self-start"
-                variant={linkVariant}
-                href={linkToHref}
-              >
+            <div className="self-center lg:self-start">
+              <LinkButton variant={linkVariant} href={linkToHref}>
                 {linkText}
               </LinkButton>
             </div>
@@ -205,10 +201,7 @@ function DataPipelineGrid({ children }: DataPipelineGridProps) {
 function DataPipeline() {
   return (
     <section className="bg-[#dae9ee]">
-      <ContentContainer
-        classes="bg-[#dae9ee] md:px-[10rem] gap-y-[3.75rem]"
-        sectionClasses="bg-[#dae9ee]"
-      >
+      <ContentContainer className="gap-[3.75rem] px-4 py-4 sm:px-[10rem] sm:py-[5rem]">
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>
@@ -299,3 +292,20 @@ const Break = () => {
     </div>
   );
 };
+
+interface ContentContainerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+function ContentContainer({ children, className = '' }: ContentContainerProps) {
+  return (
+    <div
+      className={classNames(
+        'ml-auto mr-auto flex max-w-[87.5rem] flex-col',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+}

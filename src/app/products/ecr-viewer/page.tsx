@@ -1,5 +1,4 @@
 'use client';
-import { ContentContainer } from '@/app/components/ContentContainer/ContentContainer';
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import Image from 'next/image';
@@ -24,6 +23,7 @@ import {
   Text,
   ValueList,
   NavItem,
+  ContentContainer,
 } from '../_ui';
 
 export default function EcrViewer() {
@@ -37,7 +37,7 @@ export default function EcrViewer() {
   ];
   return (
     <div>
-      <ContentContainer classes="sm:pt-0" align>
+      <ContentContainer>
         <GridContainer>
           <GridLeft>
             <Navigation navItems={navItems} />
