@@ -267,20 +267,15 @@ export default function EcrViewer() {
                     <SectionSubheader>Installing eCR Viewer</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">
-                          Non Integrated Viewer Installation Guide
-                        </Link>
+                        <Link href="/">NBS Integration Guide</Link>
+                      </li>
+                      <li>
+                        <Link href="/">Technical Acceptance Testing - AWS</Link>
                       </li>
                       <li>
                         <Link href="/">
-                          Installation Guide for NBS integration
+                          Technical Acceptance Testing - Azure
                         </Link>
-                      </li>
-                      <li>
-                        <Link href="/">DIBBs Installation Guide - Helm</Link>
-                      </li>
-                      <li>
-                        <Link href="/">Hosting options</Link>
                       </li>
                     </ul>
                   </div>
@@ -288,17 +283,11 @@ export default function EcrViewer() {
                     <SectionSubheader>Maintenance & Support</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">Runbook for common issues</Link>
-                      </li>
-                      <li>
-                        <Link href="/">Maintenance guide</Link>
-                      </li>
-                      <li>
-                        <Link href="/">Customer Support Plan Technical</Link>
+                        <Link href="/">Customer Support Guide</Link>
                       </li>
                     </ul>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  {/* <div className="flex flex-col gap-2">
                     <SectionSubheader>Terraform</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
@@ -308,15 +297,12 @@ export default function EcrViewer() {
                         <Link href="/">Azure Terraform Installation</Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   <div className="flex flex-col gap-2">
                     <SectionSubheader>Troubleshooting</SectionSubheader>
                     <ul className="m-0 flex list-none flex-col gap-1 p-0">
                       <li>
-                        <Link href="/">Usage Guide</Link>
-                      </li>
-                      <li>
-                        <Link href="/">Azure Technical Testing</Link>
+                        <Link href="/">eCR Viewer User Guide</Link>
                       </li>
                     </ul>
                   </div>
