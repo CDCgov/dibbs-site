@@ -333,7 +333,7 @@ export default function EcrViewer() {
                   </Text>
                 </SubsectionContainer>
                 <Accordion
-                  className="[&>div]:border-[1px] [&>div]:border-[white] [&>div]:hover:border-[#ADCFDC] [&_button]:bg-white [&_button]:text-blue-cool-70"
+                  className="[&>div]:border-[1px] [&>div]:border-[#ADCFDC] [&_button]:bg-white [&_button]:text-blue-cool-70"
                   bordered={false}
                   items={[
                     {
