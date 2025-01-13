@@ -183,15 +183,20 @@ pull relevant data from a wide network of healthcare providers."
                 </SubsectionContainer>
                 <SubsectionContainer>
                   <SectionSubheader>Automated data connection</SectionSubheader>
-                  <Text>
-                    The Query Connector's API allows your jurisdiction to
-                    automate the querying process and then integrate returned
-                    data directly into your data surveillance system. For
-                    instance, if your jurisdiction wants to query back to a
-                    healthcare provider every time you receive a lab for an STI,
-                    our API would allow you to automate that process,
-                    eliminating the need for a staff member to manually make
-                    each query.
+                  <Text className="flex flex-col gap-6">
+                    <span>
+                      The Query Connector's API can automate the querying
+                      process by returning a FHIR bundle that your IT team could
+                      integrate directly into your data surveillance system.
+                    </span>
+
+                    <span>
+                      For instance, if your jurisdiction wants to query back to
+                      a healthcare provider every time you receive a lab for an
+                      STI, our API would allow your to automate that process,
+                      eliminating the need for a staff member to manually make
+                      each query.
+                    </span>
                   </Text>
                 </SubsectionContainer>
               </SectionContentContainer>
