@@ -5,7 +5,6 @@ import {
   Button,
   Form,
   Label,
-  Select,
   Textarea,
   TextInput,
 } from '@trussworks/react-uswds';
