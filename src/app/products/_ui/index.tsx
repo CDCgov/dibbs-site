@@ -3,9 +3,9 @@ import {
   ProcessList,
   ProcessListHeading,
   ProcessListItem,
+  Link,
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
-import Link from 'next/link';
 import { SideNav } from '@/app/components/SideNav/SideNav';
 import './styles.scss';
 
@@ -15,10 +15,7 @@ interface ContainerProps {
 
 const SendMailLink = () => {
   return (
-    <Link
-      className="font-bold leading-snug text-blue-cool-50"
-      href="mailto:dibbs@cdc.gov"
-    >
+    <Link className="font-bold leading-snug" href="mailto:dibbs@cdc.gov">
       dibbs@cdc.gov
     </Link>
   );
@@ -218,17 +215,20 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
 
 interface VideoProps {
   src: string;
-  description?: string;
+  title: string;
+  description: string;
 }
-const Video = ({ src, description }: VideoProps) => {
+const Video = ({ src, title, description }: VideoProps) => {
   return (
     <div className="flex flex-col gap-3">
       <iframe
         className="h-[31.25rem] w-full border-none"
         src={src}
+        title={title}
+        aria-label={description}
         allowFullScreen
       ></iframe>
-      {description ? <Text className="italic">{description}</Text> : null}
+      <Text className="italic">{description}</Text>
     </div>
   );
 };
