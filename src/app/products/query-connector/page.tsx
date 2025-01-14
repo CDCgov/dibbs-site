@@ -19,7 +19,6 @@ import {
   ContentContainer,
   ProductImage,
 } from '../_ui';
-import Image from 'next/image';
 import { basePath } from '@/app/utils/constants';
 import { LinkButton } from '@/app/components/LinkButton/LinkButton';
 

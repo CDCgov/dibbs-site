@@ -1,7 +1,6 @@
 'use client';
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
-import Image from 'next/image';
 import {
   Navigation,
   TitleSection,
