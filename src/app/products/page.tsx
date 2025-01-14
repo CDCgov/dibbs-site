@@ -27,7 +27,7 @@ function StandaloneProducts() {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
-        <ContentContainer className="gap-5 px-4 py-4 sm:px-[10rem] sm:py-[3.75rem]">
+        <ContentContainer className="gap-5 px-4 py-4 sm:py-[3.75rem] md:px-[10rem]">
           <h2>DIBBs-powered products</h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <ProductCard
@@ -118,7 +118,7 @@ function ProductCard({
         <div className="p-6">
           <div className="flex min-h-[11.12rem] flex-col">
             <div className="content mb-4 flex flex-col gap-3">
-              <div className="flex flex-col items-center gap-2 md:flex-row">
+              <div className="flex flex-col items-center gap-2 xl:flex-row">
                 <h3>{title}</h3>
                 <StatusTag variant={status} />
               </div>
@@ -201,7 +201,7 @@ function DataPipelineGrid({ children }: DataPipelineGridProps) {
 function DataPipeline() {
   return (
     <section className="bg-[#dae9ee]">
-      <ContentContainer className="gap-[3.75rem] px-4 py-4 sm:px-[10rem] sm:py-[5rem]">
+      <ContentContainer className="gap-[3.75rem] px-4 py-[5rem] md:px-[10rem]">
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>
