@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { SideNav } from '@/app/components/SideNav/SideNav';
 import './styles.scss';
+import Image, { ImageProps } from 'next/image';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -233,18 +234,33 @@ const Video = ({ src, description }: VideoProps) => {
   );
 };
 
-interface FigureProps extends ContainerProps {
+interface FigureProps {
   caption: string;
+  alt: ImageProps['alt'];
+  src: ImageProps['src'];
 }
 
-const Figure = ({ children, caption }: FigureProps) => {
+const Figure = ({ caption, alt, src }: FigureProps) => {
   return (
     <figure className="flex flex-col gap-3">
-      {children}
+      <ProductImage src={src} alt={alt} />
       <figcaption className="font-normal italic leading-snug text-blue-cool-70">
         {caption}
       </figcaption>
     </figure>
+  );
+};
+
+type ProductImageProps = Pick<ImageProps, 'src' | 'alt'>;
+const ProductImage = ({ src, alt }: ProductImageProps) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      className="h-full w-full rounded-lg shadow"
+      width={652}
+      height={383}
+    />
   );
 };
 
@@ -305,6 +321,7 @@ export {
   ContentContainer,
   SubsectionContainer,
   Figure,
+  ProductImage,
   Text,
   ValueList,
 };

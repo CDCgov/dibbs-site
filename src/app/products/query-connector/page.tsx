@@ -17,6 +17,7 @@ import {
   HaveAQuestionSection,
   NavItem,
   ContentContainer,
+  ProductImage,
 } from '../_ui';
 import Image from 'next/image';
 import { basePath } from '@/app/utils/constants';
@@ -157,10 +158,8 @@ pull relevant data from a wide network of healthcare providers."
                     relevant to the use case in an easily readable format,
                     making data more usable for case investigation.
                   </Text>
-                  <Image
+                  <ProductImage
                     alt="Query Connector - enter patient information form"
-                    width={652}
-                    height={383}
                     src={`${basePath}/images/products/query-connector/surface-patient-data.png`}
                   />
                 </SubsectionContainer>
@@ -174,10 +173,8 @@ pull relevant data from a wide network of healthcare providers."
                     for data specific to their use case. Administrators can also
                     manage user access through custom permissions.
                   </Text>
-                  <Image
+                  <ProductImage
                     alt="Query Connector - custom query example"
-                    width={652}
-                    height={383}
                     src={`${basePath}/images/products/query-connector/custom-query.png`}
                   />
                 </SubsectionContainer>
@@ -204,7 +201,7 @@ pull relevant data from a wide network of healthcare providers."
               <SectionContentContainer>
                 <SubsectionContainer>
                   <SectionHeader>Development status</SectionHeader>
-                  <div className='flex flex-col gap-5'>
+                  <div className="flex flex-col gap-5">
                     <Text className="flex flex-col gap-6">
                       <span>
                         We're currently testing the Query Connector with a small

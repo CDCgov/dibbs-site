@@ -149,14 +149,11 @@ export default function EcrViewer() {
                     Condition Summary.
                   </Text>
                 </SubsectionContainer>
-                <Figure caption="View of the eCR Summary section within the eCR Viewer containing sample data.">
-                  <Image
-                    alt="eCR Viewer - how it works"
-                    width={652}
-                    height={383}
-                    src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
-                  />
-                </Figure>
+                <Figure
+                  caption="View of the eCR Summary section within the eCR Viewer containing sample data."
+                  alt="eCR Viewer - how it works"
+                  src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
+                />
                 <SubsectionContainer>
                   <SectionSubheader>Combined RR and eICR</SectionSubheader>
                   <Text className="flex flex-col gap-8">
@@ -237,15 +234,9 @@ export default function EcrViewer() {
                 <Figure
                   caption="View of the eCR Library within the non-integrated eCR Viewer
                     containing sample data."
-                >
-                  <Image
-                    alt="Non-integrated eCR Viewer example"
-                    className="rounded-lg shadow"
-                    width={652}
-                    height={383}
-                    src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
-                  />
-                </Figure>
+                  alt="Non-integrated eCR Viewer example"
+                  src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
+                />
               </SectionContentContainer>
             </section>
             <section id="getting-started">
