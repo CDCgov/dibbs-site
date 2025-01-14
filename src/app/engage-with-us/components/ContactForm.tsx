@@ -60,7 +60,7 @@ export const ContactForm = () => {
       ) : (
         <Form
           onSubmit={handleSubmit(onSubmit)}
-          className="align-start flex min-w-full flex-col gap-5 lg:min-w-[31.25rem]"
+          className="align-start flex min-w-full flex-col gap-5 lg:w-[31.25rem]"
         >
           {submitStatus === 'error' && <ErrorMessage />}
 
