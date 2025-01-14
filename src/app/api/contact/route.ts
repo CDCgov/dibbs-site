@@ -1,8 +1,15 @@
 import { NextResponse } from 'next/server';
 
+interface FormData {
+  email: string;
+  name?: string;
+  organization?: string;
+  message?: string;
+}
+
 export async function POST(request: Request) {
   try {
-    const data = await request.json();
+    const data: FormData = (await request.json()) as FormData;
 
     // Log the email data for debugging
     console.log('Debug Email Data:', {
@@ -12,7 +19,6 @@ export async function POST(request: Request) {
         Name: ${data.name}
         Email: ${data.email}
         Organization: ${data.organization}
-        Inquiry Type: ${data.inquiry}
         Message: ${data.message}
       `,
     });
