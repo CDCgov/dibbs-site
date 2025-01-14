@@ -77,7 +77,6 @@ export default function Header() {
                     width={200}
                     height={40}
                     alt=""
-                    className="margin-x-0"
                     src={`${basePath}/images/dibbs-logo.svg`}
                     priority
                   />
