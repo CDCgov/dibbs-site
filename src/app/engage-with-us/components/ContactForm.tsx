@@ -31,6 +31,7 @@ export const ContactForm = () => {
   } = useForm<FormData>({
     mode: 'onBlur',
   });
+
   const onSubmit = async (data: FormData) => {
     setSubmitStatus('loading');
 
