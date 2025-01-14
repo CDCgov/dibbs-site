@@ -5,7 +5,6 @@ import {
   Button,
   Form,
   Label,
-  Select,
   Textarea,
   TextInput,
 } from '@trussworks/react-uswds';
@@ -15,7 +14,6 @@ type FormData = {
   name: string;
   email: string;
   organization: string;
-  inquiry: string;
   message: string;
 };
 
@@ -32,6 +30,7 @@ export const ContactForm = () => {
   } = useForm<FormData>({
     mode: 'onBlur',
   });
+
   const onSubmit = async (data: FormData) => {
     setSubmitStatus('loading');
 
@@ -61,7 +60,7 @@ export const ContactForm = () => {
       ) : (
         <Form
           onSubmit={handleSubmit(onSubmit)}
-          className="align-start flex min-w-full flex-col gap-5 lg:min-w-[31.25rem]"
+          className="align-start flex min-w-full flex-col gap-5 lg:w-[31.25rem]"
         >
           {submitStatus === 'error' && <ErrorMessage />}
 
@@ -119,32 +118,6 @@ export const ContactForm = () => {
               id="organization"
               type="text"
               {...register('organization')}
-            />
-          </div>
-
-          <div className="lg:max-w-[84%]">
-            <Label
-              htmlFor="inquiry"
-              className="m-0 self-stretch font-bold leading-relaxed text-blue-cool-70"
-            >
-              Type of inquiry
-            </Label>
-            <Controller
-              name="inquiry"
-              control={control}
-              defaultValue="general-interest"
-              render={({ field: { onChange, value, name } }) => (
-                <Select
-                  onChange={onChange}
-                  value={value}
-                  name={name}
-                  id="inquiry"
-                >
-                  <option value="general-interest">
-                    General interest in DIBBs products
-                  </option>
-                </Select>
-              )}
             />
           </div>
 
