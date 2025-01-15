@@ -19,6 +19,9 @@ const config: Config = {
           DEFAULT: '#6F3331',
           dark: '#B50909',
         },
+        footer: {
+          background: '#0F1B1F',
+        },
         'violet-warm': {
           50: '#b04abd',
           60: '#864381',

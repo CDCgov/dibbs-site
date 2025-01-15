@@ -30,7 +30,12 @@ export default function Footer() {
 
   return (
     <>
-      <footer className={classNames('usa-header--basic', styles.footer)}>
+      <footer
+        className={classNames(
+          'usa-header--basic bg-footer-background',
+          styles.footer,
+        )}
+      >
         <div className="usa-nav-container flex !items-center lg:px-[5rem]">
           <div className="usa-navbar border-none">
             <div className="usa-logo">
