@@ -136,7 +136,7 @@ main:has(.hide-footer-bar) ~ .footer-bar {
 
 .site-background {
   background-color: var(--background);
-  background-image: url('/images/footer-bg.png');
+  background-image: url('/images/footer-bg.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% clamp(381px, 30%, 100vh);
