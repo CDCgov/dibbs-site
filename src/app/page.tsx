@@ -83,7 +83,7 @@ const ValueSection = () => {
         <ContentContainer classes="!py-0 xl:!pt-[6.25rem]">
           <ImageCard
             imageFirst={false}
-            imageUrl={`${basePath}/images/home/value-tout.png`}
+            imageUrl={`${basePath}/images/home/value-tout.jpg`}
             xlHideImage={true}
             imageAlt=""
             imageStyle={{
