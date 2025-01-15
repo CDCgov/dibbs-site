@@ -3,7 +3,7 @@ import { LinkButton } from '../components/LinkButton/LinkButton';
 import { basePath } from '../utils/constants';
 import React from 'react';
 import { useHeroInit } from '../hooks/useHeroInit';
-import Image from 'next/image';
+import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 
 export default function CaseStudies() {
   useHeroInit({
@@ -44,8 +44,8 @@ export default function CaseStudies() {
               </ContentContainer>
             </div>
             <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
-              <Image
-                src={`${basePath}/images/case-studies/image1.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image1.jpg`}
                 width={550}
                 height={300}
                 alt=""
@@ -55,8 +55,8 @@ export default function CaseStudies() {
           {/* Section 2 */}
           <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
-              <Image
-                src={`${basePath}/images/case-studies/image2.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image2.jpg`}
                 width={550}
                 height={300}
                 alt=""
@@ -114,8 +114,8 @@ export default function CaseStudies() {
               </ContentContainer>
             </div>
             <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
-              <Image
-                src={`${basePath}/images/case-studies/image3.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image3.jpg`}
                 width={550}
                 height={300}
                 alt=""
@@ -126,8 +126,8 @@ export default function CaseStudies() {
           {/* Section 4 */}
           <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
-              <Image
-                src={`${basePath}/images/case-studies/image4.png`}
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image4.jpg`}
                 width={550}
                 height={300}
                 alt=""
