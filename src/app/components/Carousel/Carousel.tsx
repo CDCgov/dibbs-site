@@ -8,27 +8,27 @@ import 'slick-carousel/slick/slick-theme.css';
 export default function Carousel() {
   const baseImages = [
     {
-      image: `${basePath}/images/jurisdictions/LAC.png`,
+      image: `${basePath}/images/carousel/LAC.png`,
       alt: 'County of Los Angeles Public Health',
     },
     {
-      image: `${basePath}/images/jurisdictions/NM.png`,
+      image: `${basePath}/images/carousel/NM.png`,
       alt: 'New Mexico Health',
     },
     {
-      image: `${basePath}/images/jurisdictions/Philly.png`,
+      image: `${basePath}/images/carousel/Philly.png`,
       alt: 'City of Philadelphia',
     },
     {
-      image: `${basePath}/images/jurisdictions/CO.png`,
+      image: `${basePath}/images/carousel/CO.png`,
       alt: 'Colorado Department of Public Health & Environment',
     },
     {
-      image: `${basePath}/images/jurisdictions/VDH.png`,
+      image: `${basePath}/images/carousel/VDH.png`,
       alt: 'Virigina Department of Health',
     },
     {
-      image: `${basePath}/images/jurisdictions/ME.png`,
+      image: `${basePath}/images/carousel/ME.png`,
       alt: 'Maine Center for Disease Control and Prevention',
     },
   ];
