@@ -3,9 +3,9 @@ import {
   ProcessList,
   ProcessListHeading,
   ProcessListItem,
+  Link,
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
-import Link from 'next/link';
 import { SideNav } from '@/app/components/SideNav/SideNav';
 import './styles.scss';
 import Image, { ImageProps } from 'next/image';
@@ -17,7 +17,7 @@ interface ContainerProps {
 const SendMailLink = () => {
   return (
     <Link
-      className="font-bold leading-snug text-blue-cool-50"
+      className="font-bold leading-snug no-underline"
       href="mailto:dibbs@cdc.gov"
     >
       dibbs@cdc.gov
