@@ -76,7 +76,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          GitHub Respository
+          GitHub Repository
         </Link>
       </div>
     </div>
