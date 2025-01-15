@@ -112,7 +112,7 @@ const GridContainer = ({ children }: ContainerProps) => {
 };
 
 const GridLeft = ({ children }: ContainerProps) => {
-  return <div className="md:pt-[3.75rem]">{children}</div>;
+  return <div className="pt-4 lg:pt-[3.75rem]">{children}</div>;
 };
 
 const GridMiddle = ({ children }: ContainerProps) => {
@@ -219,17 +219,20 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
 
 interface VideoProps {
   src: string;
-  description?: string;
+  title: string;
+  description: string;
 }
-const Video = ({ src, description }: VideoProps) => {
+const Video = ({ src, title, description }: VideoProps) => {
   return (
     <div className="flex flex-col gap-3">
       <iframe
         className="h-[31.25rem] w-full border-none"
         src={src}
+        title={title}
+        aria-label={description}
         allowFullScreen
       ></iframe>
-      {description ? <Text className="italic">{description}</Text> : null}
+      <Text className="italic">{description}</Text>
     </div>
   );
 };

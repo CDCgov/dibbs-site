@@ -50,7 +50,7 @@ export default function Footer() {
                     height={64}
                     alt="Centers for Disease Control and Prevention"
                     layout="intrinsic" // preserve aspect ratio when screen size changes
-                    src={`${basePath}/images/cdc.svg`}
+                    src={`${basePath}/images/CDC.svg`}
                   />
                 </a>
               </em>
