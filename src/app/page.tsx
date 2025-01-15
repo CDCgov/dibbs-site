@@ -27,7 +27,7 @@ const DibbsSection = () => {
       <PageContainer>
         <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-4 shadow-lg md:p-10 xl:flex-row xl:p-0">
           <Image
-            src={`${basePath}/images/home/intro-tout.png`}
+            src={`${basePath}/images/home/intro-tout.jpg`}
             alt=""
             width={480}
             height={411}
