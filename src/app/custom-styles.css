@@ -66,8 +66,10 @@
   --background: #e7f2f5;
   --card-background: #fbfbfb;
   --blue-cool-50: #3a7d95;
+  --blue-cool-60: #2e6276;
   --blue-cool-80: #14333d;
   --blue-cool-70: #224a58;
+  --blue-cool-80: #14333d;
   --foreground: #171717;
   --background-light-blue: #dcecf3;
   --background-dark-blue: #0e1e25;
@@ -136,7 +138,7 @@ main:has(.hide-footer-bar) ~ .footer-bar {
 
 .site-background {
   background-color: var(--background);
-  background-image: url('/images/footer-bg.png');
+  background-image: url('/images/footer-bg.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% clamp(381px, 30%, 100vh);

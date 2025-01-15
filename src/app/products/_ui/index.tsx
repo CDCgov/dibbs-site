@@ -16,7 +16,10 @@ interface ContainerProps {
 
 const SendMailLink = () => {
   return (
-    <Link className="font-bold leading-snug" href="mailto:dibbs@cdc.gov">
+    <Link
+      className="font-bold leading-snug no-underline"
+      href="mailto:dibbs@cdc.gov"
+    >
       dibbs@cdc.gov
     </Link>
   );
@@ -73,7 +76,7 @@ const GithubNav = ({ version, githubHref }: GithubNavProps) => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          GitHub Respository
+          GitHub Repository
         </Link>
       </div>
     </div>

@@ -9,8 +9,8 @@
     "lint": "next lint",
     "prepare": "husky",
     "fmt": "prettier --write .",
-    "docker-build-prod": "docker build -f Dockerfile.prod -t dibbs-site:prod .",
-    "docker-run-prod": "docker run -p 3000:3000 dibbs-site:prod",
+    "docker:build": "docker build -f Dockerfile.prod -t dibbs-site:prod .",
+    "docker:run": "docker run -p 3000:3000 dibbs-site:prod",
     "test": "jest",
     "test:watch": "jest --watch"
   },

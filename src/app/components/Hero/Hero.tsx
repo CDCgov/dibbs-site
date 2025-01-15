@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ header, subheader }: HeroProps) {
   return (
-    <section>
+    <section className="bg-dark-blue">
       <GridContainer>
         <div className="flex max-w-[75rem] items-center gap-[3.75rem] px-1 pb-8 pt-[1.5rem] lg:px-[5rem] lg:pb-[6rem]">
           <div className="flex flex-col items-start gap-3 self-start">

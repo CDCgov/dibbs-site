@@ -56,7 +56,7 @@ const ReturnToCaseStudiesLink = () => {
     <div className="flex flex-row items-center gap-1">
       <ArrowBackIcon />
       <Link
-        className="font-bold text-blue-cool-50 underline underline-offset-4"
+        className="active:blue-cool-80 font-bold text-blue-cool-60 underline underline-offset-4 visited:text-violet-warm-60 hover:text-blue-cool-50"
         href="/case-studies"
       >
         View all case studies
@@ -87,7 +87,7 @@ const ReadMore = ({ href, linkText }: { href: string; linkText: string }) => {
     <>
       <h2>Read more about our work</h2>
       <ExternalLink
-        className="font-bold leading-snug text-blue-cool-50 underline"
+        className="font-bold leading-snug underline"
         href={href}
         target="_blank"
         rel="noreferrer noopener"
