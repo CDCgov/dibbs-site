@@ -153,7 +153,7 @@ const GettingStartedProcessList = ({ systemName }: GettingStartedProps) => {
     {
       heading: 'Attend kickoff call',
       content: `During this kickoff, we'll discuss how ${systemName} works, the
-        technical requirements, and your eCR data needs.`,
+        technical requirements, and your data needs.`,
     },
     {
       heading: 'Get set up',
@@ -189,8 +189,8 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
         <div className="flex flex-col gap-6">
           <Text>
             Before you can use the {systemName}, you'll need to set it up and
-            get your staff comfortable with how the {systemName} can help
-            improve their data workflows.
+            get your staff comfortable with how the tool can help improve their
+            data workflows.
           </Text>
           <div>
             <SectionSubheader>
@@ -206,7 +206,7 @@ const GettingStarted = ({ systemName }: GettingStartedProps) => {
               </li>
               <li className="min-w-full">
                 Provide feedback on an ongoing basis to ensure the {systemName}{' '}
-                in working properly
+                is working properly
               </li>
             </ul>
           </div>
