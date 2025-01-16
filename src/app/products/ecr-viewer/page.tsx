@@ -513,7 +513,12 @@ interface ExternalLinkProps {
 
 function ExternalLink({ children, href }: ExternalLinkProps) {
   return (
-    <Link href={href} target="_blank" rel="noreferrer noopener">
+    <Link
+      href={href}
+      className="underline-offset-4"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       {children}
     </Link>
   );
