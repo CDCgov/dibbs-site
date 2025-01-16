@@ -125,7 +125,7 @@ pull relevant data from a wide network of healthcare providers."
                         <LinkButton
                           isExternal
                           variant="primary"
-                          href="https://dibbs.cloud/query-connector"
+                          href="https://demo.queryconnector.dev/query"
                         >
                           Launch demo
                         </LinkButton>
