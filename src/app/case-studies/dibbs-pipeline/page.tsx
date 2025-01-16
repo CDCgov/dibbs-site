@@ -18,7 +18,7 @@ const DibbsPipeline = () => {
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="DIBBs Pipeline">
               <HeadingImage
                 src={`${basePath}/images/case-studies/dibbs-pipeline/image1.png`}
                 alt=""

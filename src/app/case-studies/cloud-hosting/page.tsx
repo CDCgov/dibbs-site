@@ -17,7 +17,7 @@ const CloudHosting = () => {
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="Cloud Hosting">
               <HeadingImage
                 src={`${basePath}/images/case-studies/cloud-hosting/image1.png`}
                 alt=""

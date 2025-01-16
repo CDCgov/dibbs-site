@@ -18,7 +18,7 @@ const DibbsPrototype = () => {
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="DIBBs Prototype">
               <HeadingImage
                 src={`${basePath}/images/case-studies/dibbs-prototype/image1.png`}
                 alt=""

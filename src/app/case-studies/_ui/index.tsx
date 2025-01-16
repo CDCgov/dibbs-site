@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
-import { ArrowBackIcon } from './ArrowBackIcon';
+import { ArrowForwardIcon } from './NavigateNextIcon';
 import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
 import {
   RoundedImage,
@@ -40,11 +40,15 @@ const HeadingContentContainer = ({ children }: ContainerProps) => {
   return <div className="flex flex-col gap-[2.5rem]">{children}</div>;
 };
 
-const HeadingImageContainer = ({ children }: ContainerProps) => {
+interface HeadingImageContainerProps extends ContainerProps, BreadcrumbProps {}
+const HeadingImageContainer = ({
+  children,
+  currentPageTitle,
+}: HeadingImageContainerProps) => {
   return (
     <div className="flex flex-col gap-5">
       <>
-        <ReturnToCaseStudiesLink />
+        <Breadcrumb currentPageTitle={currentPageTitle} />
         <div>{children}</div>
       </>
     </div>
@@ -54,7 +58,6 @@ const HeadingImageContainer = ({ children }: ContainerProps) => {
 const ReturnToCaseStudiesLink = () => {
   return (
     <div className="flex flex-row items-center gap-1">
-      <ArrowBackIcon />
       <Link
         className="active:blue-cool-80 font-bold text-blue-cool-60 underline underline-offset-4 visited:text-violet-warm-60 hover:text-blue-cool-50"
         href="/case-studies"
@@ -62,6 +65,26 @@ const ReturnToCaseStudiesLink = () => {
         View all case studies
       </Link>
     </div>
+  );
+};
+
+interface BreadcrumbProps {
+  currentPageTitle: string;
+}
+const Breadcrumb = ({ currentPageTitle }: BreadcrumbProps) => {
+  return (
+    <nav aria-label="Breadcrumb" className="flex gap-1">
+      <Link
+        className="active:blue-cool-80 font-bold text-blue-cool-60 underline underline-offset-4 visited:text-violet-warm-60 hover:text-blue-cool-50"
+        href="/case-studies"
+      >
+        Case studies
+      </Link>
+      <ArrowForwardIcon />
+      <Link href="" aria-current="page">
+        {currentPageTitle}
+      </Link>
+    </nav>
   );
 };
 
