@@ -85,7 +85,7 @@ export const ContactForm = () => {
                 },
               )}
             >
-              Email Address<span className="!text-error-dark ml-1">*</span>
+              Email address<span className="!text-error-dark ml-1">*</span>
             </Label>
             <TextInput
               id="email"

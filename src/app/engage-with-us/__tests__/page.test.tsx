@@ -12,7 +12,7 @@ describe('EngageWithUs Contact Form', () => {
     render(<EngageWithUs />);
 
     const submitButton = screen.getByText('Send inquiry');
-    const emailInput = screen.getByLabelText(/Email Address/);
+    const emailInput = screen.getByLabelText(/Email address/);
 
     // Focus and blur the email field to trigger validation
     await user.click(emailInput);
@@ -31,7 +31,7 @@ describe('EngageWithUs Contact Form', () => {
     const user = userEvent.setup();
     render(<EngageWithUs />);
 
-    const emailInput = screen.getByLabelText(/Email Address/);
+    const emailInput = screen.getByLabelText(/Email address/);
     const submitButton = screen.getByText('Send inquiry');
 
     // Enter invalid email
@@ -65,7 +65,7 @@ describe('EngageWithUs Contact Form', () => {
     // Fill out the form
     await user.type(screen.getByLabelText(/Name/i), 'Test User');
     await user.type(
-      screen.getByLabelText(/Email Address/i),
+      screen.getByLabelText(/Email address/i),
       'test@example.com',
     );
     await user.type(screen.getByLabelText(/Organization/i), 'Test Org');
@@ -93,7 +93,7 @@ describe('EngageWithUs Contact Form', () => {
     // Fill out the form
     await user.type(screen.getByLabelText(/Name/i), 'Test User');
     await user.type(
-      screen.getByLabelText(/Email Address/i),
+      screen.getByLabelText(/Email address/i),
       'test@example.com',
     );
     await user.type(screen.getByLabelText(/Organization/i), 'Test Org');
@@ -122,7 +122,7 @@ describe('EngageWithUs Contact Form', () => {
 
     // Fill out the form
     await user.type(
-      screen.getByLabelText(/Email Address/i),
+      screen.getByLabelText(/Email address/i),
       'test@example.com',
     );
 

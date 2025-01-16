@@ -169,7 +169,7 @@ export default function EcrViewer() {
                       The eCR Viewer also pulls out more data fields from the
                       eICR XML, allowing public health staff to see more data
                       than what's currently available by default in the HTML or
-                      surveillance system views
+                      surveillance system views.
                     </span>
                   </Text>
                 </SubsectionContainer>

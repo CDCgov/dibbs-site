@@ -188,7 +188,7 @@ pull relevant data from a wide network of healthcare providers."
                     <span>
                       For instance, if your jurisdiction wants to query back to
                       a healthcare provider every time you receive a lab for an
-                      STI, our API would allow your to automate that process,
+                      STI, our API would allow you to automate that process,
                       eliminating the need for a staff member to manually make
                       each query.
                     </span>
