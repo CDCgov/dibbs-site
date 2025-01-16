@@ -112,7 +112,11 @@ const GridContainer = ({ children }: ContainerProps) => {
 };
 
 const GridLeft = ({ children }: ContainerProps) => {
-  return <div className="pt-4 lg:pt-[3.75rem]">{children}</div>;
+  return (
+    <div className="pt-4 lg:flex lg:justify-end lg:pt-[3.75rem]">
+      <div>{children}</div>
+    </div>
+  );
 };
 
 const GridMiddle = ({ children }: ContainerProps) => {
