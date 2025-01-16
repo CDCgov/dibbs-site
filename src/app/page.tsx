@@ -73,7 +73,7 @@ const PageContainer = ({ children }: { children: React.ReactNode }) => {
 
 const ValueSection = () => {
   return (
-    <section>
+    <section className="pb-[6.25rem]">
       <div
         className={classNames(
           styles.valueSection,
