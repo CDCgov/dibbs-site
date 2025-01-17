@@ -55,19 +55,6 @@ const HeadingImageContainer = ({
   );
 };
 
-const ReturnToCaseStudiesLink = () => {
-  return (
-    <div className="flex flex-row items-center gap-1">
-      <Link
-        className="active:blue-cool-80 font-bold text-blue-cool-60 underline underline-offset-4 visited:text-violet-warm-60 hover:text-blue-cool-50"
-        href="/case-studies"
-      >
-        View all case studies
-      </Link>
-    </div>
-  );
-};
-
 interface BreadcrumbProps {
   currentPageTitle: string;
 }
