@@ -9,24 +9,6 @@ import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
 import { usePathname } from 'next/navigation';
 
-const navigationItems = [
-  {
-    key: 'products',
-    href: '/products',
-    text: 'Our products',
-  },
-  {
-    key: 'case-studies',
-    href: '/case-studies',
-    text: 'Case studies',
-  },
-  {
-    key: 'engage',
-    href: '/engage-with-us',
-    text: 'Engage with us',
-  },
-];
-
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
   const heroContent = useHeroContent();
@@ -80,10 +62,16 @@ export default function Header() {
           </div>
           <PrimaryNav
             items={[
-              <NavigationLink href="/products" onClick={handleClick} isTopNav>
+              <NavigationLink
+                key="one"
+                href="/products"
+                onClick={handleClick}
+                isTopNav
+              >
                 Our products
               </NavigationLink>,
               <NavigationLink
+                key="two"
                 href="/case-studies"
                 onClick={handleClick}
                 isTopNav
@@ -91,6 +79,7 @@ export default function Header() {
                 Case studies
               </NavigationLink>,
               <NavigationLink
+                key="three"
                 href="/engage-with-us"
                 onClick={handleClick}
                 isTopNav
