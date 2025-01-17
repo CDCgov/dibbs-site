@@ -58,8 +58,8 @@ function StandaloneProducts() {
               data into a simple JSON file that can be easily loaded into a
               tabular format (like a spreadsheet)."
               status="development"
-              linkText="Learn more about eCR Parser"
-              linkToHref=""
+              linkText="Connect with us to learn more"
+              linkToHref="/engage-with-us"
               linkVariant="secondary"
             />
             <ProductCard
@@ -69,8 +69,8 @@ function StandaloneProducts() {
               surveillance systems and bring focus to pertinent data for a given
               condition."
               status="development"
-              linkText="Learn more about eCR Refiner"
-              linkToHref=""
+              linkText="Connect with us to learn more"
+              linkToHref="/engage-with-us"
               linkVariant="secondary"
             />
           </div>
