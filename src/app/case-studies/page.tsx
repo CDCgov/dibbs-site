@@ -50,78 +50,8 @@ export default function CaseStudies() {
               />
             </div>
           </div>
-          {/* Section 2 */}
-          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
-            <div className="order-1 flex lg:order-1">
-              <RoundedImage
-                src={`${basePath}/images/case-studies/image2.jpg`}
-                width={550}
-                height={300}
-                alt=""
-              />
-            </div>
-            <div className="order-2 py-12 lg:order-2 lg:items-center">
-              <ContentContainer>
-                <TextContainer>
-                  <Title>
-                    Surfacing actionable insights from electronic case reporting
-                    data
-                  </Title>
-                  <Text>
-                    Many public health jurisdictions struggle to use and sort
-                    through incoming eCR data. To unlock the value of this rich
-                    source of data, we've built an intuitive interface that
-                    surfaces key information from eCR files to make them more
-                    useful for monitoring the spread of reportable conditions.
-                  </Text>
-                </TextContainer>
-                <div>
-                  <LinkButton variant="primary" href="/case-studies/ecr-viewer">
-                    View case study
-                  </LinkButton>
-                </div>
-              </ContentContainer>
-            </div>
-          </div>
 
-          {/* Section 3 */}
-          <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
-            <div className="order-2 py-12 lg:order-1">
-              <ContentContainer>
-                <TextContainer>
-                  <Title>
-                    Improving public health data infrastructure through
-                    flexible, modern approaches to cloud services
-                  </Title>
-                  <Text>
-                    We're working with public health jurisdictions to provide
-                    free and flexible cloud hosting infrastructure that enables
-                    them to quickly upgrade and scale their data systems with
-                    our modern, cloud-based software solutions, so they can meet
-                    the scope and scale of emerging public health threats.
-                  </Text>
-                </TextContainer>
-                <div>
-                  <LinkButton
-                    variant="primary"
-                    href="/case-studies/cloud-hosting"
-                  >
-                    View case study
-                  </LinkButton>
-                </div>
-              </ContentContainer>
-            </div>
-            <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
-              <RoundedImage
-                src={`${basePath}/images/case-studies/image3.jpg`}
-                width={550}
-                height={300}
-                alt=""
-              />
-            </div>
-          </div>
-
-          {/* Section 4 */}
+          {/* Temporary section 2 */}
           <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
               <RoundedImage
@@ -158,9 +88,118 @@ export default function CaseStudies() {
               </ContentContainer>
             </div>
           </div>
+
+          {/* Section 2 */}
+          {/* <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
+            <div className="order-1 flex lg:order-1">
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image2.jpg`}
+                width={550}
+                height={300}
+                alt=""
+              />
+            </div>
+            <div className="order-2 py-12 lg:order-2 lg:items-center">
+              <ContentContainer>
+                <TextContainer>
+                  <Title>
+                    Surfacing actionable insights from electronic case reporting
+                    data
+                  </Title>
+                  <Text>
+                    Many public health jurisdictions struggle to use and sort
+                    through incoming eCR data. To unlock the value of this rich
+                    source of data, we've built an intuitive interface that
+                    surfaces key information from eCR files to make them more
+                    useful for monitoring the spread of reportable conditions.
+                  </Text>
+                </TextContainer>
+                <div>
+                  <LinkButton variant="primary" href="/case-studies/ecr-viewer">
+                    View case study
+                  </LinkButton>
+                </div>
+              </ContentContainer>
+            </div>
+          </div> */}
+
+          {/* Section 3 */}
+          {/* <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
+            <div className="order-2 py-12 lg:order-1">
+              <ContentContainer>
+                <TextContainer>
+                  <Title>
+                    Improving public health data infrastructure through
+                    flexible, modern approaches to cloud services
+                  </Title>
+                  <Text>
+                    We're working with public health jurisdictions to provide
+                    free and flexible cloud hosting infrastructure that enables
+                    them to quickly upgrade and scale their data systems with
+                    our modern, cloud-based software solutions, so they can meet
+                    the scope and scale of emerging public health threats.
+                  </Text>
+                </TextContainer>
+                <div>
+                  <LinkButton
+                    variant="primary"
+                    href="/case-studies/cloud-hosting"
+                  >
+                    View case study
+                  </LinkButton>
+                </div>
+              </ContentContainer>
+            </div>
+            <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image3.jpg`}
+                width={550}
+                height={300}
+                alt=""
+              />
+            </div> */}
         </div>
+
+        {/* Section 4 */}
+        {/* <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
+            <div className="order-1 flex lg:order-1">
+              <RoundedImage
+                src={`${basePath}/images/case-studies/image4.jpg`}
+                width={550}
+                height={300}
+                alt=""
+              />
+            </div>
+            <div className="order-2 py-12 lg:order-2">
+              <ContentContainer>
+                <TextContainer>
+                  <Title>
+                    Building a prototype for modernized public health
+                    infrastructure in Virginia
+                  </Title>
+                  <Text>
+                    The Virginia Department of Health needed to process high
+                    volumes of incoming COVID-19 data and turn it into
+                    meaningful intelligence. We worked with them to build a
+                    prototype data ingestion pipeline that improves data
+                    processing and analysis to more efficiently inform public
+                    health action.
+                  </Text>
+                </TextContainer>
+                <div>
+                  <LinkButton
+                    variant="primary"
+                    href="/case-studies/dibbs-prototype"
+                  >
+                    View case study
+                  </LinkButton>
+                </div>
+              </ContentContainer>
+            </div>
+          </div> */}
       </div>
     </div>
+    // </div>
   );
 }
 
