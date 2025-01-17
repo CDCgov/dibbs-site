@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import { LinkButton } from '../components/LinkButton/LinkButton';
-import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 import { Tag } from '@trussworks/react-uswds';
@@ -18,12 +17,6 @@ export default function OurProducts() {
 }
 
 function StandaloneProducts() {
-  useHeroInit({
-    header: `Our ecosystem of DIBBs products`,
-    subheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
-    heroClass: 'our-products-hero',
-  });
-
   return (
     <section>
       <div className="border-b border-[#adcfdc]">

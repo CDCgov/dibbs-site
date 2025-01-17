@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, SetStateAction } from 'react';
 import { SideNav as UswdsSideNav } from '@trussworks/react-uswds';
 import classNames from 'classnames';

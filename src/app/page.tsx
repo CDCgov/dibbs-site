@@ -1,17 +1,16 @@
-'use client';
 import { Grid } from '@trussworks/react-uswds';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { LinkButton } from './components/LinkButton/LinkButton';
-import { useHeroInit } from './hooks/useHeroInit';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
 import styles from './_styles/Homepage.module.scss';
 import { InvitationCta } from './components/InvitationCta/InvitationCta';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { defaultHomeContext } from './context';
+
+
 
 const DibbsSection = () => {
   const benefits: string[] = [
@@ -146,8 +145,6 @@ const JurisdictionSection = () => {
 };
 
 const Home = () => {
-  useHeroInit(defaultHomeContext);
-
   return (
     <>
       <DibbsSection />

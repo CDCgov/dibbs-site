@@ -7,7 +7,6 @@ import styles from './Header.module.scss';
 import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
-import { useHeroContext } from '../../context';
 import { usePathname } from 'next/navigation';
 
 const navigationItems = [
@@ -30,10 +29,7 @@ const navigationItems = [
 
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
-  let { heroContent } = useHeroContext();
-  if (usePathname() !== heroContent.pathname) {
-    heroContent = { ...heroContent, header: '', subheader: '', heroClass: '' };
-  }
+  const heroContent = useHeroContent();
 
   const handleClick = () => {
     if (window.innerWidth < 1024) {
@@ -96,9 +92,67 @@ export default function Header() {
         </div>
       </USWDSHeader>
 
-      {heroContent.header && (
+      {heroContent?.header && (
         <Hero header={heroContent.header} subheader={heroContent.subheader} />
       )}
     </div>
   );
 }
+
+interface HeroContent {
+  header: string;
+  subheader: string;
+  heroClass: string;
+}
+
+function useHeroContent(): HeroContent | undefined {
+  const pathname = usePathname();
+  if (routes.has(pathname)) {
+    return routes.get(pathname);
+  } else {
+    return defaultHeader;
+  }
+}
+
+const defaultHeader: HeroContent = {
+  header: '',
+  subheader: '',
+  heroClass: 'detail-hero',
+};
+
+const routes = new Map<string, HeroContent>([
+  [
+    '/',
+    {
+      header:
+        'Improve the way your jurisdiction collects, processes, and views public health data',
+      subheader:
+        "Turn your jurisdiction's data into meaningful intelligence that drives timely public health action using CDC's free, cloud-based products built from Data Integration Building Blocks, or DIBBs.",
+      heroClass: 'homepage-hero',
+    },
+  ],
+  [
+    '/case-studies',
+    {
+      header: `See how DIBBs solutions have helped others`,
+      subheader: `Explore our case studies to see the impact of DIBBs.`,
+      heroClass: 'case-studies-hero',
+    },
+  ],
+  [
+    '/engage-with-us',
+    {
+      header: `Get started with DIBBs products`,
+      subheader: `Learn how your jurisdiction can start working with the DIBBs team.`,
+      heroClass: 'engage-with-us-hero',
+    },
+  ],
+  [
+    '/products',
+    {
+      header: `Our ecosystem of DIBBs products`,
+      subheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
+      heroClass: 'our-products-hero',
+    },
+  ],
+]);

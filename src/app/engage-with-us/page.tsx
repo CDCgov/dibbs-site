@@ -1,13 +1,16 @@
-'use client';
-import { HeroInitializer } from './components/HeroInitializer';
 import { CustomerTestimonial } from './components/CustomerTestimonial';
-import './styles.scss';
 import { ContactForm } from './components/ContactForm';
 import { ConsultationAlert } from './components/ConsultationAlert';
+import { Metadata } from 'next';
+import './styles.scss';
+
+export const metadata: Metadata = {
+  title: 'Engage with us',
+};
+
 const EngageWithUs = () => {
   return (
     <section>
-      <HeroInitializer />
       <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-2 pb-[5rem] pt-[2.5rem] xl:px-[10rem]">
         <div className="flex flex-col gap-10">
           <ConsultationAlert />

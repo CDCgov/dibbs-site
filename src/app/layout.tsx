@@ -2,13 +2,12 @@ import type { Metadata } from 'next';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import USABanner from './components/UsaBanner/UsaBanner';
+import { merriweather, publicSans } from './fonts';
 import './globals.scss';
 import './custom-styles.css';
-import { HeroContextProvider } from './context';
-import { merriweather, publicSans } from './fonts';
 
 export const metadata: Metadata = {
-  title: 'DIBBS Site',
+  title: 'DIBBs',
 };
 
 export const viewport = {
@@ -29,11 +28,9 @@ export default function RootLayout({
       >
         <USABanner />
         <div>
-          <HeroContextProvider>
-            <Header />
-            <main id="main-content">{children}</main>
-            <Footer />
-          </HeroContextProvider>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
