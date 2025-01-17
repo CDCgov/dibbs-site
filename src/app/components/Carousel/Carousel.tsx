@@ -38,6 +38,7 @@ export default function Carousel() {
     .slice(0, 10);
 
   const settings: Settings = {
+    variableWidth: true,
     infinite: true,
     speed: 15000, // Adjust speed to make it constant
     slidesToShow: 4, // Number of visible slides
@@ -73,18 +74,18 @@ export default function Carousel() {
           </div>
         ))}
       </div>
-      <div className="sliderContainer hidden xl:block">
+      <div className="sliderContainer hidden max-h-[100px] xl:block">
         <Slider {...settings}>
           {images.map((imgObj, index) => (
             <div key={index}>
-              <div className="flex h-[6.25rem] justify-center px-[5rem]">
+              <div className="flex h-[6.25rem] justify-center px-[2.5rem]">
                 <Image
                   src={imgObj.image}
                   alt={imgObj.alt}
                   width={160}
                   height={100}
                   draggable={false}
-                  className="h-full w-full min-w-[13.63rem] object-contain"
+                  className="h-full w-full min-w-[13.63rem] max-w-[300px] object-contain"
                 />
               </div>
             </div>

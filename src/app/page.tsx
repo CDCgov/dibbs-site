@@ -139,7 +139,7 @@ const JurisdictionSection = () => {
         </ContentContainer>
       </section>
       <section>
-        <div className="pb-20 pt-0">
+        <div className="pt-0 pb-10">
           <Carousel />
         </div>
       </section>
