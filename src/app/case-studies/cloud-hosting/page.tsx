@@ -10,6 +10,11 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cloud Hosting',
+};
 
 const CloudHosting = () => {
   return (

@@ -10,6 +10,11 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'eCR Viewer',
+};
 
 const EcrViewer = () => {
   return (

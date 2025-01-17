@@ -9,8 +9,11 @@ import styles from './_styles/Homepage.module.scss';
 import { InvitationCta } from './components/InvitationCta/InvitationCta';
 import Image from 'next/image';
 import classNames from 'classnames';
+import { Metadata } from 'next';
 
-
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 const DibbsSection = () => {
   const benefits: string[] = [

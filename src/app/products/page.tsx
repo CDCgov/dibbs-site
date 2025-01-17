@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import { LinkButton } from '../components/LinkButton/LinkButton';
@@ -6,6 +5,11 @@ import { RoundedBackground } from '../components/RoundedBackground/RoundedBackgr
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 import { Tag } from '@trussworks/react-uswds';
 import classNames from 'classnames';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Products',
+};
 
 export default function OurProducts() {
   return (

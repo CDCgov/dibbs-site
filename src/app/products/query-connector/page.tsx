@@ -1,4 +1,3 @@
-'use client';
 import {
   GithubNav,
   GridContainer,
@@ -21,6 +20,11 @@ import {
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
 import { LinkButton } from '@/app/components/LinkButton/LinkButton';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Query Connector',
+};
 
 export default function QueryConnector() {
   const navItems: NavItem[] = [

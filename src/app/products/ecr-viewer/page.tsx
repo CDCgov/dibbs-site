@@ -1,4 +1,3 @@
-'use client';
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import {
@@ -24,6 +23,11 @@ import {
   NavItem,
   ContentContainer,
 } from '../_ui';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'eCR Viewer',
+};
 
 export default function EcrViewer() {
   const navItems: NavItem[] = [

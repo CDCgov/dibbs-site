@@ -11,6 +11,11 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'DIBBs Prototype',
+};
 
 const DibbsPrototype = () => {
   return (

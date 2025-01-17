@@ -2,6 +2,11 @@ import { LinkButton } from '../components/LinkButton/LinkButton';
 import { basePath } from '../utils/constants';
 import React from 'react';
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Case Studies',
+};
 
 export default function CaseStudies() {
   return (

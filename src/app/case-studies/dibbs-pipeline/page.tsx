@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import {
   PageContainer,
   ContentContainer,
@@ -11,6 +12,10 @@ import {
   HeadingTitle,
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
+
+export const metadata: Metadata = {
+  title: 'DIBBs Pipeline',
+};
 
 const DibbsPipeline = () => {
   return (
