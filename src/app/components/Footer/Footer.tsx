@@ -13,21 +13,6 @@ export default function Footer() {
     if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
   };
 
-  const footerMenu = [
-    <NavigationLink key="one" href="/" onClick={onClick}>
-      Home
-    </NavigationLink>,
-    <NavigationLink key="two" href="/products" onClick={onClick}>
-      Our products
-    </NavigationLink>,
-    <NavigationLink key="three" href="/case-studies" onClick={onClick}>
-      Case studies
-    </NavigationLink>,
-    <NavigationLink key="four" href="/engage-with-us" onClick={onClick}>
-      Engage with us
-    </NavigationLink>,
-  ];
-
   return (
     <>
       <footer
@@ -58,7 +43,28 @@ export default function Footer() {
           </div>
           <PrimaryNav
             className="!p-0"
-            items={footerMenu}
+            items={[
+              <NavigationLink key="one" href="/" onClick={onClick}>
+                Home
+              </NavigationLink>,
+              <NavigationLink key="two" href="/products" onClick={onClick}>
+                Our products
+              </NavigationLink>,
+              <NavigationLink
+                key="three"
+                href="/case-studies"
+                onClick={onClick}
+              >
+                Case studies
+              </NavigationLink>,
+              <NavigationLink
+                key="four"
+                href="/engage-with-us"
+                onClick={onClick}
+              >
+                Engage with us
+              </NavigationLink>,
+            ]}
             mobileExpanded={expanded}
             onToggleMobileNav={onClick}
           />

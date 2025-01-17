@@ -37,12 +37,6 @@ export default function Header() {
     }
   };
 
-  const navigationLinks = navigationItems.map(({ key, href, text }) => (
-    <NavigationLink key={key} href={href} onClick={handleClick} isTopNav>
-      {text}
-    </NavigationLink>
-  ));
-
   return (
     <div
       className={classNames(
@@ -85,7 +79,25 @@ export default function Header() {
             </button>
           </div>
           <PrimaryNav
-            items={navigationLinks}
+            items={[
+              <NavigationLink href="/products" onClick={handleClick} isTopNav>
+                Our products
+              </NavigationLink>,
+              <NavigationLink
+                href="/case-studies"
+                onClick={handleClick}
+                isTopNav
+              >
+                Case studies
+              </NavigationLink>,
+              <NavigationLink
+                href="/engage-with-us"
+                onClick={handleClick}
+                isTopNav
+              >
+                Engage with us
+              </NavigationLink>,
+            ]}
             mobileExpanded={expanded}
             onToggleMobileNav={handleClick}
           />
