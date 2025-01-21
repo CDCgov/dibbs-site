@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'DIBBs Prototype',
 };
 
-const DibbsPrototype = () => {
+export default function DibbsPrototype() {
   return (
     <PageContainer>
       <ContentContainer>
@@ -158,6 +158,4 @@ const DibbsPrototype = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default DibbsPrototype;
+}

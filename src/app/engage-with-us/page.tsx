@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Engage with us',
 };
 
-const EngageWithUs = () => {
+export default function EngageWithUs() {
   return (
     <section>
       <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-2 pb-[5rem] pt-[2.5rem] xl:px-[10rem]">
@@ -30,6 +30,4 @@ const EngageWithUs = () => {
       </div>
     </section>
   );
-};
-
-export default EngageWithUs;
+}

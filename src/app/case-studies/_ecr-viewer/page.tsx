@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'eCR Viewer',
 };
 
-const EcrViewer = () => {
+export default function EcrViewer() {
   return (
     <PageContainer>
       <ContentContainer>
@@ -159,6 +159,4 @@ const EcrViewer = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default EcrViewer;
+}

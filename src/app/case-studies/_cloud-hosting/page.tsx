@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'Cloud Hosting',
 };
 
-const CloudHosting = () => {
+export default function CloudHosting() {
   return (
     <PageContainer>
       <ContentContainer>
@@ -149,6 +149,4 @@ const CloudHosting = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default CloudHosting;
+}

@@ -9,7 +9,7 @@ import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
 import { usePathname } from 'next/navigation';
 
-export default function Header() {
+const Header = () => {
   const [expanded, setExpanded] = useState(false);
   const heroContent = useHeroContent();
 
@@ -98,7 +98,7 @@ export default function Header() {
       )}
     </div>
   );
-}
+};
 
 interface HeroContent {
   header: string;
@@ -106,14 +106,14 @@ interface HeroContent {
   heroClass: string;
 }
 
-function useHeroContent(): HeroContent | undefined {
+const useHeroContent = (): HeroContent | undefined => {
   const pathname = usePathname();
   if (routes.has(pathname)) {
     return routes.get(pathname);
   } else {
     return defaultHeader;
   }
-}
+};
 
 const defaultHeader: HeroContent = {
   header: '',
@@ -157,3 +157,5 @@ const routes = new Map<string, HeroContent>([
     },
   ],
 ]);
+
+export default Header;

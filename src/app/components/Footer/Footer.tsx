@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { basePath } from '../../utils/constants';
 import styles from './Footer.module.scss';
 
-export default function Footer() {
+const Footer = () => {
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
     if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
@@ -72,4 +72,6 @@ export default function Footer() {
       </footer>
     </>
   );
-}
+};
+
+export default Footer;

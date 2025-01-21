@@ -138,19 +138,19 @@ const JurisdictionSection = () => {
   );
 };
 
-function PageContainer({ children }: { children: React.ReactNode }) {
+const PageContainer = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="ml-auto mr-auto flex justify-center pb-[2rem] pt-[3.75rem] lg:px-[7.5rem] lg:pb-[6.25rem]">
       {children}
     </div>
   );
-}
+};
 
 interface ContentContainer {
   children: React.ReactNode;
   className?: string;
 }
-function ContentContainer({ children, className }: ContentContainer) {
+const ContentContainer = ({ children, className }: ContentContainer) => {
   return (
     <div
       className={classNames(
@@ -161,9 +161,9 @@ function ContentContainer({ children, className }: ContentContainer) {
       {children}
     </div>
   );
-}
+};
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <DibbsSection />
@@ -172,6 +172,4 @@ const Home = () => {
       <InvitationCta />
     </>
   );
-};
-
-export default Home;
+}

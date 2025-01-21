@@ -97,7 +97,12 @@ interface NavItemProps {
   selectedHash: string;
   setSelectedHash: (value: SetStateAction<string>) => void;
 }
-function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
+const NavItem = ({
+  title,
+  id,
+  selectedHash,
+  setSelectedHash,
+}: NavItemProps) => {
   const itemHash = `#${id}`;
   return (
     <a
@@ -113,4 +118,4 @@ function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
       {title}
     </a>
   );
-}
+};

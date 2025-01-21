@@ -5,7 +5,7 @@ import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function Carousel() {
+const Carousel = () => {
   const baseImages = [
     {
       image: `${basePath}/images/carousel/LAC.png`,
@@ -94,4 +94,6 @@ export default function Carousel() {
       </div>
     </>
   );
-}
+};
+
+export default Carousel;

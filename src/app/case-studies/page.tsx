@@ -203,18 +203,18 @@ export default function CaseStudies() {
   );
 }
 
-function ContentContainer({ children }: { children: React.ReactNode }) {
+const ContentContainer = ({ children }: { children: React.ReactNode }) => {
   return <div className="flex flex-col gap-4">{children}</div>;
-}
+};
 
-function TextContainer({ children }: { children: React.ReactNode }) {
+const TextContainer = ({ children }: { children: React.ReactNode }) => {
   return <div className="flex flex-col gap-2">{children}</div>;
-}
+};
 
-function Title({ children }: { children: React.ReactNode }) {
+const Title = ({ children }: { children: React.ReactNode }) => {
   return <h2 className="lg:max-w-[32rem]">{children}</h2>;
-}
+};
 
-function Text({ children }: { children: React.ReactNode }) {
+const Text = ({ children }: { children: React.ReactNode }) => {
   return <p className="lg:max-w-[31.25rem]">{children}</p>;
-}
+};

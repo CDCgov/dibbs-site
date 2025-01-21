@@ -13,7 +13,7 @@ import {
 } from '@trussworks/react-uswds';
 import { basePath } from '../../utils/constants';
 
-export default function USABanner() {
+const USABanner = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const flagImg = `${basePath}/images/us-flag.png`;
@@ -71,4 +71,6 @@ export default function USABanner() {
       </BannerContent>
     </Banner>
   );
-}
+};
+
+export default USABanner;

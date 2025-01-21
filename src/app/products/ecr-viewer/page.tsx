@@ -514,7 +514,7 @@ interface ExternalLinkProps {
   href: string;
 }
 
-function ExternalLink({ children, href }: ExternalLinkProps) {
+const ExternalLink = ({ children, href }: ExternalLinkProps) => {
   return (
     <Link
       href={href}
@@ -525,4 +525,4 @@ function ExternalLink({ children, href }: ExternalLinkProps) {
       {children}
     </Link>
   );
-}
+};

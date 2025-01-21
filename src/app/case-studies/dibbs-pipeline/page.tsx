@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'DIBBs Pipeline',
 };
 
-const DibbsPipeline = () => {
+export default function DibbsPipeline() {
   return (
     <PageContainer>
       <ContentContainer>
@@ -169,6 +169,4 @@ const DibbsPipeline = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default DibbsPipeline;
+}
