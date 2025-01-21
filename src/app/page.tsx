@@ -84,7 +84,7 @@ const ValueSection = () => {
             }}
             cardBackground="none"
           >
-            <div className="my-auto flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               <Heading className="text-center xl:max-w-[23.25rem] xl:text-start">
                 Unlock the value of your jurisdiction's data
               </Heading>
