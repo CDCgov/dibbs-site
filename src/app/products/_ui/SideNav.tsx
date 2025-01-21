@@ -75,7 +75,7 @@ export const SideNav = ({ items }: SideNavProps) => {
   }, [items]);
 
   return (
-    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4 lg:w-[12.5rem]">
+    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-14 lg:w-[12.5rem]">
       <UswdsSideNav
         items={items.map(({ title, id }) => (
           <NavItem
