@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
-import { ArrowForwardIcon } from './NavigateNextIcon';
+import { NavigateNextIcon } from './NavigateNextIcon';
 import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
 import {
   RoundedImage,
@@ -67,7 +67,7 @@ const Breadcrumb = ({ currentPageTitle }: BreadcrumbProps) => {
       >
         Case studies
       </Link>
-      <ArrowForwardIcon />
+      <NavigateNextIcon />
       <Link href="" aria-current="page">
         {currentPageTitle}
       </Link>
