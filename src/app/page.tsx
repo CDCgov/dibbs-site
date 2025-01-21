@@ -1,7 +1,6 @@
 import { Grid } from '@trussworks/react-uswds';
 import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
-import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import { LinkButton } from './components/LinkButton/LinkButton';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
@@ -65,24 +64,16 @@ const DibbsSection = () => {
   );
 };
 
-const PageContainer = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="ml-auto mr-auto flex justify-center pb-[2rem] pt-[3.75rem] lg:px-[7.5rem] lg:pb-[6.25rem]">
-      {children}
-    </div>
-  );
-};
-
 const ValueSection = () => {
   return (
-    <section className="lg:pb-[6.25rem]">
+    <section className="xl:pb-[6.25rem]">
       <div
         className={classNames(
           styles.valueSection,
           'after:left-[44%] 2xl:after:left-[46%]',
         )}
       >
-        <ContentContainer classes="!py-0 xl:!pt-[6.25rem]">
+        <ContentContainer className="px-32 py-0 xl:pt-[6.25rem]">
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/home/value-tout.jpg`}
@@ -122,7 +113,7 @@ const JurisdictionSection = () => {
   return (
     <>
       <section>
-        <ContentContainer classes="sm:pb-10 pt-8 lg:!pt-[6.25rem]">
+        <ContentContainer className="pb-10 pt-8 lg:pt-[6.25rem]">
           <Grid row gap>
             <Grid col={12}>
               <div className="flex flex-col items-center gap-2">
@@ -146,6 +137,31 @@ const JurisdictionSection = () => {
     </>
   );
 };
+
+function PageContainer({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="ml-auto mr-auto flex justify-center pb-[2rem] pt-[3.75rem] lg:px-[7.5rem] lg:pb-[6.25rem]">
+      {children}
+    </div>
+  );
+}
+
+interface ContentContainer {
+  children: React.ReactNode;
+  className?: string;
+}
+function ContentContainer({ children, className }: ContentContainer) {
+  return (
+    <div
+      className={classNames(
+        'ml-auto mr-auto flex max-w-[87.5rem] flex-col',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+}
 
 const Home = () => {
   return (
