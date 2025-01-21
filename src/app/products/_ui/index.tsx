@@ -6,7 +6,6 @@ import {
   Link,
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
-import { SideNav } from '@/app/components/SideNav/SideNav';
 import './styles.scss';
 import Image, { ImageProps } from 'next/image';
 
@@ -88,18 +87,6 @@ const AccordionItemContent = ({ children }: ContainerProps) => {
     <span className="font-normal leading-snug text-blue-cool-70">
       {children}
     </span>
-  );
-};
-
-export type NavItem = { title: string; id: string };
-interface NavigationProps {
-  navItems: NavItem[];
-}
-const Navigation = ({ navItems }: NavigationProps) => {
-  return (
-    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4 lg:w-[12.5rem]">
-      <SideNav items={navItems} />
-    </div>
   );
 };
 
@@ -315,7 +302,6 @@ export {
   SectionSubheader,
   GithubNav,
   AccordionItemContent,
-  Navigation,
   GridContainer,
   GridLeft,
   GridMiddle,

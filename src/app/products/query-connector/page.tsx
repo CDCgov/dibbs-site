@@ -4,7 +4,6 @@ import {
   GridLeft,
   GridMiddle,
   GridRight,
-  Navigation,
   SectionContentContainer,
   SectionHeader,
   SubsectionContainer,
@@ -14,13 +13,13 @@ import {
   SectionSubheader,
   GettingStarted,
   HaveAQuestionSection,
-  NavItem,
   ContentContainer,
   ProductImage,
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
 import { LinkButton } from '@/app/components/LinkButton/LinkButton';
 import { Metadata } from 'next';
+import { NavItem, SideNav } from '../_ui/SideNav';
 
 export const metadata: Metadata = {
   title: 'Query Connector',
@@ -38,7 +37,7 @@ export default function QueryConnector() {
       <ContentContainer>
         <GridContainer>
           <GridLeft>
-            <Navigation navItems={navItems} />
+            <SideNav items={navItems} />
           </GridLeft>
           <GridMiddle>
             <TitleSection

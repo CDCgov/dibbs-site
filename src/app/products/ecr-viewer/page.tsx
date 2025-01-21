@@ -1,7 +1,6 @@
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import {
-  Navigation,
   TitleSection,
   SectionHeader,
   SectionSubheader,
@@ -20,10 +19,10 @@ import {
   Figure,
   Text,
   ValueList,
-  NavItem,
   ContentContainer,
 } from '../_ui';
 import { Metadata } from 'next';
+import { SideNav, NavItem } from '../_ui/SideNav';
 
 export const metadata: Metadata = {
   title: 'eCR Viewer',
@@ -43,7 +42,7 @@ export default function EcrViewer() {
       <ContentContainer>
         <GridContainer>
           <GridLeft>
-            <Navigation navItems={navItems} />
+            <SideNav items={navItems} />
           </GridLeft>
           <GridMiddle>
             <TitleSection
