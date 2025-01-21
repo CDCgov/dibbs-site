@@ -50,7 +50,7 @@ const DibbsSection = () => {
             <ul className="flex list-none flex-col gap-4 pl-0 font-semibold text-blue-cool-70">
               {benefits.map((benefit, index) => (
                 <li
-                  className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:mr-[-20px] last:min-w-fit"
+                  className="w-fit bg-[#ebe3f9] before:mr-[.5rem] before:pl-2 before:content-['◿'] after:pr-2 last:min-w-fit md:last:mr-[-20px]"
                   key={`benefit-${index}`}
                 >
                   {benefit}
