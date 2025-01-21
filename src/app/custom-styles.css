@@ -141,7 +141,7 @@ main:has(.hide-footer-bar) ~ .footer-bar {
   background-image: url('/images/footer-bg.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 100% clamp(381px, 30%, 100vh);
+  background-size: 100% clamp(410px, 10%, 100vh);
   min-height: 100vh;
 }
 
