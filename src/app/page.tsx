@@ -73,7 +73,7 @@ const ValueSection = () => {
           'after:left-[44%] 2xl:after:left-[46%]',
         )}
       >
-        <ContentContainer className="px-32 py-0 xl:pt-[6.25rem]">
+        <ContentContainer className="px-10 py-0 md:px-32 xl:pt-[6.25rem]">
           <ImageCard
             imageFirst={false}
             imageUrl={`${basePath}/images/home/value-tout.jpg`}
@@ -113,14 +113,14 @@ const JurisdictionSection = () => {
   return (
     <>
       <section>
-        <ContentContainer className="pb-10 pt-8 lg:pt-[6.25rem]">
+        <ContentContainer className="px-10 pb-10 pt-8 md:px-32 lg:pt-[6.25rem]">
           <Grid row gap>
             <Grid col={12}>
               <div className="flex flex-col items-center gap-2">
                 <Heading className="text-center">
                   Jurisdictions working with DIBBs
                 </Heading>
-                <Paragraph className="text-center">
+                <Paragraph>
                   State and local public health jurisdictions across the United
                   States used DIBBs to solve their toughest data challenges
                 </Paragraph>
