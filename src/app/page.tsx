@@ -75,7 +75,7 @@ const PageContainer = ({ children }: { children: React.ReactNode }) => {
 
 const ValueSection = () => {
   return (
-    <section className="pb-[6.25rem]">
+    <section className="lg:pb-[6.25rem]">
       <div
         className={classNames(
           styles.valueSection,
@@ -139,7 +139,7 @@ const JurisdictionSection = () => {
         </ContentContainer>
       </section>
       <section>
-        <div className="pt-0 pb-10">
+        <div className="pb-10 pt-0">
           <Carousel />
         </div>
       </section>
