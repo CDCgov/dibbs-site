@@ -24,7 +24,7 @@ const StandaloneProducts = () => {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
-        <ContentContainer className="gap-5 px-4 py-4 sm:py-[3.75rem] md:px-[10rem]">
+        <ContentContainer className="gap-5 px-5 py-4 sm:py-[3.75rem] md:px-[10rem]">
           <h2>DIBBs-powered products</h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <ProductCard
@@ -198,7 +198,7 @@ const DataPipelineGrid = ({ children }: DataPipelineGridProps) => {
 const DataPipeline = () => {
   return (
     <section className="bg-[#dae9ee]">
-      <ContentContainer className="gap-[3.75rem] px-4 py-[5rem] md:px-[10rem]">
+      <ContentContainer className="gap-[3.75rem] px-5 py-[5rem] md:px-[10rem]">
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2">
             <h2>DIBBs to support the entire data pipeline</h2>

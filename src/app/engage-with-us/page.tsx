@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function EngageWithUs() {
   return (
     <section>
-      <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-2 pb-[5rem] pt-[2.5rem] xl:px-[10rem]">
+      <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-5 pb-[5rem] pt-[2.5rem] xl:px-[10rem]">
         <div className="flex flex-col gap-10">
           <ConsultationAlert />
           <div className="flex flex-col gap-3 pb-5 lg:pl-5">
