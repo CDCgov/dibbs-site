@@ -16,7 +16,7 @@ interface ContainerProps {
 const SendMailLink = () => {
   return (
     <Link
-      className="font-bold leading-snug no-underline"
+      className="font-bold leading-snug underline-offset-4"
       href="mailto:dibbs@cdc.gov"
     >
       dibbs@cdc.gov
