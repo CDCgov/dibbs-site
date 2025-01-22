@@ -23,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        suppressHydrationWarning
         className={`${merriweather.variable} ${publicSans.variable} site-background font-sans`}
       >
         <USABanner />
