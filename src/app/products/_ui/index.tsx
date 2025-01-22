@@ -16,7 +16,7 @@ interface ContainerProps {
 const SendMailLink = () => {
   return (
     <Link
-      className="font-bold leading-snug no-underline"
+      className="font-bold leading-snug underline-offset-4"
       href="mailto:dibbs@cdc.gov"
     >
       dibbs@cdc.gov
@@ -289,7 +289,7 @@ const ValueList = ({ children }: ContainerProps) => {
 
 const ContentContainer = ({ children }: ContainerProps) => {
   return (
-    <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-2 lg:pb-[5rem] xl:px-[3.5rem]">
+    <div className="ml-auto mr-auto flex max-w-[87.5rem] flex-col px-5 lg:pb-[5rem] xl:px-[3.5rem]">
       {children}
     </div>
   );

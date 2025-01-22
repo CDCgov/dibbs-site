@@ -31,7 +31,7 @@ const Header = () => {
         Skip to main content
       </a>
 
-      <USWDSHeader basic className="bg-dark-blue pr-2 pt-2 lg:pr-0 lg:pt-0">
+      <USWDSHeader basic className="bg-dark-blue pr-2 pt-2 pb-2 lg:pb-0 lg:pr-0 lg:pt-0">
         <div className="usa-nav-container lg:!items-center lg:px-[5rem] [&>.usa-nav]:p-0">
           <div className="usa-navbar border-none">
             <div className="usa-logo">
