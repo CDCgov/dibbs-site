@@ -1,36 +1,43 @@
+# DIBBs Site
+
+This repository holds the code for the informational DIBBs website.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Running Locally
 
-First, run the development server:
+You'll need to install Node v18+ to run the project.
+
+Pull down the source code and install the project dependencies:
+
+```bash
+npm i
+```
+
+Next, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will now be available in your browser at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the automated tests with the following command:
 
-## Learn More
+```bash
+npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you'd like to build a production Docker image, you can run the [Docker build GitHub Action](https://github.com/CDCgov/dibbs-site/actions/workflows/docker-build.yml).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Select `Run workflow`, provide a branch to build from, and select the environment in which the image will be deployed to. Once done, click the green `Run workflow` button.
 
-## Deploy on Vercel
+Once the Action finishes running, the image will be available to download from the [DIBBs Site GitHub Container Registry](https://github.com/cdcgov/dibbs-site/pkgs/container/dibbs-site).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploying
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Docker images are deployable by a DevOps team member. Please reach out to a DIBBs DevOps team member for their assistance with deployment.
