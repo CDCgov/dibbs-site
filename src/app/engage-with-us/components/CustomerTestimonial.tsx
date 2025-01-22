@@ -1,4 +1,3 @@
-'use client';
 import { RoundedBackground } from '../../components/RoundedBackground/RoundedBackground';
 
 export const CustomerTestimonial = () => {

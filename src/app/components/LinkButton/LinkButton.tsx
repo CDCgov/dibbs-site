@@ -34,7 +34,7 @@ interface LinkButtonProps extends LinkProps {
   isExternal?: boolean;
 }
 
-export function LinkButton({
+export const LinkButton = ({
   children,
   variant,
   href,
@@ -43,7 +43,7 @@ export function LinkButton({
   'aria-label': ariaLabel,
   isExternal = false,
   ...props
-}: LinkButtonProps) {
+}: LinkButtonProps) => {
   if (disabled) {
     return (
       <div
@@ -85,4 +85,4 @@ export function LinkButton({
       <span className="text-center font-bold text-inherit">{children}</span>
     </Link>
   );
-}
+};

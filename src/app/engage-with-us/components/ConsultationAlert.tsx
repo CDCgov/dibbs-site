@@ -1,5 +1,3 @@
-'use client';
-
 export const ConsultationAlert = () => {
   return (
     <div className="usa-alert usa-alert--info usa-alert--no-icon border-l-[#00BDE3] lg:max-w-[80%]">

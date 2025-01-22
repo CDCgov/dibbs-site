@@ -11,14 +11,19 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
+import { Metadata } from 'next';
 
-const DibbsPrototype = () => {
+export const metadata: Metadata = {
+  title: 'DIBBs Prototype',
+};
+
+export default function DibbsPrototype() {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="DIBBs Prototype">
               <HeadingImage
                 src={`${basePath}/images/case-studies/dibbs-prototype/image1.png`}
                 alt=""
@@ -153,6 +158,4 @@ const DibbsPrototype = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default DibbsPrototype;
+}

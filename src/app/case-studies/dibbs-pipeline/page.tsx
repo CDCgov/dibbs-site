@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import {
   PageContainer,
   ContentContainer,
@@ -12,13 +13,17 @@ import {
 } from '../_ui';
 import { basePath } from '@/app/utils/constants';
 
-const DibbsPipeline = () => {
+export const metadata: Metadata = {
+  title: 'DIBBs Pipeline',
+};
+
+export default function DibbsPipeline() {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="DIBBs Pipeline">
               <HeadingImage
                 src={`${basePath}/images/case-studies/dibbs-pipeline/image1.png`}
                 alt=""
@@ -164,6 +169,4 @@ const DibbsPipeline = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default DibbsPipeline;
+}

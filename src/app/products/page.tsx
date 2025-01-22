@@ -1,12 +1,15 @@
-'use client';
 import Image from 'next/image';
 import { basePath } from '../utils/constants';
 import { LinkButton } from '../components/LinkButton/LinkButton';
-import { useHeroInit } from '../hooks/useHeroInit';
 import { RoundedBackground } from '../components/RoundedBackground/RoundedBackground';
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 import { Tag } from '@trussworks/react-uswds';
 import classNames from 'classnames';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Products',
+};
 
 export default function OurProducts() {
   return (
@@ -17,13 +20,7 @@ export default function OurProducts() {
   );
 }
 
-function StandaloneProducts() {
-  useHeroInit({
-    header: `Our ecosystem of DIBBs products`,
-    subheader: `Find out how DIBBs products can help empower your jurisdiction with more usable data.`,
-    heroClass: 'our-products-hero',
-  });
-
+const StandaloneProducts = () => {
   return (
     <section>
       <div className="border-b border-[#adcfdc]">
@@ -61,8 +58,8 @@ function StandaloneProducts() {
               data into a simple JSON file that can be easily loaded into a
               tabular format (like a spreadsheet)."
               status="development"
-              linkText="Learn more about eCR Parser"
-              linkToHref=""
+              linkText="Connect with us to learn more"
+              linkToHref="/engage-with-us"
               linkVariant="secondary"
             />
             <ProductCard
@@ -72,8 +69,8 @@ function StandaloneProducts() {
               surveillance systems and bring focus to pertinent data for a given
               condition."
               status="development"
-              linkText="Learn more about eCR Refiner"
-              linkToHref=""
+              linkText="Connect with us to learn more"
+              linkToHref="/engage-with-us"
               linkVariant="secondary"
             />
           </div>
@@ -81,7 +78,7 @@ function StandaloneProducts() {
       </div>
     </section>
   );
-}
+};
 
 interface ProductCardProps {
   title: string;
@@ -92,7 +89,7 @@ interface ProductCardProps {
   linkVariant: 'primary' | 'secondary' | 'transparent';
   imgSrc?: string;
 }
-function ProductCard({
+const ProductCard = ({
   title,
   text,
   status,
@@ -100,7 +97,7 @@ function ProductCard({
   linkText,
   linkToHref,
   linkVariant,
-}: ProductCardProps) {
+}: ProductCardProps) => {
   return (
     <RoundedBackground className="border-none !bg-white shadow-lg">
       <div className="grid h-full grid-cols-1 items-start lg:max-w-[33.75rem]">
@@ -134,7 +131,7 @@ function ProductCard({
       </div>
     </RoundedBackground>
   );
-}
+};
 
 interface StatusTagProps {
   variant: 'piloting' | 'development';
@@ -171,7 +168,7 @@ interface DataPipelineCardProps {
   imgSrc: string;
 }
 
-function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
+const DataPipelineCard = ({ title, text, imgSrc }: DataPipelineCardProps) => {
   return (
     <div className="px-2 py-5">
       <Image
@@ -187,18 +184,18 @@ function DataPipelineCard({ title, text, imgSrc }: DataPipelineCardProps) {
       </div>
     </div>
   );
-}
+};
 
 interface DataPipelineGridProps {
   children: React.ReactNode;
 }
-function DataPipelineGrid({ children }: DataPipelineGridProps) {
+const DataPipelineGrid = ({ children }: DataPipelineGridProps) => {
   return (
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">{children}</div>
   );
-}
+};
 
-function DataPipeline() {
+const DataPipeline = () => {
   return (
     <section className="bg-[#dae9ee]">
       <ContentContainer className="gap-[3.75rem] px-4 py-[5rem] md:px-[10rem]">
@@ -272,7 +269,7 @@ function DataPipeline() {
       </ContentContainer>
     </section>
   );
-}
+};
 
 interface DataSectionText {
   children: React.ReactNode;
@@ -297,7 +294,10 @@ interface ContentContainerProps {
   children: React.ReactNode;
   className?: string;
 }
-function ContentContainer({ children, className = '' }: ContentContainerProps) {
+const ContentContainer = ({
+  children,
+  className = '',
+}: ContentContainerProps) => {
   return (
     <div
       className={classNames(
@@ -308,4 +308,4 @@ function ContentContainer({ children, className = '' }: ContentContainerProps) {
       {children}
     </div>
   );
-}
+};

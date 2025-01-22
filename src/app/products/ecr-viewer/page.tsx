@@ -1,8 +1,6 @@
-'use client';
 import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import {
-  Navigation,
   TitleSection,
   SectionHeader,
   SectionSubheader,
@@ -21,9 +19,14 @@ import {
   Figure,
   Text,
   ValueList,
-  NavItem,
   ContentContainer,
 } from '../_ui';
+import { Metadata } from 'next';
+import { SideNav, NavItem } from '../_ui/SideNav';
+
+export const metadata: Metadata = {
+  title: 'eCR Viewer',
+};
 
 export default function EcrViewer() {
   const navItems: NavItem[] = [
@@ -39,7 +42,7 @@ export default function EcrViewer() {
       <ContentContainer>
         <GridContainer>
           <GridLeft>
-            <Navigation navItems={navItems} />
+            <SideNav items={navItems} />
           </GridLeft>
           <GridMiddle>
             <TitleSection
@@ -511,10 +514,15 @@ interface ExternalLinkProps {
   href: string;
 }
 
-function ExternalLink({ children, href }: ExternalLinkProps) {
+const ExternalLink = ({ children, href }: ExternalLinkProps) => {
   return (
-    <Link href={href} target="_blank" rel="noreferrer noopener">
+    <Link
+      href={href}
+      className="underline-offset-4"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       {children}
     </Link>
   );
-}
+};

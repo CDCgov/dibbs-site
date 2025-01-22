@@ -148,11 +148,10 @@ export const ContactForm = () => {
               )}
             />
           </div>
-
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="mt-6 inline-flex h-11 w-fit items-center justify-start gap-2.5 rounded bg-violet-warm-60 px-5 py-3 text-right font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70 disabled:opacity-50"
+            className="!mt-0 h-11 w-fit rounded bg-violet-warm-60 font-bold text-white hover:bg-violet-warm-50 active:bg-violet-warm-70 disabled:opacity-50"
           >
             {isSubmitting ? 'Sending...' : 'Send inquiry'}
           </Button>

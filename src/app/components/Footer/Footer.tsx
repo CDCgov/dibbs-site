@@ -7,26 +7,11 @@ import classNames from 'classnames';
 import { basePath } from '../../utils/constants';
 import styles from './Footer.module.scss';
 
-export default function Footer() {
+const Footer = () => {
   const [expanded, setExpanded] = React.useState(false);
   const onClick = () => {
     if (window.innerWidth < 1024) setExpanded((prvExpanded) => !prvExpanded);
   };
-
-  const footerMenu = [
-    <NavigationLink key="one" href="/" onClick={onClick}>
-      Home
-    </NavigationLink>,
-    <NavigationLink key="two" href="/products" onClick={onClick}>
-      Our products
-    </NavigationLink>,
-    <NavigationLink key="three" href="/case-studies" onClick={onClick}>
-      Case studies
-    </NavigationLink>,
-    <NavigationLink key="four" href="/engage-with-us" onClick={onClick}>
-      Engage with us
-    </NavigationLink>,
-  ];
 
   return (
     <>
@@ -58,7 +43,28 @@ export default function Footer() {
           </div>
           <PrimaryNav
             className="!p-0"
-            items={footerMenu}
+            items={[
+              <NavigationLink key="one" href="/" onClick={onClick}>
+                Home
+              </NavigationLink>,
+              <NavigationLink key="two" href="/products" onClick={onClick}>
+                Our products
+              </NavigationLink>,
+              <NavigationLink
+                key="three"
+                href="/case-studies"
+                onClick={onClick}
+              >
+                Case studies
+              </NavigationLink>,
+              <NavigationLink
+                key="four"
+                href="/engage-with-us"
+                onClick={onClick}
+              >
+                Engage with us
+              </NavigationLink>,
+            ]}
             mobileExpanded={expanded}
             onToggleMobileNav={onClick}
           />
@@ -66,4 +72,6 @@ export default function Footer() {
       </footer>
     </>
   );
-}
+};
+
+export default Footer;

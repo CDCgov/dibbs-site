@@ -1,16 +1,13 @@
+'use client';
 import { useState, useEffect, SetStateAction } from 'react';
 import { SideNav as UswdsSideNav } from '@trussworks/react-uswds';
 import classNames from 'classnames';
 
-interface Section {
-  title: string;
-  id: string;
-}
+export type NavItem = { title: string; id: string };
 
 interface SideNavProps {
-  items: Section[];
+  items: NavItem[];
 }
-
 export const SideNav = ({ items }: SideNavProps) => {
   const [selectedHash, setSelectedHash] = useState(`#${items[0].id}`);
 
@@ -78,7 +75,7 @@ export const SideNav = ({ items }: SideNavProps) => {
   }, [items]);
 
   return (
-    <>
+    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-14 lg:w-[12.5rem]">
       <UswdsSideNav
         items={items.map(({ title, id }) => (
           <NavItem
@@ -90,7 +87,7 @@ export const SideNav = ({ items }: SideNavProps) => {
           />
         ))}
       />
-    </>
+    </div>
   );
 };
 
@@ -100,7 +97,12 @@ interface NavItemProps {
   selectedHash: string;
   setSelectedHash: (value: SetStateAction<string>) => void;
 }
-function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
+const NavItem = ({
+  title,
+  id,
+  selectedHash,
+  setSelectedHash,
+}: NavItemProps) => {
   const itemHash = `#${id}`;
   return (
     <a
@@ -116,4 +118,4 @@ function NavItem({ title, id, selectedHash, setSelectedHash }: NavItemProps) {
       {title}
     </a>
   );
-}
+};

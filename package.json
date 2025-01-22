@@ -21,13 +21,11 @@
     "@trussworks/react-uswds": "^9.1.0",
     "@uswds/uswds": "^3.9.0",
     "classnames": "^2.5.1",
-    "gray-matter": "^4.0.3",
     "next": "14.2.15",
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18",
     "react-hook-form": "^7.54.2",
-    "react-markdown": "^9.0.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "zod": "^3.24.1"

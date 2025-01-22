@@ -10,14 +10,19 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
+import { Metadata } from 'next';
 
-const EcrViewer = () => {
+export const metadata: Metadata = {
+  title: 'eCR Viewer',
+};
+
+export default function EcrViewer() {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="eCR Viewer">
               <HeadingImage
                 src={`${basePath}/images/case-studies/ecr-viewer/image1.png`}
                 alt=""
@@ -154,6 +159,4 @@ const EcrViewer = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default EcrViewer;
+}

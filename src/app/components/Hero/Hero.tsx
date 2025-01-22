@@ -5,7 +5,7 @@ interface HeroProps {
   subheader: string;
 }
 
-export default function Hero({ header, subheader }: HeroProps) {
+const Hero = ({ header, subheader }: HeroProps) => {
   return (
     <section className="bg-dark-blue">
       <GridContainer>
@@ -20,4 +20,6 @@ export default function Hero({ header, subheader }: HeroProps) {
       </GridContainer>
     </section>
   );
-}
+};
+
+export default Hero;

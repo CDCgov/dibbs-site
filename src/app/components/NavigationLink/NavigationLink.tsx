@@ -7,12 +7,12 @@ interface NavigationLinkProps extends Pick<LinkProps, 'href' | 'onClick'> {
   isTopNav?: boolean;
 }
 
-export function NavigationLink({
+export const NavigationLink = ({
   href,
   children,
   onClick,
   isTopNav = false,
-}: NavigationLinkProps) {
+}: NavigationLinkProps) => {
   const isActive = useIsActive(href);
 
   return (
@@ -24,7 +24,7 @@ export function NavigationLink({
     >
       <span
         className={classNames(
-          'text-[1rem] font-bold not-italic leading-[1.4rem] underline-offset-[.75rem] lg:hover:text-slate-200 hover:underline lg:text-white',
+          'text-[1rem] font-bold not-italic leading-[1.4rem] underline-offset-[.75rem] hover:underline lg:text-white lg:hover:text-slate-200',
           {
             'underline decoration-[#82b4c9] underline-offset-[.75rem] active:text-slate-300':
               isActive && isTopNav,
@@ -36,7 +36,7 @@ export function NavigationLink({
       </span>
     </Link>
   );
-}
+};
 
 /**
  * Given a nav Link URL, returns `true` if the current page in the application matches
@@ -44,11 +44,11 @@ export function NavigationLink({
  * @param url URL of the navigation Link
  * @returns `true` if the current route matches the nav Link's URL, otherwise `false`
  */
-function useIsActive(url: NavigationLinkProps['href']) {
+const useIsActive = (url: NavigationLinkProps['href']) => {
   const pathname = usePathname();
   const urlStr = url.toString();
   return (
     pathname === urlStr ||
     (pathname.startsWith(urlStr) && (urlStr !== '/' || pathname === '/'))
   );
-}
+};

@@ -6,7 +6,6 @@ import {
   Link,
 } from '@trussworks/react-uswds';
 import classNames from 'classnames';
-import { SideNav } from '@/app/components/SideNav/SideNav';
 import './styles.scss';
 import Image, { ImageProps } from 'next/image';
 
@@ -91,18 +90,6 @@ const AccordionItemContent = ({ children }: ContainerProps) => {
   );
 };
 
-export type NavItem = { title: string; id: string };
-interface NavigationProps {
-  navItems: NavItem[];
-}
-const Navigation = ({ navItems }: NavigationProps) => {
-  return (
-    <div className="bg-white shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] lg:sticky lg:top-4 lg:w-[12.5rem]">
-      <SideNav items={navItems} />
-    </div>
-  );
-};
-
 const GridContainer = ({ children }: ContainerProps) => {
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr_1fr] lg:gap-0">
@@ -112,7 +99,11 @@ const GridContainer = ({ children }: ContainerProps) => {
 };
 
 const GridLeft = ({ children }: ContainerProps) => {
-  return <div className="pt-4 lg:pt-[3.75rem]">{children}</div>;
+  return (
+    <div className="pt-4 lg:flex lg:justify-end lg:pt-[3.75rem]">
+      <div>{children}</div>
+    </div>
+  );
 };
 
 const GridMiddle = ({ children }: ContainerProps) => {
@@ -311,7 +302,6 @@ export {
   SectionSubheader,
   GithubNav,
   AccordionItemContent,
-  Navigation,
   GridContainer,
   GridLeft,
   GridMiddle,

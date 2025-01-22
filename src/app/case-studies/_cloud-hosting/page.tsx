@@ -10,14 +10,19 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
+import { Metadata } from 'next';
 
-const CloudHosting = () => {
+export const metadata: Metadata = {
+  title: 'Cloud Hosting',
+};
+
+export default function CloudHosting() {
   return (
     <PageContainer>
       <ContentContainer>
         <section id="heading">
           <HeadingContentContainer>
-            <HeadingImageContainer>
+            <HeadingImageContainer currentPageTitle="Cloud Hosting">
               <HeadingImage
                 src={`${basePath}/images/case-studies/cloud-hosting/image1.png`}
                 alt=""
@@ -144,6 +149,4 @@ const CloudHosting = () => {
       </ContentContainer>
     </PageContainer>
   );
-};
-
-export default CloudHosting;
+}
