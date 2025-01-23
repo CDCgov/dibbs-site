@@ -3,7 +3,6 @@ import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
 import { NavigateNextIcon } from './NavigateNextIcon';
-import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
 import {
   RoundedImage,
   RoundedImageProps,

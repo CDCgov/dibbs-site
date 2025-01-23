@@ -5,7 +5,6 @@ import { LinkButton } from './components/LinkButton/LinkButton';
 import { ImageCard } from './components/ImageCard/ImageCard';
 import { Heading, Paragraph } from './_ui';
 import styles from './_styles/Homepage.module.scss';
-import { InvitationCta } from './components/InvitationCta/InvitationCta';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { Metadata } from 'next';
