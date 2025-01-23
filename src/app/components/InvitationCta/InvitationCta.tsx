@@ -34,7 +34,7 @@ export const InvitationCta = () => {
   };
 
   return (
-    <section style={style} className="max-h-[16.25rem] py-[3.75rem]">
+    <section style={style} className="py-[3.75rem] sm:max-h-[16.25rem]">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-6 self-stretch">
           <div className="flex flex-col gap-1">
