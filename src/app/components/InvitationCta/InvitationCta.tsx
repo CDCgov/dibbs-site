@@ -17,7 +17,6 @@ export const InvitationCta = () => {
   const backgroundImage = getBackgroundImage(srcSet);
 
   const style: CSSProperties = {
-    height: '300px',
     minWidth: '100%',
     backgroundImage,
     objectFit: 'contain',
@@ -34,7 +33,7 @@ export const InvitationCta = () => {
   };
 
   return (
-    <section style={style} className="py-[3.75rem] sm:max-h-[16.25rem]">
+    <section style={style} className="py-8 md:py-[3.75rem] sm:max-h-[16.25rem]">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-6 self-stretch">
           <div className="flex flex-col gap-1">
