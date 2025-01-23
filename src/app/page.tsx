@@ -169,7 +169,6 @@ export default function Home() {
       <DibbsSection />
       <ValueSection />
       <JurisdictionSection />
-      <InvitationCta />
     </>
   );
 }
