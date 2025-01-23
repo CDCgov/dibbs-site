@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
+  description: 'Explore our case studies to see the impact of DIBBs.',
 };
 
 export default function CaseStudies() {

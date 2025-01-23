@@ -15,6 +15,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'DIBBs Prototype',
+  description:
+    'Building a prototype for modernized public health infrastructure in Virginia.',
 };
 
 export default function DibbsPrototype() {

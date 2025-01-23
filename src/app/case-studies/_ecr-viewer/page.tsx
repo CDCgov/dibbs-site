@@ -14,6 +14,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'eCR Viewer',
+  description:
+    'Surfacing actionable insights from electronic case reporting data.',
 };
 
 export default function EcrViewer() {
