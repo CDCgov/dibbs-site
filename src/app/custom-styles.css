@@ -81,28 +81,13 @@ html,
 body {
   background: var(--background);
   font-family: 'Source Sans Pro', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .main-content {
   background: var(--background);
-}
-
-section {
-  background: var(--background);
-  margin-top: -1px;
-  margin-bottom: -1px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
-main
-  > *:last-child:not(:has(~ .remove-footer-bar)):not(
-    :where(:has(.remove-footer-bar) *)
-  ) {
-  @apply mb-8;
-}
-
-main > *:not(.remove-footer-bar) {
-  @apply bg-background;
 }
 
 .usa-logo a {
@@ -126,26 +111,4 @@ main > *:not(.remove-footer-bar) {
 
 .usa-section--light-blue {
   background-color: var(--background-light-blue);
-}
-
-main:has(.hide-footer-bar) ~ .footer-bar::before {
-  display: none !important;
-}
-
-main:has(.hide-footer-bar) ~ .footer-bar {
-  display: none !important;
-}
-
-.site-background {
-  background-color: var(--background);
-  background-image: url('/images/footer-bg.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% clamp(410px, 10%, 100vh);
-  min-height: 100vh;
-}
-
-/* Only affects immediate parent */
-*:has(> .remove-parent-bg) {
-  background: transparent !important;
 }

@@ -23,15 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        suppressHydrationWarning
-        className={`${merriweather.variable} ${publicSans.variable} site-background font-sans`}
+        className={`${merriweather.variable} ${publicSans.variable} font-sans`}
       >
         <USABanner />
-        <div>
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </div>
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
       </body>
     </html>
   );

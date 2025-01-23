@@ -1,10 +1,29 @@
 import { GridContainer } from '@trussworks/react-uswds';
 import { LinkButton } from '../LinkButton/LinkButton';
 import { Heading, Paragraph } from '../../_ui';
-import classNames from 'classnames';
-import styles from './InvitationCta.module.scss';
+import { getImageProps } from 'next/image';
+import { CSSProperties } from 'react';
+import { getBackgroundImage } from '@/app/utils/image';
 
 export const InvitationCta = () => {
+  const {
+    props: { srcSet },
+  } = getImageProps({
+    alt: '',
+    width: 1400,
+    height: 300,
+    src: '/images/footer-bg.jpg',
+  });
+  const backgroundImage = getBackgroundImage(srcSet);
+
+  const style: CSSProperties = {
+    minWidth: '100%',
+    backgroundImage,
+    objectFit: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% clamp(410px, 10%, 100vh)',
+  };
+
   const content = {
     title: 'Interested in getting started with DIBBs?',
     description:
@@ -14,19 +33,14 @@ export const InvitationCta = () => {
   };
 
   return (
-    <section
-      className={classNames(
-        styles.invitationCtaSection,
-        'hide-footer-bar usa-section remove-footer-bar bg-transparent',
-      )}
-    >
+    <section style={style} className="py-8 md:py-[3.75rem] sm:max-h-[16.25rem]">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-6 self-stretch">
           <div className="flex flex-col gap-1">
-            <Heading className="self-stretch text-center">
+            <Heading className="self-stretch text-center text-white">
               {content.title}
             </Heading>
-            <Paragraph className="m-0 self-stretch p-0 text-center font-extralight">
+            <Paragraph className="m-0 self-stretch p-0 text-center font-extralight text-white">
               {content.description}
             </Paragraph>
           </div>

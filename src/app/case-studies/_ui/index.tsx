@@ -3,7 +3,6 @@ import { Link as ExternalLink } from '@trussworks/react-uswds';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
 import { NavigateNextIcon } from './NavigateNextIcon';
-import { InvitationCta } from '@/app/components/InvitationCta/InvitationCta';
 import {
   RoundedImage,
   RoundedImageProps,
@@ -19,7 +18,6 @@ const PageContainer = ({ children }: ContainerProps) => {
       <div className="main ml-auto mr-auto flex items-center justify-center pb-[5rem] lg:px-[7.5rem]">
         {children}
       </div>
-      <InvitationCta />
     </>
   );
 };
