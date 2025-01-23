@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const Carousel = () => {
   const baseImages = [
     {
-      image: `${basePath}/images/carousel/LAC.png`,
+      image: `${basePath}/images/carousel/LAC.svg`,
       alt: 'County of Los Angeles Public Health',
     },
     {
@@ -16,19 +16,19 @@ const Carousel = () => {
       alt: 'New Mexico Health',
     },
     {
-      image: `${basePath}/images/carousel/Philly.png`,
+      image: `${basePath}/images/carousel/Philly.svg`,
       alt: 'City of Philadelphia',
     },
     {
-      image: `${basePath}/images/carousel/CO.png`,
+      image: `${basePath}/images/carousel/CO.svg`,
       alt: 'Colorado Department of Public Health & Environment',
     },
     {
-      image: `${basePath}/images/carousel/VDH.png`,
+      image: `${basePath}/images/carousel/VDH.svg`,
       alt: 'Virigina Department of Health',
     },
     {
-      image: `${basePath}/images/carousel/ME.png`,
+      image: `${basePath}/images/carousel/ME.svg`,
       alt: 'Maine Center for Disease Control and Prevention',
     },
   ];
