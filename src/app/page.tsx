@@ -1,5 +1,4 @@
 import { Grid } from '@trussworks/react-uswds';
-import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { LinkButton } from './components/LinkButton/LinkButton';
 import { ImageCard } from './components/ImageCard/ImageCard';
