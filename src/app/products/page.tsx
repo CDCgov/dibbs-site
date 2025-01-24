@@ -9,6 +9,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Our Products',
+  description:
+    'Find out how DIBBs products can help empower your jurisdiction with more usable data.',
 };
 
 export default function OurProducts() {

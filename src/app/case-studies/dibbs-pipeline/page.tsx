@@ -15,6 +15,8 @@ import { basePath } from '@/app/utils/constants';
 
 export const metadata: Metadata = {
   title: 'DIBBs Pipeline',
+  description:
+    'Creating a modular, cloud-based data processing pipeline for LA County.',
 };
 
 export default function DibbsPipeline() {

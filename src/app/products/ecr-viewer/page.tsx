@@ -26,6 +26,8 @@ import { SideNav, NavItem } from '../_ui/SideNav';
 
 export const metadata: Metadata = {
   title: 'eCR Viewer',
+  description:
+    'An intuitive interface that helps epidemiologists and case investigators make better sense of eCR data, faster.',
 };
 
 export default function EcrViewer() {

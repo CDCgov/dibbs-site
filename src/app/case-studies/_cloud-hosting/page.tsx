@@ -14,6 +14,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cloud Hosting',
+  description:
+    'Improving public health data infrastructure through flexible, modern approaches to cloud services',
 };
 
 export default function CloudHosting() {

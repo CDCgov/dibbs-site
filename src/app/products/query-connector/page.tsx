@@ -23,6 +23,8 @@ import { NavItem, SideNav } from '../_ui/SideNav';
 
 export const metadata: Metadata = {
   title: 'Query Connector',
+  description:
+    'A data collection tool that helps public health staff pull relevant data from a wide network of healthcare providers.',
 };
 
 export default function QueryConnector() {

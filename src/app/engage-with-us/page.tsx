@@ -6,6 +6,8 @@ import './styles.scss';
 
 export const metadata: Metadata = {
   title: 'Engage with us',
+  description:
+    'Learn how your jurisdiction can start working with the DIBBs team.',
 };
 
 export default function EngageWithUs() {
