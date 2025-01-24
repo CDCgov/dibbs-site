@@ -486,7 +486,7 @@ export default function EcrViewer() {
                       content: (
                         <AccordionItemContent>
                           Reach out to our team at <SendMailLink /> for a free
-                          consultation and find our whether the eCR Viewer is
+                          consultation and find out whether the eCR Viewer is
                           right for your jurisdiction.
                         </AccordionItemContent>
                       ),
