@@ -1,4 +1,3 @@
-import { basePath } from '@/app/utils/constants';
 import {
   PageContainer,
   ContentContainer,
@@ -12,6 +11,7 @@ import {
   HeadingTitle,
 } from '../_ui';
 import { Metadata } from 'next';
+import dibbsPrototypeImg from '/public/images/case-studies/dibbs-prototype/image1.png';
 
 export const metadata: Metadata = {
   title: 'DIBBs Prototype',
@@ -26,10 +26,7 @@ export default function DibbsPrototype() {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer currentPageTitle="DIBBs Prototype">
-              <HeadingImage
-                src={`${basePath}/images/case-studies/dibbs-prototype/image1.png`}
-                alt=""
-              />
+              <HeadingImage src={dibbsPrototypeImg} alt="" />
             </HeadingImageContainer>
             <HeadingTitle>
               Building a prototype for modernized public health infrastructure
