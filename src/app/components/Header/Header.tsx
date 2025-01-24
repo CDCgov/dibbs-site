@@ -8,6 +8,7 @@ import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
 import { usePathname } from 'next/navigation';
+import dibbsLogo from '/public/images/dibbs-logo.svg';
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -31,7 +32,10 @@ const Header = () => {
         Skip to main content
       </a>
 
-      <USWDSHeader basic className="bg-dark-blue pr-2 pt-2 pb-2 lg:pb-0 lg:pr-0 lg:pt-0">
+      <USWDSHeader
+        basic
+        className="bg-dark-blue pb-2 pr-2 pt-2 lg:pb-0 lg:pr-0 lg:pt-0"
+      >
         <div className="usa-nav-container lg:!items-center lg:px-[5rem] [&>.usa-nav]:p-0">
           <div className="usa-navbar border-none">
             <div className="usa-logo">
@@ -46,7 +50,7 @@ const Header = () => {
                     width={200}
                     height={40}
                     alt=""
-                    src={`${basePath}/images/dibbs-logo.svg`}
+                    src={dibbsLogo}
                     priority
                   />
                 </a>
