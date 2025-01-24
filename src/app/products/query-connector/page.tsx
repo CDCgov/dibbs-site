@@ -16,10 +16,11 @@ import {
   ContentContainer,
   ProductImage,
 } from '../_ui';
-import { basePath } from '@/app/utils/constants';
 import { LinkButton } from '@/app/components/LinkButton/LinkButton';
 import { Metadata } from 'next';
 import { NavItem, SideNav } from '../_ui/SideNav';
+import surfacePatientDataImg from '/public/images/products/query-connector/surface-patient-data.png';
+import customQueryImg from '/public/images/products/query-connector/custom-query.png';
 
 export const metadata: Metadata = {
   title: 'Query Connector',
@@ -164,7 +165,7 @@ pull relevant data from a wide network of healthcare providers."
                   </Text>
                   <ProductImage
                     alt="Query Connector - enter patient information form"
-                    src={`${basePath}/images/products/query-connector/surface-patient-data.png`}
+                    src={surfacePatientDataImg}
                   />
                 </SubsectionContainer>
                 <SubsectionContainer>
@@ -179,7 +180,7 @@ pull relevant data from a wide network of healthcare providers."
                   </Text>
                   <ProductImage
                     alt="Query Connector - custom query example"
-                    src={`${basePath}/images/products/query-connector/custom-query.png`}
+                    src={customQueryImg}
                   />
                 </SubsectionContainer>
                 <SubsectionContainer>
