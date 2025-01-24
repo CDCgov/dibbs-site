@@ -13,9 +13,6 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  },
   "dependencies": {
     "@trussworks/react-uswds": "^9.1.0",
     "@uswds/uswds": "^3.9.0",
@@ -48,7 +45,6 @@
     "fs": "^0.0.1-security",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^15.2.10",
     "postcss": "^8",
     "postcss-import": "^16.1.0",
     "prettier": "^3.3.3",
