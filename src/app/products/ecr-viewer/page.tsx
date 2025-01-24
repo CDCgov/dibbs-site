@@ -363,8 +363,8 @@ export default function EcrViewer() {
                             <span>
                               We are also working on a direct integration with
                               EpiTrax. If you're interested in integrating the
-                              eCR Viewer with other surveillance systems, please
-                              reach out to us at <SendMailLink />.
+                              eCR Viewer with other surveillance systems, please{' '}
+                              <SendMailLink text="reach out to us" />.
                             </span>
                           </div>
                         </AccordionItemContent>
@@ -485,9 +485,9 @@ export default function EcrViewer() {
                       title: 'How do I get started?',
                       content: (
                         <AccordionItemContent>
-                          Reach out to our team at <SendMailLink /> for a free
-                          consultation and find our whether the eCR Viewer is
-                          right for your jurisdiction.
+                          Please <SendMailLink text="contact our team" /> for a
+                          free consultation and find our whether the eCR Viewer
+                          is right for your jurisdiction.
                         </AccordionItemContent>
                       ),
                     },
