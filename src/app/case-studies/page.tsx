@@ -1,8 +1,11 @@
 import { LinkButton } from '../components/LinkButton/LinkButton';
-import { basePath } from '../utils/constants';
 import React from 'react';
 import { RoundedImage } from '../components/RoundedImage/RoundedImage';
 import { Metadata } from 'next';
+import laCountyImg from '/public/images/case-studies/image1.jpg';
+// import ecrViewerImg from '/public/images/case-studies/image2.jpg';
+// import cloudHostingImg from '/public/images/case-studies/image3.jpg';
+import vaImg from '/public/images/case-studies/image4.jpg';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -42,24 +45,14 @@ export default function CaseStudies() {
               </ContentContainer>
             </div>
             <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
-              <RoundedImage
-                src={`${basePath}/images/case-studies/image1.jpg`}
-                width={550}
-                height={300}
-                alt=""
-              />
+              <RoundedImage src={laCountyImg} width={550} height={300} alt="" />
             </div>
           </div>
 
           {/* Temporary section 2 */}
           <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
-              <RoundedImage
-                src={`${basePath}/images/case-studies/image4.jpg`}
-                width={550}
-                height={300}
-                alt=""
-              />
+              <RoundedImage src={vaImg} width={550} height={300} alt="" />
             </div>
             <div className="order-2 py-12 lg:order-2">
               <ContentContainer>
@@ -93,7 +86,7 @@ export default function CaseStudies() {
           {/* <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
               <RoundedImage
-                src={`${basePath}/images/case-studies/image2.jpg`}
+                src={ecrViewerImg}
                 width={550}
                 height={300}
                 alt=""
@@ -152,7 +145,7 @@ export default function CaseStudies() {
             </div>
             <div className="order-1 flex lg:order-2 lg:ml-[-1.25rem]">
               <RoundedImage
-                src={`${basePath}/images/case-studies/image3.jpg`}
+                src={cloudHostingImg}
                 width={550}
                 height={300}
                 alt=""
@@ -164,7 +157,7 @@ export default function CaseStudies() {
         {/* <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 lg:items-center lg:gap-10">
             <div className="order-1 flex lg:order-1">
               <RoundedImage
-                src={`${basePath}/images/case-studies/image4.jpg`}
+                src={vaImg}
                 width={550}
                 height={300}
                 alt=""
