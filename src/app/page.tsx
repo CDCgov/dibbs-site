@@ -74,14 +74,8 @@ const ValueSection = () => {
       >
         <ContentContainer className="px-5 py-0 md:px-32 xl:pt-[6.25rem]">
           <ImageCard
-            imageFirst={false}
             imageUrl={`${basePath}/images/home/value-tout.jpg`}
-            xlHideImage={true}
             imageAlt=""
-            imageStyle={{
-              transform: 'scale(1.4) translate(-8%, 3%)',
-            }}
-            cardBackground="none"
           >
             <div className="flex flex-col gap-2">
               <Heading className="text-center xl:max-w-[23.25rem] xl:text-start">
