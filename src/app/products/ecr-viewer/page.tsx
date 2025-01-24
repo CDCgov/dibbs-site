@@ -1,4 +1,3 @@
-import { basePath } from '@/app/utils/constants';
 import { Accordion, Link } from '@trussworks/react-uswds';
 import {
   TitleSection,
@@ -23,6 +22,8 @@ import {
 } from '../_ui';
 import { Metadata } from 'next';
 import { SideNav, NavItem } from '../_ui/SideNav';
+import howItWorksGif from '/public/images/products/ecr-viewer/how-it-works.gif';
+import nonIntegratedImg from '/public/images/products/ecr-viewer/non-integrated.png';
 
 export const metadata: Metadata = {
   title: 'eCR Viewer',
@@ -157,7 +158,7 @@ export default function EcrViewer() {
                 <Figure
                   caption="View of the eCR Summary section within the eCR Viewer containing sample data."
                   alt="eCR Viewer - how it works"
-                  src={`${basePath}/images/products/ecr-viewer/how-it-works.gif`}
+                  src={howItWorksGif}
                 />
                 <SubsectionContainer>
                   <SectionSubheader>Combined RR and eICR</SectionSubheader>
@@ -240,7 +241,7 @@ export default function EcrViewer() {
                   caption="View of the eCR Library within the non-integrated eCR Viewer
                     containing sample data."
                   alt="Non-integrated eCR Viewer example"
-                  src={`${basePath}/images/products/ecr-viewer/non-integrated.png`}
+                  src={nonIntegratedImg}
                 />
               </SectionContentContainer>
             </section>
