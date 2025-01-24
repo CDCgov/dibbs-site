@@ -8,18 +8,19 @@ import {
 import classNames from 'classnames';
 import './styles.scss';
 import Image, { ImageProps } from 'next/image';
+import { LinkButton } from '@/app/components/LinkButton/LinkButton';
 
 interface ContainerProps {
   children: React.ReactNode;
 }
 
-const SendMailLink = () => {
+const SendMailLink = ({ text }: { text: string }) => {
   return (
     <Link
       className="font-bold leading-snug underline-offset-4"
-      href="mailto:dibbs@cdc.gov"
+      href="/engage-with-us"
     >
-      dibbs@cdc.gov
+      {text}
     </Link>
   );
 };
@@ -122,9 +123,13 @@ const HaveAQuestionSection = () => {
   return (
     <div className="flex flex-col gap-3 pt-5">
       <h2>Have a question that isn't answered above?</h2>
-      <Text className="font-bold">
-        Please get in touch with our team at <SendMailLink />
-      </Text>
+      <LinkButton
+        className="place-self-start"
+        variant="primary"
+        href="/engage-with-us"
+      >
+        Get in touch with our team
+      </LinkButton>
     </div>
   );
 };

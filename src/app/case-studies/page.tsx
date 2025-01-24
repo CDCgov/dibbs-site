@@ -9,6 +9,7 @@ import vaImg from '/public/images/case-studies/image4.jpg';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
+  description: 'Explore our case studies to see the impact of DIBBs.',
 };
 
 export default function CaseStudies() {
