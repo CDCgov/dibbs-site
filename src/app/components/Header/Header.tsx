@@ -4,7 +4,6 @@ import { Header as USWDSHeader, PrimaryNav } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import classNames from 'classnames';
 import styles from './Header.module.scss';
-import { basePath } from '../../utils/constants';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import Hero from '../Hero/Hero';
 import { usePathname } from 'next/navigation';
@@ -40,7 +39,7 @@ const Header = () => {
           <div className="usa-navbar border-none">
             <div className="usa-logo">
               <em className="usa-logo__text">
-                <a href={`${basePath}/`} title="DIBBs">
+                <a href="/" title="DIBBs">
                   <span
                     className={classNames('sr-only', styles.navbarLogoText)}
                   >
