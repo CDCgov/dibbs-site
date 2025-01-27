@@ -12,15 +12,10 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './akamai-loader.js',
   },
-  basePath: '',
-  assetPrefix: '',
   sassOptions: {
     includePaths: [
       path.join(__dirname, './', 'node_modules', '@uswds', 'uswds', 'packages'),
     ],
-    additionalData: `
-      $base-path: '';
-    `,
   },
 };
 
