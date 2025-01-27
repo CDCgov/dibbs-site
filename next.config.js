@@ -8,10 +8,6 @@ const nextConfig = {
   output: process.env.LIGHTHOUSE ? 'export' : 'standalone',
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    loader: 'custom',
-    loaderFile: './akamai-loader.js',
-  },
   sassOptions: {
     includePaths: [
       path.join(__dirname, './', 'node_modules', '@uswds', 'uswds', 'packages'),
