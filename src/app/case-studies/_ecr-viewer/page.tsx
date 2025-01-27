@@ -1,4 +1,3 @@
-import { basePath } from '@/app/utils/constants';
 import {
   ContentContainer,
   HeadingContentContainer,
@@ -11,6 +10,7 @@ import {
   HeadingTitle,
 } from '../_ui';
 import { Metadata } from 'next';
+import ecrViewerImg from '/public/images/case-studies/ecr-viewer/image1.png';
 
 export const metadata: Metadata = {
   title: 'eCR Viewer',
@@ -25,10 +25,7 @@ export default function EcrViewer() {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer currentPageTitle="eCR Viewer">
-              <HeadingImage
-                src={`${basePath}/images/case-studies/ecr-viewer/image1.png`}
-                alt=""
-              />
+              <HeadingImage src={ecrViewerImg} alt="" />
             </HeadingImageContainer>
             <HeadingTitle>
               Surfacing actionable insights from electronic case reporting data

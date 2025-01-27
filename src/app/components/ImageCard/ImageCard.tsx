@@ -1,42 +1,24 @@
 import Image from 'next/image';
-import { type CSSProperties } from 'react';
 import { Container, ImageContainer, TextContainer } from './_ui';
-import classNames from 'classnames';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 interface ImageCardProps {
-  imageUrl: string;
-  imageAlt: string;
+  url: StaticImport;
+  alt: string;
   children: React.ReactNode;
-  imageFirst?: boolean;
-  imageStyle?: CSSProperties;
-  cardBackground?: 'none' | 'white';
-  xlHideImage?: boolean;
 }
 
-export const ImageCard = ({
-  imageUrl,
-  imageAlt,
-  children,
-  imageFirst = true,
-  imageStyle = {},
-  cardBackground = 'white',
-  xlHideImage = false,
-}: ImageCardProps) => (
-  <Container imageFirst={imageFirst} cardBackground={cardBackground}>
-    <ImageContainer imageFirst={imageFirst}>
+export const ImageCard = ({ url, alt, children }: ImageCardProps) => (
+  <Container>
+    <ImageContainer>
       <Image
-        className={classNames(
-          'h-full w-full object-cover place-self-start',
-          xlHideImage ? 'block xl:hidden' : '',
-        )}
-        src={imageUrl}
-        width={0}
-        height={0}
-        alt={imageAlt}
-        style={imageStyle}
+        className="block h-full w-full place-self-start object-cover xl:hidden"
+        src={url}
+        alt={alt}
+        style={{ transform: 'scale(1.4) translate(-8%, 3%)' }}
         priority={true}
       />
     </ImageContainer>
-    <TextContainer imageFirst={imageFirst}>{children}</TextContainer>
+    <TextContainer>{children}</TextContainer>
   </Container>
 );

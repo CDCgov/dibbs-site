@@ -1,5 +1,4 @@
 import { Grid } from '@trussworks/react-uswds';
-import { basePath } from './utils/constants';
 import Carousel from './components/Carousel/Carousel';
 import { LinkButton } from './components/LinkButton/LinkButton';
 import { ImageCard } from './components/ImageCard/ImageCard';
@@ -8,6 +7,8 @@ import styles from './_styles/Homepage.module.scss';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { Metadata } from 'next';
+import valueTout from '/public/images/home/value-tout.jpg';
+import introTout from '/public/images/home/intro-tout.jpg';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -29,10 +30,8 @@ const DibbsSection = () => {
       <PageContainer>
         <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-5 shadow-lg md:p-10 xl:flex-row xl:p-0">
           <Image
-            src={`${basePath}/images/home/intro-tout.jpg`}
+            src={introTout}
             alt=""
-            width={480}
-            height={411}
             className="shrink-0 rounded-tl-[2.5rem]"
           />
           <div className="flex h-full w-full flex-col gap-6 rounded-br-[2.5rem] bg-white p-5 md:p-10">
@@ -75,16 +74,7 @@ const ValueSection = () => {
         )}
       >
         <ContentContainer className="px-5 py-0 md:px-32 xl:pt-[6.25rem]">
-          <ImageCard
-            imageFirst={false}
-            imageUrl={`${basePath}/images/home/value-tout.jpg`}
-            xlHideImage={true}
-            imageAlt=""
-            imageStyle={{
-              transform: 'scale(1.4) translate(-8%, 3%)',
-            }}
-            cardBackground="none"
-          >
+          <ImageCard url={valueTout} alt="">
             <div className="flex flex-col gap-2">
               <Heading className="text-center xl:max-w-[23.25rem] xl:text-start">
                 Unlock the value of your jurisdiction's data

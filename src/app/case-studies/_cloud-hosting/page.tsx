@@ -1,4 +1,3 @@
-import { basePath } from '@/app/utils/constants';
 import {
   PageContainer,
   ContentContainer,
@@ -11,6 +10,7 @@ import {
   HeadingTitle,
 } from '../_ui';
 import { Metadata } from 'next';
+import cloudHostingImg from '/public/images/case-studies/cloud-hosting/image1.png';
 
 export const metadata: Metadata = {
   title: 'Cloud Hosting',
@@ -25,10 +25,7 @@ export default function CloudHosting() {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer currentPageTitle="Cloud Hosting">
-              <HeadingImage
-                src={`${basePath}/images/case-studies/cloud-hosting/image1.png`}
-                alt=""
-              />
+              <HeadingImage src={cloudHostingImg} alt="" />
             </HeadingImageContainer>
             <HeadingTitle>
               Improving public health data infrastructure through flexible,

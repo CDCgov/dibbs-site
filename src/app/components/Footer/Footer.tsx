@@ -3,9 +3,9 @@ import { PrimaryNav } from '@trussworks/react-uswds';
 import Image from 'next/image';
 import React from 'react';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
-import { basePath } from '../../utils/constants';
 import { InvitationCta } from '../InvitationCta/InvitationCta';
 import { usePathname } from 'next/navigation';
+import cdcImg from '/public/images/CDC.svg';
 
 const Footer = () => {
   const pathname = usePathname();
@@ -28,12 +28,12 @@ const Footer = () => {
                     CDC US center for disease control and prevention
                   </span>
                   <Image
+                    src={cdcImg}
                     className="lg:h-[4rem] lg:w-[17rem]"
                     width={140}
                     height={64}
                     alt="Centers for Disease Control and Prevention"
                     layout="intrinsic" // preserve aspect ratio when screen size changes
-                    src={`${basePath}/images/CDC.svg`}
                   />
                 </a>
               </em>

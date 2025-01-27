@@ -40,7 +40,7 @@
   background: #1d2553;
 
   &::before {
-    background: url($base-path + '/images/home/hero.jpg');
+    background: url('/images/home/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -50,7 +50,7 @@
   @extend %hero-base;
 
   &::before {
-    background: url($base-path + '/images/products/detail-hero.jpg');
+    background: url('/images/products/detail-hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -60,7 +60,7 @@
   @extend %hero-base;
 
   &::before {
-    background: url($base-path + '/images/products/hero.jpg');
+    background: url('/images/products/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -70,7 +70,7 @@
   @extend %hero-base;
 
   &::before {
-    background: url($base-path + '/images/case-studies/hero.jpg');
+    background: url('/images/case-studies/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -80,7 +80,7 @@
   @extend %hero-base;
 
   &::before {
-    background: url($base-path + '/images/engage-with-us/hero.jpg');
+    background: url('/images/engage-with-us/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }

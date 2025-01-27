@@ -11,14 +11,13 @@ import {
   MediaBlockBody,
   Icon,
 } from '@trussworks/react-uswds';
-import { basePath } from '../../utils/constants';
 
 const USABanner = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const flagImg = `${basePath}/images/us-flag.png`;
-  const dotGovIcon = `${basePath}/images/us-gov-icon.svg`;
-  const httpsIcon = `${basePath}/images/https-icon.svg`;
+  const flagImg = '/images/us-flag.png';
+  const dotGovIcon = '/images/us-gov-icon.svg';
+  const httpsIcon = '/images/https-icon.svg';
 
   const bannerLabel = 'An official website of the United States government';
   return (

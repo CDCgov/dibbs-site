@@ -11,7 +11,7 @@ import {
   HeadingImage,
   HeadingTitle,
 } from '../_ui';
-import { basePath } from '@/app/utils/constants';
+import dibbsPipelineImg from '/public/images/case-studies/dibbs-pipeline/image1.png';
 
 export const metadata: Metadata = {
   title: 'DIBBs Pipeline',
@@ -26,10 +26,7 @@ export default function DibbsPipeline() {
         <section id="heading">
           <HeadingContentContainer>
             <HeadingImageContainer currentPageTitle="DIBBs Pipeline">
-              <HeadingImage
-                src={`${basePath}/images/case-studies/dibbs-pipeline/image1.png`}
-                alt=""
-              />
+              <HeadingImage src={dibbsPipelineImg} alt="" />
             </HeadingImageContainer>
             <HeadingTitle>
               Creating a modular, cloud-based data processing pipeline for LA
