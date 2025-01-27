@@ -1,34 +1,41 @@
 'use client';
 import Slider, { Settings } from 'react-slick';
-import { basePath } from '../../utils/constants';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import lacImg from '/public/images/carousel/LAC.svg';
+import nmImg from '/public/images/carousel/NM.png';
+import phillyImg from '/public/images/carousel/Philly.svg';
+import coImg from '/public/images/carousel/CO.svg';
+import vdhImg from '/public//images/carousel/VDH.svg';
+import meImg from '/public/images/carousel/ME.svg';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+
 const Carousel = () => {
-  const baseImages = [
+  const baseImages: { image: StaticImport; alt: string }[] = [
     {
-      image: `${basePath}/images/carousel/LAC.svg`,
+      image: lacImg,
       alt: 'County of Los Angeles Public Health',
     },
     {
-      image: `${basePath}/images/carousel/NM.png`,
+      image: nmImg,
       alt: 'New Mexico Health',
     },
     {
-      image: `${basePath}/images/carousel/Philly.svg`,
+      image: phillyImg,
       alt: 'City of Philadelphia',
     },
     {
-      image: `${basePath}/images/carousel/CO.svg`,
+      image: coImg,
       alt: 'Colorado Department of Public Health & Environment',
     },
     {
-      image: `${basePath}/images/carousel/VDH.svg`,
+      image: vdhImg,
       alt: 'Virigina Department of Health',
     },
     {
-      image: `${basePath}/images/carousel/ME.svg`,
+      image: meImg,
       alt: 'Maine Center for Disease Control and Prevention',
     },
   ];
