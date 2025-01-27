@@ -31,6 +31,7 @@ const DibbsSection = () => {
         <div className="flex flex-col items-center rounded-tl-[2.5rem] bg-white p-5 shadow-lg md:p-10 xl:flex-row xl:p-0">
           <Image
             src={introTout}
+            unoptimized
             alt=""
             className="shrink-0 rounded-tl-[2.5rem]"
           />
