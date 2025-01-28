@@ -47,7 +47,7 @@ const Carousel = () => {
   const settings: Settings = {
     variableWidth: true,
     infinite: true,
-    speed: 5000, // Adjust speed to make it constant
+    speed: 15000, // Adjust speed to make it constant
     slidesToShow: 4, // Number of visible slides
     slidesToScroll: 1,
     autoplay: true,
