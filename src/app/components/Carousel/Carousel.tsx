@@ -9,7 +9,7 @@ import nmImg from '/public/images/carousel/NM.png';
 import phillyImg from '/public/images/carousel/Philly.svg';
 import coImg from '/public/images/carousel/CO.svg';
 import vdhImg from '/public//images/carousel/VDH.svg';
-import meImg from '/public/images/carousel/ME.svg';
+import meImg from '/public/images/carousel/ME.png';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 const Carousel = () => {
@@ -47,7 +47,7 @@ const Carousel = () => {
   const settings: Settings = {
     variableWidth: true,
     infinite: true,
-    speed: 15000, // Adjust speed to make it constant
+    speed: 5000, // Adjust speed to make it constant
     slidesToShow: 4, // Number of visible slides
     slidesToScroll: 1,
     autoplay: true,
