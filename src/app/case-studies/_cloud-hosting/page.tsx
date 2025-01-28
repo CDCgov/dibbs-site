@@ -13,7 +13,7 @@ import { Metadata } from 'next';
 import cloudHostingImg from '/public/images/case-studies/cloud-hosting/image1.png';
 
 export const metadata: Metadata = {
-  title: 'Cloud Hosting',
+  title: 'Cloud Hosting - DIBBs',
   description:
     'Improving public health data infrastructure through flexible, modern approaches to cloud services',
 };

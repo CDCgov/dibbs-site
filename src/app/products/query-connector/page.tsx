@@ -23,7 +23,7 @@ import surfacePatientDataImg from '/public/images/products/query-connector/surfa
 import customQueryImg from '/public/images/products/query-connector/custom-query.png';
 
 export const metadata: Metadata = {
-  title: 'Query Connector',
+  title: 'Query Connector - DIBBs',
   description:
     'A data collection tool that helps public health staff pull relevant data from a wide network of healthcare providers.',
 };
