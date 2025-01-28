@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Link as ExternalLink } from '@trussworks/react-uswds';
-import styles from './styles.module.scss';
 import classNames from 'classnames';
 import { NavigateNextIcon } from './NavigateNextIcon';
 import {
@@ -81,8 +80,7 @@ const UnorderedList = ({ children }: ContainerProps) => {
   return (
     <ul
       className={classNames(
-        'flex flex-col gap-2 font-semibold',
-        styles.list__fullWidth,
+        'flex flex-col gap-2 font-semibold [&>li]:min-w-full',
       )}
     >
       {children}
