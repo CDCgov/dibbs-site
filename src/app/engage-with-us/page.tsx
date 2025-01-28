@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import './styles.scss';
 
 export const metadata: Metadata = {
-  title: 'Engage with us',
+  title: 'Engage with us - DIBBs',
   description:
     'Learn how your jurisdiction can start working with the DIBBs team.',
 };

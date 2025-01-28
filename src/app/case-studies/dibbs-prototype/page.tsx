@@ -14,7 +14,7 @@ import { Metadata } from 'next';
 import dibbsPrototypeImg from '/public/images/case-studies/dibbs-prototype/image1.png';
 
 export const metadata: Metadata = {
-  title: 'DIBBs Prototype',
+  title: 'DIBBs Prototype - DIBBs',
   description:
     'Building a prototype for modernized public health infrastructure in Virginia.',
 };

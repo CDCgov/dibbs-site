@@ -14,7 +14,7 @@ import {
 import dibbsPipelineImg from '/public/images/case-studies/dibbs-pipeline/image1.png';
 
 export const metadata: Metadata = {
-  title: 'DIBBs Pipeline',
+  title: 'DIBBs Pipeline - DIBBs',
   description:
     'Creating a modular, cloud-based data processing pipeline for LA County.',
 };

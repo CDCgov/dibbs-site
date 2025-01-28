@@ -13,7 +13,7 @@ import { Metadata } from 'next';
 import ecrViewerImg from '/public/images/case-studies/ecr-viewer/image1.png';
 
 export const metadata: Metadata = {
-  title: 'eCR Viewer',
+  title: 'eCR Viewer - DIBBs',
   description:
     'Surfacing actionable insights from electronic case reporting data.',
 };

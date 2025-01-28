@@ -19,7 +19,7 @@ import flatFormatterIcon from '/public/icons/products/flatFormatter.svg';
 import phdcConverterIcon from '/public/icons/products/phdcConverter.svg';
 
 export const metadata: Metadata = {
-  title: 'Our Products',
+  title: 'Our Products - DIBBs',
   description:
     'Find out how DIBBs products can help empower your jurisdiction with more usable data.',
 };

@@ -26,7 +26,7 @@ import howItWorksGif from '/public/images/products/ecr-viewer/how-it-works.gif';
 import nonIntegratedImg from '/public/images/products/ecr-viewer/non-integrated.png';
 
 export const metadata: Metadata = {
-  title: 'eCR Viewer',
+  title: 'eCR Viewer - DIBBs',
   description:
     'An intuitive interface that helps epidemiologists and case investigators make better sense of eCR data, faster.',
 };
