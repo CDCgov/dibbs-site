@@ -6,6 +6,7 @@ import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { InvitationCta } from '../InvitationCta/InvitationCta';
 import { usePathname } from 'next/navigation';
 import cdcImg from '/public/images/CDC.svg';
+import footerImg from '/public/images/footer-bg.jpg';
 
 const Footer = () => {
   const pathname = usePathname();
@@ -76,7 +77,7 @@ export const Divider = () => {
   return (
     <Image
       alt=""
-      src="/images/footer-bg.jpg"
+      src={footerImg}
       width={1400}
       height={40}
       className="position-top mt-auto max-h-[2.5rem] min-w-full bg-top object-cover"
