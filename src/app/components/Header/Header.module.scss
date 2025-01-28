@@ -1,15 +1,3 @@
-@media (min-width: 1024px) {
-  .navbarLogoText {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .navbarLogoText {
-    font-size: 13px;
-  }
-}
-
 %hero-base {
   position: relative;
   overflow: hidden;
@@ -84,16 +72,4 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-}
-
-.navbarLogoText {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }

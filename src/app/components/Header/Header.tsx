@@ -40,9 +40,7 @@ const Header = () => {
             <div className="usa-logo">
               <em className="usa-logo__text">
                 <a href="/" title="DIBBs">
-                  <span
-                    className={classNames('sr-only', styles.navbarLogoText)}
-                  >
+                  <span className="sr-only">
                     Data Integration Building Blocks
                   </span>
                   <Image

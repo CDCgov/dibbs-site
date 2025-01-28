@@ -9,7 +9,7 @@ import nmImg from '/public/images/carousel/NM.png';
 import phillyImg from '/public/images/carousel/Philly.svg';
 import coImg from '/public/images/carousel/CO.svg';
 import vdhImg from '/public//images/carousel/VDH.svg';
-import meImg from '/public/images/carousel/ME.svg';
+import meImg from '/public/images/carousel/ME.png';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 const Carousel = () => {
