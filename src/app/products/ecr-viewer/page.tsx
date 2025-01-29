@@ -326,175 +326,7 @@ export default function EcrViewer() {
                 <Accordion
                   className="[&>div]:border-[1px] [&>div]:border-[#ADCFDC] [&_button]:bg-white [&_button]:text-blue-cool-70"
                   bordered={false}
-                  items={[
-                    {
-                      id: '1',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title: 'Who will use this tool?',
-                      content: (
-                        <AccordionItemContent>
-                          Case investigators, epidemiologists, and other public
-                          health practitioners who actively reference eCRs for
-                          their work will use the eCR Viewer as a workflow
-                          optimization tool.
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '2',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title:
-                        'What case surveillance systems are compatible with eCR Viewer?',
-                      content: (
-                        <AccordionItemContent>
-                          <div className="flex flex-col gap-2">
-                            <span>
-                              We have two versions of eCR Viewer currently
-                              available:
-                            </span>
-                            <ol className="list-decimal">
-                              <li>A version integrated directly within NBS</li>
-                              <li>
-                                A standalone version that operates outside of a
-                                jurisdiction's surveillance system
-                              </li>
-                            </ol>
-                            <span>
-                              We are also working on a direct integration with
-                              EpiTrax. If you're interested in integrating the
-                              eCR Viewer with other surveillance systems, please{' '}
-                              <SendMailLink text="reach out to us" />.
-                            </span>
-                          </div>
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '3',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title: 'Where can I find the eCR Viewer within NBS?',
-                      content: (
-                        <AccordionItemContent>
-                          You can open the eCR Viewer by clicking the “View eICR
-                          Document” button while looking at the eCR page in NBS.
-                          Clicking this button would open the new eCR Viewer,
-                          replacing the existing eCR document viewer.
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '4',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title:
-                        "Can my jurisdiction set up eCR Viewer if we don't use NBS?",
-                      content: (
-                        <AccordionItemContent>
-                          Yes! The standalone eCR Viewer offers flexibility for
-                          jurisdictions with other surveillance systems (e.g.,
-                          Maven). Staff will be able to view eCR documents
-                          through a separate homepage called the eCR Library
-                          rather than within the surveillance system itself.
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '5',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title:
-                        'Who at our organization needs to be involved to set up this tool? ',
-                      content: (
-                        <AccordionItemContent>
-                          We'll need participation from several people in your
-                          public health department to successfully set up the
-                          eCR Viewer. This includes:
-                          <ol className="list-decimal pt-4">
-                            <li>
-                              A jurisdictional subject matter expert who can
-                              help the DIBBs team understand how and where DIBBs
-                              tooling could be hosted
-                              <ol className="list-[lower-alpha] pl-4">
-                                <li>
-                                  This could be an engineer or IT personnel,
-                                  either directly embedded in your public health
-                                  department or shared at the jurisdiction.
-                                </li>
-                              </ol>
-                            </li>
-                            <li>
-                              An eCR expert who is familiar with existing eCR
-                              workflows and data sources
-                              <ol className="list-[lower-alpha] pl-4">
-                                <li>
-                                  This could be an epidemiologist, program
-                                  manager, or anyone else in your jurisdiction
-                                  who is familiar with existing eCR data
-                                  workflows.
-                                </li>
-                              </ol>
-                            </li>
-                          </ol>
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '6',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title:
-                        'Can you speak to privacy preservation in your tool?',
-                      content: (
-                        <AccordionItemContent>
-                          All information is transmitted and protected using
-                          standards mandated by individual jurisdictions or the
-                          Department of Health and Human Services as applicable
-                          based on hosting location.
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '7',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title: 'What is the long-term viability of this product?',
-                      content: (
-                        <AccordionItemContent>
-                          Our team is working with stakeholders at CDC to
-                          establish a roadmap for near- and long-term support.
-                          As eCR data becomes more embedded in the public health
-                          ecosystem, this product will also give your
-                          jurisdiction the chance to provide direct feedback to
-                          CDC on what you need to make eCR data as usable as
-                          possible to improve public health outcomes.
-                        </AccordionItemContent>
-                      ),
-                    },
-                    {
-                      id: '8',
-                      className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
-                      headingLevel: 'h4',
-                      expanded: false,
-                      title: 'How do I get started?',
-                      content: (
-                        <AccordionItemContent>
-                          Please <SendMailLink text="contact our team" /> for a
-                          free consultation and find out whether the eCR Viewer
-                          is right for your jurisdiction.
-                        </AccordionItemContent>
-                      ),
-                    },
-                  ]}
+                  items={accordionItems}
                 />
                 <HaveAQuestionSection />
               </SectionContentContainer>
@@ -529,3 +361,150 @@ const ExternalLink = ({ children, href }: ExternalLinkProps) => {
     </Link>
   );
 };
+
+type AccorionItemProps = React.ComponentProps<typeof Accordion>['items'][0];
+
+const accordionItemDefaultProps: Pick<
+  AccorionItemProps,
+  'className' | 'headingLevel' | 'expanded'
+> = {
+  className: '[&>button]:hover:bg-[#ADCFDC] shadow-lg',
+  headingLevel: 'h3',
+  expanded: false,
+};
+
+const accordionItems: AccorionItemProps[] = [
+  {
+    id: '1',
+    title: 'Who will use this tool?',
+    content: (
+      <AccordionItemContent>
+        Case investigators, epidemiologists, and other public health
+        practitioners who actively reference eCRs for their work will use the
+        eCR Viewer as a workflow optimization tool.
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '2',
+    title: 'What case surveillance systems are compatible with eCR Viewer?',
+    content: (
+      <AccordionItemContent>
+        <div className="flex flex-col gap-2">
+          <span>We have two versions of eCR Viewer currently available:</span>
+          <ol className="list-decimal">
+            <li>A version integrated directly within NBS</li>
+            <li>
+              A standalone version that operates outside of a jurisdiction's
+              surveillance system
+            </li>
+          </ol>
+          <span>
+            We are also working on a direct integration with EpiTrax. If you're
+            interested in integrating the eCR Viewer with other surveillance
+            systems, please <SendMailLink text="reach out to us" />.
+          </span>
+        </div>
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '3',
+    title: 'Where can I find the eCR Viewer within NBS?',
+    content: (
+      <AccordionItemContent>
+        You can open the eCR Viewer by clicking the “View eICR Document” button
+        while looking at the eCR page in NBS. Clicking this button would open
+        the new eCR Viewer, replacing the existing eCR document viewer.
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '4',
+    title: "Can my jurisdiction set up eCR Viewer if we don't use NBS?",
+    content: (
+      <AccordionItemContent>
+        Yes! The standalone eCR Viewer offers flexibility for jurisdictions with
+        other surveillance systems (e.g., Maven). Staff will be able to view eCR
+        documents through a separate homepage called the eCR Library rather than
+        within the surveillance system itself.
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '5',
+    title: 'Who at our organization needs to be involved to set up this tool?',
+    content: (
+      <AccordionItemContent>
+        We'll need participation from several people in your public health
+        department to successfully set up the eCR Viewer. This includes:
+        <ol className="list-decimal pt-4">
+          <li>
+            A jurisdictional subject matter expert who can help the DIBBs team
+            understand how and where DIBBs tooling could be hosted
+            <ol className="list-[lower-alpha] pl-4">
+              <li>
+                This could be an engineer or IT personnel, either directly
+                embedded in your public health department or shared at the
+                jurisdiction.
+              </li>
+            </ol>
+          </li>
+          <li>
+            An eCR expert who is familiar with existing eCR workflows and data
+            sources
+            <ol className="list-[lower-alpha] pl-4">
+              <li>
+                This could be an epidemiologist, program manager, or anyone else
+                in your jurisdiction who is familiar with existing eCR data
+                workflows.
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '6',
+    title: 'Can you speak to privacy preservation in your tool?',
+    content: (
+      <AccordionItemContent>
+        All information is transmitted and protected using standards mandated by
+        individual jurisdictions or the Department of Health and Human Services
+        as applicable based on hosting location.
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '7',
+    title: 'What is the long-term viability of this product?',
+    content: (
+      <AccordionItemContent>
+        Our team is working with stakeholders at CDC to establish a roadmap for
+        near- and long-term support. As eCR data becomes more embedded in the
+        public health ecosystem, this product will also give your jurisdiction
+        the chance to provide direct feedback to CDC on what you need to make
+        eCR data as usable as possible to improve public health outcomes.
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+  {
+    id: '8',
+    title: 'How do I get started?',
+    content: (
+      <AccordionItemContent>
+        Please <SendMailLink text="contact our team" /> for a free consultation
+        and find out whether the eCR Viewer is right for your jurisdiction.
+      </AccordionItemContent>
+    ),
+    ...accordionItemDefaultProps,
+  },
+];
