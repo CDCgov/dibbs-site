@@ -8,7 +8,7 @@ import laCountyImg from '/public/images/case-studies/image1.jpg';
 import vaImg from '/public/images/case-studies/image4.jpg';
 
 export const metadata: Metadata = {
-  title: 'Case Studies - DIBBs',
+  title: 'Case studies - DIBBs',
   description: 'Explore our case studies to see the impact of DIBBs.',
 };
 
