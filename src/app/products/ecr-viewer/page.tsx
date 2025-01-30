@@ -22,7 +22,7 @@ import {
 } from '../_ui';
 import { Metadata } from 'next';
 import { SideNav, NavItem } from '../_ui/SideNav';
-import howItWorksGif from '/public/images/products/ecr-viewer/how-it-works.gif';
+import howItWorksImg from '/public/images/products/ecr-viewer/how-it-works.png';
 import nonIntegratedImg from '/public/images/products/ecr-viewer/non-integrated.png';
 
 export const metadata: Metadata = {
@@ -158,7 +158,7 @@ export default function EcrViewer() {
                 <Figure
                   caption="View of the eCR Summary section within the eCR Viewer containing sample data."
                   alt="eCR Viewer - how it works"
-                  src={howItWorksGif}
+                  src={howItWorksImg}
                 />
                 <SubsectionContainer>
                   <SectionSubheader>Combined RR and eICR</SectionSubheader>
