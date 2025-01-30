@@ -33,14 +33,14 @@ export const InvitationCta = () => {
   };
 
   return (
-    <section style={style} className="py-8 md:py-[3.75rem] sm:max-h-[16.25rem]">
+    <section style={style} className="py-8 sm:max-h-[16.25rem] md:py-[3.75rem]">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-6 self-stretch">
           <div className="flex flex-col gap-1">
             <Heading className="self-stretch text-center text-white">
               {content.title}
             </Heading>
-            <Paragraph className="m-0 self-stretch p-0 text-center font-extralight text-white">
+            <Paragraph className="m-0 self-stretch p-0 text-center text-[1.38rem] font-extralight text-white">
               {content.description}
             </Paragraph>
           </div>
