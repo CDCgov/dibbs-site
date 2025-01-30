@@ -12,7 +12,6 @@ import {
   GridMiddle,
   HaveAQuestionSection,
   GettingStarted,
-  Video,
   SectionContentContainer,
   SubsectionContainer,
   Figure,
@@ -120,17 +119,6 @@ export default function EcrViewer() {
                       </li>
                     </ValueList>
                   </SubsectionContainer>
-                  <div>
-                    <SubsectionContainer>
-                      <SectionSubheader>Demo</SectionSubheader>
-                      <Video
-                        title="eCR Viewer product demo"
-                        src="https://www.loom.com/embed/f59bf06efe3847c286829da95d4fd36d?sid=7171105a-cff8-4dd0-8ee5-9f32cca35f60"
-                        description="See how the eCR Viewer can improve the way your jurisdiction
-                  uses eCR data."
-                      />
-                    </SubsectionContainer>
-                  </div>
                 </SectionContentContainer>
               </SubsectionContainer>
             </section>
