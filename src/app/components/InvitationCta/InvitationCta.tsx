@@ -24,28 +24,21 @@ export const InvitationCta = () => {
     backgroundSize: '100% clamp(410px, 10%, 100vh)',
   };
 
-  const content = {
-    title: 'Interested in getting started with DIBBs?',
-    description:
-      'Contact our team to learn more about how our products can help improve your data workflows',
-    ctaText: 'Contact us',
-    ctaHref: '/engage-with-us',
-  };
-
   return (
-    <section style={style} className="py-8 md:py-[3.75rem] sm:max-h-[16.25rem]">
+    <section style={style} className="py-8 sm:max-h-[16.25rem] md:py-[3.75rem]">
       <GridContainer>
         <div className="flex flex-col items-center justify-center gap-6 self-stretch">
           <div className="flex flex-col gap-1">
             <Heading className="self-stretch text-center text-white">
-              {content.title}
+              Interested in getting started with DIBBs?
             </Heading>
-            <Paragraph className="m-0 self-stretch p-0 text-center font-extralight text-white">
-              {content.description}
+            <Paragraph className="m-0 self-stretch p-0 text-center text-[1.38rem] font-extralight text-white">
+              Contact our team to learn more about how our products can help
+              improve your data workflows
             </Paragraph>
           </div>
-          <LinkButton href={content.ctaHref} variant="transparent">
-            {content.ctaText}
+          <LinkButton href="/engage-with-us" variant="transparent">
+            Contact us
           </LinkButton>
         </div>
       </GridContainer>
