@@ -22,7 +22,7 @@ import {
 } from '../_ui';
 import { Metadata } from 'next';
 import { SideNav, NavItem } from '../_ui/SideNav';
-import howItWorksImg from '/public/images/products/ecr-viewer/how-it-works.png';
+import howItWorksImg from '/public/images/products/ecr-viewer/how-it-works-gender-removed.png';
 import nonIntegratedImg from '/public/images/products/ecr-viewer/non-integrated.png';
 
 export const metadata: Metadata = {
