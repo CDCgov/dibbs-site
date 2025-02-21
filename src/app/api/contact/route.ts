@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+import * as mailer from '@sendgrid/mail';
+
+mailer.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export async function POST(request: Request) {
   try {
@@ -19,17 +22,17 @@ export async function POST(request: Request) {
     type FormData = z.infer<typeof FormData>;
     const reqData: FormData = data;
 
-    // Log the email data for debugging
-    console.log('Debug Email Data:', {
-      to: process.env.DEBUG_EMAIL_TO || 'debug@example.com',
-      subject: `New Contact Form Submission from ${reqData.name}`,
-      body: {
-        name: reqData.name,
-        email: reqData.email,
-        organization: reqData.organization,
-        message: reqData.message,
-      },
-    });
+    const message: mailer.MailDataRequired = {
+      to: process.env.SEND_TO_EMAIL!,
+      from: process.env.SEND_FROM_EMAIL!, // This must be an authenticated SendGrid email
+      replyTo: reqData.email, // Reply to the original email provided
+      subject: `New Contact Form Submission`,
+      text: reqData.message ?? 'No message body provided.',
+    };
+
+    console.log(message);
+
+    await mailer.send(message);
 
     // In a production environment, you would send the actual email here
     // using a service like SendGrid, AWS SES, or similar
