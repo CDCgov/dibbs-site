@@ -22,12 +22,16 @@ export async function POST(request: Request) {
     type FormData = z.infer<typeof FormData>;
     const reqData: FormData = data;
 
+    const baseSubjectLine = 'Website Contact Form - ';
+    const nameSubject = reqData.name ? `${reqData.name}, ` : '';
+    const orgSubject = reqData.organization ? `${reqData.organization}, ` : '';
+
     const message: mailer.MailDataRequired = {
       to: process.env.SEND_TO_EMAIL!,
       from: process.env.SEND_FROM_EMAIL!, // This must be an authenticated SendGrid email
       replyTo: reqData.email, // Reply to the original email provided
-      subject: `New Contact Form Submission`,
-      text: reqData.message ?? 'No message body provided.',
+      subject: baseSubjectLine + nameSubject + orgSubject + reqData.email,
+      text: reqData.message ?? '[No message provided]',
     };
 
     console.log(message);
