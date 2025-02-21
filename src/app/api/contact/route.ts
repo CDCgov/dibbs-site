@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
     const message: mailer.MailDataRequired = {
       to: process.env.SEND_TO_EMAIL!,
-      from: process.env.SEND_FROM_EMAIL!, // This must be an authenticated SendGrid email
+      from: process.env.SEND_FROM_EMAIL!, // This must be a verified SendGrid email
       replyTo: reqData.email, // Reply to the original email provided
       subject: baseSubjectLine + nameSubject + orgSubject + reqData.email,
       text: reqData.message ?? '[No message provided]',
