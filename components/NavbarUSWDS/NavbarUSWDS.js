@@ -50,11 +50,14 @@ export default function Navbar({ }) {
             </div>
             <div className="usa-banner padding-2">
                 <p className="usa-banner__header-text">
-                    During the government shutdown, only websites supporting excepted 
-                    functions will be updated. As a result, the information on this 
-                    website may not be up to date and the agency may not be able to 
-                    respond to inquiries. Updates regarding government operating status 
-                    and resumption of normal operations can be found at <Link className="usa-link" href="https://www.opm.gov/">https://www.opm.gov/</Link>.
+                    The Trump Administration is working to reopen the government for the
+                     American people. Mission-critical activities of CDC will continue 
+                     during the Democrat-led government shutdown. Certain federal 
+                     government activities have ceased due to a lack of appropriated 
+                     funding. During the government shutdown, only web sites supporting 
+                     excepted functions will be updated. As a result, the information on
+                      this website may not be up to date and the agency may not be able 
+                      to respond to inquiries.
                 </p>
 
             </div>
